@@ -9,6 +9,8 @@
 	<?php endwhile; endif; ?>
 </div>
 
-<aside id="sidebar"></aside>
+<aside id="sidebar">
+	<?php get_sidebar(); ?>
+</aside>
 
 <?php get_footer(); ?>
