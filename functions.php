@@ -2,13 +2,17 @@
 
 // Default Style Support
 function ap_add_theme_style() {
-    wp_enqueue_style('theme-style-css', get_template_directory_uri() . '/css/style.css', array(
-        'font-awesome-css',
-        'bootstrap-css'
-    ));
+    wp_enqueue_style('theme-style-css', get_template_directory_uri() . '/css/style.css', array('font-awesome-css', 'bootstrap-css'));
 }
 
 add_action('wp_enqueue_scripts', 'ap_add_theme_style');
+
+// Default Script Support
+function ap_add_theme_script() {
+    wp_enqueue_script('theme-script-js', get_template_directory_uri() . '/js/script.js', array('jquery'));
+}
+
+add_action('wp_enqueue_scripts', 'ap_add_theme_script');
 
 // Font Awesome Support
 function ap_add_font_awesome() {
