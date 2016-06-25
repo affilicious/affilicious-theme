@@ -1,0 +1,23 @@
+.post {
+  box-sizing: border-box;
+  background-color: white;
+
+  &-thumbnail img {
+    width: 100%;
+    height: auto;
+  }
+
+  &-body {
+    padding: 25px;
+    box-sizing: border-box;
+  }
+
+  &-meta {
+    list-style: none;
+    display: inline;
+
+    li {
+      float: left;
+    }
+  }
+}

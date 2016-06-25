@@ -25,6 +25,12 @@ function ap_add_bootstrap() {
     wp_enqueue_script('bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '3.0.0', true);
 }
 
+// Post Thumbnails Support
+add_action('after_setup_theme', 'ap_add_post_thumbnails');
+function ap_add_post_thumbnails() {
+    add_theme_support('post-thumbnails');
+}
+
 // Title Tag Support
 add_action('after_setup_theme', 'ap_add_title_tag');
 function ap_add_title_tag() {
