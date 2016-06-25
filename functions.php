@@ -30,3 +30,9 @@ add_action('after_setup_theme', 'ap_add_title_tag');
 function ap_add_title_tag() {
     add_theme_support('title-tag');
 }
+
+// Register Top Menu
+add_action('after_setup_theme', 'ap_register_menu');
+function ap_register_menu() {
+    register_nav_menu('top-menu', 'Obere Navigation');
+}
