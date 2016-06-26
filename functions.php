@@ -42,3 +42,17 @@ add_action('after_setup_theme', 'ap_register_menu');
 function ap_register_menu() {
     register_nav_menu('top-menu', 'Obere Navigation');
 }
+
+// Add Sidebar
+function ap_register_sidebar() {
+    register_sidebar(array(
+        'name' => 'Haupt Sidebar',
+        'id' => 'sidebar-1',
+        'description' => 'Die Hauptsidebar ist auf jeder Seite sichtbar',
+        'before_title' => '<h2>',
+        'after_title' => '</h2>',
+        'before_widget' => '<li>',
+        'after_widget' => '</li>',
+    ));
+}
+add_action('widgets_init', 'ap_register_sidebar');

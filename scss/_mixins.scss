@@ -1,0 +1,38 @@
+@mixin gradient($from, $to) {
+  background-color: $from;
+  background-image: -moz-linear-gradient($from, $to);
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($from), to($to));
+  background-image: -webkit-linear-gradient($from, $to);
+  background-image: -o-linear-gradient($from, $to);
+  background-image: linear-gradient($from, $to);
+}
+
+@mixin box-shadow($left: 0, $top: 2px, $blur: 2px, $color: rgba(black, 0.1), $inset: "") {
+  -webkit-box-shadow: $left $top $blur $color #{$inset};
+  -moz-box-shadow: $left $top $blur $color #{$inset};
+  box-shadow: $left $top $blur $color #{$inset};
+}
+
+@mixin top-left-border-radius($value) {
+  -moz-border-radius-topleft: $value;
+  -webkit-border-top-left-radius: $value;
+  border-top-left-radius: $value;
+}
+
+@mixin top-right-border-radius($value) {
+  -moz-border-radius-topright: $value;
+  -webkit-border-top-right-radius: $value;
+  border-top-right-radius: $value;
+}
+
+@mixin bottom-left-border-radius($value) {
+  -moz-border-radius-bottomleft: $value;
+  -webkit-border-bottom-left-radius: $value;
+  border-bottom-left-radius: $value;
+}
+
+@mixin bottom-right-border-radius($value) {
+  -moz-border-radius-bottomright: $value;
+  -webkit-border-bottom-right-radius: $value;
+  border-bottom-right-radius: $value;
+}
