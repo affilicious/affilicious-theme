@@ -42,18 +42,17 @@
                                 </a>-->
                             </div>
                             <?php
-                            require_once('wp_bootstrap_navwalker.php');
-                            wp_nav_menu(array(
-                                'menu_id'           => 'nav-top-menu',
-                                'theme_location'    => 'top-menu',
-                                'depth'             => 2,
-                                'container'         => 'div',
-                                'container_class'   => 'collapse navbar-collapse',
-                                'container_id'      => 'top-menu',
-                                'menu_class'        => 'nav navbar-nav',
-                                'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
-                                'walker'            => new wp_bootstrap_navwalker()
-                            ));
+                                wp_nav_menu(array(
+                                    'menu_id'           => 'nav-top-menu',
+                                    'theme_location'    => 'top-menu',
+                                    'depth'             => 2,
+                                    'container'         => 'div',
+                                    'container_class'   => 'collapse navbar-collapse',
+                                    'container_id'      => 'top-menu',
+                                    'menu_class'        => 'nav navbar-nav',
+                                    'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+                                    'walker'            => new wp_bootstrap_navwalker()
+                                ));
                             ?>
                         </div>
                     </div>

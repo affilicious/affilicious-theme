@@ -1,0 +1,47 @@
+@import "variables";
+
+#footer {
+  #bottom-bar {
+    border-top: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7;
+    background-color: rgb(248, 248, 248);
+    padding: 0;
+    margin: 0;
+
+    #bottom-menu {
+      float: right;
+
+      a {
+        color: #777;
+
+        &:hover {
+          color: #333;
+        }
+      }
+
+      @media #{$screen-xs-max} {
+        float: left;
+      }
+    }
+
+    #breadcrumbs {
+      line-height: 50px;
+      margin-bottom: 0;
+
+      a {
+        color: #777;
+      }
+    }
+  }
+
+  #copyright {
+    padding: 10px;
+    background-color: white;
+
+    p {
+      text-align: center;
+      font-weight: 300;
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,4 +1,5 @@
 <?php
+require_once('wp_bootstrap_navwalker.php');
 
 // Default Style Support
 add_action('wp_enqueue_scripts', 'ap_add_theme_style');
@@ -41,6 +42,7 @@ function ap_add_title_tag() {
 add_action('after_setup_theme', 'ap_register_menu');
 function ap_register_menu() {
     register_nav_menu('top-menu', 'Obere Navigation');
+    register_nav_menu('bottom-menu', 'Untere Navigation');
 }
 
 // Add Sidebar

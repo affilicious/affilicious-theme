@@ -1,0 +1,15 @@
+// Screen size
+$screen-xs-min: "only screen and (min-width:none)";
+$screen-xs-max: "only screen and (max-width:520px)";
+$screen-xs-sm: "only screen (min-width: none) and (max-width:767px)";
+
+$screen-sm-min: "only screen and (min-width:768px)";
+$screen-sm-max: "only screen and (max-width:991px)";
+$screen-sm-md: "only screen (min-width: 768px) and (max-width:991px)";
+
+$screen-md-min: "only screen and (min-width:992px)";
+$screen-md-max: "only screen and (max-width:1199px)";
+$screen-md-lg: "only screen (min-width: 992px) and (max-width:1199px)";
+
+$screen-lg-min: "only screen and (min-width:1200px)";
+$screen-lg-max: "only screen and (max-width:none)";
