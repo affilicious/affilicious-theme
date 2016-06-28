@@ -1,5 +1,6 @@
 .widget {
   background-color: white;
+
   &-title {
     text-align: center;
     width: 100%;
@@ -8,8 +9,6 @@
     border: 1px solid #ebebeb;
     padding: 10px;
     @include gradient(#f9f9f9, #f1f1f1);
-
-
   }
 
   %widget {
@@ -66,6 +65,8 @@
 
 .sidebar {
   ul {
+    margin-left: 0;
+    padding-left: 0;
     list-style: none;
 
     li {
