@@ -1,10 +1,86 @@
 <?php
+define('PROJEKT_AFFILIATE_THEME_LIBRARY', TEMPLATEPATH . '/lib');
+
+require_once(PROJEKT_AFFILIATE_THEME_LIBRARY . '/customizer/general_customizer.php');
+require_once(PROJEKT_AFFILIATE_THEME_LIBRARY . '/customizer/header_customizer.php');
+
+
+
+
+// Layout
+function ap_is_loose_layout() {
+    $layout = get_theme_mod('app_general_layout');
+    return $layout === 'loose' || $layout === false;
+}
+
+function ap_is_tight_layout() {
+    $layout = get_theme_mod('app_general_layout');
+    return $layout === 'tight';
+}
+
+
+// Logo
+function ap_has_logo() {
+    $logo = get_theme_mod('ap_general_logo');
+    return $logo != null;
+}
+
+function ap_get_logo() {
+    return get_theme_mod('ap_general_logo');
+}
+
+function ap_logo() {
+    echo ap_get_logo();
+}
+
+function ap_has_logo_retina() {
+    $logo = get_theme_mod('ap_general_logo_retina');
+    return $logo != null;
+}
+
+function ap_get_logo_retina() {
+    return get_theme_mod('ap_general_logo_retina');
+}
+
+function ap_logo_retina() {
+    echo ap_get_logo_retina();
+}
+
+// Navigation
+function ap_has_main_navigation() {
+    return has_nav_menu('top-menu');
+}
+
+function ap_main_navigation() {
+    wp_nav_menu(array(
+        'menu_id'           => 'nav-top-menu',
+        'theme_location'    => 'top-menu',
+        'depth'             => 2,
+        'container'         => 'div',
+        'container_class'   => 'collapse navbar-collapse',
+        'container_id'      => 'top-menu',
+        'menu_class'        => 'nav navbar-nav',
+        'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+        'walker'            => new wp_bootstrap_navwalker()
+    ));
+}
+
+
+
+
+
 require_once('wp_bootstrap_navwalker.php');
 
 // Default Style Support
 add_action('wp_enqueue_scripts', 'ap_add_theme_style');
 function ap_add_theme_style() {
     wp_enqueue_style('theme-style-css', get_template_directory_uri() . '/css/style.css', array('font-awesome-css', 'bootstrap-css'));
+}
+
+// Retina Support
+add_action('wp_enqueue_scripts', 'ap_add_retina');
+function ap_add_retina() {
+    wp_enqueue_script('retina-script-js', get_template_directory_uri() . '/js/retina.min.js');
 }
 
 // Default Script Support

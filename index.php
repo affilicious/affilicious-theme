@@ -4,7 +4,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12">
-				<?php if(have_posts()): while(have_posts()) : the_post(); ?>
+				<!--<?php if(have_posts()): while(have_posts()) : the_post(); ?>
 					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 						<div class="post-thumbnail">
 							<?php if(has_post_thumbnail()): the_post_thumbnail(); endif; ?>
@@ -36,7 +36,7 @@
 							</footer>
 						</div>
 					</article>
-				<?php endwhile; endif; ?>
+				<?php endwhile; endif; ?>-->
 			</div>
 		</div>
 	</div>
