@@ -31,26 +31,26 @@
                 </div>
             </div>
         <?php if(ap_is_loose_layout()): ?></div><?php endif; ?>
-        <?php if(ap_has_main_navigation()): ?>
-            <nav class="navbar navbar-default" role="navigation">
-                <?php if(ap_is_loose_layout()): ?><div class="container"><?php endif; ?>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="navbar-header">
-                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#top-menu">
-                                    <span class="sr-only"><?php _e('Toggle navigation', 'projektaffiliatetheme'); ?></span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                </button>
-                                <a class="navbar-brand visible-xs" href="<?php home_url('/'); ?>">
-                                    <?php bloginfo('name'); ?>
-                                </a>
-                            </div>
-                            <?php ap_main_navigation(); ?>
-                        </div>
-                    </div>
-                <?php if(ap_is_loose_layout()): ?></div><?php endif; ?>
-            </nav>
-        <?php endif; ?>
     </header>
+    <?php if(ap_has_main_navigation()): ?>
+        <nav class="navbar navbar-default" role="navigation">
+            <?php if(ap_is_loose_layout()): ?><div class="container"><?php endif; ?>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#top-menu">
+                                <span class="sr-only"><?php _e('Toggle navigation', 'projektaffiliatetheme'); ?></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand visible-xs" href="<?php home_url('/'); ?>">
+                                <?php bloginfo('name'); ?>
+                            </a>
+                        </div>
+                        <?php ap_main_navigation(); ?>
+                    </div>
+                </div>
+            <?php if(ap_is_loose_layout()): ?></div><?php endif; ?>
+        </nav>
+    <?php endif; ?>
