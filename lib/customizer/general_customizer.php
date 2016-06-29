@@ -24,7 +24,7 @@ class AP_General_Customizer extends AP_Theme_Customizer
             'ap_general_logo',
             array(
                 'label'    => __('Logo', 'projektaffiliatetheme'),
-                'description'   => __('Upload a logo for your site. It should have the size <b>500x100</b> pixels.', 'projektaffiliatetheme'),
+                'description'   => __('Upload a logo for your site. The recommend size is <b>400x100</b> pixels, but you can use any size.', 'projektaffiliatetheme'),
                 'section'  => 'title_tagline',
                 'settings' => 'ap_general_logo',
             )
@@ -40,7 +40,7 @@ class AP_General_Customizer extends AP_Theme_Customizer
             'ap_general_logo_retina',
             array(
                 'label'         => __('Logo Retina', 'projektaffiliatetheme'),
-                'description'   => __('Upload a retina logo for your site. It should have the size <b>1000x200</b> pixels, which is 2 times larger than the regular logo.', 'projektaffiliatetheme'),
+                'description'   => __('Upload a retina logo for your site. The recommend size is <b>800x200</b> pixels, which is 2 times larger than the regular logo.', 'projektaffiliatetheme'),
                 'section'       => 'title_tagline',
                 'settings'      => 'ap_general_logo_retina',
             )
