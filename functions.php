@@ -1,10 +1,10 @@
 <?php
 define('PROJEKT_AFFILIATE_THEME_LIBRARY', TEMPLATEPATH . '/lib');
+define('PROJEKT_AFFILIATE_THEME_IMAGES', TEMPLATEPATH . '/img');
 
 require_once(PROJEKT_AFFILIATE_THEME_LIBRARY . '/customizer/general_customizer.php');
 require_once(PROJEKT_AFFILIATE_THEME_LIBRARY . '/customizer/header_customizer.php');
-
-
+require_once(PROJEKT_AFFILIATE_THEME_LIBRARY . '/product/register.php');
 
 
 // Layout
@@ -95,7 +95,7 @@ function ap_add_retina() {
 }
 
 // Default Script Support
-add_action('wp_enqueue_scripts', 'ap_add_theme_script');
+add_action('admin_enqueue_scripts', 'ap_add_theme_script');
 function ap_add_theme_script() {
     wp_enqueue_script('theme-script-js', get_template_directory_uri() . '/js/script.js', array('jquery'));
 }
