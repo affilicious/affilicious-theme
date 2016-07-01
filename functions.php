@@ -5,7 +5,7 @@ define('PROJEKT_AFFILIATE_THEME_IMAGES', TEMPLATEPATH . '/img');
 require_once(PROJEKT_AFFILIATE_THEME_LIBRARY . '/customizer/general_customizer.php');
 require_once(PROJEKT_AFFILIATE_THEME_LIBRARY . '/customizer/header_customizer.php');
 require_once(PROJEKT_AFFILIATE_THEME_LIBRARY . '/product/register.php');
-
+require_once(PROJEKT_AFFILIATE_THEME_LIBRARY . '/product/metabox.php');
 
 // Layout
 function ap_is_loose_layout() {
@@ -81,6 +81,12 @@ function ap_main_navigation() {
 
 
 require_once('wp_bootstrap_navwalker.php');
+
+// Default Style Support
+add_action('admin_enqueue_scripts', 'ap_add_admin_style');
+function ap_add_admin_style() {
+    wp_enqueue_style('admin-style-css', get_template_directory_uri() . '/css/admin.css', array());
+}
 
 // Default Style Support
 add_action('wp_enqueue_scripts', 'ap_add_theme_style');
