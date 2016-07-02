@@ -1,3 +1,3 @@
 .DS_Store
-css/*.css.map
-js/*.js.map
+assets/css/*.css.map
+assets/js/*.js.map

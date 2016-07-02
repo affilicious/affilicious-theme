@@ -9,21 +9,9 @@
                             }
                         ?>
                     </div>
-                    <?php if(has_nav_menu('bottom-menu')): ?>
+                    <?php if(ap_has_bottom_navigation()): ?>
                         <div class="col-md-6 col-xs-12">
-                            <?php
-                                wp_nav_menu(array(
-                                    'menu'              => 'footer_links',
-                                    'theme_location'    => 'bottom-menu',
-                                    'depth'             => 2,
-                                    'container'         => 'nav',
-                                    'container_class'   => 'navbar-collapse',
-                                    'container_id'      => 'bottom-menu',
-                                    'menu_class'        => 'nav navbar-nav',
-                                    'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
-                                    'walker'            => new wp_bootstrap_navwalker()
-                                ));
-                            ?>
+                            <?php ap_bottom_navigation(); ?>
                         </div>
                     <?php endif; ?>
                 </div>
