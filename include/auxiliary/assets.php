@@ -1,43 +1,57 @@
 <?php
 
-// Exit if accessed directly
 if (!defined('ABSPATH')) {
-    exit;
+    exit; // Exit if accessed directly
 }
 
-// Default Style Support
-add_action('admin_enqueue_scripts', 'ap_add_admin_style');
-function ap_add_admin_style() {
-    wp_enqueue_style('admin-style-css', get_template_directory_uri() . '/assets/css/admin.css', array());
+class AP_Assets
+{
+    /**
+     * Hook into all required Wordpress actions
+     */
+    public function __construct()
+    {
+        add_action('wp_enqueue_scripts', array($this, 'add_public_styles'), 10);
+        add_action('wp_enqueue_scripts', array($this, 'add_public_scripts'), 20);
+        add_action('admin_enqueue_scripts', array($this, 'add_admin_styles'), 30);
+        add_action('admin_enqueue_scripts', array($this, 'add_admin_scripts'), 40);
+    }
+
+    /**
+     * Add the public styles for the front end
+     */
+    public function add_public_styles()
+    {
+        wp_enqueue_style('bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.min.css', array(), '3.3.6');
+        wp_enqueue_style('font-awesome', get_template_directory_uri() . '/assets/css/font-awesome.min.css', array(), '3.2.1');
+        wp_enqueue_style('projektaffiliatetheme', get_template_directory_uri() . '/assets/css/style.css', array('font-awesome', 'bootstrap'), '0.1.0');
+    }
+
+    /**
+     * Add the admin styles for the back end
+     */
+    public function add_admin_styles()
+    {
+        wp_enqueue_style('projektaffiliatetheme-admin', get_template_directory_uri() . '/assets/css/admin.css', array(), '0.1.0');
+    }
+
+    /**
+     * Add the public scripts for the front end
+     */
+    public function add_public_scripts()
+    {
+        wp_enqueue_script('bootstrap', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array(), '3.3.6', true);
+        wp_enqueue_script('retina-script', get_template_directory_uri() . '/assets/js/retina.min.js', array(), '2.0.0', true);
+        wp_enqueue_script('projektaffiliatetheme', get_template_directory_uri() . '/assets/js/script.js', array('jquery'), '0.1.0', true);
+    }
+
+    /**
+     * Add the admin scripts for the back end
+     */
+    public function add_admin_scripts()
+    {
+        wp_enqueue_script('projektaffiliatetheme-admin', get_template_directory_uri() . '/assets/js/admin.js', array('jquery'), '0.1.0', true);
+    }
 }
 
-// Default Style Support
-add_action('wp_enqueue_scripts', 'ap_add_theme_style');
-function ap_add_theme_style() {
-    wp_enqueue_style('theme-style-css', get_template_directory_uri() . '/assets/css/style.css', array('font-awesome-css', 'bootstrap-css'));
-}
-
-// Retina Support
-add_action('wp_enqueue_scripts', 'ap_add_retina');
-function ap_add_retina() {
-    wp_enqueue_script('retina-script-js', get_template_directory_uri() . '/assets/js/retina.min.js');
-}
-
-// Default Script Support
-add_action('admin_enqueue_scripts', 'ap_add_theme_script');
-function ap_add_theme_script() {
-    wp_enqueue_script('theme-script-js', get_template_directory_uri() . '/assets/js/script.js', array('jquery'));
-}
-
-// Font Awesome Support
-add_action('wp_enqueue_scripts', 'ap_add_font_awesome');
-function ap_add_font_awesome() {
-    wp_enqueue_style('font-awesome-css', get_template_directory_uri() . '/assets/css/font-awesome.min.css');
-}
-
-// Bootstrap Support
-add_action('wp_enqueue_scripts', 'ap_add_bootstrap');
-function ap_add_bootstrap() {
-    wp_enqueue_style('bootstrap-css', get_template_directory_uri() . '/assets/css/bootstrap.min.css');
-    wp_enqueue_script('bootstrap-js', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array(), '3.0.0', true);
-}
+new AP_Assets();
