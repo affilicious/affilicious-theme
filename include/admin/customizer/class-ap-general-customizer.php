@@ -1,5 +1,5 @@
 <?php
-require_once('theme_customizer.php');
+if(!defined('ABSPATH')) exit('Not allowed to access pages directly.');
 
 class AP_General_Customizer extends AP_Theme_Customizer
 {
