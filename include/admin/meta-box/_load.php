@@ -1,8 +1,6 @@
 <?php
+if(!defined('ABSPATH')) exit('Not allowed to access pages directly.');
 
-// Exit if accessed directly
-if (!defined('ABSPATH')) {
-    exit;
-}
-
-require_once('metabox.php');
+require_once(PROJEKT_AFFILIATE_THEME_META_BOX . '/interface-ap-meta-box.php');
+require_once(PROJEKT_AFFILIATE_THEME_META_BOX . '/class-ap-meta-box-product-image-gallery.php');
+require_once(PROJEKT_AFFILIATE_THEME_META_BOX . '/class-ap-meta-box-manager.php');
