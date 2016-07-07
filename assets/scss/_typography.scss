@@ -5,6 +5,7 @@ html, body {
   font-weight: $font-weight-default;
   font-family: $font-family-default;
   color: $font-color-default;
+  line-height: $font-line-height-default;
   letter-spacing: $font-letter-spacing-default;
 }
 
@@ -13,6 +14,7 @@ h1 {
   font-weight: $font-weight-headline-1;
   font-family: $font-family-headline-1;
   color: $font-color-headline-1;
+  line-height: $font-line-height-headline-1;
   letter-spacing: $font-letter-spacing-headline-1;
 }
 
@@ -21,6 +23,7 @@ h2 {
   font-weight: $font-weight-headline-2;
   font-family: $font-family-headline-2;
   color: $font-color-headline-2;
+  line-height: $font-line-height-headline-2;
   letter-spacing: $font-letter-spacing-headline-2;
 }
 
@@ -29,6 +32,7 @@ h3 {
   font-weight: $font-weight-headline-3;
   font-family: $font-family-headline-3;
   color: $font-color-headline-3;
+  line-height: $font-line-height-headline-3;
   letter-spacing: $font-letter-spacing-headline-3;
 }
 
@@ -37,6 +41,7 @@ h4 {
   font-weight: $font-weight-headline-4;
   font-family: $font-family-headline-4;
   color: $font-color-headline-4;
+  line-height: $font-line-height-headline-4;
   letter-spacing: $font-letter-spacing-headline-4;
 }
 
@@ -45,6 +50,7 @@ h5 {
   font-weight: $font-weight-headline-5;
   font-family: $font-family-headline-5;
   color: $font-color-headline-5;
+  line-height: $font-line-height-headline-6;
   letter-spacing: $font-letter-spacing-headline-5;
 }
 
@@ -53,6 +59,7 @@ h6 {
   font-weight: $font-weight-headline-6;
   font-family: $font-family-headline-6;
   color: $font-color-headline-6;
+  line-height: $font-line-height-headline-6;
   letter-spacing: $font-letter-spacing-headline-6;
 }
 
@@ -61,5 +68,6 @@ p {
   font-weight: $font-weight-text;
   font-family: $font-family-text;
   color: $font-color-text;
+  line-height: $font-line-height-text;
   letter-spacing: $font-letter-spacing-text;
 }

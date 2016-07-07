@@ -2,7 +2,7 @@
 
 article.post, article.page {
   box-sizing: border-box;
-  margin-bottom: 25px;
+  margin-bottom: $space-size-medium;
 
   address {
     font-style: italic;
@@ -10,14 +10,32 @@ article.post, article.page {
 
   .post {
 
+    &-category {
+      text-align: center;
+      width: 100%;
+      display: block;
+      color: grey;
+      font-weight: normal;
+
+      a {
+        color: grey;
+        text-transform: uppercase;
+      }
+    }
+
+    &-title {
+      margin: $space-size-extra-small 0 $space-size-small 0;
+    }
+
     &-thumbnail img {
       width: 100%;
       height: auto;
+      margin: 0 0 $space-size-small 0;
     }
 
     &-body,
     &-footer {
-      padding: 25px 50px;
+      padding: 15px 30px;
       box-sizing: border-box;
       background-color: white;
 
