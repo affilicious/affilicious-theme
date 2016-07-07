@@ -10,9 +10,9 @@ function ap_register_sidebar() {
         'name' => 'Haupt Sidebar',
         'id' => 'sidebar-1',
         'description' => 'Die Hauptsidebar ist auf jeder Seite sichtbar',
-        'before_title' => '<h2>',
-        'after_title' => '</h2>',
-        'before_widget' => '<li>',
+        'before_title' => '<h4 class="widget-title">',
+        'after_title' => '</h4>',
+        'before_widget' => '<li class="widget">',
         'after_widget' => '</li>',
     ));
 }

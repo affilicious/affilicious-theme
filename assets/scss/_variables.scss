@@ -1,15 +1,75 @@
 // Screen size
-$screen-xs-min: "only screen and (min-width:none)";
-$screen-xs-max: "only screen and (max-width:520px)";
-$screen-xs-sm: "only screen (min-width: none) and (max-width:767px)";
+$screen-xs-min:   "only screen and (min-width:none)";
+$screen-xs-max:   "only screen and (max-width:520px)";
+$screen-xs-sm:    "only screen (min-width: none) and (max-width:767px)";
 
-$screen-sm-min: "only screen and (min-width:768px)";
-$screen-sm-max: "only screen and (max-width:991px)";
-$screen-sm-md: "only screen (min-width: 768px) and (max-width:991px)";
+$screen-sm-min:   "only screen and (min-width:768px)";
+$screen-sm-max:   "only screen and (max-width:991px)";
+$screen-sm-md:    "only screen (min-width: 768px) and (max-width:991px)";
 
-$screen-md-min: "only screen and (min-width:992px)";
-$screen-md-max: "only screen and (max-width:1199px)";
-$screen-md-lg: "only screen (min-width: 992px) and (max-width:1199px)";
+$screen-md-min:   "only screen and (min-width:992px)";
+$screen-md-max:   "only screen and (max-width:1199px)";
+$screen-md-lg:    "only screen (min-width: 992px) and (max-width:1199px)";
 
-$screen-lg-min: "only screen and (min-width:1200px)";
-$screen-lg-max: "only screen and (max-width:none)";
+$screen-lg-min:   "only screen and (min-width:1200px)";
+$screen-lg-max:   "only screen and (max-width:none)";
+
+// Font size
+$font-size-default:       16px;
+$font-size-headline-1:    2.2rem;
+$font-size-headline-2:    2rem;
+$font-size-headline-3:    1.8rem;
+$font-size-headline-4:    1.6rem;
+$font-size-headline-5:    1.4rem;
+$font-size-headline-6:    1.2rem;
+$font-size-text:          1rem;
+
+// Font family
+$font-family-default:      "Helvetica", Arial sans-serif;
+$font-family-headline-1:   $font-family-default;
+$font-family-headline-2:   $font-family-default;
+$font-family-headline-3:   $font-family-default;
+$font-family-headline-4:   $font-family-default;
+$font-family-headline-5:   $font-family-default;
+$font-family-headline-6:   $font-family-default;
+$font-family-text:         $font-family-default;
+
+// Font weight
+$font-weight-default:      normal;
+$font-weight-headline-1:   500;
+$font-weight-headline-2:   500;
+$font-weight-headline-3:   500;
+$font-weight-headline-4:   500;
+$font-weight-headline-5:   500;
+$font-weight-headline-6:   500;
+$font-weight-text:         $font-weight-default;
+
+// Font color
+$font-color-default:      #555;
+$font-color-headline-1:   black;
+$font-color-headline-2:   black;
+$font-color-headline-3:   black;
+$font-color-headline-4:   black;
+$font-color-headline-5:   black;
+$font-color-headline-6:   black;
+$font-color-text:         $font-color-default;
+
+// Font line height
+$font-line-height-default:      1.6rem;
+$font-line-height-headline-1:   $font-line-height-default;
+$font-line-height-headline-2:   $font-line-height-default;
+$font-line-height-headline-3:   $font-line-height-default;
+$font-line-height-headline-4:   $font-line-height-default;
+$font-line-height-headline-5:   $font-line-height-default;
+$font-line-height-headline-6:   $font-line-height-default;
+$font-line-height-text:         $font-line-height-default;
+
+// Font letter spacing
+$font-letter-spacing-default:      0.01rem;
+$font-letter-spacing-headline-1:   $font-letter-spacing-default;
+$font-letter-spacing-headline-2:   $font-letter-spacing-default;
+$font-letter-spacing-headline-3:   $font-letter-spacing-default;
+$font-letter-spacing-headline-4:   $font-letter-spacing-default;
+$font-letter-spacing-headline-5:   $font-letter-spacing-default;
+$font-letter-spacing-headline-6:   $font-letter-spacing-default;
+$font-letter-spacing-text:         $font-letter-spacing-default;
