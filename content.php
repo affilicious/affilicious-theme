@@ -23,11 +23,9 @@
             <div class="post">
                 <?php the_content(); ?>
             </div>
-            <footer class="post-footer">
-                <nav class="post-navigation">
-                    <?php the_post_navigation(); ?>
-                </nav>
-            </footer>
         </div>
+        <footer class="post-footer">
+            <?php the_post_navigation(); ?>
+        </footer>
     </article>
 <?php endwhile; endif; ?>

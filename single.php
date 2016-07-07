@@ -1,9 +1,9 @@
 <?php get_header(); ?>
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-8">
-            <main role="main">
+<main role="main">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
                 <?php
                     get_template_part('content', get_post_format());
 
@@ -11,10 +11,10 @@
                         comments_template();
                     }
                 ?>
-            </main>
+            </div>
+            <?php get_sidebar(); ?>
         </div>
-        <?php get_sidebar(); ?>
     </div>
-</div>
+</main>
 
 <?php get_footer(); ?>

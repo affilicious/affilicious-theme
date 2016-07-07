@@ -73,13 +73,28 @@
       background-color: white;
       margin-bottom: 25px;
 
+      .tight & {
+        border: 1px solid #ebebeb;
+      }
+
       h2 {
         text-align: center;
         width: 100%;
         color: #222;
         font-size: 2rem;
-        border: 1px solid #ebebeb;
+
+        .tight & {
+          border-bottom: 1px solid #ebebeb;
+        }
+
+        .loose & {
+          border: 1px solid #ebebeb;
+        }
+
+
+
         padding: 10px;
+        margin-top: 0;
         @include gradient(#f9f9f9, #f1f1f1);
       }
     }
