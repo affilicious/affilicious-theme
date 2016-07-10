@@ -49,7 +49,7 @@ if (!class_exists( 'WPGitHubThemeUpdater' ) ) :
                 'slug' => 'projektaffiliatetheme',
                 'proper_folder_name' => dirname( plugin_basename(__FILE__) ),
                 'api_url' => 'https://api.github.com/repos/AlexBa/ProjektAffiliateTheme',
-                'raw_url' => 'https://raw.github.com/AlexBa/ProjektAffiliateTheme/master',
+                'raw_url' => 'https://raw.githubusercontent.com/AlexBa/ProjektAffiliateTheme/develop/README.md',
                 'github_url' => 'https://github.com/AlexBa/ProjektAffiliateTheme',
                 'zip_url' => 'https://github.com/AlexBa/ProjektAffiliateTheme/zipball/master',
                 'sslverify' => true,
@@ -318,6 +318,11 @@ if (!class_exists( 'WPGitHubThemeUpdater' ) ) :
         }
 
 
+
+
+
     }
+
+    new WPGitHubThemeUpdater();
 
 endif; // endif class exists
