@@ -12,3 +12,4 @@ require_once(PROJEKT_AFFILIATE_THEME_AUXILIARY . '/sidebar.php');
 require_once(PROJEKT_AFFILIATE_THEME_AUXILIARY . '/logo.php');
 require_once(PROJEKT_AFFILIATE_THEME_AUXILIARY . '/navigation.php');
 require_once(PROJEKT_AFFILIATE_THEME_AUXILIARY . '/tables.php');
+require_once(PROJEKT_AFFILIATE_THEME_AUXILIARY . '/updater.php');
