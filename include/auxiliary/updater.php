@@ -46,10 +46,10 @@ if (!class_exists( 'WPGitHubThemeUpdater' ) ) :
             global $wp_version;
 
             $defaults = array(
-                'slug' => __('Projekt Affiliate Theme', 'projektaffiliatetheme'),
+                'slug' => 'projektaffiliatetheme',
                 'proper_folder_name' => dirname( plugin_basename(__FILE__) ),
                 'api_url' => 'https://api.github.com/repos/AlexBa/ProjektAffiliateTheme',
-                'raw_url' => 'https://raw.githubusercontent.com/AlexBa/ProjektAffiliateTheme/develop/README.md',
+                'raw_url' => 'https://raw.github.com/AlexBa/ProjektAffiliateTheme/master',
                 'github_url' => 'https://github.com/AlexBa/ProjektAffiliateTheme',
                 'zip_url' => 'https://github.com/AlexBa/ProjektAffiliateTheme/zipball/master',
                 'sslverify' => true,
@@ -67,13 +67,12 @@ if (!class_exists( 'WPGitHubThemeUpdater' ) ) :
             add_filter( 'pre_set_site_transient_update_themes',  array( $this, 'api_check' ) );
 
             // Hook into the plugin details screen
-            add_filter( 'themes_api', array( $this, 'get_theme_info' ), 10, 3 );
-            add_filter( 'upgrader_post_install', array( $this, 'upgrader_post_install' ), 11, 3 );
+            add_filter('themes_api', array( $this, 'get_theme_info' ), 10, 3 );
+            add_filter('upgrader_source_selection',  array( $this, 'upgrader_source_selection_filter'), 10, 3);
 
             // set timeout
             add_filter( 'http_request_timeout', array( $this, 'http_request_timeout' ) );
         }
-
 
         /**
          * Set defaults
@@ -173,6 +172,7 @@ if (!class_exists( 'WPGitHubThemeUpdater' ) ) :
 
             return $version;
         }
+
 
         /**
          * Get GitHub Data from the specified repository
@@ -300,33 +300,24 @@ if (!class_exists( 'WPGitHubThemeUpdater' ) ) :
         }
 
 
-        /**
-         * Upgrader/Updater
-         * Move & activate the theme, echo the update message
-         *
-         * @since 1.0
-         * @param boolean $true always true
-         * @param mixed $hook_extra not used
-         * @param array $result the result of the move
-         * @return array $result the result of the move
-         */
-        public function upgrader_post_install( $true, $hook_extra, $result ) {
-
-            global $wp_filesystem;
-
-            // Move & Activate
-            $proper_destination = WP_CONTENT_DIR.'/themes/'.$this->config['proper_folder_name'].'/';
-            $wp_filesystem->move( $result['destination'], $proper_destination );
-            $result['destination'] = $proper_destination;
-            $result['destination_name'] = $this->config['proper_folder_name'];
-            $result['remote_destination'] = $proper_destination;
-            $activate = switch_theme( $this->config['slug'], $this->config['slug'] );
-            return $result;
-
+        function upgrader_source_selection_filter($source, $remote_source=NULL, $upgrader=NULL){
+            /*
+                Github delivers zip files as <Username>-<TagName>-<Hash>.zip
+                must rename this zip file to the accurate theme folder
+            */
+            if(isset($source, $remote_source, $this->config['slug'])){
+                $corrected_source = $remote_source . '/' . $this->config['slug'] . '/';
+                if(@rename($source, $corrected_source)){
+                    return $corrected_source;
+                } else {
+                    $upgrader->skin->feedback("Unable to rename downloaded theme.");
+                    return new WP_Error();
+                }
+            }
+            return $source;
         }
 
-    }
 
-    new WPGitHubThemeUpdater();
+    }
 
 endif; // endif class exists
