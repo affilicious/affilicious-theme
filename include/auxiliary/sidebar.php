@@ -18,3 +18,14 @@ function ap_register_sidebar() {
 }
 add_action('widgets_init', 'ap_register_sidebar');
 
+
+
+
+add_filter('widget_tag_cloud_args', 'ap_widget_tag_cloud_args');
+function ap_widget_tag_cloud_args($args)
+{
+    $args['largest'] = 160;
+    $args['smallest'] = 80;
+    $args['unit'] = '%';
+    return $args;
+}
