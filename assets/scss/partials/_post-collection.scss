@@ -1,0 +1,22 @@
+@import "variables";
+@import "compass/css3/border-radius";
+
+.post-collection {
+  &-title {
+    margin-top: 0;
+    float: left;
+  }
+
+  &-description {
+    float: right;
+    line-height: $font-line-height-headline-1;
+
+    button {
+      vertical-align: middle;
+    }
+  }
+
+  &-body {
+    box-sizing: border-box;
+  }
+}

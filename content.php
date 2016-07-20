@@ -1,40 +1,35 @@
-<?php if(have_posts()): while(have_posts()) : the_post(); ?>
-    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-        <div class="post-body">
-            <header class="post-header">
-                <?php if(!is_front_page() && has_category()): ?>
-                    <span class="post-category"><?php the_category(', '); ?></span>
-                <?php endif; ?>
-                <h1 class="post-title"><?php the_title(); ?></h1>
-                <?php if(has_post_thumbnail()): ?>
-                    <div class="post-thumbnail">
-                        <?php the_post_thumbnail(); ?>
-                    </div>
-                <?php endif; ?>
-
-            </header>
-            <div class="post">
-                <?php the_content(); ?>
-            </div>
-        </div>
-        <?php if(!is_front_page()): ?>
-            <footer class="post-footer">
-                <!--<ul class="post-meta">
-                        <li>
-                            <time><?php the_date('d.m.Y'); ?></time>
-                        </li>
-                        <li>
-                            <a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>" rel="author">
-                                <?php echo get_the_author_meta('display_name'); ?>
-                            </a>
-                        </li>
-                        <li>
-
-                        </li>
-                    </ul>-->
-
-                <?php the_post_navigation(); ?>
-            </footer>
+<article id="entry-<?php the_ID(); ?>" <?php post_class('entry'); ?>>
+    <div class="entry-thumbnail">
+        <?php if (has_post_thumbnail()): ?>
+            <?php the_post_thumbnail(); ?>
         <?php endif; ?>
-    </article>
-<?php endwhile; endif; ?>
+    </div>
+    <header class="entry-header">
+        <div class="entry-avatar">
+            <?php echo get_avatar(get_the_author_meta('ID')); ?>
+        </div>
+        <h1 class="entry-title">
+            <a href="<?php echo esc_url(get_permalink()); ?>" rel="bookmark">
+                <?php the_title(); ?>
+            </a>
+        </h1>
+    </header>
+    <div class="entry-body">
+        <?php the_excerpt(); ?>
+    </div>
+    <footer class="entry-footer">
+        <ul class="entry-meta">
+            <li class="entry-author">
+                <a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>" rel="author">
+                    <?php echo get_the_author_meta('display_name'); ?>
+                </a>
+            </li>
+            <li class="entry-date">
+                <time><?php the_date('d.m.Y'); ?></time>
+            </li>
+            <?php if(!empty(get_edit_post_link())): ?>
+                <?php edit_post_link(__('Edit', 'projektaffiliatetheme'), '<li class="entry-edit-link">', '</li>'); ?>
+            <?php endif; ?>
+        </ul>
+    </footer>
+</article>

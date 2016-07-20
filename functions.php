@@ -20,3 +20,8 @@ require_once(PROJEKT_AFFILIATE_THEME_PRODUCT . '/_load.php');
 require_once(PROJEKT_AFFILIATE_THEME_WALKER . '/_load.php');
 require_once(PROJEKT_AFFILIATE_THEME_CUSTOMIZER . '/_load.php');
 require_once(PROJEKT_AFFILIATE_THEME_META_BOX . '/_load.php');
+
+function custom_excerpt_length( $length ) {
+    return 30;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
