@@ -1,0 +1,31 @@
+@import "variables";
+@import "compass/css3/border-radius";
+@import "compass/css3/flexbox";
+
+.box {
+  box-sizing: border-box;
+  padding: $space-size-medium;
+  background-color: white;
+  margin-bottom: $space-size-medium;
+}
+
+.product {
+  &-title {
+    margin-top: 0;
+  }
+
+  &-thumbnail {
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid lightgrey;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
