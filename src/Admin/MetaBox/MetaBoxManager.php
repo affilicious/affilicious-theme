@@ -28,7 +28,8 @@ final class MetaBoxManager
      */
     public function add_meta_boxes()
     {
-        add_meta_box('ap_product_image_gallery', __('Product image gallery', 'projektaffiliatetheme'), 'AP_Product_Image_Gallery_Meta_Box::render', 'product', 'side', 'low');
+        add_meta_box('ap_product_image_gallery', __('Product image gallery', 'projektaffiliatetheme'), __NAMESPACE__ . '\ProductImageGalleryMetaBox::render', 'product', 'side', 'low');
+        add_meta_box('ap_product_details', __('Product details', 'projektaffiliatetheme'),  __NAMESPACE__ . '\ProductDetailsMetaBox::render', 'product', 'normal', 'high');
     }
 
     /**
