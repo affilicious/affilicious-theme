@@ -1,0 +1,19 @@
+{
+  "name": "alexba/projektaffiliatetheme",
+  "license": "proprietary",
+  "type": "wordpress-theme",
+  "keywords": [
+    "wordpress"
+  ],
+  "autoload": {
+    "psr-4": {
+      "ProjektAffiliateTheme\\": "src/"
+    },
+    "files": [
+      "functions.php"
+    ]
+  },
+  "require": {
+    "php": ">=5.3"
+  }
+}
