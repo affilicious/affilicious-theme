@@ -20,7 +20,7 @@ final class MetaBoxManager
         add_action('add_meta_boxes', array($this, 'add_meta_boxes'), 10);
         add_action('save_post', array($this, 'update_meta_boxes'), 1, 2);
 
-        add_action('ap_process_product_meta', 'AP_Product_Image_Gallery_Meta_Box::update', 10, 2);
+        add_action('ap_process_product_meta', __NAMESPACE__ . '\ProductImageGalleryMetaBox::update', 10, 2);
     }
 
     /**
