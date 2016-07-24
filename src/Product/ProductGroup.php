@@ -1,58 +1,92 @@
 <?php
 namespace ProjektAffiliateTheme\Product;
 
+if(!defined('ABSPATH')) exit('Not allowed to access pages directly.');
+
 class ProductGroup
 {
-    public function __construct()
+    const POST_TYPE = 'product_group';
+    const CATEGORY = 'at_product_group_category';
+    const FIELDS = 'at_product_group_fields';
+
+    /**
+     * Holds als important data related to the group.
+     * The product groups are just custom post types
+     * @var \WP_Post
+     */
+    private $post;
+
+    /**
+     * @param int|\WP_Post $post
+     * @throws \Exception
+     */
+    public function __construct($post = null)
     {
-        add_action('init', array($this, 'init'), 1);
+        if($post instanceof \WP_Post) {
+            $this->post = $post;
+        } elseif (is_int($post)) {
+            $this->post = get_post($post);
+        } elseif (is_string($post)) {
+            $this->post = get_post($post);
+        } else {
+            $this->post = get_post();
+        }
+
+        if ($this->post === null) {
+            throw new \Exception( __('Failed to find the product group'));
+        }
     }
 
-    public function init()
+    /**
+     * Get the unique ID
+     * @return int
+     */
+    public function getId()
     {
-        $labels = array(
-            'name' => _x('Product groups', 'projektaffiliatetheme'),
-            'singular_name' => _x('Product group', 'projektaffiliatetheme'),
-            'menu_name' => __('Product groups', 'projektaffiliatetheme'),
-            'name_admin_bar' => __('Product group', 'projektaffiliatetheme'),
-            'archives' => __('Product group archives', 'projektaffiliatetheme'),
-            'parent_item_colon' => __('Parent product group:', 'projektaffiliatetheme'),
-            'all_items' => __('All product groups', 'projektaffiliatetheme'),
-            'add_new_item' => __('Add new Product group', 'projektaffiliatetheme'),
-            'add_new' => __('Add new', 'projektaffiliatetheme'),
-            'new_item' => __('New product group', 'projektaffiliatetheme'),
-            'edit_item' => __('Edit product group', 'projektaffiliatetheme'),
-            'update_item' => __('Update product group', 'projektaffiliatetheme'),
-            'view_item' => __('View product group', 'projektaffiliatetheme'),
-            'search_items' => __('Search product group', 'projektaffiliatetheme'),
-            'not_found' => __('Not found', 'projektaffiliatetheme'),
-            'not_found_in_trash' => __('Not found in Trash', 'projektaffiliatetheme'),
-            'featured_image' => __('Featured Image', 'projektaffiliatetheme'),
-            'set_featured_image' => __('Set featured image', 'projektaffiliatetheme'),
-            'remove_featured_image' => __('Remove featured image', 'projektaffiliatetheme'),
-            'use_featured_image' => __('Use as featured image', 'projektaffiliatetheme'),
-            'insert_into_item' => __('Insert into item', 'projektaffiliatetheme'),
-            'uploaded_to_this_item' => __('Uploaded to this product group', 'projektaffiliatetheme'),
-            'items_list' => __('Product groups list', 'projektaffiliatetheme'),
-            'items_list_navigation' => __('Product groups list navigation', 'projektaffiliatetheme'),
-            'filter_items_list' => __('Filter items list', 'projektaffiliatetheme'),
-        );
+        return $this->post->ID;
+    }
 
-        register_post_type('product_group', array(
-            'labels' => $labels,
-            'public' => false,
-            'menu_icon' => 'dashicons-feedback',
-            'show_ui' => true,
-            '_builtin' =>  false,
-            'menu_position' => 6,
-            'capability_type' => 'page',
-            'hierarchical' => true,
-            'rewrite' => false,
-            'query_var' => "product_group",
-            'supports' => array(
-                'title',
-            ),
-            'show_in_menu'	=> true,
-        ));
+    /**
+     * Get the title
+     * @return string
+     */
+    public function getTitle()
+    {
+        return $this->post->post_title;
+    }
+
+    /**
+     * Get the fields
+     * @return ProductField[]
+     */
+    public function getFields()
+    {
+        $rawFields = carbon_get_post_meta(get_the_ID(), self::FIELDS, 'complex');
+
+        $fields = array();
+        foreach ($rawFields as $rawField) {
+            $field = ProductField::fromRaw($rawField);
+            $fields[] = $field;
+        }
+
+        return $fields;
+    }
+
+    /**
+     * Get the category slug
+     * @return string
+     */
+    public function getCategory()
+    {
+        return carbon_get_post_meta($this->getId(), self::CATEGORY);
+    }
+
+    /**
+     * Returns the raw underlying Wordpress post
+     * @return \WP_Post
+     */
+    public function getRawPost()
+    {
+        return $this->post;
     }
 }

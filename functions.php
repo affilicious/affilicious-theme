@@ -13,9 +13,11 @@ use ProjektAffiliateTheme\Auxiliary\ThemeSupport;
 use ProjektAffiliateTheme\Auxiliary\WPGitHubThemeUpdater;
 use ProjektAffiliateTheme\Product\ProductManager;
 use ProjektAffiliateTheme\Walker\BootstrapWalker;
-use ProjektAffiliateTheme\Product\ProductGroup;
+use ProjektAffiliateTheme\Product\ProductGroupSetup;
+use ProjektAffiliateTheme\Product\ProductCategorySetup;
 
-new ProductGroup();
+new ProductGroupSetup();
+new ProductCategorySetup();
 new Layout();
 new WPGitHubThemeUpdater();
 new ProductManager();

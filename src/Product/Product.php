@@ -5,6 +5,8 @@ if(!defined('ABSPATH')) exit('Not allowed to access pages directly.');
 
 class Product
 {
+    const POST_TYPE = 'product';
+
     /**
      * @var \WP_Post
      */
@@ -20,14 +22,14 @@ class Product
             $this->post = $post;
         } elseif (is_int($post)) {
             $this->post = get_post($post);
+        } elseif (is_string($post)) {
+            $this->post = get_post($post);
         } else {
             $this->post = get_post();
         }
 
         if ($this->post === null) {
-            throw new \Exception(sprintf(
-                __('Failed to find the product with the id %d.'), $id
-            ));
+            throw new \Exception(__('Failed to find the product.'));
         }
     }
 

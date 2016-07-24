@@ -1,9 +1,6 @@
 <?php
 namespace ProjektAffiliateTheme\Product;
 
-use Carbon_Fields\Container;
-use Carbon_Fields\Field;
-
 if(!defined('ABSPATH')) exit('Not allowed to access pages directly.');
 
 class ProductManager
@@ -72,75 +69,22 @@ class ProductManager
 
 
 
-        $labels = array(
-            'name' => __('Categories', 'projektaffiliatetheme'),
-            'singular_name' => __('Category', 'projektaffiliatetheme'),
-            'search_items' => __('Search categories', 'projektaffiliatetheme'),
-            'all_items' => __('All categories', 'projektaffiliatetheme'),
-            'parent_item' => __('Parent category', 'projektaffiliatetheme'),
-            'parent_item_colon' => __('Parent category:', 'projektaffiliatetheme'),
-            'edit_item' => __('Edit category', 'projektaffiliatetheme'),
-            'update_item' => __('Update category', 'projektaffiliatetheme'),
-            'add_new_item' => __('Add New category', 'projektaffiliatetheme'),
-            'new_item_name' => __('New category name', 'projektaffiliatetheme'),
-            'menu_name' => __('Categories', 'projektaffiliatetheme'),
-        );
 
-        register_taxonomy('product_category', 'product', array(
-            'hierarchical' => true,
-            'labels' => $labels,
-            'show_ui' => true,
-            'show_admin_column' => true,
-            'query_var' => true,
-            'rewrite' => array('slug' => 'category'),
-            'public' => true,
-        ));
 
-        if (is_version('4.5')) {
-            $value = get_terms(array(
-                'taxonomy' => 'product_category',
-                'orderby' => 'name',
-                'hide_empty' => false,
-            ));
-        } else {
-            $value = get_terms('product_category', array(
-                'orderby' => 'name',
-                'hide_empty' => false,
-            ));
-        }
 
-        $values = array();
-        foreach ($value as $_value) {
-            $values[$_value->term_id] = $_value->name;
-        }
 
-        Container::make('post_meta', __('Edit category', 'projektaffiliatetheme'))
-            ->show_on_post_type('product_group')
-            ->add_fields(array(
-                Field::make("select", "at_product_group_category", __("Category", 'projektaffiliatetheme'))
-                    ->add_options($values),
-        ));
 
-        Container::make('post_meta', __('Edit fields', 'projektaffiliatetheme'))
-            ->show_on_post_type('product_group')
-            ->add_fields(array(
-                Field::make('complex', 'at_product_group_fields', __('Fields', 'projektaffiliatetheme'))
-                    ->add_fields(array(
-                        Field::make('text', 'at_product_group_field_name', __("Field name", 'projektaffiliatetheme'))
-                            ->set_required(true),
-                        Field::make("select", "at_product_group_field_type", __("Field type", 'projektaffiliatetheme'))
-                            ->set_required(true)
-                            ->add_options(array(
-                                'text' => __('Text', 'projektaffiliatetheme'),
-                                'textarea' => __('Textarea', 'projektaffiliatetheme'),
-                                'number' => __('Number', 'projektaffiliatetheme'),
-                                'file' => __('File', 'projektaffiliatetheme'),
-                            )),
-                        Field::make('text', 'at_product_group_field_default_value', __("Field default value", 'projektaffiliatetheme')),
-                        Field::make('text', 'at_product_group_field_help_text', __("Field help text", 'projektaffiliatetheme'))
-                    )
-                )
-        ));
+    }
+
+    /**
+     * Create a unique id from name
+     * @examples
+     *     Heißluftfritteuse => heissluftfritteuse
+     * @param string $name
+     */
+    private function create_id_from_name($name)
+    {
+
     }
 }
 
