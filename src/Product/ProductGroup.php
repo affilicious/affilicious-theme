@@ -56,6 +56,15 @@ class ProductGroup
     }
 
     /**
+     * Get the category slug
+     * @return string
+     */
+    public function getCategory()
+    {
+        return carbon_get_post_meta($this->getId(), self::CATEGORY);
+    }
+
+    /**
      * Get the fields
      * @return ProductField[]
      */
@@ -65,20 +74,11 @@ class ProductGroup
 
         $fields = array();
         foreach ($rawFields as $rawField) {
-            $field = ProductField::fromRaw($rawField);
+            $field = ProductField::fromRaw($this->getId(), $rawField);
             $fields[] = $field;
         }
 
         return $fields;
-    }
-
-    /**
-     * Get the category slug
-     * @return string
-     */
-    public function getCategory()
-    {
-        return carbon_get_post_meta($this->getId(), self::CATEGORY);
     }
 
     /**

@@ -112,4 +112,46 @@ class Product
     {
         return $this->post->post_modified;
     }
+
+    public function getDetails()
+    {
+        $categories = ProductCategory::forProduct($this);
+        $query = new \WP_Query(array(
+            'post_type' => ProductGroup::POST_TYPE,
+            'post_status' => 'publish',
+            'posts_per_page' => -1,
+        ));
+
+        $detailGroups = array();
+        if($query->have_posts()) {
+            while ($query->have_posts()) {
+                $query->the_post();
+                $productGroup = new ProductGroup(get_the_ID());
+
+                if(true) {
+                    $fields = $productGroup->getFields();
+                    $detailGroups[$productGroup->getId()] = array();
+
+                    foreach ($fields as $field) {
+                        $detailGroup = array();
+                        $detailGroup['group'] = $field->getGroup();
+                        $detailGroup['key'] = $field->getKey();
+                        $detailGroup['name'] = $field->getName();
+
+                        $value = carbon_get_post_meta($this->getId(), sprintf(
+                            ProductField::ID, $field->getGroup(), $field->getKey()
+                        ));
+
+                        $detailGroup['value'] = !empty($value) ? $value : null;
+
+                        $detailGroups[$productGroup->getId()][] = $detailGroup;
+                    }
+                }
+
+
+            }
+        }
+
+        return $detailGroups;
+    }
 }

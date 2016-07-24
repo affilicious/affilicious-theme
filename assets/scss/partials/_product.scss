@@ -15,7 +15,9 @@
   }
 
   &-thumbnail {
+    padding: 0;
     width: 250px;
+    margin: 0;
     height: 250px;
     overflow: hidden;
     display: flex;
@@ -27,5 +29,9 @@
       width: 100%;
       height: auto;
     }
+  }
+
+  &-table {
+
   }
 }

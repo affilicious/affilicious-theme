@@ -15,6 +15,7 @@ use ProjektAffiliateTheme\Product\ProductManager;
 use ProjektAffiliateTheme\Walker\BootstrapWalker;
 use ProjektAffiliateTheme\Product\ProductGroupSetup;
 use ProjektAffiliateTheme\Product\ProductCategorySetup;
+use ProjektAffiliateTheme\Product\Product;
 
 new ProductGroupSetup();
 new ProductCategorySetup();
@@ -46,8 +47,20 @@ if ( ! function_exists( 'is_version' ) ) {
     }
 }
 
+/**
+ * @param int|\WP_Post $post
+ * @return Product
+ * @throws \Exception
+ */
+function ap_get_product($post = null)
+{
+    return new Product($post);
+}
 
-
+function ap_get_product_details(Product $product)
+{
+    return $product->getDetails();
+}
 
 
 

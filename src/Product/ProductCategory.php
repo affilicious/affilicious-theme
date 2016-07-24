@@ -58,6 +58,27 @@ class ProductCategory
     }
 
     /**
+     * @param Product $product
+     * @return ProductCategory[]
+     * @throws \Exception
+     */
+    public static function forProduct(Product $product)
+    {
+        $terms = wp_get_post_terms($product->getId(), self::TAXONOMY, array(
+            'orderby' => 'name',
+            'hide_empty' => false,
+            'parent'  => 0,
+        ));
+
+        $categories = array();
+        foreach ($terms as $term) {
+            $categories[] = new self($term->ID, $term->name, $term->slug);
+        }
+
+        return $categories;
+    }
+
+    /**
      * @param int $id
      * @param string $name
      * @param string $slug

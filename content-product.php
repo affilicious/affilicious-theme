@@ -1,17 +1,38 @@
-<?php $product = new AP_Product(get_the_ID()); ?>
+<?php $product = ap_get_product(); ?>
 
 <article id="product-<?php the_ID(); ?>" <?php post_class('product'); ?>>
     <header class="product-header box">
         <h1 class="product-title"><?php the_title(); ?></h1>
-        <div class="product-thumbnail">
-            <?php if (has_post_thumbnail()): ?>
-                <?php the_post_thumbnail(); ?>
-            <?php endif; ?>
+
+        <div class="row">
+            <div class="col-md-5">
+            <div class="product-thumbnail">
+                <?php if (has_post_thumbnail()): ?>
+                    <?php the_post_thumbnail(); ?>
+                <?php endif; ?>
+            </div>
+            </div>
+
+            <div class="col-md-7">
+            <?php $detailGroups = ap_get_product_details($product); ?>
+            <?php foreach ($detailGroups as $detailGroup): ?>
+                <table class="product-table table table-striped">
+                    <tbody>
+                        <?php foreach ($detailGroup as $details): ?>
+                            <tr>
+                                <td><?php echo $details['name']; ?></td>
+                                <td><?php echo $details['value']; ?></td>
+                            </tr>
+                        <?php endforeach; ?>
+                    </tbody>
+                </table>
+            <?php endforeach; ?>
+            </div>
         </div>
     </header>
 
     <section class="product-body box">
-        <?php the_content(); ?>
+        <?php echo $product->getContent(); ?>
     </section>
 
     <!--<footer class="product-footer box"></footer>-->

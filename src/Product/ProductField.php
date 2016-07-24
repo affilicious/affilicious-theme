@@ -5,7 +5,8 @@ if(!defined('ABSPATH')) exit('Not allowed to access pages directly.');
 
 class ProductField
 {
-    const ID = 'at_product_group_field_id';
+    const ID = 'at_product_details_%s_%s';
+    const KEY = 'at_product_group_field_key';
     const NAME = 'at_product_group_field_name';
     const TYPE = 'at_product_group_field_type';
     const DEFAULT_VALUE = 'at_product_group_field_default_value';
@@ -14,7 +15,12 @@ class ProductField
     /**
      * @var string
      */
-    private $id;
+    private $group;
+
+    /**
+     * @var string
+     */
+    private $key;
 
     /**
      * @var string
@@ -38,12 +44,13 @@ class ProductField
 
     /**
      * Convert the raw fields into an object
+     * @param int $group
      * @param array $raw
      * @return ProductField
      */
-    public static function fromRaw($raw)
+    public static function fromRaw($group, $raw)
     {
-        $field = new ProductField($raw[self::ID], $raw[self::NAME], $raw[self::TYPE]);
+        $field = new ProductField($group, $raw[self::KEY], $raw[self::NAME], $raw[self::TYPE]);
 
         $defaultValue = $raw[self::DEFAULT_VALUE];
         if(!empty($defaultValue)) {
@@ -59,13 +66,15 @@ class ProductField
     }
 
     /**
-     * @param string $id
+     * @param string $group
+     * @param string $key
      * @param string $name
      * @param string $type
      */
-    public function __construct($id, $name, $type)
+    public function __construct($group, $key, $name, $type)
     {
-        $this->id = $id;
+        $this->group = $group;
+        $this->key = $key;
         $this->name = $name;
         $this->type = $type;
     }
@@ -75,7 +84,27 @@ class ProductField
      */
     public function getId()
     {
-        return $this->id;
+        return sprintf(
+            self::ID,
+            $this->group,
+            $this->key
+        );
+    }
+
+    /**
+     * @return string
+     */
+    public function getGroup()
+    {
+        return $this->group;
+    }
+
+    /**
+     * @return string
+     */
+    public function getKey()
+    {
+        return $this->key;
     }
 
     /**

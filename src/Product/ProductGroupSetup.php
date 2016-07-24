@@ -82,9 +82,9 @@ class ProductGroupSetup
             ->add_fields(array(
                 Field::make('complex', ProductGroup::FIELDS, __('Fields', 'projektaffiliatetheme'))
                     ->add_fields(array(
-                            Field::make('text', ProductField::ID, __("Field ID", 'projektaffiliatetheme'))
+                            Field::make('text', ProductField::KEY, __("Field key", 'projektaffiliatetheme'))
                                 ->set_required(true)
-                                ->help_text(__('Create a unique id with non-special characters, numbers and _ only', 'projektaffiliatetheme')),
+                                ->help_text(__('Create a unique key with non-special characters, numbers and _ only', 'projektaffiliatetheme')),
                             Field::make('text', ProductField::NAME, __("Field name", 'projektaffiliatetheme'))
                                 ->set_required(true),
                             Field::make("select", ProductField::TYPE, __("Field type", 'projektaffiliatetheme'))
@@ -118,12 +118,6 @@ class ProductGroupSetup
 
                 $details = array();
                 if(!empty($fields)) {
-
-                    /*
-                    $details[] = Field::make("checkbox", "at_product_group_show_" . $productGroup->getId(), __('Show details in the product', 'projektaffiliatetheme'))
-                        ->set_option_value('yes');
-                    */
-
                     foreach ($fields as $field) {
                         $detail = Field::make($field->getType(), $field->getId(), $field->getName());
 
@@ -137,7 +131,6 @@ class ProductGroupSetup
 
                         $details[] = $detail;
                     }
-
                 }
 
                 Container::make('post_meta', $productGroup->getTitle())
