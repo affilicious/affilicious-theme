@@ -1,11 +1,16 @@
 <?php
 namespace ProjektAffiliateTheme\Product;
 
+use ProjektAffiliateTheme\Product\Detail\DetailGroup;
+use ProjektAffiliateTheme\Product\Field\FieldGroup;
+
 if(!defined('ABSPATH')) exit('Not allowed to access pages directly.');
 
 class Product
 {
     const POST_TYPE = 'product';
+    const TAXONOMY = 'product_category';
+    const SLUG = 'produktkategorie';
 
     /**
      * @var \WP_Post
@@ -13,24 +18,23 @@ class Product
     private $post;
 
     /**
-     * @param int|\WP_Post $post
-     * @throws \Exception
+     * @var FieldGroup[]
      */
-    public function __construct($post = null)
-    {
-        if($post instanceof \WP_Post) {
-            $this->post = $post;
-        } elseif (is_int($post)) {
-            $this->post = get_post($post);
-        } elseif (is_string($post)) {
-            $this->post = get_post($post);
-        } else {
-            $this->post = get_post();
-        }
+    private $fieldGroups;
 
-        if ($this->post === null) {
-            throw new \Exception(__('Failed to find the product.'));
-        }
+    /**
+     * @var DetailGroup[]
+     */
+    private $detailGroups;
+
+    /**
+     * @param \WP_Post $post
+     */
+    public function __construct(\WP_Post $post)
+    {
+        $this->post = $post;
+        $this->detailGroups = array();
+        $this->fieldGroups = array();
     }
 
     /**
@@ -42,116 +46,74 @@ class Product
     }
 
     /**
-     * @return string
+     * Add a field group to the product
+     * @param FieldGroup $fieldGroup
      */
-    public function getTitle()
+    public function addFieldGroup(FieldGroup $fieldGroup)
     {
-        return $this->post->post_title;
+        $this->fieldGroups[$fieldGroup->getId()] = $fieldGroup;
     }
 
     /**
-     * @return string
+     * Remove a field group from the product by the given ID
+     * @param int $id
      */
-    public function getContent()
+    public function removeFieldGroup($id)
     {
-        return $this->post->post_content;
+        unset($this->fieldGroups[$id]);
     }
 
     /**
-     * @return string
+     * Check if the product has the field group with the given ID
+     * @param int $id
      */
-    public function getExcerpt()
+    public function hasFieldGroup($id)
     {
-        return $this->post->post_excerpt;
+        unset($this->fieldGroups[$id]);
     }
 
     /**
-     * @return string
+     * Get all field groups from the product
+     * @return FieldGroup[]
      */
-    public function getAuthor()
+    public function getFieldGroups()
     {
-        return $this->post->post_author;
+        return $this->fieldGroups;
     }
 
     /**
-     * @return false|string
+     * Add a detail group to the product
+     * @param DetailGroup $detailGroup
      */
-    public function getPermalink()
+    public function addDetailGroup(DetailGroup $detailGroup)
     {
-        return get_permalink($this->post);
+        $this->detailGroups[$detailGroup->getId()] = $detailGroup;
     }
 
     /**
-     * @return bool
+     * Remove a detail group from the product by the given ID
+     * @param int $id
      */
-    public function hasThumbnail()
+    public function removeDetailGroup($id)
     {
-        return has_post_thumbnail($this->post);
+        unset($this->detailGroups[$id]);
     }
 
     /**
-     * @return string
+     * Check if the product has the detail group with the given ID
+     * @param int $id
      */
-    public function getThumbnail()
+    public function hasDetailGroup($id)
     {
-        return get_the_post_thumbnail($this->post);
+        unset($this->detailGroups[$id]);
     }
 
     /**
-     * @return string
+     * Get all detail groups from the product
+     * @return DetailGroup[]
      */
-    public function getCreatedAt()
+    public function getDetailGroups()
     {
-        return $this->post->post_date;
-    }
-
-    /**
-     * @return string
-     */
-    public function getModifiedAt()
-    {
-        return $this->post->post_modified;
-    }
-
-    public function getDetails()
-    {
-        $categories = ProductCategory::forProduct($this);
-        $query = new \WP_Query(array(
-            'post_type' => ProductGroup::POST_TYPE,
-            'post_status' => 'publish',
-            'posts_per_page' => -1,
-        ));
-
-        $detailGroups = array();
-        if($query->have_posts()) {
-            while ($query->have_posts()) {
-                $query->the_post();
-                $productGroup = new ProductGroup(get_the_ID());
-
-                if(true) {
-                    $fields = $productGroup->getFields();
-                    $detailGroups[$productGroup->getId()] = array();
-
-                    foreach ($fields as $field) {
-                        $detailGroup = array();
-                        $detailGroup['group'] = $field->getGroup();
-                        $detailGroup['key'] = $field->getKey();
-                        $detailGroup['name'] = $field->getName();
-
-                        $value = carbon_get_post_meta($this->getId(), sprintf(
-                            ProductField::ID, $field->getGroup(), $field->getKey()
-                        ));
-
-                        $detailGroup['value'] = !empty($value) ? $value : null;
-
-                        $detailGroups[$productGroup->getId()][] = $detailGroup;
-                    }
-                }
-
-
-            }
-        }
-
-        return $detailGroups;
+        return $this->detailGroups;
     }
 }

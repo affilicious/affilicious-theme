@@ -1,7 +1,7 @@
 <?php
 if (!defined('ABSPATH')) exit('Not allowed to access pages directly.');
-require_once(__DIR__ . '/vendor/autoload.php');
 
+require_once(__DIR__ . '/vendor/autoload.php');
 
 use ProjektAffiliateTheme\Admin\Customizer\ThemeCustomizerManager;
 use ProjektAffiliateTheme\Admin\MetaBox\MetaBoxManager;
@@ -11,17 +11,16 @@ use ProjektAffiliateTheme\Auxiliary\Layout;
 use ProjektAffiliateTheme\Auxiliary\Sidebar;
 use ProjektAffiliateTheme\Auxiliary\ThemeSupport;
 use ProjektAffiliateTheme\Auxiliary\WPGitHubThemeUpdater;
-use ProjektAffiliateTheme\Product\ProductManager;
+use ProjektAffiliateTheme\Product\ProductSetup;
 use ProjektAffiliateTheme\Walker\BootstrapWalker;
-use ProjektAffiliateTheme\Product\ProductGroupSetup;
-use ProjektAffiliateTheme\Product\ProductCategorySetup;
-use ProjektAffiliateTheme\Product\Product;
+use ProjektAffiliateTheme\Product\Field\FieldGroupSetup;
+use ProjektAffiliateTheme\Product\Detail\DetailGroupSetup;
 
-new ProductGroupSetup();
-new ProductCategorySetup();
+new DetailGroupSetup();
+new FieldGroupSetup();
 new Layout();
 new WPGitHubThemeUpdater();
-new ProductManager();
+new ProductSetup();
 new MetaBoxManager();
 new Assets();
 new Content();
@@ -34,7 +33,7 @@ new Sidebar(
     __('Place your widgets into this sidebar. It is visible on every page.', 'projektaffiliatetheme')
 );
 
-
+require_once(__DIR__ . '/src/Product/functions.php');
 
 if ( ! function_exists( 'is_version' ) ) {
     function is_version( $version ) {
@@ -46,23 +45,6 @@ if ( ! function_exists( 'is_version' ) ) {
         return true;
     }
 }
-
-/**
- * @param int|\WP_Post $post
- * @return Product
- * @throws \Exception
- */
-function ap_get_product($post = null)
-{
-    return new Product($post);
-}
-
-function ap_get_product_details(Product $product)
-{
-    return $product->getDetails();
-}
-
-
 
 function ap_is_loose_layout()
 {

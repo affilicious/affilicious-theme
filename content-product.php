@@ -14,14 +14,14 @@
             </div>
 
             <div class="col-md-7">
-            <?php $detailGroups = ap_get_product_details($product); ?>
+            <?php $detailGroups = ap_get_product_detail_groups($product); ?>
             <?php foreach ($detailGroups as $detailGroup): ?>
                 <table class="product-table table table-striped">
                     <tbody>
-                        <?php foreach ($detailGroup as $details): ?>
+                        <?php foreach ($detailGroup->getDetails() as $details): ?>
                             <tr>
-                                <td><?php echo $details['name']; ?></td>
-                                <td><?php echo $details['value']; ?></td>
+                                <td><?php echo $details->getLabel(); ?></td>
+                                <td><?php echo $details->getValue(); ?></td>
                             </tr>
                         <?php endforeach; ?>
                     </tbody>
@@ -32,7 +32,7 @@
     </header>
 
     <section class="product-body box">
-        <?php echo $product->getContent(); ?>
+        <?php the_content(); ?>
     </section>
 
     <!--<footer class="product-footer box"></footer>-->
