@@ -18,10 +18,18 @@
             <?php foreach ($detailGroups as $detailGroup): ?>
                 <table class="product-table table table-striped">
                     <tbody>
-                        <?php foreach ($detailGroup->getDetails() as $details): ?>
+                        <?php foreach ($detailGroup->getDetails() as $detail): ?>
                             <tr>
-                                <td><?php echo $details->getLabel(); ?></td>
-                                <td><?php echo $details->getValue(); ?></td>
+                                <td><?php echo $detail->getLabel(); ?></td>
+                                <td>
+                                    <?php if($detail->isFile()): ?>
+                                        <a href="<?php echo esc_url($detail->getDownloadLink())?>">
+                                            <?php _e('Download', 'projektaffiliatetheme'); ?>
+                                        </a>
+                                    <?php else: ?>
+                                        <?php echo esc_html($detail->getValue()); ?>
+                                    <?php endif; ?>
+                                </td>
                             </tr>
                         <?php endforeach; ?>
                     </tbody>
