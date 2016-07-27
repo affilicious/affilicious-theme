@@ -106,7 +106,15 @@ class FieldGroupSetup
                                 )),
                             CarbonField::make('text', Field::CARBON_LABEL, __("Field label", 'projektaffiliatetheme'))
                                 ->set_required(true),
-                            CarbonField::make('text', Field::CARBON_DEFAULT_VALUE, __("Field default value", 'projektaffiliatetheme')),
+                            CarbonField::make('text', Field::CARBON_DEFAULT_VALUE, __("Field default value", 'projektaffiliatetheme'))
+                                ->set_conditional_logic(array(
+                                    'relation' => 'AND', // Optional, defaults to "AND"
+                                    array(
+                                        'field' => Field::CARBON_TYPE,
+                                        'value' => array('text', 'number'), // Optional, defaults to "". Should be an array if "IN" or "NOT IN" operators are used.
+                                        'compare' => 'IN', // Optional, defaults to "=". Available operators: =, <, >, <=, >=, IN, NOT IN
+                                    )
+                                )),
                             CarbonField::make('text', Field::CARBON_HELP_TEXT, __("Field help text", 'projektaffiliatetheme'))
                         )
                     )
