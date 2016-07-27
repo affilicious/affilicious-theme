@@ -79,6 +79,33 @@ class Detail
     }
 
     /**
+     * Check if the detail is a text
+     * @return bool
+     */
+    public function isText()
+    {
+        return $this->getType() === 'text';
+    }
+
+    /**
+     * Check if the detail is a number
+     * @return bool
+     */
+    public function isNumber()
+    {
+        return $this->getType() === 'number';
+    }
+
+    /**
+     * Check if the detail is a file
+     * @return bool
+     */
+    public function isFile()
+    {
+        return $this->getType() === 'file';
+    }
+
+    /**
      * Get the raw label
      * @return string
      */
@@ -101,5 +128,20 @@ class Detail
     public function getValue()
     {
         return $this->value;
+    }
+
+    /**
+     * @return null|string
+     */
+    public function getDownloadLink()
+    {
+        if (!$this->isFile()) {
+            return null;
+        }
+
+        $fileId = $this->getValue();
+        $fileUrl = \wp_get_attachment_image_url($fileId);
+
+        return $fileUrl;
     }
 }

@@ -75,6 +75,33 @@ class Field
     }
 
     /**
+     * Check if the field is a text
+     * @return bool
+     */
+    public function isText()
+    {
+        return $this->getType() === 'text';
+    }
+
+    /**
+     * Check if the field is a number
+     * @return bool
+     */
+    public function isNumber()
+    {
+        return $this->getType() === 'number';
+    }
+
+    /**
+     * Check if the field is a file
+     * @return bool
+     */
+    public function isFile()
+    {
+        return $this->getType() === 'file';
+    }
+
+    /**
      * @return string
      */
     public function getLabel()
