@@ -1,5 +1,3 @@
-<?php $product = ap_get_product(); ?>
-
 <article id="product-<?php the_ID(); ?>" <?php post_class('product'); ?>>
     <header class="product-header box">
         <h1 class="product-title"><?php the_title(); ?></h1>
@@ -14,27 +12,19 @@
             </div>
 
             <div class="col-md-7">
-            <?php $detailGroups = ap_get_product_detail_groups($product); ?>
-            <?php foreach ($detailGroups as $detailGroup): ?>
+            <?php $fields = affilicious_get_product_details(); ?>
+            <?php if(!empty($fields)): ?>
                 <table class="product-table table table-striped">
                     <tbody>
-                        <?php foreach ($detailGroup->getDetails() as $detail): ?>
-                            <tr>
-                                <td><?php echo $detail->getLabel(); ?></td>
-                                <td>
-                                    <?php if($detail->isFile()): ?>
-                                        <a href="<?php echo esc_url($detail->getDownloadLink())?>">
-                                            <?php _e('Download', 'projektaffiliatetheme'); ?>
-                                        </a>
-                                    <?php else: ?>
-                                        <?php echo esc_html($detail->getValue()); ?>
-                                    <?php endif; ?>
-                                </td>
-                            </tr>
-                        <?php endforeach; ?>
+                    <?php foreach ($fields as $field): ?>
+                        <tr>
+                            <td><?php echo $field['label']; ?></td>
+                            <td><?php echo esc_html($field['value']); ?></td>
+                        </tr>
+                    <?php endforeach; ?>
                     </tbody>
                 </table>
-            <?php endforeach; ?>
+            <?php endif; ?>
             </div>
         </div>
     </header>

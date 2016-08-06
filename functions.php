@@ -11,16 +11,11 @@ use ProjektAffiliateTheme\Auxiliary\Layout;
 use ProjektAffiliateTheme\Auxiliary\Sidebar;
 use ProjektAffiliateTheme\Auxiliary\ThemeSupport;
 use ProjektAffiliateTheme\Auxiliary\WPGitHubThemeUpdater;
-use ProjektAffiliateTheme\Product\ProductSetup;
 use ProjektAffiliateTheme\Walker\BootstrapWalker;
-use ProjektAffiliateTheme\Product\Field\FieldGroupSetup;
-use ProjektAffiliateTheme\Product\Detail\DetailGroupSetup;
 
-new DetailGroupSetup();
-new FieldGroupSetup();
+
 new Layout();
 new WPGitHubThemeUpdater();
-new ProductSetup();
 new MetaBoxManager();
 new Assets();
 new Content();
@@ -33,7 +28,6 @@ new Sidebar(
     __('Place your widgets into this sidebar. It is visible on every page.', 'projektaffiliatetheme')
 );
 
-require_once(__DIR__ . '/src/Product/functions.php');
 
 if ( ! function_exists( 'is_version' ) ) {
     function is_version( $version ) {
