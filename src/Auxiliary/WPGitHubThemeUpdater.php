@@ -141,7 +141,6 @@ if (!class_exists( 'WPGitHubThemeUpdater' ) ) :
             delete_site_transient( $this->config['slug'].'_changelog' );
         }
 
-
         /**
          * Get New Version from github
          *
@@ -171,7 +170,6 @@ if (!class_exists( 'WPGitHubThemeUpdater' ) ) :
 
             return $version;
         }
-
 
         /**
          * Get GitHub Data from the specified repository

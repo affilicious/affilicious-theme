@@ -15,8 +15,7 @@ use ProjektAffiliateTheme\Walker\BootstrapWalker;
 
 
 new Layout();
-new WPGitHubThemeUpdater();
-new MetaBoxManager();
+//new WPGitHubThemeUpdater();
 new Assets();
 new Content();
 new ThemeSupport();
