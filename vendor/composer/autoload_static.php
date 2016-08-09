@@ -6,30 +6,17 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit040876400e60c04a3c58cd011ccdd619
 {
-    public static $files = array (
-        '74704c95e6224e3a13dba163dbbb87fa' => __DIR__ . '/..' . '/htmlburger/carbon-fields/carbon-fields.php',
-        '1c3af1f7c867149c2eb8dfa733be2e98' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/functions.php',
-    );
-
     public static $prefixLengthsPsr4 = array (
-        'P' => 
+        'A' => 
         array (
-            'ProjektAffiliateTheme\\' => 22,
-        ),
-        'C' => 
-        array (
-            'Carbon_Fields\\' => 14,
+            'Affilicious\\Theme\\' => 18,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'ProjektAffiliateTheme\\' => 
+        'Affilicious\\Theme\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
-        ),
-        'Carbon_Fields\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/htmlburger/carbon-fields/core',
         ),
     );
 

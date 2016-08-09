@@ -1,5 +1,5 @@
 <?php
-namespace ProjektAffiliateTheme\Admin\Customizer;
+namespace Affilicious\Theme\Admin\Customizer;
 
 if(!defined('ABSPATH')) exit('Not allowed to access pages directly.');
 
@@ -11,7 +11,7 @@ class HeaderCustomizer extends AbstractThemeCustomizer
     public function register(\WP_Customize_Manager $wp_customize)
     {
         $wp_customize->add_section('ap_section_header' , array(
-            'title'     => __('Header', 'projektaffiliatetheme'),
+            'title'     => __('Header', 'affilicious-theme'),
             'priority'  => 30,
         ));
 
@@ -25,7 +25,7 @@ class HeaderCustomizer extends AbstractThemeCustomizer
             $wp_customize,
             'ap_header_background_color',
             array(
-                'label'     => __('Background color', 'projektaffiliatetheme'),
+                'label'     => __('Background color', 'affilicious-theme'),
                 'section'   => 'ap_section_header',
                 'settings'  => 'ap_header_background_color',
             )
@@ -41,7 +41,7 @@ class HeaderCustomizer extends AbstractThemeCustomizer
             $wp_customize,
             'ap_header_title_font_color',
             array(
-                'label'     => __('Title Font Color', 'projektaffiliatetheme'),
+                'label'     => __('Title Font Color', 'affilicious-theme'),
                 'section'   => 'ap_section_header',
                 'settings'  => 'ap_header_title_font_color',
             )
@@ -57,7 +57,7 @@ class HeaderCustomizer extends AbstractThemeCustomizer
             $wp_customize,
             'ap_header_tagline_font_color',
             array(
-                'label'     => __('Tagline Font Color', 'projektaffiliatetheme'),
+                'label'     => __('Tagline Font Color', 'affilicious-theme'),
                 'section'   => 'ap_section_header',
                 'settings'  => 'ap_header_tagline_font_color',
             )

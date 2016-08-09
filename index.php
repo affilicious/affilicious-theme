@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <main role="main">
-    <?php if (ap_is_loose_layout()): ?>
+    <?php if (affilicious_theme_is_loose_layout()): ?>
     <div class="container"><?php endif; ?>
         <div class="row">
             <div class="col-md-8">
@@ -11,7 +11,7 @@
             </div>
             <?php get_sidebar(); ?>
         </div>
-    <?php if (ap_is_loose_layout()): ?></div><?php endif; ?>
+    <?php if (affilicious_theme_is_loose_layout()): ?></div><?php endif; ?>
 </main>
 
 <?php get_footer(); ?>

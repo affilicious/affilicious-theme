@@ -1,5 +1,5 @@
 <?php
-namespace ProjektAffiliateTheme\Admin\Customizer;
+namespace Affilicious\Theme\Admin\Customizer;
 
 class ThemeCustomizerManager
 {

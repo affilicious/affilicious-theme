@@ -1,13 +1,15 @@
 {
-  "name": "alexba/projektaffiliatetheme",
-  "license": "proprietary",
+  "name": "alexba/affilicious-theme",
+  "license": "MIT",
   "type": "wordpress-theme",
   "keywords": [
-    "wordpress"
+    "wordpress",
+    "theme",
+    "affiliate"
   ],
   "autoload": {
     "psr-4": {
-      "ProjektAffiliateTheme\\": "src/"
+      "Affilicious\\Theme\\": "src/"
     }
   },
   "require": {

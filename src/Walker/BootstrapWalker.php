@@ -1,5 +1,7 @@
 <?php
-namespace ProjektAffiliateTheme\Walker;
+namespace Affilicious\Theme\Walker;
+
+if(!defined('ABSPATH')) exit('Not allowed to access pages directly.');
 
 /**
  * This walker is responsible for displaying the navigation with native bootstrap components

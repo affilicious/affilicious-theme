@@ -14,15 +14,15 @@
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-    <?php if(ap_is_tight_layout()): ?><div class="container"><?php endif; ?>
+    <?php if(affilicious_theme_is_tight_layout()): ?><div class="container"><?php endif; ?>
     <header id="header" role="banner">
-        <?php if(ap_is_loose_layout()): ?><div class="container"><?php endif; ?>
+        <?php if(affilicious_theme_is_loose_layout()): ?><div class="container"><?php endif; ?>
             <div class="row">
                 <div class="col-xs-12">
-                    <?php if(ap_has_logo() || ap_has_logo_retina()): ?>
+                    <?php if(affilicious_theme_has_logo() || affilicious_theme_has_retina_logo()): ?>
                         <a href="<?php home_url('/'); ?>" title="<?php bloginfo('name'); ?>" rel='home'>
-                            <img id="logo" src="<?php !ap_has_logo() ? ap_logo_retina() : ap_logo() ?>"
-                                 data-rjs="<?php ap_logo_retina() ?>" alt="<?php bloginfo('name'); ?>">
+                            <img id="logo" src="<?php echo (!affilicious_theme_has_logo() ? affilicious_theme_get_retina_logo() :  affilicious_theme_get_logo()); ?>"
+                                 data-rjs="<?php echo affilicious_theme_get_retina_logo() ?>" alt="<?php bloginfo('name'); ?>">
                         </a>
                     <?php else: ?>
                         <h1 id="title" class="display-4"><?php bloginfo('name') ?></h1>
@@ -30,16 +30,16 @@
                     <?php endif; ?>
                 </div>
             </div>
-        <?php if(ap_is_loose_layout()): ?></div><?php endif; ?>
+        <?php if(affilicious_theme_is_loose_layout()): ?></div><?php endif; ?>
     </header>
 
     <nav class="navbar navbar-default" role="navigation">
-        <?php if(ap_is_loose_layout()): ?><div class="container"><?php endif; ?>
+        <?php if(affilicious_theme_is_loose_layout()): ?><div class="container"><?php endif; ?>
             <div class="row">
                 <div class="col-md-12">
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#top-menu">
-                            <span class="sr-only"><?php _e('Toggle navigation', 'projektaffiliatetheme'); ?></span>
+                            <span class="sr-only"><?php _e('Toggle navigation', 'affilicious-theme'); ?></span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
@@ -48,11 +48,11 @@
                             <?php bloginfo('name'); ?>
                         </a>
                     </div>
-                    <?php if(ap_has_main_navigation()): ?>
-                        <?php ap_main_navigation(); ?>
+                    <?php if(affilicious_theme_has_main_menu()): ?>
+                        <?php affilicious_theme_main_menu(); ?>
                     <?php endif; ?>
                 </div>
             </div>
-        <?php if(ap_is_loose_layout()): ?></div><?php endif; ?>
+        <?php if(affilicious_theme_is_loose_layout()): ?></div><?php endif; ?>
     </nav>
     

@@ -6,6 +6,5 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'ProjektAffiliateTheme\\' => array($baseDir . '/src'),
-    'Carbon_Fields\\' => array($vendorDir . '/htmlburger/carbon-fields/core'),
+    'Affilicious\\Theme\\' => array($baseDir . '/src'),
 );

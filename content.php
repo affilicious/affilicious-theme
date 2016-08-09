@@ -27,8 +27,9 @@
             <li class="entry-date">
                 <time><?php the_date('d.m.Y'); ?></time>
             </li>
-            <?php if(!empty(get_edit_post_link())): ?>
-                <?php edit_post_link(__('Edit', 'projektaffiliatetheme'), '<li class="entry-edit-link">', '</li>'); ?>
+            <?php $post_link = get_edit_post_link(); ?>
+            <?php if(!empty($post_link )): ?>
+                <?php edit_post_link(__('Edit', 'affilicious-theme'), '<li class="entry-edit-link">', '</li>'); ?>
             <?php endif; ?>
         </ul>
     </footer>
