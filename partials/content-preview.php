@@ -1,3 +1,5 @@
+<?php do_action('affilicious_theme_preview_above_post'); ?>
+
 <article id="entry-<?php the_ID(); ?>" <?php post_class('entry'); ?>>
     <div class="entry-thumbnail">
         <?php if (has_post_thumbnail()): ?>
@@ -34,3 +36,5 @@
         </ul>
     </footer>
 </article>
+
+<?php do_action('affilicious_theme_preview_below_post'); ?>

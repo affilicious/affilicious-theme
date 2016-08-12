@@ -67,7 +67,7 @@
                             <?php if (have_posts()): while (have_posts()) : the_post(); ?>
                                 <?php $count++; ?>
                                 <div class="col-md-6">
-                                    <?php get_template_part('content', get_post_format()); ?>
+                                    <?php get_template_part('partials/content', get_post_format()); ?>
                                 </div>
                                 <?php if($count % 2 == 0): ?>
                                     <div class="clearfix"></div>

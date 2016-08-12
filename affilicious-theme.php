@@ -147,6 +147,7 @@ class AffiliciousTheme
 
         // Load the sidebars, widgets and menus
         add_action('widgets_init', array($this->sidebarSetup, 'registerMainSidebar'));
+        add_action('widgets_init', array($this->sidebarSetup, 'registerProductSidebar'));
         add_filter('widget_tag_cloud_args', array($this->widgetSetup, 'modifiyTagCloud'));
         add_action('after_setup_theme', array($this->menuSetup, 'registerMainMenu'));
         add_action('after_setup_theme', array($this->menuSetup, 'registerBottomMenu'));
