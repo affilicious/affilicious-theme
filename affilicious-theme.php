@@ -78,6 +78,17 @@ class AffiliciousTheme
      */
     public static function getRootDir()
     {
+        return get_template_directory();
+    }
+
+    /**
+     * Get the root url of the affilicious theme
+     *
+     * @since 0.2
+     * @return string
+     */
+    public static function getRootUrl()
+    {
         return get_template_directory_uri();
     }
 
@@ -148,6 +159,7 @@ class AffiliciousTheme
         // Load the sidebars, widgets and menus
         add_action('widgets_init', array($this->sidebarSetup, 'registerMainSidebar'));
         add_action('widgets_init', array($this->sidebarSetup, 'registerProductSidebar'));
+        add_filter('widgets_init', array($this->widgetSetup, 'registerWidgets'));
         add_filter('widget_tag_cloud_args', array($this->widgetSetup, 'modifiyTagCloud'));
         add_action('after_setup_theme', array($this->menuSetup, 'registerMainMenu'));
         add_action('after_setup_theme', array($this->menuSetup, 'registerBottomMenu'));
@@ -223,7 +235,9 @@ class AffiliciousTheme
      */
     public function loadTextdomain()
     {
-        $dir = basename(dirname(__FILE__)) . '/languages';
-        load_theme_textdomain(self::THEME_NAME, $dir);
+        $dir = self::getRootDir() . '/languages';
+        $hook = load_theme_textdomain(self::THEME_NAME, $dir);
+
+        $hook++;
     }
 }
