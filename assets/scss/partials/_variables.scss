@@ -29,7 +29,9 @@ $font-size-headline-3:    1.6rem;
 $font-size-headline-4:    1.4rem;
 $font-size-headline-5:    1.2rem;
 $font-size-headline-6:    1rem;
+$font-size-big-text:      1.2rem;
 $font-size-text:          1rem;
+$font-size-small-text:    0.8rem;
 
 // Font family
 $font-family-default:      'Helvetica Neue', Arial, Helvetica, Verdana, sans-serif;
@@ -39,7 +41,9 @@ $font-family-headline-3:   $font-family-default;
 $font-family-headline-4:   $font-family-default;
 $font-family-headline-5:   $font-family-default;
 $font-family-headline-6:   $font-family-default;
+$font-family-big-text:     $font-family-default;
 $font-family-text:         $font-family-default;
+$font-family-small-text:   $font-family-default;
 
 // Font weight
 $font-weight-default:      normal;
@@ -49,7 +53,9 @@ $font-weight-headline-3:   500;
 $font-weight-headline-4:   500;
 $font-weight-headline-5:   500;
 $font-weight-headline-6:   500;
+$font-weight-big-text:     $font-weight-default;
 $font-weight-text:         $font-weight-default;
+$font-weight-small-text:   $font-weight-default;
 
 // Font color
 $font-color-default:      #555;
@@ -59,7 +65,9 @@ $font-color-headline-3:   $font-color-headline-1;
 $font-color-headline-4:   $font-color-headline-1;
 $font-color-headline-5:   $font-color-headline-1;
 $font-color-headline-6:   $font-color-headline-1;
+$font-color-big-text:     $font-color-default;
 $font-color-text:         $font-color-default;
+$font-color-small-text:   $font-color-default;
 
 // Font line height
 $font-line-height-default:      $font-size-default * 1.8;
@@ -69,7 +77,9 @@ $font-line-height-headline-3:   $font-size-headline-3 * 1.3;
 $font-line-height-headline-4:   $font-size-headline-4 * 1.4;
 $font-line-height-headline-5:   $font-size-headline-5 * 1.5;
 $font-line-height-headline-6:   $font-size-headline-6 * 1.6;
+$font-line-height-big-text:     $font-line-height-default;
 $font-line-height-text:         $font-line-height-default;
+$font-line-height-small-text:   $font-size-small-text * 1.2;
 
 // Font letter spacing
 $font-letter-spacing-default:      0.01rem;
@@ -79,7 +89,9 @@ $font-letter-spacing-headline-3:   $font-letter-spacing-default;
 $font-letter-spacing-headline-4:   $font-letter-spacing-default;
 $font-letter-spacing-headline-5:   $font-letter-spacing-default;
 $font-letter-spacing-headline-6:   $font-letter-spacing-default;
+$font-letter-spacing-big-text:     $font-letter-spacing-default;
 $font-letter-spacing-text:         $font-letter-spacing-default;
+$font-letter-spacing-small-text:   $font-letter-spacing-default;
 
 // Widgets
 $widget-tagcloud-tag-background-color:  rgba(#555555, 0.1);
@@ -89,3 +101,10 @@ $widget-tagcloud-tag-border-color:      rgba(#555555, 0.1);
 $post-thumbnail-min-size:   50px;
 $post-thumbnail-max-size:   200px;
 $post-avatar-size:          50px;
+
+// Price Comparison
+$price-comparison-shop-border:              1px solid lightgrey;
+$price-comparison-shop-background:          #f0f0f0;
+$price-comparison-current-price-color:      #2fa32f;
+$price-comparison-old-price-color:          #ff2320;
+$price-comparison-widget-shop-height:       100px;

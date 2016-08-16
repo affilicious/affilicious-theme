@@ -6,25 +6,25 @@ if(!defined('ABSPATH')) exit('Not allowed to access pages directly.');
 class AssetSetup
 {
     /**
-     * Get the path to the style directory
+     * Get the url to the style directory
      *
      * @since 0.2
      * @return string
      */
     public static function getStylesDir()
     {
-        return \AffiliciousTheme::getRootDir() . '/assets/css/';
+        return \AffiliciousTheme::getRootUrl() . '/assets/css/';
     }
 
     /**
-     * Get the path to the script directory
+     * Get the url to the script directory
      *
      * @since 0.2
      * @return string
      */
-    public static function getScriptDir()
+    public static function getScriptUrl()
     {
-        return \AffiliciousTheme::getRootDir() . '/assets/js/';
+        return \AffiliciousTheme::getRootUrl() . '/assets/js/';
     }
 
     /**
@@ -56,9 +56,9 @@ class AssetSetup
      */
     public function addPublicScripts()
     {
-        wp_enqueue_script('bootstrap', self::getScriptDir() . 'bootstrap.min.js', array(), '3.3.6', true);
-        wp_enqueue_script('retina-script', self::getScriptDir() . 'retina.min.js', array(), '2.0.0', true);
-        wp_enqueue_script('affilicious-theme', self::getScriptDir() . 'script.js', array('jquery'), \AffiliciousTheme::THEME_VERSION, true);
+        wp_enqueue_script('bootstrap', self::getScriptUrl() . 'bootstrap.min.js', array(), '3.3.6', true);
+        wp_enqueue_script('retina-script', self::getScriptUrl() . 'retina.min.js', array(), '2.0.0', true);
+        wp_enqueue_script('affilicious-theme', self::getScriptUrl() . 'script.js', array('jquery'), \AffiliciousTheme::THEME_VERSION, true);
     }
 
     /**
@@ -68,6 +68,6 @@ class AssetSetup
      */
     public function addAdminScripts()
     {
-        wp_enqueue_script('affilicious-theme-admin', self::getScriptDir() . 'admin.js', array('jquery'), \AffiliciousTheme::THEME_VERSION, true);
+        wp_enqueue_script('affilicious-theme-admin', self::getScriptUrl() . 'admin.js', array('jquery'), \AffiliciousTheme::THEME_VERSION, true);
     }
 }

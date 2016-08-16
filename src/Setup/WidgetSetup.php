@@ -10,6 +10,18 @@ class WidgetSetup
     const TAG_CLOUD_UNIT = '%';
 
     /**
+     * Register all widgets
+     *
+     * @since 0.2
+     */
+    public function registerWidgets()
+    {
+        if (class_exists('Carbon_Fields\Widget\Widget')) {
+            register_widget('Affilicious\Theme\Widget\PriceComparisonWidget');
+        }
+    }
+
+    /**
      * Modify the widget tag cloud
      *
      * @since 0.2

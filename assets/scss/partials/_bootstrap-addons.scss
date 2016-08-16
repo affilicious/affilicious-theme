@@ -1,0 +1,10 @@
+.btn-buy {
+  background-color: #ff8c14;
+  color: white;
+  border: 1px solid darken(#ff8c14, 2);
+
+  &:hover {
+    color: white;
+    background-color: darken(#ff8c14, 2);
+  }
+}
