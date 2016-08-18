@@ -16,14 +16,15 @@
 
   &-thumbnail {
     padding: 0;
-    width: 250px;
     margin: 0;
-    height: 250px;
+    width: $product-thumbnail-width;
+    height: $product-thumbnail-height;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid lightgrey;
+    border: $product-thumbnail-border;
+    color: lightgrey;
 
     img {
       width: 100%;
@@ -31,7 +32,27 @@
     }
   }
 
-  &-table {
+  &-image-gallery {
+    .portfolio-slider {
+      padding: 0;
+      margin: 0;
+      width: $product-thumbnail-width;
+      height: $product-thumbnail-height;
+      display: inline-block;
+      box-sizing: content-box;
+      border: $product-thumbnail-border;
 
+      .slick-slider {
+        &-item {
+          img {
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+
+    .thumb-slider {
+      margin-top: $space-size-small;
+    }
   }
 }

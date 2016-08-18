@@ -35,8 +35,9 @@ class AssetSetup
     public function addPublicStyles()
     {
         wp_enqueue_style('bootstrap', self::getStylesDir() . 'bootstrap.min.css', array(), '3.3.6');
+        wp_enqueue_style('slick', self::getStylesDir() . 'slick.css', array(), '1.6.0');
         wp_enqueue_style('font-awesome', self::getStylesDir() . 'font-awesome.min.css', array(), '3.2.1');
-        wp_enqueue_style('affilicious-theme', self::getStylesDir() . 'style.css', array('font-awesome', 'bootstrap'), \AffiliciousTheme::THEME_VERSION);
+        wp_enqueue_style('affilicious-theme', self::getStylesDir() . 'style.css', array('font-awesome', 'bootstrap', 'slick'), \AffiliciousTheme::THEME_VERSION);
     }
 
     /**
@@ -57,8 +58,9 @@ class AssetSetup
     public function addPublicScripts()
     {
         wp_enqueue_script('bootstrap', self::getScriptUrl() . 'bootstrap.min.js', array(), '3.3.6', true);
+        wp_enqueue_script('slick', self::getScriptUrl() . 'slick.min.js', array(), '1.6.0', true);
         wp_enqueue_script('retina-script', self::getScriptUrl() . 'retina.min.js', array(), '2.0.0', true);
-        wp_enqueue_script('affilicious-theme', self::getScriptUrl() . 'script.js', array('jquery'), \AffiliciousTheme::THEME_VERSION, true);
+        wp_enqueue_script('affilicious-theme', self::getScriptUrl() . 'script.js', array('jquery', 'bootstrap', 'slick', 'retina-script'), \AffiliciousTheme::THEME_VERSION, true);
     }
 
     /**
