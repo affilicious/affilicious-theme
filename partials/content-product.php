@@ -46,8 +46,12 @@
                         <tbody>
                         <?php foreach ($fields as $field): ?>
                             <tr>
-                                <td><?php echo $field['label']; ?></td>
-                                <td><?php echo esc_html($field['value']); ?></td>
+                                <td><?php echo $field['name']; ?></td>
+                                <?php if($field['type'] === 'file'): ?>
+                                    <td><?php echo wp_get_attachment_link($field['value']); ?></td>
+                                <?php else: ?>
+                                    <td><?php echo esc_html($field['value']); ?></td>
+                                <?php endif; ?>
                             </tr>
                         <?php endforeach; ?>
                         </tbody>
@@ -61,7 +65,7 @@
         <?php the_content(); ?>
     </div>
 
-    <!--<footer class="product-footer box"></footer>-->
+    <footer class="product-footer"></footer>
 </article>
 
 <?php do_action('affilicious_theme_product_below_post'); ?>
