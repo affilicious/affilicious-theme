@@ -1,4 +1,5 @@
 .DS_Store
+assets/.sass-cache
 assets/css/*.css.map
 assets/js/*.js.map
 .sass-cache
