@@ -1,7 +1,7 @@
-<?php if(is_singular('product') && is_active_sidebar('product-sidebar')): ?>
+<?php if(affilicious_is_product() && affilicious_is_active_product_sidebar()): ?>
     <div class="sidebar sidebar-product">
         <ul>
-            <?php dynamic_sidebar('product-sidebar'); ?>
+            <?php affilicious_get_product_sidebar(); ?>
         </ul>
     </div>
 <?php endif; ?>
