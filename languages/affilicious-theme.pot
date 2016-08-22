@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: "
 "affilicious-theme\n"
 "POT-Creation-Date: "
-"2016-08-16 16:14+0200\n"
+"2016-08-22 23:16+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Your "
 "Name <you@example.com>\n"
@@ -52,6 +52,117 @@ msgstr ""
 "X-Poedit-"
 "SearchPathExcluded-2: "
 "assets\n"
+
+#: affilicious-theme.php:204
+msgid "Theme License"
+msgstr ""
+
+#: affilicious-theme.php:205
+msgid ""
+"Enter your theme "
+"license key."
+msgstr ""
+
+#: affilicious-theme.php:206
+msgid "License Key"
+msgstr ""
+
+#: affilicious-theme.php:207
+msgid "License Action"
+msgstr ""
+
+#: affilicious-theme.php:208
+msgid "Deactivate License"
+msgstr ""
+
+#: affilicious-theme.php:209
+msgid "Activate License"
+msgstr ""
+
+#: affilicious-theme.php:210
+#: affilicious-theme.php:222
+msgid ""
+"License status is "
+"unknown."
+msgstr ""
+
+#: affilicious-theme.php:211
+msgid "Renew?"
+msgstr ""
+
+#: affilicious-theme.php:212
+msgid "unlimited"
+msgstr ""
+
+#: affilicious-theme.php:213
+msgid ""
+"License key is active."
+msgstr ""
+
+#: affilicious-theme.php:214
+#, php-format
+msgid "Expires %s."
+msgstr ""
+
+#: affilicious-theme.php:215
+#, php-format
+msgid ""
+"You have %1$s / %2$s "
+"sites activated."
+msgstr ""
+
+#: affilicious-theme.php:216
+#, php-format
+msgid ""
+"License key expired %s."
+msgstr ""
+
+#: affilicious-theme.php:217
+msgid ""
+"License key has expired."
+msgstr ""
+
+#: affilicious-theme.php:218
+msgid ""
+"License keys do not "
+"match."
+msgstr ""
+
+#: affilicious-theme.php:219
+msgid ""
+"License is inactive."
+msgstr ""
+
+#: affilicious-theme.php:220
+msgid ""
+"License key is disabled."
+msgstr ""
+
+#: affilicious-theme.php:221
+msgid "Site is inactive."
+msgstr ""
+
+#: affilicious-theme.php:223
+msgid ""
+"Updating this theme "
+"will lose any "
+"customizations you have "
+"made. 'Cancel' to stop, "
+"'OK' to update."
+msgstr ""
+
+#: affilicious-theme.php:224
+#, php-format
+msgid ""
+"<strong>%1$s %2$s</"
+"strong> is available. "
+"<a href=\"%3$s\" class="
+"\"thickbox\" title=\"%4s"
+"\">Check out what's "
+"new</a> or <a href="
+"\"%5$s\"%6$s>Update "
+"now</a>."
+msgstr ""
 
 #: archive.php:18
 #, php-format
@@ -119,6 +230,45 @@ msgstr ""
 
 #: partials/content-preview.php:34
 msgid "Edit"
+msgstr ""
+
+#: partials/content-product-relations.php:12
+msgid "Related products"
+msgstr ""
+
+#: partials/content-product-relations.php:17
+msgid ""
+"Related accessories"
+msgstr ""
+
+#: partials/content-product-relations.php:22
+msgid "Related posts"
+msgstr ""
+
+#: partials/content-product-relations.php:35
+#: partials/content-product-relations.php:66
+#: partials/content-product-relations.php:98
+#, php-format
+msgid "Link to %s"
+msgstr ""
+
+#: partials/content-product-relations.php:43
+#: partials/content-product-relations.php:74
+#: src/Widget/View/priceComparison.php:28
+msgid "Buy"
+msgstr ""
+
+#: partials/content-product-relations.php:48
+#: partials/content-product-relations.php:79
+msgid "To The Test Report"
+msgstr ""
+
+#: partials/content-product-relations.php:105
+msgid "To The Post"
+msgstr ""
+
+#: partials/content-product.php:48
+msgid "Price"
 msgstr ""
 
 #: searchform.php:3
@@ -243,10 +393,10 @@ msgid ""
 "only on product pages."
 msgstr ""
 
-#: src/Widget/View/priceComparison.php:21
-msgid "Including 19 % VAT"
+#: src/Widget/PriceComparisonWidget.php:14
+msgid "Title"
 msgstr ""
 
-#: src/Widget/View/priceComparison.php:29
-msgid "Buy"
+#: src/Widget/View/priceComparison.php:20
+msgid "Including 19 % VAT"
 msgstr ""
