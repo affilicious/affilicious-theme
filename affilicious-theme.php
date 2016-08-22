@@ -62,6 +62,8 @@ class AffiliciousTheme
             spl_autoload_register(array($this, 'autoload'));
         }
 
+        require(__DIR__ . '/vendor/customizer-library/customizer-library.php');
+
         $this->assetSetup = new AssetSetup();
         $this->contentSetup = new ContentSetup();
         $this->sidebarSetup = new SidebarSetup();
