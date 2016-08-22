@@ -234,8 +234,6 @@ class AffiliciousTheme
     public function loadTextdomain()
     {
         $dir = self::getRootDir() . '/languages';
-        $hook = load_theme_textdomain(self::THEME_NAME, $dir);
-
-        $hook++;
+        load_theme_textdomain(self::THEME_NAME, $dir);
     }
 }

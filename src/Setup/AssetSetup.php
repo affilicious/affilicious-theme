@@ -11,7 +11,7 @@ class AssetSetup
      * @since 0.2
      * @return string
      */
-    public static function getStylesDir()
+    public static function getStylesUrl()
     {
         return \AffiliciousTheme::getRootUrl() . '/assets/css/';
     }
@@ -34,10 +34,11 @@ class AssetSetup
      */
     public function addPublicStyles()
     {
-        wp_enqueue_style('bootstrap', self::getStylesDir() . 'bootstrap.min.css', array(), '3.3.6');
-        wp_enqueue_style('slick', self::getStylesDir() . 'slick.css', array(), '1.6.0');
-        wp_enqueue_style('font-awesome', self::getStylesDir() . 'font-awesome.min.css', array(), '3.2.1');
-        wp_enqueue_style('affilicious-theme', self::getStylesDir() . 'style.css', array('font-awesome', 'bootstrap', 'slick'), \AffiliciousTheme::THEME_VERSION);
+        wp_enqueue_style('bootstrap', self::getStylesUrl() . 'bootstrap.min.css', array(), '3.3.6');
+        wp_enqueue_style('font-awesome', self::getStylesUrl() . 'font-awesome.min.css', array(), '3.2.1');
+        wp_enqueue_style('slick', self::getStylesUrl() . 'slick.css', array(), '1.6.0');
+        wp_enqueue_style('slick-theme', self::getStylesUrl() . 'slick-theme.css', array('slick'), '1.6.0');
+        wp_enqueue_style('affilicious-theme', self::getStylesUrl() . 'style.css', array('font-awesome', 'bootstrap', 'slick', 'slick-theme'), \AffiliciousTheme::THEME_VERSION);
     }
 
     /**
@@ -47,7 +48,7 @@ class AssetSetup
      */
     public function addAdminStyles()
     {
-        wp_enqueue_style('affilicious-theme-admin', self::getStylesDir() . 'admin.css', array(), \AffiliciousTheme::THEME_VERSION);
+        wp_enqueue_style('affilicious-theme-admin', self::getStylesUrl() . 'admin.css', array(), \AffiliciousTheme::THEME_VERSION);
     }
 
     /**
