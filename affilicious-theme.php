@@ -15,7 +15,7 @@ class AffiliciousTheme
     const THEME_NAMESPACE = 'Affilicious\\Theme\\';
     const THEME_STORE_URL = 'http://affilicioustheme.de';
     const THEME_ITEM_NAME = 'Affilicious Theme';
-    const THEME_LICENSE_KEY = 'e90a6d1a115da24a292fe0300afc402a';
+    const THEME_LICENSE_KEY = '42aa4d279329fe829a6022f47e1a47b8';
     const THEME_AUTHOR = 'Affilicious Team';
 
     /**
@@ -124,13 +124,10 @@ class AffiliciousTheme
      */
     public function run()
     {
-        register_activation_hook(__FILE__, array($this, 'activate'));
-        register_deactivation_hook(__FILE__, array($this, 'deactivate'));
-
-        $this->loadUpdater();
         $this->loadFunctions();
         $this->registerPublicHooks();
         $this->registerAdminHooks();
+        $this->loadUpdater();
     }
 
     /**
@@ -160,6 +157,10 @@ class AffiliciousTheme
      */
     public function registerPublicHooks()
     {
+        // Activate or deactivate the theme
+        add_action('after_switch_theme', array($this, 'activate'));
+        add_action('switch_theme', array($this, 'deactivate'));
+
         // Load the theme support and textdomain
         add_action('after_setup_theme', array($this, 'loadSupport'));
         add_action('after_setup_theme', array($this, 'loadTextdomain'));
@@ -243,7 +244,19 @@ class AffiliciousTheme
      */
     public function activate()
     {
-        // Nothing to do here
+        $api_params = array(
+            'edd_action' => 'activate_license',
+            'license'    => self::THEME_LICENSE_KEY,
+            'item_name'  => urlencode(self::THEME_ITEM_NAME)
+        );
+
+        $response = wp_remote_post(self::THEME_STORE_URL, array(
+            'timeout' => 15,
+            'sslverify' => false,
+            'body' => $api_params
+        ));
+
+        return is_wp_error($response);
     }
 
     /**
@@ -253,7 +266,19 @@ class AffiliciousTheme
      */
     public function deactivate()
     {
-        // Nothing to do here
+        $api_params = array(
+            'edd_action' => 'deactivate_license',
+            'license'    => self::THEME_LICENSE_KEY,
+            'item_name'  => urlencode(self::THEME_ITEM_NAME)
+        );
+
+        $response = wp_remote_post(self::THEME_STORE_URL, array(
+            'timeout' => 15,
+            'sslverify' => false,
+            'body' => $api_params
+        ));
+
+        return is_wp_error($response);
     }
 
     /**
