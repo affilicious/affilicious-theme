@@ -44,6 +44,10 @@
                 <?php if(!empty($fields)): ?>
                     <table class="product-table table table-striped">
                         <tbody>
+                            <tr>
+                                <td><?php _e('Price', 'affilicious-theme'); ?></td>
+                                <td><?php echo affilicious_get_product_price($product); ?></td>
+                            </tr>
                         <?php foreach ($fields as $field): ?>
                             <tr>
                                 <td><?php echo $field['name']; ?></td>
@@ -65,7 +69,9 @@
         <?php the_content(); ?>
     </div>
 
-    <footer class="product-footer"></footer>
+    <footer class="product-footer">
+        <?php get_template_part('partials/content-product-relations'); ?>
+    </footer>
 </article>
 
 <?php do_action('affilicious_theme_product_below_post'); ?>
