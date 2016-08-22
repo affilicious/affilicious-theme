@@ -12,7 +12,7 @@
                 <?php get_sidebar(); ?>
             </div>
         </div>
-        <?php if (affilicious_theme_is_loose_layout()): ?></div><?php endif; ?>
+    <?php if (affilicious_theme_is_loose_layout()): ?></div><?php endif; ?>
 </main>
 
 <?php get_footer(); ?>

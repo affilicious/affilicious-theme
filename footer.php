@@ -22,6 +22,7 @@
         </div>
     </footer>
     <?php if(affilicious_theme_is_tight_layout()): ?></div><?php endif; ?>
+
     <?php wp_footer(); ?>
 </body>
 </html>

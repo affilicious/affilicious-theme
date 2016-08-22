@@ -3,9 +3,7 @@
 <?php $relatedAccessoriesQuery = affilicious_get_product_related_accessories_query($product); ?>
 <?php $relatedPostsQuery = affilicious_get_product_related_posts_query($product); ?>
 
-<?php if(!empty($relatedProductsQuery) ||
-    !empty($relatedAccessoriesQuery) ||
-    !empty($relatedPostsQuery)): ?>
+<?php if(!empty($relatedProductsQuery) || !empty($relatedAccessoriesQuery) || !empty($relatedPostsQuery)): ?>
     <div class="panel with-nav-tabs panel-default">
         <div class="panel-heading">
             <ul class="nav nav-tabs">
@@ -29,7 +27,7 @@
         <div class="panel-body">
             <div class="tab-content">
                 <div class="tab-pane fade in active" id="related-products">
-                    <?php if($relatedProductsQuery->have_posts()): ?>
+                    <?php if(!empty($relatedProductsQuery) && $relatedProductsQuery->have_posts()): ?>
                         <div class="row">
                             <?php while($relatedProductsQuery->have_posts()): $relatedProductsQuery->the_post(); ?>
                                 <div class="col-md-4">
@@ -60,7 +58,7 @@
                     <?php endif; ?>
                 </div>
                 <div class="tab-pane fade" id="related-accessories">
-                    <?php if($relatedAccessoriesQuery->have_posts()): ?>
+                    <?php if(!empty($relatedAccessoriesQuery) && $relatedAccessoriesQuery->have_posts()): ?>
                         <div class="row">
                             <?php while($relatedAccessoriesQuery->have_posts()): $relatedAccessoriesQuery->the_post(); ?>
                                 <div class="col-md-4">
@@ -92,7 +90,7 @@
                     <?php endif; ?>
                 </div>
                 <div class="tab-pane fade" id="related-posts">
-                    <?php if($relatedPostsQuery->have_posts()): ?>
+                    <?php if(!empty($relatedPostsQuery) && $relatedPostsQuery->have_posts()): ?>
                         <div class="row">
                             <?php while($relatedPostsQuery->have_posts()): $relatedPostsQuery->the_post(); ?>
                                 <div class="col-md-4">
