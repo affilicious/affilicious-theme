@@ -13,6 +13,10 @@ class AffiliciousTheme
     const THEME_NAME = 'affilicious-theme';
     const THEME_VERSION = '0.2';
     const THEME_NAMESPACE = 'Affilicious\\Theme\\';
+    const THEME_STORE_URL = 'http://affilicioustheme.de';
+    const THEME_ITEM_NAME = 'Affilicious Theme';
+    const THEME_LICENSE_KEY = 'e90a6d1a115da24a292fe0300afc402a';
+    const THEME_AUTHOR = 'Affilicious Team';
 
     /**
      * Set up the public and admin styles and scripts
@@ -70,6 +74,8 @@ class AffiliciousTheme
         $this->widgetSetup = new WidgetSetup();
         $this->menuSetup = new MenuSetup();
         new ThemeCustomizerManager();
+
+        add_action('admin_init', array($this, 'update'), 0);
     }
 
     /**
@@ -194,7 +200,40 @@ class AffiliciousTheme
      */
     public function update()
     {
-        //TODO: Add the code for updates
+        $strings = array(
+            'theme-license'             => __( 'Theme License', 'affilicious-theme' ),
+            'enter-key'                 => __( 'Enter your theme license key.', 'affilicious-theme' ),
+            'license-key'               => __( 'License Key', 'affilicious-theme' ),
+            'license-action'            => __( 'License Action', 'affilicious-theme' ),
+            'deactivate-license'        => __( 'Deactivate License', 'affilicious-theme' ),
+            'activate-license'          => __( 'Activate License', 'affilicious-theme' ),
+            'status-unknown'            => __( 'License status is unknown.', 'affilicious-theme' ),
+            'renew'                     => __( 'Renew?', 'affilicious-theme' ),
+            'unlimited'                 => __( 'unlimited', 'affilicious-theme' ),
+            'license-key-is-active'     => __( 'License key is active.', 'affilicious-theme' ),
+            'expires%s'                 => __( 'Expires %s.', 'affilicious-theme' ),
+            '%1$s/%2$-sites'            => __( 'You have %1$s / %2$s sites activated.', 'affilicious-theme' ),
+            'license-key-expired-%s'    => __( 'License key expired %s.', 'affilicious-theme' ),
+            'license-key-expired'       => __( 'License key has expired.', 'affilicious-theme' ),
+            'license-keys-do-not-match' => __( 'License keys do not match.', 'affilicious-theme' ),
+            'license-is-inactive'       => __( 'License is inactive.', 'affilicious-theme' ),
+            'license-key-is-disabled'   => __( 'License key is disabled.', 'affilicious-theme' ),
+            'site-is-inactive'          => __( 'Site is inactive.', 'affilicious-theme' ),
+            'license-status-unknown'    => __( 'License status is unknown.', 'affilicious-theme' ),
+            'update-notice'             => __( "Updating this theme will lose any customizations you have made. 'Cancel' to stop, 'OK' to update.", 'affilicious-theme' ),
+            'update-available'          => __('<strong>%1$s %2$s</strong> is available. <a href="%3$s" class="thickbox" title="%4s">Check out what\'s new</a> or <a href="%5$s"%6$s>Update now</a>.', 'affilicious-theme' ),
+        );
+
+        new EDD_Theme_Updater(
+            array(
+                'remote_api_url' 	=> self::THEME_STORE_URL,
+                'version' 			=> self::THEME_VERSION,
+                'license' 			=> self::THEME_LICENSE_KEY,
+                'item_name' 		=> self::THEME_ITEM_NAME,
+                'author'			=> self::THEME_AUTHOR
+            ),
+            $strings
+        );
     }
 
     /**
