@@ -11,7 +11,7 @@ if (!defined('ABSPATH')) exit('Not allowed to access pages directly.');
 class AffiliciousTheme
 {
     const THEME_NAME = 'affilicious-theme';
-    const THEME_VERSION = '0.3';
+    const THEME_VERSION = '0.3.1';
     const THEME_NAMESPACE = 'Affilicious\\Theme\\';
     const THEME_STORE_URL = 'http://affilicioustheme.de';
     const THEME_ITEM_NAME = 'Affilicious Theme';
@@ -62,9 +62,9 @@ class AffiliciousTheme
     {
         if (file_exists(__DIR__ . '/vendor/autoload.php')) {
             require(__DIR__ . '/vendor/autoload.php');
-        } else {
-            spl_autoload_register(array($this, 'autoload'));
         }
+
+        spl_autoload_register(array($this, 'autoload'));
 
         require(__DIR__ . '/vendor/customizer-library/customizer-library.php');
         require(__DIR__ . '/vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php');
