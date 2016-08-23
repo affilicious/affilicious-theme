@@ -52,7 +52,7 @@
                             <tr>
                                 <td><?php echo $field['name']; ?></td>
                                 <?php if($field['type'] === 'file'): ?>
-                                    <td><?php echo wp_get_attachment_link($field['value']); ?></td>
+                                    <td><?php echo wp_get_attachment_link($field['value'], 'medium', false, false, __('Download', 'affiliate-theme')); ?></td>
                                 <?php else: ?>
                                     <td><?php echo esc_html($field['value']); ?></td>
                                 <?php endif; ?>
