@@ -66,8 +66,8 @@ class AffiliciousTheme
 
         spl_autoload_register(array($this, 'autoload'));
 
-        require(__DIR__ . '/vendor/customizer-library/customizer-library.php');
-        require(__DIR__ . '/vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php');
+        require_once(__DIR__ . '/vendor/customizer-library/customizer-library.php');
+        require_once(__DIR__ . '/vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php');
 
         $this->assetSetup = new AssetSetup();
         $this->contentSetup = new ContentSetup();
