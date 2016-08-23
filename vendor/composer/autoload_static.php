@@ -6,6 +6,10 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit040876400e60c04a3c58cd011ccdd619
 {
+    public static $files = array (
+        'a5f882d89ab791a139cd2d37e50cdd80' => __DIR__ . '/..' . '/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php',
+    );
+
     public static $prefixLengthsPsr4 = array (
         'A' => 
         array (

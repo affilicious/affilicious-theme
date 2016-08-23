@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: "
 "affilicious-theme\n"
 "POT-Creation-Date: "
-"2016-08-22 23:16+0200\n"
+"2016-08-23 15:08+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Your "
 "Name <you@example.com>\n"
@@ -36,7 +36,7 @@ msgstr ""
 "__;_e;esc_html_e;"
 "esc_html__;esc_attr_e;"
 "esc_attr_x:1,2c;"
-"esc_attr_\n"
+"esc_attr_;_n_noop\n"
 "X-Poedit-Basepath: ..\n"
 "Language: en_US\n"
 "X-Generator: Poedit "
@@ -53,96 +53,252 @@ msgstr ""
 "SearchPathExcluded-2: "
 "assets\n"
 
-#: affilicious-theme.php:204
+#: affilicious-theme.php:175
+msgid ""
+"Install Required Plugins"
+msgstr ""
+
+#: affilicious-theme.php:176
+msgid "Install Plugins"
+msgstr ""
+
+#: affilicious-theme.php:177
+#, php-format
+msgid ""
+"Installing Plugin: %s"
+msgstr ""
+
+#: affilicious-theme.php:178
+#, php-format
+msgid ""
+"Updating Plugin: %s"
+msgstr ""
+
+#: affilicious-theme.php:179
+msgid ""
+"Something went wrong "
+"with the plugin API."
+msgstr ""
+
+#: affilicious-theme.php:181
+#, php-format
+msgid ""
+"This theme requires the "
+"following plugin: %1$s."
+msgstr ""
+
+#: affilicious-theme.php:186
+#, php-format
+msgid ""
+"This theme recommends "
+"the following plugin: "
+"%1$s."
+msgstr ""
+
+#: affilicious-theme.php:191
+#, php-format
+msgid ""
+"The following plugin "
+"needs to be updated to "
+"its latest version to "
+"ensure maximum "
+"compatibility with this "
+"theme: %1$s."
+msgstr ""
+
+#: affilicious-theme.php:196
+#, php-format
+msgid ""
+"There is an update "
+"available for: %1$s."
+msgstr ""
+
+#: affilicious-theme.php:201
+#, php-format
+msgid ""
+"The following required "
+"plugin is currently "
+"inactive: %1$s."
+msgstr ""
+
+#: affilicious-theme.php:206
+#, php-format
+msgid ""
+"The following "
+"recommended plugin is "
+"currently inactive: "
+"%1$s."
+msgstr ""
+
+#: affilicious-theme.php:211
+msgid ""
+"Begin installing plugin"
+msgstr ""
+
+#: affilicious-theme.php:216
+msgid ""
+"Begin updating plugin"
+msgstr ""
+
+#: affilicious-theme.php:221
+msgid ""
+"Begin activating plugin"
+msgstr ""
+
+#: affilicious-theme.php:225
+msgid ""
+"Return to Required "
+"Plugins Installer"
+msgstr ""
+
+#: affilicious-theme.php:226
+msgid ""
+"Plugin activated "
+"successfully."
+msgstr ""
+
+#: affilicious-theme.php:227
+msgid ""
+"The following plugin "
+"was activated "
+"successfully:"
+msgstr ""
+
+#: affilicious-theme.php:228
+#, php-format
+msgid ""
+"No action taken. Plugin "
+"%1$s was already active."
+msgstr ""
+
+#: affilicious-theme.php:229
+#, php-format
+msgid ""
+"Plugin not activated. A "
+"higher version of %s is "
+"needed for this theme. "
+"Please update the "
+"plugin."
+msgstr ""
+
+#: affilicious-theme.php:230
+#, php-format
+msgid ""
+"All plugins installed "
+"and activated "
+"successfully. %1$s"
+msgstr ""
+
+#: affilicious-theme.php:231
+msgid ""
+"Dismiss this notice"
+msgstr ""
+
+#: affilicious-theme.php:232
+msgid ""
+"There are one or more "
+"required or recommended "
+"plugins to install, "
+"update or activate."
+msgstr ""
+
+#: affilicious-theme.php:233
+msgid ""
+"Please contact the "
+"administrator of this "
+"site for help."
+msgstr ""
+
+#: affilicious-theme.php:305
 msgid "Theme License"
 msgstr ""
 
-#: affilicious-theme.php:205
+#: affilicious-theme.php:306
 msgid ""
 "Enter your theme "
 "license key."
 msgstr ""
 
-#: affilicious-theme.php:206
+#: affilicious-theme.php:307
 msgid "License Key"
 msgstr ""
 
-#: affilicious-theme.php:207
+#: affilicious-theme.php:308
 msgid "License Action"
 msgstr ""
 
-#: affilicious-theme.php:208
+#: affilicious-theme.php:309
 msgid "Deactivate License"
 msgstr ""
 
-#: affilicious-theme.php:209
+#: affilicious-theme.php:310
 msgid "Activate License"
 msgstr ""
 
-#: affilicious-theme.php:210
-#: affilicious-theme.php:222
+#: affilicious-theme.php:311
+#: affilicious-theme.php:323
 msgid ""
 "License status is "
 "unknown."
 msgstr ""
 
-#: affilicious-theme.php:211
+#: affilicious-theme.php:312
 msgid "Renew?"
 msgstr ""
 
-#: affilicious-theme.php:212
+#: affilicious-theme.php:313
 msgid "unlimited"
 msgstr ""
 
-#: affilicious-theme.php:213
+#: affilicious-theme.php:314
 msgid ""
 "License key is active."
 msgstr ""
 
-#: affilicious-theme.php:214
+#: affilicious-theme.php:315
 #, php-format
 msgid "Expires %s."
 msgstr ""
 
-#: affilicious-theme.php:215
+#: affilicious-theme.php:316
 #, php-format
 msgid ""
 "You have %1$s / %2$s "
 "sites activated."
 msgstr ""
 
-#: affilicious-theme.php:216
+#: affilicious-theme.php:317
 #, php-format
 msgid ""
 "License key expired %s."
 msgstr ""
 
-#: affilicious-theme.php:217
+#: affilicious-theme.php:318
 msgid ""
 "License key has expired."
 msgstr ""
 
-#: affilicious-theme.php:218
+#: affilicious-theme.php:319
 msgid ""
 "License keys do not "
 "match."
 msgstr ""
 
-#: affilicious-theme.php:219
+#: affilicious-theme.php:320
 msgid ""
 "License is inactive."
 msgstr ""
 
-#: affilicious-theme.php:220
+#: affilicious-theme.php:321
 msgid ""
 "License key is disabled."
 msgstr ""
 
-#: affilicious-theme.php:221
+#: affilicious-theme.php:322
 msgid "Site is inactive."
 msgstr ""
 
-#: affilicious-theme.php:223
+#: affilicious-theme.php:324
 msgid ""
 "Updating this theme "
 "will lose any "
@@ -151,7 +307,7 @@ msgid ""
 "'OK' to update."
 msgstr ""
 
-#: affilicious-theme.php:224
+#: affilicious-theme.php:325
 #, php-format
 msgid ""
 "<strong>%1$s %2$s</"

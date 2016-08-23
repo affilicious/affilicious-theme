@@ -67,6 +67,7 @@ class AffiliciousTheme
         }
 
         require(__DIR__ . '/vendor/customizer-library/customizer-library.php');
+        require(__DIR__ . '/vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php');
 
         $this->assetSetup = new AssetSetup();
         $this->contentSetup = new ContentSetup();
@@ -141,6 +142,102 @@ class AffiliciousTheme
     }
 
     /**
+     * Load the required plugins for this theme.
+     *
+     * @since 0.2
+     */
+    public function loadPlugins()
+    {
+        $plugins = array(
+            array(
+                'name'               => 'Affilicious',
+                'slug'               => 'affilicious',
+                'source'             => 'https://github.com/AlexBa/affilicious/archive/master.zip',
+                'required'           => true,
+            ),
+            array(
+                'name'        => 'WordPress SEO by Yoast',
+                'slug'        => 'wordpress-seo',
+                'is_callable' => 'wpseo_init',
+                'required'    => false,
+            ),
+        );
+
+        $config = array(
+            'id'           => 'tgmpa',
+            'default_path' => '',
+            'menu'         => 'tgmpa-install-plugins',
+            'parent_slug'  => 'themes.php',
+            'capability'   => 'edit_theme_options',
+            'has_notices'  => true,
+            'dismissable'  => true,
+            'strings'      => array(
+                'page_title'                      => __('Install Required Plugins', 'affilicious-theme'),
+                'menu_title'                      => __('Install Plugins', 'affilicious-theme'),
+                'installing'                      => __('Installing Plugin: %s', 'affilicious-theme'),
+                'updating'                        => __('Updating Plugin: %s', 'affilicious-theme'),
+                'oops'                            => __('Something went wrong with the plugin API.', 'affilicious-theme'),
+                'notice_can_install_required'     => _n_noop(
+                    'This theme requires the following plugin: %1$s.',
+                    'This theme requires the following plugins: %1$s.',
+                    'affilicious-theme'
+                ),
+                'notice_can_install_recommended'  => _n_noop(
+                    'This theme recommends the following plugin: %1$s.',
+                    'This theme recommends the following plugins: %1$s.',
+                    'affilicious-theme'
+                ),
+                'notice_ask_to_update'            => _n_noop(
+                    'The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s.',
+                    'The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s.',
+                    'affilicious-theme'
+                ),
+                'notice_ask_to_update_maybe'      => _n_noop(
+                    'There is an update available for: %1$s.',
+                    'There are updates available for the following plugins: %1$s.',
+                    'affilicious-theme'
+                ),
+                'notice_can_activate_required'    => _n_noop(
+                    'The following required plugin is currently inactive: %1$s.',
+                    'The following required plugins are currently inactive: %1$s.',
+                    'affilicious-theme'
+                ),
+                'notice_can_activate_recommended' => _n_noop(
+                    'The following recommended plugin is currently inactive: %1$s.',
+                    'The following recommended plugins are currently inactive: %1$s.',
+                    'affilicious-theme'
+                ),
+                'install_link'                    => _n_noop(
+                    'Begin installing plugin',
+                    'Begin installing plugins',
+                    'affilicious-theme'
+                ),
+                'update_link' 					  => _n_noop(
+                    'Begin updating plugin',
+                    'Begin updating plugins',
+                    'affilicious-theme'
+                ),
+                'activate_link'                   => _n_noop(
+                    'Begin activating plugin',
+                    'Begin activating plugins',
+                    'affilicious-theme'
+                ),
+                'return'                          => __('Return to Required Plugins Installer', 'affilicious-theme'),
+                'plugin_activated'                => __('Plugin activated successfully.', 'affilicious-theme'),
+                'activated_successfully'          => __('The following plugin was activated successfully:', 'affilicious-theme'),
+                'plugin_already_active'           => __('No action taken. Plugin %1$s was already active.', 'affilicious-theme'),
+                'plugin_needs_higher_version'     => __('Plugin not activated. A higher version of %s is needed for this theme. Please update the plugin.', 'affilicious-theme'),
+                'complete'                        => __('All plugins installed and activated successfully. %1$s', 'affilicious-theme'),
+                'dismiss'                         => __('Dismiss this notice', 'affilicious-theme'),
+                'notice_cannot_install_activate'  => __('There are one or more required or recommended plugins to install, update or activate.', 'affilicious-theme'),
+                'contact_admin'                   => __('Please contact the administrator of this site for help.', 'affilicious-theme'),
+            ),
+        );
+
+        tgmpa($plugins, $config);
+    }
+
+    /**
      * Load the simple functions for an easier usage in templates
      *
      * @since 0.2
@@ -160,6 +257,9 @@ class AffiliciousTheme
         // Activate or deactivate the theme
         add_action('after_switch_theme', array($this, 'activate'));
         add_action('switch_theme', array($this, 'deactivate'));
+
+        // Load the required plugins
+        add_action('tgmpa_register', array($this, 'loadPlugins'));
 
         // Load the theme support and textdomain
         add_action('after_setup_theme', array($this, 'loadSupport'));
