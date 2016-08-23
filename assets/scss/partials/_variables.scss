@@ -113,3 +113,9 @@ $price-comparison-shop-background:          #f0f0f0;
 $price-comparison-current-price-color:      #2fa32f;
 $price-comparison-old-price-color:          #ff2320;
 $price-comparison-widget-shop-height:       100px;
+
+// Navbar
+$navbar-background-color:                    #f8f8f8 !default;
+$navbar-background-color-active:             #e7e7e7 !default;
+$navbar-font-color:                          black !default;
+$navbar-item-background-color-hover:         $navbar-background-color-active !default;
