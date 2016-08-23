@@ -6,7 +6,7 @@
             <div class="col-md-8 col-xs-12">
                 <?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
-                    <?php if(get_post_type() === 'product'): ?>
+                    <?php if(affilicious_is_product()): ?>
                         <?php get_template_part('partials/content', 'product'); ?>
                     <?php else: ?>
                         <?php get_template_part('partials/content', get_post_type()); ?>

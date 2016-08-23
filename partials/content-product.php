@@ -65,8 +65,31 @@
         </div>
     </header>
 
-    <div class="product-body box">
-        <?php the_content(); ?>
+    <div class="product-body">
+        <ul class="nav nav-tabs nav-justified">
+            <li class="active">
+                <a data-toggle="tab" href="#test-report">
+                    <?php _e('Test report', 'affiliate-theme'); ?>
+                </a>
+            </li>
+            <li>
+                <a data-toggle="tab" href="#comments">
+                    <?php comments_number(
+                        __('No comments', 'affiliate-theme'),
+                        __('One comment', 'affiliate-theme'),
+                        __('% comments', 'affiliate-theme')
+                    ); ?>
+                </a>
+            </li>
+        </ul>
+
+        <div class="tab-content">
+            <div id="test-report" class="tab-pane fade in active">
+                <?php the_content(); ?>
+            </div>
+            <div id="comments" class="tab-pane fade">
+            </div>
+        </div>
     </div>
 
     <footer class="product-footer">

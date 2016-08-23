@@ -1,0 +1,44 @@
+@import "variables";
+@import "compass/css3/border-radius";
+
+.nav-tabs {
+  li {
+    a {
+      border-top: 1px solid #ddd !important;
+      border-bottom: 0 !important;
+    }
+
+    &:first-child a {
+      border-left: 1px solid #ddd !important;
+    }
+
+    &:last-child a {
+      border-right: 1px solid #ddd !important;
+    }
+
+    @media #{$screen-xs-max} {
+      &:first-child {
+        a {
+          border-right: 1px solid #ddd !important;
+          @include border-top-radius($default-border-radius !important);
+          @include border-bottom-radius(0 !important);
+        }
+      }
+
+      &:not(.active) {
+        a {
+          @include border-radius(0 !important);
+        }
+      }
+    }
+  }
+}
+
+.tab-content {
+  box-sizing: border-box;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-top: none;
+  padding: $space-size-medium;
+  margin-bottom: $space-size-medium;
+}
