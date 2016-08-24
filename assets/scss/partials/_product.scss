@@ -33,26 +33,44 @@
   }
 
   &-image-gallery {
+    margin-bottom: $space-size-small;
+
+    // Fixed some loading and stylistic bugs
+    .slick {
+      &-slider {
+        visibility: hidden;
+
+        &.slick-initialized {
+          visibility: visible;
+        }
+      }
+
+      &-slide {
+        outline: none;
+      }
+    }
+
     .portfolio-slider {
       padding: 0;
-      margin: 0;
+      margin: 0 auto;
       width: $product-thumbnail-width;
       height: $product-thumbnail-height;
-      display: inline-block;
+      display: block;
       box-sizing: content-box;
       border: $product-thumbnail-border;
 
-      .slick-slider {
-        &-item {
-          img {
-            margin: 0 auto;
-          }
+      .slick-slider-item {
+        outline: none;
+
+        img {
+          margin: 0 auto;
         }
       }
     }
 
     .thumb-slider {
-      margin-top: $space-size-small;
+      display: block;
+      margin: $space-size-small auto 0 auto;
     }
   }
 }
