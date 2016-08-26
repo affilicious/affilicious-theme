@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: "
 "affilicious-theme\n"
 "POT-Creation-Date: "
-"2016-08-23 15:08+0200\n"
+"2016-08-26 18:56+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Your "
 "Name <you@example.com>\n"
@@ -36,7 +36,8 @@ msgstr ""
 "__;_e;esc_html_e;"
 "esc_html__;esc_attr_e;"
 "esc_attr_x:1,2c;"
-"esc_attr_;_n_noop\n"
+"esc_attr_;_n_noop;"
+"_n:1,2;_n;n\n"
 "X-Poedit-Basepath: ..\n"
 "Language: en_US\n"
 "X-Generator: Poedit "
@@ -209,96 +210,96 @@ msgid ""
 "site for help."
 msgstr ""
 
-#: affilicious-theme.php:305
+#: affilicious-theme.php:307
 msgid "Theme License"
 msgstr ""
 
-#: affilicious-theme.php:306
+#: affilicious-theme.php:308
 msgid ""
 "Enter your theme "
 "license key."
 msgstr ""
 
-#: affilicious-theme.php:307
+#: affilicious-theme.php:309
 msgid "License Key"
 msgstr ""
 
-#: affilicious-theme.php:308
+#: affilicious-theme.php:310
 msgid "License Action"
 msgstr ""
 
-#: affilicious-theme.php:309
+#: affilicious-theme.php:311
 msgid "Deactivate License"
 msgstr ""
 
-#: affilicious-theme.php:310
+#: affilicious-theme.php:312
 msgid "Activate License"
 msgstr ""
 
-#: affilicious-theme.php:311
-#: affilicious-theme.php:323
+#: affilicious-theme.php:313
+#: affilicious-theme.php:325
 msgid ""
 "License status is "
 "unknown."
 msgstr ""
 
-#: affilicious-theme.php:312
+#: affilicious-theme.php:314
 msgid "Renew?"
 msgstr ""
 
-#: affilicious-theme.php:313
+#: affilicious-theme.php:315
 msgid "unlimited"
 msgstr ""
 
-#: affilicious-theme.php:314
+#: affilicious-theme.php:316
 msgid ""
 "License key is active."
 msgstr ""
 
-#: affilicious-theme.php:315
+#: affilicious-theme.php:317
 #, php-format
 msgid "Expires %s."
 msgstr ""
 
-#: affilicious-theme.php:316
+#: affilicious-theme.php:318
 #, php-format
 msgid ""
 "You have %1$s / %2$s "
 "sites activated."
 msgstr ""
 
-#: affilicious-theme.php:317
+#: affilicious-theme.php:319
 #, php-format
 msgid ""
 "License key expired %s."
 msgstr ""
 
-#: affilicious-theme.php:318
+#: affilicious-theme.php:320
 msgid ""
 "License key has expired."
 msgstr ""
 
-#: affilicious-theme.php:319
+#: affilicious-theme.php:321
 msgid ""
 "License keys do not "
 "match."
 msgstr ""
 
-#: affilicious-theme.php:320
+#: affilicious-theme.php:322
 msgid ""
 "License is inactive."
 msgstr ""
 
-#: affilicious-theme.php:321
+#: affilicious-theme.php:323
 msgid ""
 "License key is disabled."
 msgstr ""
 
-#: affilicious-theme.php:322
+#: affilicious-theme.php:324
 msgid "Site is inactive."
 msgstr ""
 
-#: affilicious-theme.php:324
+#: affilicious-theme.php:326
 msgid ""
 "Updating this theme "
 "will lose any "
@@ -307,7 +308,7 @@ msgid ""
 "'OK' to update."
 msgstr ""
 
-#: affilicious-theme.php:325
+#: affilicious-theme.php:327
 #, php-format
 msgid ""
 "<strong>%1$s %2$s</"
@@ -388,43 +389,72 @@ msgstr ""
 msgid "Edit"
 msgstr ""
 
-#: partials/content-product-relations.php:12
+#: partials/content-product-relations.php:11
 msgid "Related products"
 msgstr ""
 
-#: partials/content-product-relations.php:17
+#: partials/content-product-relations.php:16
 msgid ""
 "Related accessories"
 msgstr ""
 
-#: partials/content-product-relations.php:22
+#: partials/content-product-relations.php:21
 msgid "Related posts"
 msgstr ""
 
-#: partials/content-product-relations.php:35
-#: partials/content-product-relations.php:66
-#: partials/content-product-relations.php:98
+#: partials/content-product-relations.php:33
+#: partials/content-product-relations.php:64
+#: partials/content-product-relations.php:96
 #, php-format
 msgid "Link to %s"
 msgstr ""
 
-#: partials/content-product-relations.php:43
-#: partials/content-product-relations.php:74
+#: partials/content-product-relations.php:41
+#: partials/content-product-relations.php:72
 #: src/Widget/View/priceComparison.php:28
 msgid "Buy"
 msgstr ""
 
-#: partials/content-product-relations.php:48
-#: partials/content-product-relations.php:79
+#: partials/content-product-relations.php:46
+#: partials/content-product-relations.php:77
 msgid "To The Test Report"
 msgstr ""
 
-#: partials/content-product-relations.php:105
+#: partials/content-product-relations.php:103
 msgid "To The Post"
 msgstr ""
 
-#: partials/content-product.php:48
+#: partials/content-product.php:16
+#, php-format
+msgid "based on %s review"
+msgid_plural ""
+"based on %s reviews"
+msgstr[0] ""
+msgstr[1] ""
+
+#: partials/content-product.php:74
 msgid "Price"
+msgstr ""
+
+#: partials/content-product.php:85
+msgid "Download"
+msgstr ""
+
+#: partials/content-product.php:108
+msgid "Test report"
+msgstr ""
+
+#: partials/content-product.php:114
+msgid "No comments"
+msgstr ""
+
+#: partials/content-product.php:115
+msgid "One comment"
+msgstr ""
+
+#: partials/content-product.php:116
+#, php-format
+msgid "%s comments"
 msgstr ""
 
 #: searchform.php:3
@@ -514,22 +544,34 @@ msgstr ""
 msgid "Bottom Navigation"
 msgstr ""
 
-#: src/Setup/SidebarSetup.php:16
+#: src/Setup/SidebarSetup.php:50
+#: src/Sidebar/ProductSidebar.php:16
+msgid "Product Sidebar"
+msgstr ""
+
+#: src/Setup/SidebarSetup.php:54
+msgid "Select a Sidebar"
+msgstr ""
+
+#: src/Setup/SidebarSetup.php:55
+msgid ""
+"The selected product "
+"sidebar will be shown "
+"above the main sidebar."
+msgstr ""
+
+#: src/Sidebar/MainSidebar.php:16
 msgid "Main Sidebar"
 msgstr ""
 
-#: src/Setup/SidebarSetup.php:18
+#: src/Sidebar/MainSidebar.php:18
 msgid ""
 "Place your widgets into "
 "this sidebar, which is "
 "visible on every page."
 msgstr ""
 
-#: src/Setup/SidebarSetup.php:34
-msgid "Product Sidebar"
-msgstr ""
-
-#: src/Setup/SidebarSetup.php:36
+#: src/Sidebar/ProductSidebar.php:18
 msgid ""
 "Place your widgets into "
 "this sidebar, which is "
