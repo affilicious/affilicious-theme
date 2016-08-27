@@ -5,26 +5,34 @@
 
 <?php if(!empty($relatedProductsQuery) || !empty($relatedAccessoriesQuery) || !empty($relatedPostsQuery)): ?>
     <div class="panel">
+
         <ul class="nav nav-tabs nav-justified">
-            <li class="active">
-                <a href="#related-products" data-toggle="tab">
-                    <?php _e('Related products', 'affilicious-theme'); ?>
-                </a>
-            </li>
-            <li>
-                <a href="#related-accessories" data-toggle="tab">
-                    <?php _e('Related accessories', 'affilicious-theme'); ?>
-                </a>
-            </li>
-            <li>
-                <a href="#related-posts" data-toggle="tab">
-                    <?php _e('Related posts', 'affilicious-theme'); ?>
-                </a>
-            </li>
+            <?php if(!empty($relatedProductsQuery)): ?>
+                <li class="active">
+                    <a href="#related-products" data-toggle="tab">
+                        <?php _e('Related products', 'affilicious-theme'); ?>
+                    </a>
+                </li>
+            <?php endif; ?>
+            <?php if(!empty($relatedAccessoriesQuery)): ?>
+                <li <?php if(empty($relatedProductsQuery)) echo 'class="active"'; ?>>
+                    <a href="#related-accessories" data-toggle="tab">
+                        <?php _e('Related accessories', 'affilicious-theme'); ?>
+                    </a>
+                </li>
+            <?php endif; ?>
+            <?php if(!empty($relatedPostsQuery)): ?>
+                <li <?php if(empty($relatedProductsQuery) && empty($relatedAccessoriesQuery)) echo 'class="active"'; ?>>
+                    <a href="#related-posts" data-toggle="tab">
+                        <?php _e('Related posts', 'affilicious-theme'); ?>
+                    </a>
+                </li>
+            <?php endif; ?>
         </ul>
 
         <div class="tab-content">
-            <div class="tab-pane fade in active" id="related-products">
+            <?php if(!empty($relatedProductsQuery)): ?>
+                <div class="tab-pane fade in active" id="related-products">
                 <?php if(!empty($relatedProductsQuery) && $relatedProductsQuery->have_posts()): ?>
                     <div class="row">
                         <?php while($relatedProductsQuery->have_posts()): $relatedProductsQuery->the_post(); ?>
@@ -55,7 +63,10 @@
                     <?php wp_reset_query(); ?>
                 <?php endif; ?>
             </div>
-            <div class="tab-pane fade" id="related-accessories">
+            <?php endif; ?>
+
+            <?php if(!empty($relatedAccessoriesQuery)): ?>
+                <div class="tab-pane fade <?php if(empty($relatedProductsQuery)) echo 'in active'; ?>" id="related-accessories">
                 <?php if(!empty($relatedAccessoriesQuery) && $relatedAccessoriesQuery->have_posts()): ?>
                     <div class="row">
                         <?php while($relatedAccessoriesQuery->have_posts()): $relatedAccessoriesQuery->the_post(); ?>
@@ -87,7 +98,10 @@
                     <?php wp_reset_query(); ?>
                 <?php endif; ?>
             </div>
-            <div class="tab-pane fade" id="related-posts">
+            <?php endif; ?>
+
+            <?php if(!empty($relatedPostsQuery)): ?>
+                <div class="tab-pane fade <?php if(empty($relatedProductsQuery) && empty($relatedAccessoriesQuery)) echo 'in active'; ?>" id="related-posts">
                 <?php if(!empty($relatedPostsQuery) && $relatedPostsQuery->have_posts()): ?>
                     <div class="row">
                         <?php while($relatedPostsQuery->have_posts()): $relatedPostsQuery->the_post(); ?>
@@ -112,6 +126,7 @@
                     <?php wp_reset_query(); ?>
                 <?php endif; ?>
             </div>
+            <?php endif; ?>
         </div>
     </div>
 <?php endif; ?>

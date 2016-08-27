@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
 "POT-Creation-Date: 2016-08-26 18:56+0200\n"
-"PO-Revision-Date: 2016-08-26 18:57+0200\n"
+"PO-Revision-Date: 2016-08-28 00:23+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -295,7 +295,7 @@ msgstr "Ähnliche Produkte"
 
 #: partials/content-product-relations.php:16
 msgid "Related accessories"
-msgstr "Ähnliche Zubehör"
+msgstr "Ähnliches Zubehör"
 
 #: partials/content-product-relations.php:21
 msgid "Related posts"
