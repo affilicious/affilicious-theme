@@ -20,7 +20,9 @@
                         <?php endif; ?>
                     <?php endfor; ?>
 
-                    <span><?php echo sprintf(_n('based on %s review', 'based on %s reviews', 5, 'affilicious-theme'), 5); ?></span>
+                    <?php if($numberOfRatings = affilicious_get_product_number_of_ratings($product)): ?>
+                        <span><?php echo sprintf(_n('based on %s review', 'based on %s reviews', $numberOfRatings, 'affilicious-theme'), $numberOfRatings); ?></span>
+                    <?php endif; ?>
                 </p>
             </div>
             <div class="panel-body">
