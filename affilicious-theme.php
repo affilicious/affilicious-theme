@@ -5,6 +5,7 @@ use Affilicious\Theme\Setup\ContentSetup;
 use Affilicious\Theme\Setup\MenuSetup;
 use Affilicious\Theme\Setup\SidebarSetup;
 use Affilicious\Theme\Setup\WidgetSetup;
+use Affilicious\Theme\Shortcode\AlertShortcode;
 
 if (!defined('ABSPATH')) exit('Not allowed to access pages directly.');
 
@@ -126,6 +127,7 @@ class AffiliciousTheme
     public function run()
     {
         $this->loadFunctions();
+	    $this->loadShortcodes();
         $this->registerPublicHooks();
         $this->registerAdminHooks();
         $this->loadUpdater();
@@ -236,6 +238,17 @@ class AffiliciousTheme
         );
 
         tgmpa($plugins, $config);
+    }
+
+	/**
+	 * Load all required shortcodes
+	 *
+	 * @since 0.3.4
+	 */
+    public function loadShortcodes()
+    {
+    	$alertShortcode = new AlertShortcode();
+    	add_shortcode($alertShortcode->getName(), array($alertShortcode, 'render'));
     }
 
     /**
