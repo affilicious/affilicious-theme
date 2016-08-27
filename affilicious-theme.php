@@ -153,6 +153,7 @@ class AffiliciousTheme
                 'name'               => 'Affilicious',
                 'slug'               => 'affilicious',
                 'source'             => 'https://github.com/AlexBa/affilicious/archive/master.zip',
+	            'version'            => '0.5',
                 'required'           => true,
             ),
             array(
