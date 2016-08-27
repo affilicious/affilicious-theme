@@ -75,31 +75,36 @@
                         <?php endif; ?>
                         <div class="row">
                             <div class="col-md-12">
-                                <?php $fields = affilicious_get_product_details(); ?>
-                                <?php if(!empty($fields)): ?>
-                                    <table class="product-details table table-striped">
-                                        <tbody>
-                                        <tr>
-                                            <td><?php _e('Price', 'affilicious-theme'); ?></td>
-                                            <td>
-                                                <a class="price" href="<?php echo affilicious_get_product_affiliate_link($product); ?>">
-                                                    <?php echo affilicious_get_product_price($product); ?>
-                                                </a>
-                                            </td>
-                                        </tr>
-                                        <?php foreach ($fields as $field): ?>
+                                <table class="product-details table table-striped">
+                                    <tbody>
+                                        <?php $affiliateLink = affilicious_get_product_affiliate_link($product); ?>
+                                        <?php $price = affilicious_get_product_price($product); ?>
+                                        <?php if(!empty($affiliateLink) && !empty($price)): ?>
                                             <tr>
-                                                <td><?php echo $field['name']; ?></td>
-                                                <?php if($field['type'] === 'file'): ?>
-                                                    <td><?php echo wp_get_attachment_link($field['value'], 'medium', false, false, __('Download', 'affiliate-theme')); ?></td>
-                                                <?php else: ?>
-                                                    <td><?php echo esc_html($field['value']); ?> <?php echo esc_html($field['unit']); ?></td>
-                                                <?php endif; ?>
+                                                <td><?php _e('Price', 'affilicious-theme'); ?></td>
+                                                <td>
+                                                    <a class="price" href="<?php echo $affiliateLink; ?>">
+                                                        <?php echo $price; ?>
+                                                    </a>
+                                                </td>
                                             </tr>
-                                        <?php endforeach; ?>
-                                        </tbody>
-                                    </table>
-                                <?php endif; ?>
+                                        <?php endif; ?>
+                                        
+                                        <?php $fields = affilicious_get_product_details(); ?>
+                                        <?php if(!empty($fields)): ?>
+                                            <?php foreach ($fields as $field): ?>
+                                                <tr>
+                                                    <td><?php echo $field['name']; ?></td>
+                                                    <?php if($field['type'] === 'file'): ?>
+                                                        <td><?php echo wp_get_attachment_link($field['value'], 'medium', false, false, __('Download', 'affiliate-theme')); ?></td>
+                                                    <?php else: ?>
+                                                        <td><?php echo esc_html($field['value']); ?> <?php echo esc_html($field['unit']); ?></td>
+                                                    <?php endif; ?>
+                                                </tr>
+                                            <?php endforeach; ?>
+                                        <?php endif; ?>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
