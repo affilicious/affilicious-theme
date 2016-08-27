@@ -164,31 +164,12 @@
     margin: 1.5em 0;
   }
 
-  %alignment {
-    &.alignright {
-      float: right;
-      margin: 0 0 1em 1em
-    }
-    &.alignleft {
-      float: left;
-      margin: 0 1em 1em 0
-    }
-    &.aligncenter {
-      display: block;
-      margin-left: auto;
-      margin-right: auto
-    }
-  }
-
-  div, img {
-    max-width: 100%;
-    height: auto;
-    @extend %alignment;
-  }
-
-  a img {
-    @extend %alignment;
-  }
+  img.alignright { float: right; margin: 0 0 1em 1em; }
+  img.alignleft { float: left; margin: 0 1em 1em 0; }
+  img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
+  .alignright { float: right; }
+  .alignleft { float: left; }
+  .aligncenter { display: block; margin-left: auto; margin-right: auto; }
 
   .wp-caption-text {
     text-align: center;

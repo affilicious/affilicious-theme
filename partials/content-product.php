@@ -89,7 +89,7 @@
                                                 </td>
                                             </tr>
                                         <?php endif; ?>
-                                        
+
                                         <?php $fields = affilicious_get_product_details(); ?>
                                         <?php if(!empty($fields)): ?>
                                             <?php foreach ($fields as $field): ?>
