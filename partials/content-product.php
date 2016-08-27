@@ -8,11 +8,18 @@
             <div class="panel-heading">
                 <h1 class="product-title"><?php the_title(); ?></h1>
                 <p class="product-rating">
-                    <i class="fa fa-star fa-lg" aria-hidden="true"></i>
-                    <i class="fa fa-star fa-lg" aria-hidden="true"></i>
-                    <i class="fa fa-star fa-lg" aria-hidden="true"></i>
-                    <i class="fa fa-star fa-lg" aria-hidden="true"></i>
-                    <i class="fa fa-star-half-o fa-lg" aria-hidden="true"></i>
+                    <?php $starRating = affilicious_get_product_star_rating($product); ?>
+
+                    <?php for($i = 0; $i < 5; $i++): ?>
+                        <?php if ($starRating >= ($i + 1)): ?>
+                            <i class="fa fa-star fa-lg" aria-hidden="true"></i>
+                        <?php elseif($starRating >= ($i + 0.5)): ?>
+                            <i class="fa fa-star-half-o fa-lg" aria-hidden="true"></i>
+                        <?php else: ?>
+                                <i class="fa fa-star-o fa-lg" aria-hidden="true"></i>
+                        <?php endif; ?>
+                    <?php endfor; ?>
+
                     <span><?php echo sprintf(_n('based on %s review', 'based on %s reviews', 5, 'affilicious-theme'), 5); ?></span>
                 </p>
             </div>
@@ -84,7 +91,7 @@
                                                 <?php if($field['type'] === 'file'): ?>
                                                     <td><?php echo wp_get_attachment_link($field['value'], 'medium', false, false, __('Download', 'affiliate-theme')); ?></td>
                                                 <?php else: ?>
-                                                    <td><?php echo esc_html($field['value']); ?></td>
+                                                    <td><?php echo esc_html($field['value']); ?> <?php echo esc_html($field['unit']); ?></td>
                                                 <?php endif; ?>
                                             </tr>
                                         <?php endforeach; ?>
