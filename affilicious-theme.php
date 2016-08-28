@@ -6,6 +6,7 @@ use Affilicious\Theme\Setup\MenuSetup;
 use Affilicious\Theme\Setup\SidebarSetup;
 use Affilicious\Theme\Setup\WidgetSetup;
 use Affilicious\Theme\Shortcode\AlertShortcode;
+use Pimple\Container;
 
 if (!defined('ABSPATH')) exit('Not allowed to access pages directly.');
 
@@ -19,40 +20,66 @@ class AffiliciousTheme
     const THEME_LICENSE_KEY = '42aa4d279329fe829a6022f47e1a47b8';
     const THEME_AUTHOR = 'Affilicious Team';
 
-    /**
-     * Set up the public and admin styles and scripts
-     *
-     * @var AssetSetup
-     */
-    private $assetSetup;
+	/**
+	 * Stores the singleton instance
+	 *
+	 * @var \AffiliciousTheme
+	 */
+	private static $instance;
 
-    /**
-     * Set up the content
-     *
-     * @var ContentSetup
-     */
-    private $contentSetup;
+	/**
+	 * A reference to the main plugin
+	 *
+	 * @see https://github.com/AlexBa/affilicious
+	 * @var AffiliciousPlugin
+	 */
+	private $affilicious;
 
-    /**
-     * Set up the sidebars
-     *
-     * @var SidebarSetup
-     */
-    private $sidebarSetup;
+	/**
+	 * Register all services and parameters for the pimple dependency injection.
+	 * This container is just a reference to the container of the Affilicious plugin.
+	 *
+	 * @see http://pimple.sensiolabs.org
+	 * @var Container
+	 */
+	private $container;
 
-    /**
-     * Set up the widgets
-     *
-     * @var WidgetSetup
-     */
-    private $widgetSetup;
+	/**
+	 * Get the instance of the affilicious theme
+	 *
+	 * @since 0.3
+	 * @return AffiliciousTheme
+	 */
+	public static function getInstance()
+	{
+		if (self::$instance === null) {
+			self::$instance = new \AffiliciousTheme();
+		}
 
-    /**
-     * Set up the menus
-     *
-     * @var MenuSetup
-     */
-    private $menuSetup;
+		return self::$instance;
+	}
+
+	/**
+	 * Get the root dir of the affilicious theme
+	 *
+	 * @since 0.2
+	 * @return string
+	 */
+	public static function getRootDir()
+	{
+		return get_template_directory();
+	}
+
+	/**
+	 * Get the root url of the affilicious theme
+	 *
+	 * @since 0.2
+	 * @return string
+	 */
+	public static function getRootUrl()
+	{
+		return get_template_directory_uri();
+	}
 
     /**
      * Prepare the plugin with for usage with Wordpress and namespaces
@@ -66,40 +93,6 @@ class AffiliciousTheme
         }
 
         spl_autoload_register(array($this, 'autoload'));
-
-        require_once(__DIR__ . '/vendor/customizer-library/customizer-library.php');
-        require_once(__DIR__ . '/vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php');
-
-        $this->assetSetup = new AssetSetup();
-        $this->contentSetup = new ContentSetup();
-        $this->sidebarSetup = new SidebarSetup();
-        $this->widgetSetup = new WidgetSetup();
-        $this->menuSetup = new MenuSetup();
-        new ThemeCustomizerManager();
-
-        add_action('admin_init', array($this, 'update'), 0);
-    }
-
-    /**
-     * Get the root dir of the affilicious theme
-     *
-     * @since 0.2
-     * @return string
-     */
-    public static function getRootDir()
-    {
-        return get_template_directory();
-    }
-
-    /**
-     * Get the root url of the affilicious theme
-     *
-     * @since 0.2
-     * @return string
-     */
-    public static function getRootUrl()
-    {
-        return get_template_directory_uri();
     }
 
     /**
@@ -110,7 +103,7 @@ class AffiliciousTheme
      */
     public function autoload($class)
     {
-        $prefix = 'Affilicious';
+        $prefix = 'Affilicious\\Theme';
         if (stripos($class, $prefix) === false) {
             return;
         }
@@ -126,22 +119,183 @@ class AffiliciousTheme
      */
     public function run()
     {
-        $this->loadFunctions();
-	    $this->loadShortcodes();
-        $this->registerPublicHooks();
-        $this->registerAdminHooks();
-        $this->loadUpdater();
+	    // Hook the theme activation and deactivation
+	    add_action('after_switch_theme', array($this, 'activate'));
+	    add_action('switch_theme', array($this, 'deactivate'));
+
+	    // Hook the theme support and textdomain
+	    add_action('after_setup_theme', array($this, 'loadSupport'));
+	    add_action('after_setup_theme', array($this, 'loadTextdomain'));
+
+	    // Hook the plugin loader
+	    add_action('tgmpa_register', array($this, 'loadPlugins'));
+
+	    // Load the affilicious plugin and the dependency container
+	    if(class_exists('\AffiliciousPlugin')) {
+		    $this->affilicious = \AffiliciousPlugin::getInstance();
+		    $this->container = $this->affilicious->getContainer();
+
+		    $this->loadServices();
+		    $this->loadIncludes();
+		    $this->loadFunctions();
+		    $this->loadShortcodes();
+		    $this->registerPublicHooks();
+		    $this->registerAdminHooks();
+	    }
     }
 
-    /**
-     * Load the theme updater
-     *
-     * @since 0.2
-     */
-    public function loadUpdater()
+	/**
+	 * Update the theme with the help of the Software Licensing for Easy Digital Downloads
+	 *
+	 * @since 0.2
+	 * @see https://easydigitaldownloads.com/downloads/software-licensing/
+	 */
+	public function update()
+	{
+		$strings = array(
+			'theme-license'             => __( 'Theme License', 'affilicious-theme' ),
+			'enter-key'                 => __( 'Enter your theme license key.', 'affilicious-theme' ),
+			'license-key'               => __( 'License Key', 'affilicious-theme' ),
+			'license-action'            => __( 'License Action', 'affilicious-theme' ),
+			'deactivate-license'        => __( 'Deactivate License', 'affilicious-theme' ),
+			'activate-license'          => __( 'Activate License', 'affilicious-theme' ),
+			'status-unknown'            => __( 'License status is unknown.', 'affilicious-theme' ),
+			'renew'                     => __( 'Renew?', 'affilicious-theme' ),
+			'unlimited'                 => __( 'unlimited', 'affilicious-theme' ),
+			'license-key-is-active'     => __( 'License key is active.', 'affilicious-theme' ),
+			'expires%s'                 => __( 'Expires %s.', 'affilicious-theme' ),
+			'%1$s/%2$-sites'            => __( 'You have %1$s / %2$s sites activated.', 'affilicious-theme' ),
+			'license-key-expired-%s'    => __( 'License key expired %s.', 'affilicious-theme' ),
+			'license-key-expired'       => __( 'License key has expired.', 'affilicious-theme' ),
+			'license-keys-do-not-match' => __( 'License keys do not match.', 'affilicious-theme' ),
+			'license-is-inactive'       => __( 'License is inactive.', 'affilicious-theme' ),
+			'license-key-is-disabled'   => __( 'License key is disabled.', 'affilicious-theme' ),
+			'site-is-inactive'          => __( 'Site is inactive.', 'affilicious-theme' ),
+			'license-status-unknown'    => __( 'License status is unknown.', 'affilicious-theme' ),
+			'update-notice'             => __( "Updating this theme will lose any customizations you have made. 'Cancel' to stop, 'OK' to update.", 'affilicious-theme' ),
+			'update-available'          => __('<strong>%1$s %2$s</strong> is available. <a href="%3$s" class="thickbox" title="%4s">Check out what\'s new</a> or <a href="%5$s"%6$s>Update now</a>.', 'affilicious-theme' ),
+		);
+
+		new EDD_Theme_Updater(
+			array(
+				'remote_api_url' 	=> self::THEME_STORE_URL,
+				'version' 			=> self::THEME_VERSION,
+				'license' 			=> self::THEME_LICENSE_KEY,
+				'item_name' 		=> self::THEME_ITEM_NAME,
+				'author'			=> self::THEME_AUTHOR
+			),
+			$strings
+		);
+	}
+
+	/**
+	 * The code that runs during theme activation.
+	 *
+	 * @since 0.2
+	 */
+	public function activate()
+	{
+		$api_params = array(
+			'edd_action' => 'activate_license',
+			'license'    => self::THEME_LICENSE_KEY,
+			'item_name'  => urlencode(self::THEME_ITEM_NAME)
+		);
+
+		$response = wp_remote_post(self::THEME_STORE_URL, array(
+			'timeout' => 15,
+			'sslverify' => false,
+			'body' => $api_params
+		));
+
+		return is_wp_error($response);
+	}
+
+	/**
+	 * The code that runs during theme deactivation.
+	 *
+	 * @since 0.2
+	 */
+	public function deactivate()
+	{
+		$api_params = array(
+			'edd_action' => 'deactivate_license',
+			'license'    => self::THEME_LICENSE_KEY,
+			'item_name'  => urlencode(self::THEME_ITEM_NAME)
+		);
+
+		$response = wp_remote_post(self::THEME_STORE_URL, array(
+			'timeout' => 15,
+			'sslverify' => false,
+			'body' => $api_params
+		));
+
+		return is_wp_error($response);
+	}
+
+	/**
+	 * Load the supported theme options
+	 *
+	 * @since 0.2
+	 */
+	public function loadSupport()
+	{
+		add_theme_support('post-thumbnails');
+		add_theme_support('title-tag');
+	}
+
+	/**
+	 * Load the theme textdomain for internationalization.
+	 *
+	 * @since 0.2
+	 */
+	public function loadTextdomain()
+	{
+		$dir = self::getRootDir() . '/languages';
+		load_theme_textdomain(self::THEME_NAME, $dir);
+	}
+
+	/**
+	 * Load the includes
+	 *
+	 * @since 0.3.4
+	 */
+    public function loadIncludes()
     {
-        include(dirname(__FILE__) . '/affilicious-theme-updater.php');
+	    require_once(__DIR__ . '/affilicious-theme-updater.php');
+	    require_once(__DIR__ . '/vendor/customizer-library/customizer-library.php');
+	    require_once(__DIR__ . '/vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php');
     }
+
+	/**
+	 * Register the services for the dependency injection
+	 *
+	 * @since 0.3.4
+	 */
+	public function loadServices()
+	{
+		//TODO: Delete this legacy code
+		new ThemeCustomizerManager();
+
+		$this->container['affilicious.theme.common.setup.asset'] = function () {
+			return new AssetSetup();
+		};
+
+		$this->container['affilicious.theme.layout.setup.content'] = function () {
+			return new ContentSetup();
+		};
+
+		$this->container['affilicious.theme.layout.setup.menu'] = function () {
+			return new MenuSetup();
+		};
+
+		$this->container['affilicious.theme.layout.setup.sidebar'] = function () {
+			return new SidebarSetup();
+		};
+
+		$this->container['affilicious.theme.layout.setup.widget'] = function () {
+			return new WidgetSetup();
+		};
+	}
 
     /**
      * Load the required plugins for this theme.
@@ -268,33 +422,31 @@ class AffiliciousTheme
      */
     public function registerPublicHooks()
     {
-        // Activate or deactivate the theme
-        add_action('after_switch_theme', array($this, 'activate'));
-        add_action('switch_theme', array($this, 'deactivate'));
+	    // Hook the public styles and scripts
+	    $assetSetup = $this->container['affilicious.theme.common.setup.asset'];
+	    add_action('wp_enqueue_scripts', array($assetSetup, 'addPublicStyles'));
+	    add_action('wp_enqueue_scripts', array($assetSetup, 'addPublicScripts'));
 
-        // Load the required plugins
-        add_action('tgmpa_register', array($this, 'loadPlugins'));
+	    // Hook the sidebars
+	    $sidebarSetup = $this->container['affilicious.theme.layout.setup.sidebar'];
+	    add_action('init', array($sidebarSetup, 'init'));
+	    add_action('init', array($sidebarSetup, 'render'));
 
-        // Load the theme support and textdomain
-        add_action('after_setup_theme', array($this, 'loadSupport'));
-        add_action('after_setup_theme', array($this, 'loadTextdomain'));
+	    // Hook the widgets
+	    $widgetSetup = $this->container['affilicious.theme.layout.setup.widget'];
+	    add_filter('widgets_init', array($widgetSetup, 'registerWidgets'));
+	    add_filter('widget_tag_cloud_args', array($widgetSetup, 'modifiyTagCloud'));
 
-        // Load the sidebars, widgets and menus
-        add_action('init', array($this->sidebarSetup, 'init'), 7);
-        add_action('init', array($this->sidebarSetup, 'render'), 8);
-        add_filter('widgets_init', array($this->widgetSetup, 'registerWidgets'));
-        add_filter('widget_tag_cloud_args', array($this->widgetSetup, 'modifiyTagCloud'));
-        add_action('after_setup_theme', array($this->menuSetup, 'registerMainMenu'));
-        add_action('after_setup_theme', array($this->menuSetup, 'registerBottomMenu'));
+	    // Hook the menus
+	    $menuSetup = $this->container['affilicious.theme.layout.setup.menu'];
+	    add_action('after_setup_theme', array($menuSetup, 'registerMainMenu'));
+	    add_action('after_setup_theme', array($menuSetup, 'registerBottomMenu'));
 
-        // Modifiy the content
-        add_filter('the_content', array($this->contentSetup, 'setTableClass'));
-        add_filter('excerpt_length', array($this->contentSetup, 'setExcerptLength'));
-        add_filter('body_class', array($this->contentSetup, 'setBodyClass'));
-
-        // Register public styles and scripts
-        add_action('wp_enqueue_scripts', array($this->assetSetup, 'addPublicStyles'), 10);
-        add_action('wp_enqueue_scripts', array($this->assetSetup, 'addPublicScripts'), 20);
+	    // Hook the content
+	    $contentSetup = $this->container['affilicious.theme.layout.setup.content'];
+	    add_filter('the_content', array($contentSetup, 'setTableClass'));
+	    add_filter('excerpt_length', array($contentSetup, 'setExcerptLength'));
+	    add_filter('body_class', array($contentSetup, 'setBodyClass'));
     }
 
     /**
@@ -304,118 +456,12 @@ class AffiliciousTheme
      */
     public function registerAdminHooks()
     {
-        // Register admin styles and scripts
-        add_action('admin_enqueue_scripts', array($this->assetSetup, 'addAdminStyles'), 30);
-        add_action('admin_enqueue_scripts', array($this->assetSetup, 'addAdminScripts'), 40);
-    }
+    	// Hook the updater
+	    add_action('admin_init', array($this, 'update'), 0);
 
-    /**
-     * Update the theme with the help of the Software Licensing for Easy Digital Downloads
-     *
-     * @since 0.2
-     * @see https://easydigitaldownloads.com/downloads/software-licensing/
-     */
-    public function update()
-    {
-        $strings = array(
-            'theme-license'             => __( 'Theme License', 'affilicious-theme' ),
-            'enter-key'                 => __( 'Enter your theme license key.', 'affilicious-theme' ),
-            'license-key'               => __( 'License Key', 'affilicious-theme' ),
-            'license-action'            => __( 'License Action', 'affilicious-theme' ),
-            'deactivate-license'        => __( 'Deactivate License', 'affilicious-theme' ),
-            'activate-license'          => __( 'Activate License', 'affilicious-theme' ),
-            'status-unknown'            => __( 'License status is unknown.', 'affilicious-theme' ),
-            'renew'                     => __( 'Renew?', 'affilicious-theme' ),
-            'unlimited'                 => __( 'unlimited', 'affilicious-theme' ),
-            'license-key-is-active'     => __( 'License key is active.', 'affilicious-theme' ),
-            'expires%s'                 => __( 'Expires %s.', 'affilicious-theme' ),
-            '%1$s/%2$-sites'            => __( 'You have %1$s / %2$s sites activated.', 'affilicious-theme' ),
-            'license-key-expired-%s'    => __( 'License key expired %s.', 'affilicious-theme' ),
-            'license-key-expired'       => __( 'License key has expired.', 'affilicious-theme' ),
-            'license-keys-do-not-match' => __( 'License keys do not match.', 'affilicious-theme' ),
-            'license-is-inactive'       => __( 'License is inactive.', 'affilicious-theme' ),
-            'license-key-is-disabled'   => __( 'License key is disabled.', 'affilicious-theme' ),
-            'site-is-inactive'          => __( 'Site is inactive.', 'affilicious-theme' ),
-            'license-status-unknown'    => __( 'License status is unknown.', 'affilicious-theme' ),
-            'update-notice'             => __( "Updating this theme will lose any customizations you have made. 'Cancel' to stop, 'OK' to update.", 'affilicious-theme' ),
-            'update-available'          => __('<strong>%1$s %2$s</strong> is available. <a href="%3$s" class="thickbox" title="%4s">Check out what\'s new</a> or <a href="%5$s"%6$s>Update now</a>.', 'affilicious-theme' ),
-        );
-
-        new EDD_Theme_Updater(
-            array(
-                'remote_api_url' 	=> self::THEME_STORE_URL,
-                'version' 			=> self::THEME_VERSION,
-                'license' 			=> self::THEME_LICENSE_KEY,
-                'item_name' 		=> self::THEME_ITEM_NAME,
-                'author'			=> self::THEME_AUTHOR
-            ),
-            $strings
-        );
-    }
-
-    /**
-     * The code that runs during theme activation.
-     *
-     * @since 0.2
-     */
-    public function activate()
-    {
-        $api_params = array(
-            'edd_action' => 'activate_license',
-            'license'    => self::THEME_LICENSE_KEY,
-            'item_name'  => urlencode(self::THEME_ITEM_NAME)
-        );
-
-        $response = wp_remote_post(self::THEME_STORE_URL, array(
-            'timeout' => 15,
-            'sslverify' => false,
-            'body' => $api_params
-        ));
-
-        return is_wp_error($response);
-    }
-
-    /**
-     * The code that runs during theme deactivation.
-     *
-     * @since 0.2
-     */
-    public function deactivate()
-    {
-        $api_params = array(
-            'edd_action' => 'deactivate_license',
-            'license'    => self::THEME_LICENSE_KEY,
-            'item_name'  => urlencode(self::THEME_ITEM_NAME)
-        );
-
-        $response = wp_remote_post(self::THEME_STORE_URL, array(
-            'timeout' => 15,
-            'sslverify' => false,
-            'body' => $api_params
-        ));
-
-        return is_wp_error($response);
-    }
-
-    /**
-     * Load the supported theme options
-     *
-     * @since 0.2
-     */
-    public function loadSupport()
-    {
-        add_theme_support('post-thumbnails');
-        add_theme_support('title-tag');
-    }
-
-    /**
-     * Load the theme textdomain for internationalization.
-     *
-     * @since 0.2
-     */
-    public function loadTextdomain()
-    {
-        $dir = self::getRootDir() . '/languages';
-        load_theme_textdomain(self::THEME_NAME, $dir);
+        // Hook the admin styles and scripts
+	    $assetSetup = $this->container['affilicious.theme.common.setup.asset'];
+        add_action('admin_enqueue_scripts', array($assetSetup, 'addAdminStyles'));
+        add_action('admin_enqueue_scripts', array($assetSetup, 'addAdminScripts'));
     }
 }
