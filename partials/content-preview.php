@@ -1,6 +1,52 @@
 <?php do_action('affilicious_theme_preview_above_post'); ?>
 
+
 <article id="entry-<?php the_ID(); ?>" <?php post_class('entry'); ?>>
+    <header class="entry-header">
+        <?php if (!is_front_page() && has_category()): ?>
+            <span class="entry-category"><?php the_category(', '); ?></span>
+        <?php endif; ?>
+        <h1 class="entry-title">
+            <a href="<?php echo esc_url(get_permalink()); ?>" rel="bookmark">
+                <?php the_title(); ?>
+            </a>
+        </h1>
+    </header>
+    <?php if (has_post_thumbnail()): ?>
+        <div class="entry-thumbnail">
+            <?php the_post_thumbnail(); ?>
+        </div>
+    <?php endif; ?>
+    <div class="panel-body">
+        <?php the_content(); ?>
+    </div>
+</article>
+
+
+
+<div class="jumbotron">
+    <?php if (has_post_thumbnail()): ?>
+        <div class="jumbotron-photo">
+            <?php the_post_thumbnail(); ?>
+        </div>
+    <?php endif; ?>
+
+    <div class="jumbotron-contents">
+        <h1>Implementing the HTML and CSS into your user interface project</h1>
+        <?php the_excerpt(); ?>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!--<article id="entry-<?php the_ID(); ?>" <?php post_class('entry'); ?>>
     <div class="entry-thumbnail">
         <?php if (has_post_thumbnail()): ?>
             <?php the_post_thumbnail(); ?>
@@ -35,6 +81,6 @@
             <?php endif; ?>
         </ul>
     </footer>
-</article>
+</article>-->
 
 <?php do_action('affilicious_theme_preview_below_post'); ?>

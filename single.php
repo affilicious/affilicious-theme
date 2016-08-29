@@ -9,7 +9,7 @@
                     <?php if(affilicious_is_product()): ?>
                         <?php get_template_part('partials/content', 'product'); ?>
                     <?php else: ?>
-                        <?php get_template_part('partials/content', get_post_type()); ?>
+                        <?php get_template_part('partials/content', 'default'); ?>
                     <?php endif; ?>
 
                     <?php if ( comments_open() || '0' != get_comments_number() ) { ?>

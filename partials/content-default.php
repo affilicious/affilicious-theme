@@ -1,28 +1,38 @@
+<article id="entry-<?php the_ID(); ?>" <?php post_class('entry'); ?>
+         role="article" itemscope itemtype="http://schema.org/BlogPosting">
+	<header class="entry-header">
+		<h1 class="entry-title" itemprop="headline"><?php the_title(); ?></h1>
 
+		<ul class="entry-meta">
+			<li class="entry-date">
+				<?php the_time(get_option('date_format')); ?>
+			</li>
+			<?php if (has_category()): ?>
+				<li class="entry-category">
+					<?php the_category(', '); ?>
+				</li>
+			<?php endif; ?>
+			<li class="entry-comments">
+				<?php comments_number(
+					__('No comments', 'affiliate-theme'),
+					__('One comment', 'affiliate-theme'),
+					__('%s comments', 'affiliate-theme')
+				); ?>
+			</li>
+		</ul>
+	</header>
 
+	<?php if (has_post_thumbnail()): ?>
+		<div class="entry-thumbnail">
+			<?php the_post_thumbnail(); ?>
+		</div>
+	<?php endif; ?>
 
+	<div class="entry-body" itemprop="articleBody">
+		<?php the_content(); ?>
+	</div>
 
-
-
-<article id="entry-<?php the_ID(); ?>" <?php post_class('entry'); ?>>
-    <header class="entry-header">
-        <?php if (!is_front_page() && has_category()): ?>
-            <span class="entry-category"><?php the_category(', '); ?></span>
-        <?php endif; ?>
-        <h1 class="entry-title">
-            <a href="<?php echo esc_url(get_permalink()); ?>" rel="bookmark">
-                <?php the_title(); ?>
-            </a>
-        </h1>
-        <?php if (has_post_thumbnail()): ?>
-            <div class="entry-thumbnail">
-                <?php the_post_thumbnail(); ?>
-            </div>
-        <?php endif; ?>
-    </header>
-    <div class="entry-body">
-        <?php the_content(); ?>
-    </div>
+	<footer class="entry-footer">
+		<?php the_tags('<p class="tags">', ' ', '</p>'); ?>
+	</footer>
 </article>
-
-

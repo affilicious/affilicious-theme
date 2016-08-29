@@ -5,6 +5,7 @@ use Affilicious\Theme\Helper\MenuHelper;
 use Affilicious\Product\Domain\Helper\PostHelper;
 use Affilicious\Product\Domain\Model\Product;
 use Affilicious\Theme\Setup\SidebarSetup;
+use Affilicious\Theme\Walker\BootstrapCommentWalker;
 
 /**
  * Check if the layout is loose
@@ -231,4 +232,25 @@ function affilicious_theme_get_product_sidebar($productOrId = null)
     if (!empty($sidebar)) {
         dynamic_sidebar($sidebar);
     }
+}
+
+/**
+ * List the comments with bootstrap components.
+ * This function is just a wrapper for wp_list_comments.
+ *
+ * @see https://codex.wordpress.org/Function_Reference/wp_list_comments
+ * @since 0.3.4
+ * @param array $args
+ */
+function affilicious_theme_list_comments($args = array())
+{
+	$args = wp_parse_args($args, array(
+		'style'       => 'ul',
+		'max_depth'   => 1,
+		'short_ping'  => true,
+		'avatar_size' => '64',
+		'walker'      => new BootstrapCommentWalker(),
+	));
+
+	wp_list_comments($args);
 }

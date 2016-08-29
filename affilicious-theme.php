@@ -6,6 +6,7 @@ use Affilicious\Theme\Setup\MenuSetup;
 use Affilicious\Theme\Setup\SidebarSetup;
 use Affilicious\Theme\Setup\WidgetSetup;
 use Affilicious\Theme\Shortcode\AlertShortcode;
+use Affilicious\Theme\Setup\CommentSetup;
 use Pimple\Container;
 
 if (!defined('ABSPATH')) exit('Not allowed to access pages directly.');
@@ -284,6 +285,10 @@ class AffiliciousTheme
 			return new ContentSetup();
 		};
 
+		$this->container['affilicious.theme.layout.setup.comment'] = function () {
+			return new CommentSetup();
+		};
+
 		$this->container['affilicious.theme.layout.setup.menu'] = function () {
 			return new MenuSetup();
 		};
@@ -446,6 +451,12 @@ class AffiliciousTheme
 	    add_filter('the_content', array($contentSetup, 'setTableClass'));
 	    add_filter('excerpt_length', array($contentSetup, 'setExcerptLength'));
 	    add_filter('body_class', array($contentSetup, 'setBodyClass'));
+
+	    // Hook the comments
+	    $commentSetup = $this->container['affilicious.theme.layout.setup.comment'];
+	    add_filter('comment_form_default_fields', array($commentSetup, 'setFormDefaultFields'));
+	    add_filter('comment_form_defaults', array($commentSetup, 'setFormDefaults'));
+	    add_filter('after_setup_theme', array($commentSetup, 'setThemeSupport'));
     }
 
     /**

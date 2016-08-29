@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: "
 "affilicious-theme\n"
 "POT-Creation-Date: "
-"2016-08-26 18:56+0200\n"
+"2016-08-30 14:55+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Your "
 "Name <you@example.com>\n"
@@ -37,7 +37,8 @@ msgstr ""
 "esc_html__;esc_attr_e;"
 "esc_attr_x:1,2c;"
 "esc_attr_;_n_noop;"
-"_n:1,2;_n;n\n"
+"_n:1,2;_n;n;_nx:1,2;"
+"_nx\n"
 "X-Poedit-Basepath: ..\n"
 "Language: en_US\n"
 "X-Generator: Poedit "
@@ -54,252 +55,96 @@ msgstr ""
 "SearchPathExcluded-2: "
 "assets\n"
 
-#: affilicious-theme.php:175
-msgid ""
-"Install Required Plugins"
-msgstr ""
-
-#: affilicious-theme.php:176
-msgid "Install Plugins"
-msgstr ""
-
-#: affilicious-theme.php:177
-#, php-format
-msgid ""
-"Installing Plugin: %s"
-msgstr ""
-
-#: affilicious-theme.php:178
-#, php-format
-msgid ""
-"Updating Plugin: %s"
-msgstr ""
-
-#: affilicious-theme.php:179
-msgid ""
-"Something went wrong "
-"with the plugin API."
-msgstr ""
-
-#: affilicious-theme.php:181
-#, php-format
-msgid ""
-"This theme requires the "
-"following plugin: %1$s."
-msgstr ""
-
-#: affilicious-theme.php:186
-#, php-format
-msgid ""
-"This theme recommends "
-"the following plugin: "
-"%1$s."
-msgstr ""
-
-#: affilicious-theme.php:191
-#, php-format
-msgid ""
-"The following plugin "
-"needs to be updated to "
-"its latest version to "
-"ensure maximum "
-"compatibility with this "
-"theme: %1$s."
-msgstr ""
-
-#: affilicious-theme.php:196
-#, php-format
-msgid ""
-"There is an update "
-"available for: %1$s."
-msgstr ""
-
-#: affilicious-theme.php:201
-#, php-format
-msgid ""
-"The following required "
-"plugin is currently "
-"inactive: %1$s."
-msgstr ""
-
-#: affilicious-theme.php:206
-#, php-format
-msgid ""
-"The following "
-"recommended plugin is "
-"currently inactive: "
-"%1$s."
-msgstr ""
-
-#: affilicious-theme.php:211
-msgid ""
-"Begin installing plugin"
-msgstr ""
-
-#: affilicious-theme.php:216
-msgid ""
-"Begin updating plugin"
-msgstr ""
-
-#: affilicious-theme.php:221
-msgid ""
-"Begin activating plugin"
-msgstr ""
-
-#: affilicious-theme.php:225
-msgid ""
-"Return to Required "
-"Plugins Installer"
-msgstr ""
-
-#: affilicious-theme.php:226
-msgid ""
-"Plugin activated "
-"successfully."
-msgstr ""
-
-#: affilicious-theme.php:227
-msgid ""
-"The following plugin "
-"was activated "
-"successfully:"
-msgstr ""
-
-#: affilicious-theme.php:228
-#, php-format
-msgid ""
-"No action taken. Plugin "
-"%1$s was already active."
-msgstr ""
-
-#: affilicious-theme.php:229
-#, php-format
-msgid ""
-"Plugin not activated. A "
-"higher version of %s is "
-"needed for this theme. "
-"Please update the "
-"plugin."
-msgstr ""
-
-#: affilicious-theme.php:230
-#, php-format
-msgid ""
-"All plugins installed "
-"and activated "
-"successfully. %1$s"
-msgstr ""
-
-#: affilicious-theme.php:231
-msgid ""
-"Dismiss this notice"
-msgstr ""
-
-#: affilicious-theme.php:232
-msgid ""
-"There are one or more "
-"required or recommended "
-"plugins to install, "
-"update or activate."
-msgstr ""
-
-#: affilicious-theme.php:233
-msgid ""
-"Please contact the "
-"administrator of this "
-"site for help."
-msgstr ""
-
-#: affilicious-theme.php:307
+#: affilicious-theme.php:157
 msgid "Theme License"
 msgstr ""
 
-#: affilicious-theme.php:308
+#: affilicious-theme.php:158
 msgid ""
 "Enter your theme "
 "license key."
 msgstr ""
 
-#: affilicious-theme.php:309
+#: affilicious-theme.php:159
 msgid "License Key"
 msgstr ""
 
-#: affilicious-theme.php:310
+#: affilicious-theme.php:160
 msgid "License Action"
 msgstr ""
 
-#: affilicious-theme.php:311
+#: affilicious-theme.php:161
 msgid "Deactivate License"
 msgstr ""
 
-#: affilicious-theme.php:312
+#: affilicious-theme.php:162
 msgid "Activate License"
 msgstr ""
 
-#: affilicious-theme.php:313
-#: affilicious-theme.php:325
+#: affilicious-theme.php:163
+#: affilicious-theme.php:175
 msgid ""
 "License status is "
 "unknown."
 msgstr ""
 
-#: affilicious-theme.php:314
+#: affilicious-theme.php:164
 msgid "Renew?"
 msgstr ""
 
-#: affilicious-theme.php:315
+#: affilicious-theme.php:165
 msgid "unlimited"
 msgstr ""
 
-#: affilicious-theme.php:316
+#: affilicious-theme.php:166
 msgid ""
 "License key is active."
 msgstr ""
 
-#: affilicious-theme.php:317
+#: affilicious-theme.php:167
 #, php-format
 msgid "Expires %s."
 msgstr ""
 
-#: affilicious-theme.php:318
+#: affilicious-theme.php:168
 #, php-format
 msgid ""
 "You have %1$s / %2$s "
 "sites activated."
 msgstr ""
 
-#: affilicious-theme.php:319
+#: affilicious-theme.php:169
 #, php-format
 msgid ""
 "License key expired %s."
 msgstr ""
 
-#: affilicious-theme.php:320
+#: affilicious-theme.php:170
 msgid ""
 "License key has expired."
 msgstr ""
 
-#: affilicious-theme.php:321
+#: affilicious-theme.php:171
 msgid ""
 "License keys do not "
 "match."
 msgstr ""
 
-#: affilicious-theme.php:322
+#: affilicious-theme.php:172
 msgid ""
 "License is inactive."
 msgstr ""
 
-#: affilicious-theme.php:323
+#: affilicious-theme.php:173
 msgid ""
 "License key is disabled."
 msgstr ""
 
-#: affilicious-theme.php:324
+#: affilicious-theme.php:174
 msgid "Site is inactive."
 msgstr ""
 
-#: affilicious-theme.php:326
+#: affilicious-theme.php:176
 msgid ""
 "Updating this theme "
 "will lose any "
@@ -308,7 +153,7 @@ msgid ""
 "'OK' to update."
 msgstr ""
 
-#: affilicious-theme.php:327
+#: affilicious-theme.php:177
 #, php-format
 msgid ""
 "<strong>%1$s %2$s</"
@@ -321,110 +166,246 @@ msgid ""
 "now</a>."
 msgstr ""
 
-#: archive.php:18
+#: affilicious-theme.php:337
+msgid ""
+"Install Required Plugins"
+msgstr ""
+
+#: affilicious-theme.php:338
+msgid "Install Plugins"
+msgstr ""
+
+#: affilicious-theme.php:339
 #, php-format
-msgid "Author: %s"
+msgid ""
+"Installing Plugin: %s"
 msgstr ""
 
-#: archive.php:20
+#: affilicious-theme.php:340
 #, php-format
-msgid "Day: %s"
+msgid ""
+"Updating Plugin: %s"
 msgstr ""
 
-#: archive.php:22
+#: affilicious-theme.php:341
+msgid ""
+"Something went wrong "
+"with the plugin API."
+msgstr ""
+
+#: affilicious-theme.php:343
 #, php-format
-msgid "Month: %s"
+msgid ""
+"This theme requires the "
+"following plugin: %1$s."
 msgstr ""
 
-#: archive.php:24
+#: affilicious-theme.php:348
 #, php-format
-msgid "Year: %s"
+msgid ""
+"This theme recommends "
+"the following plugin: "
+"%1$s."
 msgstr ""
 
-#: archive.php:26
-msgid "Asides"
+#: affilicious-theme.php:353
+#, php-format
+msgid ""
+"The following plugin "
+"needs to be updated to "
+"its latest version to "
+"ensure maximum "
+"compatibility with this "
+"theme: %1$s."
 msgstr ""
 
-#: archive.php:28
-msgid "Galleries"
+#: affilicious-theme.php:358
+#, php-format
+msgid ""
+"There is an update "
+"available for: %1$s."
 msgstr ""
 
-#: archive.php:30
-msgid "Images"
+#: affilicious-theme.php:363
+#, php-format
+msgid ""
+"The following required "
+"plugin is currently "
+"inactive: %1$s."
 msgstr ""
 
-#: archive.php:32
-msgid "Videos"
+#: affilicious-theme.php:368
+#, php-format
+msgid ""
+"The following "
+"recommended plugin is "
+"currently inactive: "
+"%1$s."
 msgstr ""
 
-#: archive.php:34
-msgid "Quotes"
+#: affilicious-theme.php:373
+msgid ""
+"Begin installing plugin"
 msgstr ""
 
-#: archive.php:36
-msgid "Links"
+#: affilicious-theme.php:378
+msgid ""
+"Begin updating plugin"
 msgstr ""
 
-#: archive.php:38
-msgid "Statuses"
+#: affilicious-theme.php:383
+msgid ""
+"Begin activating plugin"
 msgstr ""
 
-#: archive.php:40
-msgid "Audios"
+#: affilicious-theme.php:387
+msgid ""
+"Return to Required "
+"Plugins Installer"
 msgstr ""
 
-#: archive.php:42
-msgid "Chats"
+#: affilicious-theme.php:388
+msgid ""
+"Plugin activated "
+"successfully."
 msgstr ""
 
-#: archive.php:44
-msgid "Archives"
+#: affilicious-theme.php:389
+msgid ""
+"The following plugin "
+"was activated "
+"successfully:"
+msgstr ""
+
+#: affilicious-theme.php:390
+#, php-format
+msgid ""
+"No action taken. Plugin "
+"%1$s was already active."
+msgstr ""
+
+#: affilicious-theme.php:391
+#, php-format
+msgid ""
+"Plugin not activated. A "
+"higher version of %s is "
+"needed for this theme. "
+"Please update the "
+"plugin."
+msgstr ""
+
+#: affilicious-theme.php:392
+#, php-format
+msgid ""
+"All plugins installed "
+"and activated "
+"successfully. %1$s"
+msgstr ""
+
+#: affilicious-theme.php:393
+msgid ""
+"Dismiss this notice"
+msgstr ""
+
+#: affilicious-theme.php:394
+msgid ""
+"There are one or more "
+"required or recommended "
+"plugins to install, "
+"update or activate."
+msgstr ""
+
+#: affilicious-theme.php:395
+msgid ""
+"Please contact the "
+"administrator of this "
+"site for help."
+msgstr ""
+
+#: comments.php:17
+#, php-format
+msgid "1 Comment"
+msgid_plural "%s Comments"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:35
+msgid ""
+"Comments are closed."
 msgstr ""
 
 #: header.php:42
 msgid "Toggle navigation"
 msgstr ""
 
-#: partials/content-preview.php:34
+#: partials/content-default.php:17
+#: partials/content-product.php:128
+msgid "No comments"
+msgstr ""
+
+#: partials/content-default.php:18
+#: partials/content-product.php:129
+msgid "One comment"
+msgstr ""
+
+#: partials/content-default.php:19
+#: partials/content-product.php:130
+#, php-format
+msgid "%s comments"
+msgstr ""
+
+#: partials/content-none.php:5
+msgid "Not Found"
+msgstr ""
+
+#: partials/content-none.php:8
+msgid ""
+"Sorry, but the "
+"requested resource was "
+"not found on this site."
+msgstr ""
+
+#: partials/content-preview.php:80
+#: src/Walker/BootstrapCommentWalker.php:63
 msgid "Edit"
 msgstr ""
 
-#: partials/content-product-relations.php:11
+#: partials/content-product-relations.php:13
 msgid "Related products"
 msgstr ""
 
-#: partials/content-product-relations.php:16
+#: partials/content-product-relations.php:20
 msgid ""
 "Related accessories"
 msgstr ""
 
-#: partials/content-product-relations.php:21
+#: partials/content-product-relations.php:27
 msgid "Related posts"
 msgstr ""
 
-#: partials/content-product-relations.php:33
-#: partials/content-product-relations.php:64
-#: partials/content-product-relations.php:96
+#: partials/content-product-relations.php:41
+#: partials/content-product-relations.php:76
+#: partials/content-product-relations.php:110
 #, php-format
 msgid "Link to %s"
 msgstr ""
 
-#: partials/content-product-relations.php:41
-#: partials/content-product-relations.php:72
+#: partials/content-product-relations.php:49
+#: partials/content-product-relations.php:84
 #: src/Widget/View/priceComparison.php:28
 msgid "Buy"
 msgstr ""
 
-#: partials/content-product-relations.php:46
-#: partials/content-product-relations.php:77
+#: partials/content-product-relations.php:54
+#: partials/content-product-relations.php:89
 msgid "To The Test Report"
 msgstr ""
 
-#: partials/content-product-relations.php:103
+#: partials/content-product-relations.php:117
 msgid "To The Post"
 msgstr ""
 
-#: partials/content-product.php:16
+#: partials/content-product.php:24
 #, php-format
 msgid "based on %s review"
 msgid_plural ""
@@ -432,29 +413,16 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: partials/content-product.php:74
+#: partials/content-product.php:84
 msgid "Price"
 msgstr ""
 
-#: partials/content-product.php:85
+#: partials/content-product.php:99
 msgid "Download"
 msgstr ""
 
-#: partials/content-product.php:108
+#: partials/content-product.php:122
 msgid "Test report"
-msgstr ""
-
-#: partials/content-product.php:114
-msgid "No comments"
-msgstr ""
-
-#: partials/content-product.php:115
-msgid "One comment"
-msgstr ""
-
-#: partials/content-product.php:116
-#, php-format
-msgid "%s comments"
 msgstr ""
 
 #: searchform.php:3
@@ -536,12 +504,40 @@ msgid ""
 "not found."
 msgstr ""
 
-#: src/Setup/MenuSetup.php:18
+#: src/Menu/Footer1Menu.php:23
+msgid ""
+"Footer 1 Navigation"
+msgstr ""
+
+#: src/Menu/Footer2Menu.php:23
+msgid ""
+"Footer 2 Navigation"
+msgstr ""
+
+#: src/Menu/Footer3Menu.php:23
+msgid ""
+"Footer 3 Navigation"
+msgstr ""
+
+#: src/Menu/Footer4Menu.php:23
+msgid ""
+"Footer 4 Navigation"
+msgstr ""
+
+#: src/Menu/MainMenu.php:23
 msgid "Main Navigation"
 msgstr ""
 
-#: src/Setup/MenuSetup.php:28
-msgid "Bottom Navigation"
+#: src/Setup/CommentSetup.php:33
+msgid "Name"
+msgstr ""
+
+#: src/Setup/CommentSetup.php:35
+msgid "Email"
+msgstr ""
+
+#: src/Setup/CommentSetup.php:37
+msgid "Website"
 msgstr ""
 
 #: src/Setup/SidebarSetup.php:50
@@ -577,6 +573,12 @@ msgid ""
 "this sidebar, which is "
 "visible on every "
 "product page."
+msgstr ""
+
+#: src/Walker/BootstrapCommentWalker.php:55
+msgid ""
+"Your comment is "
+"awaiting moderation."
 msgstr ""
 
 #: src/Widget/PriceComparisonWidget.php:11
