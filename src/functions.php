@@ -36,7 +36,10 @@ function affilicious_theme_is_tight_layout()
  */
 function affilicious_theme_has_main_menu()
 {
-    return MenuHelper::hasMainMenu();
+	$mainMenu = MenuHelper::getMainMenu();
+	$result = $mainMenu->exists();
+
+    return $result;
 }
 
 /**
@@ -46,28 +49,108 @@ function affilicious_theme_has_main_menu()
  */
 function affilicious_theme_main_menu()
 {
-    MenuHelper::getMainMenu();
+	$mainMenu = MenuHelper::getMainMenu();
+	$mainMenu->render();
 }
 
 /**
- * Check if there is a bottom menu.
+ * Check if there is a footer 1 menu.
  *
- * @since 0.2
+ * @since 0.3.4
  * @return bool
  */
-function affilicious_theme_has_bottom_menu()
+function affilicious_theme_has_footer_1_menu()
 {
-    return MenuHelper::hasBottomMenu();
+	$footer1Menu = MenuHelper::getFooter1Menu();
+	$result = $footer1Menu->exists();
+
+	return $result;
 }
 
 /**
- * Get the bottom menu.
+ * Get the footer 1 menu.
  *
- * @since 0.2
+ * @since 0.3.4
  */
-function affilicious_theme_bottom_menu()
+function affilicious_theme_footer_1_menu()
 {
-    MenuHelper::getBottomMenu();
+	$footer1Menu = MenuHelper::getFooter1Menu();
+	$footer1Menu->render();
+}
+
+/**
+ * Check if there is a footer 2 menu.
+ *
+ * @since 0.3.4
+ * @return bool
+ */
+function affilicious_theme_has_footer_2_menu()
+{
+	$footer2Menu = MenuHelper::getFooter2Menu();
+	$result = $footer2Menu->exists();
+
+	return $result;
+}
+
+/**
+ * Get the footer 2 menu.
+ *
+ * @since 0.3.4
+ */
+function affilicious_theme_footer_2_menu()
+{
+	$footer2Menu = MenuHelper::getFooter2Menu();
+	$footer2Menu->render();
+}
+
+/**
+ * Check if there is a footer 3 menu.
+ *
+ * @since 0.3.4
+ * @return bool
+ */
+function affilicious_theme_has_footer_3_menu()
+{
+	$footer3Menu = MenuHelper::getFooter3Menu();
+	$result = $footer3Menu->exists();
+
+	return $result;
+}
+
+/**
+ * Get the footer 3 menu.
+ *
+ * @since 0.3.4
+ */
+function affilicious_theme_footer_3_menu()
+{
+	$footer3Menu = MenuHelper::getFooter3Menu();
+	$footer3Menu->render();
+}
+
+/**
+ * Check if there is a footer 4 menu.
+ *
+ * @since 0.3.4
+ * @return bool
+ */
+function affilicious_theme_has_footer_4_menu()
+{
+	$footer4Menu = MenuHelper::getFooter4Menu();
+	$result = $footer4Menu->exists();
+
+	return $result;
+}
+
+/**
+ * Get the footer 4 menu.
+ *
+ * @since 0.3.4
+ */
+function affilicious_theme_footer_4_menu()
+{
+	$footer4Menu = MenuHelper::getFooter4Menu();
+	$footer4Menu->render();
 }
 
 /**

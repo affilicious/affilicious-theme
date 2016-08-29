@@ -1,3 +1,9 @@
+
+
+
+
+
+
 <article id="entry-<?php the_ID(); ?>" <?php post_class('entry'); ?>>
     <header class="entry-header">
         <?php if (!is_front_page() && has_category()): ?>

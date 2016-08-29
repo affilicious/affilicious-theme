@@ -1,30 +1,102 @@
 <?php
 namespace Affilicious\Theme\Setup;
 
+use Affilicious\Theme\Menu\Footer1Menu;
+use Affilicious\Theme\Menu\Footer2Menu;
+use Affilicious\Theme\Menu\Footer3Menu;
+use Affilicious\Theme\Menu\Footer4Menu;
+use Affilicious\Theme\Menu\MainMenu;
+
 if(!defined('ABSPATH')) exit('Not allowed to access pages directly.');
 
 class MenuSetup
 {
-    const MAIN_MENU = 'main-menu';
-    const BOTTOM_MENU = 'bottom-menu';
+	/**
+	 * @var MainMenu
+	 */
+	private $mainMenu;
 
-    /**
-     * Register the main menu
-     *
-     * @since 0.2
-     */
-    public function registerMainMenu()
-    {
-        register_nav_menu(self::MAIN_MENU, __('Main Navigation', 'affilicious-theme'));
-    }
+	/**
+	 * @var Footer1Menu
+	 */
+	private $footer1Menu;
 
-    /**
-     * Register the bottom menu
-     *
-     * @since 0.2
-     */
-    public function registerBottomMenu()
-    {
-        register_nav_menu(self::BOTTOM_MENU, __('Bottom Navigation', 'affilicious-theme'));
-    }
+	/**
+	 * @var Footer2Menu
+	 */
+	private $footer2Menu;
+
+	/**
+	 * @var Footer3Menu
+	 */
+	private $footer3Menu;
+
+	/**
+	 * @var Footer4Menu
+	 */
+	private $footer4Menu;
+
+	/**
+	 * @since 0.3.4
+	 */
+	public function __construct()
+	{
+		$this->mainMenu = new MainMenu();
+		$this->footer1Menu = new Footer1Menu();
+		$this->footer2Menu = new Footer2Menu();
+		$this->footer3Menu = new Footer3Menu();
+		$this->footer4Menu = new Footer4Menu();
+	}
+
+	/**
+	 * @inheritdoc
+	 */
+	public function init()
+	{
+		$this->mainMenu->init();
+		$this->footer1Menu->init();
+		$this->footer2Menu->init();
+		$this->footer3Menu->init();
+		$this->footer4Menu->init();
+	}
+
+	/**
+	 * @return MainMenu
+	 */
+	public function getMainMenu()
+	{
+		return $this->mainMenu;
+	}
+
+	/**
+	 * @return Footer1Menu
+	 */
+	public function getFooter1Menu()
+	{
+		return $this->footer1Menu;
+	}
+
+	/**
+	 * @return Footer2Menu
+	 */
+	public function getFooter2Menu()
+	{
+		return $this->footer2Menu;
+	}
+
+	/**
+	 * @return Footer3Menu
+	 */
+	public function getFooter3Menu()
+	{
+		return $this->footer3Menu;
+	}
+
+	/**
+	 * @return Footer4Menu
+	 */
+	public function getFooter4Menu()
+	{
+		return $this->footer4Menu;
+	}
 }

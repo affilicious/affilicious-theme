@@ -439,8 +439,7 @@ class AffiliciousTheme
 
 	    // Hook the menus
 	    $menuSetup = $this->container['affilicious.theme.layout.setup.menu'];
-	    add_action('after_setup_theme', array($menuSetup, 'registerMainMenu'));
-	    add_action('after_setup_theme', array($menuSetup, 'registerBottomMenu'));
+	    add_action('after_setup_theme', array($menuSetup, 'init'));
 
 	    // Hook the content
 	    $contentSetup = $this->container['affilicious.theme.layout.setup.content'];
@@ -464,4 +463,13 @@ class AffiliciousTheme
         add_action('admin_enqueue_scripts', array($assetSetup, 'addAdminStyles'));
         add_action('admin_enqueue_scripts', array($assetSetup, 'addAdminScripts'));
     }
+
+	/**
+	 * @since 0.3.4
+	 * @return Container
+	 */
+	public function getContainer()
+	{
+		return $this->container;
+	}
 }

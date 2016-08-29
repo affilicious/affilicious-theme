@@ -1,74 +1,83 @@
 <?php
 namespace Affilicious\Theme\Helper;
 
-use Affilicious\Theme\Setup\MenuSetup;
-use Affilicious\Theme\Walker\BootstrapWalker;
+use Affilicious\Theme\Menu\Footer1Menu;
+use Affilicious\Theme\Menu\Footer2Menu;
+use Affilicious\Theme\Menu\Footer3Menu;
+use Affilicious\Theme\Menu\Footer4Menu;
+use Affilicious\Theme\Menu\MainMenu;
 
 if(!defined('ABSPATH')) exit('Not allowed to access pages directly.');
 
 class MenuHelper
 {
-    /**
-     * Check if there is a main menu.
-     *
-     * @since 0.2
-     * @return bool
-     */
-    public static function hasMainMenu()
-    {
-        return has_nav_menu(MenuSetup::MAIN_MENU);
-    }
+	/**
+	 * Get the main menu
+	 *
+	 * @return MainMenu
+	 */
+	public static function getMainMenu()
+	{
+		$container = \AffiliciousTheme::getInstance()->getContainer();
+		$menuSetup = $container['affilicious.theme.layout.setup.menu'];
+		$mainMenu = $menuSetup->getMainMenu();
 
-    /**
-     * Get the main menu.
-     * This method prints the menu directly.
-     *
-     * @since 0.2
-     */
-    public static function getMainMenu()
-    {
-        wp_nav_menu(array(
-            'menu_id' => 'nav-main-menu',
-            'theme_location' => MenuSetup::MAIN_MENU,
-            'depth' => 2,
-            'container' => 'div',
-            'container_class' => 'collapse navbar-collapse',
-            'container_id' => 'top-menu',
-            'menu_class' => 'nav navbar-nav',
-            'fallback_cb' => 'wp_bootstrap_navwalker::fallback',
-            'walker' => new BootstrapWalker()
-        ));
-    }
+		return $mainMenu;
+	}
 
-    /**
-     * Check if there is a bottom menu.
-     *
-     * @since 0.2
-     * @return bool
-     */
-    public static function hasBottomMenu()
-    {
-        return has_nav_menu(MenuSetup::BOTTOM_MENU);
-    }
+	/**
+	 * Get the footer 1 menu
+	 *
+	 * @return Footer1Menu
+	 */
+	public static function getFooter1Menu()
+	{
+		$container = \AffiliciousTheme::getInstance()->getContainer();
+		$menuSetup = $container['affilicious.theme.layout.setup.menu'];
+		$footer1Menu = $menuSetup->getFooter1Menu();
 
-    /**
-     * Get the bottom menu.
-     * This method prints the menu directly.
-     *
-     * @since 0.2
-     */
-    public static function getBottomMenu()
-    {
-        wp_nav_menu(array(
-            'menu' => 'footer_links',
-            'theme_location' => MenuSetup::BOTTOM_MENU,
-            'depth' => 2,
-            'container' => 'nav',
-            'container_class' => 'navbar-collapse',
-            'container_id' => 'bottom-menu',
-            'menu_class' => 'nav navbar-nav',
-            'fallback_cb' => 'wp_bootstrap_navwalker::fallback',
-            'walker' => new BootstrapWalker()
-        ));
-    }
+		return $footer1Menu;
+	}
+
+	/**
+	 * Get the footer 2 menu
+	 *
+	 * @return Footer2Menu
+	 */
+	public static function getFooter2Menu()
+	{
+		$container = \AffiliciousTheme::getInstance()->getContainer();
+		$menuSetup = $container['affilicious.theme.layout.setup.menu'];
+		$footer3Menu = $menuSetup->getFooter2Menu();
+
+		return $footer3Menu;
+	}
+
+	/**
+	 * Get the footer 3 menu
+	 *
+	 * @return Footer3Menu
+	 */
+	public static function getFooter3Menu()
+	{
+		$container = \AffiliciousTheme::getInstance()->getContainer();
+		$menuSetup = $container['affilicious.theme.layout.setup.menu'];
+		$footer3Menu = $menuSetup->getFooter3Menu();
+
+		return $footer3Menu;
+	}
+
+	/**
+	 * Get the footer 4 menu
+	 *
+	 * @return Footer4Menu
+	 */
+	public static function getFooter4Menu()
+	{
+		$container = \AffiliciousTheme::getInstance()->getContainer();
+		$menuSetup = $container['affilicious.theme.layout.setup.menu'];
+		$footer4Menu = $menuSetup->getFooter4Menu();
+
+		return $footer4Menu;
+	}
 }

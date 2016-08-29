@@ -1,52 +1,51 @@
+main {
+
+  dt {
+    display: table;
+  }
+
+  dt, dd {
+    display: table-cell;
+  }
+
+  dt {
+    float: left;
+    clear: left;
+    min-width: 50px;
+    max-width: 200px;
+    padding-right: 10px;
+    box-sizing: border-box;
+    width: 25%;
+    text-align: right;
+    font-weight: bold;
+  }
+
+  dt:after {
+    content: ":";
+  }
+
+  dd {
+    margin-left: 500px;
+  }
+
+  /*
 
 
-dt {
-  display: table;
+  dl {
+    padding: 0.5em;
+  }
+  dt {
+    float: left;
+    clear: left;
+    width: 150px;
+    text-align: right;
+    font-weight: bold;
+  }
+  dt:after {
+    content: ":";
+  }
+  dd {
+    margin: 0 0 0 170px;
+    padding: 0 0 0.5em 0;
+  }*/
 }
-
-dt, dd {
-  display: table-cell;
-}
-
-dt {
-  float: left;
-  clear: left;
-  min-width: 50px;
-  max-width: 200px;
-  padding-right: 10px;
-  box-sizing: border-box;
-  width: 25%;
-  text-align: right;
-  font-weight: bold;
-}
-
-dt:after {
-  content: ":";
-}
-
-dd {
-  margin-left: 500px;
-}
-
-
-
-/*
-
-
-dl {
-  padding: 0.5em;
-}
-dt {
-  float: left;
-  clear: left;
-  width: 150px;
-  text-align: right;
-  font-weight: bold;
-}
-dt:after {
-  content: ":";
-}
-dd {
-  margin: 0 0 0 170px;
-  padding: 0 0 0.5em 0;
-}*/
