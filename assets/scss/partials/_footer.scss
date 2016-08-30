@@ -1,1 +1,25 @@
 @import "variables";
+
+.footer {
+  padding-top: 0;
+
+  &-content {
+    padding-top: 40px;
+  }
+
+  &-breadcrumbs {
+    display: flex;
+    align-items: center;
+    min-height: 50px;
+    color: #797979;
+    background-color: #f8f8f8;
+
+    a {
+      color: #797979;
+
+      &:hover {
+        color: black;
+      }
+    }
+  }
+}
