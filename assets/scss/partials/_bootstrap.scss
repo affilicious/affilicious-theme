@@ -29,3 +29,17 @@
     border: 1px solid #4fc1e9;
   }
 }
+
+.label {
+  &-sm {
+    font-size: 12px;
+  }
+
+  &-md {
+    font-size: 16px;
+  }
+
+  &-lg {
+    font-size: 20px;
+  }
+}

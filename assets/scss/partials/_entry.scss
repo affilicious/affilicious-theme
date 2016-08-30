@@ -76,6 +76,23 @@
     padding-top: 0;
   }
 
+  &-footer {
+    box-sizing: border-box;
+    padding: $space-size-medium;
+    padding-top: 0;
+  }
+
+  &-tags {
+    span {
+      display: inline-block;
+      margin-left: $space-size-small;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+
   .archive &, .blog & {
     &-title {
       font-size: $font-size-headline-2;

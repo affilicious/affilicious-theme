@@ -41,7 +41,11 @@
 
 	<?php if(!is_front_page() && !is_page()): ?>
 		<footer class="entry-footer">
-			<?php the_tags('<p class="tags" rel="tag">', ' ', '</p>'); ?>
+			<?php the_tags(
+				'<p class="entry-tags"><span class="label label-default label-md" rel="tag">',
+				'</span><span class="label label-default label-md" rel="tag">',
+				'</span></p>');
+			?>
 		</footer>
 	<?php endif; ?>
 </article>
