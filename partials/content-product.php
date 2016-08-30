@@ -97,13 +97,19 @@
                                     <tbody>
                                         <?php $affiliateLink = affilicious_get_product_affiliate_link($product); ?>
                                         <?php $price = affilicious_get_product_price($product); ?>
-                                        <?php if(!empty($affiliateLink) && !empty($price)): ?>
+                                        <?php if(!empty($price)): ?>
                                             <tr>
                                                 <td><?php _e('Price', 'affilicious-theme'); ?></td>
                                                 <td>
+                                                    <?php if(!empty($affiliateLink)): ?>
                                                     <a class="price" href="<?php echo $affiliateLink; ?>" itemprop="price">
                                                         <?php echo $price; ?>
                                                     </a>
+                                                    <?php else: ?>
+                                                    <span class="price" itemprop="price">
+                                                        <?php echo $price; ?>
+                                                    </span>
+                                                    <?php endif; ?>
                                                 </td>
                                             </tr>
                                         <?php endif; ?>
