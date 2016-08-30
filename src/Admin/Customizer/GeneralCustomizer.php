@@ -16,6 +16,20 @@ class GeneralCustomizer extends AbstractThemeCustomizer
             'priority'  => 30,
         ));
 
+        // Copyright
+        $wp_customize->add_setting('affilicious_theme_copyright_text', array(
+            'section' => 'title_tagline',
+        ));
+
+        $wp_customize->add_control(
+            'affilicious_theme_copyright_text',
+            array(
+                'label' => __('Copyright Text', 'affilicious-theme'),
+                'section' => 'title_tagline',
+                'type' => 'text',
+            )
+        );
+
         // Logo
         $wp_customize->add_setting('affilicious_theme_general_logo', array(
             'section'   => 'title_tagline',

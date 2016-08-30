@@ -32,7 +32,9 @@
 					<?php affilicious_theme_footer_4_menu(); ?>
 				<?php endif; ?>
 			</div>
-			<div class="footer-copyright text-center">Copyright 2016 Projekt Affiliate Theme</div>
+			<div class="footer-copyright text-center">
+				<?php echo get_theme_mod('affilicious_theme_copyright_text'); ?>
+			</div>
 		<?php if (affilicious_theme_is_loose_layout()): ?></div><?php endif; ?>
 	</div>
 </footer>
