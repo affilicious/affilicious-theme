@@ -44,9 +44,9 @@
         </div>
     </header>
 
-    <?php if($content = get_the_content()): ?>
+    <?php if(get_the_content() !== ''): ?>
         <section class="product-body" itemprop="text">
-            <?php echo $content; ?>
+            <?php the_content(); ?>
         </section>
     <?php endif; ?>
 
