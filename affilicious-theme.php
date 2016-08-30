@@ -14,7 +14,7 @@ if (!defined('ABSPATH')) exit('Not allowed to access pages directly.');
 class AffiliciousTheme
 {
     const THEME_NAME = 'affilicious-theme';
-    const THEME_VERSION = '0.3.4';
+    const THEME_VERSION = '0.3.5';
     const THEME_NAMESPACE = 'Affilicious\\Theme\\';
     const THEME_STORE_URL = 'http://affilicioustheme.de';
     const THEME_ITEM_NAME = 'Affilicious Theme';
