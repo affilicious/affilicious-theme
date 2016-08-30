@@ -19,14 +19,19 @@
                 <li class="entry-date" itemprop="datePublished">
                     <?php the_time(get_option('date_format')); ?>
                 </li>
+
                 <?php if (has_category()): ?>
                     <li class="entry-category">
                         <?php the_category(', '); ?>
                     </li>
                 <?php endif; ?>
-                <li class="entry-author" itemscope
-                    itemtype="http://schema.org/Person" itemprop="author">
-                </li>
+
+                <?php if(get_the_author() !== null): ?>
+                    <li class="entry-author" itemscope
+                        itemtype="http://schema.org/Person" itemprop="author">
+                        <?php the_author(); ?>
+                    </li>
+                <?php endif; ?>
             </ul>
         <?php endif; ?>
     </header>
