@@ -105,11 +105,11 @@ class AffiliciousTheme
      */
     public function autoload($class)
     {
-        $prefix = 'Affilicious\\Theme';
+        $prefix = self::THEME_NAMESPACE;
         if (stripos($class, $prefix) === false) {
             return;
         }
-        $file_path = __DIR__ . '/src' . str_ireplace(self::THEME_NAMESPACE, '', $class) . '.php';
+        $file_path = __DIR__ . '/src/' . str_ireplace(self::THEME_NAMESPACE, '', $class) . '.php';
         $file_path = str_replace('\\', DIRECTORY_SEPARATOR, $file_path);
         include_once($file_path);
     }
