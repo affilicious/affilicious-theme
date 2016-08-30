@@ -7,7 +7,8 @@
 <?php endif; ?>
 
 <?php if(is_active_sidebar('main-sidebar')): ?>
-    <aside class="sidebar sidebar-main">
+    <aside class="sidebar sidebar-main" role="complementary"
+           itemscope itemtype="http://schema.org/WPSideBar">
         <ul>
             <?php dynamic_sidebar('main-sidebar'); ?>
         </ul>

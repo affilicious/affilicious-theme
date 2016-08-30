@@ -28,7 +28,8 @@ class BootstrapCommentWalker extends \Walker_Comment
 	{
 		$tag = ('div' === $args['style']) ? 'div' : 'li';
 		?>
-		<<?php echo $tag; ?> id="comment-<?php comment_ID(); ?>" <?php comment_class($this->has_children ? 'parent media' : 'media'); ?>>
+		<<?php echo $tag; ?> id="comment-<?php comment_ID(); ?>" <?php comment_class($this->has_children ? 'parent media' : 'media'); ?>
+		 itemprop="comment" itemscope itemtype="http://schema.org/UserComments">
 
 		<?php if (0 != $args['avatar_size']): ?>
 		<div class="media-left">
@@ -41,11 +42,12 @@ class BootstrapCommentWalker extends \Walker_Comment
 		<div class="media-body">
 
 			<ul class="comment-meta media-heading">
-				<li class="comment-author">
+				<li class="comment-author" itemprop="creator"
+				    itemscope itemtype="http://schema.org/Person">
 					<?php echo get_comment_author_link(); ?>
 				</li>
 				<li class="comment-date">
-					<time class="text-muted" datetime="<?php comment_time('c'); ?>">
+					<time class="text-muted" datetime="<?php comment_time('c'); ?>" temprop="commentTime">
 						<?php printf(_x('%1$s', 'date'), get_comment_date()); ?>
 					</time>
 				</li>
@@ -55,7 +57,7 @@ class BootstrapCommentWalker extends \Walker_Comment
 				<p class="comment-awaiting-moderation label label-default"><?php _e('Your comment is awaiting moderation.'); ?></p>
 			<?php endif; ?>
 
-			<div class="comment-content">
+			<div class="comment-content" itemprop="commentText">
 				<?php comment_text(); ?>
 			</div>
 

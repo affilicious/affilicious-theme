@@ -1,8 +1,8 @@
-<article id="entry-<?php the_ID(); ?>" <?php post_class('entry'); ?>
-         role="article" itemscope itemtype="http://schema.org/BlogPosting">
+<article id="entry-<?php the_ID(); ?>" <?php post_class('entry'); ?> role="article"
+         itemscope itemtype="http://schema.org/BlogPosting">
 
     <?php if (has_post_thumbnail()): ?>
-        <div class="entry-thumbnail">
+        <div class="entry-thumbnail" itemprop="image">
             <?php the_post_thumbnail(); ?>
         </div>
     <?php endif; ?>
@@ -16,7 +16,7 @@
 
         <?php if(!is_front_page() && !is_page()): ?>
             <ul class="entry-meta">
-                <li class="entry-date">
+                <li class="entry-date" itemprop="datePublished">
                     <?php the_time(get_option('date_format')); ?>
                 </li>
                 <?php if (has_category()): ?>
@@ -24,12 +24,8 @@
                         <?php the_category(', '); ?>
                     </li>
                 <?php endif; ?>
-                <li class="entry-comments">
-                    <?php comments_number(
-                        __('No comments', 'affiliate-theme'),
-                        __('One comment', 'affiliate-theme'),
-                        __('%s comments', 'affiliate-theme')
-                    ); ?>
+                <li class="entry-author" itemscope
+                    itemtype="http://schema.org/Person" itemprop="author">
                 </li>
             </ul>
         <?php endif; ?>

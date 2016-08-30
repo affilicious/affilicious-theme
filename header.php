@@ -13,9 +13,9 @@
 
     <?php wp_head(); ?>
 </head>
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
     <?php if(affilicious_theme_is_tight_layout()): ?><div class="container"><?php endif; ?>
-    <header id="header" role="banner">
+    <header id="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
         <?php if(affilicious_theme_is_loose_layout()): ?><div class="container"><?php endif; ?>
             <div class="row">
                 <div class="col-xs-12">
@@ -25,15 +25,15 @@
                                  data-rjs="<?php echo affilicious_theme_get_retina_logo() ?>" alt="<?php bloginfo('name'); ?>">
                         </a>
                     <?php else: ?>
-                        <h1 id="title" class="display-4"><?php bloginfo('name') ?></h1>
-                        <p id="tagline" class="lead text-muted"><?php bloginfo('description') ?></p>
+                        <h1 id="title" class="display-4" itemprop="headline"><?php bloginfo('name') ?></h1>
+                        <p id="tagline" class="lead text-muted" itemprop="description"><?php bloginfo('description') ?></p>
                     <?php endif; ?>
                 </div>
             </div>
         <?php if(affilicious_theme_is_loose_layout()): ?></div><?php endif; ?>
     </header>
 
-    <nav class="navbar navbar-affilicious" role="navigation">
+    <nav class="navbar navbar-affilicious" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
         <?php if(affilicious_theme_is_loose_layout()): ?><div class="container"><?php endif; ?>
             <div class="row">
                 <div class="col-md-12">

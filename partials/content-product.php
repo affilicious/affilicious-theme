@@ -1,27 +1,45 @@
 <?php do_action('affilicious_theme_product_above_post'); ?>
 
 <?php $product = affilicious_get_product(); ?>
-<article id="product-<?php the_ID(); ?>" <?php post_class('product'); ?>>
+<article id="product-<?php the_ID(); ?>" <?php post_class('product'); ?>
+         itemscope itemtype="http://schema.org/Product">
 
     <header class="product-header">
         <div class="panel">
             <div class="panel-heading">
-                <h1 class="product-title"><?php the_title(); ?></h1>
-                <p class="product-rating">
+                <h1 class="product-title" itemprop="name">
+                    <?php the_title(); ?>
+                </h1>
+
+                <p class="product-review" itemprop="aggregateRating"
+                   itemscope itemtype="http://schema.org/AggregateRating">
                     <?php $starRating = affilicious_get_product_star_rating($product); ?>
 
-                    <?php for($i = 0; $i < 5; $i++): ?>
-                        <?php if ($starRating >= ($i + 1)): ?>
-                            <i class="fa fa-star fa-lg" aria-hidden="true"></i>
-                        <?php elseif($starRating >= ($i + 0.5)): ?>
-                            <i class="fa fa-star-half-o fa-lg" aria-hidden="true"></i>
-                        <?php else: ?>
-                                <i class="fa fa-star-o fa-lg" aria-hidden="true"></i>
-                        <?php endif; ?>
-                    <?php endfor; ?>
+                    <span class="product-review-rating" itemprop="reviewRating"
+                          itemscope itemtype="http://schema.org/Rating">
+                        <meta itemprop="worstRating" content="0">
+                        <meta itemprop="bestRating" content="5">
+                        <meta itemprop="ratingValue" content="<?php echo $starRating; ?>">
+                        <?php for($i = 0; $i < 5; $i++): ?>
+                            <?php if ($starRating >= ($i + 1)): ?>
+                                <i class="fa fa-star fa-lg" aria-hidden="true"></i>
+                            <?php elseif($starRating >= ($i + 0.5)): ?>
+                                <i class="fa fa-star-half-o fa-lg" aria-hidden="true"></i>
+                            <?php else: ?>
+                                    <i class="fa fa-star-o fa-lg" aria-hidden="true"></i>
+                            <?php endif; ?>
+                        <?php endfor; ?>
+                    </span>
 
                     <?php if($numberOfRatings = affilicious_get_product_number_of_ratings($product)): ?>
-                        <span><?php echo sprintf(_n('based on %s review', 'based on %s reviews', $numberOfRatings, 'affilicious-theme'), $numberOfRatings); ?></span>
+                        <span class="product-review-number-rating" itemprop="aggregateRating"
+                              itemscope itemtype="http://schema.org/AggregateRating">
+                            <?php echo sprintf(_n(
+                                'based on <span itemprop="reviewCount">%s</span> review',
+                                'based on <span itemprop="reviewCount">%s</span> reviews',
+                                $numberOfRatings, 'affilicious-theme'),
+                                $numberOfRatings); ?>
+                        </span>
                     <?php endif; ?>
                 </p>
             </div>
@@ -35,7 +53,7 @@
                                 <div class="portfolio-slider">
                                     <div class="slick-slider">
                                         <?php foreach ($product->getImageGallery() as $image): ?>
-                                            <div class="slick-slider-item">
+                                            <div class="slick-slider-item" itemprop="image">
                                                 <?php echo wp_get_attachment_image($image, array(250, 250)); ?>
                                             </div>
                                         <?php endforeach; ?>
@@ -67,7 +85,7 @@
                         <?php if(has_excerpt()): ?>
                             <div class="row">
                                 <div class="col-md-12">
-                                    <div class="product-excerpt">
+                                    <div class="product-excerpt" itemprop="description">
                                         <?php the_excerpt(); ?>
                                     </div>
                                 </div>
@@ -83,7 +101,7 @@
                                             <tr>
                                                 <td><?php _e('Price', 'affilicious-theme'); ?></td>
                                                 <td>
-                                                    <a class="price" href="<?php echo $affiliateLink; ?>">
+                                                    <a class="price" href="<?php echo $affiliateLink; ?>" itemprop="price">
                                                         <?php echo $price; ?>
                                                     </a>
                                                 </td>
@@ -113,7 +131,7 @@
         </div>
     </header>
 
-    <section class="product-body">
+    <section class="product-body" itemprop="text">
         <?php the_content(); ?>
     </section>
 

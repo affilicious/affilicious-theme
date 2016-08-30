@@ -1,5 +1,5 @@
-<article id="entry-<?php the_ID(); ?>" <?php post_class('entry'); ?>
-         role="article" itemscope itemtype="http://schema.org/BlogPosting">
+<article id="entry-<?php the_ID(); ?>" <?php post_class('entry'); ?> role="article"
+         itemscope itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
 	<header class="entry-header">
 		<h1 class="entry-title" itemprop="headline">
 			<?php the_title(); ?>
@@ -7,15 +7,16 @@
 
 		<?php if(!is_front_page() && !is_page()): ?>
 			<ul class="entry-meta">
-				<li class="entry-date">
+				<li class="entry-date" itemprop="datePublished">
 					<?php the_time(get_option('date_format')); ?>
 				</li>
 				<?php if (has_category()): ?>
-					<li class="entry-category">
+					<li class="entry-category" rel="category">
 						<?php the_category(', '); ?>
 					</li>
 				<?php endif; ?>
-				<li class="entry-comments">
+				<li class="entry-author" itemscope
+				    itemtype="http://schema.org/Person" itemprop="author">
 					<?php comments_number(
 						__('No comments', 'affiliate-theme'),
 						__('One comment', 'affiliate-theme'),
@@ -27,18 +28,18 @@
 	</header>
 
 	<?php if (has_post_thumbnail()): ?>
-		<div class="entry-thumbnail">
+		<div class="entry-thumbnail" itemprop="image">
 			<?php the_post_thumbnail(); ?>
 		</div>
 	<?php endif; ?>
 
-	<div class="entry-body" itemprop="articleBody">
+	<div class="entry-body" itemprop="text">
 		<?php the_content(); ?>
 	</div>
 
 	<?php if(!is_front_page() && !is_page()): ?>
 		<footer class="entry-footer">
-			<?php the_tags('<p class="tags">', ' ', '</p>'); ?>
+			<?php the_tags('<p class="tags" rel="tag">', ' ', '</p>'); ?>
 		</footer>
 	<?php endif; ?>
 </article>

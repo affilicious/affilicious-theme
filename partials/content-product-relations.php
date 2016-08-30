@@ -38,7 +38,7 @@
                         <?php while($relatedProductsQuery->have_posts()): $relatedProductsQuery->the_post(); ?>
                             <div class="col-md-4">
                                 <a href="<?php echo affilicious_get_product_link($relatedProductsQuery->post); ?>" rel="bookmark"
-                                   title="<?php echo sprintf(__('Link to %s', 'affilicious-theme'), the_title_attribute()); ?>">
+                                   title="<?php echo sprintf(__('Link to %s', 'affilicious-theme'), the_title_attribute()); ?>" itemprop="isRelatedTo">
                                     <div class="thumbnail">
                                         <img src="<?php the_post_thumbnail_url(array(200, 200)); ?>">
                                         <div class="caption">

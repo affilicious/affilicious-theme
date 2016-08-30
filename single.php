@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main role="main">
+<main role="main" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/Blog">
     <?php if (affilicious_theme_is_loose_layout()): ?><div class="container"><?php endif; ?>
         <div class="row">
             <div class="col-md-8 col-xs-12">

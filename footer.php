@@ -5,7 +5,8 @@
         yoast_breadcrumb('<p id="breadcrumbs">','</p>');
     }
     ?>-->
-    <footer class="footer" role="contentinfo">
+    <footer class="footer" role="contentinfo"
+            itemscope itemtype="http://schema.org/WPFooter">
         <?php if(affilicious_theme_is_loose_layout()): ?><div class="container"><?php endif; ?>
             <div class="clearfix">
                 <div class="footer-logo">
