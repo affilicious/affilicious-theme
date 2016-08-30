@@ -9,6 +9,20 @@ class ContentSetup
 {
     const EXCERPT_LENGTH = 30;
 
+	/**
+	 * Remove the annoying image dimensions in the entry and product content
+	 *
+	 * @since 0.3.4
+	 * @param string $html
+	 * @return string
+	 */
+	public function removeImgDimensions($html)
+	{
+		$html = preg_replace('/(width|height)=["\']\d*["\']\s?/', "", $html);
+
+		return $html;
+	}
+
     /**
      * Set the default table class
      *
@@ -16,7 +30,7 @@ class ContentSetup
      * @param string $content
      * @return string
      */
-    function setTableClass($content)
+    public function setTableClass($content)
     {
         return str_replace('<table>', '<table class="table table-bordered table-striped">', $content);
     }

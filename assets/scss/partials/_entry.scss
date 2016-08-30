@@ -1,9 +1,6 @@
 @import "variables";
 @import "compass/css3/border-radius";
 @import "compass/css3/box-shadow";
-@import "compass/css3/opacity";
-@import "compass/css3/transform";
-@import "compass/css3/transition";
 
 .entry {
   @include border-radius(5px);
@@ -95,12 +92,6 @@
     &-thumbnail {
       @include border-top-radius($default-border-radius);
       margin-bottom: 0;
-
-      img {
-        @include transition-property(transform);
-        @include transition-duration(0.25s);
-        @include transition-timing-function(ease-in-out);
-      }
     }
   }
 }

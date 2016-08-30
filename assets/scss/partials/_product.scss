@@ -2,21 +2,7 @@
 @import "compass/css3/border-radius";
 @import "compass/css3/flexbox";
 
-.box {
-  box-sizing: border-box;
-  padding: $space-size-medium;
-  background-color: white;
-  margin-bottom: $space-size-medium;
-}
-
 .product {
-  img.alignright { float: right; margin: 0 0 1em 1em; }
-  img.alignleft { float: left; margin: 0 1em 1em 0; }
-  img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
-  .alignright { float: right; }
-  .alignleft { float: left; }
-  .aligncenter { display: block; margin-left: auto; margin-right: auto; }
-
   &-body {
     @include border-radius(5px);
     -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, .2);

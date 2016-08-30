@@ -1,0 +1,46 @@
+.product-body, .entry-body {
+  img.alignright { float: right; margin: 0 0 1em 1em; }
+  img.alignleft { float: left; margin: 0 1em 1em 0; }
+  img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
+  .alignright { float: right; }
+  .alignleft { float: left; }
+  .aligncenter { display: block; margin-left: auto; margin-right: auto; }
+
+  p.wp-caption-text {
+    text-align: center !important;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  dt, dd {
+    display: table-cell;
+  }
+
+  dt {
+    display: table;
+    float: left;
+    clear: left;
+    min-width: 50px;
+    max-width: 200px;
+    padding-right: 10px;
+    box-sizing: border-box;
+    width: 25%;
+    text-align: right;
+    font-weight: bold;
+
+    &:after {
+      content: ":";
+    }
+  }
+
+  dd {
+    margin-left: 500px;
+  }
+
+  img[class*="align"],
+  img[class*="wp-image-"] {
+    height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
+  }
+}

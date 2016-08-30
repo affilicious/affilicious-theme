@@ -1,4 +1,5 @@
 @import "variables";
+@import "compass/css3/border-radius";
 @import "compass/css3/flexbox";
 
 .sidebar {
@@ -85,21 +86,6 @@
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #wp-calendar {
   width:100%;
   font-size:12px;
@@ -170,6 +156,90 @@
     &#today {
       color:#47C2DC;
       border-color:#47C2DC;
+    }
+  }
+}
+
+.price-comparison {
+  .shop {
+    @include border-radius();
+    display: flex;
+    align-content: flex-start;
+    box-sizing: border-box;
+    height: $price-comparison-widget-shop-height;
+    border: $price-comparison-shop-border;
+    width: 100%;
+    margin-top: $space-size-small;
+    background-color: $price-comparison-shop-background;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &-thumbnail,
+    &-price,
+    &-buy {
+      width: (100% / 3);
+      height: 100%;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: $space-size-small;
+    }
+
+    &-thumbnail {
+      @include border-radius-left();
+      border-right: $price-comparison-shop-border;
+
+      img {
+        max-width: 100px;
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    &-price {
+      display: flex;
+      flex-wrap: wrap;
+
+      .price {
+        width: 100%;
+        display: block;
+        box-sizing: border-box;
+        text-align: right;
+
+        .old-price {
+          float: right;
+          color: $price-comparison-old-price-color;
+          display: inline-block;
+          text-decoration: line-through;
+          line-height: $font-line-height-small-text;
+          font-size: $font-size-small-text;
+        }
+
+        .current-price {
+          float: right;
+          width: 100%;
+          padding: 0;
+          color: $price-comparison-current-price-color;
+          display: inline-block;
+          font-weight: $font-weight-text;
+          line-height: $font-size-text;
+          font-size: $font-size-text;
+        }
+      }
+
+      .price-tax {
+        margin-top: $space-size-extra-small;
+        margin-bottom: 0;
+        line-height: $font-line-height-small-text;
+        font-size: $font-size-small-text;
+      }
+    }
+
+    &-buy {
+      @include border-radius-right();
     }
   }
 }

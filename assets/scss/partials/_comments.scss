@@ -1,12 +1,6 @@
 @import "variables";
 @import "compass/css3/border-radius";
 
-.comment-form-author,
-.comment-form-email,
-.comment-form-url {
-  width: 75%;
-}
-
 .comments {
   @include border-radius($border-radius-default);
   -moz-box-shadow: $box-shadow-default;
@@ -70,11 +64,19 @@
     }
   }
 
-  .comment-respond {
-    padding: $space-size-medium;
+  .comment {
+    &-respond {
+      padding: $space-size-medium;
 
-    h3 {
-      margin-top: 0;
+      h3 {
+        margin-top: 0;
+      }
+    }
+
+    &-form-author,
+    &-form-email,
+    &-form-url {
+      width: 75%;
     }
   }
 }

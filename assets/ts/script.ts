@@ -6,7 +6,6 @@ jQuery(function($) {
         $("[rel='tooltip']").tooltip();
     });
 
-
     $('.thumb-slider .slick-slider').slick({
         slidesToShow: 4,
         slidesToScroll: 1,
