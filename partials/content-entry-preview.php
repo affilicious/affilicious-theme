@@ -3,7 +3,9 @@
 
     <?php if (has_post_thumbnail()): ?>
         <div class="entry-thumbnail" itemprop="image">
-            <?php the_post_thumbnail(); ?>
+            <a href="<?php echo esc_url(get_permalink()); ?>" rel="bookmark">
+                <?php the_post_thumbnail(); ?>
+            </a>
         </div>
     <?php endif; ?>
 
