@@ -10,3 +10,22 @@
     background-color: darken(#ff8c14, 2);
   }
 }
+
+.alert {
+  &-success {
+    background-color: lighten(#b9df90, 10);
+    border: 1px solid #a0d468
+  }
+  &-danger {
+    background-color: lighten(#f2838f, 10);
+    border: 1px solid #ed5565
+  }
+  &-warning {
+    background-color: lighten(#ffdd87, 10);
+    border: 1px solid #ffce54
+  }
+  &-info {
+    background-color: lighten(#7cd1ef, 10);
+    border: 1px solid #4fc1e9;
+  }
+}
