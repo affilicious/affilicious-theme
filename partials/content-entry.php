@@ -33,9 +33,11 @@
 		</div>
 	<?php endif; ?>
 
-	<div class="entry-body" itemprop="text">
-		<?php the_content(); ?>
-	</div>
+	<?php if($content = get_the_content()): ?>
+		<section class="entry-body" itemprop="text">
+			<?php echo $content; ?>
+		</section>
+	<?php endif; ?>
 
 	<?php if(!is_front_page() && !is_page()): ?>
 		<footer class="entry-footer">

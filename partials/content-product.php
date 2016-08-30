@@ -137,9 +137,11 @@
         </div>
     </header>
 
-    <section class="product-body" itemprop="text">
-        <?php the_content(); ?>
-    </section>
+    <?php if($content = get_the_content()): ?>
+        <section class="product-body" itemprop="text">
+            <?php echo $content; ?>
+        </section>
+    <?php endif; ?>
 
     <footer class="product-footer">
         <?php get_template_part('partials/content-product-relations'); ?>
