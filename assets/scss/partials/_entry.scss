@@ -18,7 +18,11 @@
     padding-bottom: $space-size-small;
   }
 
-  &-avatar {
+  /*&-avatar {
+    $post-thumbnail-min-size:   50px;
+    $post-thumbnail-max-size:   200px;
+    $post-avatar-size:          50px;
+
     @include border-radius(50%);
     box-sizing: border-box;
     background-color: white;
@@ -30,7 +34,7 @@
       width: $post-avatar-size * 1.6;
       height: $post-avatar-size * 1.6;
     }
-  }
+  }*/
 
   &-title {
     text-align: left;
@@ -82,12 +86,16 @@
       }
     }
 
-    &-avatar {
+    /*&-avatar {
+      $post-thumbnail-min-size:   50px;
+      $post-thumbnail-max-size:   200px;
+      $post-avatar-size:          50px;
+
       position: absolute;
       padding: $space-size-extra-small;
       right: $space-size-small;
       top: (-1 * ($post-avatar-size + $space-size-extra-small) / 2);
-    }
+    }*/
 
     &-thumbnail {
       @include border-top-radius($default-border-radius);
