@@ -1,0 +1,106 @@
+@import "variables";
+@import "compass/css3/border-radius";
+@import "compass/css3/box-shadow";
+@import "compass/css3/opacity";
+@import "compass/css3/transform";
+@import "compass/css3/transition";
+
+.entry {
+  @include border-radius(5px);
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, .2);
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .2);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .2);
+  box-sizing: border-box;
+  background-color: white;
+  margin-bottom: $space-size-medium;
+
+  &-header {
+    box-sizing: border-box;
+    position: relative;
+    padding: $space-size-medium;
+    padding-bottom: $space-size-small;
+  }
+
+  &-avatar {
+    @include border-radius(50%);
+    box-sizing: border-box;
+    background-color: white;
+    display: inline-block;
+    float: right;
+
+    img {
+      @include border-radius(50%);
+      width: $post-avatar-size * 1.6;
+      height: $post-avatar-size * 1.6;
+    }
+  }
+
+  &-title {
+    text-align: left;
+    margin-top: 0 !important;
+  }
+
+  &-meta {
+    display: inline-block;
+    padding: 0;
+
+    li {
+      display: inline;
+      list-style: none;
+
+      &:not(&:first-child):before {
+        content: "/";
+      }
+    }
+  }
+
+  &-thumbnail {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: $space-size-medium;
+    max-height: 350px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &-body {
+    box-sizing: border-box;
+    padding: $space-size-medium;
+    padding-top: 0;
+  }
+
+  .archive &, .blog & {
+    &-title {
+      font-size: $font-size-headline-2;
+      line-height: $font-color-headline-2;
+
+      a {
+        color: $font-color-headline-2;
+      }
+    }
+
+    &-avatar {
+      position: absolute;
+      padding: $space-size-extra-small;
+      right: $space-size-small;
+      top: (-1 * ($post-avatar-size + $space-size-extra-small) / 2);
+    }
+
+    &-thumbnail {
+      @include border-top-radius($default-border-radius);
+      margin-bottom: 0;
+
+      img {
+        @include transition-property(transform);
+        @include transition-duration(0.25s);
+        @include transition-timing-function(ease-in-out);
+      }
+    }
+  }
+}

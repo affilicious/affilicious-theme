@@ -1,7 +1,9 @@
 <article id="entry-<?php the_ID(); ?>" <?php post_class('entry'); ?>
          role="article" itemscope itemtype="http://schema.org/BlogPosting">
 	<header class="entry-header">
-		<h1 class="entry-title" itemprop="headline"><?php the_title(); ?></h1>
+		<h1 class="entry-title" itemprop="headline">
+			<?php the_title(); ?>
+		</h1>
 
 		<?php if(!is_front_page() && !is_page()): ?>
 			<ul class="entry-meta">

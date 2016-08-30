@@ -11,7 +11,7 @@
                             <?php $count++; ?>
 
                             <div class="col-md-6">
-                                <?php get_template_part('partials/content-preview'); ?>
+                                <?php get_template_part('partials/content-entry-preview'); ?>
                             </div>
 
                             <?php if($count % 2 == 0): ?>

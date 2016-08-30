@@ -6,7 +6,7 @@
             <div class="col-md-8 col-xs-12">
                 <?php if (have_posts()): ?>
                     <?php while (have_posts()) : the_post(); ?>
-                        <?php get_template_part('partials/content-default'); ?>
+                        <?php get_template_part('partials/content-entry'); ?>
                     <?php endwhile; ?>
                 <?php else: ?>
                     <?php get_template_part('partials/content-none'); ?>
@@ -16,7 +16,7 @@
                 <?php get_sidebar(); ?>
             </div>
         </div>
-        <?php if (affilicious_theme_is_loose_layout()): ?></div><?php endif; ?>
+    <?php if (affilicious_theme_is_loose_layout()): ?></div><?php endif; ?>
 </main>
 
 <?php get_footer(); ?>
