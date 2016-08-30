@@ -1,4 +1,3 @@
-
 <?php $relatedProductsQuery = affilicious_get_product_related_products_query($product); ?>
 <?php $relatedAccessoriesQuery = affilicious_get_product_related_accessories_query($product); ?>
 <?php $relatedPostsQuery = affilicious_get_product_related_posts_query($product); ?>
