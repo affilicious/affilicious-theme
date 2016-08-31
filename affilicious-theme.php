@@ -8,6 +8,7 @@ use Affilicious\Theme\Design\Application\Setup\WidgetSetup;
 use Affilicious\Theme\Design\Domain\Shortcode\AlertShortcode;
 use Affilicious\Theme\Design\Application\Setup\CommentSetup;
 use Affilicious\Theme\Settings\Application\Setup\OptionSetup;
+use Affilicious\Theme\Design\Application\Setup\CustomizerSetup;
 use Pimple\Container;
 
 if (!defined('ABSPATH')) exit('Not allowed to access pages directly.');
@@ -265,7 +266,7 @@ class AffiliciousTheme
     public function loadIncludes()
     {
 	    require_once(__DIR__ . '/affilicious-theme-updater.php');
-	    require_once(__DIR__ . '/vendor/customizer-library/customizer-library.php');
+	    require_once(__DIR__ . '/include/customizer-library/customizer-library.php');
 	    require_once(__DIR__ . '/vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php');
     }
 
@@ -277,7 +278,7 @@ class AffiliciousTheme
 	public function loadServices()
 	{
 		//TODO: Delete this legacy code
-		new ThemeCustomizerManager();
+		//new ThemeCustomizerManager();
 
 		$this->container['affilicious.theme.common.setup.asset'] = function () {
 			return new AssetSetup();
@@ -297,6 +298,10 @@ class AffiliciousTheme
 
 		$this->container['affilicious.theme.design.setup.sidebar'] = function () {
 			return new SidebarSetup();
+		};
+
+		$this->container['affilicious.theme.design.setup.customizer'] = function () {
+			return new CustomizerSetup();
 		};
 
 		$this->container['affilicious.theme.design.setup.widget'] = function () {
@@ -470,6 +475,13 @@ class AffiliciousTheme
 	    // Hook the options
 	    $optionSetup = $this->container['affilicious.theme.settings.setup.option'];
 	    add_action('init', array($optionSetup, 'render'));
+
+	    // Theme Customizer
+	    $customizerSetup = $this->container['affilicious.theme.design.setup.customizer'];
+	    add_action('init', array($customizerSetup, 'init'), 100);
+	    add_action('init', array($customizerSetup, 'render'), 102);
+	    add_action('wp_enqueue_scripts', array($customizerSetup, 'enqueueScripts'));
+	    add_action('wp_head', array($customizerSetup, 'head'));
     }
 
     /**

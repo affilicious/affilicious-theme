@@ -6,37 +6,37 @@
 
     <header class="product-header">
         <div class="panel">
-            <div class="panel-heading">
-                <h1 class="product-title" itemprop="name">
-                    <?php the_title(); ?>
-                </h1>
+            <div class="row">
+                <div class="col-xs-12">
+                    <h1 class="product-title" itemprop="name">
+                        <?php the_title(); ?>
+                    </h1>
 
-                <?php get_template_part('partials/content-product-review'); ?>
+                    <?php get_template_part('partials/content-product-review'); ?>
+                </div>
             </div>
-            <div class="panel-body">
-                <div class="row">
-                    <div class="col-md-5 col-sm-6">
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <?php get_template_part('partials/content-product-image-gallery'); ?>
-                            </div>
+            <div class="row">
+                <div class="col-md-5 col-sm-6">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <?php get_template_part('partials/content-product-image-gallery'); ?>
                         </div>
                     </div>
-                    <div class="col-md-7 col-sm-6">
-                        <?php if(has_excerpt()): ?>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="product-excerpt" itemprop="description">
-                                        <?php the_excerpt(); ?>
-                                    </div>
-                                </div>
-                            </div>
-                        <?php endif; ?>
-
+                </div>
+                <div class="col-md-7 col-sm-6">
+                    <?php if(has_excerpt()): ?>
                         <div class="row">
                             <div class="col-md-12">
-                                <?php get_template_part('partials/content-product-details'); ?>
+                                <div class="product-excerpt" itemprop="description">
+                                    <?php the_excerpt(); ?>
+                                </div>
                             </div>
+                        </div>
+                    <?php endif; ?>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <?php get_template_part('partials/content-product-details'); ?>
                         </div>
                     </div>
                 </div>

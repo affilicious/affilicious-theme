@@ -16,15 +16,8 @@
 
   &-header {
     .panel {
-      &-heading {
-        padding-top: $space-size-medium;
-        padding-left: $space-size-medium;
-        padding-right: $space-size-medium;
-      }
-      &-body {
-        padding-left: $space-size-medium;
-        padding-right: $space-size-medium;
-      }
+      box-sizing: border-box;
+      padding: $space-size-medium;
     }
   }
 
@@ -34,7 +27,7 @@
 
   &-excerpt {
     display: block;
-    margin-bottom: $space-size-medium;
+    padding-bottom: $space-size-small;
 
     p {
       margin: 0;
@@ -44,10 +37,7 @@
 
   &-review {
     margin: 0;
-
-    &-rating i {
-      color: orange;
-    }
+    padding-bottom: $space-size-small;
 
     @media #{$screen-xs-max} {
       &-number-rating::before {

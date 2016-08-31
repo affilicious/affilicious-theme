@@ -51,7 +51,7 @@
                                                 </p>
                                             <?php endif; ?>
                                             <p>
-                                                <a href="<?php the_permalink() ?>" class="btn btn-info center-block" role="button">
+                                                <a href="<?php the_permalink() ?>" class="btn btn-review center-block" role="button">
                                                     <?php _e('To The Test Report', 'affilicious-theme'); ?>
                                                 </a>
                                             </p>
@@ -88,7 +88,7 @@
                                                 </p>
                                             <?php endif; ?>
                                             <p>
-                                                <a href="<?php the_permalink() ?>" class="btn btn-info center-block" role="button">
+                                                <a href="<?php the_permalink() ?>" class="btn btn-review center-block" role="button">
                                                     <?php _e('To The Test Report', 'affilicious-theme'); ?>
                                                 </a>
                                             </p>
@@ -116,7 +116,7 @@
                                         <div class="caption">
                                             <h5><?php the_title(); ?></h5>
                                             <p>
-                                                <a href="<?php the_permalink() ?>" class="btn btn-info center-block" role="button">
+                                                <a href="<?php the_permalink() ?>" class="btn btn-review center-block" role="button">
                                                     <?php _e('To The Post', 'affilicious-theme'); ?>
                                                 </a>
                                             </p>

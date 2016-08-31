@@ -1,4 +1,4 @@
-<footer class="footer" role="contentinfo"
+<footer id="footer" class="footer" role="contentinfo"
         itemscope itemtype="http://schema.org/WPFooter">
 
 	<?php if (function_exists('yoast_breadcrumb')): ?>
@@ -16,24 +16,26 @@
 					<a href="<?php home_url('/'); ?>"><?php bloginfo('name') ?></a>
 				</div>
 
-				<?php if (affilicious_theme_has_footer_1_menu()): ?>
-					<?php affilicious_theme_footer_1_menu(); ?>
-				<?php endif; ?>
+				<div id="bottom-menu">
+					<?php if (affilicious_theme_has_footer_1_menu()): ?>
+						<?php affilicious_theme_footer_1_menu(); ?>
+					<?php endif; ?>
 
-				<?php if (affilicious_theme_has_footer_2_menu()): ?>
-					<?php affilicious_theme_footer_2_menu(); ?>
-				<?php endif; ?>
+					<?php if (affilicious_theme_has_footer_2_menu()): ?>
+						<?php affilicious_theme_footer_2_menu(); ?>
+					<?php endif; ?>
 
-				<?php if (affilicious_theme_has_footer_3_menu()): ?>
-					<?php affilicious_theme_footer_3_menu(); ?>
-				<?php endif; ?>
+					<?php if (affilicious_theme_has_footer_3_menu()): ?>
+						<?php affilicious_theme_footer_3_menu(); ?>
+					<?php endif; ?>
 
-				<?php if (affilicious_theme_has_footer_4_menu()): ?>
-					<?php affilicious_theme_footer_4_menu(); ?>
-				<?php endif; ?>
+					<?php if (affilicious_theme_has_footer_4_menu()): ?>
+						<?php affilicious_theme_footer_4_menu(); ?>
+					<?php endif; ?>
+				</div>
 			</div>
 			<div class="footer-copyright text-center">
-				<?php echo get_theme_mod('affilicious_theme_copyright_text'); ?>
+				<?php echo get_theme_mod('general-copyright-text'); ?>
 			</div>
 		<?php if (affilicious_theme_is_loose_layout()): ?></div><?php endif; ?>
 	</div>

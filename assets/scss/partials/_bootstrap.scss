@@ -1,16 +1,26 @@
 @import "variables";
 
+.panel {
+  &-heading {
+    border: 1px solid grey;
+  }
+}
+
+/*
 .btn-buy {
   background-color: #ff8c14;
   color: white;
   border: 1px solid darken(#ff8c14, 2);
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: white;
     background-color: darken(#ff8c14, 2);
   }
 }
+*/
 
+/*
 .alert {
   &-success {
     background-color: lighten(#b9df90, 10);
@@ -29,6 +39,7 @@
     border: 1px solid #4fc1e9;
   }
 }
+*/
 
 .label {
   &-sm {

@@ -1,10 +1,10 @@
 @import "variables";
 
 .navbar-affilicious {
-  & {
-    background-color: $navbar-background-color;
-    border-color: $navbar-background-color;
-  }
+  background-color: $navbar-background-color;
+  border-top: 1px solid $navbar-border-color;
+  border-bottom: 1px solid $navbar-border-color;
+
   & .navbar-brand,
   & .navbar-link,
   & .btn-link {
@@ -42,23 +42,30 @@
     color: darken($navbar-background-color, 8%);
     background-color: transparent;
   }
+
   & .navbar-toggle {
-    border-color: darken($navbar-background-color, 15%);
-    background-color: darken($navbar-background-color, 15%);
+    border-color: $navbar-toggle-border-color;
+    background-color: $navbar-toggle-background-color;
+
+    .icon-bar {
+      background-color: $navbar-toggle-border-color;
+    }
+
+    &:hover,
+    &:focus {
+      border-color: $navbar-toggle-border-color-hover;
+      background-color: $navbar-toggle-background-color-hover;
+
+      .icon-bar {
+        background-color: $navbar-toggle-border-color-hover;
+      }
+    }
   }
-  & .navbar-toggle:hover,
-  & .navbar-toggle:focus {
-    border-color: darken($navbar-background-color, 10%);
-    background-color: darken($navbar-background-color, 10%);
-  }
-  & .navbar-toggle .icon-bar {
-    background-color: $navbar-background-color;
-  }
+
   & .navbar-collapse,
   & .navbar-form {
     border-color: $navbar-item-background-color-hover;
   }
-
 
   & .navbar-nav > .open > a,
   & .navbar-nav > .open > a:hover,

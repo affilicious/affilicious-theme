@@ -116,7 +116,21 @@ $price-comparison-old-price-color:          #ff2320;
 $price-comparison-widget-shop-height:       100px;
 
 // Navbar
-$navbar-background-color:                    #f8f8f8 !default;
-$navbar-background-color-active:             #e7e7e7 !default;
-$navbar-font-color:                          black !default;
-$navbar-item-background-color-hover:         $navbar-background-color-active !default;
+$navbar-background-color-active:             #e7e7e7;
+$navbar-background-color:                    #f8f8f8;
+$navbar-border-color:                        #555555;
+$navbar-item-background-color:               #f8f8f8;
+$navbar-item-background-color-hover:         #e7e7e7;
+$navbar-text-color:                          #555555;
+$navbar-link-color:                          #555555;
+$navbar-link-color-hover:                    #000000;
+$navbar-dropdown-background-color:           #434a54;
+$navbar-dropdown-background-color-hover:     #e5e5e5;
+$navbar-toggle-background-color:             #f8f8f8;
+$navbar-toggle-background-color-hover:       #e7e7e7;
+$navbar-toggle-border-color:                 #555555;
+$navbar-toggle-border-color-hover:           #000000;
+
+//TODO: Remove both variables
+$navbar-font-color:                          black;
+$navbar-item-background-color-hover:         $navbar-background-color-active;

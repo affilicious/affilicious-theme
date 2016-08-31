@@ -13,7 +13,7 @@ class LogoHelper
      */
     public static function hasLogo()
     {
-        $logo = get_theme_mod('affilicious_theme_general_logo');
+        $logo = get_theme_mod('general-logo');
         return $logo != null;
     }
 
@@ -24,7 +24,7 @@ class LogoHelper
      */
     public static function getLogo()
     {
-        return get_theme_mod('affilicious_theme_general_logo');
+        return get_theme_mod('general-logo');
     }
 
     /**
@@ -34,7 +34,7 @@ class LogoHelper
      */
     public static function hasRetinaLogo()
     {
-        $logo = get_theme_mod('affilicious_theme_general_logo_retina');
+        $logo = get_theme_mod('general-logo-retina');
         return $logo != null;
     }
 
@@ -45,6 +45,6 @@ class LogoHelper
      */
     public static function getRetinaLogo()
     {
-        return get_theme_mod('affilicious_theme_general_logo_retina');
+        return get_theme_mod('general-logo-retina');
     }
 }

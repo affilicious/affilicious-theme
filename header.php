@@ -35,7 +35,7 @@
         <?php if(affilicious_theme_is_loose_layout()): ?></div><?php endif; ?>
     </header>
 
-    <nav class="navbar navbar-affilicious" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <nav id="main-menu" class="navbar" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
         <?php if(affilicious_theme_is_loose_layout()): ?><div class="container"><?php endif; ?>
             <div class="row">
                 <div class="col-md-12">
