@@ -1,13 +1,13 @@
 <?php
-use Affilicious\Theme\Admin\Customizer\ThemeCustomizerManager;
-use Affilicious\Theme\Setup\AssetSetup;
-use Affilicious\Theme\Setup\ContentSetup;
-use Affilicious\Theme\Setup\MenuSetup;
-use Affilicious\Theme\Setup\SidebarSetup;
-use Affilicious\Theme\Setup\WidgetSetup;
-use Affilicious\Theme\Shortcode\AlertShortcode;
-use Affilicious\Theme\Setup\CommentSetup;
-use Affilicious\Theme\Setup\OptionSetup;
+use Affilicious\Theme\Design\Application\Customizer\ThemeCustomizerManager;
+use Affilicious\Theme\Common\Application\Setup\AssetSetup;
+use Affilicious\Theme\Design\Application\Setup\ContentSetup;
+use Affilicious\Theme\Design\Application\Setup\MenuSetup;
+use Affilicious\Theme\Design\Application\Setup\SidebarSetup;
+use Affilicious\Theme\Design\Application\Setup\WidgetSetup;
+use Affilicious\Theme\Design\Domain\Shortcode\AlertShortcode;
+use Affilicious\Theme\Design\Application\Setup\CommentSetup;
+use Affilicious\Theme\Settings\Application\Setup\OptionSetup;
 use Pimple\Container;
 
 if (!defined('ABSPATH')) exit('Not allowed to access pages directly.');
@@ -283,27 +283,27 @@ class AffiliciousTheme
 			return new AssetSetup();
 		};
 
-		$this->container['affilicious.theme.layout.setup.content'] = function () {
+		$this->container['affilicious.theme.design.setup.content'] = function () {
 			return new ContentSetup();
 		};
 
-		$this->container['affilicious.theme.layout.setup.comment'] = function () {
+		$this->container['affilicious.theme.design.setup.comment'] = function () {
 			return new CommentSetup();
 		};
 
-		$this->container['affilicious.theme.layout.setup.menu'] = function () {
+		$this->container['affilicious.theme.design.setup.menu'] = function () {
 			return new MenuSetup();
 		};
 
-		$this->container['affilicious.theme.layout.setup.sidebar'] = function () {
+		$this->container['affilicious.theme.design.setup.sidebar'] = function () {
 			return new SidebarSetup();
 		};
 
-		$this->container['affilicious.theme.layout.setup.widget'] = function () {
+		$this->container['affilicious.theme.design.setup.widget'] = function () {
 			return new WidgetSetup();
 		};
 
-		$this->container['affilicious.theme.admin.setup.option'] = function () {
+		$this->container['affilicious.theme.settings.setup.option'] = function () {
 			return new OptionSetup();
 		};
 	}
@@ -439,21 +439,21 @@ class AffiliciousTheme
 	    add_action('wp_enqueue_scripts', array($assetSetup, 'addPublicScripts'));
 
 	    // Hook the sidebars
-	    $sidebarSetup = $this->container['affilicious.theme.layout.setup.sidebar'];
+	    $sidebarSetup = $this->container['affilicious.theme.design.setup.sidebar'];
 	    add_action('init', array($sidebarSetup, 'init'));
 	    add_action('init', array($sidebarSetup, 'render'));
 
 	    // Hook the widgets
-	    $widgetSetup = $this->container['affilicious.theme.layout.setup.widget'];
+	    $widgetSetup = $this->container['affilicious.theme.design.setup.widget'];
 	    add_filter('widgets_init', array($widgetSetup, 'registerWidgets'));
 	    add_filter('widget_tag_cloud_args', array($widgetSetup, 'modifiyTagCloud'));
 
 	    // Hook the menus
-	    $menuSetup = $this->container['affilicious.theme.layout.setup.menu'];
+	    $menuSetup = $this->container['affilicious.theme.design.setup.menu'];
 	    add_action('after_setup_theme', array($menuSetup, 'init'));
 
 	    // Hook the content
-	    $contentSetup = $this->container['affilicious.theme.layout.setup.content'];
+	    $contentSetup = $this->container['affilicious.theme.design.setup.content'];
 	    add_filter('the_content', array($contentSetup, 'setTableClass'));
 	    add_filter('excerpt_length', array($contentSetup, 'setExcerptLength'));
 	    add_filter('body_class', array($contentSetup, 'setBodyClass'));
@@ -462,13 +462,13 @@ class AffiliciousTheme
 	    add_filter('get_avatar',array($contentSetup, 'removeImgDimensions'));
 
 	    // Hook the comments
-	    $commentSetup = $this->container['affilicious.theme.layout.setup.comment'];
+	    $commentSetup = $this->container['affilicious.theme.design.setup.comment'];
 	    add_filter('comment_form_default_fields', array($commentSetup, 'setFormDefaultFields'));
 	    add_filter('comment_form_defaults', array($commentSetup, 'setFormDefaults'));
 	    add_filter('after_setup_theme', array($commentSetup, 'setThemeSupport'));
 
 	    // Hook the options
-	    $optionSetup = $this->container['affilicious.theme.admin.setup.option'];
+	    $optionSetup = $this->container['affilicious.theme.settings.setup.option'];
 	    add_action('init', array($optionSetup, 'render'));
     }
 

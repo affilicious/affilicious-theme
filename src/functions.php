@@ -1,11 +1,11 @@
 <?php
-use Affilicious\Theme\Helper\LayoutHelper;
-use Affilicious\Theme\Helper\LogoHelper;
-use Affilicious\Theme\Helper\MenuHelper;
+use Affilicious\Theme\Design\Domain\Helper\LayoutHelper;
+use Affilicious\Theme\Design\Domain\Helper\LogoHelper;
+use Affilicious\Theme\Design\Domain\Helper\MenuHelper;
 use Affilicious\Product\Domain\Helper\PostHelper;
 use Affilicious\Product\Domain\Model\Product;
-use Affilicious\Theme\Setup\SidebarSetup;
-use Affilicious\Theme\Walker\BootstrapCommentWalker;
+use Affilicious\Theme\Design\Application\Setup\SidebarSetup;
+use Affilicious\Theme\Design\Domain\Walker\BootstrapCommentWalker;
 
 /**
  * Check if every requirement like the main plugin is installed correctly
