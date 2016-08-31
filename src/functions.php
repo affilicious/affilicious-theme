@@ -8,6 +8,22 @@ use Affilicious\Theme\Setup\SidebarSetup;
 use Affilicious\Theme\Walker\BootstrapCommentWalker;
 
 /**
+ * Check if every requirement like the main plugin is installed correctly
+ * before we can print anything to the screen.
+ * Print an error message if the required Affilicious Plugin is missing.
+ *
+ * @since 0.3.5
+ */
+function affilicious_theme_check_requirements()
+{
+	if (!class_exists('\AffiliciousPlugin')) {
+		wp_footer();
+		echo '<br><br><br>';
+		exit(__('Failed to find the required Affilicious plugin. Please open your admin area and install the missing plugin.', 'affilicious-theme'));
+	}
+}
+
+/**
  * Check if the layout is loose
  *
  * @since 0.2

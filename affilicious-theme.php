@@ -132,14 +132,15 @@ class AffiliciousTheme
 	    // Hook the plugin loader
 	    add_action('tgmpa_register', array($this, 'loadPlugins'));
 
+	    $this->loadIncludes();
+	    $this->loadFunctions();
+
 	    // Load the affilicious plugin and the dependency container
 	    if(class_exists('\AffiliciousPlugin')) {
 		    $this->affilicious = \AffiliciousPlugin::getInstance();
-		    $this->container = $this->affilicious->getContainer();
+		    $this->container   = $this->affilicious->getContainer();
 
 		    $this->loadServices();
-		    $this->loadIncludes();
-		    $this->loadFunctions();
 		    $this->loadShortcodes();
 		    $this->registerPublicHooks();
 		    $this->registerAdminHooks();
