@@ -18,6 +18,7 @@ class WidgetSetup
     {
         if (class_exists('Carbon_Fields\Widget\Widget')) {
             register_widget('Affilicious\Theme\Widget\PriceComparisonWidget');
+            register_widget('Affilicious\Theme\Widget\DetailsWidget');
         }
     }
 
