@@ -45,12 +45,12 @@
   &-review {
     margin: 0;
 
-    i {
+    &-rating i {
       color: orange;
     }
 
     @media #{$screen-xs-max} {
-      span::before {
+      &-number-rating::before {
         content: '\A';
         display: block;
       }
@@ -65,7 +65,7 @@
 
   &-thumbnail {
     padding: 0;
-    margin: 0;
+    margin: 0 auto $space-size-small auto;
     width: $product-thumbnail-width;
     height: $product-thumbnail-height;
     overflow: hidden;

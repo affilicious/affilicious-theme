@@ -42,12 +42,14 @@
                                         <img src="<?php the_post_thumbnail_url(array(200, 200)); ?>">
                                         <div class="caption">
                                             <h5><?php the_title(); ?></h5>
-                                            <p>
-                                                <a href="<?php echo affilicious_get_product_affiliate_link($relatedProductsQuery->post); ?>"
-                                                   class="btn btn-buy center-block" role="button">
-                                                    <?php _e('Buy', 'affilicious-theme'); ?>
-                                                </a>
-                                            </p>
+                                            <?php if($affiliateLink = affilicious_get_product_affiliate_link($relatedProductsQuery->post)): ?>
+                                                <p>
+                                                    <a href="<?php echo $affiliateLink; ?>"
+                                                       class="btn btn-buy center-block" role="button">
+                                                        <?php _e('Buy', 'affilicious-theme'); ?>
+                                                    </a>
+                                                </p>
+                                            <?php endif; ?>
                                             <p>
                                                 <a href="<?php the_permalink() ?>" class="btn btn-info center-block" role="button">
                                                     <?php _e('To The Test Report', 'affilicious-theme'); ?>
@@ -77,12 +79,14 @@
                                         <img src="<?php the_post_thumbnail_url(array(200, 200)); ?>">
                                         <div class="caption">
                                             <h5><?php the_title(); ?></h5>
-                                            <p>
-                                                <a href="<?php echo affilicious_get_product_affiliate_link($relatedAccessoriesQuery->post); ?>"
-                                                   class="btn btn-buy center-block" role="button">
-                                                    <?php _e('Buy', 'affilicious-theme'); ?>
-                                                </a>
-                                            </p>
+                                            <?php if($affiliateLink = affilicious_get_product_affiliate_link($relatedAccessoriesQuery->post)): ?>
+                                                <p>
+                                                    <a href="<?php echo $affiliateLink; ?>"
+                                                       class="btn btn-buy center-block" role="button">
+                                                        <?php _e('Buy', 'affilicious-theme'); ?>
+                                                    </a>
+                                                </p>
+                                            <?php endif; ?>
                                             <p>
                                                 <a href="<?php the_permalink() ?>" class="btn btn-info center-block" role="button">
                                                     <?php _e('To The Test Report', 'affilicious-theme'); ?>

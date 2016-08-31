@@ -15,14 +15,14 @@
             </div>
             <div class="panel-body">
                 <div class="row">
-                    <div class="col-md-5">
+                    <div class="col-md-5 col-sm-6">
                         <div class="row">
                             <div class="col-xs-12">
                                 <?php get_template_part('partials/content-product-image-gallery'); ?>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-7">
+                    <div class="col-md-7 col-sm-6">
                         <?php if(has_excerpt()): ?>
                             <div class="row">
                                 <div class="col-md-12">

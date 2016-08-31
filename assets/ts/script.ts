@@ -1,7 +1,8 @@
 declare var jQuery: any;
 declare var wp: any;
+declare var ResponsiveBootstrapToolkit: any;
 
-jQuery(function($) {
+(function($, viewport){
     $(function () {
         $("[rel='tooltip']").tooltip();
     });
@@ -34,4 +35,4 @@ jQuery(function($) {
     if (containerHeight > contentHeight) {
         content.css('margin-top', (containerHeight - contentHeight) / 2);
     }
-});
+})(jQuery, ResponsiveBootstrapToolkit);

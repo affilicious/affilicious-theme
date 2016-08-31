@@ -65,7 +65,8 @@ class AssetSetup
         wp_enqueue_script('icheck', self::getScriptUrl() . 'icheck.min.js', array(), '1.0.1', true);
         wp_enqueue_script('selector', self::getScriptUrl() . 'jquery.fs.selector.min.js', array('jquery'), '3.1.2', true);
         wp_enqueue_script('stepper', self::getScriptUrl() . 'jquery.fs.stepper.min.js', array('jquery'), '3.0.7', true);
-        wp_enqueue_script('affilicious-theme', self::getScriptUrl() . 'script.js', array('jquery', 'bootstrap', 'slick', 'retina-script', 'icheck', 'selector', 'stepper'), \AffiliciousTheme::THEME_VERSION, true);
+        wp_enqueue_script('responsive-bootstrap-toolkit', self::getScriptUrl() . 'responsive-bootstrap-toolkit.min.js', array('jquery'), '1.5.0', true);
+        wp_enqueue_script('affilicious-theme', self::getScriptUrl() . 'script.js', array('jquery', 'responsive-bootstrap-toolkit', 'bootstrap', 'slick', 'retina-script', 'icheck', 'selector', 'stepper'), \AffiliciousTheme::THEME_VERSION, true);
     }
 
     /**
