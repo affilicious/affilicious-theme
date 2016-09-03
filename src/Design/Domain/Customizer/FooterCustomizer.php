@@ -1,5 +1,5 @@
 <?php
-namespace Affilicious\Theme\Design\Application\NewCustomizer;
+namespace Affilicious\Theme\Design\Domain\Customizer;
 
 if (!defined('ABSPATH')) {
 	exit('Not allowed to access pages directly.');

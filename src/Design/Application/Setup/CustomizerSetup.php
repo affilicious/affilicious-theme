@@ -2,13 +2,13 @@
 namespace Affilicious\Theme\Design\Application\Setup;
 
 use Affilicious\Common\Application\Setup\SetupInterface;
-use Affilicious\Theme\Design\Application\NewCustomizer\CustomizerInterface;
-use Affilicious\Theme\Design\Application\NewCustomizer\GeneralCustomizer;
-use Affilicious\Theme\Design\Application\NewCustomizer\InformationCustomizer;
-use Affilicious\Theme\Design\Application\NewCustomizer\HeaderCustomizer;
-use Affilicious\Theme\Design\Application\NewCustomizer\TypographyCustomizer;
-use Affilicious\Theme\Design\Application\NewCustomizer\FooterCustomizer;
-use Affilicious\Theme\Design\Application\NewCustomizer\MainCustomizer;
+use Affilicious\Theme\Design\Domain\Customizer\CustomizerInterface;
+use Affilicious\Theme\Design\Domain\Customizer\GeneralCustomizer;
+use Affilicious\Theme\Design\Domain\Customizer\InformationCustomizer;
+use Affilicious\Theme\Design\Domain\Customizer\HeaderCustomizer;
+use Affilicious\Theme\Design\Domain\Customizer\TypographyCustomizer;
+use Affilicious\Theme\Design\Domain\Customizer\FooterCustomizer;
+use Affilicious\Theme\Design\Domain\Customizer\MainCustomizer;
 
 if (!defined('ABSPATH')) {
 	exit('Not allowed to access pages directly.');

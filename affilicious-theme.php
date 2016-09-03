@@ -1,5 +1,4 @@
 <?php
-use Affilicious\Theme\Design\Application\Customizer\ThemeCustomizerManager;
 use Affilicious\Theme\Common\Application\Setup\AssetSetup;
 use Affilicious\Theme\Design\Application\Setup\ContentSetup;
 use Affilicious\Theme\Design\Application\Setup\MenuSetup;
@@ -7,7 +6,6 @@ use Affilicious\Theme\Design\Application\Setup\SidebarSetup;
 use Affilicious\Theme\Design\Application\Setup\WidgetSetup;
 use Affilicious\Theme\Design\Domain\Shortcode\AlertShortcode;
 use Affilicious\Theme\Design\Application\Setup\CommentSetup;
-use Affilicious\Theme\Settings\Application\Setup\OptionSetup;
 use Affilicious\Theme\Design\Application\Setup\CustomizerSetup;
 use Pimple\Container;
 
@@ -277,9 +275,6 @@ class AffiliciousTheme
 	 */
 	public function loadServices()
 	{
-		//TODO: Delete this legacy code
-		//new ThemeCustomizerManager();
-
 		$this->container['affilicious.theme.common.setup.asset'] = function () {
 			return new AssetSetup();
 		};
@@ -306,10 +301,6 @@ class AffiliciousTheme
 
 		$this->container['affilicious.theme.design.setup.widget'] = function () {
 			return new WidgetSetup();
-		};
-
-		$this->container['affilicious.theme.settings.setup.option'] = function () {
-			return new OptionSetup();
 		};
 	}
 
@@ -471,10 +462,6 @@ class AffiliciousTheme
 	    add_filter('comment_form_default_fields', array($commentSetup, 'setFormDefaultFields'));
 	    add_filter('comment_form_defaults', array($commentSetup, 'setFormDefaults'));
 	    add_filter('after_setup_theme', array($commentSetup, 'setThemeSupport'));
-
-	    // Hook the options
-	    $optionSetup = $this->container['affilicious.theme.settings.setup.option'];
-	    add_action('init', array($optionSetup, 'render'));
 
 	    // Theme Customizer
 	    $customizerSetup = $this->container['affilicious.theme.design.setup.customizer'];
