@@ -157,7 +157,7 @@ class HeaderCustomizer extends AbstractCustomizer
 
 		$options['header-banner-tagline-shadow-color'] = array(
 			'id'          => 'header-banner-tagline-shadow-color',
-			'label'       => __('Title Shadow Color', 'affilicious-theme'),
+			'label'       => __('Tagline Shadow Color', 'affilicious-theme'),
 			'section'     => $section,
 			'description' => __('Set the default color #600099 for transparency.', 'affilicious-theme'),
 			'type'        => 'color',
@@ -295,7 +295,7 @@ class HeaderCustomizer extends AbstractCustomizer
 
 		$options['header-main-menu-toggle-border-color'] = array(
 			'id'          => 'header-main-menu-toggle-border-color',
-			'label'       => __('Toggle Background Color', 'affilicious-theme'),
+			'label'       => __('Toggle Border Color', 'affilicious-theme'),
 			'description' => __('Only visible on mobile devices', 'affilicious-theme'),
 			'section'     => $section,
 			'type'        => 'color',

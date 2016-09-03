@@ -40,7 +40,7 @@ class TypographyCustomizer extends AbstractCustomizer
 
 		$options['typography-headline-font-family'] = array(
 			'id'        => 'typography-headline-font-family',
-			'label'     => __('Font Family', 'demo'),
+			'label'     => __('Font Family', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'select',
 			'choices'   => $font_choices,
@@ -68,7 +68,7 @@ class TypographyCustomizer extends AbstractCustomizer
 
 		$options['typography-text-font-family'] = array(
 			'id'        => 'typography-text-font-family',
-			'label'     => __('Font Family', 'demo'),
+			'label'     => __('Font Family', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'select',
 			'choices'   => $font_choices,
