@@ -316,7 +316,7 @@ class AffiliciousTheme
                 'name'               => 'Affilicious',
                 'slug'               => 'affilicious',
                 'source'             => 'https://github.com/AlexBa/affilicious/archive/master.zip',
-	            'version'            => '0.5',
+	            'version'            => '0.5.1',
                 'required'           => true,
             ),
             array(
