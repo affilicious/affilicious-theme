@@ -5,14 +5,14 @@ use Affilicious\Theme\Design\Domain\Walker\FooterWalker;
 
 if(!defined('ABSPATH')) exit('Not allowed to access pages directly.');
 
-class Footer1Menu extends AbstractMenu
+class Bottom2Menu extends AbstractMenu
 {
 	/**
 	 * @inheritdoc
 	 */
 	public function getLocation()
 	{
-		return 'footer_1';
+		return 'bottom_2';
 	}
 
 	/**
@@ -22,7 +22,7 @@ class Footer1Menu extends AbstractMenu
 	{
 		register_nav_menu(
 			$this->getLocation(),
-			__('Footer 1 Navigation', 'affilicious-theme')
+			__('Bottom 2 Menu', 'affilicious-theme')
 		);
 	}
 

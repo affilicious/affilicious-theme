@@ -22,7 +22,7 @@ class MainMenu extends AbstractMenu
 	{
 		register_nav_menu(
 			$this->getLocation(),
-			__('Main Navigation', 'affilicious-theme')
+			__('Main Menu', 'affilicious-theme')
 		);
 	}
 

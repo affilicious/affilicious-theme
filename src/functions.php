@@ -76,9 +76,9 @@ function affilicious_theme_main_menu()
  * @since 0.3.4
  * @return bool
  */
-function affilicious_theme_has_footer_1_menu()
+function affilicious_theme_has_bottom_1_menu()
 {
-	$footer1Menu = MenuHelper::getFooter1Menu();
+	$footer1Menu = MenuHelper::getBottom1Menu();
 	$result = $footer1Menu->exists();
 
 	return $result;
@@ -89,9 +89,9 @@ function affilicious_theme_has_footer_1_menu()
  *
  * @since 0.3.4
  */
-function affilicious_theme_footer_1_menu()
+function affilicious_theme_bottom_1_menu()
 {
-	$footer1Menu = MenuHelper::getFooter1Menu();
+	$footer1Menu = MenuHelper::getBottom1Menu();
 	$footer1Menu->render();
 }
 
@@ -101,9 +101,9 @@ function affilicious_theme_footer_1_menu()
  * @since 0.3.4
  * @return bool
  */
-function affilicious_theme_has_footer_2_menu()
+function affilicious_theme_has_bottom_2_menu()
 {
-	$footer2Menu = MenuHelper::getFooter2Menu();
+	$footer2Menu = MenuHelper::getBottom2Menu();
 	$result = $footer2Menu->exists();
 
 	return $result;
@@ -114,9 +114,9 @@ function affilicious_theme_has_footer_2_menu()
  *
  * @since 0.3.4
  */
-function affilicious_theme_footer_2_menu()
+function affilicious_theme_bottom_2_menu()
 {
-	$footer2Menu = MenuHelper::getFooter2Menu();
+	$footer2Menu = MenuHelper::getBottom2Menu();
 	$footer2Menu->render();
 }
 
@@ -126,9 +126,9 @@ function affilicious_theme_footer_2_menu()
  * @since 0.3.4
  * @return bool
  */
-function affilicious_theme_has_footer_3_menu()
+function affilicious_theme_has_bottom_3_menu()
 {
-	$footer3Menu = MenuHelper::getFooter3Menu();
+	$footer3Menu = MenuHelper::getBottom3Menu();
 	$result = $footer3Menu->exists();
 
 	return $result;
@@ -139,9 +139,9 @@ function affilicious_theme_has_footer_3_menu()
  *
  * @since 0.3.4
  */
-function affilicious_theme_footer_3_menu()
+function affilicious_theme_bottom_3_menu()
 {
-	$footer3Menu = MenuHelper::getFooter3Menu();
+	$footer3Menu = MenuHelper::getBottom3Menu();
 	$footer3Menu->render();
 }
 
@@ -151,9 +151,9 @@ function affilicious_theme_footer_3_menu()
  * @since 0.3.4
  * @return bool
  */
-function affilicious_theme_has_footer_4_menu()
+function affilicious_theme_has_bottom_4_menu()
 {
-	$footer4Menu = MenuHelper::getFooter4Menu();
+	$footer4Menu = MenuHelper::getBottom4Menu();
 	$result = $footer4Menu->exists();
 
 	return $result;
@@ -164,9 +164,9 @@ function affilicious_theme_has_footer_4_menu()
  *
  * @since 0.3.4
  */
-function affilicious_theme_footer_4_menu()
+function affilicious_theme_bottom_4_menu()
 {
-	$footer4Menu = MenuHelper::getFooter4Menu();
+	$footer4Menu = MenuHelper::getBottom4Menu();
 	$footer4Menu->render();
 }
 

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-09-03 22:23+0200\n"
-"PO-Revision-Date: 2016-09-03 22:24+0200\n"
+"POT-Creation-Date: 2016-09-03 22:33+0200\n"
+"PO-Revision-Date: 2016-09-03 22:34+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -258,23 +258,23 @@ msgstr "Cyrillisch erweitert"
 
 #: include/customizer-library/extensions/fonts.php:128
 msgid "Devanagari"
-msgstr ""
+msgstr "Devanagari"
 
 #: include/customizer-library/extensions/fonts.php:129
 msgid "Greek"
-msgstr ""
+msgstr "Griechisch"
 
 #: include/customizer-library/extensions/fonts.php:130
 msgid "Greek Extended"
-msgstr ""
+msgstr "Griechisch erweitert"
 
 #: include/customizer-library/extensions/fonts.php:131
 msgid "Khmer"
-msgstr ""
+msgstr "Khmer "
 
 #: include/customizer-library/extensions/fonts.php:132
 msgid "Latin"
-msgstr ""
+msgstr "Latin"
 
 #: include/customizer-library/extensions/fonts.php:133
 msgid "Latin Extended"
@@ -282,7 +282,7 @@ msgstr "Latin erweitert"
 
 #: include/customizer-library/extensions/fonts.php:134
 msgid "Vietnamese"
-msgstr ""
+msgstr "Vietnamesisch"
 
 #: partials/content-none.php:5
 msgid "Not Found"
@@ -551,6 +551,7 @@ msgid "Tagline Shadow Color"
 msgstr "Sloganschattenfarbe"
 
 #: src/Design/Domain/Customizer/HeaderCustomizer.php:172
+#: src/Design/Domain/Menu/MainMenu.php:25
 msgid "Main Menu"
 msgstr "Hauptmenü"
 
@@ -833,25 +834,21 @@ msgstr "Farbe (Hover)"
 msgid "View \"%s\" at \"%s\" not found."
 msgstr "Ansicht \"%s\" unter \"%s\" wurde nicht gefunden."
 
-#: src/Design/Domain/Menu/Footer1Menu.php:25
-msgid "Footer 1 Navigation"
-msgstr ""
+#: src/Design/Domain/Menu/Bottom1Menu.php:25
+msgid "Bottom 1 Menu"
+msgstr "Unten 1 Menü"
 
-#: src/Design/Domain/Menu/Footer2Menu.php:25
-msgid "Footer 2 Navigation"
-msgstr ""
+#: src/Design/Domain/Menu/Bottom2Menu.php:25
+msgid "Bottom 2 Menu"
+msgstr "Unten 2 Menü"
 
-#: src/Design/Domain/Menu/Footer3Menu.php:25
-msgid "Footer 3 Navigation"
-msgstr ""
+#: src/Design/Domain/Menu/Bottom3Menu.php:25
+msgid "Bottom 3 Menu"
+msgstr "Unten 3 Menü"
 
-#: src/Design/Domain/Menu/Footer4Menu.php:25
-msgid "Footer 4 Navigation"
-msgstr ""
-
-#: src/Design/Domain/Menu/MainMenu.php:25
-msgid "Main Navigation"
-msgstr "Hauptnavigation"
+#: src/Design/Domain/Menu/Bottom4Menu.php:25
+msgid "Bottom 4 Menu"
+msgstr "Unten 4 Menü"
 
 #: src/Design/Domain/Sidebar/MainSidebar.php:16
 msgid "Main Sidebar"
@@ -912,6 +909,9 @@ msgid ""
 msgstr ""
 "Das benötigte Affilicious Plugin wurde nicht gefunden. Bitte öffne deinen "
 "Admin Bereich und installiere das fehlende Plugin."
+
+#~ msgid "Main Navigation"
+#~ msgstr "Hauptnavigation"
 
 #~ msgid "No comments"
 #~ msgstr "Keine Kommentare"

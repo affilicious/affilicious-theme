@@ -1,10 +1,10 @@
 <?php
 namespace Affilicious\Theme\Design\Domain\Helper;
 
-use Affilicious\Theme\Design\Domain\Menu\Footer1Menu;
-use Affilicious\Theme\Design\Domain\Menu\Footer2Menu;
-use Affilicious\Theme\Design\Domain\Menu\Footer3Menu;
-use Affilicious\Theme\Design\Domain\Menu\Footer4Menu;
+use Affilicious\Theme\Design\Domain\Menu\Bottom1Menu;
+use Affilicious\Theme\Design\Domain\Menu\Bottom2Menu;
+use Affilicious\Theme\Design\Domain\Menu\Bottom3Menu;
+use Affilicious\Theme\Design\Domain\Menu\Bottom4Menu;
 use Affilicious\Theme\Design\Domain\Menu\MainMenu;
 
 if(!defined('ABSPATH')) exit('Not allowed to access pages directly.');
@@ -26,58 +26,58 @@ class MenuHelper
 	}
 
 	/**
-	 * Get the footer 1 menu
+	 * Get the bottom 1 menu
 	 *
-	 * @return Footer1Menu
+	 * @return Bottom1Menu
 	 */
-	public static function getFooter1Menu()
+	public static function getBottom1Menu()
 	{
 		$container = \AffiliciousTheme::getInstance()->getContainer();
 		$menuSetup = $container['affilicious.theme.design.setup.menu'];
-		$footer1Menu = $menuSetup->getFooter1Menu();
+		$bottom1Menu = $menuSetup->getBottom1Menu();
 
-		return $footer1Menu;
+		return $bottom1Menu;
 	}
 
 	/**
-	 * Get the footer 2 menu
+	 * Get the bottom 2 menu
 	 *
-	 * @return Footer2Menu
+	 * @return Bottom2Menu
 	 */
-	public static function getFooter2Menu()
+	public static function getBottom2Menu()
 	{
 		$container = \AffiliciousTheme::getInstance()->getContainer();
 		$menuSetup = $container['affilicious.theme.design.setup.menu'];
-		$footer3Menu = $menuSetup->getFooter2Menu();
+		$bottom3Menu = $menuSetup->getBottom2Menu();
 
-		return $footer3Menu;
+		return $bottom3Menu;
 	}
 
 	/**
-	 * Get the footer 3 menu
+	 * Get the bottom 3 menu
 	 *
-	 * @return Footer3Menu
+	 * @return Bottom3Menu
 	 */
-	public static function getFooter3Menu()
+	public static function getBottom3Menu()
 	{
 		$container = \AffiliciousTheme::getInstance()->getContainer();
 		$menuSetup = $container['affilicious.theme.design.setup.menu'];
-		$footer3Menu = $menuSetup->getFooter3Menu();
+		$bottom3Menu = $menuSetup->getBottom3Menu();
 
-		return $footer3Menu;
+		return $bottom3Menu;
 	}
 
 	/**
-	 * Get the footer 4 menu
+	 * Get the bottom 4 menu
 	 *
-	 * @return Footer4Menu
+	 * @return Bottom4Menu
 	 */
-	public static function getFooter4Menu()
+	public static function getBottom4Menu()
 	{
 		$container = \AffiliciousTheme::getInstance()->getContainer();
 		$menuSetup = $container['affilicious.theme.design.setup.menu'];
-		$footer4Menu = $menuSetup->getFooter4Menu();
+		$bottom4Menu = $menuSetup->getBottom4Menu();
 
-		return $footer4Menu;
+		return $bottom4Menu;
 	}
 }
