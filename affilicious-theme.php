@@ -452,7 +452,6 @@ class AffiliciousTheme
 	    $contentSetup = $this->container['affilicious.theme.design.setup.content'];
 	    add_filter('the_content', array($contentSetup, 'setTableClass'));
 	    add_filter('excerpt_length', array($contentSetup, 'setExcerptLength'));
-	    add_filter('body_class', array($contentSetup, 'setBodyClass'));
 	    add_filter('post_thumbnail_html', array($contentSetup, 'removeImgDimensions'));
 	    add_filter('the_content', array($contentSetup, 'removeImgDimensions'));
 	    add_filter('get_avatar', array($contentSetup, 'removeImgDimensions'));

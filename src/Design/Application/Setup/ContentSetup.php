@@ -46,24 +46,6 @@ class ContentSetup
         return self::EXCERPT_LENGTH;
     }
 
-    /**
-     * Set the layout class into the body
-     *
-     * @since 0.2
-     * @param string[] $classes
-     * @return string[]
-     */
-    public function setBodyClass($classes)
-    {
-        if (LayoutHelper::isLoose()) {
-            $classes[] = LayoutHelper::LOOSE;
-        } elseif (LayoutHelper::isTight()) {
-            $classes[] = LayoutHelper::TIGHT;
-        }
-
-        return $classes;
-    }
-
 	/**
 	 * Add a wrapper to iframes to handle the sizing correctly
 	 *
