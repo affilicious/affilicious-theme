@@ -41,7 +41,7 @@ class AlertShortcode implements ShortcodeInterface
 	private function prepareLinks($html)
 	{
 		$dom = new \DOMDocument();
-		$dom->loadHTML($html);
+		$dom->loadHTML(mb_convert_encoding($html, 'HTML-ENTITIES', 'UTF-8'));
 		$links = $dom->getElementsByTagName('a');
 
 		/** @var \DOMElement $a */
