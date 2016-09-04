@@ -1,4 +1,21 @@
 .product-body, .entry-body {
+  .fluid-media {
+    position: relative;
+    padding-bottom: 56.25%; /* proportion value to aspect ratio 16:9 (9 / 16 = 0.5625 or 56.25%) */
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+    margin: 1em 0 1em 0;
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
   img.alignright { float: right; margin: 0 0 1em 1em; }
   img.alignleft { float: left; margin: 0 1em 1em 0; }
   img.aligncenter { display: block; margin-left: auto; margin-right: auto; }

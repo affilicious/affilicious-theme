@@ -455,7 +455,8 @@ class AffiliciousTheme
 	    add_filter('body_class', array($contentSetup, 'setBodyClass'));
 	    add_filter('post_thumbnail_html', array($contentSetup, 'removeImgDimensions'));
 	    add_filter('the_content', array($contentSetup, 'removeImgDimensions'));
-	    add_filter('get_avatar',array($contentSetup, 'removeImgDimensions'));
+	    add_filter('get_avatar', array($contentSetup, 'removeImgDimensions'));
+	    add_filter('the_content', array($contentSetup, 'wrapFluidMedia'));
 
 	    // Hook the comments
 	    $commentSetup = $this->container['affilicious.theme.design.setup.comment'];

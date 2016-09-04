@@ -63,4 +63,28 @@ class ContentSetup
 
         return $classes;
     }
+
+	/**
+	 * Add a wrapper to iframes to handle the sizing correctly
+	 *
+	 * @since 0.4
+	 * @param string $content
+	 * @return string
+	 */
+	function wrapFluidMedia($content) {
+		// Match any iframes
+		$pattern = '~<iframe.*</iframe>|<embed.*</embed>~';
+		preg_match_all($pattern, $content, $matches);
+
+		foreach ($matches[0] as $match) {
+			// Wrap matched iframe with div
+			$wrappedframe = '<div class="fluid-media">' . $match . '</div>';
+
+			// Replace original iframe with new in content
+			$content = str_replace($match, $wrappedframe, $content);
+		}
+
+		return $content;
+	}
 }
+
