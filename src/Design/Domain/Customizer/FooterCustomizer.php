@@ -166,7 +166,7 @@ class FooterCustomizer extends AbstractCustomizer
 		);
 
 		$options['sections'] = $sections;
-		$options['panels'] = $panels;
+		$options['panels']   = $panels;
 
 		return $options;
 	}
@@ -190,11 +190,12 @@ class FooterCustomizer extends AbstractCustomizer
 						'#footer'
 					),
 					'declarations' => array(
-						'background-color'     => $bottom,
-						'background'    => "webkit-gradient(linear, 0% 0%, 0% 100%, from($top), to($bottom))",
-						'background '   => "-webkit-linear-gradient(top, $top, $bottom)",
-						'background  '  => "-moz-linear-gradient(top, $top, $bottom)",
-						'background   ' => "-o-linear-gradient(top, $top, $bottom)",
+						'background-color' => $bottom,
+						'background'       => "-webkit-gradient(linear, 0% 0%, 0% 100%, from($top), to($bottom))",
+						'background '      => "-webkit-linear-gradient(top, $top, $bottom)",
+						'background  '     => "-moz-linear-gradient(top, $top, $bottom)",
+						'background   '    => "-o-linear-gradient(top, $top, $bottom)",
+						'background    '   => "linear-gradient($top, $bottom)",
 					)
 				);
 			}
@@ -239,11 +240,12 @@ class FooterCustomizer extends AbstractCustomizer
 						'#footer .footer-breadcrumbs'
 					),
 					'declarations' => array(
-						'background-color'     => $bottom,
-						'background'    => "webkit-gradient(linear, 0% 0%, 0% 100%, from($top), to($bottom))",
-						'background '   => "-webkit-linear-gradient(top, $top, $bottom)",
-						'background  '  => "-moz-linear-gradient(top, $top, $bottom)",
-						'background   ' => "-o-linear-gradient(top, $top, $bottom)",
+						'background-color' => $bottom,
+						'background'       => "-webkit-gradient(linear, 0% 0%, 0% 100%, from($top), to($bottom))",
+						'background '      => "-webkit-linear-gradient(top, $top, $bottom)",
+						'background  '     => "-moz-linear-gradient(top, $top, $bottom)",
+						'background   '    => "-o-linear-gradient(top, $top, $bottom)",
+						'background    '   => "linear-gradient($top, $bottom)",
 					)
 				);
 			}

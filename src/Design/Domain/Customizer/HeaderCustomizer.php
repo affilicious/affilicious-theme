@@ -350,10 +350,11 @@ class HeaderCustomizer extends AbstractCustomizer
 					),
 					'declarations' => array(
 						'background-color' => $bottom,
-						'background'       => "webkit-gradient(linear, 0% 0%, 0% 100%, from($top), to($bottom))",
+						'background'       => "-webkit-gradient(linear, 0% 0%, 0% 100%, from($top), to($bottom))",
 						'background '      => "-webkit-linear-gradient(top, $top, $bottom)",
 						'background  '     => "-moz-linear-gradient(top, $top, $bottom)",
 						'background   '    => "-o-linear-gradient(top, $top, $bottom)",
+						'background    '   => "linear-gradient($top, $bottom)",
 					)
 				);
 			}
@@ -361,6 +362,9 @@ class HeaderCustomizer extends AbstractCustomizer
 
 		$this->renderSelectors('header-general-background-image', function ($mod) {
 			$url = esc_url($mod);
+			if(empty($url)) {
+				return null;
+			}
 
 			return array(
 				'selectors'    => array(
@@ -373,6 +377,10 @@ class HeaderCustomizer extends AbstractCustomizer
 		});
 
 		$this->renderSelectors('header-general-background-repeat', function ($mod) {
+			if(empty($mod)) {
+				return null;
+			}
+
 			return array(
 				'selectors'    => array(
 					'#header',
@@ -384,6 +392,10 @@ class HeaderCustomizer extends AbstractCustomizer
 		});
 
 		$this->renderSelectors('header-general-background-attachment', function ($mod) {
+			if(empty($mod)) {
+				return null;
+			}
+
 			return array(
 				'selectors'    => array(
 					'#header',
@@ -399,6 +411,9 @@ class HeaderCustomizer extends AbstractCustomizer
 			'header-general-background-width',
 			'header-general-background-height',
 			function ($size, $width, $height) {
+				if(empty($size)) {
+					return null;
+				}
 
 				if ($size === 'custom') {
 					return array(
@@ -494,10 +509,11 @@ class HeaderCustomizer extends AbstractCustomizer
 					),
 					'declarations' => array(
 						'background-color' => $bottom,
-						'background'       => "webkit-gradient(linear, 0% 0%, 0% 100%, from($top), to($bottom))",
+						'background'       => "-webkit-gradient(linear, 0% 0%, 0% 100%, from($top), to($bottom))",
 						'background '      => "-webkit-linear-gradient(top, $top, $bottom)",
 						'background  '     => "-moz-linear-gradient(top, $top, $bottom)",
 						'background   '    => "-o-linear-gradient(top, $top, $bottom)",
+						'background    '   => "linear-gradient($top, $bottom)",
 					)
 				);
 			}
@@ -535,10 +551,11 @@ class HeaderCustomizer extends AbstractCustomizer
 					),
 					'declarations' => array(
 						'background-color' => $bottom,
-						'background'       => "webkit-gradient(linear, 0% 0%, 0% 100%, from($top), to($bottom))",
+						'background'       => "-webkit-gradient(linear, 0% 0%, 0% 100%, from($top), to($bottom))",
 						'background '      => "-webkit-linear-gradient(top, $top, $bottom)",
 						'background  '     => "-moz-linear-gradient(top, $top, $bottom)",
 						'background   '    => "-o-linear-gradient(top, $top, $bottom)",
+						'background    '   => "linear-gradient($top, $bottom)",
 					)
 				);
 			}

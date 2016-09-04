@@ -145,10 +145,11 @@ class GeneralCustomizer extends AbstractCustomizer
 					),
 					'declarations' => array(
 						'background-color' => $bottom,
-						'background'       => "webkit-gradient(linear, 0% 0%, 0% 100%, from($top), to($bottom))",
+						'background'       => "-webkit-gradient(linear, 0% 0%, 0% 100%, from($top), to($bottom))",
 						'background '      => "-webkit-linear-gradient(top, $top, $bottom)",
 						'background  '     => "-moz-linear-gradient(top, $top, $bottom)",
 						'background   '    => "-o-linear-gradient(top, $top, $bottom)",
+						'background    '   => "linear-gradient($top, $bottom)",
 					)
 				);
 			}
@@ -156,6 +157,9 @@ class GeneralCustomizer extends AbstractCustomizer
 
 		$this->renderSelectors('general-background-image', function ($mod) {
 			$url = esc_url($mod);
+			if(empty($url)) {
+				return null;
+			}
 
 			return array(
 				'selectors'    => array(
@@ -168,6 +172,10 @@ class GeneralCustomizer extends AbstractCustomizer
 		});
 
 		$this->renderSelectors('general-background-image', function ($mod) {
+			if(empty($mod)) {
+				return null;
+			}
+
 			return array(
 				'selectors'    => array(
 					'body',
@@ -179,6 +187,10 @@ class GeneralCustomizer extends AbstractCustomizer
 		});
 
 		$this->renderSelectors('general-background-attachment', function ($mod) {
+			if(empty($mod)) {
+				return null;
+			}
+
 			return array(
 				'selectors'    => array(
 					'body',
@@ -194,6 +206,9 @@ class GeneralCustomizer extends AbstractCustomizer
 			'general-background-width',
 			'general-background-height',
 			function ($size, $width, $height) {
+				if(empty($size)) {
+					return null;
+				}
 
 				if ($size === 'custom') {
 					return array(

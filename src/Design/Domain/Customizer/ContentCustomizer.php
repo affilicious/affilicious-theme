@@ -778,10 +778,11 @@ class ContentCustomizer extends AbstractCustomizer
 					),
 					'declarations' => array(
 						'background-color' => $bottom,
-						'background'       => "webkit-gradient(linear, 0% 0%, 0% 100%, from($top), to($bottom))",
+						'background'       => "-webkit-gradient(linear, 0% 0%, 0% 100%, from($top), to($bottom))",
 						'background '      => "-webkit-linear-gradient(top, $top, $bottom)",
 						'background  '     => "-moz-linear-gradient(top, $top, $bottom)",
 						'background   '    => "-o-linear-gradient(top, $top, $bottom)",
+						'background    '   => "linear-gradient($top, $bottom)",
 					)
 				);
 			}
@@ -816,7 +817,7 @@ class ContentCustomizer extends AbstractCustomizer
 				)
 			);
 		});
-		
+
 		$this->renderSelectors('content-panel-default-heading-border-color', function ($mod) {
 			$color = sanitize_hex_color($mod);
 

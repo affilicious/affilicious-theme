@@ -21,21 +21,23 @@
             var bottom = wp.customize.instance('general-background-color-bottom').get();
             var body = $('body');
             body.css('background-color', bottom);
-            body.css('background', 'webkit-gradient(linear, 0% 0%, 0% 100%, from(' + top + '), to(' + bottom + '))');
+            body.css('background', '-webkit-gradient(linear, 0% 0%, 0% 100%, from(' + top + '), to(' + bottom + '))');
             body.css('background', '-webkit-linear-gradient(top, ' + top + ', ' + bottom + ')');
             body.css('background', '-moz-linear-gradient(top, ' + top + ', ' + bottom + ')');
             body.css('background', '-o-linear-gradient(top, ' + top + ', ' + bottom + ')');
+            body.css('background', 'linear-gradient(' + top + ', ' + bottom + ')');
         });
     });
-    wp.customize('general-background-color-top', function (value) {
-        value.bind(function (top) {
-            var bottom = wp.customize.instance('general-background-color-bottom').get();
+    wp.customize('general-background-color-bottom', function (value) {
+        value.bind(function (bottom) {
+            var top = wp.customize.instance('general-background-color-top').get();
             var body = $('body');
             body.css('background-color', bottom);
-            body.css('background', 'webkit-gradient(linear, 0% 0%, 0% 100%, from(' + top + '), to(' + bottom + '))');
+            body.css('background', '-webkit-gradient(linear, 0% 0%, 0% 100%, from(' + top + '), to(' + bottom + '))');
             body.css('background', '-webkit-linear-gradient(top, ' + top + ', ' + bottom + ')');
             body.css('background', '-moz-linear-gradient(top, ' + top + ', ' + bottom + ')');
             body.css('background', '-o-linear-gradient(top, ' + top + ', ' + bottom + ')');
+            body.css('background', 'linear-gradient(' + top + ', ' + bottom + ')');
         });
     });
     wp.customize('general-background-image', function (value) {
@@ -246,10 +248,11 @@
             var bottom = wp.customize.instance('content-panel-default-heading-background-color-bottom').get();
             var panel = $('.panel.panel-default .panel-heading');
             panel.css('background-color', bottom);
-            panel.css('background', 'webkit-gradient(linear, 0% 0%, 0% 100%, from(' + top + '), to(' + bottom + '))');
+            panel.css('background', '-webkit-gradient(linear, 0% 0%, 0% 100%, from(' + top + '), to(' + bottom + '))');
             panel.css('background', '-webkit-linear-gradient(top, ' + top + ', ' + bottom + ')');
             panel.css('background', '-moz-linear-gradient(top, ' + top + ', ' + bottom + ')');
             panel.css('background', '-o-linear-gradient(top, ' + top + ', ' + bottom + ')');
+            panel.css('background', 'linear-gradient(' + top + ', ' + bottom + ')');
         });
     });
     wp.customize('content-panel-default-heading-background-color-bottom', function (value) {
@@ -257,10 +260,11 @@
             var top = wp.customize.instance('content-panel-default-heading-background-color-top').get();
             var panel = $('.panel.panel-default .panel-heading');
             panel.css('background-color', bottom);
-            panel.css('background', 'webkit-gradient(linear, 0% 0%, 0% 100%, from(' + top + '), to(' + bottom + '))');
+            panel.css('background', '-webkit-gradient(linear, 0% 0%, 0% 100%, from(' + top + '), to(' + bottom + '))');
             panel.css('background', '-webkit-linear-gradient(top, ' + top + ', ' + bottom + ')');
             panel.css('background', '-moz-linear-gradient(top, ' + top + ', ' + bottom + ')');
             panel.css('background', '-o-linear-gradient(top, ' + top + ', ' + bottom + ')');
+            panel.css('background', 'linear-gradient(' + top + ', ' + bottom + ')');
         });
     });
     wp.customize('content-panel-default-heading-border-color', function (value) {
@@ -330,10 +334,11 @@
             var bottom = wp.customize.instance('header-general-background-color-bottom').get();
             var header = $('#header');
             header.css('background-color', bottom);
-            header.css('background', 'webkit-gradient(linear, 0% 0%, 0% 100%, from(' + top + '), to(' + bottom + '))');
+            header.css('background', '-webkit-gradient(linear, 0% 0%, 0% 100%, from(' + top + '), to(' + bottom + '))');
             header.css('background', '-webkit-linear-gradient(top, ' + top + ', ' + bottom + ')');
             header.css('background', '-moz-linear-gradient(top, ' + top + ', ' + bottom + ')');
             header.css('background', '-o-linear-gradient(top, ' + top + ', ' + bottom + ')');
+            header.css('background', 'linear-gradient(' + top + ', ' + bottom + ')');
         });
     });
     wp.customize('header-general-background-color-bottom', function (value) {
@@ -341,10 +346,11 @@
             var top = wp.customize.instance('header-general-background-color-top').get();
             var header = $('#header');
             header.css('background-color', bottom);
-            header.css('background', 'webkit-gradient(linear, 0% 0%, 0% 100%, from(' + top + '), to(' + bottom + '))');
+            header.css('background', '-webkit-gradient(linear, 0% 0%, 0% 100%, from(' + top + '), to(' + bottom + '))');
             header.css('background', '-webkit-linear-gradient(top, ' + top + ', ' + bottom + ')');
             header.css('background', '-moz-linear-gradient(top, ' + top + ', ' + bottom + ')');
             header.css('background', '-o-linear-gradient(top, ' + top + ', ' + bottom + ')');
+            header.css('background', 'linear-gradient(' + top + ', ' + bottom + ')');
         });
     });
     wp.customize('header-general-background-image', function (value) {
@@ -435,10 +441,11 @@
             var bottom = wp.customize.instance('header-main-menu-background-color-bottom').get();
             var menu = $('#main-menu');
             menu.css('background-color', bottom);
-            menu.css('background', 'webkit-gradient(linear, 0% 0%, 0% 100%, from(' + top + '), to(' + bottom + '))');
+            menu.css('background', '-webkit-gradient(linear, 0% 0%, 0% 100%, from(' + top + '), to(' + bottom + '))');
             menu.css('background', '-webkit-linear-gradient(top, ' + top + ', ' + bottom + ')');
             menu.css('background', '-moz-linear-gradient(top, ' + top + ', ' + bottom + ')');
             menu.css('background', '-o-linear-gradient(top, ' + top + ', ' + bottom + ')');
+            menu.css('background', 'linear-gradient(' + top + ', ' + bottom + ')');
         });
     });
     wp.customize('header-main-menu-background-color-bottom', function (value) {
@@ -446,10 +453,11 @@
             var top = wp.customize.instance('header-main-menu-background-color-top').get();
             var menu = $('#main-menu');
             menu.css('background-color', bottom);
-            menu.css('background', 'webkit-gradient(linear, 0% 0%, 0% 100%, from(' + top + '), to(' + bottom + '))');
+            menu.css('background', '-webkit-gradient(linear, 0% 0%, 0% 100%, from(' + top + '), to(' + bottom + '))');
             menu.css('background', '-webkit-linear-gradient(top, ' + top + ', ' + bottom + ')');
             menu.css('background', '-moz-linear-gradient(top, ' + top + ', ' + bottom + ')');
             menu.css('background', '-o-linear-gradient(top, ' + top + ', ' + bottom + ')');
+            menu.css('background', 'linear-gradient(' + top + ', ' + bottom + ')');
         });
     });
     wp.customize('header-main-menu-border-color', function (value) {
@@ -464,18 +472,20 @@
                 var menu = $(this);
                 if (!menu.parent().hasClass('active')) {
                     menu.css('background-color', bottom);
-                    menu.css('background', e.type === "mouseenter" ? 'webkit-gradient(linear, 0% 0%, 0% 100%, from(' + top + '), to(' + bottom + '))' : 'transparent');
+                    menu.css('background', e.type === "mouseenter" ? '-webkit-gradient(linear, 0% 0%, 0% 100%, from(' + top + '), to(' + bottom + '))' : 'transparent');
                     menu.css('background', e.type === "mouseenter" ? '-webkit-linear-gradient(top, ' + top + ', ' + bottom + ')' : 'transparent');
                     menu.css('background', e.type === "mouseenter" ? '-moz-linear-gradient(top, ' + top + ', ' + bottom + ')' : 'transparent');
                     menu.css('background', e.type === "mouseenter" ? '-o-linear-gradient(top, ' + top + ', ' + bottom + ')' : 'transparent');
+                    menu.css('background', e.type === "mouseenter" ? 'linear-gradient(' + top + ', ' + bottom + ')' : 'transparent');
                 }
             });
             var menu = $('#main-menu .navbar-nav > .menu-item.active > a, #main-menu .navbar-nav > .menu-item.open > a');
             menu.css('background-color', bottom);
-            menu.css('background', 'webkit-gradient(linear, 0% 0%, 0% 100%, from(' + top + '), to(' + bottom + '))');
+            menu.css('background', '-webkit-gradient(linear, 0% 0%, 0% 100%, from(' + top + '), to(' + bottom + '))');
             menu.css('background', '-webkit-linear-gradient(top, ' + top + ', ' + bottom + ')');
             menu.css('background', '-moz-linear-gradient(top, ' + top + ', ' + bottom + ')');
             menu.css('background', '-o-linear-gradient(top, ' + top + ', ' + bottom + ')');
+            menu.css('background', 'linear-gradient(' + top + ', ' + bottom + ')');
         });
     });
     wp.customize('header-main-menu-item-background-color-hover-bottom', function (value) {
@@ -485,18 +495,20 @@
                 var menu = $(this);
                 if (!menu.parent().hasClass('active')) {
                     menu.css('background-color', bottom);
-                    menu.css('background', e.type === "mouseenter" ? 'webkit-gradient(linear, 0% 0%, 0% 100%, from(' + top + '), to(' + bottom + '))' : 'transparent');
+                    menu.css('background', e.type === "mouseenter" ? '-webkit-gradient(linear, 0% 0%, 0% 100%, from(' + top + '), to(' + bottom + '))' : 'transparent');
                     menu.css('background', e.type === "mouseenter" ? '-webkit-linear-gradient(top, ' + top + ', ' + bottom + ')' : 'transparent');
                     menu.css('background', e.type === "mouseenter" ? '-moz-linear-gradient(top, ' + top + ', ' + bottom + ')' : 'transparent');
                     menu.css('background', e.type === "mouseenter" ? '-o-linear-gradient(top, ' + top + ', ' + bottom + ')' : 'transparent');
+                    menu.css('background', e.type === "mouseenter" ? 'linear-gradient(' + top + ', ' + bottom + ')' : 'transparent');
                 }
             });
             var menu = $('#main-menu .navbar-nav > .menu-item.active > a, #main-menu .navbar-nav > .menu-item.open > a');
             menu.css('background-color', bottom);
-            menu.css('background', 'webkit-gradient(linear, 0% 0%, 0% 100%, from(' + top + '), to(' + bottom + '))');
+            menu.css('background', '-webkit-gradient(linear, 0% 0%, 0% 100%, from(' + top + '), to(' + bottom + '))');
             menu.css('background', '-webkit-linear-gradient(top, ' + top + ', ' + bottom + ')');
             menu.css('background', '-moz-linear-gradient(top, ' + top + ', ' + bottom + ')');
             menu.css('background', '-o-linear-gradient(top, ' + top + ', ' + bottom + ')');
+            menu.css('background', 'linear-gradient(' + top + ', ' + bottom + ')');
         });
     });
     wp.customize('header-main-menu-link-color', function (value) {
@@ -615,23 +627,25 @@
     wp.customize('footer-general-background-color-top', function (value) {
         value.bind(function (top) {
             var bottom = wp.customize.instance('footer-general-background-color-bottom').get();
-            var header = $('#footer');
-            header.css('background-color', bottom);
-            header.css('background', 'webkit-gradient(linear, 0% 0%, 0% 100%, from(' + top + '), to(' + bottom + '))');
-            header.css('background', '-webkit-linear-gradient(top, ' + top + ', ' + bottom + ')');
-            header.css('background', '-moz-linear-gradient(top, ' + top + ', ' + bottom + ')');
-            header.css('background', '-o-linear-gradient(top, ' + top + ', ' + bottom + ')');
+            var footer = $('#footer');
+            footer.css('background-color', bottom);
+            footer.css('background', '-webkit-gradient(linear, 0% 0%, 0% 100%, from(' + top + '), to(' + bottom + '))');
+            footer.css('background', '-webkit-linear-gradient(top, ' + top + ', ' + bottom + ')');
+            footer.css('background', '-moz-linear-gradient(top, ' + top + ', ' + bottom + ')');
+            footer.css('background', '-o-linear-gradient(top, ' + top + ', ' + bottom + ')');
+            footer.css('background', 'linear-gradient(' + top + ', ' + bottom + ')');
         });
     });
     wp.customize('footer-general-background-color-bottom', function (value) {
         value.bind(function (bottom) {
             var top = wp.customize.instance('footer-general-background-color-top').get();
-            var header = $('#footer');
-            header.css('background-color', bottom);
-            header.css('background', 'webkit-gradient(linear, 0% 0%, 0% 100%, from(' + top + '), to(' + bottom + '))');
-            header.css('background', '-webkit-linear-gradient(top, ' + top + ', ' + bottom + ')');
-            header.css('background', '-moz-linear-gradient(top, ' + top + ', ' + bottom + ')');
-            header.css('background', '-o-linear-gradient(top, ' + top + ', ' + bottom + ')');
+            var footer = $('#footer');
+            footer.css('background-color', bottom);
+            footer.css('background', '-webkit-gradient(linear, 0% 0%, 0% 100%, from(' + top + '), to(' + bottom + '))');
+            footer.css('background', '-webkit-linear-gradient(top, ' + top + ', ' + bottom + ')');
+            footer.css('background', '-moz-linear-gradient(top, ' + top + ', ' + bottom + ')');
+            footer.css('background', '-o-linear-gradient(top, ' + top + ', ' + bottom + ')');
+            footer.css('background', 'linear-gradient(' + top + ', ' + bottom + ')');
         });
     });
     wp.customize('footer-general-logo-color', function (value) {
@@ -647,23 +661,25 @@
     wp.customize('footer-breadcrumbs-background-color-top', function (value) {
         value.bind(function (top) {
             var bottom = wp.customize.instance('footer-breadcrumbs-background-color-bottom').get();
-            var header = $('#footer .footer-breadcrumbs');
-            header.css('background-color', bottom);
-            header.css('background', 'webkit-gradient(linear, 0% 0%, 0% 100%, from(' + top + '), to(' + bottom + '))');
-            header.css('background', '-webkit-linear-gradient(top, ' + top + ', ' + bottom + ')');
-            header.css('background', '-moz-linear-gradient(top, ' + top + ', ' + bottom + ')');
-            header.css('background', '-o-linear-gradient(top, ' + top + ', ' + bottom + ')');
+            var breadcrumbs = $('#footer .footer-breadcrumbs');
+            breadcrumbs.css('background-color', bottom);
+            breadcrumbs.css('background', '-webkit-gradient(linear, 0% 0%, 0% 100%, from(' + top + '), to(' + bottom + '))');
+            breadcrumbs.css('background', '-webkit-linear-gradient(top, ' + top + ', ' + bottom + ')');
+            breadcrumbs.css('background', '-moz-linear-gradient(top, ' + top + ', ' + bottom + ')');
+            breadcrumbs.css('background', '-o-linear-gradient(top, ' + top + ', ' + bottom + ')');
+            breadcrumbs.css('background', 'linear-gradient(' + top + ', ' + bottom + ')');
         });
     });
     wp.customize('footer-breadcrumbs-background-color-bottom', function (value) {
         value.bind(function (bottom) {
             var top = wp.customize.instance('footer-breadcrumbs-background-color-top').get();
-            var header = $('#footer .footer-breadcrumbs');
-            header.css('background-color', bottom);
-            header.css('background', 'webkit-gradient(linear, 0% 0%, 0% 100%, from(' + top + '), to(' + bottom + '))');
-            header.css('background', '-webkit-linear-gradient(top, ' + top + ', ' + bottom + ')');
-            header.css('background', '-moz-linear-gradient(top, ' + top + ', ' + bottom + ')');
-            header.css('background', '-o-linear-gradient(top, ' + top + ', ' + bottom + ')');
+            var breadcrumbs = $('#footer .footer-breadcrumbs');
+            breadcrumbs.css('background-color', bottom);
+            breadcrumbs.css('background', '-webkit-gradient(linear, 0% 0%, 0% 100%, from(' + top + '), to(' + bottom + '))');
+            breadcrumbs.css('background', '-webkit-linear-gradient(top, ' + top + ', ' + bottom + ')');
+            breadcrumbs.css('background', '-moz-linear-gradient(top, ' + top + ', ' + bottom + ')');
+            breadcrumbs.css('background', '-o-linear-gradient(top, ' + top + ', ' + bottom + ')');
+            breadcrumbs.css('background', 'linear-gradient(' + top + ', ' + bottom + ')');
         });
     });
     wp.customize('footer-breadcrumbs-text-color', function (value) {
