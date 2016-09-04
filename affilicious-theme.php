@@ -486,6 +486,7 @@ class AffiliciousTheme
 	    $assetSetup = $this->container['affilicious.theme.common.setup.asset'];
         add_action('admin_enqueue_scripts', array($assetSetup, 'addAdminStyles'));
         add_action('admin_enqueue_scripts', array($assetSetup, 'addAdminScripts'));
+	    add_action('customize_preview_init', array($assetSetup, 'addCustomizerScripts'));
     }
 
 	/**

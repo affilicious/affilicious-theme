@@ -78,4 +78,14 @@ class AssetSetup
     {
         wp_enqueue_script('affilicious-theme-admin', self::getScriptUrl() . 'admin.js', array('jquery'), \AffiliciousTheme::THEME_VERSION, true);
     }
+
+	/**
+	 * Add the customizer scripts for the back end
+	 *
+	 * @since 0.4
+	 */
+    public function addCustomizerScripts()
+    {
+	    wp_enqueue_script('affilicious-theme-customizer', self::getScriptUrl() . 'customize.js', array('jquery','customize-preview'), time(), true);
+    }
 }
