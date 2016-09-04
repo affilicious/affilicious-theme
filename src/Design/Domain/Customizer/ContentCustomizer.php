@@ -18,7 +18,7 @@ class ContentCustomizer extends AbstractCustomizer
 		$panels[] = array(
 			'id'       => $panel,
 			'title'    => __('Content', 'affilicious-theme'),
-			'priority' => '100'
+			'priority' => '40'
 		);
 
 		$section = 'content-product';

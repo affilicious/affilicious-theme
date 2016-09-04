@@ -18,7 +18,7 @@ class HeaderCustomizer extends AbstractCustomizer
 		$panels[] = array(
 			'id'       => $panel,
 			'title'    => __('Header', 'affilicious-theme'),
-			'priority' => '100'
+			'priority' => '30'
 		);
 
 		$section = 'header-general';

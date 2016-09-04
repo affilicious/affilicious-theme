@@ -26,7 +26,7 @@ class TypographyCustomizer extends AbstractCustomizer
 		$panels[] = array(
 			'id'       => $panel,
 			'title'    => __('Typography', 'affilicious-theme'),
-			'priority' => '100'
+			'priority' => '20'
 		);
 
 		$section = 'typography-headline';

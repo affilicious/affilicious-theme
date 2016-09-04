@@ -18,7 +18,7 @@ class FooterCustomizer extends AbstractCustomizer
 		$panels[] = array(
 			'id'       => $panel,
 			'title'    => __('Footer', 'affilicious-theme'),
-			'priority' => '100',
+			'priority' => '50',
 		);
 
 		$section = 'footer-general';
