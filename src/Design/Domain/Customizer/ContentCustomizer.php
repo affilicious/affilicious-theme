@@ -816,10 +816,7 @@ class ContentCustomizer extends AbstractCustomizer
 				)
 			);
 		});
-
-
-
-
+		
 		$this->renderSelectors('content-panel-default-heading-border-color', function ($mod) {
 			$color = sanitize_hex_color($mod);
 

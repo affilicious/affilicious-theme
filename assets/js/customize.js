@@ -98,31 +98,31 @@
     });
     wp.customize('typography-headline-color', function (value) {
         value.bind(function (color) {
-            var headlines = $('content h1, main h2, main h3, main h4, main h5, main h6');
+            var headlines = $('main h1, main h2, main h3, main h4, main h5, main h6');
             headlines.css('color', color);
         });
     });
     wp.customize('typography-text-font-family', function (value) {
         value.bind(function (font) {
-            var text = $('content, main p, main span, main li, main time');
+            var text = $('main, main p, main span, main li, main time');
             text.css('font-family', font);
         });
     });
     wp.customize('typography-text-color', function (value) {
         value.bind(function (color) {
-            var text = $('content, main p, main span, main li, main time');
+            var text = $('main, main p, main span, main li, main time');
             text.css('color', color);
         });
     });
     wp.customize('typography-text-link-color', function (value) {
         value.bind(function (color) {
-            var link = $('content a:not(.price, .btn)');
+            var link = $('main a:not(.price, .btn)');
             link.css('color', color);
         });
     });
     wp.customize('typography-text-link-color-hover', function (value) {
         value.bind(function (color) {
-            $('content a:not(.price, .btn)').on('hover click focus', function (e) {
+            $('main a:not(.price, .btn)').on('hover click focus', function (e) {
                 var standart = wp.customize.instance('typography-text-link-color').get();
                 var link = $(this);
                 link.css('color', e.type === "mouseenter" ? color : standart);
