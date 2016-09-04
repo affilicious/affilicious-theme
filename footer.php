@@ -3,14 +3,14 @@
 
 	<?php if (function_exists('yoast_breadcrumb')): ?>
 		<div class="footer-breadcrumbs">
-			<?php if(affilicious_theme_is_loose_layout()): ?><div class="container"><?php endif; ?>
+			<div class="container">
 				<?php yoast_breadcrumb('<nav aria-label="breadcrumb" role="navigation">', '</nav>'); ?>
-			<?php if (affilicious_theme_is_loose_layout()): ?></div><?php endif; ?>
+			</div>
 		</div>
 	<?php endif; ?>
 
 	<div class="footer-content">
-		<?php if (affilicious_theme_is_loose_layout()): ?><div class="container"><?php endif; ?>
+		<div class="container">
 			<div class="clearfix">
 				<div class="footer-logo">
 					<a href="<?php home_url('/'); ?>"><?php bloginfo('name') ?></a>
@@ -37,7 +37,7 @@
 			<div class="footer-copyright text-center">
 				<?php echo get_theme_mod('general-copyright-text'); ?>
 			</div>
-		<?php if (affilicious_theme_is_loose_layout()): ?></div><?php endif; ?>
+		</div>
 	</div>
 </footer>
 

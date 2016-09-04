@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <main role="main" class="search">
-    <?php if (affilicious_theme_is_loose_layout()): ?><div class="container"><?php endif; ?>
+   <div class="container">
         <div class="row">
             <div class="col-md-8">
                 <?php do_action('affilicious_theme_search_above_posts'); ?>
@@ -29,7 +29,7 @@
                 <?php get_sidebar(); ?>
             </div>
         </div>
-    <?php if (affilicious_theme_is_loose_layout()): ?></div><?php endif; ?>
+    </div>
 </main>
 
 <?php get_footer(); ?>

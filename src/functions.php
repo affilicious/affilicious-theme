@@ -24,28 +24,6 @@ function affilicious_theme_check_requirements()
 }
 
 /**
- * Check if the layout is loose
- *
- * @since 0.2
- * @return bool
- */
-function affilicious_theme_is_loose_layout()
-{
-    return LayoutHelper::isLoose();
-}
-
-/**
- * Check if the layout is tight
- *
- * @since 0.2
- * @return bool
- */
-function affilicious_theme_is_tight_layout()
-{
-    return LayoutHelper::isTight();
-}
-
-/**
  * Check if there is a main menu.
  *
  * @since 0.2

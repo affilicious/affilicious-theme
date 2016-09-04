@@ -16,9 +16,8 @@
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
-    <?php if(affilicious_theme_is_tight_layout()): ?><div class="container"><?php endif; ?>
     <header id="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
-        <?php if(affilicious_theme_is_loose_layout()): ?><div class="container"><?php endif; ?>
+        <div class="container">
             <div class="row">
                 <div class="col-xs-12">
                     <?php if(affilicious_theme_has_logo() || affilicious_theme_has_retina_logo()): ?>
@@ -32,11 +31,11 @@
                     <?php endif; ?>
                 </div>
             </div>
-        <?php if(affilicious_theme_is_loose_layout()): ?></div><?php endif; ?>
+        </div>
     </header>
 
     <nav id="main-menu" class="navbar" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
-        <?php if(affilicious_theme_is_loose_layout()): ?><div class="container"><?php endif; ?>
+        <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <div class="navbar-header">
@@ -55,6 +54,6 @@
                     <?php endif; ?>
                 </div>
             </div>
-        <?php if(affilicious_theme_is_loose_layout()): ?></div><?php endif; ?>
+        </div>
     </nav>
     
