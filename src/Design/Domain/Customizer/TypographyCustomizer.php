@@ -87,7 +87,7 @@ class TypographyCustomizer extends AbstractCustomizer
 
 		$options['typography-text-link-color'] = array(
 			'id'        => 'typography-text-link-color',
-			'label'     => __('Color', 'affilicious-theme'),
+			'label'     => __('Link Color', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'color',
 			'default'   => '#3bafda',
@@ -96,7 +96,7 @@ class TypographyCustomizer extends AbstractCustomizer
 
 		$options['typography-text-link-color-hover'] = array(
 			'id'        => 'typography-text-link-color-hover',
-			'label'     => __('Color (Hover)', 'affilicious-theme'),
+			'label'     => __('Link Color (Hover)', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'color',
 			'default'   => '#3fc2ea',
