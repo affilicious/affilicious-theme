@@ -251,7 +251,7 @@ class HeaderCustomizer extends AbstractCustomizer
 			'label'     => __('Dropdown Item Background Color (Hover)', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'color',
-			'default'   => '#e5e5e5',
+			'default'   => '#353a42',
 			'transport' => 'postMessage',
 		);
 

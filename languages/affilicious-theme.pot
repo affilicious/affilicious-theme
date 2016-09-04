@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: "
 "affilicious-theme\n"
 "POT-Creation-Date: "
-"2016-09-03 22:33+0200\n"
+"2016-09-04 12:30+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Your "
 "Name <you@example.com>\n"
@@ -486,6 +486,212 @@ msgid ""
 "above the main sidebar."
 msgstr ""
 
+#: src/Design/Domain/Customizer/ContentCustomizer.php:20
+msgid "Content"
+msgstr ""
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:28
+msgid "Product"
+msgstr ""
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:35
+msgid ""
+"Current Price Color"
+msgstr ""
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:44
+msgid "Old Price Color"
+msgstr ""
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:53
+msgid "Star Rating Color"
+msgstr ""
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:62
+msgid ""
+"Details Background "
+"Color (Odd)"
+msgstr ""
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:71
+msgid ""
+"Details Background "
+"Color (Even)"
+msgstr ""
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:80
+msgid ""
+"Details Border Color"
+msgstr ""
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:91
+msgid "Alert"
+msgstr ""
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:98
+msgid ""
+"Success Background Color"
+msgstr ""
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:107
+msgid "Success Text Color"
+msgstr ""
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:116
+msgid "Success Link Color"
+msgstr ""
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:125
+msgid ""
+"Success Link Color "
+"(Hover)"
+msgstr ""
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:134
+msgid ""
+"Success Border Color"
+msgstr ""
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:143
+msgid ""
+"Info Background Color"
+msgstr ""
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:152
+msgid "Info Text Color"
+msgstr ""
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:161
+msgid "Info Link Color"
+msgstr ""
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:170
+msgid ""
+"Info Link Color (Hover)"
+msgstr ""
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:179
+msgid "Info Border Color"
+msgstr ""
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:188
+msgid ""
+"Warning Background Color"
+msgstr ""
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:197
+msgid "Warning Text Color"
+msgstr ""
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:206
+msgid "Warning Link Color"
+msgstr ""
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:215
+msgid ""
+"Warning Link Color "
+"(Hover)"
+msgstr ""
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:224
+msgid ""
+"Warning Border Color"
+msgstr ""
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:233
+msgid ""
+"Danger Background Color"
+msgstr ""
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:242
+msgid "Danger Text Color"
+msgstr ""
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:251
+msgid "Danger Link Color"
+msgstr ""
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:260
+msgid ""
+"Danger Link Color "
+"(Hover)"
+msgstr ""
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:269
+msgid ""
+"Danger Border Color"
+msgstr ""
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:280
+msgid "Panel"
+msgstr ""
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:287
+msgid ""
+"Heading Background "
+"Color (Top)"
+msgstr ""
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:296
+msgid ""
+"Heading Background "
+"Color (Bottom)"
+msgstr ""
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:305
+msgid ""
+"Heading Border Color"
+msgstr ""
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:314
+#: src/Design/Domain/Customizer/FooterCustomizer.php:143
+#: src/Design/Domain/Customizer/HeaderCustomizer.php:132
+msgid "Title Color"
+msgstr ""
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:325
+msgid "Button"
+msgstr ""
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:332
+msgid ""
+"Buy Background Color"
+msgstr ""
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:341
+msgid ""
+"Buy Background Color "
+"(Hover)"
+msgstr ""
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:350
+msgid "Buy Border Color"
+msgstr ""
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:359
+msgid "Buy Text Color"
+msgstr ""
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:370
+msgid ""
+"Review Background Color"
+msgstr ""
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:379
+msgid ""
+"Review Background Color "
+"(Hover)"
+msgstr ""
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:388
+msgid ""
+"Review Border Color"
+msgstr ""
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:397
+msgid "Review Text Color"
+msgstr ""
+
 #: src/Design/Domain/Customizer/FooterCustomizer.php:20
 msgid "Footer"
 msgstr ""
@@ -539,23 +745,19 @@ msgstr ""
 #: src/Design/Domain/Customizer/FooterCustomizer.php:116
 #: src/Design/Domain/Customizer/FooterCustomizer.php:152
 #: src/Design/Domain/Customizer/HeaderCustomizer.php:224
+#: src/Design/Domain/Customizer/TypographyCustomizer.php:90
 msgid "Link Color"
 msgstr ""
 
 #: src/Design/Domain/Customizer/FooterCustomizer.php:125
 #: src/Design/Domain/Customizer/FooterCustomizer.php:161
 #: src/Design/Domain/Customizer/HeaderCustomizer.php:233
+#: src/Design/Domain/Customizer/TypographyCustomizer.php:99
 msgid "Link Color (Hover)"
 msgstr ""
 
 #: src/Design/Domain/Customizer/FooterCustomizer.php:136
 msgid "Bottom Menu"
-msgstr ""
-
-#: src/Design/Domain/Customizer/FooterCustomizer.php:143
-#: src/Design/Domain/Customizer/HeaderCustomizer.php:132
-#: src/Design/Domain/Customizer/MainCustomizer.php:314
-msgid "Title Color"
 msgstr ""
 
 #: src/Design/Domain/Customizer/GeneralCustomizer.php:44
@@ -778,206 +980,6 @@ msgid ""
 "than the regular logo."
 msgstr ""
 
-#: src/Design/Domain/Customizer/MainCustomizer.php:20
-msgid "Main"
-msgstr ""
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:28
-msgid "Product"
-msgstr ""
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:35
-msgid ""
-"Current Price Color"
-msgstr ""
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:44
-msgid "Old Price Color"
-msgstr ""
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:53
-msgid "Star Rating Color"
-msgstr ""
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:62
-msgid ""
-"Details Background "
-"Color (Odd)"
-msgstr ""
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:71
-msgid ""
-"Details Background "
-"Color (Even)"
-msgstr ""
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:80
-msgid ""
-"Details Border Color"
-msgstr ""
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:91
-msgid "Alert"
-msgstr ""
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:98
-msgid ""
-"Success Background Color"
-msgstr ""
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:107
-msgid "Success Text Color"
-msgstr ""
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:116
-msgid "Success Link Color"
-msgstr ""
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:125
-msgid ""
-"Success Link Color "
-"(Hover)"
-msgstr ""
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:134
-msgid ""
-"Success Border Color"
-msgstr ""
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:143
-msgid ""
-"Info Background Color"
-msgstr ""
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:152
-msgid "Info Text Color"
-msgstr ""
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:161
-msgid "Info Link Color"
-msgstr ""
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:170
-msgid ""
-"Info Link Color (Hover)"
-msgstr ""
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:179
-msgid "Info Border Color"
-msgstr ""
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:188
-msgid ""
-"Warning Background Color"
-msgstr ""
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:197
-msgid "Warning Text Color"
-msgstr ""
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:206
-msgid "Warning Link Color"
-msgstr ""
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:215
-msgid ""
-"Warning Link Color "
-"(Hover)"
-msgstr ""
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:224
-msgid ""
-"Warning Border Color"
-msgstr ""
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:233
-msgid ""
-"Danger Background Color"
-msgstr ""
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:242
-msgid "Danger Text Color"
-msgstr ""
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:251
-msgid "Danger Link Color"
-msgstr ""
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:260
-msgid ""
-"Danger Link Color "
-"(Hover)"
-msgstr ""
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:269
-msgid ""
-"Danger Border Color"
-msgstr ""
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:280
-msgid "Panel"
-msgstr ""
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:287
-msgid ""
-"Heading Background "
-"Color (Top)"
-msgstr ""
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:296
-msgid ""
-"Heading Background "
-"Color (Bottom)"
-msgstr ""
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:305
-msgid ""
-"Heading Border Color"
-msgstr ""
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:325
-msgid "Button"
-msgstr ""
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:332
-msgid ""
-"Buy Background Color"
-msgstr ""
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:341
-msgid ""
-"Buy Background Color "
-"(Hover)"
-msgstr ""
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:350
-msgid "Buy Border Color"
-msgstr ""
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:359
-msgid "Buy Text Color"
-msgstr ""
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:370
-msgid ""
-"Review Background Color"
-msgstr ""
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:379
-msgid ""
-"Review Background Color "
-"(Hover)"
-msgstr ""
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:388
-msgid ""
-"Review Border Color"
-msgstr ""
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:397
-msgid "Review Text Color"
-msgstr ""
-
 #: src/Design/Domain/Customizer/TypographyCustomizer.php:28
 msgid "Typography"
 msgstr ""
@@ -993,16 +995,11 @@ msgstr ""
 
 #: src/Design/Domain/Customizer/TypographyCustomizer.php:53
 #: src/Design/Domain/Customizer/TypographyCustomizer.php:81
-#: src/Design/Domain/Customizer/TypographyCustomizer.php:90
 msgid "Color"
 msgstr ""
 
 #: src/Design/Domain/Customizer/TypographyCustomizer.php:64
 msgid "Text"
-msgstr ""
-
-#: src/Design/Domain/Customizer/TypographyCustomizer.php:99
-msgid "Color (Hover)"
 msgstr ""
 
 #: src/Design/Domain/Exception/ViewNotFoundException.php:15

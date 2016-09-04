@@ -8,7 +8,7 @@ use Affilicious\Theme\Design\Domain\Customizer\InformationCustomizer;
 use Affilicious\Theme\Design\Domain\Customizer\HeaderCustomizer;
 use Affilicious\Theme\Design\Domain\Customizer\TypographyCustomizer;
 use Affilicious\Theme\Design\Domain\Customizer\FooterCustomizer;
-use Affilicious\Theme\Design\Domain\Customizer\MainCustomizer;
+use Affilicious\Theme\Design\Domain\Customizer\ContentCustomizer;
 
 if (!defined('ABSPATH')) {
 	exit('Not allowed to access pages directly.');
@@ -38,7 +38,7 @@ class CustomizerSetup implements SetupInterface
 			new GeneralCustomizer(),
 			new TypographyCustomizer(),
 			new HeaderCustomizer(),
-			new MainCustomizer(),
+			new ContentCustomizer(),
 			new FooterCustomizer(),
 		);
 	}

@@ -5,7 +5,7 @@ if (!defined('ABSPATH')) {
 	exit('Not allowed to access pages directly.');
 }
 
-class MainCustomizer extends AbstractCustomizer
+class ContentCustomizer extends AbstractCustomizer
 {
 	/**
 	 * @inheritdoc
@@ -13,15 +13,15 @@ class MainCustomizer extends AbstractCustomizer
 	 */
 	public function init()
 	{
-		$panel = 'main';
+		$panel = 'content';
 
 		$panels[] = array(
 			'id'       => $panel,
-			'title'    => __('Main', 'affilicious-theme'),
+			'title'    => __('Content', 'affilicious-theme'),
 			'priority' => '100'
 		);
 
-		$section = 'main-product';
+		$section = 'content-product';
 
 		$sections[] = array(
 			'id'       => $section,
@@ -30,8 +30,8 @@ class MainCustomizer extends AbstractCustomizer
 			'panel'    => $panel
 		);
 
-		$options['main-product-current-price-color'] = array(
-			'id'        => 'main-product-current-price-color',
+		$options['content-product-current-price-color'] = array(
+			'id'        => 'content-product-current-price-color',
 			'label'     => __('Current Price Color', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'color',
@@ -39,8 +39,8 @@ class MainCustomizer extends AbstractCustomizer
 			'transport' => 'postMessage',
 		);
 
-		$options['main-product-old-price-color'] = array(
-			'id'        => 'main-product-old-price-color',
+		$options['content-product-old-price-color'] = array(
+			'id'        => 'content-product-old-price-color',
 			'label'     => __('Old Price Color', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'color',
@@ -48,8 +48,8 @@ class MainCustomizer extends AbstractCustomizer
 			'transport' => 'postMessage',
 		);
 
-		$options['main-product-star-rating-color'] = array(
-			'id'        => 'main-product-star-rating-color',
+		$options['content-product-star-rating-color'] = array(
+			'id'        => 'content-product-star-rating-color',
 			'label'     => __('Star Rating Color', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'color',
@@ -57,8 +57,8 @@ class MainCustomizer extends AbstractCustomizer
 			'transport' => 'postMessage',
 		);
 
-		$options['main-product-details-background-color-odd'] = array(
-			'id'        => 'main-product-details-background-color-odd',
+		$options['content-product-details-background-color-odd'] = array(
+			'id'        => 'content-product-details-background-color-odd',
 			'label'     => __('Details Background Color (Odd)', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'color',
@@ -66,8 +66,8 @@ class MainCustomizer extends AbstractCustomizer
 			'transport' => 'postMessage',
 		);
 
-		$options['main-product-details-background-color-even'] = array(
-			'id'        => 'main-product-details-background-color-even',
+		$options['content-product-details-background-color-even'] = array(
+			'id'        => 'content-product-details-background-color-even',
 			'label'     => __('Details Background Color (Even)', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'color',
@@ -75,8 +75,8 @@ class MainCustomizer extends AbstractCustomizer
 			'transport' => 'postMessage',
 		);
 
-		$options['main-product-details-border-color'] = array(
-			'id'        => 'main-product-details-border-color',
+		$options['content-product-details-border-color'] = array(
+			'id'        => 'content-product-details-border-color',
 			'label'     => __('Details Border Color', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'color',
@@ -84,7 +84,7 @@ class MainCustomizer extends AbstractCustomizer
 			'transport' => 'postMessage',
 		);
 
-		$section = 'main-alert';
+		$section = 'content-alert';
 
 		$sections[] = array(
 			'id'       => $section,
@@ -93,8 +93,8 @@ class MainCustomizer extends AbstractCustomizer
 			'panel'    => $panel
 		);
 
-		$options['main-alert-success-background-color'] = array(
-			'id'        => 'main-alert-success-background-color',
+		$options['content-alert-success-background-color'] = array(
+			'id'        => 'content-alert-success-background-color',
 			'label'     => __('Success Background Color', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'color',
@@ -102,8 +102,8 @@ class MainCustomizer extends AbstractCustomizer
 			'transport' => 'postMessage',
 		);
 
-		$options['main-alert-success-text-color'] = array(
-			'id'        => 'main-alert-success-text-color',
+		$options['content-alert-success-text-color'] = array(
+			'id'        => 'content-alert-success-text-color',
 			'label'     => __('Success Text Color', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'color',
@@ -111,8 +111,8 @@ class MainCustomizer extends AbstractCustomizer
 			'transport' => 'postMessage',
 		);
 
-		$options['main-alert-success-link-color'] = array(
-			'id'        => 'main-alert-success-link-color',
+		$options['content-alert-success-link-color'] = array(
+			'id'        => 'content-alert-success-link-color',
 			'label'     => __('Success Link Color', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'color',
@@ -120,8 +120,8 @@ class MainCustomizer extends AbstractCustomizer
 			'transport' => 'postMessage',
 		);
 
-		$options['main-alert-success-link-color-hover'] = array(
-			'id'        => 'main-alert-success-link-color-hover',
+		$options['content-alert-success-link-color-hover'] = array(
+			'id'        => 'content-alert-success-link-color-hover',
 			'label'     => __('Success Link Color (Hover)', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'color',
@@ -129,8 +129,8 @@ class MainCustomizer extends AbstractCustomizer
 			'transport' => 'postMessage',
 		);
 
-		$options['main-alert-success-border-color'] = array(
-			'id'        => 'main-alert-success-border-color',
+		$options['content-alert-success-border-color'] = array(
+			'id'        => 'content-alert-success-border-color',
 			'label'     => __('Success Border Color', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'color',
@@ -138,8 +138,8 @@ class MainCustomizer extends AbstractCustomizer
 			'transport' => 'postMessage',
 		);
 
-		$options['main-alert-info-background-color'] = array(
-			'id'        => 'main-alert-info-background-color',
+		$options['content-alert-info-background-color'] = array(
+			'id'        => 'content-alert-info-background-color',
 			'label'     => __('Info Background Color', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'color',
@@ -147,8 +147,8 @@ class MainCustomizer extends AbstractCustomizer
 			'transport' => 'postMessage',
 		);
 
-		$options['main-alert-info-text-color'] = array(
-			'id'        => 'main-alert-info-text-color',
+		$options['content-alert-info-text-color'] = array(
+			'id'        => 'content-alert-info-text-color',
 			'label'     => __('Info Text Color', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'color',
@@ -156,8 +156,8 @@ class MainCustomizer extends AbstractCustomizer
 			'transport' => 'postMessage',
 		);
 
-		$options['main-alert-info-link-color'] = array(
-			'id'        => 'main-alert-info-link-color',
+		$options['content-alert-info-link-color'] = array(
+			'id'        => 'content-alert-info-link-color',
 			'label'     => __('Info Link Color', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'color',
@@ -165,8 +165,8 @@ class MainCustomizer extends AbstractCustomizer
 			'transport' => 'postMessage',
 		);
 
-		$options['main-alert-info-link-color-hover'] = array(
-			'id'        => 'main-alert-info-link-color-hover',
+		$options['content-alert-info-link-color-hover'] = array(
+			'id'        => 'content-alert-info-link-color-hover',
 			'label'     => __('Info Link Color (Hover)', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'color',
@@ -174,8 +174,8 @@ class MainCustomizer extends AbstractCustomizer
 			'transport' => 'postMessage',
 		);
 
-		$options['main-alert-info-border-color'] = array(
-			'id'        => 'main-alert-info-border-color',
+		$options['content-alert-info-border-color'] = array(
+			'id'        => 'content-alert-info-border-color',
 			'label'     => __('Info Border Color', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'color',
@@ -183,8 +183,8 @@ class MainCustomizer extends AbstractCustomizer
 			'transport' => 'postMessage',
 		);
 
-		$options['main-alert-warning-background-color'] = array(
-			'id'        => 'main-alert-warning-background-color',
+		$options['content-alert-warning-background-color'] = array(
+			'id'        => 'content-alert-warning-background-color',
 			'label'     => __('Warning Background Color', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'color',
@@ -192,8 +192,8 @@ class MainCustomizer extends AbstractCustomizer
 			'transport' => 'postMessage',
 		);
 
-		$options['main-alert-warning-text-color'] = array(
-			'id'        => 'main-alert-warning-text-color',
+		$options['content-alert-warning-text-color'] = array(
+			'id'        => 'content-alert-warning-text-color',
 			'label'     => __('Warning Text Color', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'color',
@@ -201,8 +201,8 @@ class MainCustomizer extends AbstractCustomizer
 			'transport' => 'postMessage',
 		);
 
-		$options['main-alert-warning-link-color'] = array(
-			'id'        => 'main-alert-warning-link-color',
+		$options['content-alert-warning-link-color'] = array(
+			'id'        => 'content-alert-warning-link-color',
 			'label'     => __('Warning Link Color', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'color',
@@ -210,8 +210,8 @@ class MainCustomizer extends AbstractCustomizer
 			'transport' => 'postMessage',
 		);
 
-		$options['main-alert-warning-link-color-hover'] = array(
-			'id'        => 'main-alert-warning-link-color-hover',
+		$options['content-alert-warning-link-color-hover'] = array(
+			'id'        => 'content-alert-warning-link-color-hover',
 			'label'     => __('Warning Link Color (Hover)', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'color',
@@ -219,8 +219,8 @@ class MainCustomizer extends AbstractCustomizer
 			'transport' => 'postMessage',
 		);
 
-		$options['main-alert-warning-border-color'] = array(
-			'id'        => 'main-alert-warning-border-color',
+		$options['content-alert-warning-border-color'] = array(
+			'id'        => 'content-alert-warning-border-color',
 			'label'     => __('Warning Border Color', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'color',
@@ -228,8 +228,8 @@ class MainCustomizer extends AbstractCustomizer
 			'transport' => 'postMessage',
 		);
 
-		$options['main-alert-danger-background-color'] = array(
-			'id'        => 'main-alert-danger-background-color',
+		$options['content-alert-danger-background-color'] = array(
+			'id'        => 'content-alert-danger-background-color',
 			'label'     => __('Danger Background Color', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'color',
@@ -237,8 +237,8 @@ class MainCustomizer extends AbstractCustomizer
 			'transport' => 'postMessage',
 		);
 
-		$options['main-alert-danger-text-color'] = array(
-			'id'        => 'main-alert-danger-text-color',
+		$options['content-alert-danger-text-color'] = array(
+			'id'        => 'content-alert-danger-text-color',
 			'label'     => __('Danger Text Color', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'color',
@@ -246,8 +246,8 @@ class MainCustomizer extends AbstractCustomizer
 			'transport' => 'postMessage',
 		);
 
-		$options['main-alert-danger-link-color'] = array(
-			'id'        => 'main-alert-danger-link-color',
+		$options['content-alert-danger-link-color'] = array(
+			'id'        => 'content-alert-danger-link-color',
 			'label'     => __('Danger Link Color', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'color',
@@ -255,8 +255,8 @@ class MainCustomizer extends AbstractCustomizer
 			'transport' => 'postMessage',
 		);
 
-		$options['main-alert-danger-link-color-hover'] = array(
-			'id'        => 'main-alert-danger-link-color-hover',
+		$options['content-alert-danger-link-color-hover'] = array(
+			'id'        => 'content-alert-danger-link-color-hover',
 			'label'     => __('Danger Link Color (Hover)', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'color',
@@ -264,8 +264,8 @@ class MainCustomizer extends AbstractCustomizer
 			'transport' => 'postMessage',
 		);
 
-		$options['main-alert-danger-border-color'] = array(
-			'id'        => 'main-alert-danger-border-color',
+		$options['content-alert-danger-border-color'] = array(
+			'id'        => 'content-alert-danger-border-color',
 			'label'     => __('Danger Border Color', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'color',
@@ -273,7 +273,7 @@ class MainCustomizer extends AbstractCustomizer
 			'transport' => 'postMessage',
 		);
 
-		$section = 'main-panel';
+		$section = 'content-panel';
 
 		$sections[] = array(
 			'id'       => $section,
@@ -282,8 +282,8 @@ class MainCustomizer extends AbstractCustomizer
 			'panel'    => $panel
 		);
 
-		$options['main-panel-default-heading-background-color-top'] = array(
-			'id'        => 'main-panel-default-heading-background-color-top',
+		$options['content-panel-default-heading-background-color-top'] = array(
+			'id'        => 'content-panel-default-heading-background-color-top',
 			'label'     => __('Heading Background Color (Top)', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'color',
@@ -291,8 +291,8 @@ class MainCustomizer extends AbstractCustomizer
 			'transport' => 'postMessage',
 		);
 
-		$options['main-panel-default-heading-background-color-bottom'] = array(
-			'id'        => 'main-panel-default-heading-background-color-bottom',
+		$options['content-panel-default-heading-background-color-bottom'] = array(
+			'id'        => 'content-panel-default-heading-background-color-bottom',
 			'label'     => __('Heading Background Color (Bottom)', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'color',
@@ -300,8 +300,8 @@ class MainCustomizer extends AbstractCustomizer
 			'transport' => 'postMessage',
 		);
 
-		$options['main-panel-default-heading-border-color'] = array(
-			'id'        => 'main-panel-default-heading-border-color',
+		$options['content-panel-default-heading-border-color'] = array(
+			'id'        => 'content-panel-default-heading-border-color',
 			'label'     => __('Heading Border Color', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'color',
@@ -309,8 +309,8 @@ class MainCustomizer extends AbstractCustomizer
 			'transport' => 'postMessage',
 		);
 
-		$options['main-panel-default-title-color'] = array(
-			'id'        => 'main-panel-default-title-color',
+		$options['content-panel-default-title-color'] = array(
+			'id'        => 'content-panel-default-title-color',
 			'label'     => __('Title Color', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'color',
@@ -318,7 +318,7 @@ class MainCustomizer extends AbstractCustomizer
 			'transport' => 'postMessage',
 		);
 
-		$section = 'main-button';
+		$section = 'content-button';
 
 		$sections[] = array(
 			'id'       => $section,
@@ -327,8 +327,8 @@ class MainCustomizer extends AbstractCustomizer
 			'panel'    => $panel
 		);
 
-		$options['main-button-buy-background-color'] = array(
-			'id'        => 'main-button-buy-background-color',
+		$options['content-button-buy-background-color'] = array(
+			'id'        => 'content-button-buy-background-color',
 			'label'     => __('Buy Background Color', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'color',
@@ -336,8 +336,8 @@ class MainCustomizer extends AbstractCustomizer
 			'transport' => 'postMessage',
 		);
 
-		$options['main-button-buy-background-color-hover'] = array(
-			'id'        => 'main-button-buy-background-color-hover',
+		$options['content-button-buy-background-color-hover'] = array(
+			'id'        => 'content-button-buy-background-color-hover',
 			'label'     => __('Buy Background Color (Hover)', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'color',
@@ -345,8 +345,8 @@ class MainCustomizer extends AbstractCustomizer
 			'transport' => 'postMessage',
 		);
 
-		$options['main-button-buy-border-color'] = array(
-			'id'        => 'main-button-buy-border-color',
+		$options['content-button-buy-border-color'] = array(
+			'id'        => 'content-button-buy-border-color',
 			'label'     => __('Buy Border Color', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'color',
@@ -354,8 +354,8 @@ class MainCustomizer extends AbstractCustomizer
 			'transport' => 'postMessage',
 		);
 
-		$options['main-button-buy-text-color'] = array(
-			'id'        => 'main-button-buy-text-color',
+		$options['content-button-buy-text-color'] = array(
+			'id'        => 'content-button-buy-text-color',
 			'label'     => __('Buy Text Color', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'color',
@@ -365,8 +365,8 @@ class MainCustomizer extends AbstractCustomizer
 
 
 
-		$options['main-button-review-background-color'] = array(
-			'id'        => 'main-button-review-background-color',
+		$options['content-button-review-background-color'] = array(
+			'id'        => 'content-button-review-background-color',
 			'label'     => __('Review Background Color', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'color',
@@ -374,8 +374,8 @@ class MainCustomizer extends AbstractCustomizer
 			'transport' => 'postMessage',
 		);
 
-		$options['main-button-review-background-color-hover'] = array(
-			'id'        => 'main-button-review-background-color-hover',
+		$options['content-button-review-background-color-hover'] = array(
+			'id'        => 'content-button-review-background-color-hover',
 			'label'     => __('Review Background Color (Hover)', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'color',
@@ -383,8 +383,8 @@ class MainCustomizer extends AbstractCustomizer
 			'transport' => 'postMessage',
 		);
 
-		$options['main-button-review-border-color'] = array(
-			'id'        => 'main-button-review-border-color',
+		$options['content-button-review-border-color'] = array(
+			'id'        => 'content-button-review-border-color',
 			'label'     => __('Review Border Color', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'color',
@@ -392,8 +392,8 @@ class MainCustomizer extends AbstractCustomizer
 			'transport' => 'postMessage',
 		);
 
-		$options['main-button-review-text-color'] = array(
-			'id'        => 'main-button-review-text-color',
+		$options['content-button-review-text-color'] = array(
+			'id'        => 'content-button-review-text-color',
 			'label'     => __('Review Text Color', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'color',
@@ -413,7 +413,7 @@ class MainCustomizer extends AbstractCustomizer
 	 */
 	public function render()
 	{
-		$this->renderSelectors('main-product-current-price-color', function ($mod) {
+		$this->renderSelectors('content-product-current-price-color', function ($mod) {
 			$color = sanitize_hex_color($mod);
 
 			return array(
@@ -427,7 +427,7 @@ class MainCustomizer extends AbstractCustomizer
 			);
 		});
 
-		$this->renderSelectors('main-product-old-price-color', function ($mod) {
+		$this->renderSelectors('content-product-old-price-color', function ($mod) {
 			$color = sanitize_hex_color($mod);
 
 			return array(
@@ -440,7 +440,7 @@ class MainCustomizer extends AbstractCustomizer
 			);
 		});
 
-		$this->renderSelectors('main-product-star-rating-color', function ($mod) {
+		$this->renderSelectors('content-product-star-rating-color', function ($mod) {
 			$color = sanitize_hex_color($mod);
 
 			return array(
@@ -453,7 +453,7 @@ class MainCustomizer extends AbstractCustomizer
 			);
 		});
 
-		$this->renderSelectors('main-product-details-background-color-odd', function ($mod) {
+		$this->renderSelectors('content-product-details-background-color-odd', function ($mod) {
 			$color = sanitize_hex_color($mod);
 
 			return array(
@@ -466,7 +466,7 @@ class MainCustomizer extends AbstractCustomizer
 			);
 		});
 
-		$this->renderSelectors('main-product-details-background-color-even', function ($mod) {
+		$this->renderSelectors('content-product-details-background-color-even', function ($mod) {
 			$color = sanitize_hex_color($mod);
 
 			return array(
@@ -479,7 +479,7 @@ class MainCustomizer extends AbstractCustomizer
 			);
 		});
 
-		$this->renderSelectors('main-product-details-border-color', function ($mod) {
+		$this->renderSelectors('content-product-details-border-color', function ($mod) {
 			$color = sanitize_hex_color($mod);
 
 			return array(
@@ -492,7 +492,7 @@ class MainCustomizer extends AbstractCustomizer
 			);
 		});
 
-		$this->renderSelectors('main-alert-success-link-color-hover', function ($mod) {
+		$this->renderSelectors('content-alert-success-link-color-hover', function ($mod) {
 			$color = sanitize_hex_color($mod);
 
 			return array(
@@ -505,7 +505,7 @@ class MainCustomizer extends AbstractCustomizer
 			);
 		});
 
-		$this->renderSelectors('main-alert-success-border-color', function ($mod) {
+		$this->renderSelectors('content-alert-success-border-color', function ($mod) {
 			$color = sanitize_hex_color($mod);
 
 			return array(
@@ -518,7 +518,7 @@ class MainCustomizer extends AbstractCustomizer
 			);
 		});
 
-		$this->renderSelectors('main-alert-success-background-color', function ($mod) {
+		$this->renderSelectors('content-alert-success-background-color', function ($mod) {
 			$color = sanitize_hex_color($mod);
 
 			return array(
@@ -531,7 +531,7 @@ class MainCustomizer extends AbstractCustomizer
 			);
 		});
 
-		$this->renderSelectors('main-alert-success-text-color', function ($mod) {
+		$this->renderSelectors('content-alert-success-text-color', function ($mod) {
 			$color = sanitize_hex_color($mod);
 
 			return array(
@@ -544,7 +544,7 @@ class MainCustomizer extends AbstractCustomizer
 			);
 		});
 
-		$this->renderSelectors('main-alert-success-link-color', function ($mod) {
+		$this->renderSelectors('content-alert-success-link-color', function ($mod) {
 			$color = sanitize_hex_color($mod);
 
 			return array(
@@ -557,7 +557,7 @@ class MainCustomizer extends AbstractCustomizer
 			);
 		});
 
-		$this->renderSelectors('main-alert-info-background-color', function ($mod) {
+		$this->renderSelectors('content-alert-info-background-color', function ($mod) {
 			$color = sanitize_hex_color($mod);
 
 			return array(
@@ -570,7 +570,7 @@ class MainCustomizer extends AbstractCustomizer
 			);
 		});
 
-		$this->renderSelectors('main-alert-info-text-color', function ($mod) {
+		$this->renderSelectors('content-alert-info-text-color', function ($mod) {
 			$color = sanitize_hex_color($mod);
 
 			return array(
@@ -583,7 +583,7 @@ class MainCustomizer extends AbstractCustomizer
 			);
 		});
 
-		$this->renderSelectors('main-alert-info-link-color', function ($mod) {
+		$this->renderSelectors('content-alert-info-link-color', function ($mod) {
 			$color = sanitize_hex_color($mod);
 
 			return array(
@@ -596,7 +596,7 @@ class MainCustomizer extends AbstractCustomizer
 			);
 		});
 
-		$this->renderSelectors('main-alert-info-link-color-hover', function ($mod) {
+		$this->renderSelectors('content-alert-info-link-color-hover', function ($mod) {
 			$color = sanitize_hex_color($mod);
 
 			return array(
@@ -609,7 +609,7 @@ class MainCustomizer extends AbstractCustomizer
 			);
 		});
 
-		$this->renderSelectors('main-alert-info-border-color', function ($mod) {
+		$this->renderSelectors('content-alert-info-border-color', function ($mod) {
 			$color = sanitize_hex_color($mod);
 
 			return array(
@@ -622,7 +622,7 @@ class MainCustomizer extends AbstractCustomizer
 			);
 		});
 
-		$this->renderSelectors('main-alert-warning-background-color', function ($mod) {
+		$this->renderSelectors('content-alert-warning-background-color', function ($mod) {
 			$color = sanitize_hex_color($mod);
 
 			return array(
@@ -635,7 +635,7 @@ class MainCustomizer extends AbstractCustomizer
 			);
 		});
 
-		$this->renderSelectors('main-alert-warning-text-color', function ($mod) {
+		$this->renderSelectors('content-alert-warning-text-color', function ($mod) {
 			$color = sanitize_hex_color($mod);
 
 			return array(
@@ -648,7 +648,7 @@ class MainCustomizer extends AbstractCustomizer
 			);
 		});
 
-		$this->renderSelectors('main-alert-warning-link-color', function ($mod) {
+		$this->renderSelectors('content-alert-warning-link-color', function ($mod) {
 			$color = sanitize_hex_color($mod);
 
 			return array(
@@ -661,7 +661,7 @@ class MainCustomizer extends AbstractCustomizer
 			);
 		});
 
-		$this->renderSelectors('main-alert-warning-link-color-hover', function ($mod) {
+		$this->renderSelectors('content-alert-warning-link-color-hover', function ($mod) {
 			$color = sanitize_hex_color($mod);
 
 			return array(
@@ -674,7 +674,7 @@ class MainCustomizer extends AbstractCustomizer
 			);
 		});
 
-		$this->renderSelectors('main-alert-warning-border-color', function ($mod) {
+		$this->renderSelectors('content-alert-warning-border-color', function ($mod) {
 			$color = sanitize_hex_color($mod);
 
 			return array(
@@ -688,7 +688,7 @@ class MainCustomizer extends AbstractCustomizer
 		});
 
 
-		$this->renderSelectors('main-alert-danger-background-color', function ($mod) {
+		$this->renderSelectors('content-alert-danger-background-color', function ($mod) {
 			$color = sanitize_hex_color($mod);
 
 			return array(
@@ -701,7 +701,7 @@ class MainCustomizer extends AbstractCustomizer
 			);
 		});
 
-		$this->renderSelectors('main-alert-danger-text-color', function ($mod) {
+		$this->renderSelectors('content-alert-danger-text-color', function ($mod) {
 			$color = sanitize_hex_color($mod);
 
 			return array(
@@ -714,7 +714,7 @@ class MainCustomizer extends AbstractCustomizer
 			);
 		});
 
-		$this->renderSelectors('main-alert-danger-link-color', function ($mod) {
+		$this->renderSelectors('content-alert-danger-link-color', function ($mod) {
 			$color = sanitize_hex_color($mod);
 
 			return array(
@@ -727,7 +727,7 @@ class MainCustomizer extends AbstractCustomizer
 			);
 		});
 
-		$this->renderSelectors('main-alert-danger-link-color-hover', function ($mod) {
+		$this->renderSelectors('content-alert-danger-link-color-hover', function ($mod) {
 			$color = sanitize_hex_color($mod);
 
 			return array(
@@ -740,7 +740,7 @@ class MainCustomizer extends AbstractCustomizer
 			);
 		});
 
-		$this->renderSelectors('main-alert-danger-border-color', function ($mod) {
+		$this->renderSelectors('content-alert-danger-border-color', function ($mod) {
 			$color = sanitize_hex_color($mod);
 
 			return array(
@@ -754,8 +754,8 @@ class MainCustomizer extends AbstractCustomizer
 		});
 
 		$this->renderSelectors(
-			'main-panel-default-heading-background-color-top',
-			'main-panel-default-heading-background-color-bottom',
+			'content-panel-default-heading-background-color-top',
+			'content-panel-default-heading-background-color-bottom',
 			function ($mod1, $mod2) {
 				$top    = sanitize_hex_color($mod1);
 				$bottom = sanitize_hex_color($mod2);
@@ -787,7 +787,7 @@ class MainCustomizer extends AbstractCustomizer
 			}
 		);
 
-		$this->renderSelectors('main-panel-default-heading-border-color', function ($mod) {
+		$this->renderSelectors('content-panel-default-heading-border-color', function ($mod) {
 			$color = sanitize_hex_color($mod);
 
 			return array(
@@ -800,7 +800,7 @@ class MainCustomizer extends AbstractCustomizer
 			);
 		});
 
-		$this->renderSelectors('main-panel-default-title-color', function ($mod) {
+		$this->renderSelectors('content-panel-default-title-color', function ($mod) {
 			$color = sanitize_hex_color($mod);
 
 			return array(
@@ -820,7 +820,7 @@ class MainCustomizer extends AbstractCustomizer
 
 
 
-		$this->renderSelectors('main-panel-default-heading-border-color', function ($mod) {
+		$this->renderSelectors('content-panel-default-heading-border-color', function ($mod) {
 			$color = sanitize_hex_color($mod);
 
 			return array(
@@ -833,7 +833,7 @@ class MainCustomizer extends AbstractCustomizer
 			);
 		});
 
-		$this->renderSelectors('main-panel-default-heading-border-color', function ($mod) {
+		$this->renderSelectors('content-panel-default-heading-border-color', function ($mod) {
 			$color = sanitize_hex_color($mod);
 
 			return array(
@@ -846,7 +846,7 @@ class MainCustomizer extends AbstractCustomizer
 			);
 		});
 
-		$this->renderSelectors('main-panel-default-heading-border-color', function ($mod) {
+		$this->renderSelectors('content-panel-default-heading-border-color', function ($mod) {
 			$color = sanitize_hex_color($mod);
 
 			return array(
@@ -859,7 +859,7 @@ class MainCustomizer extends AbstractCustomizer
 			);
 		});
 
-		$this->renderSelectors('main-button-buy-background-color', function ($mod) {
+		$this->renderSelectors('content-button-buy-background-color', function ($mod) {
 			$color = sanitize_hex_color($mod);
 
 			return array(
@@ -872,7 +872,7 @@ class MainCustomizer extends AbstractCustomizer
 			);
 		});
 
-		$this->renderSelectors('main-button-buy-background-color-hover', function ($mod) {
+		$this->renderSelectors('content-button-buy-background-color-hover', function ($mod) {
 			$color = sanitize_hex_color($mod);
 
 			return array(
@@ -885,7 +885,7 @@ class MainCustomizer extends AbstractCustomizer
 			);
 		});
 
-		$this->renderSelectors('main-button-buy-border-color', function ($mod) {
+		$this->renderSelectors('content-button-buy-border-color', function ($mod) {
 			$color = sanitize_hex_color($mod);
 
 			return array(
@@ -898,7 +898,7 @@ class MainCustomizer extends AbstractCustomizer
 			);
 		});
 
-		$this->renderSelectors('main-button-buy-text-color', function ($mod) {
+		$this->renderSelectors('content-button-buy-text-color', function ($mod) {
 			$color = sanitize_hex_color($mod);
 
 			return array(
@@ -912,7 +912,7 @@ class MainCustomizer extends AbstractCustomizer
 		});
 
 
-		$this->renderSelectors('main-button-review-background-color', function ($mod) {
+		$this->renderSelectors('content-button-review-background-color', function ($mod) {
 			$color = sanitize_hex_color($mod);
 
 			return array(
@@ -925,7 +925,7 @@ class MainCustomizer extends AbstractCustomizer
 			);
 		});
 
-		$this->renderSelectors('main-button-review-background-color-hover', function ($mod) {
+		$this->renderSelectors('content-button-review-background-color-hover', function ($mod) {
 			$color = sanitize_hex_color($mod);
 
 			return array(
@@ -938,7 +938,7 @@ class MainCustomizer extends AbstractCustomizer
 			);
 		});
 
-		$this->renderSelectors('main-button-review-border-color', function ($mod) {
+		$this->renderSelectors('content-button-review-border-color', function ($mod) {
 			$color = sanitize_hex_color($mod);
 
 			return array(
@@ -951,7 +951,7 @@ class MainCustomizer extends AbstractCustomizer
 			);
 		});
 
-		$this->renderSelectors('main-button-review-text-color', function ($mod) {
+		$this->renderSelectors('content-button-review-text-color', function ($mod) {
 			$color = sanitize_hex_color($mod);
 
 			return array(

@@ -121,35 +121,35 @@ declare var wp:any;
 
     wp.customize('typography-headline-color', function (value) {
         value.bind(function (color) {
-            var headlines = $('main h1, main h2, main h3, main h4, main h5, main h6');
+            var headlines = $('content h1, main h2, main h3, main h4, main h5, main h6');
             headlines.css('color', color);
         });
     });
 
     wp.customize('typography-text-font-family', function (value) {
         value.bind(function (font) {
-            var text = $('main, main p, main span, main li, main time');
+            var text = $('content, main p, main span, main li, main time');
             text.css('font-family', font);
         });
     });
 
     wp.customize('typography-text-color', function (value) {
         value.bind(function (color) {
-            var text = $('main, main p, main span, main li, main time');
+            var text = $('content, main p, main span, main li, main time');
             text.css('color', color);
         });
     });
 
     wp.customize('typography-text-link-color', function (value) {
         value.bind(function (color) {
-            var link = $('main a:not(.price, .btn)');
+            var link = $('content a:not(.price, .btn)');
             link.css('color', color);
         });
     });
 
     wp.customize('typography-text-link-color-hover', function (value) {
         value.bind(function (color) {
-            $('main a:not(.price, .btn)').on('hover click focus', function(e) {
+            $('content a:not(.price, .btn)').on('hover click focus', function(e) {
                 var standart = wp.customize.instance('typography-text-link-color').get();
                 var link = $(this);
 
@@ -158,141 +158,141 @@ declare var wp:any;
         });
     });
 
-    wp.customize('main-alert-success-background-color', function (value) {
+    wp.customize('content-alert-success-background-color', function (value) {
         value.bind(function (color) {
             $('.alert.alert-success').css('background-color', color);
         });
     });
 
-    wp.customize('main-alert-success-text-color', function (value) {
+    wp.customize('content-alert-success-text-color', function (value) {
         value.bind(function (color) {
             $('.alert.alert-success').css('color', color);
         });
     });
 
-    wp.customize('main-alert-success-link-color', function (value) {
+    wp.customize('content-alert-success-link-color', function (value) {
         value.bind(function (color) {
             $('.alert.alert-success .alert-link').css('color', color);
         });
     });
 
-    wp.customize('main-alert-success-link-color-hover', function (value) {
+    wp.customize('content-alert-success-link-color-hover', function (value) {
         value.bind(function (color) {
             $('.alert.alert-success .alert-link').on('hover click focus', function(e) {
-                var standart = wp.customize.instance('main-alert-success-link-color').get();
+                var standart = wp.customize.instance('content-alert-success-link-color').get();
                 $(this).css('color', e.type === "mouseenter" ? color : standart);
             });
         });
     });
 
-    wp.customize('main-alert-success-border-color', function (value) {
+    wp.customize('content-alert-success-border-color', function (value) {
         value.bind(function (color) {
             $('.alert.alert-success').css('border-color', color);
         });
     });
 
-    wp.customize('main-alert-info-background-color', function (value) {
+    wp.customize('content-alert-info-background-color', function (value) {
         value.bind(function (color) {
             $('.alert.alert-info').css('background-color', color);
         });
     });
 
-    wp.customize('main-alert-info-text-color', function (value) {
+    wp.customize('content-alert-info-text-color', function (value) {
         value.bind(function (color) {
             $('.alert.alert-info').css('color', color);
         });
     });
 
-    wp.customize('main-alert-info-link-color', function (value) {
+    wp.customize('content-alert-info-link-color', function (value) {
         value.bind(function (color) {
             $('.alert.alert-info .alert-link').css('color', color);
         });
     });
 
-    wp.customize('main-alert-info-link-color-hover', function (value) {
+    wp.customize('content-alert-info-link-color-hover', function (value) {
         value.bind(function (color) {
             $('.alert.alert-info .alert-link').on('hover click focus', function(e) {
-                var standart = wp.customize.instance('main-alert-info-link-color').get();
+                var standart = wp.customize.instance('content-alert-info-link-color').get();
                 $(this).css('color', e.type === "mouseenter" ? color : standart);
             });
         });
     });
 
-    wp.customize('main-alert-info-border-color', function (value) {
+    wp.customize('content-alert-info-border-color', function (value) {
         value.bind(function (color) {
             $('.alert.alert-info').css('border-color', color);
         });
     });
 
-    wp.customize('main-alert-warning-background-color', function (value) {
+    wp.customize('content-alert-warning-background-color', function (value) {
         value.bind(function (color) {
             $('.alert.alert-warning').css('background-color', color);
         });
     });
 
-    wp.customize('main-alert-warning-text-color', function (value) {
+    wp.customize('content-alert-warning-text-color', function (value) {
         value.bind(function (color) {
             $('.alert.alert-warning').css('color', color);
         });
     });
 
-    wp.customize('main-alert-warning-link-color', function (value) {
+    wp.customize('content-alert-warning-link-color', function (value) {
         value.bind(function (color) {
             $('.alert.alert-warning .alert-link').css('color', color);
         });
     });
 
-    wp.customize('main-alert-warning-link-color-hover', function (value) {
+    wp.customize('content-alert-warning-link-color-hover', function (value) {
         value.bind(function (color) {
             $('.alert.alert-warning .alert-link').on('hover click focus', function(e) {
-                var standart = wp.customize.instance('main-alert-warning-link-color').get();
+                var standart = wp.customize.instance('content-alert-warning-link-color').get();
                 $(this).css('color', e.type === "mouseenter" ? color : standart);
             });
         });
     });
 
-    wp.customize('main-alert-warning-border-color', function (value) {
+    wp.customize('content-alert-warning-border-color', function (value) {
         value.bind(function (color) {
             $('.alert.alert-warning').css('border-color', color);
         });
     });
 
-    wp.customize('main-alert-danger-background-color', function (value) {
+    wp.customize('content-alert-danger-background-color', function (value) {
         value.bind(function (color) {
             $('.alert.alert-danger').css('background-color', color);
         });
     });
 
-    wp.customize('main-alert-danger-text-color', function (value) {
+    wp.customize('content-alert-danger-text-color', function (value) {
         value.bind(function (color) {
             $('.alert.alert-danger').css('color', color);
         });
     });
 
-    wp.customize('main-alert-danger-link-color', function (value) {
+    wp.customize('content-alert-danger-link-color', function (value) {
         value.bind(function (color) {
             $('.alert.alert-danger .alert-link').css('color', color);
         });
     });
 
-    wp.customize('main-alert-danger-link-color-hover', function (value) {
+    wp.customize('content-alert-danger-link-color-hover', function (value) {
         value.bind(function (color) {
             $('.alert.alert-danger .alert-link').on('hover click focus', function(e) {
-                var standart = wp.customize.instance('main-alert-danger-link-color').get();
+                var standart = wp.customize.instance('content-alert-danger-link-color').get();
                 $(this).css('color', e.type === "mouseenter" ? color : standart);
             });
         });
     });
 
-    wp.customize('main-alert-danger-border-color', function (value) {
+    wp.customize('content-alert-danger-border-color', function (value) {
         value.bind(function (color) {
             $('.alert.alert-danger').css('border-color', color);
         });
     });
 
-    wp.customize('main-panel-default-heading-background-color-top', function (value) {
+    wp.customize('content-panel-default-heading-background-color-top', function (value) {
         value.bind(function (top) {
-            var bottom = wp.customize.instance('main-panel-default-heading-background-color-bottom').get();
+            var bottom = wp.customize.instance('content-panel-default-heading-background-color-bottom').get();
 
             var panel = $('.panel.panel-default .panel-heading');
             panel.css('background-color', bottom);
@@ -303,9 +303,9 @@ declare var wp:any;
         });
     });
 
-    wp.customize('main-panel-default-heading-background-color-bottom', function (value) {
+    wp.customize('content-panel-default-heading-background-color-bottom', function (value) {
         value.bind(function (bottom) {
-            var top = wp.customize.instance('main-panel-default-heading-background-color-top').get();
+            var top = wp.customize.instance('content-panel-default-heading-background-color-top').get();
 
             var panel = $('.panel.panel-default .panel-heading');
             panel.css('background-color', bottom);
@@ -316,13 +316,13 @@ declare var wp:any;
         });
     });
 
-    wp.customize('main-panel-default-heading-border-color', function (value) {
+    wp.customize('content-panel-default-heading-border-color', function (value) {
         value.bind(function (color) {
             $('.panel.panel-default .panel-heading').css('border-color', color);
         });
     });
 
-    wp.customize('main-panel-default-title-color', function (value) {
+    wp.customize('content-panel-default-title-color', function (value) {
         value.bind(function (color) {
             $('.panel.panel-default .panel-heading h1,' +
               '.panel.panel-default .panel-heading h2,' +
@@ -333,55 +333,55 @@ declare var wp:any;
         });
     });
 
-    wp.customize('main-button-buy-background-color', function (value) {
+    wp.customize('content-button-buy-background-color', function (value) {
         value.bind(function (color) {
             $('.btn-buy').css('background-color', color);
         });
     });
 
-    wp.customize('main-button-buy-background-color-hover', function (value) {
+    wp.customize('content-button-buy-background-color-hover', function (value) {
         value.bind(function (color) {
             $('.btn-buy').on('hover focus', function(e) {
-                var fallback = wp.customize.instance('main-button-buy-background-color').get();
+                var fallback = wp.customize.instance('content-button-buy-background-color').get();
                 $(this).css('background-color', e.type === "mouseenter" ? color : fallback);
             });
         });
     });
 
-    wp.customize('main-button-buy-border-color', function (value) {
+    wp.customize('content-button-buy-border-color', function (value) {
         value.bind(function (color) {
             $('.btn-buy').css('border-color', color);
         });
     });
 
-    wp.customize('main-button-buy-text-color', function (value) {
+    wp.customize('content-button-buy-text-color', function (value) {
         value.bind(function (color) {
             $('.btn-buy').css('color', color);
         });
     });
 
-    wp.customize('main-button-review-background-color', function (value) {
+    wp.customize('content-button-review-background-color', function (value) {
         value.bind(function (color) {
             $('.btn-review').css('background-color', color);
         });
     });
 
-    wp.customize('main-button-review-background-color-hover', function (value) {
+    wp.customize('content-button-review-background-color-hover', function (value) {
         value.bind(function (color) {
             $('.btn-review').on('hover focus', function(e) {
-                var fallback = wp.customize.instance('main-button-review-background-color').get();
+                var fallback = wp.customize.instance('content-button-review-background-color').get();
                 $(this).css('background-color', e.type === "mouseenter" ? color : fallback);
             });
         });
     });
 
-    wp.customize('main-button-review-border-color', function (value) {
+    wp.customize('content-button-review-border-color', function (value) {
         value.bind(function (color) {
             $('.btn-review').css('border-color', color);
         });
     });
 
-    wp.customize('main-button-review-text-color', function (value) {
+    wp.customize('content-button-review-text-color', function (value) {
         value.bind(function (color) {
             $('.btn-review').css('color', color);
         });
@@ -685,42 +685,42 @@ declare var wp:any;
     });
 
     // Main
-    wp.customize('main-product-current-price-color', function (value) {
+    wp.customize('content-product-current-price-color', function (value) {
         value.bind(function (color) {
             var price = $('.current-price, .price');
             price.css('color', color);
         });
     });
 
-    wp.customize('main-product-old-price-color', function (value) {
+    wp.customize('content-product-old-price-color', function (value) {
         value.bind(function (color) {
             var price = $('.old-price');
             price.css('color', color);
         });
     });
 
-    wp.customize('main-product-star-rating-color', function (value) {
+    wp.customize('content-product-star-rating-color', function (value) {
         value.bind(function (color) {
             var starRating = $('.product-review-rating');
             starRating.css('color', color);
         });
     });
 
-    wp.customize('main-product-details-background-color-odd', function (value) {
+    wp.customize('content-product-details-background-color-odd', function (value) {
         value.bind(function (color) {
             var details = $('.product-details.table > tbody > tr:nth-child(odd)');
             details.css('background-color', color);
         });
     });
 
-    wp.customize('main-product-details-background-color-even', function (value) {
+    wp.customize('content-product-details-background-color-even', function (value) {
         value.bind(function (color) {
             var details = $('.product-details.table > tbody > tr:nth-child(even)');
             details.css('background-color', color);
         });
     });
 
-    wp.customize('main-product-details-border-color', function (value) {
+    wp.customize('content-product-details-border-color', function (value) {
         value.bind(function (color) {
             var border = $('.product-details.table > tbody > tr > td');
             border.css('border-color', color);

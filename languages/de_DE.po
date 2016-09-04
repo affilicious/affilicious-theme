@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-09-03 22:33+0200\n"
-"PO-Revision-Date: 2016-09-03 22:34+0200\n"
+"POT-Creation-Date: 2016-09-04 12:30+0200\n"
+"PO-Revision-Date: 2016-09-04 12:33+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -372,6 +372,180 @@ msgstr ""
 "Die ausgewählte Produkt Seitenleiste wird über der Haupt Seitenleiste "
 "gezeigt."
 
+#: src/Design/Domain/Customizer/ContentCustomizer.php:20
+msgid "Content"
+msgstr "Inhalt"
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:28
+msgid "Product"
+msgstr "Produkt"
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:35
+msgid "Current Price Color"
+msgstr "Aktuelle Preisfarbe"
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:44
+msgid "Old Price Color"
+msgstr "Alte Preisfarbe"
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:53
+msgid "Star Rating Color"
+msgstr "Sternebewertungsfarbe"
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:62
+msgid "Details Background Color (Odd)"
+msgstr "Details Hintergrundfarbe (Ungerade)"
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:71
+msgid "Details Background Color (Even)"
+msgstr "Details Hintergrundfarbe (Gerade)"
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:80
+msgid "Details Border Color"
+msgstr "Details Rahmenfarbe"
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:91
+msgid "Alert"
+msgstr "Alert"
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:98
+msgid "Success Background Color"
+msgstr "„Success“ Hintergrundfarbe"
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:107
+msgid "Success Text Color"
+msgstr "„Success“ Textfarbe"
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:116
+msgid "Success Link Color"
+msgstr "„Success“ Linkfarbe"
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:125
+msgid "Success Link Color (Hover)"
+msgstr "„Success“ Linkfarbe (Hover)"
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:134
+msgid "Success Border Color"
+msgstr "„Success“ Rahmenfarbe"
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:143
+msgid "Info Background Color"
+msgstr "„Info“ Hintergrundfarbe"
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:152
+msgid "Info Text Color"
+msgstr "„Info“ Textfarbe"
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:161
+msgid "Info Link Color"
+msgstr "„Info“ Linkfarbe"
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:170
+msgid "Info Link Color (Hover)"
+msgstr "„Info“ Linkfarbe (Hover)"
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:179
+msgid "Info Border Color"
+msgstr "„Info“ Rahmenfarbe"
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:188
+msgid "Warning Background Color"
+msgstr "„Warning“ Hintergrundfarbe"
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:197
+msgid "Warning Text Color"
+msgstr "„Warning“ Textfarbe"
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:206
+msgid "Warning Link Color"
+msgstr "„Warning“ Linkfarbe"
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:215
+msgid "Warning Link Color (Hover)"
+msgstr "„Warning“ Linkfarbe (Hover)"
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:224
+msgid "Warning Border Color"
+msgstr "„Warning“ Rahmenfarbe"
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:233
+msgid "Danger Background Color"
+msgstr "„Danger“ Hintergrundfarbe"
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:242
+msgid "Danger Text Color"
+msgstr "„Danger“ Textfarbe"
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:251
+msgid "Danger Link Color"
+msgstr "„Danger“ Linkfarbe"
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:260
+msgid "Danger Link Color (Hover)"
+msgstr "„Danger“ Linkfarbe (Hover)"
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:269
+msgid "Danger Border Color"
+msgstr "„Danger“ Rahmenfarbe"
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:280
+msgid "Panel"
+msgstr "Panel"
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:287
+msgid "Heading Background Color (Top)"
+msgstr "Kopfbereich Hintergrundfarbe (Oben)"
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:296
+msgid "Heading Background Color (Bottom)"
+msgstr "Kopfbereich Hintergrundfarbe (Unten)"
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:305
+msgid "Heading Border Color"
+msgstr "Kopfbereich Rahmenfarbe"
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:314
+#: src/Design/Domain/Customizer/FooterCustomizer.php:143
+#: src/Design/Domain/Customizer/HeaderCustomizer.php:132
+msgid "Title Color"
+msgstr "Titelfarbe"
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:325
+msgid "Button"
+msgstr "Button"
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:332
+msgid "Buy Background Color"
+msgstr "„Kaufen“ Hintergrundfarbe"
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:341
+msgid "Buy Background Color (Hover)"
+msgstr "„Kaufen“ Hintergrundfarbe (Hover)"
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:350
+msgid "Buy Border Color"
+msgstr "„Kaufen“ Rahmenfarbe"
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:359
+msgid "Buy Text Color"
+msgstr "„Kaufen“ Textfarbe"
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:370
+msgid "Review Background Color"
+msgstr "„Testbericht“ Hintergrundfarbe"
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:379
+msgid "Review Background Color (Hover)"
+msgstr "„Testbericht“ Hintergrundfarbe (Hover)"
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:388
+msgid "Review Border Color"
+msgstr "„Testbericht“ Rahmenfarbe"
+
+#: src/Design/Domain/Customizer/ContentCustomizer.php:397
+msgid "Review Text Color"
+msgstr "„Testbericht“ Textfarbe"
+
 #: src/Design/Domain/Customizer/FooterCustomizer.php:20
 msgid "Footer"
 msgstr "Footer"
@@ -422,24 +596,20 @@ msgstr "Textfarbe"
 #: src/Design/Domain/Customizer/FooterCustomizer.php:116
 #: src/Design/Domain/Customizer/FooterCustomizer.php:152
 #: src/Design/Domain/Customizer/HeaderCustomizer.php:224
+#: src/Design/Domain/Customizer/TypographyCustomizer.php:90
 msgid "Link Color"
 msgstr "Linkfarbe"
 
 #: src/Design/Domain/Customizer/FooterCustomizer.php:125
 #: src/Design/Domain/Customizer/FooterCustomizer.php:161
 #: src/Design/Domain/Customizer/HeaderCustomizer.php:233
+#: src/Design/Domain/Customizer/TypographyCustomizer.php:99
 msgid "Link Color (Hover)"
 msgstr "Linkfarbe (Hover)"
 
 #: src/Design/Domain/Customizer/FooterCustomizer.php:136
 msgid "Bottom Menu"
 msgstr "Unteres Menü"
-
-#: src/Design/Domain/Customizer/FooterCustomizer.php:143
-#: src/Design/Domain/Customizer/HeaderCustomizer.php:132
-#: src/Design/Domain/Customizer/MainCustomizer.php:314
-msgid "Title Color"
-msgstr "Titelfarbe"
 
 #: src/Design/Domain/Customizer/GeneralCustomizer.php:44
 #: src/Design/Domain/Customizer/HeaderCustomizer.php:53
@@ -634,177 +804,9 @@ msgstr ""
 "Lade ein Logo (Retina) für deine Seite hoch. The empfohlene Größe ist "
 "<b>800x200</b> Pixel, was 2 mal größer als das normale Logo ist."
 
-#: src/Design/Domain/Customizer/MainCustomizer.php:20
-msgid "Main"
-msgstr "Haupt"
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:28
-msgid "Product"
-msgstr "Produkt"
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:35
-msgid "Current Price Color"
-msgstr "Aktuelle Preisfarbe"
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:44
-msgid "Old Price Color"
-msgstr "Alte Preisfarbe"
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:53
-msgid "Star Rating Color"
-msgstr "Sternebewertungsfarbe"
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:62
-msgid "Details Background Color (Odd)"
-msgstr "Details Hintergrundfarbe (Ungerade)"
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:71
-msgid "Details Background Color (Even)"
-msgstr "Details Hintergrundfarbe (Gerade)"
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:80
-msgid "Details Border Color"
-msgstr "Details Rahmenfarbe"
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:91
-msgid "Alert"
-msgstr "Alert"
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:98
-msgid "Success Background Color"
-msgstr "„Success“ Hintergrundfarbe"
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:107
-msgid "Success Text Color"
-msgstr "„Success“ Textfarbe"
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:116
-msgid "Success Link Color"
-msgstr "„Success“ Linkfarbe"
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:125
-msgid "Success Link Color (Hover)"
-msgstr "„Success“ Linkfarbe (Hover)"
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:134
-msgid "Success Border Color"
-msgstr "„Success“ Rahmenfarbe"
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:143
-msgid "Info Background Color"
-msgstr "„Info“ Hintergrundfarbe"
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:152
-msgid "Info Text Color"
-msgstr "„Info“ Textfarbe"
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:161
-msgid "Info Link Color"
-msgstr "„Info“ Linkfarbe"
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:170
-msgid "Info Link Color (Hover)"
-msgstr "„Info“ Linkfarbe (Hover)"
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:179
-msgid "Info Border Color"
-msgstr "„Info“ Rahmenfarbe"
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:188
-msgid "Warning Background Color"
-msgstr "„Warning“ Hintergrundfarbe"
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:197
-msgid "Warning Text Color"
-msgstr "„Warning“ Textfarbe"
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:206
-msgid "Warning Link Color"
-msgstr "„Warning“ Linkfarbe"
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:215
-msgid "Warning Link Color (Hover)"
-msgstr "„Warning“ Linkfarbe (Hover)"
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:224
-msgid "Warning Border Color"
-msgstr "„Warning“ Rahmenfarbe"
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:233
-msgid "Danger Background Color"
-msgstr "„Danger“ Hintergrundfarbe"
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:242
-msgid "Danger Text Color"
-msgstr "„Danger“ Textfarbe"
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:251
-msgid "Danger Link Color"
-msgstr "„Danger“ Linkfarbe"
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:260
-msgid "Danger Link Color (Hover)"
-msgstr "„Danger“ Linkfarbe (Hover)"
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:269
-msgid "Danger Border Color"
-msgstr "„Danger“ Rahmenfarbe"
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:280
-msgid "Panel"
-msgstr "Panel"
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:287
-msgid "Heading Background Color (Top)"
-msgstr "Kopfbereich Hintergrundfarbe (Oben)"
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:296
-msgid "Heading Background Color (Bottom)"
-msgstr "Kopfbereich Hintergrundfarbe (Unten)"
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:305
-msgid "Heading Border Color"
-msgstr "Kopfbereich Rahmenfarbe"
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:325
-msgid "Button"
-msgstr "Button"
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:332
-msgid "Buy Background Color"
-msgstr "„Kaufen“ Hintergrundfarbe"
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:341
-msgid "Buy Background Color (Hover)"
-msgstr "„Kaufen“ Hintergrundfarbe (Hover)"
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:350
-msgid "Buy Border Color"
-msgstr "„Kaufen“ Rahmenfarbe"
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:359
-msgid "Buy Text Color"
-msgstr "„Kaufen“ Textfarbe"
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:370
-msgid "Review Background Color"
-msgstr "„Testbericht“ Hintergrundfarbe"
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:379
-msgid "Review Background Color (Hover)"
-msgstr "„Testbericht“ Hintergrundfarbe (Hover)"
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:388
-msgid "Review Border Color"
-msgstr "„Testbericht“ Rahmenfarbe"
-
-#: src/Design/Domain/Customizer/MainCustomizer.php:397
-msgid "Review Text Color"
-msgstr "„Testbericht“ Textfarbe"
-
 #: src/Design/Domain/Customizer/TypographyCustomizer.php:28
 msgid "Typography"
-msgstr "Schriften"
+msgstr "Typography"
 
 #: src/Design/Domain/Customizer/TypographyCustomizer.php:36
 msgid "Headline"
@@ -817,17 +819,12 @@ msgstr "Schriftfamilie"
 
 #: src/Design/Domain/Customizer/TypographyCustomizer.php:53
 #: src/Design/Domain/Customizer/TypographyCustomizer.php:81
-#: src/Design/Domain/Customizer/TypographyCustomizer.php:90
 msgid "Color"
 msgstr "Farbe"
 
 #: src/Design/Domain/Customizer/TypographyCustomizer.php:64
 msgid "Text"
 msgstr "Text"
-
-#: src/Design/Domain/Customizer/TypographyCustomizer.php:99
-msgid "Color (Hover)"
-msgstr "Farbe (Hover)"
 
 #: src/Design/Domain/Exception/ViewNotFoundException.php:15
 #, php-format
@@ -909,6 +906,12 @@ msgid ""
 msgstr ""
 "Das benötigte Affilicious Plugin wurde nicht gefunden. Bitte öffne deinen "
 "Admin Bereich und installiere das fehlende Plugin."
+
+#~ msgid "Main"
+#~ msgstr "Haupt"
+
+#~ msgid "Color (Hover)"
+#~ msgstr "Farbe (Hover)"
 
 #~ msgid "Main Navigation"
 #~ msgstr "Hauptnavigation"
