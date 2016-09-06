@@ -1,7 +1,7 @@
 === Affilicious Theme ===
 Requires at least: 4.5
 Tested up to: 4.6
-Stable tag: 0.4.1
+Stable tag: 0.4.2
 License: GPL-2.0
 License URI: https://opensource.org/licenses/GPL-2.0
 

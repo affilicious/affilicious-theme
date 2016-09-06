@@ -14,7 +14,7 @@ if (!defined('ABSPATH')) exit('Not allowed to access pages directly.');
 class AffiliciousTheme
 {
     const THEME_NAME = 'affilicious-theme';
-    const THEME_VERSION = '0.4.1';
+    const THEME_VERSION = '0.4.2';
     const THEME_NAMESPACE = 'Affilicious\\Theme\\';
     const THEME_STORE_URL = 'http://affilicioustheme.de';
     const THEME_ITEM_NAME = 'Affilicious Theme';
@@ -316,7 +316,7 @@ class AffiliciousTheme
                 'name'               => 'Affilicious',
                 'slug'               => 'affilicious',
                 'source'             => 'https://github.com/AlexBa/affilicious/archive/master.zip',
-	            'version'            => '0.5.1',
+	            'version'            => '0.5.2',
                 'required'           => true,
             ),
             array(
