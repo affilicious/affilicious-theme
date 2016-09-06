@@ -1,9 +1,10 @@
 <?php
-use Affilicious\Theme\Design\Domain\Helper\LayoutHelper;
 use Affilicious\Theme\Design\Domain\Helper\LogoHelper;
 use Affilicious\Theme\Design\Domain\Helper\MenuHelper;
 use Affilicious\Product\Domain\Helper\PostHelper;
 use Affilicious\Product\Domain\Model\Product;
+use Affilicious\Product\Domain\Model\Shop;
+use Affilicious\Product\Domain\Helper\ProductHelper;
 use Affilicious\Theme\Design\Application\Setup\SidebarSetup;
 use Affilicious\Theme\Design\Domain\Walker\BootstrapCommentWalker;
 
@@ -21,6 +22,24 @@ function affilicious_theme_check_requirements()
 		echo '<br><br><br>';
 		exit(__('Failed to find the required Affilicious plugin. Please open your admin area and install the missing plugin.', 'affilicious-theme'));
 	}
+}
+
+/**
+ * Get the used shop of the given product.
+ * If you pass in nothing as a product, the current post will be used.
+ * If you pass in nothing as a shop, the first shop will be used.
+ *
+ * @since 0.3
+ * @param int|\WP_Post|Product|null $productOrId
+ * @param int|\WP_Post|Shop|null $shopOrId
+ * @return array|null
+ */
+function affilicious_theme_get_product_shop($productOrId, $shopOrId)
+{
+	$product = affilicious_get_product($productOrId);
+	$shop = ProductHelper::getShop($product, $shopOrId);
+
+	return $shop;
 }
 
 /**

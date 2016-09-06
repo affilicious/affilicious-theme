@@ -1,7 +1,7 @@
 <table class="product-details table table-striped">
     <tbody>
-        <?php $affiliateLink = affilicious_get_product_affiliate_link($product); ?>
-        <?php $price = affilicious_get_product_price($product); ?>
+        <?php $affiliateLink = affilicious_get_product_cheapest_affiliate_link($product); ?>
+        <?php $price = affilicious_get_product_cheapest_price($product); ?>
         <?php if(!empty($price)): ?>
             <tr>
                 <td><?php _e('Price', 'affilicious-theme'); ?></td>
