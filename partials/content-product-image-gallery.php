@@ -1,7 +1,8 @@
 <?php if($imageGallery = affilicious_get_product_image_gallery($product)): ?>
     <?php $affiliateLink = affilicious_get_product_affiliate_link($product); ?>
+
     <div class="product-image-gallery">
-        <a href="<?php echo $affiliateLink; ?>">
+        <a href="<?php echo $affiliateLink; ?>" rel="nofollow" target="_blank">
             <div class="portfolio-slider">
                 <div class="slick-slider">
                     <?php foreach ($imageGallery as $image): ?>
@@ -23,11 +24,15 @@
         </a>
     </div>
 <?php else: ?>
+    <?php $affiliateLink = affilicious_get_product_affiliate_link($product); ?>
+
     <div class="product-thumbnail">
-        <?php if(has_post_thumbnail()): ?>
-            <?php the_post_thumbnail(); ?>
-        <?php else: ?>
-            <i class="fa fa-question-circle-o fa-2x"></i>
-        <?php endif; ?>
+        <a href="<?php echo $affiliateLink; ?>" rel="nofollow" target="_blank">
+            <?php if(has_post_thumbnail()): ?>
+                <?php the_post_thumbnail(); ?>
+            <?php else: ?>
+                <i class="fa fa-question-circle-o fa-2x"></i>
+            <?php endif; ?>
+        </a>
     </div>
 <?php endif; ?>

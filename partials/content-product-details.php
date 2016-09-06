@@ -7,7 +7,7 @@
                 <td><?php _e('Price', 'affilicious-theme'); ?></td>
                 <td>
                     <?php if(!empty($affiliateLink)): ?>
-                    <a class="price" href="<?php echo $affiliateLink; ?>" itemprop="price">
+                    <a class="price" href="<?php echo $affiliateLink; ?>" itemprop="price" rel="nofollow" target="_blank">
                         <?php echo $price; ?>
                     </a>
                     <?php else: ?>

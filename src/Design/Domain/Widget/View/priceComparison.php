@@ -24,7 +24,7 @@
                     <?php endif; ?>
                 </div>
                 <div class="shop-buy">
-                    <a class="btn btn-buy" href="<?php echo $shop['affiliate_link']; ?>">
+                    <a class="btn btn-buy" href="<?php echo $shop['affiliate_link']; ?>"  rel="nofollow" target="_blank">
                         <?php esc_html_e('Buy', 'affilicious-theme'); ?>
                     </a>
                 </div>
