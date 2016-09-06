@@ -44,8 +44,8 @@
                                             <h5><?php the_title(); ?></h5>
                                             <?php if($affiliateLink = affilicious_get_product_affiliate_link($relatedProductsQuery->post)): ?>
                                                 <p>
-                                                    <a href="<?php echo $affiliateLink; ?>"
-                                                       class="btn btn-buy center-block" role="button">
+                                                    <a href="<?php echo $affiliateLink; ?>" class="btn btn-buy center-block"
+                                                       role="button" rel="nofollow" target="_blank">
                                                         <?php _e('Buy', 'affilicious-theme'); ?>
                                                     </a>
                                                 </p>
@@ -81,8 +81,8 @@
                                             <h5><?php the_title(); ?></h5>
                                             <?php if($affiliateLink = affilicious_get_product_affiliate_link($relatedAccessoriesQuery->post)): ?>
                                                 <p>
-                                                    <a href="<?php echo $affiliateLink; ?>"
-                                                       class="btn btn-buy center-block" role="button">
+                                                    <a href="<?php echo $affiliateLink; ?>" class="btn btn-buy center-block"
+                                                       role="button" rel="nofollow" target="_blank">
                                                         <?php _e('Buy', 'affilicious-theme'); ?>
                                                     </a>
                                                 </p>
