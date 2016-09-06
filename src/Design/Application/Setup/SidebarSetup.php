@@ -52,9 +52,29 @@ class SidebarSetup implements SetupInterface
             ->set_priority('low')
             ->add_fields(array(
                 CarbonField::make('sidebar', self::PRODUCT_SIDEBAR, __('Select a Sidebar', 'affilicious-theme'))
+	                ->exclude_sidebars(MainSidebar::getId())
                     ->set_help_text(__('The selected product sidebar will be shown above the main sidebar.', 'affilicious-theme'))
             ));
 
         apply_filters('affilicious_product_render_sidebar', $carbonContainer);
+    }
+
+	/**
+	 * Set the default sidebar of the products
+	 *
+	 * @since 0.4.1
+	 */
+    public function setDefaultSidebar()
+    {
+	    $postId = !empty($_GET['post']) ? $_GET['post'] : null;
+	    $postId = empty($postId) && !empty($_POST['post_ID']) ? $_POST['post_ID'] : $postId;
+	    if(empty($postId) && get_post_type($postId) !== Product::POST_TYPE) {
+	    	return;
+	    }
+
+	    $sidebar = carbon_get_post_meta($postId, self::PRODUCT_SIDEBAR);
+	    if(empty($sidebar)) {
+			add_post_meta($postId, self::PRODUCT_SIDEBAR, ProductSidebar::getId());
+	    }
     }
 }

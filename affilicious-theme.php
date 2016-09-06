@@ -486,6 +486,10 @@ class AffiliciousTheme
         add_action('admin_enqueue_scripts', array($assetSetup, 'addAdminStyles'));
         add_action('admin_enqueue_scripts', array($assetSetup, 'addAdminScripts'));
 	    add_action('customize_preview_init', array($assetSetup, 'addCustomizerScripts'));
+
+	    // Hook the sidebars
+	    $sidebarSetup = $this->container['affilicious.theme.design.setup.sidebar'];
+	    add_action('admin_init', array($sidebarSetup, 'setDefaultSidebar'), 0);
     }
 
 	/**
