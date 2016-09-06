@@ -5,7 +5,7 @@ Stable tag: 0.4.1
 License: GPL-2.0
 License URI: https://opensource.org/licenses/GPL-2.0
 
-Official Affilicious Theme for Wordpress with product managment, price comparisons, details and more.
+Official Affilicious Theme for Wordpress with product management, price comparisons, details and more.
 
 == Changelog ==
 = 0.4.2 =
@@ -14,3 +14,4 @@ Official Affilicious Theme for Wordpress with product managment, price compariso
 * Added affiliate links to the product image gallery
 * Changed the product sidebar to the default one
 * Many optimizations and cleanups
+* Added Gulp for easier and faster development

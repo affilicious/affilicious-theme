@@ -27,4 +27,5 @@
         content.css('margin-top', (containerHeight - contentHeight) / 2);
     }
 })(jQuery, ResponsiveBootstrapToolkit);
+
 //# sourceMappingURL=script.js.map
