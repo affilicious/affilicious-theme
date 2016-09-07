@@ -35,29 +35,43 @@
                 <?php if(!empty($relatedProductsQuery) && $relatedProductsQuery->have_posts()): ?>
                     <div class="row">
                         <?php while($relatedProductsQuery->have_posts()): $relatedProductsQuery->the_post(); ?>
+                        <?php $affiliateLink = affilicious_get_product_affiliate_link($relatedProductsQuery->post); ?>
+
                             <div class="col-md-4">
-                                <a href="<?php echo affilicious_get_product_link($relatedProductsQuery->post); ?>" rel="bookmark"
-                                   title="<?php echo sprintf(__('Link to %s', 'affilicious-theme'), the_title_attribute()); ?>" itemprop="isRelatedTo">
-                                    <div class="thumbnail">
+                                <div class="thumbnail">
+
+                                    <?php if(has_post_thumbnail()): ?>
+                                        <?php $linkPreviewImage = affilicious_theme_link_product_preview_image(); ?>
+
+                                        <?php if($linkPreviewImage): ?>
+                                            <a href="<?php echo $affiliateLink; ?>" rel="bookmark"
+                                               title="<?php echo sprintf(__('Link to %s', 'affilicious-theme'), the_title_attribute()); ?>" itemprop="isRelatedTo">
+                                        <?php endif; ?>
+
                                         <img src="<?php the_post_thumbnail_url(array(200, 200)); ?>">
-                                        <div class="caption">
-                                            <h5><?php the_title(); ?></h5>
-                                            <?php if($affiliateLink = affilicious_get_product_affiliate_link($relatedProductsQuery->post)): ?>
-                                                <p>
-                                                    <a href="<?php echo $affiliateLink; ?>" class="btn btn-buy center-block"
-                                                       role="button" rel="nofollow" target="_blank">
-                                                        <?php _e('Buy', 'affilicious-theme'); ?>
-                                                    </a>
-                                                </p>
-                                            <?php endif; ?>
+
+                                        <?php if($linkPreviewImage): ?>
+                                            </a>
+                                        <?php endif; ?>
+                                    <?php endif; ?>
+
+                                    <div class="caption">
+                                        <h5><?php the_title(); ?></h5>
+                                        <?php if(!empty($affiliateLink)): ?>
                                             <p>
-                                                <a href="<?php the_permalink() ?>" class="btn btn-review center-block" role="button">
-                                                    <?php _e('To The Test Report', 'affilicious-theme'); ?>
+                                                <a href="<?php echo $affiliateLink; ?>" class="btn btn-buy center-block"
+                                                   role="button" rel="nofollow" target="_blank">
+                                                    <?php _e('Buy', 'affilicious-theme'); ?>
                                                 </a>
                                             </p>
-                                        </div>
+                                        <?php endif; ?>
+                                        <p>
+                                            <a href="<?php the_permalink() ?>" class="btn btn-review center-block" role="button">
+                                                <?php _e('To The Test Report', 'affilicious-theme'); ?>
+                                            </a>
+                                        </p>
                                     </div>
-                                </a>
+                                </div>
                             </div>
                         <?php endwhile; ?>
                     </div>
@@ -71,30 +85,43 @@
                 <?php if(!empty($relatedAccessoriesQuery) && $relatedAccessoriesQuery->have_posts()): ?>
                     <div class="row">
                         <?php while($relatedAccessoriesQuery->have_posts()): $relatedAccessoriesQuery->the_post(); ?>
+                            <?php $affiliateLink = affilicious_get_product_link($relatedAccessoriesQuery->post); ?>
 
                             <div class="col-md-4">
-                                <a href="<?php echo affilicious_get_product_link($relatedAccessoriesQuery->post); ?>" rel="bookmark"
-                                   title="<?php echo sprintf(__('Link to %s', 'affilicious-theme'), the_title_attribute()); ?>">
-                                    <div class="thumbnail">
+                                <div class="thumbnail">
+
+                                    <?php if(has_post_thumbnail()): ?>
+                                        <?php $linkPreviewImage = affilicious_theme_link_product_preview_image(); ?>
+
+                                        <?php if($linkPreviewImage): ?>
+                                            <a href="<?php echo $affiliateLink; ?>" rel="bookmark"
+                                            title="<?php echo sprintf(__('Link to %s', 'affilicious-theme'), the_title_attribute()); ?>" itemprop="isRelatedTo">
+                                        <?php endif; ?>
+
                                         <img src="<?php the_post_thumbnail_url(array(200, 200)); ?>">
-                                        <div class="caption">
-                                            <h5><?php the_title(); ?></h5>
-                                            <?php if($affiliateLink = affilicious_get_product_affiliate_link($relatedAccessoriesQuery->post)): ?>
-                                                <p>
-                                                    <a href="<?php echo $affiliateLink; ?>" class="btn btn-buy center-block"
-                                                       role="button" rel="nofollow" target="_blank">
-                                                        <?php _e('Buy', 'affilicious-theme'); ?>
-                                                    </a>
-                                                </p>
-                                            <?php endif; ?>
+
+                                        <?php if($linkPreviewImage): ?>
+                                            </a>
+                                        <?php endif; ?>
+                                    <?php endif; ?>
+
+                                    <div class="caption">
+                                        <h5><?php the_title(); ?></h5>
+                                        <?php if(!empty($affiliateLink)): ?>
                                             <p>
-                                                <a href="<?php the_permalink() ?>" class="btn btn-review center-block" role="button">
-                                                    <?php _e('To The Test Report', 'affilicious-theme'); ?>
+                                                <a href="<?php echo $affiliateLink; ?>" class="btn btn-buy center-block"
+                                                   role="button" rel="nofollow" target="_blank">
+                                                    <?php _e('Buy', 'affilicious-theme'); ?>
                                                 </a>
                                             </p>
-                                        </div>
+                                        <?php endif; ?>
+                                        <p>
+                                            <a href="<?php the_permalink() ?>" class="btn btn-review center-block" role="button">
+                                                <?php _e('To The Test Report', 'affilicious-theme'); ?>
+                                            </a>
+                                        </p>
                                     </div>
-                                </a>
+                                </div>
                             </div>
                         <?php endwhile; ?>
                     </div>

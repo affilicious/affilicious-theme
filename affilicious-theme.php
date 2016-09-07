@@ -7,6 +7,7 @@ use Affilicious\Theme\Design\Application\Setup\WidgetSetup;
 use Affilicious\Theme\Design\Domain\Shortcode\AlertShortcode;
 use Affilicious\Theme\Design\Application\Setup\CommentSetup;
 use Affilicious\Theme\Design\Application\Setup\CustomizerSetup;
+use Affilicious\Theme\Settings\Application\Setting\DesignSettings;
 use Pimple\Container;
 
 if (!defined('ABSPATH')) exit('Not allowed to access pages directly.');
@@ -302,6 +303,10 @@ class AffiliciousTheme
 		$this->container['affilicious.theme.design.setup.widget'] = function () {
 			return new WidgetSetup();
 		};
+
+		$this->container['affilicious.theme.settings.setting.design'] = function () {
+			return new DesignSettings();
+		};
 	}
 
     /**
@@ -490,6 +495,11 @@ class AffiliciousTheme
 	    // Hook the sidebars
 	    $sidebarSetup = $this->container['affilicious.theme.design.setup.sidebar'];
 	    add_action('admin_init', array($sidebarSetup, 'setDefaultSidebar'), 0);
+
+	    // Hook the settings
+	    $designSettings = $this->container['affilicious.theme.settings.setting.design'];
+	    add_action('init', array($designSettings, 'render'), 100);
+	    add_action('init', array($designSettings, 'apply'), 101);
     }
 
 	/**

@@ -7,6 +7,7 @@ use Affilicious\Product\Domain\Model\Shop;
 use Affilicious\Product\Domain\Helper\ProductHelper;
 use Affilicious\Theme\Design\Application\Setup\SidebarSetup;
 use Affilicious\Theme\Design\Domain\Walker\BootstrapCommentWalker;
+use Affilicious\Theme\Settings\Application\Setting\DesignSettings;
 
 /**
  * Check if every requirement like the main plugin is installed correctly
@@ -266,4 +267,50 @@ function affilicious_theme_list_comments($args = array())
 	));
 
 	wp_list_comments($args);
+}
+
+/**
+ * Check if we have to link the product image gallerie with an affiliate link
+ *
+ * @since 0.4.2
+ * @return bool
+ */
+function affilicious_theme_link_product_image_gallery()
+{
+	$raw = carbon_get_theme_option(DesignSettings::SETTING_PRODUCT_IMAGE_GALLERY_CLICK_ACTION);
+	$result = $raw === 'open_shop' ? true : false;
+
+	return $result;
+}
+
+/**
+ * Check if we have to link the product preview image with an affiliate link
+ *
+ * @since 0.4.2
+ * @return bool
+ */
+function affilicious_theme_link_product_preview_image()
+{
+	$raw = carbon_get_theme_option(DesignSettings::SETTING_PRODUCT_PREVIEW_IMAGE_CLICK_ACTION);
+	$result = $raw === 'open_shop' ? true : false;
+
+	return $result;
+}
+
+/**
+ * Check if the post has the current post type
+ *
+ * @since 0.4.2
+ * @param $type
+ * @return bool
+ */
+function affilicious_theme_is_post_type($type)
+{
+	global $wp_query;
+
+	if($type == get_post_type($wp_query->post->ID)) {
+		return true;
+	}
+
+	return false;
 }

@@ -2,11 +2,16 @@
          itemscope itemtype="http://schema.org/BlogPosting">
 
     <?php if (has_post_thumbnail()): ?>
-        <div class="entry-thumbnail" itemprop="image">
-            <a href="<?php echo esc_url(get_permalink()); ?>" rel="bookmark">
+        <?php if(affilicious_theme_is_post_type('product')): ?>
+            <?php $affiliateLink = affilicious_get_product_affiliate_link(); ?>
+            <?php $linkImageGallery = affilicious_theme_link_product_preview_image(); ?>
+        <?php endif; ?>
+
+        <a href="<?php echo !empty($linkImageGallery) && !empty($affiliateLink) ? $affiliateLink : esc_url(get_permalink()) ; ?>" rel="nofollow" target="_blank">
+            <div class="entry-thumbnail" itemprop="image">
                 <?php the_post_thumbnail(); ?>
-            </a>
-        </div>
+            </div>
+        </a>
     <?php endif; ?>
 
     <header class="entry-header">
