@@ -19,8 +19,6 @@
                         <p class="price-tax text-muted">
                             <?php _e('Including 19 % VAT', 'affilicious-theme'); ?>
                         </p>
-                    <?php else: ?>
-                        <p>lala</p>
                     <?php endif; ?>
                 </div>
                 <div class="shop-buy">
