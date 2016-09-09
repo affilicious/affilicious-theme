@@ -1,11 +1,13 @@
 {
-  "name": "alexba/affilicious-theme",
-  "license": "MIT",
+  "name": "affilicious/affilicious-theme",
+  "license": "GPL-2.0 or later",
   "type": "wordpress-theme",
   "keywords": [
     "wordpress",
     "theme",
-    "affiliate"
+    "affiliate",
+    "product",
+    "price comparison"
   ],
   "autoload": {
     "psr-4": {

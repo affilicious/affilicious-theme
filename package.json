@@ -3,7 +3,7 @@
   "version": "0.4.3",
   "description": "Official Affilicious Theme for Wordpress with product management, price comparisons, details and more.",
   "author": "Affilicious Team",
-  "license": "GPL-2.0",
+  "license": "GPL-2.0 or later",
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
