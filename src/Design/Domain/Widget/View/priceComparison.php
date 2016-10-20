@@ -6,15 +6,19 @@
         <?php foreach ($shops as $shop): ?>
             <div class="shop">
                 <div class="shop-thumbnail">
-                    <?php echo affilicious_get_shop_thumbnail($shop['shop_id']); ?>
+                    <?php if(isset($shop['thumbnail'])): ?>
+                        <?php echo wp_get_attachment_image($shop['thumbnail']['id'], 'small'); ?>
+                    <?php else: ?>
+                        <p><?php echo $shop['title']; ?></p>
+                    <?php endif; ?>
                 </div>
                 <div class="shop-price">
-                    <?php if($price = affilicious_get_price($shop['price'], $shop['currency'])): ?>
+                    <?php if($price = $shop['price']): ?>
                         <div class="price">
-                            <?php if($oldPrice = affilicious_get_price($shop['old_price'], $shop['currency'])): ?>
-                                <span class="old-price"><?php echo $oldPrice ?></span>
+                            <?php if($oldPrice = $shop['old_price']): ?>
+                                <span class="old-price"><?php echo $oldPrice['value'] . ' ' . $oldPrice['currency']['symbol'] ?></span>
                             <?php endif; ?>
-                            <span class="current-price"><?php echo $price; ?></span>
+                            <span class="current-price"><?php echo $price['value'] . ' ' . $price['currency']['symbol'] ?></span>
                         </div>
                         <p class="price-tax text-muted">
                             <?php _e('Including 19 % VAT', 'affilicious-theme'); ?>

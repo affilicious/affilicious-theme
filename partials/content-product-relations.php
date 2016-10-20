@@ -1,8 +1,8 @@
+<?php $product = affilicious_get_product(); ?>
 <?php $relatedProductsQuery = affilicious_get_product_related_products_query($product); ?>
 <?php $relatedAccessoriesQuery = affilicious_get_product_related_accessories_query($product); ?>
-<?php $relatedPostsQuery = affilicious_get_product_related_posts_query($product); ?>
 
-<?php if(!empty($relatedProductsQuery) || !empty($relatedAccessoriesQuery) || !empty($relatedPostsQuery)): ?>
+<?php if(!empty($relatedProductsQuery) || !empty($relatedAccessoriesQuery)): ?>
     <div class="panel">
 
         <ul class="nav nav-tabs nav-justified">
@@ -17,13 +17,6 @@
                 <li <?php if(empty($relatedProductsQuery)) echo 'class="active"'; ?>>
                     <a href="#related-accessories" data-toggle="tab">
                         <?php _e('Related accessories', 'affilicious-theme'); ?>
-                    </a>
-                </li>
-            <?php endif; ?>
-            <?php if(!empty($relatedPostsQuery)): ?>
-                <li <?php if(empty($relatedProductsQuery) && empty($relatedAccessoriesQuery)) echo 'class="active"'; ?>>
-                    <a href="#related-posts" data-toggle="tab">
-                        <?php _e('Related posts', 'affilicious-theme'); ?>
                     </a>
                 </li>
             <?php endif; ?>
@@ -122,34 +115,6 @@
                                         </p>
                                     </div>
                                 </div>
-                            </div>
-                        <?php endwhile; ?>
-                    </div>
-                    <?php wp_reset_query(); ?>
-                <?php endif; ?>
-            </div>
-            <?php endif; ?>
-
-            <?php if(!empty($relatedPostsQuery)): ?>
-                <div class="tab-pane fade <?php if(empty($relatedProductsQuery) && empty($relatedAccessoriesQuery)) echo 'in active'; ?>" id="related-posts">
-                <?php if(!empty($relatedPostsQuery) && $relatedPostsQuery->have_posts()): ?>
-                    <div class="row">
-                        <?php while($relatedPostsQuery->have_posts()): $relatedPostsQuery->the_post(); ?>
-                            <div class="col-md-4">
-                                <a href="<?php the_permalink() ?>" rel="bookmark"
-                                   title="<?php echo sprintf(__('Link to %s', 'affilicious-theme'), the_title_attribute()); ?>">
-                                    <div class="thumbnail">
-                                        <img src="<?php the_post_thumbnail_url(array(200, 200)); ?>">
-                                        <div class="caption">
-                                            <h5><?php the_title(); ?></h5>
-                                            <p>
-                                                <a href="<?php the_permalink() ?>" class="btn btn-review center-block" role="button">
-                                                    <?php _e('To The Post', 'affilicious-theme'); ?>
-                                                </a>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </a>
                             </div>
                         <?php endwhile; ?>
                     </div>

@@ -911,7 +911,7 @@ msgstr "Garnichts"
 #: src/Settings/Application/Setting/DesignSettings.php:25
 #: src/Settings/Application/Setting/DesignSettings.php:30
 msgid "Open the shop"
-msgstr "Shop öffnen"
+msgstr "ShopTemplate öffnen"
 
 #: src/Settings/Application/Setting/DesignSettings.php:27
 msgid "What will happen, if you click on the product preview image?"

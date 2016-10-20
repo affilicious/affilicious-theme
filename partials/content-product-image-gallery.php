@@ -1,3 +1,4 @@
+<?php $product = affilicious_get_product(); ?>
 <?php $affiliateLink = affilicious_get_product_affiliate_link($product); ?>
 
 <?php if($imageGallery = affilicious_get_product_image_gallery($product)): ?>
@@ -12,7 +13,7 @@
             <div class="slick-slider">
                 <?php foreach ($imageGallery as $image): ?>
                     <div class="slick-slider-item" itemprop="image">
-                        <?php echo wp_get_attachment_image($image, array(250, 250)); ?>
+                        <?php echo wp_get_attachment_image($image['id'], array(250, 250)); ?>
                     </div>
                 <?php endforeach; ?>
             </div>
@@ -25,7 +26,7 @@
             <div class="slick-slider">
                 <?php foreach ($imageGallery as $image): ?>
                     <div class="slick-slider-item">
-                        <?php echo wp_get_attachment_image($image, array(50, 50)); ?>
+                        <?php echo wp_get_attachment_image($image['id'], array(50, 50)); ?>
                     </div>
                 <?php endforeach; ?>
             </div>

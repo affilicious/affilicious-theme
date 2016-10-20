@@ -1,10 +1,8 @@
 <?php
 use Affilicious\Theme\Design\Domain\Helper\LogoHelper;
 use Affilicious\Theme\Design\Domain\Helper\MenuHelper;
-use Affilicious\Product\Domain\Helper\PostHelper;
 use Affilicious\Product\Domain\Model\Product;
-use Affilicious\Product\Domain\Model\Shop;
-use Affilicious\Product\Domain\Helper\ProductHelper;
+use Affilicious\Product\Domain\Model\Variant\ProductVariant;
 use Affilicious\Theme\Design\Application\Setup\SidebarSetup;
 use Affilicious\Theme\Design\Domain\Walker\BootstrapCommentWalker;
 use Affilicious\Theme\Settings\Application\Setting\DesignSettings;
@@ -221,15 +219,25 @@ function affilicious_theme_get_retina_logo()
  */
 function affilicious_theme_is_active_product_sidebar($productOrId = null)
 {
-    $post = PostHelper::getPost($productOrId);
-    $sidebar = carbon_get_post_meta($post->ID, SidebarSetup::PRODUCT_SIDEBAR);
+    $product = affilicious_get_product($productOrId);
+    if($product === null) {
+        return false;
+    }
+
+    if($product instanceof ProductVariant) {
+        $product = $product->getParent();
+    }
+
+    if(!$product->hasId()) {
+        return false;
+    }
+
+    $sidebar = carbon_get_post_meta($product->getId()->getValue(), SidebarSetup::PRODUCT_SIDEBAR);
     if (empty($sidebar)) {
         return false;
     }
 
-    $active = is_dynamic_sidebar($sidebar);
-
-    return $active;
+    return true;
 }
 
 /**
@@ -238,11 +246,24 @@ function affilicious_theme_is_active_product_sidebar($productOrId = null)
  *
  * @since 0.4
  * @param int|\WP_Post|Product|null $productOrId
+ * @return bool
  */
 function affilicious_theme_get_product_sidebar($productOrId = null)
 {
-    $post = PostHelper::getPost($productOrId);
-    $sidebar = carbon_get_post_meta($post->ID, SidebarSetup::PRODUCT_SIDEBAR);
+    $product = affilicious_get_product($productOrId);
+    if($product === null) {
+        return false;
+    }
+
+    if($product instanceof ProductVariant) {
+        $product = $product->getParent();
+    }
+
+    if(!$product->hasId()) {
+        return false;
+    }
+
+    $sidebar = carbon_get_post_meta($product->getId()->getValue(), SidebarSetup::PRODUCT_SIDEBAR);
     if (!empty($sidebar)) {
         dynamic_sidebar($sidebar);
     }

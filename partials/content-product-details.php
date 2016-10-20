@@ -1,5 +1,6 @@
 <table class="product-details table table-striped">
     <tbody>
+        <?php $product = affilicious_get_product(); ?>
         <?php $affiliateLink = affilicious_get_product_cheapest_affiliate_link($product); ?>
         <?php $price = affilicious_get_product_cheapest_price($product); ?>
         <?php if(!empty($price)): ?>
@@ -19,15 +20,15 @@
             </tr>
         <?php endif; ?>
 
-        <?php $fields = affilicious_get_product_details(); ?>
-        <?php if(!empty($fields)): ?>
-            <?php foreach ($fields as $field): ?>
+        <?php $details = affilicious_get_product_details(); ?>
+        <?php if(!empty($details)): ?>
+            <?php foreach ($details as $detail): ?>
                 <tr>
-                    <td><?php echo $field['name']; ?></td>
-                    <?php if($field['type'] === 'file'): ?>
-                        <td><?php echo wp_get_attachment_link($field['value'], 'medium', false, false, __('Download', 'affiliate-theme')); ?></td>
+                    <td><?php echo $detail['title']; ?></td>
+                    <?php if($detail['type'] === 'file'): ?>
+                        <td><?php echo wp_get_attachment_link($detail['value'], 'medium', false, false, __('Download', 'affiliate-theme')); ?></td>
                     <?php else: ?>
-                        <td><?php echo esc_html($field['value']); ?> <?php echo esc_html($field['unit']); ?></td>
+                        <td><?php echo esc_html($detail['value']); ?> <?php echo esc_html($detail['unit']); ?></td>
                     <?php endif; ?>
                 </tr>
             <?php endforeach; ?>
