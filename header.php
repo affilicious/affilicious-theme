@@ -1,5 +1,4 @@
-<?php affilicious_theme_check_requirements(); ?>
-
+<?php afft_check_requirements(); ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -20,10 +19,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12">
-                    <?php if(affilicious_theme_has_logo() || affilicious_theme_has_retina_logo()): ?>
+                    <?php if(afft_has_logo() || afft_has_retina_logo()): ?>
                         <a href="<?php home_url('/'); ?>" title="<?php bloginfo('name'); ?>" rel='home'>
-                            <img id="logo" src="<?php echo (!affilicious_theme_has_logo() ? affilicious_theme_get_retina_logo() :  affilicious_theme_get_logo()); ?>"
-                                 data-rjs="<?php echo affilicious_theme_get_retina_logo() ?>" alt="<?php bloginfo('name'); ?>">
+                            <img id="logo" src="<?php echo (!afft_has_logo() ? afft_get_retina_logo() :  afft_get_logo()); ?>"
+                                 data-rjs="<?php echo afft_get_retina_logo() ?>" alt="<?php bloginfo('name'); ?>">
                         </a>
                     <?php else: ?>
                         <h1 id="title" class="display-4" itemprop="headline"><?php bloginfo('name') ?></h1>
@@ -49,8 +48,8 @@
                             <?php bloginfo('name'); ?>
                         </a>
                     </div>
-                    <?php if(affilicious_theme_has_main_menu()): ?>
-                        <?php affilicious_theme_main_menu(); ?>
+                    <?php if(afft_has_main_menu()): ?>
+                        <?php afft_main_menu(); ?>
                     <?php endif; ?>
                 </div>
             </div>

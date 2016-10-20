@@ -1,6 +1,6 @@
 <?php do_action('affilicious_theme_product_above_post'); ?>
 
-<?php $product = affilicious_get_product(); ?>
+<?php $product = aff_get_product(); ?>
 <article id="product-<?php the_ID(); ?>" <?php post_class('product'); ?>
          itemscope itemtype="http://schema.org/Product">
 

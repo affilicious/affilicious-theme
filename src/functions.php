@@ -6,6 +6,8 @@ use Affilicious\Product\Domain\Model\Variant\ProductVariant;
 use Affilicious\Theme\Design\Application\Setup\SidebarSetup;
 use Affilicious\Theme\Design\Domain\Walker\BootstrapCommentWalker;
 use Affilicious\Theme\Settings\Application\Setting\DesignSettings;
+use Affilicious\Product\Application\Helper\ProductHelper;
+use Affilicious\Product\Domain\Model\Shop\Shop;
 
 /**
  * Check if every requirement like the main plugin is installed correctly
@@ -14,7 +16,7 @@ use Affilicious\Theme\Settings\Application\Setting\DesignSettings;
  *
  * @since 0.3.5
  */
-function affilicious_theme_check_requirements()
+function afft_check_requirements()
 {
 	if (!class_exists('\AffiliciousPlugin')) {
 		wp_footer();
@@ -33,9 +35,9 @@ function affilicious_theme_check_requirements()
  * @param int|\WP_Post|Shop|null $shopOrId
  * @return array|null
  */
-function affilicious_theme_get_product_shop($productOrId, $shopOrId)
+function afft_get_product_shop($productOrId, $shopOrId)
 {
-	$product = affilicious_get_product($productOrId);
+	$product = aff_get_product($productOrId);
 	$shop = ProductHelper::getShop($product, $shopOrId);
 
 	return $shop;
@@ -47,7 +49,7 @@ function affilicious_theme_get_product_shop($productOrId, $shopOrId)
  * @since 0.2
  * @return bool
  */
-function affilicious_theme_has_main_menu()
+function afft_has_main_menu()
 {
 	$mainMenu = MenuHelper::getMainMenu();
 	$result = $mainMenu->exists();
@@ -60,7 +62,7 @@ function affilicious_theme_has_main_menu()
  *
  * @since 0.2
  */
-function affilicious_theme_main_menu()
+function afft_main_menu()
 {
 	$mainMenu = MenuHelper::getMainMenu();
 	$mainMenu->render();
@@ -72,7 +74,7 @@ function affilicious_theme_main_menu()
  * @since 0.3.4
  * @return bool
  */
-function affilicious_theme_has_bottom_1_menu()
+function afft_has_bottom_1_menu()
 {
 	$footer1Menu = MenuHelper::getBottom1Menu();
 	$result = $footer1Menu->exists();
@@ -85,7 +87,7 @@ function affilicious_theme_has_bottom_1_menu()
  *
  * @since 0.3.4
  */
-function affilicious_theme_bottom_1_menu()
+function afft_bottom_1_menu()
 {
 	$footer1Menu = MenuHelper::getBottom1Menu();
 	$footer1Menu->render();
@@ -97,7 +99,7 @@ function affilicious_theme_bottom_1_menu()
  * @since 0.3.4
  * @return bool
  */
-function affilicious_theme_has_bottom_2_menu()
+function afft_has_bottom_2_menu()
 {
 	$footer2Menu = MenuHelper::getBottom2Menu();
 	$result = $footer2Menu->exists();
@@ -110,7 +112,7 @@ function affilicious_theme_has_bottom_2_menu()
  *
  * @since 0.3.4
  */
-function affilicious_theme_bottom_2_menu()
+function afft_bottom_2_menu()
 {
 	$footer2Menu = MenuHelper::getBottom2Menu();
 	$footer2Menu->render();
@@ -122,7 +124,7 @@ function affilicious_theme_bottom_2_menu()
  * @since 0.3.4
  * @return bool
  */
-function affilicious_theme_has_bottom_3_menu()
+function afft_has_bottom_3_menu()
 {
 	$footer3Menu = MenuHelper::getBottom3Menu();
 	$result = $footer3Menu->exists();
@@ -135,7 +137,7 @@ function affilicious_theme_has_bottom_3_menu()
  *
  * @since 0.3.4
  */
-function affilicious_theme_bottom_3_menu()
+function afft_bottom_3_menu()
 {
 	$footer3Menu = MenuHelper::getBottom3Menu();
 	$footer3Menu->render();
@@ -147,7 +149,7 @@ function affilicious_theme_bottom_3_menu()
  * @since 0.3.4
  * @return bool
  */
-function affilicious_theme_has_bottom_4_menu()
+function afft_has_bottom_4_menu()
 {
 	$footer4Menu = MenuHelper::getBottom4Menu();
 	$result = $footer4Menu->exists();
@@ -160,7 +162,7 @@ function affilicious_theme_has_bottom_4_menu()
  *
  * @since 0.3.4
  */
-function affilicious_theme_bottom_4_menu()
+function afft_bottom_4_menu()
 {
 	$footer4Menu = MenuHelper::getBottom4Menu();
 	$footer4Menu->render();
@@ -172,7 +174,7 @@ function affilicious_theme_bottom_4_menu()
  * @since 0.2
  * @return bool
  */
-function affilicious_theme_has_logo()
+function afft_has_logo()
 {
     return LogoHelper::hasLogo();
 }
@@ -183,7 +185,7 @@ function affilicious_theme_has_logo()
  * @since 0.2
  * @return string
  */
-function affilicious_theme_get_logo()
+function afft_get_logo()
 {
     return LogoHelper::getLogo();
 }
@@ -194,7 +196,7 @@ function affilicious_theme_get_logo()
  * @since 0.2
  * @return bool
  */
-function affilicious_theme_has_retina_logo()
+function afft_has_retina_logo()
 {
     return LogoHelper::hasRetinaLogo();
 }
@@ -205,7 +207,7 @@ function affilicious_theme_has_retina_logo()
  * @since 0.2
  * @return string
  */
-function affilicious_theme_get_retina_logo()
+function afft_get_retina_logo()
 {
     return LogoHelper::getRetinaLogo();
 }
@@ -217,9 +219,9 @@ function affilicious_theme_get_retina_logo()
  * @param int|\WP_Post|Product|null $productOrId
  * @return bool
  */
-function affilicious_theme_is_active_product_sidebar($productOrId = null)
+function afft_is_active_product_sidebar($productOrId = null)
 {
-    $product = affilicious_get_product($productOrId);
+    $product = aff_get_product($productOrId);
     if($product === null) {
         return false;
     }
@@ -248,9 +250,9 @@ function affilicious_theme_is_active_product_sidebar($productOrId = null)
  * @param int|\WP_Post|Product|null $productOrId
  * @return bool
  */
-function affilicious_theme_get_product_sidebar($productOrId = null)
+function afft_get_product_sidebar($productOrId = null)
 {
-    $product = affilicious_get_product($productOrId);
+    $product = aff_get_product($productOrId);
     if($product === null) {
         return false;
     }
@@ -266,7 +268,11 @@ function affilicious_theme_get_product_sidebar($productOrId = null)
     $sidebar = carbon_get_post_meta($product->getId()->getValue(), SidebarSetup::PRODUCT_SIDEBAR);
     if (!empty($sidebar)) {
         dynamic_sidebar($sidebar);
+
+        return true;
     }
+
+    return false;
 }
 
 /**
@@ -277,7 +283,7 @@ function affilicious_theme_get_product_sidebar($productOrId = null)
  * @since 0.3.4
  * @param array $args
  */
-function affilicious_theme_list_comments($args = array())
+function afft_list_comments($args = array())
 {
 	$args = wp_parse_args($args, array(
 		'style'       => 'ul',
@@ -296,7 +302,7 @@ function affilicious_theme_list_comments($args = array())
  * @since 0.4.2
  * @return bool
  */
-function affilicious_theme_link_product_image_gallery()
+function afft_link_product_image_gallery()
 {
 	$raw = carbon_get_theme_option(DesignSettings::SETTING_PRODUCT_IMAGE_GALLERY_CLICK_ACTION);
 	$result = $raw === 'open_shop' ? true : false;
@@ -310,7 +316,7 @@ function affilicious_theme_link_product_image_gallery()
  * @since 0.4.2
  * @return bool
  */
-function affilicious_theme_link_product_preview_image()
+function afft_link_product_preview_image()
 {
 	$raw = carbon_get_theme_option(DesignSettings::SETTING_PRODUCT_PREVIEW_IMAGE_CLICK_ACTION);
 	$result = $raw === 'open_shop' ? true : false;
@@ -325,7 +331,7 @@ function affilicious_theme_link_product_preview_image()
  * @param $type
  * @return bool
  */
-function affilicious_theme_is_post_type($type)
+function afft_is_post_type($type)
 {
 	global $wp_query;
 

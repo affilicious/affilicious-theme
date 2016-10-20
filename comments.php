@@ -23,7 +23,7 @@ if (post_password_required()) {
 		</h2>
 
 		<ul class="comments-list list-unstyled">
-			<?php affilicious_theme_list_comments(); ?>
+			<?php afft_list_comments(); ?>
 		</ul>
 	<?php endif; ?>
 

@@ -26,7 +26,7 @@ class PriceComparisonWidget extends AbstractWidget
      */
     public function front_end($args, $instance)
     {
-        $shops = affilicious_get_product_shops();
+        $shops = aff_get_product_shops();
         if (!empty($shops)) {
             $this->render('priceComparison', $args, $instance);
         }

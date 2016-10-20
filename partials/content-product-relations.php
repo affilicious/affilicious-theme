@@ -1,6 +1,6 @@
-<?php $product = affilicious_get_product(); ?>
-<?php $relatedProductsQuery = affilicious_get_product_related_products_query($product); ?>
-<?php $relatedAccessoriesQuery = affilicious_get_product_related_accessories_query($product); ?>
+<?php $product = aff_get_product(); ?>
+<?php $relatedProductsQuery = aff_get_product_related_products_query($product); ?>
+<?php $relatedAccessoriesQuery = aff_get_product_related_accessories_query($product); ?>
 
 <?php if(!empty($relatedProductsQuery) || !empty($relatedAccessoriesQuery)): ?>
     <div class="panel">
@@ -28,13 +28,13 @@
                 <?php if(!empty($relatedProductsQuery) && $relatedProductsQuery->have_posts()): ?>
                     <div class="row">
                         <?php while($relatedProductsQuery->have_posts()): $relatedProductsQuery->the_post(); ?>
-                        <?php $affiliateLink = affilicious_get_product_affiliate_link($relatedProductsQuery->post); ?>
+                        <?php $affiliateLink = aff_get_product_affiliate_link($relatedProductsQuery->post); ?>
 
                             <div class="col-md-4">
                                 <div class="thumbnail">
 
                                     <?php if(has_post_thumbnail()): ?>
-                                        <?php $linkPreviewImage = affilicious_theme_link_product_preview_image(); ?>
+                                        <?php $linkPreviewImage = afft_link_product_preview_image(); ?>
 
                                         <?php if($linkPreviewImage): ?>
                                             <a href="<?php echo $affiliateLink; ?>" rel="bookmark"
@@ -78,13 +78,13 @@
                 <?php if(!empty($relatedAccessoriesQuery) && $relatedAccessoriesQuery->have_posts()): ?>
                     <div class="row">
                         <?php while($relatedAccessoriesQuery->have_posts()): $relatedAccessoriesQuery->the_post(); ?>
-                            <?php $affiliateLink = affilicious_get_product_link($relatedAccessoriesQuery->post); ?>
+                            <?php $affiliateLink = aff_get_product_link($relatedAccessoriesQuery->post); ?>
 
                             <div class="col-md-4">
                                 <div class="thumbnail">
 
                                     <?php if(has_post_thumbnail()): ?>
-                                        <?php $linkPreviewImage = affilicious_theme_link_product_preview_image(); ?>
+                                        <?php $linkPreviewImage = afft_link_product_preview_image(); ?>
 
                                         <?php if($linkPreviewImage): ?>
                                             <a href="<?php echo $affiliateLink; ?>" rel="bookmark"

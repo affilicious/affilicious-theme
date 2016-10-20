@@ -1,8 +1,8 @@
 <div class="sidebars">
-    <?php if(affilicious_is_product() && affilicious_theme_is_active_product_sidebar()): ?>
+    <?php if(aff_is_product() && afft_is_active_product_sidebar()): ?>
         <div class="sidebar sidebar-product">
             <ul>
-                <?php affilicious_theme_get_product_sidebar(); ?>
+                <?php afft_get_product_sidebar(); ?>
             </ul>
         </div>
     <?php endif; ?>

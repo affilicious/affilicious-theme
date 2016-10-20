@@ -1,8 +1,8 @@
-<?php $product = affilicious_get_product(); ?>
+<?php $product = aff_get_product(); ?>
 
 <p class="product-review" itemprop="aggregateRating"
    itemscope itemtype="http://schema.org/AggregateRating">
-	<?php $starRating = affilicious_get_product_review_rating($product); ?>
+	<?php $starRating = aff_get_product_review_rating($product); ?>
 
 	<span class="product-review-rating" itemprop="reviewRating"
 	      itemscope itemtype="http://schema.org/Rating">
@@ -20,7 +20,7 @@
 		<?php endfor; ?>
     </span>
 
-	<?php if($votes = affilicious_get_product_review_votes($product)): ?>
+	<?php if($votes = aff_get_product_review_votes($product)): ?>
 		<span class="product-review-number-rating" itemprop="aggregateRating"
 		      itemscope itemtype="http://schema.org/AggregateRating">
                 <?php echo sprintf(_n(

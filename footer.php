@@ -17,20 +17,20 @@
 				</div>
 
 				<div id="bottom-menu">
-					<?php if (affilicious_theme_has_bottom_1_menu()): ?>
-						<?php affilicious_theme_bottom_1_menu(); ?>
+					<?php if (afft_has_bottom_1_menu()): ?>
+						<?php afft_bottom_1_menu(); ?>
 					<?php endif; ?>
 
-					<?php if (affilicious_theme_has_bottom_2_menu()): ?>
-						<?php affilicious_theme_bottom_2_menu(); ?>
+					<?php if (afft_has_bottom_2_menu()): ?>
+						<?php afft_bottom_2_menu(); ?>
 					<?php endif; ?>
 
-					<?php if (affilicious_theme_has_bottom_3_menu()): ?>
-						<?php affilicious_theme_bottom_3_menu(); ?>
+					<?php if (afft_has_bottom_3_menu()): ?>
+						<?php afft_bottom_3_menu(); ?>
 					<?php endif; ?>
 
-					<?php if (affilicious_theme_has_bottom_4_menu()): ?>
-						<?php affilicious_theme_bottom_4_menu(); ?>
+					<?php if (afft_has_bottom_4_menu()): ?>
+						<?php afft_bottom_4_menu(); ?>
 					<?php endif; ?>
 				</div>
 			</div>

@@ -1,10 +1,10 @@
-<?php $product = affilicious_get_product(); ?>
-<?php $affiliateLink = affilicious_get_product_affiliate_link($product); ?>
+<?php $product = aff_get_product(); ?>
+<?php $affiliateLink = aff_get_product_affiliate_link($product); ?>
 
-<?php if($imageGallery = affilicious_get_product_image_gallery($product)): ?>
+<?php if($imageGallery = aff_get_product_image_gallery($product)): ?>
     <div class="product-image-gallery">
         <div class="portfolio-slider">
-            <?php $linkImageGallery = affilicious_theme_link_product_image_gallery(); ?>
+            <?php $linkImageGallery = afft_link_product_image_gallery(); ?>
 
             <?php if($linkImageGallery): ?>
                 <a href="<?php echo $affiliateLink; ?>" rel="nofollow" target="_blank">
@@ -35,7 +35,7 @@
 <?php else: ?>
     <div class="product-thumbnail">
         <?php if(has_post_thumbnail()): ?>
-            <?php $linkImageGallery = affilicious_theme_link_product_image_gallery(); ?>
+            <?php $linkImageGallery = afft_link_product_image_gallery(); ?>
 
             <?php if($linkImageGallery): ?>
                 <a href="<?php echo $affiliateLink; ?>" rel="nofollow" target="_blank">
