@@ -1,11 +1,11 @@
 <?php
 namespace Affilicious\Theme\Settings\Application\Setting;
 
-use Affilicious\Settings\Application\Setting\SettingsInterface;
+use Affilicious\Settings\Application\Setting\Settings_Interface;
 use Carbon_Fields\Container as CarbonContainer;
 use Carbon_Fields\Field as CarbonField;
 
-class DesignSettings implements SettingsInterface
+class DesignSettings implements Settings_Interface
 {
 	const SETTING_PRODUCT_IMAGE_GALLERY_CLICK_ACTION = 'affilicious_theme_settings_design_links_product_image_gallery_click_action';
 	const SETTING_PRODUCT_PREVIEW_IMAGE_CLICK_ACTION =  'affilicious_theme_settings_design_links_product_preview_image_click_action';

@@ -1,7 +1,7 @@
 <?php
 namespace Affilicious\Theme\Design\Application\Setup;
 
-use Affilicious\Common\Application\Setup\SetupInterface;
+use Affilicious\Common\Application\Setup\Setup_Interface;
 use Affilicious\Product\Domain\Model\Product;
 use Affilicious\Theme\Design\Domain\Sidebar\MainSidebar;
 use Affilicious\Theme\Design\Domain\Sidebar\ProductSidebar;
@@ -10,7 +10,7 @@ use Carbon_Fields\Field as CarbonField;
 
 if (!defined('ABSPATH')) exit('Not allowed to access pages directly.');
 
-class SidebarSetup implements SetupInterface
+class SidebarSetup implements Setup_Interface
 {
     const PRODUCT_SIDEBAR = '_affilicious_theme_product_sidebar';
 

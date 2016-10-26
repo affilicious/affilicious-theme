@@ -1,0 +1,37 @@
+@import "variables";
+
+.aff {
+  &-product {
+    &-attribute-choice-list {
+      display: flex;
+      padding: 0;
+
+      li {
+        list-style: none;
+        flex-wrap: wrap;
+        border: 1px solid red;
+        padding: $space-size-extra-small $space-size-small;
+        margin-left: $space-size-small;
+
+        &:first-child {
+          margin-left: 0;
+        }
+
+        &.current {
+          border: 1px double orange;
+          color: black;
+        }
+
+        &.reachable {
+          border: 1px solid black;
+          color: black;
+        }
+
+        &.unreachable {
+          border: 1px dotted grey;
+          color: grey;
+        }
+      }
+    }
+  }
+}

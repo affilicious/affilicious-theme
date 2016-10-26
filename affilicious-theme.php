@@ -50,7 +50,7 @@ class AffiliciousTheme
 	 * A reference to the main plugin
 	 *
 	 * @see https://github.com/AlexBa/affilicious
-	 * @var AffiliciousPlugin
+	 * @var Affilicious_Plugin
 	 */
 	private $affilicious;
 
@@ -153,9 +153,9 @@ class AffiliciousTheme
 	    $this->loadFunctions();
 
 	    // Load the affilicious plugin and the dependency container
-	    if(class_exists('\AffiliciousPlugin')) {
-		    $this->affilicious = \AffiliciousPlugin::getInstance();
-		    $this->container   = $this->affilicious->getContainer();
+	    if(class_exists('\Affilicious_Plugin')) {
+		    $this->affilicious = \Affilicious_Plugin::get_instance();
+		    $this->container   = $this->affilicious->get_container();
 
 		    $this->loadServices();
 		    $this->loadShortcodes();

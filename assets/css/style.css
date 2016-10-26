@@ -338,6 +338,35 @@ body {
   margin: 15px auto 0 auto;
 }
 
+.aff-product-attribute-choice-list {
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+}
+.aff-product-attribute-choice-list li {
+  list-style: none;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  border: 1px solid red;
+  padding: 5px 15px;
+  margin-left: 15px;
+}
+.aff-product-attribute-choice-list li:first-child {
+  margin-left: 0;
+}
+.aff-product-attribute-choice-list li.current {
+  border: 1px double orange;
+  color: black;
+}
+.aff-product-attribute-choice-list li.reachable {
+  border: 1px solid black;
+  color: black;
+}
+.aff-product-attribute-choice-list li.unreachable {
+  border: 1px dotted grey;
+  color: grey;
+}
+
 .entry {
   border-radius: 5px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);

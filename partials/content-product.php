@@ -36,6 +36,12 @@
 
                     <div class="row">
                         <div class="col-md-12">
+                            <?php aff_the_product_attribute_choices($product); ?>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
                             <?php get_template_part('partials/content-product-details'); ?>
                         </div>
                     </div>

@@ -2,12 +2,10 @@
 use Affilicious\Theme\Design\Domain\Helper\LogoHelper;
 use Affilicious\Theme\Design\Domain\Helper\MenuHelper;
 use Affilicious\Product\Domain\Model\Product;
-use Affilicious\Product\Domain\Model\Variant\ProductVariant;
+use Affilicious\Product\Domain\Model\Variant\Product_Variant;
 use Affilicious\Theme\Design\Application\Setup\SidebarSetup;
 use Affilicious\Theme\Design\Domain\Walker\BootstrapCommentWalker;
 use Affilicious\Theme\Settings\Application\Setting\DesignSettings;
-use Affilicious\Product\Application\Helper\ProductHelper;
-use Affilicious\Product\Domain\Model\Shop\Shop;
 
 /**
  * Check if every requirement like the main plugin is installed correctly
@@ -18,29 +16,11 @@ use Affilicious\Product\Domain\Model\Shop\Shop;
  */
 function afft_check_requirements()
 {
-	if (!class_exists('\AffiliciousPlugin')) {
+	if (!class_exists('\Affilicious_Plugin')) {
 		wp_footer();
 		echo '<br><br><br>';
 		exit(__('Failed to find the required Affilicious plugin. Please open your admin area and install the missing plugin.', 'affilicious-theme'));
 	}
-}
-
-/**
- * Get the used shop of the given product.
- * If you pass in nothing as a product, the current post will be used.
- * If you pass in nothing as a shop, the first shop will be used.
- *
- * @since 0.3
- * @param int|\WP_Post|Product|null $productOrId
- * @param int|\WP_Post|Shop|null $shopOrId
- * @return array|null
- */
-function afft_get_product_shop($productOrId, $shopOrId)
-{
-	$product = aff_get_product($productOrId);
-	$shop = ProductHelper::getShop($product, $shopOrId);
-
-	return $shop;
 }
 
 /**
@@ -226,15 +206,15 @@ function afft_is_active_product_sidebar($productOrId = null)
         return false;
     }
 
-    if($product instanceof ProductVariant) {
-        $product = $product->getParent();
+    if($product instanceof Product_Variant) {
+        $product = $product->get_parent();
     }
 
-    if(!$product->hasId()) {
+    if(!$product->has_id()) {
         return false;
     }
 
-    $sidebar = carbon_get_post_meta($product->getId()->getValue(), SidebarSetup::PRODUCT_SIDEBAR);
+    $sidebar = carbon_get_post_meta($product->get_id()->get_value(), SidebarSetup::PRODUCT_SIDEBAR);
     if (empty($sidebar)) {
         return false;
     }
@@ -257,15 +237,15 @@ function afft_get_product_sidebar($productOrId = null)
         return false;
     }
 
-    if($product instanceof ProductVariant) {
-        $product = $product->getParent();
+    if($product instanceof Product_Variant) {
+        $product = $product->get_parent();
     }
 
-    if(!$product->hasId()) {
+    if(!$product->has_id()) {
         return false;
     }
 
-    $sidebar = carbon_get_post_meta($product->getId()->getValue(), SidebarSetup::PRODUCT_SIDEBAR);
+    $sidebar = carbon_get_post_meta($product->get_id()->get_value(), SidebarSetup::PRODUCT_SIDEBAR);
     if (!empty($sidebar)) {
         dynamic_sidebar($sidebar);
 

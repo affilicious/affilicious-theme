@@ -1,7 +1,6 @@
 <?php
 namespace Affilicious\Theme\Design\Application\Setup;
 
-use Affilicious\Theme\Design\Domain\Helper\LayoutHelper;
 
 if(!defined('ABSPATH')) exit('Not allowed to access pages directly.');
 
