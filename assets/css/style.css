@@ -284,7 +284,7 @@ body {
     display: block;
   }
 }
-.product-details .price {
+.product-details tr[data-detail-name="price"] td:last-child {
   color: #2fa32f;
 }
 .product-thumbnail {
