@@ -84,6 +84,60 @@ class ContentCustomizer extends AbstractCustomizer
 			'transport' => 'postMessage',
 		);
 
+        $options['content-product-attributes-choice-background-color'] = array(
+            'id'        => 'content-product-attributes-choice-background-color',
+            'label'     => __('Attribute Choice Background Color', 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'color',
+            'default'   => '#fff',
+            'transport' => 'postMessage',
+        );
+
+        $options['content-product-attributes-choice-background-color-hover'] = array(
+            'id'        => 'content-product-attributes-choice-background-color-hover',
+            'label'     => __('Attribute Choice Background Color (Hover)', 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'color',
+            'default'   => '#fff',
+            'transport' => 'postMessage',
+        );
+
+        $options['content-product-attributes-choice-background-color-selected'] = array(
+            'id'        => 'content-product-attributes-choice-background-color-selected',
+            'label'     => __('Attribute Choice Background Color (Selected)', 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'color',
+            'default'   => '#fff',
+            'transport' => 'postMessage',
+        );
+
+        $options['content-product-attributes-choice-border-color'] = array(
+            'id'        => 'content-product-attributes-choice-border-color',
+            'label'     => __('Attribute Choice Border Color', 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'color',
+            'default'   => '#999',
+            'transport' => 'postMessage',
+        );
+
+        $options['content-product-attributes-choice-border-color-hover'] = array(
+            'id'        => 'content-product-attributes-choice-border-color-hover',
+            'label'     => __('Attribute Choice Border Color (Hover)', 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'color',
+            'default'   => '#333',
+            'transport' => 'postMessage',
+        );
+
+        $options['content-product-attributes-choice-border-color-selected'] = array(
+            'id'        => 'content-product-attributes-choice-border-color-selected',
+            'label'     => __('Attribute Choice Border Color (Selected)', 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'color',
+            'default'   => '#000',
+            'transport' => 'postMessage',
+        );
+
 		$section = 'content-alert';
 
 		$sections[] = array(
@@ -491,6 +545,84 @@ class ContentCustomizer extends AbstractCustomizer
 				)
 			);
 		});
+
+        $this->renderSelectors('content-product-attributes-choice-background-color', function ($mod) {
+            $color = sanitize_hex_color($mod);
+
+            return array(
+                'selectors'    => array(
+                    'li.aff-product-attributes-choice:not(.selected)'
+                ),
+                'declarations' => array(
+                    'background-color' => $color
+                )
+            );
+        });
+
+        $this->renderSelectors('content-product-attributes-choice-background-color-hover', function ($mod) {
+            $color = sanitize_hex_color($mod);
+
+            return array(
+                'selectors'    => array(
+                    'li.aff-product-attributes-choice:not(.selected):hover'
+                ),
+                'declarations' => array(
+                    'background-color' => $color
+                )
+            );
+        });
+
+        $this->renderSelectors('content-product-attributes-choice-background-color-selected', function ($mod) {
+            $color = sanitize_hex_color($mod);
+
+            return array(
+                'selectors'    => array(
+                    'li.aff-product-attributes-choice.selected'
+                ),
+                'declarations' => array(
+                    'background-color' => $color
+                )
+            );
+        });
+
+        $this->renderSelectors('content-product-attributes-choice-border-color', function ($mod) {
+            $color = sanitize_hex_color($mod);
+
+            return array(
+                'selectors'    => array(
+                    'li.aff-product-attributes-choice:not(.selected)'
+                ),
+                'declarations' => array(
+                    'border-color' => $color
+                )
+            );
+        });
+
+        $this->renderSelectors('content-product-attributes-choice-border-color-hover', function ($mod) {
+            $color = sanitize_hex_color($mod);
+
+            return array(
+                'selectors'    => array(
+                    'li.aff-product-attributes-choice:not(.selected):hover'
+                ),
+                'declarations' => array(
+                    'border-color' => $color
+                )
+            );
+        });
+
+        $this->renderSelectors('content-product-attributes-choice-border-color-selected', function ($mod) {
+            $color = sanitize_hex_color($mod);
+
+            return array(
+                'selectors'    => array(
+                    'li.aff-product-attributes-choice.selected'
+                ),
+                'declarations' => array(
+                    'border-color' => $color
+                )
+            );
+        });
 
 		$this->renderSelectors('content-alert-success-link-color-hover', function ($mod) {
 			$color = sanitize_hex_color($mod);

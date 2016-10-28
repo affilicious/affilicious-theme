@@ -118,13 +118,13 @@
     });
     wp.customize('typography-text-link-color', function (value) {
         value.bind(function (color) {
-            var link = $('main a:not(.price, .btn)');
+            var link = $('main a:not(.price, .btn), main a > span.unit');
             link.css('color', color);
         });
     });
     wp.customize('typography-text-link-color-hover', function (value) {
         value.bind(function (color) {
-            $('main a:not(.price, .btn)').on('hover click focus', function (e) {
+            $('main a:not(.price, .btn), main a > span.unit').on('hover click focus', function (e) {
                 var standart = wp.customize.instance('typography-text-link-color').get();
                 var link = $(this);
                 link.css('color', e.type === "mouseenter" ? color : standart);
@@ -620,6 +620,46 @@
     wp.customize('content-product-details-border-color', function (value) {
         value.bind(function (color) {
             var border = $('.product-details.table > tbody > tr > td');
+            border.css('border-color', color);
+        });
+    });
+    wp.customize('content-product-attributes-choice-background-color', function (value) {
+        value.bind(function (color) {
+            var border = $('li.aff-product-attributes-choice:not(.selected)');
+            border.css('background-color', color);
+        });
+    });
+    wp.customize('content-product-attributes-choice-background-color-hover', function (value) {
+        value.bind(function (color) {
+            $('li.aff-product-attributes-choice:not(.selected)').hover(function (e) {
+                var fallback = wp.customize.instance('content-product-attributes-choice-background-color').get();
+                $(this).css('background-color', e.type === "mouseenter" ? color : fallback);
+            });
+        });
+    });
+    wp.customize('content-product-attributes-choice-background-color-selected', function (value) {
+        value.bind(function (color) {
+            var border = $('li.aff-product-attributes-choice.selected');
+            border.css('background-color', color);
+        });
+    });
+    wp.customize('content-product-attributes-choice-border-color', function (value) {
+        value.bind(function (color) {
+            var border = $('li.aff-product-attributes-choice:not(.selected)');
+            border.css('border-color', color);
+        });
+    });
+    wp.customize('content-product-attributes-choice-border-color-hover', function (value) {
+        value.bind(function (color) {
+            $('li.aff-product-attributes-choice:not(.selected)').hover(function (e) {
+                var fallback = wp.customize.instance('content-product-attributes-choice-border-color').get();
+                $(this).css('border-color', e.type === "mouseenter" ? color : fallback);
+            });
+        });
+    });
+    wp.customize('content-product-attributes-choice-border-color-selected', function (value) {
+        value.bind(function (color) {
+            var border = $('li.aff-product-attributes-choice.selected');
             border.css('border-color', color);
         });
     });

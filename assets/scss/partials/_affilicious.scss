@@ -1,37 +1,48 @@
 @import "variables";
 
-.aff {
-  &-product {
-    &-attribute-choice-list {
+.aff-product-attributes {
+
+  &-container {
+    margin-bottom: $space-size-medium;
+    width: 100%;
+  }
+
+  &-choices {
+    list-style: none;
+    width: 100%;
+    margin-bottom: $space-size-small;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &-list {
       display: flex;
+      flex-flow: row wrap;
       padding: 0;
+    }
+  }
 
-      li {
-        list-style: none;
-        flex-wrap: wrap;
-        border: 1px solid red;
-        padding: $space-size-extra-small $space-size-small;
-        margin-left: $space-size-small;
+  &-choice {
+    list-style: none;
+    border-width: 1px;
+    border-style: solid;
+    padding: $space-size-extra-small $space-size-small;
+    margin-left: $space-size-small;
 
-        &:first-child {
-          margin-left: 0;
-        }
+    &.unreachable {
+      opacity: 0.5;
+      border-style: dotted;
+    }
 
-        &.current {
-          border: 1px double orange;
-          color: black;
-        }
+    &:first-child {
+      margin-left: 0;
+    }
 
-        &.reachable {
-          border: 1px solid black;
-          color: black;
-        }
-
-        &.unreachable {
-          border: 1px dotted grey;
-          color: grey;
-        }
-      }
+    &-list {
+      display: flex;
+      flex-flow: row wrap;
+      padding: 0;
     }
   }
 }

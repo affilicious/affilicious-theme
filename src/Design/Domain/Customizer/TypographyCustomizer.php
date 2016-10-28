@@ -199,6 +199,7 @@ class TypographyCustomizer extends AbstractCustomizer
 			return array(
 				'selectors'    => array(
 					'main a:not(.price, .btn)',
+                    'main a > span.unit'
 				),
 				'declarations' => array(
 					'color' => $color
@@ -212,6 +213,7 @@ class TypographyCustomizer extends AbstractCustomizer
 			return array(
 				'selectors'    => array(
 					'main a:hover:not(.price, .btn)',
+                    'main a > span.unit:hover'
 				),
 				'declarations' => array(
 					'color' => $color
@@ -227,7 +229,7 @@ class TypographyCustomizer extends AbstractCustomizer
 	public function enqueueScripts()
 	{
 		// Font options
-		$fonts    = array(
+		$fonts = array(
 			get_theme_mod('typography-headline-font-family', customizer_library_get_default('typography-headline-font-family')),
 		);
 		$font_uri = customizer_library_get_google_font_uri($fonts);

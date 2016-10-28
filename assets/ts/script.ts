@@ -36,3 +36,16 @@ declare var ResponsiveBootstrapToolkit: any;
         content.css('margin-top', (containerHeight - contentHeight) / 2);
     }
 })(jQuery, ResponsiveBootstrapToolkit);
+
+(function($) {
+    /*$('document').ready(function() {
+        var choices = $('.aff-product-attributes-choices');
+
+        choices.on('hover', 'li.aff-product-attributes-choice', function() {
+            var choice = $(this);
+            var name = choice.parents('ul.aff-product-attributes-choice-list').siblings('span');
+
+            name.html(name.text().split(':')[0] + ': ' + choice.text())
+        });
+    });*/
+})(jQuery);
