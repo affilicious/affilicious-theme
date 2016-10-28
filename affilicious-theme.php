@@ -459,7 +459,7 @@ class AffiliciousTheme
 	    // Hook the sidebars
 	    $sidebarSetup = $this->container['affilicious.theme.design.setup.sidebar'];
 	    add_action('init', array($sidebarSetup, 'init'));
-	    add_action('init', array($sidebarSetup, 'render'));
+        add_filter('affilicious_product_render_affilicious_product_container_general_fields', array($sidebarSetup, 'render'), 0);
 
 	    // Hook the widgets
 	    $widgetSetup = $this->container['affilicious.theme.design.setup.widget'];

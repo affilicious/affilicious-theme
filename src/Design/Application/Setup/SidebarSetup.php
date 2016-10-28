@@ -10,7 +10,7 @@ use Carbon_Fields\Field as CarbonField;
 
 if (!defined('ABSPATH')) exit('Not allowed to access pages directly.');
 
-class SidebarSetup implements Setup_Interface
+class SidebarSetup
 {
     const PRODUCT_SIDEBAR = '_affilicious_theme_product_sidebar';
 
@@ -45,18 +45,15 @@ class SidebarSetup implements Setup_Interface
     /**
      * @inheritdoc
      */
-    public function render()
+    public function render($carbon_fields)
     {
-        $carbonContainer = CarbonContainer::make('post_meta', __('Product Sidebar', 'affilicious-theme'))
-            ->show_on_post_type(Product::POST_TYPE)
-            ->set_priority('low')
-            ->add_fields(array(
-                CarbonField::make('sidebar', self::PRODUCT_SIDEBAR, __('Select a Sidebar', 'affilicious-theme'))
-	                ->exclude_sidebars(MainSidebar::getId())
-                    ->set_help_text(__('The selected product sidebar will be shown above the main sidebar.', 'affilicious-theme'))
-            ));
+        $result = array_merge($carbon_fields, array(
+            CarbonField::make('sidebar', self::PRODUCT_SIDEBAR, __('Select a Sidebar', 'affilicious-theme'))
+                ->exclude_sidebars(MainSidebar::getId())
+                ->set_help_text(__('The selected product sidebar will be shown above the main sidebar.', 'affilicious-theme'))
+        ));
 
-        apply_filters('affilicious_product_render_sidebar', $carbonContainer);
+        return $result;
     }
 
 	/**
