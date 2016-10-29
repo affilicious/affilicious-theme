@@ -25,6 +25,7 @@ use Affilicious\Theme\Design\Domain\Shortcode\AlertShortcode;
 use Affilicious\Theme\Design\Application\Setup\CommentSetup;
 use Affilicious\Theme\Design\Application\Setup\CustomizerSetup;
 use Affilicious\Theme\Settings\Application\Setting\DesignSettings;
+use Affilicious\Theme\Design\Application\Filter\CustomSidebarFilter;
 use Pimple\Container;
 
 if (!defined('ABSPATH')) exit('Not allowed to access pages directly.');
@@ -324,6 +325,10 @@ class AffiliciousTheme
 		$this->container['affilicious.theme.settings.setting.design'] = function () {
 			return new DesignSettings();
 		};
+
+		$this->container['affilicious.theme.design.filter.custom_sidebar'] = function() {
+		    return new CustomSidebarFilter();
+        };
 	}
 
     /**
@@ -491,6 +496,9 @@ class AffiliciousTheme
 	    add_action('init', array($customizerSetup, 'render'), 102);
 	    add_action('wp_enqueue_scripts', array($customizerSetup, 'enqueueScripts'));
 	    add_action('wp_head', array($customizerSetup, 'head'));
+
+        $customSidebarFilter = $this->container['affilicious.theme.design.filter.custom_sidebar'];
+        add_filter('dynamic_sidebar_params', array($customSidebarFilter, 'filter'));
     }
 
     /**
