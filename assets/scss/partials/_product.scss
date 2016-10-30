@@ -23,6 +23,7 @@
 
   &-title {
     margin: 0;
+    padding-bottom: $space-size-small;
   }
 
   &-excerpt {
@@ -37,6 +38,7 @@
 
   &-review {
     margin: 0;
+    margin-top: (-1 * $space-size-small);
     padding-bottom: $space-size-small;
 
     @media #{$screen-xs-max} {

@@ -265,6 +265,7 @@ body {
 }
 .product-title {
   margin: 0;
+  padding-bottom: 15px;
 }
 .product-excerpt {
   display: block;
@@ -276,6 +277,7 @@ body {
 }
 .product-review {
   margin: 0;
+  margin-top: -15px;
   padding-bottom: 15px;
 }
 @media only screen and (max-width: 520px) {
