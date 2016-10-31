@@ -145,7 +145,7 @@ class AffiliciousTheme
 
 	    // Hook the theme support and textdomain
 	    add_action('after_setup_theme', array($this, 'loadSupport'));
-	    add_action('after_setup_theme', array($this, 'loadTextdomain'));
+	    add_action('after_setup_theme', array($this, 'load_textdomain'));
 
 	    // Hook the plugin loader
 	    add_action('tgmpa_register', array($this, 'loadPlugins'));
@@ -269,7 +269,7 @@ class AffiliciousTheme
 	 *
 	 * @since 0.2
 	 */
-	public function loadTextdomain()
+	public function load_textdomain()
 	{
 		$dir = self::getRootDir() . '/languages';
 		load_theme_textdomain(self::THEME_NAME, $dir);
