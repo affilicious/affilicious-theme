@@ -13,7 +13,7 @@ class GeneralCustomizer extends AbstractCustomizer
 	 */
 	public function init()
 	{
-		$section = 'general';
+		$section = 'afft-general';
 
 		$sections[] = array(
 			'id'       => $section,
@@ -21,8 +21,8 @@ class GeneralCustomizer extends AbstractCustomizer
 			'priority' => '10',
 		);
 
-		$options['general-background-color-top'] = array(
-			'id'        => 'general-background-color-top',
+		$options['afft-general-background-color-top'] = array(
+			'id'        => 'afft-general-background-color-top',
 			'label'     => __('Background Color (Top)', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'color',
@@ -30,8 +30,8 @@ class GeneralCustomizer extends AbstractCustomizer
 			'transport' => 'postMessage',
 		);
 
-		$options['general-background-color-bottom'] = array(
-			'id'        => 'general-background-color-bottom',
+		$options['afft-general-background-color-bottom'] = array(
+			'id'        => 'afft-general-background-color-bottom',
 			'label'     => __('Background Color (Bottom)', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'color',
@@ -39,8 +39,8 @@ class GeneralCustomizer extends AbstractCustomizer
 			'transport' => 'postMessage',
 		);
 
-		$options['general-background-image'] = array(
-			'id'        => 'general-background-image',
+		$options['afft-general-background-image'] = array(
+			'id'        => 'afft-general-background-image',
 			'label'     => __('Background Image', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'upload',
@@ -48,8 +48,8 @@ class GeneralCustomizer extends AbstractCustomizer
 			'transport' => 'postMessage',
 		);
 
-		$options['general-background-repeat'] = array(
-			'id'        => 'general-background-repeat',
+		$options['afft-general-background-repeat'] = array(
+			'id'        => 'afft-general-background-repeat',
 			'label'     => __('Background Repeat', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'select',
@@ -63,8 +63,8 @@ class GeneralCustomizer extends AbstractCustomizer
 			'transport' => 'postMessage',
 		);
 
-		$options['general-background-attachment'] = array(
-			'id'        => 'general-background-attachment',
+		$options['afft-general-background-attachment'] = array(
+			'id'        => 'afft-general-background-attachment',
 			'label'     => __('Background Attachment', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'select',
@@ -78,8 +78,8 @@ class GeneralCustomizer extends AbstractCustomizer
 			'transport' => 'postMessage',
 		);
 
-		$options['general-background-size'] = array(
-			'id'        => 'general-background-size',
+		$options['afft-general-background-size'] = array(
+			'id'        => 'afft-general-background-size',
 			'label'     => __('Background Size', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'select',
@@ -93,16 +93,16 @@ class GeneralCustomizer extends AbstractCustomizer
 			'transport' => 'postMessage',
 		);
 
-		$options['general-background-width'] = array(
-			'id'        => 'general-background-width',
+		$options['afft-general-background-width'] = array(
+			'id'        => 'afft-general-background-width',
 			'label'     => __('Background Width', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'text',
 			'transport' => 'postMessage',
 		);
 
-		$options['general-background-height'] = array(
-			'id'        => 'general-background-height',
+		$options['afft-general-background-height'] = array(
+			'id'        => 'afft-general-background-height',
 			'label'     => __('Background Height', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'text',
@@ -121,8 +121,8 @@ class GeneralCustomizer extends AbstractCustomizer
 	public function render()
 	{
 		$this->renderSelectors(
-			'general-background-color-top',
-			'general-background-color-bottom',
+			'afft-general-background-color-top',
+			'afft-general-background-color-bottom',
 			function ($mod1, $mod2) {
 				$top    = sanitize_hex_color($mod1);
 				$bottom = sanitize_hex_color($mod2);
@@ -155,7 +155,7 @@ class GeneralCustomizer extends AbstractCustomizer
 			}
 		);
 
-		$this->renderSelectors('general-background-image', function ($mod) {
+		$this->renderSelectors('afft-general-background-image', function ($mod) {
 			$url = esc_url($mod);
 			if(empty($url)) {
 				return null;
@@ -171,7 +171,7 @@ class GeneralCustomizer extends AbstractCustomizer
 			);
 		});
 
-		$this->renderSelectors('general-background-image', function ($mod) {
+		$this->renderSelectors('afft-general-background-image', function ($mod) {
 			if(empty($mod)) {
 				return null;
 			}
@@ -186,7 +186,7 @@ class GeneralCustomizer extends AbstractCustomizer
 			);
 		});
 
-		$this->renderSelectors('general-background-attachment', function ($mod) {
+		$this->renderSelectors('afft-general-background-attachment', function ($mod) {
 			if(empty($mod)) {
 				return null;
 			}
@@ -202,9 +202,9 @@ class GeneralCustomizer extends AbstractCustomizer
 		});
 
 		$this->renderSelectors(
-			'general-background-size',
-			'general-background-width',
-			'general-background-height',
+			'afft-general-background-size',
+			'afft-general-background-width',
+			'afft-general-background-height',
 			function ($size, $width, $height) {
 				if(empty($size)) {
 					return null;

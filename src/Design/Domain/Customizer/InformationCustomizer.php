@@ -29,8 +29,8 @@ class InformationCustomizer extends AbstractCustomizer
 			'transport' => 'postMessage',
 		);
 
-		$options['general-copyright-text'] = array(
-			'id'        => 'general-copyright-text',
+		$options['afft-information-copyright-text'] = array(
+			'id'        => 'afft-information-copyright-text',
 			'label'     => __('Copyright', 'affilicious-theme'),
 			'section'   => $section,
 			'priority'  => '11',
@@ -39,8 +39,8 @@ class InformationCustomizer extends AbstractCustomizer
 			'transport' => 'postMessage',
 		);
 
-		$options['general-logo'] = array(
-			'id'          => 'general-logo',
+		$options['afft-information-logo'] = array(
+			'id'          => 'afft-information-logo',
 			'label'       => __('Logo', 'affilicious-theme'),
 			'description' => __('Upload a logo for your site. The recommend size is <b>400x100</b> pixels, but you can use any size.', 'affilicious-theme'),
 			'priority'  => '12',
@@ -49,8 +49,8 @@ class InformationCustomizer extends AbstractCustomizer
 			'default'     => '',
 		);
 
-		$options['general-logo-retina'] = array(
-			'id'          => 'general-logo-retina',
+		$options['afft-information-logo-retina'] = array(
+			'id'          => 'afft-information-logo-retina',
 			'label'       => __('Logo (Retina)', 'affilicious-theme'),
 			'description' => __('Upload a retina logo for your site. The recommend size is <b>800x200</b> pixels, which is 2 times larger than the regular logo.', 'affilicious-theme'),
 			'priority'  => '13',

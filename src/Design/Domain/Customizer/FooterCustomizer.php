@@ -13,7 +13,7 @@ class FooterCustomizer extends AbstractCustomizer
 	 */
 	public function init()
 	{
-		$panel = 'footer';
+		$panel = 'afft-footer';
 
 		$panels[] = array(
 			'id'       => $panel,
@@ -21,7 +21,7 @@ class FooterCustomizer extends AbstractCustomizer
 			'priority' => '50',
 		);
 
-		$section = 'footer-general';
+		$section = 'afft-footer-general';
 
 		$sections[] = array(
 			'id'       => $section,
@@ -30,8 +30,8 @@ class FooterCustomizer extends AbstractCustomizer
 			'panel'    => $panel
 		);
 
-		$options['footer-general-background-color-top'] = array(
-			'id'        => 'footer-general-background-color-top',
+		$options['afft-footer-general-background-color-top'] = array(
+			'id'        => 'afft-footer-general-background-color-top',
 			'label'     => __('Background Color (Top)', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'color',
@@ -39,8 +39,8 @@ class FooterCustomizer extends AbstractCustomizer
 			'transport' => 'postMessage',
 		);
 
-		$options['footer-general-background-color-bottom'] = array(
-			'id'        => 'footer-general-background-color-bottom',
+		$options['afft-footer-general-background-color-bottom'] = array(
+			'id'        => 'afft-footer-general-background-color-bottom',
 			'label'     => __('Background Color (Bottom)', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'color',
@@ -48,8 +48,8 @@ class FooterCustomizer extends AbstractCustomizer
 			'transport' => 'postMessage',
 		);
 
-		$options['footer-general-logo-color'] = array(
-			'id'        => 'footer-general-logo-color',
+		$options['afft-footer-general-logo-color'] = array(
+			'id'        => 'afft-footer-general-logo-color',
 			'label'     => __('Logo Color', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'color',
@@ -57,8 +57,8 @@ class FooterCustomizer extends AbstractCustomizer
 			'transport' => 'postMessage',
 		);
 
-		$options['footer-general-copyright-color'] = array(
-			'id'        => 'footer-general-copyright-color',
+		$options['afft-footer-general-copyright-color'] = array(
+			'id'        => 'afft-footer-general-copyright-color',
 			'label'     => __('Copyright Color', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'color',
@@ -66,7 +66,7 @@ class FooterCustomizer extends AbstractCustomizer
 			'transport' => 'postMessage',
 		);
 
-		$section = 'footer-breadcrumbs';
+		$section = 'afft-footer-breadcrumbs';
 
 		$sections[] = array(
 			'id'       => $section,
@@ -75,8 +75,8 @@ class FooterCustomizer extends AbstractCustomizer
 			'panel'    => $panel
 		);
 
-		$options['footer-breadcrumbs-background-color-top'] = array(
-			'id'        => 'footer-breadcrumbs-background-color-top',
+		$options['afft-footer-breadcrumbs-background-color-top'] = array(
+			'id'        => 'afft-footer-breadcrumbs-background-color-top',
 			'label'     => __('Background Color (Top)', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'color',
@@ -84,8 +84,8 @@ class FooterCustomizer extends AbstractCustomizer
 			'transport' => 'postMessage',
 		);
 
-		$options['footer-breadcrumbs-background-color-bottom'] = array(
-			'id'        => 'footer-breadcrumbs-background-color-bottom',
+		$options['afft-footer-breadcrumbs-background-color-bottom'] = array(
+			'id'        => 'afft-footer-breadcrumbs-background-color-bottom',
 			'label'     => __('Background Color (Bottom)', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'color',
@@ -93,8 +93,8 @@ class FooterCustomizer extends AbstractCustomizer
 			'transport' => 'postMessage',
 		);
 
-		$options['footer-breadcrumbs-border-color'] = array(
-			'id'        => 'footer-breadcrumbs-border-color',
+		$options['afft-footer-breadcrumbs-border-color'] = array(
+			'id'        => 'afft-footer-breadcrumbs-border-color',
 			'label'     => __('Border Color', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'color',
@@ -102,8 +102,8 @@ class FooterCustomizer extends AbstractCustomizer
 			'transport' => 'postMessage',
 		);
 
-		$options['footer-breadcrumbs-text-color'] = array(
-			'id'        => 'footer-breadcrumbs-text-color',
+		$options['afft-footer-breadcrumbs-text-color'] = array(
+			'id'        => 'afft-footer-breadcrumbs-text-color',
 			'label'     => __('Text Color', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'color',
@@ -111,8 +111,8 @@ class FooterCustomizer extends AbstractCustomizer
 			'transport' => 'postMessage',
 		);
 
-		$options['footer-breadcrumbs-link-color'] = array(
-			'id'        => 'footer-breadcrumbs-link-color',
+		$options['afft-footer-breadcrumbs-link-color'] = array(
+			'id'        => 'afft-footer-breadcrumbs-link-color',
 			'label'     => __('Link Color', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'color',
@@ -120,8 +120,8 @@ class FooterCustomizer extends AbstractCustomizer
 			'transport' => 'postMessage',
 		);
 
-		$options['footer-breadcrumbs-link-color-hover'] = array(
-			'id'        => 'footer-breadcrumbs-link-color-hover',
+		$options['afft-footer-breadcrumbs-link-color-hover'] = array(
+			'id'        => 'afft-footer-breadcrumbs-link-color-hover',
 			'label'     => __('Link Color (Hover)', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'color',
@@ -129,7 +129,7 @@ class FooterCustomizer extends AbstractCustomizer
 			'transport' => 'postMessage',
 		);
 
-		$section = 'footer-bottom-menu';
+		$section = 'afft-footer-bottom-menu';
 
 		$sections[] = array(
 			'id'       => $section,
@@ -138,8 +138,8 @@ class FooterCustomizer extends AbstractCustomizer
 			'panel'    => $panel
 		);
 
-		$options['footer-bottom-menu-title-color'] = array(
-			'id'        => 'footer-bottom-menu-title-color',
+		$options['afft-footer-bottom-menu-title-color'] = array(
+			'id'        => 'afft-footer-bottom-menu-title-color',
 			'label'     => __('Title Color', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'color',
@@ -147,8 +147,8 @@ class FooterCustomizer extends AbstractCustomizer
 			'transport' => 'postMessage',
 		);
 
-		$options['footer-bottom-menu-link-color'] = array(
-			'id'        => 'footer-bottom-menu-link-color',
+		$options['afft-footer-bottom-menu-link-color'] = array(
+			'id'        => 'afft-footer-bottom-menu-link-color',
 			'label'     => __('Link Color', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'color',
@@ -156,8 +156,8 @@ class FooterCustomizer extends AbstractCustomizer
 			'transport' => 'postMessage',
 		);
 
-		$options['footer-bottom-menu-link-color-hover'] = array(
-			'id'        => 'footer-bottom-menu-link-color-hover',
+		$options['afft-footer-bottom-menu-link-color-hover'] = array(
+			'id'        => 'afft-footer-bottom-menu-link-color-hover',
 			'label'     => __('Link Color (Hover)', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'color',
@@ -178,8 +178,8 @@ class FooterCustomizer extends AbstractCustomizer
 	public function render()
 	{
 		$this->renderSelectors(
-			'footer-general-background-color-top',
-			'footer-general-background-color-bottom',
+			'afft-footer-general-background-color-top',
+			'afft-footer-general-background-color-bottom',
 			function ($mod1, $mod2) {
 				$top    = sanitize_hex_color($mod1);
 				$bottom = sanitize_hex_color($mod2);
@@ -201,7 +201,7 @@ class FooterCustomizer extends AbstractCustomizer
 			}
 		);
 
-		$this->renderSelectors('footer-general-logo-color', function ($mod) {
+		$this->renderSelectors('afft-footer-general-logo-color', function ($mod) {
 			$color = sanitize_hex_color($mod);
 
 			return array(
@@ -214,7 +214,7 @@ class FooterCustomizer extends AbstractCustomizer
 			);
 		});
 
-		$this->renderSelectors('footer-general-copyright-color', function ($mod) {
+		$this->renderSelectors('afft-footer-general-copyright-color', function ($mod) {
 			$color = sanitize_hex_color($mod);
 
 			return array(
@@ -228,8 +228,8 @@ class FooterCustomizer extends AbstractCustomizer
 		});
 
 		$this->renderSelectors(
-			'footer-breadcrumbs-background-color-top',
-			'footer-breadcrumbs-background-color-bottom',
+			'afft-footer-breadcrumbs-background-color-top',
+			'afft-footer-breadcrumbs-background-color-bottom',
 			function ($mod1, $mod2) {
 				$top    = sanitize_hex_color($mod1);
 				$bottom = sanitize_hex_color($mod2);
@@ -251,7 +251,7 @@ class FooterCustomizer extends AbstractCustomizer
 			}
 		);
 
-		$this->renderSelectors('footer-breadcrumbs-border-color', function ($mod) {
+		$this->renderSelectors('afft-footer-breadcrumbs-border-color', function ($mod) {
 			$color = sanitize_hex_color($mod);
 
 			return array(
@@ -264,7 +264,7 @@ class FooterCustomizer extends AbstractCustomizer
 			);
 		});
 
-		$this->renderSelectors('footer-breadcrumbs-text-color', function ($mod) {
+		$this->renderSelectors('afft-footer-breadcrumbs-text-color', function ($mod) {
 			$color = sanitize_hex_color($mod);
 
 			return array(
@@ -277,7 +277,7 @@ class FooterCustomizer extends AbstractCustomizer
 			);
 		});
 
-		$this->renderSelectors('footer-breadcrumbs-link-color', function ($mod) {
+		$this->renderSelectors('afft-footer-breadcrumbs-link-color', function ($mod) {
 			$color = sanitize_hex_color($mod);
 
 			return array(
@@ -290,7 +290,7 @@ class FooterCustomizer extends AbstractCustomizer
 			);
 		});
 
-		$this->renderSelectors('footer-breadcrumbs-link-color-hover', function ($mod) {
+		$this->renderSelectors('afft-footer-breadcrumbs-link-color-hover', function ($mod) {
 			$color = sanitize_hex_color($mod);
 
 			return array(
@@ -303,7 +303,7 @@ class FooterCustomizer extends AbstractCustomizer
 			);
 		});
 
-		$this->renderSelectors('footer-bottom-menu-title-color', function ($mod) {
+		$this->renderSelectors('afft-footer-bottom-menu-title-color', function ($mod) {
 			$color = sanitize_hex_color($mod);
 
 			return array(
@@ -316,7 +316,7 @@ class FooterCustomizer extends AbstractCustomizer
 			);
 		});
 
-		$this->renderSelectors('footer-bottom-menu-link-color', function ($mod) {
+		$this->renderSelectors('afft-footer-bottom-menu-link-color', function ($mod) {
 			$color = sanitize_hex_color($mod);
 
 			return array(
@@ -329,7 +329,7 @@ class FooterCustomizer extends AbstractCustomizer
 			);
 		});
 
-		$this->renderSelectors('footer-bottom-menu-link-color-hover', function ($mod) {
+		$this->renderSelectors('afft-footer-bottom-menu-link-color-hover', function ($mod) {
 			$color = sanitize_hex_color($mod);
 
 			return array(

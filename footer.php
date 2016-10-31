@@ -35,7 +35,7 @@
 				</div>
 			</div>
 			<div class="footer-copyright text-center">
-				<?php echo get_theme_mod('general-copyright-text'); ?>
+				<?php echo get_theme_mod('afft-information-copyright-text'); ?>
 			</div>
 		</div>
 	</div>

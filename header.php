@@ -21,7 +21,7 @@
                 <div class="col-xs-12">
                     <?php if(afft_has_logo() || afft_has_retina_logo()): ?>
                         <a href="<?php home_url('/'); ?>" title="<?php bloginfo('name'); ?>" rel='home'>
-                            <img id="logo" src="<?php echo (!afft_has_logo() ? afft_get_retina_logo() :  afft_get_logo()); ?>"
+                            <img id="logo" src="<?php echo (!afft_has_logo() ? afft_get_retina_logo() : afft_get_logo()); ?>"
                                  data-rjs="<?php echo afft_get_retina_logo() ?>" alt="<?php bloginfo('name'); ?>">
                         </a>
                     <?php else: ?>

@@ -21,7 +21,7 @@ class TypographyCustomizer extends AbstractCustomizer
 			'monospace'      => 'Monospaced',
 		);
 
-		$panel = 'typography';
+		$panel = 'afft-typography';
 
 		$panels[] = array(
 			'id'       => $panel,
@@ -29,7 +29,7 @@ class TypographyCustomizer extends AbstractCustomizer
 			'priority' => '20'
 		);
 
-		$section = 'typography-headline';
+		$section = 'afft-typography-headline';
 
 		$sections[] = array(
 			'id'       => $section,
@@ -38,8 +38,8 @@ class TypographyCustomizer extends AbstractCustomizer
 			'panel'    => $panel
 		);
 
-		$options['typography-headline-font-family'] = array(
-			'id'        => 'typography-headline-font-family',
+		$options['afft-typography-headline-font-family'] = array(
+			'id'        => 'afft-typography-headline-font-family',
 			'label'     => __('Font Family', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'select',
@@ -48,8 +48,8 @@ class TypographyCustomizer extends AbstractCustomizer
 			'transport' => 'postMessage'
 		);
 
-		$options['typography-headline-color'] = array(
-			'id'        => 'typography-headline-color',
+		$options['afft-typography-headline-color'] = array(
+			'id'        => 'afft-typography-headline-color',
 			'label'     => __('Color', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'color',
@@ -57,7 +57,7 @@ class TypographyCustomizer extends AbstractCustomizer
 			'transport' => 'postMessage',
 		);
 
-		$section = 'typography-text';
+		$section = 'afft-typography-text';
 
 		$sections[] = array(
 			'id'       => $section,
@@ -66,8 +66,8 @@ class TypographyCustomizer extends AbstractCustomizer
 			'panel'    => $panel
 		);
 
-		$options['typography-text-font-family'] = array(
-			'id'        => 'typography-text-font-family',
+		$options['afft-typography-text-font-family'] = array(
+			'id'        => 'afft-typography-text-font-family',
 			'label'     => __('Font Family', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'select',
@@ -76,8 +76,8 @@ class TypographyCustomizer extends AbstractCustomizer
 			'transport' => 'postMessage'
 		);
 
-		$options['typography-text-color'] = array(
-			'id'        => 'typography-text-color',
+		$options['afft-typography-text-color'] = array(
+			'id'        => 'afft-typography-text-color',
 			'label'     => __('Color', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'color',
@@ -85,8 +85,8 @@ class TypographyCustomizer extends AbstractCustomizer
 			'transport' => 'postMessage',
 		);
 
-		$options['typography-text-link-color'] = array(
-			'id'        => 'typography-text-link-color',
+		$options['afft-typography-text-link-color'] = array(
+			'id'        => 'afft-typography-text-link-color',
 			'label'     => __('Link Color', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'color',
@@ -94,8 +94,8 @@ class TypographyCustomizer extends AbstractCustomizer
 			'transport' => 'postMessage',
 		);
 
-		$options['typography-text-link-color-hover'] = array(
-			'id'        => 'typography-text-link-color-hover',
+		$options['afft-typography-text-link-color-hover'] = array(
+			'id'        => 'afft-typography-text-link-color-hover',
 			'label'     => __('Link Color (Hover)', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'color',
@@ -115,7 +115,7 @@ class TypographyCustomizer extends AbstractCustomizer
 	 */
 	public function render()
 	{
-		$this->renderSelectors('typography-headline-font-family', function ($mod) {
+		$this->renderSelectors('afft-typography-headline-font-family', function ($mod) {
 			$stack = customizer_library_get_font_stack($mod);
 
 			return array(
@@ -128,7 +128,7 @@ class TypographyCustomizer extends AbstractCustomizer
 			);
 		});
 
-		$this->renderSelectors('typography-headline-color', function ($mod) {
+		$this->renderSelectors('afft-typography-headline-color', function ($mod) {
 			$color = sanitize_hex_color($mod);
 
 			return array(
@@ -146,7 +146,7 @@ class TypographyCustomizer extends AbstractCustomizer
 			);
 		});
 
-		$this->renderSelectors('typography-text-font-family', function ($mod) {
+		$this->renderSelectors('afft-typography-text-font-family', function ($mod) {
 			$stack = customizer_library_get_font_stack($mod);
 
 			return array(
@@ -163,7 +163,7 @@ class TypographyCustomizer extends AbstractCustomizer
 			);
 		});
 
-		$this->renderSelectors('typography-text-color', function ($mod) {
+		$this->renderSelectors('afft-typography-text-color', function ($mod) {
 			$color = sanitize_hex_color($mod);
 
 			return array(
@@ -180,7 +180,7 @@ class TypographyCustomizer extends AbstractCustomizer
 			);
 		});
 
-		$this->renderSelectors('typography-link-font-family', function ($mod) {
+		$this->renderSelectors('afft-typography-link-font-family', function ($mod) {
 			$stack = customizer_library_get_font_stack($mod);
 
 			return array(
@@ -193,7 +193,7 @@ class TypographyCustomizer extends AbstractCustomizer
 			);
 		});
 
-		$this->renderSelectors('typography-text-link-color', function ($mod) {
+		$this->renderSelectors('afft-typography-text-link-color', function ($mod) {
 			$color = sanitize_hex_color($mod);
 
 			return array(
@@ -207,7 +207,7 @@ class TypographyCustomizer extends AbstractCustomizer
 			);
 		});
 
-		$this->renderSelectors('typography-text-link-color-hover', function ($mod) {
+		$this->renderSelectors('afft-typography-text-link-color-hover', function ($mod) {
 			$color = sanitize_hex_color($mod);
 
 			return array(
@@ -230,7 +230,7 @@ class TypographyCustomizer extends AbstractCustomizer
 	{
 		// Font options
 		$fonts = array(
-			get_theme_mod('typography-headline-font-family', customizer_library_get_default('typography-headline-font-family')),
+			get_theme_mod('afft-typography-headline-font-family', customizer_library_get_default('afft-typography-headline-font-family')),
 		);
 		$font_uri = customizer_library_get_google_font_uri($fonts);
 
