@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: "
 "affilicious-theme\n"
 "POT-Creation-Date: "
-"2016-10-28 17:39+0200\n"
+"2016-10-31 15:44+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Your "
 "Name <you@example.com>\n"
@@ -58,96 +58,96 @@ msgstr ""
 "SearchPathExcluded-3: "
 "node_modules\n"
 
-#: affilicious-theme.php:176
+#: affilicious-theme.php:177
 msgid "Theme License"
 msgstr ""
 
-#: affilicious-theme.php:177
+#: affilicious-theme.php:178
 msgid ""
 "Enter your theme "
 "license key."
 msgstr ""
 
-#: affilicious-theme.php:178
+#: affilicious-theme.php:179
 msgid "License Key"
 msgstr ""
 
-#: affilicious-theme.php:179
+#: affilicious-theme.php:180
 msgid "License Action"
 msgstr ""
 
-#: affilicious-theme.php:180
+#: affilicious-theme.php:181
 msgid "Deactivate License"
 msgstr ""
 
-#: affilicious-theme.php:181
+#: affilicious-theme.php:182
 msgid "Activate License"
 msgstr ""
 
-#: affilicious-theme.php:182
-#: affilicious-theme.php:194
+#: affilicious-theme.php:183
+#: affilicious-theme.php:195
 msgid ""
 "License status is "
 "unknown."
 msgstr ""
 
-#: affilicious-theme.php:183
+#: affilicious-theme.php:184
 msgid "Renew?"
 msgstr ""
 
-#: affilicious-theme.php:184
+#: affilicious-theme.php:185
 msgid "unlimited"
 msgstr ""
 
-#: affilicious-theme.php:185
+#: affilicious-theme.php:186
 msgid ""
 "License key is active."
 msgstr ""
 
-#: affilicious-theme.php:186
+#: affilicious-theme.php:187
 #, php-format
 msgid "Expires %s."
 msgstr ""
 
-#: affilicious-theme.php:187
+#: affilicious-theme.php:188
 #, php-format
 msgid ""
 "You have %1$s / %2$s "
 "sites activated."
 msgstr ""
 
-#: affilicious-theme.php:188
+#: affilicious-theme.php:189
 #, php-format
 msgid ""
 "License key expired %s."
 msgstr ""
 
-#: affilicious-theme.php:189
+#: affilicious-theme.php:190
 msgid ""
 "License key has expired."
 msgstr ""
 
-#: affilicious-theme.php:190
+#: affilicious-theme.php:191
 msgid ""
 "License keys do not "
 "match."
 msgstr ""
 
-#: affilicious-theme.php:191
+#: affilicious-theme.php:192
 msgid ""
 "License is inactive."
 msgstr ""
 
-#: affilicious-theme.php:192
+#: affilicious-theme.php:193
 msgid ""
 "License key is disabled."
 msgstr ""
 
-#: affilicious-theme.php:193
+#: affilicious-theme.php:194
 msgid "Site is inactive."
 msgstr ""
 
-#: affilicious-theme.php:195
+#: affilicious-theme.php:196
 msgid ""
 "Updating this theme "
 "will lose any "
@@ -156,7 +156,7 @@ msgid ""
 "'OK' to update."
 msgstr ""
 
-#: affilicious-theme.php:196
+#: affilicious-theme.php:197
 #, php-format
 msgid ""
 "<strong>%1$s %2$s</"
@@ -169,41 +169,41 @@ msgid ""
 "now</a>."
 msgstr ""
 
-#: affilicious-theme.php:361
+#: affilicious-theme.php:366
 msgid ""
 "Install Required Plugins"
 msgstr ""
 
-#: affilicious-theme.php:362
+#: affilicious-theme.php:367
 msgid "Install Plugins"
 msgstr ""
 
-#: affilicious-theme.php:363
+#: affilicious-theme.php:368
 #, php-format
 msgid ""
 "Installing Plugin: %s"
 msgstr ""
 
-#: affilicious-theme.php:364
+#: affilicious-theme.php:369
 #, php-format
 msgid ""
 "Updating Plugin: %s"
 msgstr ""
 
-#: affilicious-theme.php:365
+#: affilicious-theme.php:370
 msgid ""
 "Something went wrong "
 "with the plugin API."
 msgstr ""
 
-#: affilicious-theme.php:367
+#: affilicious-theme.php:372
 #, php-format
 msgid ""
 "This theme requires the "
 "following plugin: %1$s."
 msgstr ""
 
-#: affilicious-theme.php:372
+#: affilicious-theme.php:377
 #, php-format
 msgid ""
 "This theme recommends "
@@ -211,7 +211,7 @@ msgid ""
 "%1$s."
 msgstr ""
 
-#: affilicious-theme.php:377
+#: affilicious-theme.php:382
 #, php-format
 msgid ""
 "The following plugin "
@@ -222,14 +222,14 @@ msgid ""
 "theme: %1$s."
 msgstr ""
 
-#: affilicious-theme.php:382
+#: affilicious-theme.php:387
 #, php-format
 msgid ""
 "There is an update "
 "available for: %1$s."
 msgstr ""
 
-#: affilicious-theme.php:387
+#: affilicious-theme.php:392
 #, php-format
 msgid ""
 "The following required "
@@ -237,7 +237,7 @@ msgid ""
 "inactive: %1$s."
 msgstr ""
 
-#: affilicious-theme.php:392
+#: affilicious-theme.php:397
 #, php-format
 msgid ""
 "The following "
@@ -246,48 +246,48 @@ msgid ""
 "%1$s."
 msgstr ""
 
-#: affilicious-theme.php:397
+#: affilicious-theme.php:402
 msgid ""
 "Begin installing plugin"
 msgstr ""
 
-#: affilicious-theme.php:402
+#: affilicious-theme.php:407
 msgid ""
 "Begin updating plugin"
 msgstr ""
 
-#: affilicious-theme.php:407
+#: affilicious-theme.php:412
 msgid ""
 "Begin activating plugin"
 msgstr ""
 
-#: affilicious-theme.php:411
+#: affilicious-theme.php:416
 msgid ""
 "Return to Required "
 "Plugins Installer"
 msgstr ""
 
-#: affilicious-theme.php:412
+#: affilicious-theme.php:417
 msgid ""
 "Plugin activated "
 "successfully."
 msgstr ""
 
-#: affilicious-theme.php:413
+#: affilicious-theme.php:418
 msgid ""
 "The following plugin "
 "was activated "
 "successfully:"
 msgstr ""
 
-#: affilicious-theme.php:414
+#: affilicious-theme.php:419
 #, php-format
 msgid ""
 "No action taken. Plugin "
 "%1$s was already active."
 msgstr ""
 
-#: affilicious-theme.php:415
+#: affilicious-theme.php:420
 #, php-format
 msgid ""
 "Plugin not activated. A "
@@ -297,7 +297,7 @@ msgid ""
 "plugin."
 msgstr ""
 
-#: affilicious-theme.php:416
+#: affilicious-theme.php:421
 #, php-format
 msgid ""
 "All plugins installed "
@@ -305,12 +305,12 @@ msgid ""
 "successfully. %1$s"
 msgstr ""
 
-#: affilicious-theme.php:417
+#: affilicious-theme.php:422
 msgid ""
 "Dismiss this notice"
 msgstr ""
 
-#: affilicious-theme.php:418
+#: affilicious-theme.php:423
 msgid ""
 "There are one or more "
 "required or recommended "
@@ -318,7 +318,7 @@ msgid ""
 "update or activate."
 msgstr ""
 
-#: affilicious-theme.php:419
+#: affilicious-theme.php:424
 msgid ""
 "Please contact the "
 "administrator of this "
@@ -400,11 +400,7 @@ msgid ""
 "not found on this site."
 msgstr ""
 
-#: partials/content-product-details.php:8
-msgid "Price"
-msgstr ""
-
-#: partials/content-product-details.php:29
+#: partials/content-product-details.php:11
 msgid "Download"
 msgstr ""
 
@@ -434,7 +430,7 @@ msgstr ""
 msgid "To The Test Report"
 msgstr ""
 
-#: partials/content-product-review.php:27
+#: partials/content-product-review.php:28
 #, php-format
 msgid ""
 "based on <span itemprop="
@@ -1141,12 +1137,27 @@ msgid ""
 "product preview image?"
 msgstr ""
 
-#: src/Settings/Application/Setting/DesignSettings.php:34
+#: src/Settings/Application/Setting/DesignSettings.php:35
+msgid "Raw Modifications"
+msgstr ""
+
+#: src/Settings/Application/Setting/DesignSettings.php:37
+msgid ""
+"Please be aware that "
+"ill-considered changes "
+"may destroy your design."
+msgstr ""
+
+#: src/Settings/Application/Setting/DesignSettings.php:40
 msgid "Design"
 msgstr ""
 
-#: src/Settings/Application/Setting/DesignSettings.php:36
+#: src/Settings/Application/Setting/DesignSettings.php:42
 msgid "Links"
+msgstr ""
+
+#: src/Settings/Application/Setting/DesignSettings.php:43
+msgid "Customizer"
 msgstr ""
 
 #: src/functions.php:22

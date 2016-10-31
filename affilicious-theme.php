@@ -216,6 +216,10 @@ class AffiliciousTheme
 	 */
 	public function activate()
 	{
+	    // Apply the backup styles
+        $customizerModsBackupService = $this->container['affilicious.theme.design.application.service.customizer_mods_backup'];
+        $customizerModsBackupService->apply_backup();
+
 		$api_params = array(
 			'edd_action' => 'activate_license',
 			'license'    => self::THEME_LICENSE_KEY,
@@ -322,12 +326,16 @@ class AffiliciousTheme
 			return new WidgetSetup();
 		};
 
-		$this->container['affilicious.theme.settings.setting.design'] = function () {
-			return new DesignSettings();
+		$this->container['affilicious.theme.settings.setting.design'] = function ($c) {
+			return new DesignSettings($c['affilicious.theme.design.application.service.customizer_mods_backup']);
 		};
 
 		$this->container['affilicious.theme.design.filter.custom_sidebar'] = function() {
 		    return new CustomSidebarFilter();
+        };
+
+        $this->container['affilicious.theme.design.application.service.customizer_mods_backup'] = function() {
+            return new \Affilicious\Theme\Design\Application\Service\CustomizerModsBackupService();
         };
 	}
 
@@ -508,6 +516,12 @@ class AffiliciousTheme
      */
     public function registerAdminHooks()
     {
+        // Hook the mods backup
+        $customizerModsBackupService = $this->container['affilicious.theme.design.application.service.customizer_mods_backup'];
+        add_action('customize_save_after', array($customizerModsBackupService, 'store_backup'), 99);
+        add_action('added_option', array($customizerModsBackupService, 'apply_backup'), 999, 1);
+        add_action('updated_option', array($customizerModsBackupService, 'apply_backup'), 999, 1);
+
     	// Hook the updater
 	    add_action('admin_init', array($this, 'update'), 0);
 
