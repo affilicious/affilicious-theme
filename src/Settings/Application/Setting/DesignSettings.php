@@ -8,8 +8,8 @@ use Carbon_Fields\Field as CarbonField;
 
 class DesignSettings implements Settings_Interface
 {
-	const SETTING_PRODUCT_IMAGE_GALLERY_CLICK_ACTION = 'affilicious_theme_settings_design_links_product_image_gallery_click_action';
-	const SETTING_PRODUCT_PREVIEW_IMAGE_CLICK_ACTION =  'affilicious_theme_settings_design_links_product_preview_image_click_action';
+	const SETTING_PRODUCT_IMAGE_GALLERY_CLICK_ACTION = 'affilicious_theme_options_design_container_links_tab_product_image_gallery_click_action_field';
+	const SETTING_PRODUCT_PREVIEW_IMAGE_CLICK_ACTION =  'affilicious_theme_options_design_container_links_tab_product_preview_image_click_action_field';
 
     /**
      * @var CustomizerModsBackupService
@@ -31,9 +31,9 @@ class DesignSettings implements Settings_Interface
 	 */
 	public function render()
 	{
-		do_action('affilicious_theme_settings_design_before_render');
+		do_action('affilicious_theme_options_design_before_render');
 
-		$link_tab = apply_filters('affilicious_theme_settings_design_container_links_tab', array(
+		$links_tab = apply_filters('affilicious_theme_options_design_container_links_tab', array(
 			CarbonField::make('radio', self::SETTING_PRODUCT_IMAGE_GALLERY_CLICK_ACTION, __('What will happen, if you click on the product image gallery?', 'affilicious-theme'))
 				->add_options(array(
 					'none' => __('Nothing', 'affilicious-theme'),
@@ -46,20 +46,19 @@ class DesignSettings implements Settings_Interface
 				)),
 		));
 
-        $customizer_tab = apply_filters('affilicious_theme_settings_design_container_customizer_tab', array(
-            CarbonField::make('textarea', 'affilicious_theme_settings_design_container_customizer_tab_raw_modifications_field', __('Raw Modifications', 'affilicious-theme'))
+        $customizer_tab = apply_filters('affilicious_theme_options_design_container_customizer_tab', array(
+            CarbonField::make('textarea', 'affilicious_theme_options_design_container_customizer_tab_raw_modifications_field', __('Raw Modifications', 'affilicious-theme'))
                 ->set_default_value($this->customizerModsBackup->get_theme_mods())
                 ->set_help_text(__('Please be aware that ill-considered changes may destroy your design.', 'affilicious-theme')),
         ));
 
 		$container = CarbonContainer::make('theme_options', __('Design', 'affilicious-theme'))
 			->set_page_parent('Affilicious')
-            ->add_tab(__('Links', 'affilicious-theme'), $link_tab)
+            ->add_tab(__('Links', 'affilicious-theme'), $links_tab)
             ->add_tab(__('Customizer'), $customizer_tab);
 
-
-		apply_filters('affilicious_theme_settings_design_container', $container);
-		do_action('affilicious_theme_settings_design_after_render');
+		apply_filters('affilicious_theme_options_design_container', $container);
+		do_action('affilicious_theme_options_design_after_render');
 	}
 
 	/**
@@ -68,14 +67,10 @@ class DesignSettings implements Settings_Interface
 	 */
 	public function apply()
 	{
-		do_action('affilicious_theme_settings_design_before_apply');
+		do_action('affilicious_theme_options_design_before_apply');
 
 		//TODO: Place your code here
 
-		do_action('affilicious_theme_settings_design_after_apply');
+		do_action('affilicious_theme_options_design_after_apply');
 	}
-
-
-
-
 }
