@@ -8,6 +8,10 @@ License URI: https://opensource.org/licenses/GPL-2.0
 Official Affilicious Theme for Wordpress with product management, price comparisons, details and more.
 
 == Changelog ==
+= 0.5.1 =
+* Fixed a critical bug after the theme activation on missing or outdated affilicious plugin
+* Changed the requirement of the affilicious plugin to 0.6
+
 = 0.5 =
 * Added support for product variants and attributes
 
