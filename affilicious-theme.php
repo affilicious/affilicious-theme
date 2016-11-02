@@ -218,7 +218,9 @@ class AffiliciousTheme
 	{
 	    // Apply the backup styles
         $customizerModsBackupService = $this->container['affilicious.theme.design.application.service.customizer_mods_backup'];
-        $customizerModsBackupService->activate();
+        if($customizerModsBackupService !== null) {
+            $customizerModsBackupService->activate();
+        }
 
 		$api_params = array(
 			'edd_action' => 'activate_license',
