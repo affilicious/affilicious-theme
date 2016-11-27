@@ -35,6 +35,9 @@ class AffiliciousTheme
     const THEME_NAME = 'affilicious-theme';
     const THEME_VERSION = '0.5.1';
     const THEME_NAMESPACE = 'Affilicious\\Theme\\';
+    const THEME_TESTS_NAMESPACE = 'Affilicious\\Theme\\';
+    const THEME_SOURCE_DIR = 'src/';
+    const THEME_TESTS_DIR = 'tests/';
     const THEME_STORE_URL = 'http://affilicioustheme.de';
     const THEME_ITEM_NAME = 'Affilicious Theme';
     const THEME_LICENSE_KEY = '42aa4d279329fe829a6022f47e1a47b8';
@@ -127,8 +130,21 @@ class AffiliciousTheme
         if (stripos($class, $prefix) === false) {
             return;
         }
-        $file_path = __DIR__ . '/src/' . str_ireplace(self::THEME_NAMESPACE, '', $class) . '.php';
+
+        $file_path = str_ireplace(self::THEME_NAMESPACE, '', $class) . '.php';
+        $file_path = strtolower($file_path);
+        $file_path = str_replace('_', '-', $file_path);
+
+        $test_prefix = self::THEME_TESTS_NAMESPACE;
+        if (stripos($class, $test_prefix) !== false) {
+            $file_path = __DIR__ . '/' . $file_path;
+        } else {
+            $file_path = __DIR__ . '/' . self::THEME_SOURCE_DIR . $file_path;
+        }
+
         $file_path = str_replace('\\', DIRECTORY_SEPARATOR, $file_path);
+
+        /** @noinspection PhpIncludeInspection */
         include_once($file_path);
     }
 
