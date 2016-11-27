@@ -21,7 +21,7 @@ class Menu_Helper
 	public static function get_main_menu()
 	{
 		$container = \Affilicious_Theme::get_instance()->get_container();
-		$menu_setup = $container['affilicious.theme.design.setup.menu'];
+		$menu_setup = $container['affilicious_theme.design.setup.menu'];
 		$mainMenu = $menu_setup->get_main_menu();
 
 		return $mainMenu;
@@ -35,7 +35,7 @@ class Menu_Helper
 	public static function get_bottom_1_menu()
 	{
 		$container = \Affilicious_Theme::get_instance()->get_container();
-		$menu_setup = $container['affilicious.theme.design.setup.menu'];
+		$menu_setup = $container['affilicious_theme.design.setup.menu'];
 		$bottom_1_menu = $menu_setup->get_bottom_1_menu();
 
 		return $bottom_1_menu;
@@ -49,7 +49,7 @@ class Menu_Helper
 	public static function get_bottom_2_menu()
 	{
 		$container = \Affilicious_Theme::get_instance()->get_container();
-		$menu_setup = $container['affilicious.theme.design.setup.menu'];
+		$menu_setup = $container['affilicious_theme.design.setup.menu'];
 		$bottom_2_menu = $menu_setup->get_bottom_2_menu();
 
 		return $bottom_2_menu;
@@ -63,7 +63,7 @@ class Menu_Helper
 	public static function get_bottom_3_menu()
 	{
 		$container = \Affilicious_Theme::get_instance()->get_container();
-		$menu_setup = $container['affilicious.theme.design.setup.menu'];
+		$menu_setup = $container['affilicious_theme.design.setup.menu'];
 		$bottom_3_menu = $menu_setup->get_bottom_3_menu();
 
 		return $bottom_3_menu;
@@ -77,7 +77,7 @@ class Menu_Helper
 	public static function get_bottom_4_menu()
 	{
 		$container = \Affilicious_Theme::get_instance()->get_container();
-		$menu_setup = $container['affilicious.theme.design.setup.menu'];
+		$menu_setup = $container['affilicious_theme.design.setup.menu'];
 		$bottom_4_menu = $menu_setup->get_bottom_4_menu();
 
 		return $bottom_4_menu;

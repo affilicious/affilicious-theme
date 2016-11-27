@@ -18,7 +18,9 @@
  */
 use Pimple\Container;
 
-if (!defined('ABSPATH')) exit('Not allowed to access pages directly.');
+if(!defined('ABSPATH')) {
+    exit('Not allowed to access pages directly.');
+}
 
 class Affilicious_Theme
 {
@@ -223,7 +225,7 @@ class Affilicious_Theme
 	public function activate()
 	{
 	    // Apply the backup styles
-        $customizer_mods_backup_service = $this->container['affilicious.theme.design.application.service.customizer_mods_backup'];
+        $customizer_mods_backup_service = $this->container['affilicious_theme.design.application.service.customizer_mods_backup'];
         if($customizer_mods_backup_service !== null) {
             $customizer_mods_backup_service->activate();
         }
@@ -306,43 +308,45 @@ class Affilicious_Theme
 	 */
 	public function load_services()
 	{
-		$this->container['affilicious.theme.common.setup.asset'] = function () {
+		$this->container['affilicious_theme.common.setup.asset'] = function () {
 			return new \Affilicious_Theme\Common\Application\Setup\Asset_Setup();
 		};
 
-		$this->container['affilicious.theme.design.setup.content'] = function () {
+		$this->container['affilicious_theme.design.setup.content'] = function () {
 			return new \Affilicious_Theme\Design\Application\Setup\Content_Setup();
 		};
 
-		$this->container['affilicious.theme.design.setup.comment'] = function () {
+		$this->container['affilicious_theme.design.setup.comment'] = function () {
 			return new \Affilicious_Theme\Design\Application\Setup\Comment_Setup();
 		};
 
-		$this->container['affilicious.theme.design.setup.menu'] = function () {
+		$this->container['affilicious_theme.design.setup.menu'] = function () {
 			return new \Affilicious_Theme\Design\Application\Setup\Menu_Setup();
 		};
 
-		$this->container['affilicious.theme.design.setup.sidebar'] = function () {
+		$this->container['affilicious_theme.design.setup.sidebar'] = function () {
 			return new \Affilicious_Theme\Design\Application\Setup\Sidebar_Setup();
 		};
 
-		$this->container['affilicious.theme.design.setup.customizer'] = function () {
+		$this->container['affilicious_theme.design.setup.customizer'] = function () {
 			return new \Affilicious_Theme\Design\Application\Setup\Customizer_Setup();
 		};
 
-		$this->container['affilicious.theme.design.setup.widget'] = function () {
+		$this->container['affilicious_theme.design.setup.widget'] = function () {
 			return new \Affilicious_Theme\Design\Application\Setup\Widget_Setup();
 		};
 
-		$this->container['affilicious.theme.settings.setting.design'] = function ($c) {
-			return new \Affilicious_Theme\Settings\Application\Setting\Design_Settings($c['affilicious.theme.design.application.service.customizer_mods_backup']);
+		$this->container['affilicious_theme.settings.setting.design'] = function ($c) {
+			return new \Affilicious_Theme\Settings\Application\Setting\Design_Settings(
+			    $c['affilicious_theme.design.application.service.customizer_mods_backup']
+            );
 		};
 
-		$this->container['affilicious.theme.design.filter.custom_sidebar'] = function() {
+		$this->container['affilicious_theme.design.filter.custom_sidebar'] = function() {
 		    return new \Affilicious_Theme\Design\Application\Filter\Custom_Sidebar_Filter();
         };
 
-        $this->container['affilicious.theme.design.application.service.customizer_mods_backup'] = function() {
+        $this->container['affilicious_theme.design.application.service.customizer_mods_backup'] = function() {
             return new \Affilicious_Theme\Design\Application\Service\Customizer_Mods_Backup_Service();
         };
 	}
@@ -473,26 +477,26 @@ class Affilicious_Theme
     public function register_public_hooks()
     {
 	    // Hook the public styles and scripts
-	    $asset_setup = $this->container['affilicious.theme.common.setup.asset'];
+	    $asset_setup = $this->container['affilicious_theme.common.setup.asset'];
 	    add_action('wp_enqueue_scripts', array($asset_setup, 'add_public_styles'));
 	    add_action('wp_enqueue_scripts', array($asset_setup, 'add_public_scripts'));
 
 	    // Hook the sidebars
-	    $sidebar_setup = $this->container['affilicious.theme.design.setup.sidebar'];
+	    $sidebar_setup = $this->container['affilicious_theme.design.setup.sidebar'];
 	    add_action('init', array($sidebar_setup, 'init'));
         add_filter('affilicious_product_render_affilicious_product_container_general_fields', array($sidebar_setup, 'render'), 0);
 
 	    // Hook the widgets
-	    $widget_setup = $this->container['affilicious.theme.design.setup.widget'];
+	    $widget_setup = $this->container['affilicious_theme.design.setup.widget'];
 	    add_filter('widgets_init', array($widget_setup, 'register_widgets'));
 	    add_filter('widget_tag_cloud_args', array($widget_setup, 'modifiy_tag_cloud'));
 
 	    // Hook the menus
-	    $menu_setup = $this->container['affilicious.theme.design.setup.menu'];
+	    $menu_setup = $this->container['affilicious_theme.design.setup.menu'];
 	    add_action('after_setup_theme', array($menu_setup, 'init'));
 
 	    // Hook the content
-	    $content_setup = $this->container['affilicious.theme.design.setup.content'];
+	    $content_setup = $this->container['affilicious_theme.design.setup.content'];
 	    add_filter('the_content', array($content_setup, 'set_table_class'));
 	    add_filter('excerpt_length', array($content_setup, 'set_excerpt_length'));
 	    add_filter('post_thumbnail_html', array($content_setup, 'remove_img_dimensions'));
@@ -501,19 +505,19 @@ class Affilicious_Theme
 	    add_filter('the_content', array($content_setup, 'wrap_fluid_media'));
 
 	    // Hook the comments
-	    $comment_setup = $this->container['affilicious.theme.design.setup.comment'];
+	    $comment_setup = $this->container['affilicious_theme.design.setup.comment'];
 	    add_filter('comment_form_default_fields', array($comment_setup, 'set_form_default_fields'));
 	    add_filter('comment_form_defaults', array($comment_setup, 'set_form_defaults'));
 	    add_filter('after_setup_theme', array($comment_setup, 'set_theme_support'));
 
 	    // Theme Customizer
-	    $customizer_setup = $this->container['affilicious.theme.design.setup.customizer'];
+	    $customizer_setup = $this->container['affilicious_theme.design.setup.customizer'];
 	    add_action('init', array($customizer_setup, 'init'), 100);
 	    add_action('init', array($customizer_setup, 'render'), 102);
 	    add_action('wp_enqueue_scripts', array($customizer_setup, 'enqueue_scripts'));
 	    add_action('wp_head', array($customizer_setup, 'head'));
 
-        $custom_sidebar_filter = $this->container['affilicious.theme.design.filter.custom_sidebar'];
+        $custom_sidebar_filter = $this->container['affilicious_theme.design.filter.custom_sidebar'];
         add_filter('dynamic_sidebar_params', array($custom_sidebar_filter, 'filter'));
     }
 
@@ -525,7 +529,7 @@ class Affilicious_Theme
     public function register_admin_hooks()
     {
         // Hook the mods backup
-        $customizer_mods_backup_service = $this->container['affilicious.theme.design.application.service.customizer_mods_backup'];
+        $customizer_mods_backup_service = $this->container['affilicious_theme.design.application.service.customizer_mods_backup'];
         add_action('customize_save_after', array($customizer_mods_backup_service, 'store_backup'), 99);
         add_action('added_option', array($customizer_mods_backup_service, 'apply_backup'), 999, 1);
         add_action('updated_option', array($customizer_mods_backup_service, 'apply_backup'), 999, 1);
@@ -534,17 +538,17 @@ class Affilicious_Theme
 	    add_action('admin_init', array($this, 'update'), 0);
 
         // Hook the admin styles and scripts
-	    $asset_setup = $this->container['affilicious.theme.common.setup.asset'];
+	    $asset_setup = $this->container['affilicious_theme.common.setup.asset'];
         add_action('admin_enqueue_scripts', array($asset_setup, 'add_admin_styles'));
         add_action('admin_enqueue_scripts', array($asset_setup, 'add_admin_scripts'));
 	    add_action('customize_preview_init', array($asset_setup, 'add_customizer_scripts'));
 
 	    // Hook the sidebars
-	    $sidebar_setup = $this->container['affilicious.theme.design.setup.sidebar'];
+	    $sidebar_setup = $this->container['affilicious_theme.design.setup.sidebar'];
 	    add_action('admin_init', array($sidebar_setup, 'set_default_sidebar'), 0);
 
 	    // Hook the settings
-	    $design_settings = $this->container['affilicious.theme.settings.setting.design'];
+	    $design_settings = $this->container['affilicious_theme.settings.setting.design'];
 	    add_action('init', array($design_settings, 'render'), 100);
 	    add_action('init', array($design_settings, 'apply'), 101);
     }

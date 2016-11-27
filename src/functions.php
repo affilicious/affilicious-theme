@@ -7,6 +7,10 @@ use Affilicious_Theme\Design\Application\Setup\Sidebar_Setup;
 use Affilicious_Theme\Settings\Application\Setting\Design_Settings;
 use Affilicious_Theme\Design\Domain\Walker\Bootstrap_Comment_Walker;
 
+if(!defined('ABSPATH')) {
+    exit('Not allowed to access pages directly.');
+}
+
 /**
  * Check if every requirement like the main plugin is installed correctly
  * before we can print anything to the screen.
