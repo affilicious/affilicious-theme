@@ -332,15 +332,15 @@ msgstr[1] "anhand von <span itemprop=\"reviewCount\">%s</span> Bewertungen"
 msgid "Search"
 msgstr "Suchen"
 
-#: src/Design/Application/Setup/CommentSetup.php:33
+#: src/Design/Application/Setup/Comment_Setup.php:33
 msgid "Name"
 msgstr "Name"
 
-#: src/Design/Application/Setup/CommentSetup.php:35
+#: src/Design/Application/Setup/Comment_Setup.php:35
 msgid "Email"
 msgstr "Email"
 
-#: src/Design/Application/Setup/CommentSetup.php:37
+#: src/Design/Application/Setup/Comment_Setup.php:37
 msgid "Website"
 msgstr "Webseite"
 

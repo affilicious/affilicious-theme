@@ -16,51 +16,41 @@
  * You should have received a copy of the GNU General Public License
  * along with Affilicious Theme. If not, see <http://www.gnu.org/licenses/>.
  */
-use Affilicious\Theme\Common\Application\Setup\AssetSetup;
-use Affilicious\Theme\Design\Application\Setup\ContentSetup;
-use Affilicious\Theme\Design\Application\Setup\MenuSetup;
-use Affilicious\Theme\Design\Application\Setup\SidebarSetup;
-use Affilicious\Theme\Design\Application\Setup\WidgetSetup;
-use Affilicious\Theme\Design\Domain\Shortcode\AlertShortcode;
-use Affilicious\Theme\Design\Application\Setup\CommentSetup;
-use Affilicious\Theme\Design\Application\Setup\CustomizerSetup;
-use Affilicious\Theme\Settings\Application\Setting\DesignSettings;
-use Affilicious\Theme\Design\Application\Filter\CustomSidebarFilter;
 use Pimple\Container;
 
 if (!defined('ABSPATH')) exit('Not allowed to access pages directly.');
 
-class AffiliciousTheme
+class Affilicious_Theme
 {
     const THEME_NAME = 'affilicious-theme';
     const THEME_VERSION = '0.5.1';
     const THEME_NAMESPACE = 'Affilicious\\Theme\\';
-    const THEME_TESTS_NAMESPACE = 'Affilicious\\Theme\\';
+    const THEME_TESTS_NAMESPACE = 'Affilicious\\Theme\\Tests\\';
     const THEME_SOURCE_DIR = 'src/';
-    const THEME_TESTS_DIR = 'tests/';
+    const THEME_TESTS_DIR= 'tests/';
     const THEME_STORE_URL = 'http://affilicioustheme.de';
-    const THEME_ITEM_NAME = 'Affilicious Theme';
+    const THEME_ITEM_NAME= 'Affilicious Theme';
     const THEME_LICENSE_KEY = '42aa4d279329fe829a6022f47e1a47b8';
     const THEME_AUTHOR = 'Affilicious Team';
 
 	/**
 	 * Stores the singleton instance
 	 *
-	 * @var \AffiliciousTheme
+	 * @var \affilicious_theme
 	 */
 	private static $instance;
 
 	/**
 	 * A reference to the main plugin
 	 *
-	 * @see https://github.com/AlexBa/affilicious
+	 * @see https://github.com/_alex_ba/affilicious
 	 * @var Affilicious_Plugin
 	 */
 	private $affilicious;
 
 	/**
 	 * Register all services and parameters for the pimple dependency injection.
-	 * This container is just a reference to the container of the Affilicious plugin.
+	 * This container is just a reference to the container of the _affilicious plugin.
 	 *
 	 * @see http://pimple.sensiolabs.org
 	 * @var Container
@@ -71,12 +61,12 @@ class AffiliciousTheme
 	 * Get the instance of the affilicious theme
 	 *
 	 * @since 0.3
-	 * @return AffiliciousTheme
+	 * @return Affilicious_Theme
 	 */
-	public static function getInstance()
+	public static function get_instance()
 	{
 		if (self::$instance === null) {
-			self::$instance = new \AffiliciousTheme();
+			self::$instance = new \Affilicious_Theme();
 		}
 
 		return self::$instance;
@@ -88,7 +78,7 @@ class AffiliciousTheme
 	 * @since 0.2
 	 * @return string
 	 */
-	public static function getRootDir()
+	public static function get_root_dir()
 	{
 		return get_template_directory();
 	}
@@ -99,13 +89,13 @@ class AffiliciousTheme
 	 * @since 0.2
 	 * @return string
 	 */
-	public static function getRootUrl()
+	public static function get_root_url()
 	{
 		return get_template_directory_uri();
 	}
 
     /**
-     * Prepare the plugin with for usage with Wordpress and namespaces
+     * Prepare the plugin with for usage with _wordpress and namespaces
      *
      * @since 0.2
      */
@@ -144,45 +134,45 @@ class AffiliciousTheme
 
         $file_path = str_replace('\\', DIRECTORY_SEPARATOR, $file_path);
 
-        /** @noinspection PhpIncludeInspection */
+        /** @noinspection _php_include_inspection */
         include_once($file_path);
     }
 
     /**
-     * Run all of the theme code
+     * _run all of the theme code
      *
      * @since 0.2
      */
     public function run()
     {
-	    // Hook the theme activation and deactivation
+	    // _hook the theme activation and deactivation
 	    add_action('after_switch_theme', array($this, 'activate'));
 	    add_action('switch_theme', array($this, 'deactivate'));
 
-	    // Hook the theme support and textdomain
-	    add_action('after_setup_theme', array($this, 'loadSupport'));
+	    // _hook the theme support and textdomain
+	    add_action('after_setup_theme', array($this, 'load_support'));
 	    add_action('after_setup_theme', array($this, 'load_textdomain'));
 
-	    // Hook the plugin loader
-	    add_action('tgmpa_register', array($this, 'loadPlugins'));
+	    // _hook the plugin loader
+	    add_action('tgmpa_register', array($this, 'load_plugins'));
 
-	    $this->loadIncludes();
-	    $this->loadFunctions();
+	    $this->load_includes();
+	    $this->load_functions();
 
-	    // Load the affilicious plugin and the dependency container
+	    // _load the affilicious plugin and the dependency container
 	    if(class_exists('\Affilicious_Plugin')) {
 		    $this->affilicious = \Affilicious_Plugin::get_instance();
 		    $this->container   = $this->affilicious->get_container();
 
-		    $this->loadServices();
-		    $this->loadShortcodes();
-		    $this->registerPublicHooks();
-		    $this->registerAdminHooks();
+		    $this->load_services();
+		    $this->load_shortcodes();
+		    $this->register_public_hooks();
+		    $this->register_admin_hooks();
 	    }
     }
 
 	/**
-	 * Update the theme with the help of the Software Licensing for Easy Digital Downloads
+	 * _update the theme with the help of the _software _licensing for _easy _digital _downloads
 	 *
 	 * @since 0.2
 	 * @see https://easydigitaldownloads.com/downloads/software-licensing/
@@ -233,9 +223,9 @@ class AffiliciousTheme
 	public function activate()
 	{
 	    // Apply the backup styles
-        $customizerModsBackupService = $this->container['affilicious.theme.design.application.service.customizer_mods_backup'];
-        if($customizerModsBackupService !== null) {
-            $customizerModsBackupService->activate();
+        $customizer_mods_backup_service = $this->container['affilicious.theme.design.application.service.customizer_mods_backup'];
+        if($customizer_mods_backup_service !== null) {
+            $customizer_mods_backup_service->activate();
         }
 
 		$api_params = array(
@@ -280,7 +270,7 @@ class AffiliciousTheme
 	 *
 	 * @since 0.2
 	 */
-	public function loadSupport()
+	public function load_support()
 	{
 		add_theme_support('post-thumbnails');
 		add_theme_support('title-tag');
@@ -293,7 +283,7 @@ class AffiliciousTheme
 	 */
 	public function load_textdomain()
 	{
-		$dir = self::getRootDir() . '/languages';
+		$dir = self::get_root_dir() . '/languages';
 		load_theme_textdomain(self::THEME_NAME, $dir);
 	}
 
@@ -302,7 +292,7 @@ class AffiliciousTheme
 	 *
 	 * @since 0.3.4
 	 */
-    public function loadIncludes()
+    public function load_includes()
     {
 	    require_once(__DIR__ . '/affilicious-theme-updater.php');
 	    require_once(__DIR__ . '/include/customizer-library/customizer-library.php');
@@ -314,46 +304,46 @@ class AffiliciousTheme
 	 *
 	 * @since 0.3.4
 	 */
-	public function loadServices()
+	public function load_services()
 	{
 		$this->container['affilicious.theme.common.setup.asset'] = function () {
-			return new AssetSetup();
+			return new \Affilicious\Theme\Common\Application\Setup\Asset_Setup();
 		};
 
 		$this->container['affilicious.theme.design.setup.content'] = function () {
-			return new ContentSetup();
+			return new \Affilicious\Theme\Design\Application\Setup\Content_Setup();
 		};
 
 		$this->container['affilicious.theme.design.setup.comment'] = function () {
-			return new CommentSetup();
+			return new \Affilicious\Theme\Design\Application\Setup\Comment_Setup();
 		};
 
 		$this->container['affilicious.theme.design.setup.menu'] = function () {
-			return new MenuSetup();
+			return new \Affilicious\Theme\Design\Application\Setup\Menu_Setup();
 		};
 
 		$this->container['affilicious.theme.design.setup.sidebar'] = function () {
-			return new SidebarSetup();
+			return new \Affilicious\Theme\Design\Application\Setup\Sidebar_Setup();
 		};
 
 		$this->container['affilicious.theme.design.setup.customizer'] = function () {
-			return new CustomizerSetup();
+			return new \Affilicious\Theme\Design\Application\Setup\Customizer_Setup();
 		};
 
 		$this->container['affilicious.theme.design.setup.widget'] = function () {
-			return new WidgetSetup();
+			return new \Affilicious\Theme\Design\Application\Setup\Widget_Setup();
 		};
 
 		$this->container['affilicious.theme.settings.setting.design'] = function ($c) {
-			return new DesignSettings($c['affilicious.theme.design.application.service.customizer_mods_backup']);
+			return new \Affilicious\Theme\Settings\Application\Setting\Design_Settings($c['affilicious.theme.design.application.service.customizer_mods_backup']);
 		};
 
 		$this->container['affilicious.theme.design.filter.custom_sidebar'] = function() {
-		    return new CustomSidebarFilter();
+		    return new \Affilicious\Theme\Design\Application\Filter\Custom_Sidebar_Filter();
         };
 
         $this->container['affilicious.theme.design.application.service.customizer_mods_backup'] = function() {
-            return new \Affilicious\Theme\Design\Application\Service\CustomizerModsBackupService();
+            return new \Affilicious\Theme\Design\Application\Service\Customizer_Mods_Backup_Service();
         };
 	}
 
@@ -362,7 +352,7 @@ class AffiliciousTheme
      *
      * @since 0.2
      */
-    public function loadPlugins()
+    public function load_plugins()
     {
         $plugins = array(
             array(
@@ -459,10 +449,10 @@ class AffiliciousTheme
 	 *
 	 * @since 0.3.4
 	 */
-    public function loadShortcodes()
+    public function load_shortcodes()
     {
-    	$alertShortcode = new AlertShortcode();
-    	add_shortcode($alertShortcode->getName(), array($alertShortcode, 'render'));
+    	$alert_shortcode = new \Affilicious\Theme\Design\Domain\Shortcode\Alert_Shortcode();
+    	add_shortcode($alert_shortcode->get_name(), array($alert_shortcode, 'render'));
     }
 
     /**
@@ -470,7 +460,7 @@ class AffiliciousTheme
      *
      * @since 0.2
      */
-    public function loadFunctions()
+    public function load_functions()
     {
         require_once(__DIR__ . '/src/functions.php');
     }
@@ -480,51 +470,51 @@ class AffiliciousTheme
      *
      * @since 0.2
      */
-    public function registerPublicHooks()
+    public function register_public_hooks()
     {
 	    // Hook the public styles and scripts
-	    $assetSetup = $this->container['affilicious.theme.common.setup.asset'];
-	    add_action('wp_enqueue_scripts', array($assetSetup, 'addPublicStyles'));
-	    add_action('wp_enqueue_scripts', array($assetSetup, 'addPublicScripts'));
+	    $asset_setup = $this->container['affilicious.theme.common.setup.asset'];
+	    add_action('wp_enqueue_scripts', array($asset_setup, 'add_public_styles'));
+	    add_action('wp_enqueue_scripts', array($asset_setup, 'add_public_scripts'));
 
 	    // Hook the sidebars
-	    $sidebarSetup = $this->container['affilicious.theme.design.setup.sidebar'];
-	    add_action('init', array($sidebarSetup, 'init'));
-        add_filter('affilicious_product_render_affilicious_product_container_general_fields', array($sidebarSetup, 'render'), 0);
+	    $sidebar_setup = $this->container['affilicious.theme.design.setup.sidebar'];
+	    add_action('init', array($sidebar_setup, 'init'));
+        add_filter('affilicious_product_render_affilicious_product_container_general_fields', array($sidebar_setup, 'render'), 0);
 
 	    // Hook the widgets
-	    $widgetSetup = $this->container['affilicious.theme.design.setup.widget'];
-	    add_filter('widgets_init', array($widgetSetup, 'registerWidgets'));
-	    add_filter('widget_tag_cloud_args', array($widgetSetup, 'modifiyTagCloud'));
+	    $widget_setup = $this->container['affilicious.theme.design.setup.widget'];
+	    add_filter('widgets_init', array($widget_setup, 'register_widgets'));
+	    add_filter('widget_tag_cloud_args', array($widget_setup, 'modifiy_tag_cloud'));
 
 	    // Hook the menus
-	    $menuSetup = $this->container['affilicious.theme.design.setup.menu'];
-	    add_action('after_setup_theme', array($menuSetup, 'init'));
+	    $menu_setup = $this->container['affilicious.theme.design.setup.menu'];
+	    add_action('after_setup_theme', array($menu_setup, 'init'));
 
 	    // Hook the content
-	    $contentSetup = $this->container['affilicious.theme.design.setup.content'];
-	    add_filter('the_content', array($contentSetup, 'setTableClass'));
-	    add_filter('excerpt_length', array($contentSetup, 'setExcerptLength'));
-	    add_filter('post_thumbnail_html', array($contentSetup, 'removeImgDimensions'));
-	    add_filter('the_content', array($contentSetup, 'removeImgDimensions'));
-	    add_filter('get_avatar', array($contentSetup, 'removeImgDimensions'));
-	    add_filter('the_content', array($contentSetup, 'wrapFluidMedia'));
+	    $content_setup = $this->container['affilicious.theme.design.setup.content'];
+	    add_filter('the_content', array($content_setup, 'set_table_class'));
+	    add_filter('excerpt_length', array($content_setup, 'set_excerpt_length'));
+	    add_filter('post_thumbnail_html', array($content_setup, 'remove_img_dimensions'));
+	    add_filter('the_content', array($content_setup, 'remove_img_dimensions'));
+	    add_filter('get_avatar', array($content_setup, 'remove_img_dimensions'));
+	    add_filter('the_content', array($content_setup, 'wrap_fluid_media'));
 
 	    // Hook the comments
-	    $commentSetup = $this->container['affilicious.theme.design.setup.comment'];
-	    add_filter('comment_form_default_fields', array($commentSetup, 'setFormDefaultFields'));
-	    add_filter('comment_form_defaults', array($commentSetup, 'setFormDefaults'));
-	    add_filter('after_setup_theme', array($commentSetup, 'setThemeSupport'));
+	    $comment_setup = $this->container['affilicious.theme.design.setup.comment'];
+	    add_filter('comment_form_default_fields', array($comment_setup, 'set_form_default_fields'));
+	    add_filter('comment_form_defaults', array($comment_setup, 'set_form_defaults'));
+	    add_filter('after_setup_theme', array($comment_setup, 'set_theme_support'));
 
 	    // Theme Customizer
-	    $customizerSetup = $this->container['affilicious.theme.design.setup.customizer'];
-	    add_action('init', array($customizerSetup, 'init'), 100);
-	    add_action('init', array($customizerSetup, 'render'), 102);
-	    add_action('wp_enqueue_scripts', array($customizerSetup, 'enqueueScripts'));
-	    add_action('wp_head', array($customizerSetup, 'head'));
+	    $customizer_setup = $this->container['affilicious.theme.design.setup.customizer'];
+	    add_action('init', array($customizer_setup, 'init'), 100);
+	    add_action('init', array($customizer_setup, 'render'), 102);
+	    add_action('wp_enqueue_scripts', array($customizer_setup, 'enqueue_scripts'));
+	    add_action('wp_head', array($customizer_setup, 'head'));
 
-        $customSidebarFilter = $this->container['affilicious.theme.design.filter.custom_sidebar'];
-        add_filter('dynamic_sidebar_params', array($customSidebarFilter, 'filter'));
+        $custom_sidebar_filter = $this->container['affilicious.theme.design.filter.custom_sidebar'];
+        add_filter('dynamic_sidebar_params', array($custom_sidebar_filter, 'filter'));
     }
 
     /**
@@ -532,38 +522,38 @@ class AffiliciousTheme
      *
      * @since 0.2
      */
-    public function registerAdminHooks()
+    public function register_admin_hooks()
     {
         // Hook the mods backup
-        $customizerModsBackupService = $this->container['affilicious.theme.design.application.service.customizer_mods_backup'];
-        add_action('customize_save_after', array($customizerModsBackupService, 'store_backup'), 99);
-        add_action('added_option', array($customizerModsBackupService, 'apply_backup'), 999, 1);
-        add_action('updated_option', array($customizerModsBackupService, 'apply_backup'), 999, 1);
+        $customizer_mods_backup_service = $this->container['affilicious.theme.design.application.service.customizer_mods_backup'];
+        add_action('customize_save_after', array($customizer_mods_backup_service, 'store_backup'), 99);
+        add_action('added_option', array($customizer_mods_backup_service, 'apply_backup'), 999, 1);
+        add_action('updated_option', array($customizer_mods_backup_service, 'apply_backup'), 999, 1);
 
     	// Hook the updater
 	    add_action('admin_init', array($this, 'update'), 0);
 
         // Hook the admin styles and scripts
-	    $assetSetup = $this->container['affilicious.theme.common.setup.asset'];
-        add_action('admin_enqueue_scripts', array($assetSetup, 'addAdminStyles'));
-        add_action('admin_enqueue_scripts', array($assetSetup, 'addAdminScripts'));
-	    add_action('customize_preview_init', array($assetSetup, 'addCustomizerScripts'));
+	    $asset_setup = $this->container['affilicious.theme.common.setup.asset'];
+        add_action('admin_enqueue_scripts', array($asset_setup, 'add_admin_styles'));
+        add_action('admin_enqueue_scripts', array($asset_setup, 'add_admin_scripts'));
+	    add_action('customize_preview_init', array($asset_setup, 'add_customizer_scripts'));
 
 	    // Hook the sidebars
-	    $sidebarSetup = $this->container['affilicious.theme.design.setup.sidebar'];
-	    add_action('admin_init', array($sidebarSetup, 'setDefaultSidebar'), 0);
+	    $sidebar_setup = $this->container['affilicious.theme.design.setup.sidebar'];
+	    add_action('admin_init', array($sidebar_setup, 'set_default_sidebar'), 0);
 
 	    // Hook the settings
-	    $designSettings = $this->container['affilicious.theme.settings.setting.design'];
-	    add_action('init', array($designSettings, 'render'), 100);
-	    add_action('init', array($designSettings, 'apply'), 101);
+	    $design_settings = $this->container['affilicious.theme.settings.setting.design'];
+	    add_action('init', array($design_settings, 'render'), 100);
+	    add_action('init', array($design_settings, 'apply'), 101);
     }
 
 	/**
 	 * @since 0.3.4
 	 * @return Container
 	 */
-	public function getContainer()
+	public function get_container()
 	{
 		return $this->container;
 	}
