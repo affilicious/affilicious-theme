@@ -36,7 +36,7 @@ class Affilicious_Theme
 	/**
 	 * Stores the singleton instance
 	 *
-	 * @var \affilicious_theme
+	 * @var \Affilicious_Theme
 	 */
 	private static $instance;
 
@@ -95,7 +95,7 @@ class Affilicious_Theme
 	}
 
     /**
-     * Prepare the plugin with for usage with _wordpress and namespaces
+     * Prepare the plugin with for usage with Wordpress and namespaces
      *
      * @since 0.2
      */
@@ -145,21 +145,21 @@ class Affilicious_Theme
      */
     public function run()
     {
-	    // _hook the theme activation and deactivation
+	    // Hook the theme activation and deactivation
 	    add_action('after_switch_theme', array($this, 'activate'));
 	    add_action('switch_theme', array($this, 'deactivate'));
 
-	    // _hook the theme support and textdomain
+	    // Hook the theme support and textdomain
 	    add_action('after_setup_theme', array($this, 'load_support'));
 	    add_action('after_setup_theme', array($this, 'load_textdomain'));
 
-	    // _hook the plugin loader
+	    // Hook the plugin loader
 	    add_action('tgmpa_register', array($this, 'load_plugins'));
 
 	    $this->load_includes();
 	    $this->load_functions();
 
-	    // _load the affilicious plugin and the dependency container
+	    // Load the affilicious plugin and the dependency container
 	    if(class_exists('\Affilicious_Plugin')) {
 		    $this->affilicious = \Affilicious_Plugin::get_instance();
 		    $this->container   = $this->affilicious->get_container();
@@ -172,7 +172,7 @@ class Affilicious_Theme
     }
 
 	/**
-	 * _update the theme with the help of the _software _licensing for _easy _digital _downloads
+	 * Update the theme with the help of the software licensing from Easy Digital Downloads
 	 *
 	 * @since 0.2
 	 * @see https://easydigitaldownloads.com/downloads/software-licensing/
