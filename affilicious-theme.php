@@ -45,7 +45,7 @@ class Affilicious_Theme
 	/**
 	 * A reference to the main plugin
 	 *
-	 * @see https://github.com/_alex_ba/affilicious
+	 * @see https://github.com/affilicious/affilicious
 	 * @var Affilicious_Plugin
 	 */
 	private $affilicious;
@@ -136,7 +136,7 @@ class Affilicious_Theme
 
         $file_path = str_replace('\\', DIRECTORY_SEPARATOR, $file_path);
 
-        /** @noinspection _php_include_inspection */
+        /** @noinspection PhpIncludeInspection */
         include_once($file_path);
     }
 
