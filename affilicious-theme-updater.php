@@ -1,5 +1,9 @@
 <?php
 
+if(!defined('ABSPATH')) {
+    exit('Not allowed to access pages directly.');
+}
+
 /**
  * Theme updater class.
  *

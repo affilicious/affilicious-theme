@@ -448,15 +448,15 @@ msgstr[1] ""
 msgid "Search"
 msgstr ""
 
-#: src/Design/Application/Setup/CommentSetup.php:33
+#: src/Design/Application/Setup/Comment_Setup.php:33
 msgid "Name"
 msgstr ""
 
-#: src/Design/Application/Setup/CommentSetup.php:35
+#: src/Design/Application/Setup/Comment_Setup.php:35
 msgid "Email"
 msgstr ""
 
-#: src/Design/Application/Setup/CommentSetup.php:37
+#: src/Design/Application/Setup/Comment_Setup.php:37
 msgid "Website"
 msgstr ""
 
