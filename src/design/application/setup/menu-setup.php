@@ -1,11 +1,11 @@
 <?php
-namespace Affilicious\Theme\Design\Application\Setup;
+namespace Affilicious_Theme\Design\Application\Setup;
 
-use Affilicious\Theme\Design\Domain\Menu\Bottom_1_Menu;
-use Affilicious\Theme\Design\Domain\Menu\Bottom_2_Menu;
-use Affilicious\Theme\Design\Domain\Menu\Bottom_3_Menu;
-use Affilicious\Theme\Design\Domain\Menu\Bottom_4_Menu;
-use Affilicious\Theme\Design\Domain\Menu\Main_Menu;
+use Affilicious_Theme\Design\Domain\Menu\Bottom_1_Menu;
+use Affilicious_Theme\Design\Domain\Menu\Bottom_2_Menu;
+use Affilicious_Theme\Design\Domain\Menu\Bottom_3_Menu;
+use Affilicious_Theme\Design\Domain\Menu\Bottom_4_Menu;
+use Affilicious_Theme\Design\Domain\Menu\Main_Menu;
 
 if(!defined('ABSPATH')) {
     exit('Not allowed to access pages directly.');

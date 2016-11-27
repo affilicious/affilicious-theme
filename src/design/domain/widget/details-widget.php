@@ -1,5 +1,5 @@
 <?php
-namespace Affilicious\Theme\Design\Domain\Widget;
+namespace Affilicious_Theme\Design\Domain\Widget;
 
 use Carbon_Fields\Field as Carbon_Field;
 

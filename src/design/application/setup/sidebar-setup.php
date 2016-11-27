@@ -1,9 +1,9 @@
 <?php
-namespace Affilicious\Theme\Design\Application\Setup;
+namespace Affilicious_Theme\Design\Application\Setup;
 
 use Affilicious\Product\Domain\Model\Product;
-use Affilicious\Theme\Design\Domain\Sidebar\Main_Sidebar;
-use Affilicious\Theme\Design\Domain\Sidebar\Product_Sidebar;
+use Affilicious_Theme\Design\Domain\Sidebar\Main_Sidebar;
+use Affilicious_Theme\Design\Domain\Sidebar\Product_Sidebar;
 use Carbon_Fields\Container as Carbon_Container;
 use Carbon_Fields\Field as Carbon_Field;
 

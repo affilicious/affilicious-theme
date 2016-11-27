@@ -1,7 +1,7 @@
 <?php
-namespace Affilicious\Theme\Design\Domain\Menu;
+namespace Affilicious_Theme\Design\Domain\Menu;
 
-use Affilicious\Theme\Design\Domain\Walker\Footer_Walker;
+use Affilicious_Theme\Design\Domain\Walker\Footer_Walker;
 
 if(!defined('ABSPATH')) {
     exit('Not allowed to access pages directly.');

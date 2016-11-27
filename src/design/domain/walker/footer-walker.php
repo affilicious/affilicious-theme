@@ -1,5 +1,5 @@
 <?php
-namespace Affilicious\Theme\Design\Domain\Walker;
+namespace Affilicious_Theme\Design\Domain\Walker;
 
 if(!defined('ABSPATH')) {
     exit('Not allowed to access pages directly.');

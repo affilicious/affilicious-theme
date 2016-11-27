@@ -1,5 +1,5 @@
 <?php
-namespace Affilicious\Theme\Common\Application\Setup;
+namespace Affilicious_Theme\Common\Application\Setup;
 
 if(!defined('ABSPATH')) {
     exit('Not allowed to access pages directly.');

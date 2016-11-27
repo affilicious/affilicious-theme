@@ -24,8 +24,8 @@ class Affilicious_Theme
 {
     const THEME_NAME = 'affilicious-theme';
     const THEME_VERSION = '0.5.1';
-    const THEME_NAMESPACE = 'Affilicious\\Theme\\';
-    const THEME_TESTS_NAMESPACE = 'Affilicious\\Theme\\Tests\\';
+    const THEME_NAMESPACE = 'Affilicious_Theme\\';
+    const THEME_TESTS_NAMESPACE = 'Affilicious_Theme\\Tests\\';
     const THEME_SOURCE_DIR = 'src/';
     const THEME_TESTS_DIR= 'tests/';
     const THEME_STORE_URL = 'http://affilicioustheme.de';
@@ -307,43 +307,43 @@ class Affilicious_Theme
 	public function load_services()
 	{
 		$this->container['affilicious.theme.common.setup.asset'] = function () {
-			return new \Affilicious\Theme\Common\Application\Setup\Asset_Setup();
+			return new \Affilicious_Theme\Common\Application\Setup\Asset_Setup();
 		};
 
 		$this->container['affilicious.theme.design.setup.content'] = function () {
-			return new \Affilicious\Theme\Design\Application\Setup\Content_Setup();
+			return new \Affilicious_Theme\Design\Application\Setup\Content_Setup();
 		};
 
 		$this->container['affilicious.theme.design.setup.comment'] = function () {
-			return new \Affilicious\Theme\Design\Application\Setup\Comment_Setup();
+			return new \Affilicious_Theme\Design\Application\Setup\Comment_Setup();
 		};
 
 		$this->container['affilicious.theme.design.setup.menu'] = function () {
-			return new \Affilicious\Theme\Design\Application\Setup\Menu_Setup();
+			return new \Affilicious_Theme\Design\Application\Setup\Menu_Setup();
 		};
 
 		$this->container['affilicious.theme.design.setup.sidebar'] = function () {
-			return new \Affilicious\Theme\Design\Application\Setup\Sidebar_Setup();
+			return new \Affilicious_Theme\Design\Application\Setup\Sidebar_Setup();
 		};
 
 		$this->container['affilicious.theme.design.setup.customizer'] = function () {
-			return new \Affilicious\Theme\Design\Application\Setup\Customizer_Setup();
+			return new \Affilicious_Theme\Design\Application\Setup\Customizer_Setup();
 		};
 
 		$this->container['affilicious.theme.design.setup.widget'] = function () {
-			return new \Affilicious\Theme\Design\Application\Setup\Widget_Setup();
+			return new \Affilicious_Theme\Design\Application\Setup\Widget_Setup();
 		};
 
 		$this->container['affilicious.theme.settings.setting.design'] = function ($c) {
-			return new \Affilicious\Theme\Settings\Application\Setting\Design_Settings($c['affilicious.theme.design.application.service.customizer_mods_backup']);
+			return new \Affilicious_Theme\Settings\Application\Setting\Design_Settings($c['affilicious.theme.design.application.service.customizer_mods_backup']);
 		};
 
 		$this->container['affilicious.theme.design.filter.custom_sidebar'] = function() {
-		    return new \Affilicious\Theme\Design\Application\Filter\Custom_Sidebar_Filter();
+		    return new \Affilicious_Theme\Design\Application\Filter\Custom_Sidebar_Filter();
         };
 
         $this->container['affilicious.theme.design.application.service.customizer_mods_backup'] = function() {
-            return new \Affilicious\Theme\Design\Application\Service\Customizer_Mods_Backup_Service();
+            return new \Affilicious_Theme\Design\Application\Service\Customizer_Mods_Backup_Service();
         };
 	}
 
@@ -451,7 +451,7 @@ class Affilicious_Theme
 	 */
     public function load_shortcodes()
     {
-    	$alert_shortcode = new \Affilicious\Theme\Design\Domain\Shortcode\Alert_Shortcode();
+    	$alert_shortcode = new \Affilicious_Theme\Design\Domain\Shortcode\Alert_Shortcode();
     	add_shortcode($alert_shortcode->get_name(), array($alert_shortcode, 'render'));
     }
 

@@ -1,5 +1,5 @@
 <?php
-namespace Affilicious\Theme\Design\Domain\Menu;
+namespace Affilicious_Theme\Design\Domain\Menu;
 
 if(!defined('ABSPATH')) {
     exit('Not allowed to access pages directly.');

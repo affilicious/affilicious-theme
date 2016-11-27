@@ -1,5 +1,5 @@
 <?php
-namespace Affilicious\Theme\Design\Domain\Shortcode;
+namespace Affilicious_Theme\Design\Domain\Shortcode;
 
 if(!defined('ABSPATH')) {
     exit('Not allowed to access pages directly.');

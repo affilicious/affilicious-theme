@@ -1,7 +1,7 @@
 <?php
-namespace Affilicious\Theme\Design\Domain\Widget;
+namespace Affilicious_Theme\Design\Domain\Widget;
 
-use Affilicious\Theme\Design\Domain\Exception\View_Not_Found_Exception;
+use Affilicious_Theme\Design\Domain\Exception\View_Not_Found_Exception;
 use Carbon_Fields\Widget\Widget;
 
 if(!defined('ABSPATH')) {

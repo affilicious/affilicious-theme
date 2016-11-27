@@ -1,5 +1,5 @@
 <?php
-namespace Affilicious\Theme\Design\Application\Service;
+namespace Affilicious_Theme\Design\Application\Service;
 
 if (!defined('ABSPATH')) {
     exit('Not allowed to access pages directly.');

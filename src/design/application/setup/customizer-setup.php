@@ -1,14 +1,14 @@
 <?php
-namespace Affilicious\Theme\Design\Application\Setup;
+namespace Affilicious_Theme\Design\Application\Setup;
 
 use Affilicious\Common\Application\Setup\Setup_Interface;
-use Affilicious\Theme\Design\Domain\Customizer\Customizer_Interface;
-use Affilicious\Theme\Design\Domain\Customizer\General_Customizer;
-use Affilicious\Theme\Design\Domain\Customizer\Information_Customizer;
-use Affilicious\Theme\Design\Domain\Customizer\Header_Customizer;
-use Affilicious\Theme\Design\Domain\Customizer\Typography_Customizer;
-use Affilicious\Theme\Design\Domain\Customizer\Footer_Customizer;
-use Affilicious\Theme\Design\Domain\Customizer\Content_Customizer;
+use Affilicious_Theme\Design\Domain\Customizer\Customizer_Interface;
+use Affilicious_Theme\Design\Domain\Customizer\General_Customizer;
+use Affilicious_Theme\Design\Domain\Customizer\Information_Customizer;
+use Affilicious_Theme\Design\Domain\Customizer\Header_Customizer;
+use Affilicious_Theme\Design\Domain\Customizer\Typography_Customizer;
+use Affilicious_Theme\Design\Domain\Customizer\Footer_Customizer;
+use Affilicious_Theme\Design\Domain\Customizer\Content_Customizer;
 
 if (!defined('ABSPATH')) {
 	exit('Not allowed to access pages directly.');

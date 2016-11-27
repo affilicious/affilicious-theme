@@ -1,5 +1,5 @@
 <?php
-namespace Affilicious\Theme\Design\Domain\Sidebar;
+namespace Affilicious_Theme\Design\Domain\Sidebar;
 
 if(!defined('ABSPATH')) {
     exit('Not allowed to access pages directly.');

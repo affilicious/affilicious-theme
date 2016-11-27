@@ -1,8 +1,8 @@
 <?php
-namespace Affilicious\Theme\Settings\Application\Setting;
+namespace Affilicious_Theme\Settings\Application\Setting;
 
 use Affilicious\Settings\Application\Setting\Settings_Interface;
-use Affilicious\Theme\Design\Application\Service\Customizer_Mods_Backup_Service;
+use Affilicious_Theme\Design\Application\Service\Customizer_Mods_Backup_Service;
 use Carbon_Fields\Container as Carbon_Container;
 use Carbon_Fields\Field as Carbon_Field;
 
