@@ -10,7 +10,7 @@ class Asset_Setup
     /**
      * Get the url to the public style directory.
      *
-     * @since 0.5.3
+     * @since 0.5.4
      * @return string
      */
     public static function get_public_styles_url()
@@ -21,7 +21,7 @@ class Asset_Setup
     /**
      * Get the url to the admin style directory.
      *
-     * @since 0.5.3
+     * @since 0.5.4
      * @return string
      */
     public static function get_admin_styles_url()
@@ -32,7 +32,7 @@ class Asset_Setup
     /**
      * Get the url to the customizer style directory.
      *
-     * @since 0.5.3
+     * @since 0.5.4
      * @return string
      */
     public static function get_customizer_styles_url()
@@ -43,7 +43,7 @@ class Asset_Setup
     /**
      * Get the url to the public script directory.
      *
-     * @since 0.5.3
+     * @since 0.5.4
      * @return string
      */
     public static function get_public_script_url()
@@ -54,7 +54,7 @@ class Asset_Setup
     /**
      * Get the url to the admin script directory.
      *
-     * @since 0.5.3
+     * @since 0.5.4
      * @return string
      */
     public static function get_admin_script_url()
@@ -65,7 +65,7 @@ class Asset_Setup
     /**
      * Get the url to the customizer script directory.
      *
-     * @since 0.5.3
+     * @since 0.5.4
      * @return string
      */
     public static function get_customizer_script_url()
