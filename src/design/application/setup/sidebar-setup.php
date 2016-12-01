@@ -13,7 +13,7 @@ if(!defined('ABSPATH')) {
 
 class Sidebar_Setup
 {
-    const PRODUCT_SIDEBAR = 'Affilicious_Theme_product_sidebar';
+    const PRODUCT_SIDEBAR = 'affilicious_theme_product_sidebar';
 
     /**
      * @var Main_Sidebar
