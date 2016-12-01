@@ -17,7 +17,7 @@ abstract class Abstract_Widget extends Widget
      */
     public static function get_dir()
     {
-        return \Affilicious_Theme::get_root_dir() . '/src/Design/Domain/Widget/';
+        return \Affilicious_Theme::get_root_dir() . '/src/design/domain/widget/';
     }
 
     /**

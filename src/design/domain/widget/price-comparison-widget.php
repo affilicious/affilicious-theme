@@ -30,7 +30,7 @@ class Price_Comparison_Widget extends Abstract_Widget
     {
         $shops = aff_get_product_shops();
         if (!empty($shops)) {
-            $this->render('price_comparison', $args, $instance);
+            $this->render('price-comparison', $args, $instance);
         }
     }
 }
