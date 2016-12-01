@@ -46,7 +46,7 @@ abstract class Abstract_Widget extends Widget
         if (!file_exists($dir)) {
             throw new View_Not_Found_Exception($name, $dir);
         } else {
-            /** @noinspection _php_include_inspection */
+            /** @noinspection PhpIncludeInspection */
             include($dir);
         }
     }

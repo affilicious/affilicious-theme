@@ -28,6 +28,10 @@ class Price_Comparison_Widget extends Abstract_Widget
      */
     public function front_end($args, $instance)
     {
+        if(!aff_is_product_page()) {
+            return;
+        }
+
         $shops = aff_get_product_shops();
         if (!empty($shops)) {
             $this->render('price-comparison', $args, $instance);
