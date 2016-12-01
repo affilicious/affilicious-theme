@@ -1,0 +1,14 @@
+@import "variables";
+
+.nav-tabs {
+  li {
+    a {
+      border-top: 1px solid #ddd !important;
+      border-bottom: 0 !important;
+    }
+  }
+}
+
+.tab-content {
+  padding: $space-size-medium;
+}

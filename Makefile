@@ -17,6 +17,12 @@ install:
 update:
 	@composer update
 
+asset:
+	@gulp default
+
+watch:
+	@gulp watch
+
 clean:
 	@rm -rf assets/.cache
 	@rm -rf assets/.sass-cache

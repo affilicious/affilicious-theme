@@ -1,86 +1,219 @@
 var gulp = require('gulp'),
     sourcemaps = require('gulp-sourcemaps'),
-    autoprefixer = require('gulp-autoprefixer'),
+    concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
+    uglifycss = require('gulp-uglifycss'),
     rename = require('gulp-rename'),
-    typescript = require('gulp-typescript'),
-    cleancss = require('gulp-clean-css'),
-    compass = require('gulp-compass'),
-    imagemin = require('gulp-imagemin'),
+    es6 = require('gulp-babel'),
+    imageMin = require('gulp-imagemin'),
+    order = require('gulp-order'),
+    sass = require('gulp-sass'),
+    merge = require('merge-stream'),
     watch = require('gulp-watch');
 
-// Transpile sass
-gulp.task('styles', function () {
-    var input = './assets/scss/*.scss',
-        output = './assets/css';
+var assetsPath = 'assets/',
+    publicPath = assetsPath + 'public/',
+    adminPath = assetsPath + 'admin/',
+    customizerPath = assetsPath +  'customizer/'
+    ;
 
-    return gulp
-        .src(input)
-        .pipe(compass({
-            config_file: './config.rb',
-            css: './assets/css',
-            sass: './assets/scss',
-            image: './assets/images',
-            javascripts_dir: '.assets/js',
-        }))
-        .pipe(autoprefixer(
-            'last 2 version',
-            'safari 5',
-            'ie 7',
-            'ie 8',
-            'ie 9',
-            'opera 12.1',
-            'ios 6',
-            'android 4'
-        ))
-        .pipe(gulp.dest(output))
-        .pipe(cleancss())
-        .pipe(rename({
-            suffix: '.min'
-        }))
-        .pipe(gulp.dest(output));
+var assetPaths = {
+    public: {
+        css: [
+            'assets/vendor/font-awesome/css/**',
+            'assets/vendor/bootstrap/css/**',
+            'assets/vendor/bootflat/css/**',
+            'assets/vendor/slick/css/**'
+        ],
+        sass: [
+            'assets/public/scss/**'
+        ],
+        js: [
+            'assets/vendor/jquery/js/**',
+            'assets/vendor/retina/js/**',
+            'assets/vendor/bootstrap/js/**',
+            'assets/vendor/icheck/js/**',
+            'assets/vendor/slick/js/**'
+        ],
+        es6: [
+            'assets/public/es6/**'
+        ],
+        fonts: [
+            'assets/vendor/font-awesome/fonts/**',
+            'assets/vendor/bootstrap/fonts/**',
+        ],
+        images: []
+    },
+
+    admin: {
+        css: [],
+        sass: [
+            'assets/admin/scss/**'
+        ],
+        js: [],
+        es6: [
+            'assets/admin/es6/**'
+        ],
+        fonts: [],
+        images: []
+    },
+
+    customizer: {
+        css: [],
+        sass: [],
+        js: [],
+        es6: [
+            'assets/customizer/es6/**'
+        ],
+        fonts: [],
+        images: []
+    },
+};
+
+gulp.task('public-css', function() {
+    var cssStream = gulp.src(assetPaths.public.css)
+            .pipe(concat('css-files.css'))
+        ;
+
+    var sassStream = gulp.src(assetPaths.public.sass)
+            .pipe(sass())
+            .pipe(concat('sass-files.scss'))
+        ;
+
+    return merge(cssStream, sassStream)
+        .pipe(order(['css-files.css', 'sass-files.scss']))
+        .pipe(concat('style.css'))
+        .pipe(sourcemaps.write('./'))
+        .pipe(gulp.dest(publicPath + 'css/'))
+        .pipe(rename({ suffix: '.min' }))
+        .pipe(uglifycss())
+        .pipe(gulp.dest(publicPath + 'css/'))
+        ;
 });
 
-// Transpile typescript
-gulp.task('scripts', function () {
-    var input = './assets/ts/*.ts',
-        output = './assets/js';
+gulp.task('admin-css', function() {
+    var cssStream = gulp.src(assetPaths.admin.css)
+            .pipe(concat('css-files.css'))
+        ;
 
-    gulp.src(input)
-        .pipe(sourcemaps.init())
-        .pipe(typescript({
-            noImplicitAny: false
-        }))
-        .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest(output));
+    var sassStream = gulp.src(assetPaths.admin.sass)
+            .pipe(sass())
+            .pipe(concat('sass-files.scss'))
+        ;
 
-    return gulp.src(input)
-        .pipe(typescript({
-            noImplicitAny: false
-        }))
+    return merge(cssStream, sassStream)
+        .pipe(order(['css-files.css', 'sass-files.scss']))
+        .pipe(concat('admin.css'))
+        .pipe(gulp.dest(adminPath + 'css/'))
+        .pipe(rename({ suffix: '.min' }))
+        .pipe(uglifycss())
+        .pipe(gulp.dest(adminPath + 'css/'))
+        ;
+});
+
+gulp.task('public-js', function () {
+    var jsStream = gulp.src(assetPaths.public.js)
+            .pipe(concat('js-files.js'))
+        ;
+
+    var es6Stream = gulp.src(assetPaths.public.es6)
+            .pipe(es6())
+            .pipe(concat('es6-files.js'))
+        ;
+
+    return merge(jsStream, es6Stream)
+        .pipe(order(['js-files.js', 'es6-files.js']))
+        .pipe(concat('script.js'))
+        .pipe(gulp.dest(publicPath + 'js/'))
+        .pipe(rename({ suffix: '.min' }))
         .pipe(uglify())
-        .pipe(rename({
-            suffix: '.min'
-        }))
-        .pipe(gulp.dest(output));
+        .pipe(gulp.dest(publicPath + 'js/'))
+        ;
 });
 
-// Automatically transpile sass or typescript
-gulp.task('watch', function() {
-    var dir = './assets/(scss|ts)/**/*';
+gulp.task('admin-js', function () {
+    var jsStream = gulp.src(assetPaths.admin.js)
+            .pipe(concat('js-files.js'))
+        ;
 
-    return watch(dir, function() {
-        gulp.start(['styles', 'scripts']);
-    });
+    var es6Stream = gulp.src(assetPaths.admin.es6)
+            .pipe(es6())
+            .pipe(concat('es6-files.js'))
+        ;
+
+    return merge(jsStream, es6Stream)
+        .pipe(order(['js-files.js', 'es6-files.js']))
+        .pipe(concat('admin.js'))
+        .pipe(gulp.dest(adminPath + 'js/'))
+        .pipe(rename({ suffix: '.min' }))
+        .pipe(uglify())
+        .pipe(gulp.dest(adminPath + 'js/'))
+        ;
 });
 
-// Compress the image size
-gulp.task('images', function () {
-    var input = './assets/images/**/*',
-        output = './assets/images';
+gulp.task('customizer-js', function () {
+    var jsStream = gulp.src(assetPaths.customizer.js)
+            .pipe(concat('js-files.js'))
+        ;
 
-    return gulp.src(input)
-        .pipe(imagemin())
-        .pipe(gulp.dest(output))
+    var es6Stream = gulp.src(assetPaths.customizer.es6)
+            .pipe(es6())
+            .pipe(concat('es6-files.js'))
+        ;
+
+    return merge(jsStream, es6Stream)
+        .pipe(order(['js-files.js', 'es6-files.js']))
+        .pipe(concat('customizer.js'))
+        .pipe(gulp.dest(customizerPath + 'js/'))
+        .pipe(rename({ suffix: '.min' }))
+        .pipe(uglify())
+        .pipe(gulp.dest(customizerPath + 'js/'))
+        ;
 });
 
+gulp.task('public-images', function() {
+    return gulp.src(assetPaths.public.images)
+        .pipe(imageMin())
+        .pipe(gulp.dest(publicPath + 'images/'))
+        ;
+});
+
+gulp.task('admin-images', function() {
+    return gulp.src(assetPaths.admin.images)
+        .pipe(imageMin())
+        .pipe(gulp.dest(adminPath + 'images/'))
+        ;
+});
+
+gulp.task('public-fonts', function() {
+    return gulp.src(assetPaths.public.fonts)
+        .pipe(gulp.dest(publicPath + 'fonts/'))
+        ;
+});
+
+gulp.task('admin-fonts', function() {
+    return gulp.src(assetPaths.admin.fonts)
+        .pipe(gulp.dest(adminPath + 'fonts/'))
+        ;
+});
+
+gulp.task('public-watch', function() {
+    gulp.watch(assetPaths.public.css, ['public-css']);
+    gulp.watch(assetPaths.public.sass, ['public-css']);
+    gulp.watch(assetPaths.public.js, ['public-js']);
+    gulp.watch(assetPaths.public.es6, ['public-js']);
+    gulp.watch(assetPaths.public.images, ['public-images']);
+    gulp.watch(assetPaths.public.fonts, ['public-fonts']);
+});
+
+gulp.task('admin-watch', function() {
+    gulp.watch(assetPaths.admin.css, ['admin-css']);
+    gulp.watch(assetPaths.admin.sass, ['admin-css']);
+    gulp.watch(assetPaths.admin.js, ['admin-js']);
+    gulp.watch(assetPaths.admin.es6, ['admin-js']);
+    gulp.watch(assetPaths.admin.images, ['admin-images']);
+    gulp.watch(assetPaths.admin.fonts, ['admin-fonts']);
+});
+
+gulp.task('default', ['public-css', 'public-js', 'public-images', 'public-fonts', 'admin-css', 'admin-js', 'admin-images', 'admin-fonts', 'customizer-js']);
+gulp.task('watch', ['default', 'public-watch', 'admin-watch']);
