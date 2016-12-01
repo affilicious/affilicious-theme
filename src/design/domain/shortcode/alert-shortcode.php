@@ -43,7 +43,7 @@ class Alert_Shortcode implements Shortcode_Interface
 	private function prepare_links($html)
 	{
 		$dom = new \DOMDocument();
-		$dom->loadHTML(mb_convert_encoding($html, 'HTML-ENTITIES_', 'UTF-8'));
+		$dom->loadHTML(mb_convert_encoding($html, 'HTML-ENTITIES', 'UTF-8'));
 		$links = $dom->getElementsByTagName('a');
 
 		/** @var \DOMDocument $a */
