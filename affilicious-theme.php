@@ -25,7 +25,7 @@ if(!defined('ABSPATH')) {
 class Affilicious_Theme
 {
     const THEME_NAME = 'affilicious-theme';
-    const THEME_VERSION = '0.5.4';
+    const THEME_VERSION = '0.5.5';
     const THEME_NAMESPACE = 'Affilicious_Theme\\';
     const THEME_TESTS_NAMESPACE = 'Affilicious_Theme\\Tests\\';
     const THEME_SOURCE_DIR = 'src/';
