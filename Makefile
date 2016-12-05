@@ -10,18 +10,19 @@ prod: clean
 ready: dev
 dev: tests-install
 	@composer install
-
-install:
-	@composer install
-
-update:
-	@composer update
+	@npm install
 
 asset:
 	@gulp default
 
 watch:
 	@gulp watch
+
+install:
+	@composer install
+
+update:
+	@composer update
 
 clean:
 	@rm -rf assets/.cache
