@@ -23,6 +23,22 @@
                         <p class="price-tax text-muted">
                             <?php _e('Including 19 % VAT', 'affilicious-theme'); ?>
                         </p>
+                        <?php if(isset($shop['delivery_rates']) && $delivery_rates = $shop['delivery_rates']): ?>
+                            <p class="text-muted">
+                                <?php echo sprintf(
+                                    __('%s delivery rates', 'affilicious-theme'),
+                                    $delivery_rates['value'] . ' ' . $delivery_rates['currency']['symbol']
+                                ); ?>
+                            </p>
+                        <?php endif; ?>
+                        <?php if(isset($shop['updated_at']) && $updated_at = $shop['updated_at']): ?>
+                            <p class="text-muted">
+                                <?php echo sprintf(
+                                    __('Updated at %s', 'affilicious-theme'),
+                                    $updated_at
+                                ); ?>
+                            </p>
+                        <?php endif; ?>
                     <?php endif; ?>
                 </div>
                 <div class="shop-buy">
