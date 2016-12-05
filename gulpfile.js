@@ -8,6 +8,7 @@ var gulp = require('gulp'),
     imageMin = require('gulp-imagemin'),
     order = require('gulp-order'),
     sass = require('gulp-sass'),
+    less = require('gulp-less'),
     merge = require('merge-stream'),
     watch = require('gulp-watch');
 
@@ -28,6 +29,7 @@ var assetPaths = {
         sass: [
             'assets/public/scss/**'
         ],
+        less: [],
         js: [
             'assets/vendor/jquery/js/**',
             'assets/vendor/retina/js/**',
@@ -50,6 +52,7 @@ var assetPaths = {
         sass: [
             'assets/admin/scss/**'
         ],
+        less: [],
         js: [],
         es6: [
             'assets/admin/es6/**'
@@ -61,6 +64,7 @@ var assetPaths = {
     customizer: {
         css: [],
         sass: [],
+        less: [],
         js: [],
         es6: [
             'assets/customizer/es6/**'
@@ -80,8 +84,13 @@ gulp.task('public-css', function() {
             .pipe(concat('sass-files.scss'))
         ;
 
-    return merge(cssStream, sassStream)
-        .pipe(order(['css-files.css', 'sass-files.scss']))
+    var lessStream = gulp.src(assetPaths.public.less)
+            .pipe(less())
+            .pipe(concat('less-files.less'))
+        ;
+
+    return merge(cssStream, sassStream, lessStream)
+        .pipe(order(['css-files.css', 'sass-files.scss', 'less-files.less']))
         .pipe(concat('style.css'))
         .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest(publicPath + 'css/'))
@@ -101,8 +110,13 @@ gulp.task('admin-css', function() {
             .pipe(concat('sass-files.scss'))
         ;
 
-    return merge(cssStream, sassStream)
-        .pipe(order(['css-files.css', 'sass-files.scss']))
+    var lessStream = gulp.src(assetPaths.admin.less)
+            .pipe(less())
+            .pipe(concat('less-files.less'))
+        ;
+
+    return merge(cssStream, sassStream, lessStream)
+        .pipe(order(['css-files.css', 'sass-files.scss', 'less-files.less']))
         .pipe(concat('admin.css'))
         .pipe(gulp.dest(adminPath + 'css/'))
         .pipe(rename({ suffix: '.min' }))

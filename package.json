@@ -11,6 +11,7 @@
     "gulp-compass": "^2.1.0",
     "gulp-concat": "^2.6.0",
     "gulp-imagemin": "^3.0.3",
+    "gulp-less": "^3.3.0",
     "gulp-merge": "^0.1.1",
     "gulp-order": "^1.1.1",
     "gulp-rename": "^1.2.2",
