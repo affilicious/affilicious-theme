@@ -22,18 +22,20 @@ var assetPaths = {
     public: {
         css: [
             'assets/vendor/font-awesome/css/**',
-            'assets/vendor/bootstrap/css/**',
             'assets/vendor/bootflat/css/**',
             'assets/vendor/slick/css/**'
         ],
         sass: [
+            'assets/vendor/bootstrap-4/scss/bootstrap-flex-grid.scss',
             'assets/public/scss/**'
         ],
-        less: [],
+        less: [
+            'assets/vendor/bootstrap-3/less/bootstrap.less'
+        ],
         js: [
             'assets/vendor/jquery/js/**',
             'assets/vendor/retina/js/**',
-            'assets/vendor/bootstrap/js/**',
+            'assets/vendor/bootstrap-3/js/**',
             'assets/vendor/icheck/js/**',
             'assets/vendor/slick/js/**'
         ],
@@ -42,7 +44,7 @@ var assetPaths = {
         ],
         fonts: [
             'assets/vendor/font-awesome/fonts/**',
-            'assets/vendor/bootstrap/fonts/**',
+            'assets/vendor/bootstrap-3/fonts/**',
         ],
         images: []
     },
@@ -79,18 +81,18 @@ gulp.task('public-css', function() {
             .pipe(concat('css-files.css'))
         ;
 
-    var sassStream = gulp.src(assetPaths.public.sass)
-            .pipe(sass())
-            .pipe(concat('sass-files.scss'))
-        ;
-
     var lessStream = gulp.src(assetPaths.public.less)
             .pipe(less())
             .pipe(concat('less-files.less'))
         ;
 
+    var sassStream = gulp.src(assetPaths.public.sass)
+            .pipe(sass())
+            .pipe(concat('sass-files.scss'))
+        ;
+
     return merge(cssStream, sassStream, lessStream)
-        .pipe(order(['css-files.css', 'sass-files.scss', 'less-files.less']))
+        .pipe(order(['css-files.css', 'less-files.less', 'sass-files.scss']))
         .pipe(concat('style.css'))
         .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest(publicPath + 'css/'))
@@ -105,18 +107,18 @@ gulp.task('admin-css', function() {
             .pipe(concat('css-files.css'))
         ;
 
-    var sassStream = gulp.src(assetPaths.admin.sass)
-            .pipe(sass())
-            .pipe(concat('sass-files.scss'))
-        ;
-
     var lessStream = gulp.src(assetPaths.admin.less)
             .pipe(less())
             .pipe(concat('less-files.less'))
         ;
 
+    var sassStream = gulp.src(assetPaths.admin.sass)
+            .pipe(sass())
+            .pipe(concat('sass-files.scss'))
+        ;
+
     return merge(cssStream, sassStream, lessStream)
-        .pipe(order(['css-files.css', 'sass-files.scss', 'less-files.less']))
+        .pipe(order(['css-files.css', 'less-files.less', 'sass-files.scss']))
         .pipe(concat('admin.css'))
         .pipe(gulp.dest(adminPath + 'css/'))
         .pipe(rename({ suffix: '.min' }))
@@ -213,6 +215,7 @@ gulp.task('admin-fonts', function() {
 
 gulp.task('public-watch', function() {
     gulp.watch(assetPaths.public.css, ['public-css']);
+    gulp.watch(assetPaths.public.less, ['public-css']);
     gulp.watch(assetPaths.public.sass, ['public-css']);
     gulp.watch(assetPaths.public.js, ['public-js']);
     gulp.watch(assetPaths.public.es6, ['public-js']);
@@ -222,6 +225,7 @@ gulp.task('public-watch', function() {
 
 gulp.task('admin-watch', function() {
     gulp.watch(assetPaths.admin.css, ['admin-css']);
+    gulp.watch(assetPaths.admin.less, ['admin-css']);
     gulp.watch(assetPaths.admin.sass, ['admin-css']);
     gulp.watch(assetPaths.admin.js, ['admin-js']);
     gulp.watch(assetPaths.admin.es6, ['admin-js']);

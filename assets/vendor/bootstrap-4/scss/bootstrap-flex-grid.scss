@@ -1,0 +1,10 @@
+// Bootstrap Grid with Flexbox enabled
+//
+// This file is not shipped with the default bootstrap project.
+//
+// Includes relevant variables and mixins for the flexbox grid
+// system, as well as the generated predefined classes (e.g., `.col-4-sm`).
+
+$enable-flex: true;
+
+@import "bootstrap-grid";
