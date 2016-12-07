@@ -24,4 +24,5 @@
     if (containerHeight > contentHeight) {
         content.css('margin-top', (containerHeight - contentHeight) / 2);
     }
+
 })(jQuery);

@@ -100,7 +100,8 @@ class Asset_Setup
      */
     public function add_public_scripts()
     {
-        wp_enqueue_script('affilicious-theme-public', self::get_public_script_url() . 'script.min.js', array('jquery'), \Affilicious_Theme::THEME_VERSION, true);
+        wp_enqueue_script('affilicious-theme-slick', \Affilicious_Theme::get_root_url() . '/assets/vendor/slick/js/' . 'slick.js', array(), '1.6.0', true);
+        wp_enqueue_script('affilicious-theme-public', self::get_public_script_url() . 'script.min.js', array('jquery', 'affilicious-theme-slick'), \Affilicious_Theme::THEME_VERSION, true);
     }
 
     /**

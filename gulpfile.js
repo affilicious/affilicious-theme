@@ -35,9 +35,19 @@ var assetPaths = {
         js: [
             'assets/vendor/jquery/js/**',
             'assets/vendor/retina/js/**',
-            'assets/vendor/bootstrap-3/js/**',
-            'assets/vendor/icheck/js/**',
-            'assets/vendor/slick/js/**'
+            'assets/vendor/bootstrap-3/js/affix.js',
+            'assets/vendor/bootstrap-3/js/alert.js',
+            'assets/vendor/bootstrap-3/js/button.js',
+            'assets/vendor/bootstrap-3/js/carousel.js',
+            'assets/vendor/bootstrap-3/js/collapse.js',
+            'assets/vendor/bootstrap-3/js/dropdown.js',
+            'assets/vendor/bootstrap-3/js/modal.js',
+            'assets/vendor/bootstrap-3/js/tooltip.js',
+            'assets/vendor/bootstrap-3/js/popover.js',
+            'assets/vendor/bootstrap-3/js/scrollspy.js',
+            'assets/vendor/bootstrap-3/js/tab.js',
+            'assets/vendor/bootstrap-3/js/transition.js',
+            'assets/vendor/icheck/js/**'
         ],
         es6: [
             'assets/public/es6/**'
