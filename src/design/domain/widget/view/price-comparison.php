@@ -27,19 +27,6 @@
                                 <?php _e('Incl. 19 % VAT and excl. shipping costs.', 'affilicious-theme'); ?>
                             <?php endif; ?>
                         </p>
-                        <?php if(function_exists('aff_the_shop_update_at_indication')): ?>
-                            <?php aff_the_shop_update_at_indication($shop); ?>
-                        <?php else: // Legacy support ?>
-                            <?php if(isset($shop['updated_at']) && $updated_at = $shop['updated_at']): ?>
-                                <p class="text-muted">
-                                    <?php echo sprintf(
-                                        __('Updated at %s.', 'affilicious-theme'),
-                                        $updated_at
-                                    ); ?>
-                                </p>
-                            <?php endif; ?>
-                        <?php endif; ?>
-
                     <?php endif; ?>
                 </div>
                 <div class="shop-buy">
@@ -61,6 +48,20 @@
                             <?php esc_html_e('Buy', 'affilicious-theme'); ?>
                         </a>
 
+                    <?php endif; ?>
+                </div>
+                <div class="shop-updated-at">
+                    <?php if(function_exists('aff_the_shop_updated_at_indication')): ?>
+                        <?php aff_the_shop_updated_at_indication($shop); ?>
+                    <?php else: // Legacy support ?>
+                        <?php if(isset($shop['updated_at']) && $updated_at = $shop['updated_at']): ?>
+                            <p class="text-muted">
+                                <?php echo sprintf(
+                                    __('Updated at %s.', 'affilicious-theme'),
+                                    $updated_at
+                                ); ?>
+                            </p>
+                        <?php endif; ?>
                     <?php endif; ?>
                 </div>
             </div>
