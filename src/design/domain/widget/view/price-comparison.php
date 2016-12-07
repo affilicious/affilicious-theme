@@ -43,9 +43,25 @@
                     <?php endif; ?>
                 </div>
                 <div class="shop-buy">
-                    <a class="btn btn-buy" href="<?php echo $shop['affiliate_link']; ?>"  rel="nofollow" target="_blank">
-                        <?php esc_html_e('Buy', 'affilicious-theme'); ?>
-                    </a>
+                    <?php if(function_exists('aff_is_shop_available')): ?>
+
+                        <?php if(aff_is_shop_available($shop)): ?>
+                            <a class="btn btn-buy" href="<?php echo $shop['affiliate_link']; ?>"  rel="nofollow" target="_blank">
+                                <?php esc_html_e('Buy', 'affilicious-theme'); ?>
+                            </a>
+                        <?php else: ?>
+                            <a class="btn btn-default" href="<?php echo $shop['affiliate_link']; ?>"  rel="nofollow" target="_blank">
+                                <?php esc_html_e('Not available', 'affilicious-theme'); ?>
+                            </a>
+                        <?php endif; ?>
+
+                    <?php else: // Legacy support ?>
+
+                        <a class="btn btn-buy" href="<?php echo $shop['affiliate_link']; ?>"  rel="nofollow" target="_blank">
+                            <?php esc_html_e('Buy', 'affilicious-theme'); ?>
+                        </a>
+
+                    <?php endif; ?>
                 </div>
             </div>
         <?php endforeach; ?>
