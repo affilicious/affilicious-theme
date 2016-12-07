@@ -21,24 +21,25 @@
                             <span class="current-price"><?php echo $price['value'] . ' ' . $price['currency']['symbol'] ?></span>
                         </div>
                         <p class="price-tax text-muted">
-                            <?php _e('Including 19 % VAT', 'affilicious-theme'); ?>
+                            <?php if(function_exists('aff_the_shop_price_indication')): ?>
+                                <?php aff_the_shop_price_indication(); ?>
+                            <?php else: // Legacy support ?>
+                                <?php _e('Incl. 19 % VAT and excl. shipping costs.', 'affilicious-theme'); ?>
+                            <?php endif; ?>
                         </p>
-                        <?php if(isset($shop['delivery_rates']) && $delivery_rates = $shop['delivery_rates']): ?>
-                            <p class="text-muted">
-                                <?php echo sprintf(
-                                    __('%s delivery rates', 'affilicious-theme'),
-                                    $delivery_rates['value'] . ' ' . $delivery_rates['currency']['symbol']
-                                ); ?>
-                            </p>
+                        <?php if(function_exists('aff_the_shop_update_at_indication')): ?>
+                            <?php aff_the_shop_update_at_indication($shop); ?>
+                        <?php else: // Legacy support ?>
+                            <?php if(isset($shop['updated_at']) && $updated_at = $shop['updated_at']): ?>
+                                <p class="text-muted">
+                                    <?php echo sprintf(
+                                        __('Updated at %s.', 'affilicious-theme'),
+                                        $updated_at
+                                    ); ?>
+                                </p>
+                            <?php endif; ?>
                         <?php endif; ?>
-                        <?php if(isset($shop['updated_at']) && $updated_at = $shop['updated_at']): ?>
-                            <p class="text-muted">
-                                <?php echo sprintf(
-                                    __('Updated at %s', 'affilicious-theme'),
-                                    $updated_at
-                                ); ?>
-                            </p>
-                        <?php endif; ?>
+
                     <?php endif; ?>
                 </div>
                 <div class="shop-buy">

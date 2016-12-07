@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: "
 "affilicious-theme\n"
 "POT-Creation-Date: "
-"2016-12-05 22:31+0100\n"
+"2016-12-07 17:12+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Your "
 "Name <you@example.com>\n"
@@ -421,7 +421,7 @@ msgstr ""
 
 #: partials/content-product-relations.php:57
 #: partials/content-product-relations.php:107
-#: src/design/domain/widget/view/price-comparison.php:46
+#: src/design/domain/widget/view/price-comparison.php:47
 msgid "Buy"
 msgstr ""
 
@@ -1109,18 +1109,15 @@ msgid ""
 "only on product pages."
 msgstr ""
 
-#: src/design/domain/widget/view/price-comparison.php:24
-msgid "Including 19 % VAT"
+#: src/design/domain/widget/view/price-comparison.php:27
+msgid ""
+"Incl. 19 % VAT and "
+"excl. shipping costs."
 msgstr ""
 
-#: src/design/domain/widget/view/price-comparison.php:29
+#: src/design/domain/widget/view/price-comparison.php:36
 #, php-format
-msgid "%s delivery rates"
-msgstr ""
-
-#: src/design/domain/widget/view/price-comparison.php:37
-#, php-format
-msgid "Updated at %s"
+msgid "Updated at %s."
 msgstr ""
 
 #: src/functions.php:26
