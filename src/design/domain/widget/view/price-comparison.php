@@ -4,14 +4,15 @@
 <div class="panel-body">
     <div class="price-comparison price-comparison-widget">
         <?php foreach ($shops as $shop): ?>
+
+            <div class="shop-thumbnail">
+                <?php if(isset($shop['thumbnail'])): ?>
+                    <?php echo wp_get_attachment_image($shop['thumbnail']['id'], 'small'); ?>
+                <?php else: ?>
+                    <p><?php echo $shop['title']; ?></p>
+                <?php endif; ?>
+            </div>
             <div class="shop">
-                <div class="shop-thumbnail">
-                    <?php if(isset($shop['thumbnail'])): ?>
-                        <?php echo wp_get_attachment_image($shop['thumbnail']['id'], 'small'); ?>
-                    <?php else: ?>
-                        <p><?php echo $shop['title']; ?></p>
-                    <?php endif; ?>
-                </div>
                 <div class="shop-price">
                     <?php if($price = $shop['price']): ?>
                         <div class="price">
@@ -57,20 +58,20 @@
                         </a>
 
                     <?php endif; ?>
-                </div>
-                <div class="shop-updated-at">
-                    <?php if(function_exists('aff_the_shop_updated_at_indication')): ?>
-                        <?php aff_the_shop_updated_at_indication($shop); ?>
-                    <?php else: // Legacy support ?>
-                        <?php if(isset($shop['updated_at']) && $updated_at = $shop['updated_at']): ?>
-                            <p class="text-muted">
-                                <?php echo sprintf(
-                                    __('Updated at %s.', 'affilicious-theme'),
-                                    $updated_at
-                                ); ?>
-                            </p>
+                    <div class="shop-updated-at">
+                        <?php if(function_exists('aff_the_shop_updated_at_indication')): ?>
+                            <?php aff_the_shop_updated_at_indication($shop); ?>
+                        <?php else: // Legacy support ?>
+                            <?php if(isset($shop['updated_at']) && $updated_at = $shop['updated_at']): ?>
+                                <p class="text-muted">
+                                    <?php echo sprintf(
+                                        __('Updated at %s.', 'affilicious-theme'),
+                                        $updated_at
+                                    ); ?>
+                                </p>
+                            <?php endif; ?>
                         <?php endif; ?>
-                    <?php endif; ?>
+                    </div>
                 </div>
             </div>
         <?php endforeach; ?>
