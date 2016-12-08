@@ -16,7 +16,15 @@
                     <?php if($price = $shop['price']): ?>
                         <div class="price">
                             <?php if($old_price = $shop['old_price']): ?>
-                                <span class="old-price"><?php echo $old_price['value'] . ' ' . $old_price['currency']['symbol'] ?></span>
+
+                                <?php if(function_exists('aff_should_shop_display_old_price')): ?>
+                                    <?php if(aff_should_shop_display_old_price($shop)): ?>
+                                        <span class="old-price"><?php echo $old_price['value'] . ' ' . $old_price['currency']['symbol'] ?></span>
+                                    <?php endif; ?>
+                                <?php else: // Legacy support ?>
+                                    <span class="old-price"><?php echo $old_price['value'] . ' ' . $old_price['currency']['symbol'] ?></span>
+                                <?php endif; ?>
+
                             <?php endif; ?>
                             <span class="current-price"><?php echo $price['value'] . ' ' . $price['currency']['symbol'] ?></span>
                         </div>
