@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-12-07 17:13+0100\n"
-"PO-Revision-Date: 2016-12-07 17:13+0100\n"
+"POT-Creation-Date: 2016-12-08 12:32+0100\n"
+"PO-Revision-Date: 2016-12-08 12:32+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -312,7 +312,8 @@ msgstr "Link zu %s"
 
 #: partials/content-product-relations.php:57
 #: partials/content-product-relations.php:107
-#: src/design/domain/widget/view/price-comparison.php:47
+#: src/design/domain/widget/view/price-comparison.php:37
+#: src/design/domain/widget/view/price-comparison.php:48
 msgid "Buy"
 msgstr "Kaufen"
 
@@ -907,7 +908,11 @@ msgstr "Zeigt ein Preisvergleich auf jeder Produktseite."
 msgid "Incl. 19 % VAT and excl. shipping costs."
 msgstr "Inkl. 19% MwSt und zzgl. Versandkosten."
 
-#: src/design/domain/widget/view/price-comparison.php:36
+#: src/design/domain/widget/view/price-comparison.php:41
+msgid "Not available"
+msgstr "Nicht verfügbar"
+
+#: src/design/domain/widget/view/price-comparison.php:60
 #, php-format
 msgid "Updated at %s."
 msgstr "Aktualisiert am %s Uhr."
