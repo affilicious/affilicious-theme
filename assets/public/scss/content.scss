@@ -61,3 +61,55 @@
     height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
   }
 }
+
+.entry-content {
+
+  .panel {
+    &-heading {
+      border: none;
+    }
+    &-group .panel {
+      border-radius: 0;
+    }
+    &-panel-title {
+      background-color: white;
+      border-radius: 1px;
+      padding: 0 30px;
+    }
+    &-group .panel+.panel {
+      margin-top: 0;
+    }
+    &-heading [data-toggle="collapse"]:after {
+      font-family: "FontAwesome";
+      content: "\f068";
+      float: right;
+      color: lightgray;
+      font-size: 18px;
+    }
+    &-heading [data-toggle="collapse"].collapsed:after {
+      font-family: "FontAwesome";
+      content: "\f067";
+      float: right;
+      color: lightgray;
+      font-size: 18px;
+    }
+  }
+}
+
+.panel-heading {
+  border: none;
+}
+.panel-group .panel {
+  border-radius: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0;
+}
+.panel-title {
+  background-color: white;
+  border-radius: 1px;
+  padding: 0 30px;
+}
+.panel-group .panel+.panel {
+  margin-top: 0;
+}

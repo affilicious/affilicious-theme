@@ -6,12 +6,22 @@
             <?php $affiliateLink = aff_get_product_affiliate_link(); ?>
             <?php $linkImageGallery = afft_link_product_preview_image(); ?>
         <?php endif; ?>
+        <div style="position: relative;">
+            <a href="<?php echo !empty($linkImageGallery) && !empty($affiliateLink) ? $affiliateLink : esc_url(get_permalink()) ; ?>" rel="nofollow" target="_blank">
+                <div class="entry-thumbnail" itemprop="image">
+                    <?php the_post_thumbnail(); ?>
+                </div>
+                <div class="badge-bar">
+                    <span class="label label-success">
+                        300 Euro
+                    </span>
+                    <span class="label label-info">
+                        Testsieger
+                    </span>
+                </div>
+            </a>
+        </div>
 
-        <a href="<?php echo !empty($linkImageGallery) && !empty($affiliateLink) ? $affiliateLink : esc_url(get_permalink()) ; ?>" rel="nofollow" target="_blank">
-            <div class="entry-thumbnail" itemprop="image">
-                <?php the_post_thumbnail(); ?>
-            </div>
-        </a>
     <?php endif; ?>
 
     <header class="entry-header">
@@ -42,4 +52,38 @@
             </ul>
         <?php endif; ?>
     </header>
+
+    <div class="entry-content">
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Details</a>
+                    </h4>
+                </div>
+                <div id="collapse1" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        <?php get_template_part('partials/content-product-details'); ?>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                            Auszug</a>
+                    </h4>
+                </div>
+                <div id="collapse2" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <?php if(has_excerpt()): ?>
+                            <div class="product-excerpt" itemprop="description">
+                                <?php the_excerpt(); ?>
+                            </div>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </article>
