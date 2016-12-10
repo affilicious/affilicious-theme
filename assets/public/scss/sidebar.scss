@@ -176,25 +176,130 @@
 }
 
 .price-comparison {
+
+
   .shop {
+    @include border-radius();
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    border: $price-comparison-shop-border;
+    background-color: $price-comparison-shop-background;
+    margin-bottom: $space-size-small;
+    min-height: $price-comparison-widget-shop-height;
+    box-sizing: border-box;
+    padding: $space-size-small;
+
+    &-thumbnail {
+      width: 50%;
+      padding: 0;
+      margin-bottom: $space-size-medium;
+
+      img {
+        display: block;
+        max-width: 200px;
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    &-price {
+      width: 50%;
+      margin-bottom: $space-size-medium;
+
+      .price {
+        width: 100%;
+        display: block;
+        box-sizing: border-box;
+        text-align: right;
+
+        .old-price {
+          float: right;
+          color: $price-comparison-old-price-color;
+          display: inline-block;
+          text-decoration: line-through;
+          line-height: $font-line-height-text;
+          font-size: $font-size-text;
+        }
+
+        .current-price {
+          float: right;
+          width: 100%;
+          padding: 0;
+          color: $price-comparison-current-price-color;
+          display: inline-block;
+          font-weight: $font-weight-text;
+          line-height: $font-size-text;
+          font-size: $font-size-headline-5;
+        }
+      }
+    }
+
+    &-buy {
+      width: 100%;
+      margin-bottom: $space-size-small;
+
+      a.btn {
+        width: 100%;
+      }
+    }
+
+    &-info {
+      width: 100%;
+
+      p {
+        text-align: center;
+        line-height: $font-line-height-small-text;
+        font-size: $font-size-small-text;
+      }
+    }
+  }
+
+
+
+
+
+
+
+
+
+  /*.shop {
     @include border-radius();
     display: flex;
     align-content: flex-start;
     box-sizing: border-box;
     min-height: $price-comparison-widget-shop-height;
     border: $price-comparison-shop-border;
-    border-radius: 0 0 4px 4px;
     width: 100%;
     background-color: $price-comparison-shop-background;
+    margin-bottom: $space-size-small;
+
+
+
+
+    &-buy {
+      border: 1px solid red;
+      clear: both;
+      width: 100%;
+    }
+
+
+    &-info {
+      border: 1px solid red;
+      clear: both;
+      width: 100%;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
 
     &:first-child {
       margin-top: 0;
     }
 
     &-thumbnail,
-    &-price,
-    &-buy {
-      height: 100%;
+    &-price  {
       box-sizing: border-box;
       display: flex;
       align-items: center;
@@ -213,11 +318,6 @@
     }
 
     &-thumbnail {
-      border: 1px solid lightgrey;
-      border-bottom: 0;
-      border-radius: 4px 4px 0 0;
-      background-color: #f0f0f0;
-
       img {
         max-width: 100px;
         width: 100%;
@@ -269,10 +369,10 @@
     }
 
     &-updated-at p {
-      line-height: .96rem;
-      font-size: .8rem;
+      line-height: $font-line-height-small-text;
+      font-size: $font-size-small-text;
       margin-top: 12px;
       margin-bottom: 0;
     }
-  }
+  }*/
 }

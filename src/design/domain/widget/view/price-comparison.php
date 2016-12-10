@@ -5,14 +5,14 @@
     <div class="price-comparison price-comparison-widget">
         <?php foreach ($shops as $shop): ?>
 
-            <div class="shop-thumbnail">
-                <?php if(isset($shop['thumbnail'])): ?>
-                    <?php echo wp_get_attachment_image($shop['thumbnail']['id'], 'small'); ?>
-                <?php else: ?>
-                    <p><?php echo $shop['title']; ?></p>
-                <?php endif; ?>
-            </div>
             <div class="shop">
+                <div class="shop-thumbnail">
+                    <?php if(isset($shop['thumbnail'])): ?>
+                        <?php echo wp_get_attachment_image($shop['thumbnail']['id'], 'small'); ?>
+                    <?php else: ?>
+                        <p><?php echo $shop['title']; ?></p>
+                    <?php endif; ?>
+                </div>
                 <div class="shop-price">
                     <?php if($price = $shop['price']): ?>
                         <div class="price">
@@ -29,18 +29,10 @@
                             <?php endif; ?>
                             <span class="current-price"><?php echo $price['value'] . ' ' . $price['currency']['symbol'] ?></span>
                         </div>
-                        <p class="price-tax text-muted">
-                            <?php if(function_exists('aff_the_shop_price_indication')): ?>
-                                <?php aff_the_shop_price_indication(); ?>
-                            <?php else: // Legacy support ?>
-                                <?php _e('Incl. 19 % VAT and excl. shipping costs.', 'affilicious-theme'); ?>
-                            <?php endif; ?>
-                        </p>
                     <?php endif; ?>
                 </div>
                 <div class="shop-buy">
                     <?php if(function_exists('aff_is_shop_available')): ?>
-
                         <?php if(aff_is_shop_available($shop)): ?>
                             <a class="btn btn-buy" href="<?php echo $shop['affiliate_link']; ?>"  rel="nofollow" target="_blank">
                                 <?php _e('Buy', 'affilicious-theme'); ?>
@@ -50,28 +42,35 @@
                                 <?php _e('Not available', 'affilicious-theme'); ?>
                             </a>
                         <?php endif; ?>
-
                     <?php else: // Legacy support ?>
-
                         <a class="btn btn-buy" href="<?php echo $shop['affiliate_link']; ?>"  rel="nofollow" target="_blank">
                             <?php esc_html_e('Buy', 'affilicious-theme'); ?>
                         </a>
-
                     <?php endif; ?>
-                    <div class="shop-updated-at">
-                        <?php if(function_exists('aff_the_shop_updated_at_indication')): ?>
-                            <?php aff_the_shop_updated_at_indication($shop); ?>
+                </div>
+                <div class="shop-info">
+                    <p class="text-muted">
+                        <?php if(function_exists('aff_the_shop_price_indication')): ?>
+                            <?php aff_the_shop_price_indication(); ?>
                         <?php else: // Legacy support ?>
-                            <?php if(isset($shop['updated_at']) && $updated_at = $shop['updated_at']): ?>
-                                <p class="text-muted">
-                                    <?php echo sprintf(
-                                        __('Updated at %s.', 'affilicious-theme'),
-                                        $updated_at
-                                    ); ?>
-                                </p>
-                            <?php endif; ?>
+                            <?php _e('Incl. 19 % VAT and excl. shipping costs.', 'affilicious-theme'); ?>
                         <?php endif; ?>
-                    </div>
+                    </p>
+
+                    <?php if(function_exists('aff_the_shop_updated_at_indication')): ?>
+                        <p class="text-muted">
+                            <?php aff_the_shop_updated_at_indication($shop); ?>
+                        </p>
+                    <?php else: // Legacy support ?>
+                        <?php if(isset($shop['updated_at']) && $updated_at = $shop['updated_at']): ?>
+                            <p class="text-muted">
+                                <?php echo sprintf(
+                                    __('Updated at %s.', 'affilicious-theme'),
+                                    $updated_at
+                                ); ?>
+                            </p>
+                        <?php endif; ?>
+                    <?php endif; ?>
                 </div>
             </div>
         <?php endforeach; ?>
