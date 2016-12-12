@@ -10,7 +10,7 @@
                         <?php while (have_posts()) : the_post(); ?>
                             <?php $count++; ?>
 
-                            <div class="col-md-6">
+                            <div class="col-md-12 col-sm-6 col-xs-12">
                                 <?php get_template_part('partials/content-entry-preview'); ?>
                             </div>
 
