@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-12-05 22:32+0100\n"
-"PO-Revision-Date: 2016-12-05 22:33+0100\n"
+"POT-Creation-Date: 2016-12-08 12:32+0100\n"
+"PO-Revision-Date: 2016-12-08 12:32+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -312,7 +312,8 @@ msgstr "Link zu %s"
 
 #: partials/content-product-relations.php:57
 #: partials/content-product-relations.php:107
-#: src/design/domain/widget/view/price-comparison.php:46
+#: src/design/domain/widget/view/price-comparison.php:37
+#: src/design/domain/widget/view/price-comparison.php:48
 msgid "Buy"
 msgstr "Kaufen"
 
@@ -903,21 +904,18 @@ msgstr "AT Preisvergleich"
 msgid "Displays an Affilicious Theme price comparison only on product pages."
 msgstr "Zeigt ein Preisvergleich auf jeder Produktseite."
 
-#: src/design/domain/widget/view/price-comparison.php:24
-msgid "Including 19 % VAT"
-msgstr ""
-"Inklusive \n"
-"19% MwSt"
+#: src/design/domain/widget/view/price-comparison.php:27
+msgid "Incl. 19 % VAT and excl. shipping costs."
+msgstr "Inkl. 19% MwSt und zzgl. Versandkosten."
 
-#: src/design/domain/widget/view/price-comparison.php:29
-#, php-format
-msgid "%s delivery rates"
-msgstr "%s Versandkosten"
+#: src/design/domain/widget/view/price-comparison.php:41
+msgid "Not available"
+msgstr "Nicht verfügbar"
 
-#: src/design/domain/widget/view/price-comparison.php:37
+#: src/design/domain/widget/view/price-comparison.php:60
 #, php-format
-msgid "Updated at %s"
-msgstr "Aktualisiert am %s"
+msgid "Updated at %s."
+msgstr "Aktualisiert am %s Uhr."
 
 #: src/functions.php:26
 msgid ""
@@ -966,6 +964,17 @@ msgstr "Links"
 #: src/settings/application/setting/design-settings.php:62
 msgid "Customizer"
 msgstr "Customizer"
+
+#~ msgid "Including 19 % VAT"
+#~ msgstr ""
+#~ "Inklusive \n"
+#~ "19% MwSt"
+
+#~ msgid "%s delivery rates"
+#~ msgstr "%s Versandkosten"
+
+#~ msgid "Updated at %s"
+#~ msgstr "Aktualisiert am %s"
 
 #~ msgid ""
 #~ "Failed to find the required Affilicious plugin. Please open your admin "

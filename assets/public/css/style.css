@@ -8032,66 +8032,174 @@ body {
       color: #47C2DC;
       border-color: #47C2DC; }
 
-.price-comparison .shop {
-  border-radius: 4px;
-  display: flex;
-  align-content: flex-start;
-  box-sizing: border-box;
-  height: 100px;
-  border: 1px solid lightgrey;
-  width: 100%;
-  margin-top: 15px;
-  background-color: #f0f0f0; }
-  .price-comparison .shop:first-child {
-    margin-top: 0; }
-  .price-comparison .shop-thumbnail, .price-comparison .shop-price, .price-comparison .shop-buy {
-    width: 33.33333%;
-    height: 100%;
+.price-comparison {
+  /*.shop {
+    @include border-radius();
+    display: flex;
+    align-content: flex-start;
     box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 15px; }
-  .price-comparison .shop-thumbnail {
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
-    border-right: 1px solid lightgrey; }
-    .price-comparison .shop-thumbnail img {
-      max-width: 100px;
+    min-height: $price-comparison-widget-shop-height;
+    border: $price-comparison-shop-border;
+    width: 100%;
+    background-color: $price-comparison-shop-background;
+    margin-bottom: $space-size-small;
+
+
+
+
+    &-buy {
+      border: 1px solid red;
+      clear: both;
       width: 100%;
-      height: auto; }
-  .price-comparison .shop-price {
-    display: flex;
-    flex-wrap: wrap; }
-    .price-comparison .shop-price .price {
+    }
+
+
+    &-info {
+      border: 1px solid red;
+      clear: both;
       width: 100%;
-      display: block;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &-thumbnail,
+    &-price  {
       box-sizing: border-box;
-      text-align: right; }
-      .price-comparison .shop-price .price .old-price {
-        float: right;
-        color: #ff2320;
-        display: inline-block;
-        text-decoration: line-through;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: $space-size-small;
+    }
+
+    &-price,
+    &-buy {
+      width: 50%;
+    }
+
+    &-buy {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &-thumbnail {
+      img {
+        max-width: 100px;
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    &-price {
+      display: flex;
+      flex-wrap: wrap;
+
+      .price {
+        width: 100%;
+        display: block;
+        box-sizing: border-box;
+        text-align: right;
+
+        .old-price {
+          float: right;
+          color: $price-comparison-old-price-color;
+          display: inline-block;
+          text-decoration: line-through;
+          line-height: $font-line-height-small-text;
+          font-size: $font-size-small-text;
+        }
+
+        .current-price {
+          float: right;
+          width: 100%;
+          padding: 0;
+          color: $price-comparison-current-price-color;
+          display: inline-block;
+          font-weight: $font-weight-text;
+          line-height: $font-size-text;
+          font-size: $font-size-text;
+        }
+      }
+
+      .price-tax {
+        margin-top: $space-size-small;
+        margin-bottom: 0;
+        line-height: $font-line-height-small-text;
+        font-size: $font-size-small-text;
+      }
+    }
+
+    &-buy {
+      @include border-radius-right();
+    }
+
+    &-updated-at p {
+      line-height: $font-line-height-small-text;
+      font-size: $font-size-small-text;
+      margin-top: 12px;
+      margin-bottom: 0;
+    }
+  }*/ }
+  .price-comparison .shop {
+    border-radius: 4px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid lightgrey;
+    background-color: #f0f0f0;
+    margin-bottom: 15px;
+    min-height: 100px;
+    box-sizing: border-box;
+    padding: 15px; }
+    .price-comparison .shop-thumbnail {
+      width: 50%;
+      padding: 0;
+      margin-bottom: 30px; }
+      .price-comparison .shop-thumbnail img {
+        display: block;
+        max-width: 200px;
+        width: 100%;
+        height: auto; }
+    .price-comparison .shop-price {
+      width: 50%;
+      margin-bottom: 30px; }
+      .price-comparison .shop-price .price {
+        width: 100%;
+        display: block;
+        box-sizing: border-box;
+        text-align: right; }
+        .price-comparison .shop-price .price .old-price {
+          float: right;
+          color: #ff2320;
+          display: inline-block;
+          text-decoration: line-through;
+          line-height: 28.8px;
+          font-size: 1rem; }
+        .price-comparison .shop-price .price .current-price {
+          float: right;
+          width: 100%;
+          padding: 0;
+          color: #2fa32f;
+          display: inline-block;
+          font-weight: normal;
+          line-height: 1rem;
+          font-size: 1.2rem; }
+    .price-comparison .shop-buy {
+      width: 100%;
+      margin-bottom: 15px; }
+      .price-comparison .shop-buy a.btn {
+        width: 100%; }
+    .price-comparison .shop-info {
+      width: 100%; }
+      .price-comparison .shop-info p {
+        text-align: center;
         line-height: 0.96rem;
         font-size: 0.8rem; }
-      .price-comparison .shop-price .price .current-price {
-        float: right;
-        width: 100%;
-        padding: 0;
-        color: #2fa32f;
-        display: inline-block;
-        font-weight: normal;
-        line-height: 1rem;
-        font-size: 1rem; }
-    .price-comparison .shop-price .price-tax {
-      margin-top: 5px;
-      margin-bottom: 0;
-      line-height: 0.96rem;
-      font-size: 0.8rem; }
-  .price-comparison .shop-buy {
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px; }
 
 .nav-tabs li a {
   border-top: 1px solid #ddd !important;
