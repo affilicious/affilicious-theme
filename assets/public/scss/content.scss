@@ -100,10 +100,19 @@
     }
     &-title {
       background-color: white;
-      border-bottom: 0;
+      border: none;
+      a {
+        display: none;
+      }
     }
     &-heading [data-toggle="collapse"]:after, [data-toggle="collapse"].collapsed:after {
       display: none;
     }
   }
+  header.entry-header {
+    padding: 20px 10px;
+  }
+}
+.entry-links {
+  padding: 30px;
 }

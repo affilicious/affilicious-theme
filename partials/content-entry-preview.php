@@ -24,20 +24,16 @@
                 </div>
             <?php endif; ?>
         </div>
-        <div class="col-md-6 col-xs-12 flex-md-last flex-sm-last flex-xs-last">
-            <header class="entry-header">
-                <h1 class="entry-title" itemprop="headline">
-                    <a href="<?php echo esc_url(get_permalink()); ?>" rel="bookmark">
-                        <?php the_title(); ?>
-                    </a>
-                </h1>
-                <a class="btn btn-buy btn-block">Hier Kaufen</a>
-                <a class="btn btn-info btn-block">Testbericht ansehen</a>
-            </header>
-        </div>
         <div class="col-md-6 col-xs-12 flex-md-unordered flex-sm-unordered flex-xs-unordered">
             <div class="entry-details">
                 <div class="entry-content">
+                    <header class="entry-header">
+                        <h1 class="entry-title" itemprop="headline">
+                            <a href="<?php echo esc_url(get_permalink()); ?>" rel="bookmark">
+                                <?php the_title(); ?>
+                            </a>
+                        </h1>
+                    </header>
                     <div class="panel">
                         <div class="panel-heading">
                             <h4 class="panel-title">
@@ -51,6 +47,12 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-xs-12 flex-md-last flex-sm-last flex-xs-last">
+            <div class="entry-links">
+                <a class="btn btn-buy btn-block">Hier Kaufen</a>
+                <a class="btn btn-info btn-block">Testbericht ansehen</a>
             </div>
         </div>
     </div>
