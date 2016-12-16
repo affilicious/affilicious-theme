@@ -1,7 +1,7 @@
 <?php $shops = aff_get_product_shops(); ?>
 
 <?php echo $args['before_title'] . $instance['title'] . $args['after_title'] ?>
-<div class="panel-body">
+<div class="panel-body" id="price-comparison">
     <div class="price-comparison price-comparison-widget">
         <?php foreach ($shops as $shop): ?>
 
@@ -27,7 +27,15 @@
                                 <?php endif; ?>
 
                             <?php endif; ?>
+                            <span class="old-price"><?php echo $old_price['value'] . ' ' . $old_price['currency']['symbol'] ?></span>
                             <span class="current-price"><?php echo $price['value'] . ' ' . $price['currency']['symbol'] ?></span>
+                            <p class="text-muted tax-price">
+                                <?php if(function_exists('aff_the_shop_price_indication')): ?>
+                                    <?php aff_the_shop_price_indication(); ?>
+                                <?php else: // Legacy support ?>
+                                    <?php _e('Incl. 19 % VAT and excl. shipping costs.', 'affilicious-theme'); ?>
+                                <?php endif; ?>
+                            </p>
                         </div>
                     <?php endif; ?>
                 </div>
@@ -49,14 +57,6 @@
                     <?php endif; ?>
                 </div>
                 <div class="shop-info">
-                    <p class="text-muted">
-                        <?php if(function_exists('aff_the_shop_price_indication')): ?>
-                            <?php aff_the_shop_price_indication(); ?>
-                        <?php else: // Legacy support ?>
-                            <?php _e('Incl. 19 % VAT and excl. shipping costs.', 'affilicious-theme'); ?>
-                        <?php endif; ?>
-                    </p>
-
                     <?php if(function_exists('aff_the_shop_updated_at_indication')): ?>
                         <p class="text-muted">
                             <?php aff_the_shop_updated_at_indication($shop); ?>
