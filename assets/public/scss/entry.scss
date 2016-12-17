@@ -87,11 +87,23 @@
     }
   }
 
+  .entry-caption {
+    padding: 20px 30px;
+    text-align: center;
+    p {
+      font-size: $font-size-small-text;
+      color: #a5a5a5;
+      line-height: $font-line-height-small-text;
+      &:last-child {
+       margin-top: 10px;
+      }
+    }
+  }
+
   .archive &, .blog & {
     &-title {
       font-size: $font-size-headline-2;
       line-height: $font-color-headline-2;
-
       a {
         color: $font-color-headline-2;
       }

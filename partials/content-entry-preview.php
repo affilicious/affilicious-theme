@@ -50,9 +50,11 @@
             </div>
         </div>
         <div class="col-md-6 col-xs-12 flex-md-last flex-sm-last flex-xs-last">
-            <div class="entry-links">
+            <div class="entry-caption">
+                <p>Inkl. 19% MwSt. zzgl. Versandkosten</p>
                 <a class="btn btn-buy btn-block">Hier Kaufen</a>
                 <a class="btn btn-info btn-block">Testbericht ansehen</a>
+                <p>Aktualisiert am 13.12.16 22:34</p>
             </div>
         </div>
     </div>
