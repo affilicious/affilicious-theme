@@ -22,7 +22,7 @@ var assetPaths = {
     public: {
         css: [
             'assets/vendor/font-awesome/css/**',
-            'assets/vendor/bootflat/css/**',
+            //'assets/vendor/bootflat/css/**',
             'assets/vendor/slick/css/**'
         ],
         sass: [
@@ -233,6 +233,16 @@ gulp.task('public-watch', function() {
     gulp.watch(assetPaths.public.fonts, ['public-fonts']);
 });
 
+gulp.task('customizer-watch', function() {
+    gulp.watch(assetPaths.customizer.css, ['customizer-css']);
+    gulp.watch(assetPaths.customizer.less, ['customizer-css']);
+    gulp.watch(assetPaths.customizer.sass, ['customizer-css']);
+    gulp.watch(assetPaths.customizer.js, ['customizer-js']);
+    gulp.watch(assetPaths.customizer.es6, ['customizer-js']);
+    gulp.watch(assetPaths.customizer.images, ['customizer-images']);
+    gulp.watch(assetPaths.customizer.fonts, ['customizer-fonts']);
+});
+
 gulp.task('admin-watch', function() {
     gulp.watch(assetPaths.admin.css, ['admin-css']);
     gulp.watch(assetPaths.admin.less, ['admin-css']);
@@ -244,4 +254,4 @@ gulp.task('admin-watch', function() {
 });
 
 gulp.task('default', ['public-css', 'public-js', 'public-images', 'public-fonts', 'admin-css', 'admin-js', 'admin-images', 'admin-fonts', 'customizer-js']);
-gulp.task('watch', ['default', 'public-watch', 'admin-watch']);
+gulp.task('watch', ['default', 'public-watch', 'customizer-watch', 'admin-watch']);

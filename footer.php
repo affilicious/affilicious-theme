@@ -1,74 +1,83 @@
-<footer id="footer" class="footer" role="contentinfo"
-		itemscope itemtype="http://schema.org/WPFooter">
+<footer id="footer" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
 
-	<?php if (function_exists('yoast_breadcrumb')): ?>
-		<div class="footer-breadcrumbs">
+	<?php if (afft_has_breadcrumbs()): ?>
+		<div id="footer-breadcrumbs">
 			<div class="container">
-				<?php yoast_breadcrumb('<nav aria-label="breadcrumb" role="navigation">', '</nav>'); ?>
+				<div class="row">
+					<div class="col-xs-12">
+						<?php afft_the_breadcrumbs(); ?>
+					</div>
+				</div>
 			</div>
 		</div>
 	<?php endif; ?>
 
-	<div class="footer-top">
+	<div id="footer-content">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-12">
-					<div class="footer-logo">
-						<a href="<?php home_url('/'); ?>"><?php bloginfo('name') ?></a>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-6 col-sm-12 col-xs-12">
-					<div class="footer-text">
-						<h4>Über uns</h4>
-						<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolo<p>
-					</div>
-				</div>
-				<div class="col-md-6 col-sm-12 col-xs-12">
-					<div class="footer-navigation">
-						<div style="display: inline-block; width: 45%;">
-							<?php if (afft_has_bottom_1_menu()): ?>
-								<?php afft_bottom_1_menu(); ?>
-							<?php endif; ?>
-						</div>
-						<div style="display: inline-block; width: 45%;">
-							<?php if (afft_has_bottom_2_menu()): ?>
-								<?php afft_bottom_2_menu(); ?>
-							<?php endif; ?>
+				<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+					<div class="row">
+						<div class="col-xs-12">
+							<div id="footer-about-us">
+								<h4>Über uns</h4>
+								<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<p>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-		</div>
-	</div>
-	<div class="footer-bottom">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-6 col-sm-6 col-xs-12 flex-xs-middle">
-					<div class="footer-copyright">
-						<?php echo get_theme_mod('afft-information-copyright-text'); ?>
-						<ul>
-							<li><a href="#">Impressum</a></li>
-							<li><a href="#">AGB</a></li>
-							<li><a href="#">Kontakt</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-md-6 col-sm-6 col-xs-12 flex-xs-middle">
-					<div class="footer-social">
-						<a href="#" class="social-button facebook"><i class="fa fa-facebook"></i></a>
-						<a href="#" class="social-button twitter"><i class="fa fa-twitter"></i></a>
-						<a href="#" class="social-button google"><i class="fa fa-google-plus"></i></a>
-						<a href="#" class="social-button pinterest"><i class="fa fa-pinterest"></i></a>
-						<a href="#" class="social-button reddit"><i class="fa fa-reddit"></i></a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</footer>
+				<div class="col-xl-5 col-lg-6 col-md-6 col-sm-12 col-xs-12 offset-xl-1">
+					<div class="row">
+						<div class="col-md-6">
+							<?php if (afft_has_footer_content_first_menu()): ?>
+								<nav id="footer-content-first-menu">
+									<?php afft_the_footer_content_first_menu(); ?>
+								</nav>
+							<?php endif; ?>
+						</div>
 
+						<div class="col-md-6">
+							<?php if (afft_has_footer_content_second_menu()): ?>
+								<nav id="footer-content-second-menu">
+									<?php afft_the_footer_content_second_menu(); ?>
+								</nav>
+							<?php endif; ?>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="footer-plinth">
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-xs-12">
+					<?php if(afft_has_copyright()): ?>
+						<small id="footer-copyright">
+							<?php afft_the_copyright() ?>
+						</small>
+					<?php endif; ?>
+
+					<?php if (afft_has_footer_plinth_menu()): ?>
+						<nav id="footer-plinth-menu">
+							<?php afft_the_footer_plinth_menu(); ?>
+						</nav>
+					<?php endif; ?>
+				</div>
+				<div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12">
+					<div id="footer-social">
+						<a href="#" class="social-btn facebook"><i class="fa fa-facebook"></i></a>
+						<a href="#" class="social-btn twitter"><i class="fa fa-twitter"></i></a>
+						<a href="#" class="social-btn google-plus"><i class="fa fa-google-plus"></i></a>
+						<a href="#" class="social-btn pinterest"><i class="fa fa-pinterest"></i></a>
+						<a href="#" class="social-btn reddit"><i class="fa fa-reddit"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</footer>
 
 <?php wp_footer(); ?>
 </body>

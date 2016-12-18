@@ -13,7 +13,7 @@
 
     wp.customize('afft-information-copyright-text', function (value) {
         value.bind(function (text) {
-            $('#footer .footer-copyright').html(text);
+            $('#footer-copyright').html(text);
         });
     });
 })(jQuery);

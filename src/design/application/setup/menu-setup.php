@@ -1,10 +1,9 @@
 <?php
 namespace Affilicious_Theme\Design\Application\Setup;
 
-use Affilicious_Theme\Design\Domain\Menu\Bottom_1_Menu;
-use Affilicious_Theme\Design\Domain\Menu\Bottom_2_Menu;
-use Affilicious_Theme\Design\Domain\Menu\Bottom_3_Menu;
-use Affilicious_Theme\Design\Domain\Menu\Bottom_4_Menu;
+use Affilicious_Theme\Design\Domain\Menu\Footer_Plinth_Menu;
+use Affilicious_Theme\Design\Domain\Menu\Footer_Content_First_Menu;
+use Affilicious_Theme\Design\Domain\Menu\Footer_Content_Second_Menu;
 use Affilicious_Theme\Design\Domain\Menu\Main_Menu;
 
 if(!defined('ABSPATH')) {
@@ -16,89 +15,86 @@ class Menu_Setup
 	/**
 	 * @var Main_Menu
 	 */
-	private $main_menu;
+	protected $main_menu;
+
+    /**
+     * @var Footer_Plinth_Menu
+     */
+    protected $footer_plinth_menu;
 
 	/**
-	 * @var Bottom_1_Menu
+	 * @var Footer_Content_First_Menu
 	 */
-	private $bottom1_menu;
+	protected $footer_content_first_menu;
 
 	/**
-	 * @var Bottom_2_Menu
+	 * @var Footer_Content_Second_Menu
 	 */
-	private $bottom2_menu;
-
-	/**
-	 * @var Bottom_3_Menu
-	 */
-	private $bottom3_menu;
-
-	/**
-	 * @var Bottom_4_Menu
-	 */
-	private $bottom4_menu;
+	protected $footer_content_second_menu;
 
 	/**
 	 * @since 0.3.4
 	 */
 	public function __construct()
 	{
-		$this->main_menu    = new Main_Menu();
-		$this->bottom1_menu = new Bottom_1_Menu();
-		$this->bottom2_menu = new Bottom_2_Menu();
-		$this->bottom3_menu = new Bottom_3_Menu();
-		$this->bottom4_menu = new Bottom_4_Menu();
+		$this->main_menu = new Main_Menu();
+		$this->footer_plinth_menu = new Footer_Plinth_Menu();
+		$this->footer_content_first_menu = new Footer_Content_First_Menu();
+		$this->footer_content_second_menu = new Footer_Content_Second_Menu();
 	}
 
 	/**
 	 * @inheritdoc
+     * @since 0.6
 	 */
 	public function init()
 	{
 		$this->main_menu->init();
-		$this->bottom1_menu->init();
-		$this->bottom2_menu->init();
-		$this->bottom3_menu->init();
-		$this->bottom4_menu->init();
+		$this->footer_plinth_menu->init();
+		$this->footer_content_first_menu->init();
+		$this->footer_content_second_menu->init();
 	}
 
-	/**
-	 * @return Main_Menu
-	 */
-	public function get_main_menu()
-	{
-		return $this->main_menu;
-	}
+    /**
+     * Get the menu which is located in the main navigation.
+     *
+     * @since 0.6
+     * @return Main_Menu
+     */
+    public function get_main_menu()
+    {
+        return $this->main_menu;
+    }
 
-	/**
-	 * @return Bottom_1_Menu
-	 */
-	public function get_bottom_1_menu()
-	{
-		return $this->bottom1_menu;
-	}
+    /**
+     * Get the menu which is located in the footer plinth.
+     *
+     * @return Footer_Plinth_Menu
+     */
+    public function get_footer_plinth_menu()
+    {
+        return $this->footer_plinth_menu;
+    }
 
-	/**
-	 * @return Bottom_2_Menu
-	 */
-	public function get_bottom_2_menu()
-	{
-		return $this->bottom2_menu;
-	}
+    /**
+     * Get the first menu which is located in the footer content.
+     *
+     * @since 0.6
+     * @return Footer_Content_First_Menu
+     */
+    public function get_footer_content_first_menu()
+    {
+        return $this->footer_content_first_menu;
+    }
 
-	/**
-	 * @return Bottom_3_Menu
-	 */
-	public function get_bottom_3_menu()
-	{
-		return $this->bottom3_menu;
-	}
-
-	/**
-	 * @return Bottom_4_Menu
-	 */
-	public function get_bottom_4_menu()
-	{
-		return $this->bottom4_menu;
-	}
+    /**
+     * Get the second menu which is located in the footer content.
+     *
+     * @since 0.6
+     * @return Footer_Content_Second_Menu
+     */
+    public function get_footer_content_second_menu()
+    {
+        return $this->footer_content_second_menu;
+    }
 }
