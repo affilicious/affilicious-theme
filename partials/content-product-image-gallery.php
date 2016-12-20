@@ -47,7 +47,11 @@
                 </a>
             <?php endif; ?>
         <?php else: ?>
-            <i class="fa fa-question-circle-o fa-2x"></i>
+            <div class="product-upload-images">
+                <i class="fa fa-question-circle-o fa-2x"></i>
+                <p>Keine Produktbilder verfügbar</p>
+                <a href="<?php echo admin_url('upload.php')?>">Jetzt Hinzufügen</a>
+            </div>
         <?php endif; ?>
     </div>
 <?php endif; ?>
