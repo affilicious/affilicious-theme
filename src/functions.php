@@ -373,3 +373,203 @@ function afft_the_breadcrumbs()
         yoast_breadcrumb('<nav aria-label="breadcrumb" role="navigation">', '</nav>');
     }
 }
+
+/**
+ * Check if there is an existing Facebook link.
+ *
+ * @since 0.6
+ * @return bool
+ */
+function afft_has_facebook_link()
+{
+    return !empty(afft_get_facebook_link());
+}
+
+/**
+ * Get the Facebook link.
+ *
+ * @since 0.6
+ * @return null|string
+ */
+function afft_get_facebook_link()
+{
+    $facebook_link = carbon_get_theme_option(Design_Settings::OPTION_SOCIAL_MEDIA_FACEBOOK_LINK);
+    if(empty($facebook_link)) {
+        return null;
+    }
+
+    return $facebook_link;
+}
+
+/**
+ * Print the Facebook link.
+ *
+ * @since 0.6
+ */
+function afft_the_facebook_link()
+{
+    $link = afft_get_facebook_link();
+    $link = !empty($link) ? $link : '#';
+
+    echo $link;
+}
+
+/**
+ * Check if there is an existing Twitter link.
+ *
+ * @since 0.6
+ * @return bool
+ */
+function afft_has_twitter_link()
+{
+    return !empty(afft_get_twitter_link());
+}
+
+/**
+ * Get the Twitter link.
+ *
+ * @since 0.6
+ * @return null|string
+ */
+function afft_get_twitter_link()
+{
+    $twitter_link = carbon_get_theme_option(Design_Settings::OPTION_SOCIAL_MEDIA_TWITTER_LINK);
+    if(empty($twitter_link)) {
+        return null;
+    }
+
+    return $twitter_link;
+}
+
+/**
+ * Print the Twitter link.
+ *
+ * @since 0.6
+ */
+function afft_the_twitter_link()
+{
+    $link = afft_get_twitter_link();
+    $link = !empty($link) ? $link : '#';
+
+    echo $link;
+}
+
+/**
+ * Check if there is an existing Google Plus link.
+ *
+ * @since 0.6
+ * @return bool
+ */
+function afft_has_google_plus_link()
+{
+    return !empty(afft_get_google_plus_link());
+}
+
+/**
+ * Get the Google Plus link.
+ *
+ * @since 0.6
+ * @return null|string
+ */
+function afft_get_google_plus_link()
+{
+    $google_plus_link = carbon_get_theme_option(Design_Settings::OPTION_SOCIAL_MEDIA_GOOGLE_PLUS_LINK);
+    if(empty($google_plus_link)) {
+        return null;
+    }
+
+    return $google_plus_link;
+}
+
+/**
+ * Print the Google Plus link.
+ *
+ * @since 0.6
+ */
+function afft_the_google_plus_link()
+{
+    $link = afft_get_google_plus_link();
+    $link = !empty($link) ? $link : '#';
+
+    echo $link;
+}
+
+/**
+ * Check if there is an existing Pinterest link.
+ *
+ * @since 0.6
+ * @return bool
+ */
+function afft_has_pinterest_link()
+{
+    return !empty(afft_get_pinterest_link());
+}
+
+/**
+ * Get the Pinterest link.
+ *
+ * @since 0.6
+ * @return null|string
+ */
+function afft_get_pinterest_link()
+{
+    $pinterest_link = carbon_get_theme_option(Design_Settings::OPTION_SOCIAL_MEDIA_PINTEREST_LINK);
+    if(empty($pinterest_link)) {
+        return null;
+    }
+
+    return $pinterest_link;
+}
+
+/**
+ * Print the Pinterest link.
+ *
+ * @since 0.6
+ */
+function afft_the_pinterest_link()
+{
+    $link = afft_get_pinterest_link();
+    $link = !empty($link) ? $link : '#';
+
+    echo $link;
+}
+
+/**
+ * Check if there is an existing Reddit link.
+ *
+ * @since 0.6
+ * @return bool
+ */
+function afft_has_reddit_link()
+{
+    return !empty(afft_get_reddit_link());
+}
+
+/**
+ * Get the Reddit link.
+ *
+ * @since 0.6
+ * @return null|string
+ */
+function afft_get_reddit_link()
+{
+    $reddit_link = carbon_get_theme_option(Design_Settings::OPTION_SOCIAL_MEDIA_REDDIT_LINK);
+    if(empty($reddit_link)) {
+        return null;
+    }
+
+    return $reddit_link;
+}
+
+/**
+ * Print the Reddit link.
+ *
+ * @since 0.6
+ */
+function afft_the_reddit_link()
+{
+    $link = afft_get_reddit_link();
+    $link = !empty($link) ? $link : '#';
+
+    echo $link;
+}

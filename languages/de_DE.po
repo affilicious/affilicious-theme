@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-12-20 18:35+0100\n"
-"PO-Revision-Date: 2016-12-20 18:39+0100\n"
+"POT-Creation-Date: 2016-12-20 20:10+0100\n"
+"PO-Revision-Date: 2016-12-20 20:11+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -1001,43 +1001,56 @@ msgstr ""
 "Das Affilicious Plugin konnte nicht gefunden werden. Bitte öffne deinen "
 "Admin Bereich um das fehlende Plugin zu installieren."
 
-#: src/settings/application/setting/design-settings.php:41
+#: src/settings/application/setting/design-settings.php:46
+#: src/settings/application/setting/design-settings.php:48
+#: src/settings/application/setting/design-settings.php:50
+#: src/settings/application/setting/design-settings.php:52
+#: src/settings/application/setting/design-settings.php:54
+#, php-format
+msgid "%s Link"
+msgstr "%s Link"
+
+#: src/settings/application/setting/design-settings.php:59
 msgid "What will happen, if you click on the product image gallery?"
 msgstr "Was wird passieren, wenn du auf die Produkt Bildergalerie klickst?"
 
-#: src/settings/application/setting/design-settings.php:43
-#: src/settings/application/setting/design-settings.php:48
+#: src/settings/application/setting/design-settings.php:61
+#: src/settings/application/setting/design-settings.php:66
 msgid "Nothing"
 msgstr "Garnichts"
 
-#: src/settings/application/setting/design-settings.php:44
-#: src/settings/application/setting/design-settings.php:49
+#: src/settings/application/setting/design-settings.php:62
+#: src/settings/application/setting/design-settings.php:67
 msgid "Open the shop"
 msgstr "Shop öffnen"
 
-#: src/settings/application/setting/design-settings.php:46
+#: src/settings/application/setting/design-settings.php:64
 msgid "What will happen, if you click on the product preview image?"
 msgstr "Was wird passieren, wenn du auf die Produkt Vorschaubilder klickst?"
 
-#: src/settings/application/setting/design-settings.php:54
+#: src/settings/application/setting/design-settings.php:72
 msgid "Raw Modifications"
 msgstr "Rohe Modifikationen"
 
-#: src/settings/application/setting/design-settings.php:56
+#: src/settings/application/setting/design-settings.php:74
 msgid "Please be aware that ill-considered changes may destroy your design."
 msgstr ""
 "Bitte sei dir im Klaren, dass unüberlegte Änderungen dein Design beschädigen "
 "können."
 
-#: src/settings/application/setting/design-settings.php:59
+#: src/settings/application/setting/design-settings.php:77
 msgid "Design"
 msgstr "Design"
 
-#: src/settings/application/setting/design-settings.php:61
+#: src/settings/application/setting/design-settings.php:79
+msgid "Social Media"
+msgstr "Soziale Medien"
+
+#: src/settings/application/setting/design-settings.php:80
 msgid "Links"
 msgstr "Links"
 
-#: src/settings/application/setting/design-settings.php:62
+#: src/settings/application/setting/design-settings.php:81
 msgid "Customizer"
 msgstr "Customizer"
 

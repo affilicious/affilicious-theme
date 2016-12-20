@@ -66,11 +66,25 @@
 				</div>
 				<div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12">
 					<div id="footer-social">
-						<a href="#" class="social-btn facebook"><i class="fa fa-facebook"></i></a>
-						<a href="#" class="social-btn twitter"><i class="fa fa-twitter"></i></a>
-						<a href="#" class="social-btn google-plus"><i class="fa fa-google-plus"></i></a>
-						<a href="#" class="social-btn pinterest"><i class="fa fa-pinterest"></i></a>
-						<a href="#" class="social-btn reddit"><i class="fa fa-reddit"></i></a>
+						<?php if(afft_has_facebook_link()): ?>
+							<a href="<?php afft_the_facebook_link(); ?>" class="social-btn facebook"><i class="fa fa-facebook"></i></a>
+						<?php endif; ?>
+
+						<?php if(afft_has_twitter_link()): ?>
+							<a href="<?php afft_the_twitter_link(); ?>" class="social-btn twitter"><i class="fa fa-twitter"></i></a>
+						<?php endif; ?>
+
+						<?php if(afft_has_google_plus_link()): ?>
+							<a href="<?php afft_the_google_plus_link(); ?>" class="social-btn google-plus"><i class="fa fa-google-plus"></i></a>
+						<?php endif; ?>
+
+						<?php if(afft_has_pinterest_link()): ?>
+							<a href="<?php afft_the_pinterest_link(); ?>" class="social-btn pinterest"><i class="fa fa-pinterest"></i></a>
+						<?php endif; ?>
+
+						<?php if(afft_has_reddit_link()): ?>
+							<a href="<?php afft_the_reddit_link(); ?>" class="social-btn reddit"><i class="fa fa-reddit"></i></a>
+						<?php endif; ?>
 					</div>
 				</div>
 			</div>
