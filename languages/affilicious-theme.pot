@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: "
 "affilicious-theme\n"
 "POT-Creation-Date: "
-"2016-12-20 21:22+0100\n"
+"2016-12-20 23:23+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Your "
 "Name <you@example.com>\n"
@@ -668,46 +668,100 @@ msgid ""
 msgstr ""
 
 #: src/design/domain/customizer/content-customizer.php:370
-msgid "Button"
+msgid "Buttons"
 msgstr ""
 
 #: src/design/domain/customizer/content-customizer.php:377
 msgid ""
-"Buy Background Color"
+"Search Background Color"
 msgstr ""
 
 #: src/design/domain/customizer/content-customizer.php:386
 msgid ""
-"Buy Background Color "
+"Search Background Color "
 "(Hover)"
 msgstr ""
 
 #: src/design/domain/customizer/content-customizer.php:395
-msgid "Buy Border Color"
+msgid ""
+"Search Border Color"
 msgstr ""
 
 #: src/design/domain/customizer/content-customizer.php:404
-msgid "Buy Text Color"
+msgid ""
+"Search Border Color "
+"(Hover)"
 msgstr ""
 
 #: src/design/domain/customizer/content-customizer.php:413
-msgid ""
-"Review Background Color"
+msgid "Search Icon Color"
 msgstr ""
 
 #: src/design/domain/customizer/content-customizer.php:422
 msgid ""
-"Review Background Color "
+"Search Icon Color "
 "(Hover)"
 msgstr ""
 
 #: src/design/domain/customizer/content-customizer.php:431
 msgid ""
-"Review Border Color"
+"Buy Background Color"
 msgstr ""
 
 #: src/design/domain/customizer/content-customizer.php:440
+msgid ""
+"Buy Background Color "
+"(Hover)"
+msgstr ""
+
+#: src/design/domain/customizer/content-customizer.php:449
+msgid "Buy Border Color"
+msgstr ""
+
+#: src/design/domain/customizer/content-customizer.php:458
+msgid ""
+"Buy Border Color (Hover)"
+msgstr ""
+
+#: src/design/domain/customizer/content-customizer.php:467
+msgid "Buy Text Color"
+msgstr ""
+
+#: src/design/domain/customizer/content-customizer.php:476
+msgid ""
+"Buy Text Color (Hover)"
+msgstr ""
+
+#: src/design/domain/customizer/content-customizer.php:485
+msgid ""
+"Review Background Color"
+msgstr ""
+
+#: src/design/domain/customizer/content-customizer.php:494
+msgid ""
+"Review Background Color "
+"(Hover)"
+msgstr ""
+
+#: src/design/domain/customizer/content-customizer.php:503
+msgid ""
+"Review Border Color"
+msgstr ""
+
+#: src/design/domain/customizer/content-customizer.php:512
+msgid ""
+"Review Border Color "
+"(Hover)"
+msgstr ""
+
+#: src/design/domain/customizer/content-customizer.php:521
 msgid "Review Text Color"
+msgstr ""
+
+#: src/design/domain/customizer/content-customizer.php:530
+msgid ""
+"Review Text Color "
+"(Hover)"
 msgstr ""
 
 #: src/design/domain/customizer/footer-customizer.php:20

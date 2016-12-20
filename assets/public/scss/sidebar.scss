@@ -107,15 +107,6 @@
   }
 }
 
-
-
-
-
-
-
-
-
-
 #wp-calendar {
   width:100%;
   font-size:12px;
@@ -128,7 +119,7 @@
   tbody td a,
   tfoot td#prev a:hover,
   tfoot td#next a:hover {
-    color:#47C2DC;
+    color: #47C2DC;
   }
 
   tfoot {
@@ -189,8 +180,6 @@
 }
 
 .price-comparison {
-
-
   .shop {
     @include border-radius();
     width: 100%;

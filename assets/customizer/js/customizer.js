@@ -135,6 +135,150 @@
             border.css('color', color);
         });
     });
+
+    wp.customize('afft-content-button-search-background-color', function (value) {
+        value.bind(function (color) {
+            var border = $('.searchform button.btn');
+            border.css('background-color', color);
+        });
+    });
+
+    wp.customize('afft-content-button-search-background-color-hover', function (value) {
+        value.bind(function (color) {
+            $('.searchform button.btn').hover(function (e) {
+                var fallback = wp.customize.instance('afft-content-button-search-background-color').get();
+                $(this).css('background-color', e.type === "mouseenter" ? color : fallback);
+            });
+        });
+    });
+
+    wp.customize('afft-content-button-search-border-color', function (value) {
+        value.bind(function (color) {
+            var border = $('.searchform button.btn');
+            border.css('border-color', color);
+        });
+    });
+
+    wp.customize('afft-content-button-search-border-color-hover', function (value) {
+        value.bind(function (color) {
+            $('.searchform button.btn').hover(function (e) {
+                var fallback = wp.customize.instance('afft-content-button-search-border-color').get();
+                $(this).children('i').css('border-color', e.type === "mouseenter" ? color : fallback);
+            });
+        });
+    });
+
+    wp.customize('afft-content-button-search-icon-color', function (value) {
+        value.bind(function (color) {
+            var border = $('.searchform button.btn i');
+            border.css('color', color);
+        });
+    });
+
+    wp.customize('afft-content-button-search-icon-color-hover', function (value) {
+        value.bind(function (color) {
+            $('.searchform button.btn').hover(function (e) {
+                var fallback = wp.customize.instance('afft-content-button-search-icon-color').get();
+                $(this).children('i').css('background-color', e.type === "mouseenter" ? color : fallback);
+            });
+        });
+    });
+
+    wp.customize('afft-content-button-buy-background-color', function (value) {
+        value.bind(function (color) {
+            var border = $('.btn-buy');
+            border.css('background-color', color);
+        });
+    });
+
+    wp.customize('afft-content-button-buy-background-color-hover', function (value) {
+        value.bind(function (color) {
+            $('.btn-buy').hover(function (e) {
+                var fallback = wp.customize.instance('afft-content-button-buy-background-color').get();
+                $(this).css('background-color', e.type === "mouseenter" ? color : fallback);
+            });
+        });
+    });
+
+    wp.customize('afft-content-button-buy-border-color', function (value) {
+        value.bind(function (color) {
+            var border = $('.btn-buy');
+            border.css('border-color', color);
+        });
+    });
+
+    wp.customize('afft-content-button-buy-border-color-hover', function (value) {
+        value.bind(function (color) {
+            $('.btn-buy').hover(function (e) {
+                var fallback = wp.customize.instance('afft-content-button-buy-border-color').get();
+                $(this).children('i').css('border-color', e.type === "mouseenter" ? color : fallback);
+            });
+        });
+    });
+
+    wp.customize('afft-content-button-buy-text-color', function (value) {
+        value.bind(function (color) {
+            var border = $('.btn-buy');
+            border.css('color', color);
+        });
+    });
+
+    wp.customize('afft-content-button-buy-text-color-hover', function (value) {
+        value.bind(function (color) {
+            $('.btn-buy').hover(function (e) {
+                var fallback = wp.customize.instance('afft-content-button-buy-text-color').get();
+                $(this).children('i').css('background-color', e.type === "mouseenter" ? color : fallback);
+            });
+        });
+    });
+
+    wp.customize('afft-content-button-review-background-color', function (value) {
+        value.bind(function (color) {
+            var border = $('.btn-review');
+            border.css('background-color', color);
+        });
+    });
+
+    wp.customize('afft-content-button-review-background-color-hover', function (value) {
+        value.bind(function (color) {
+            $('.btn-review').hover(function (e) {
+                var fallback = wp.customize.instance('afft-content-button-review-background-color').get();
+                $(this).css('background-color', e.type === "mouseenter" ? color : fallback);
+            });
+        });
+    });
+
+    wp.customize('afft-content-button-review-border-color', function (value) {
+        value.bind(function (color) {
+            var border = $('.btn-review');
+            border.css('border-color', color);
+        });
+    });
+
+    wp.customize('afft-content-button-review-border-color-hover', function (value) {
+        value.bind(function (color) {
+            $('.btn-review').hover(function (e) {
+                var fallback = wp.customize.instance('afft-content-button-review-border-color').get();
+                $(this).children('i').css('border-color', e.type === "mouseenter" ? color : fallback);
+            });
+        });
+    });
+
+    wp.customize('afft-content-button-review-text-color', function (value) {
+        value.bind(function (color) {
+            var border = $('.btn-review');
+            border.css('color', color);
+        });
+    });
+
+    wp.customize('afft-content-button-review-text-color-hover', function (value) {
+        value.bind(function (color) {
+            $('.btn-review').hover(function (e) {
+                var fallback = wp.customize.instance('afft-content-button-review-text-color').get();
+                $(this).children('i').css('background-color', e.type === "mouseenter" ? color : fallback);
+            });
+        });
+    });
 })(jQuery);
 (function ($) {
     wp.customize('afft-footer-breadcrumbs-background-color-top', function (value) {

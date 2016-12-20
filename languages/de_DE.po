@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-12-20 21:23+0100\n"
-"PO-Revision-Date: 2016-12-20 21:23+0100\n"
+"POT-Creation-Date: 2016-12-20 23:23+0100\n"
+"PO-Revision-Date: 2016-12-20 23:25+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -513,40 +513,80 @@ msgid "Heading Title Color"
 msgstr "Kopfbereich Überschriftenfarbe"
 
 #: src/design/domain/customizer/content-customizer.php:370
-msgid "Button"
-msgstr "Button"
+msgid "Buttons"
+msgstr "Buttons"
 
 #: src/design/domain/customizer/content-customizer.php:377
+msgid "Search Background Color"
+msgstr "„Suchen“ Hintergrundfarbe"
+
+#: src/design/domain/customizer/content-customizer.php:386
+msgid "Search Background Color (Hover)"
+msgstr "„Suchen“ Hintergrundfarbe (Hover)"
+
+#: src/design/domain/customizer/content-customizer.php:395
+msgid "Search Border Color"
+msgstr "„Suchen“ Rahmenfarbe"
+
+#: src/design/domain/customizer/content-customizer.php:404
+msgid "Search Border Color (Hover)"
+msgstr "„Suchen“ Rahmenfarbe (Hover)"
+
+#: src/design/domain/customizer/content-customizer.php:413
+msgid "Search Icon Color"
+msgstr "„Suchen“ Symbolfarbe"
+
+#: src/design/domain/customizer/content-customizer.php:422
+msgid "Search Icon Color (Hover)"
+msgstr "„Suchen“ Symbolfarbe (Hover)"
+
+#: src/design/domain/customizer/content-customizer.php:431
 msgid "Buy Background Color"
 msgstr "„Kaufen“ Hintergrundfarbe"
 
-#: src/design/domain/customizer/content-customizer.php:386
+#: src/design/domain/customizer/content-customizer.php:440
 msgid "Buy Background Color (Hover)"
 msgstr "„Kaufen“ Hintergrundfarbe (Hover)"
 
-#: src/design/domain/customizer/content-customizer.php:395
+#: src/design/domain/customizer/content-customizer.php:449
 msgid "Buy Border Color"
 msgstr "„Kaufen“ Rahmenfarbe"
 
-#: src/design/domain/customizer/content-customizer.php:404
+#: src/design/domain/customizer/content-customizer.php:458
+msgid "Buy Border Color (Hover)"
+msgstr "„Kaufen“ Rahmenfarbe (Hover)"
+
+#: src/design/domain/customizer/content-customizer.php:467
 msgid "Buy Text Color"
 msgstr "„Kaufen“ Textfarbe"
 
-#: src/design/domain/customizer/content-customizer.php:413
+#: src/design/domain/customizer/content-customizer.php:476
+msgid "Buy Text Color (Hover)"
+msgstr "„Kaufen“ Textfarbe (Hover)"
+
+#: src/design/domain/customizer/content-customizer.php:485
 msgid "Review Background Color"
 msgstr "„Testbericht“ Hintergrundfarbe"
 
-#: src/design/domain/customizer/content-customizer.php:422
+#: src/design/domain/customizer/content-customizer.php:494
 msgid "Review Background Color (Hover)"
 msgstr "„Testbericht“ Hintergrundfarbe (Hover)"
 
-#: src/design/domain/customizer/content-customizer.php:431
+#: src/design/domain/customizer/content-customizer.php:503
 msgid "Review Border Color"
 msgstr "„Testbericht“ Rahmenfarbe"
 
-#: src/design/domain/customizer/content-customizer.php:440
+#: src/design/domain/customizer/content-customizer.php:512
+msgid "Review Border Color (Hover)"
+msgstr "„Testbericht“ Rahmenfarbe (Hover)"
+
+#: src/design/domain/customizer/content-customizer.php:521
 msgid "Review Text Color"
 msgstr "„Testbericht“ Textfarbe"
+
+#: src/design/domain/customizer/content-customizer.php:530
+msgid "Review Text Color (Hover)"
+msgstr "„Testbericht“ Textfarbe (Hover)"
 
 #: src/design/domain/customizer/footer-customizer.php:20
 #: src/settings/application/setting/design-settings.php:86
@@ -1061,6 +1101,9 @@ msgstr "Links"
 #: src/settings/application/setting/design-settings.php:88
 msgid "Customizer"
 msgstr "Customizer"
+
+#~ msgid "Button"
+#~ msgstr "Button"
 
 #~ msgid "Panel"
 #~ msgstr "Panel"

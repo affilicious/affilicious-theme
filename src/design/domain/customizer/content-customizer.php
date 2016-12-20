@@ -367,10 +367,64 @@ class Content_Customizer extends Abstract_Customizer
 
 		$sections[] = array(
 			'id'       => $section,
-			'title'    => __('Button', 'affilicious-theme'),
+			'title'    => __('Buttons', 'affilicious-theme'),
 			'priority' => '10',
 			'panel'    => $panel
 		);
+
+        $options['afft-content-button-search-background-color'] = array(
+            'id'        => 'afft-content-button-search-background-color',
+            'label'     => __('Search Background Color', 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'color',
+            'default'   => '#fff',
+            'transport' => 'postMessage',
+        );
+
+        $options['afft-content-button-search-background-color-hover'] = array(
+            'id'        => 'afft-content-button-search-background-color-hover',
+            'label'     => __('Search Background Color (Hover)', 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'color',
+            'default'   => '#3bafda',
+            'transport' => 'postMessage',
+        );
+
+        $options['afft-content-button-search-border-color'] = array(
+            'id'        => 'afft-content-button-search-border-color',
+            'label'     => __('Search Border Color', 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'color',
+            'default'   => '#ccc',
+            'transport' => 'postMessage',
+        );
+
+        $options['afft-content-button-search-border-color-hover'] = array(
+            'id'        => 'afft-content-button-search-border-color-hover',
+            'label'     => __('Search Border Color (Hover)', 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'color',
+            'default'   => '#ccc',
+            'transport' => 'postMessage',
+        );
+
+        $options['afft-content-button-search-icon-color'] = array(
+            'id'        => 'afft-content-button-search-icon-color',
+            'label'     => __('Search Icon Color', 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'color',
+            'default'   => '#000',
+            'transport' => 'postMessage',
+        );
+
+        $options['afft-content-button-search-icon-color-hover'] = array(
+            'id'        => 'afft-content-button-search-icon-color-hover',
+            'label'     => __('Search Icon Color (Hover)', 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'color',
+            'default'   => '#FFF',
+            'transport' => 'postMessage',
+        );
 
 		$options['afft-content-button-buy-background-color'] = array(
 			'id'        => 'afft-content-button-buy-background-color',
@@ -399,6 +453,15 @@ class Content_Customizer extends Abstract_Customizer
 			'transport' => 'postMessage',
 		);
 
+        $options['afft-content-button-buy-border-color-hover'] = array(
+            'id'        => 'afft-content-button-buy-border-color-hover',
+            'label'     => __('Buy Border Color (Hover)', 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'color',
+            'default'   => '#ff870a',
+            'transport' => 'postMessage',
+        );
+
 		$options['afft-content-button-buy-text-color'] = array(
 			'id'        => 'afft-content-button-buy-text-color',
 			'label'     => __('Buy Text Color', 'affilicious-theme'),
@@ -407,6 +470,15 @@ class Content_Customizer extends Abstract_Customizer
 			'default'   => '#ffffff',
 			'transport' => 'postMessage',
 		);
+
+        $options['afft-content-button-buy-text-color-hover'] = array(
+            'id'        => 'afft-content-button-buy-text-color-hover',
+            'label'     => __('Buy Text Color (Hover)', 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'color',
+            'default'   => '#FFF',
+            'transport' => 'postMessage',
+        );
 
 		$options['afft-content-button-review-background-color'] = array(
 			'id'        => 'afft-content-button-review-background-color',
@@ -435,6 +507,15 @@ class Content_Customizer extends Abstract_Customizer
 			'transport' => 'postMessage',
 		);
 
+        $options['afft-content-button-review-border-color-hover'] = array(
+            'id'        => 'afft-content-button-review-border-color-hover',
+            'label'     => __('Review Border Color (Hover)', 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'color',
+            'default'   => '#35a0c6',
+            'transport' => 'postMessage',
+        );
+
 		$options['afft-content-button-review-text-color'] = array(
 			'id'        => 'afft-content-button-review-text-color',
 			'label'     => __('Review Text Color', 'affilicious-theme'),
@@ -443,6 +524,15 @@ class Content_Customizer extends Abstract_Customizer
 			'default'   => '#ffffff',
 			'transport' => 'postMessage',
 		);
+
+        $options['afft-content-button-review-text-color-hover'] = array(
+            'id'        => 'afft-content-button-review-text-color-hover',
+            'label'     => __('Review Text Color (Hover)', 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'color',
+            'default'   => '#FFF',
+            'transport' => 'postMessage',
+        );
 
 		$options['sections'] = $sections;
 		$options['panels'] = $panels;
@@ -933,6 +1023,84 @@ class Content_Customizer extends Abstract_Customizer
 			);
 		});
 
+        $this->render_selectors('afft-content-button-search-background-color', function ($mod) {
+            $color = sanitize_hex_color($mod);
+
+            return array(
+                'selectors'    => array(
+                    '.searchform button.btn'
+                ),
+                'declarations' => array(
+                    'background-color' => $color
+                )
+            );
+        });
+
+        $this->render_selectors('afft-content-button-search-background-color-hover', function ($mod) {
+            $color = sanitize_hex_color($mod);
+
+            return array(
+                'selectors'    => array(
+                    '.searchform button.btn:hover'
+                ),
+                'declarations' => array(
+                    'background-color' => $color
+                )
+            );
+        });
+
+        $this->render_selectors('afft-content-button-search-border-color', function ($mod) {
+            $color = sanitize_hex_color($mod);
+
+            return array(
+                'selectors'    => array(
+                    '.searchform button.btn'
+                ),
+                'declarations' => array(
+                    'border-color' => $color
+                )
+            );
+        });
+
+        $this->render_selectors('afft-content-button-search-border-color-hover', function ($mod) {
+            $color = sanitize_hex_color($mod);
+
+            return array(
+                'selectors'    => array(
+                    '.searchform button.btn:hver'
+                ),
+                'declarations' => array(
+                    'border-color' => $color
+                )
+            );
+        });
+
+        $this->render_selectors('afft-content-button-search-icon-color', function ($mod) {
+            $color = sanitize_hex_color($mod);
+
+            return array(
+                'selectors'    => array(
+                    '.searchform button.btn i'
+                ),
+                'declarations' => array(
+                    'color' => $color
+                )
+            );
+        });
+
+        $this->render_selectors('afft-content-button-search-icon-color-hover', function ($mod) {
+            $color = sanitize_hex_color($mod);
+
+            return array(
+                'selectors'    => array(
+                    '.searchform button.btn:hover i'
+                ),
+                'declarations' => array(
+                    'color' => $color
+                )
+            );
+        });
+
 		$this->render_selectors('afft-content-button-buy-background-color', function ($mod) {
 			$color = sanitize_hex_color($mod);
 
@@ -964,13 +1132,26 @@ class Content_Customizer extends Abstract_Customizer
 
 			return array(
 				'selectors'    => array(
-					'.btn-buy, .btn-buy:hover'
+					'.btn-buy'
 				),
 				'declarations' => array(
 					'border-color' => $color
 				)
 			);
 		});
+
+        $this->render_selectors('afft-content-button-buy-border-color-hover', function ($mod) {
+            $color = sanitize_hex_color($mod);
+
+            return array(
+                'selectors'    => array(
+                    '.btn-buy:hover'
+                ),
+                'declarations' => array(
+                    'border-color' => $color
+                )
+            );
+        });
 
 		$this->render_selectors('afft-content-button-buy-text-color', function ($mod) {
 			$color = sanitize_hex_color($mod);
@@ -984,6 +1165,19 @@ class Content_Customizer extends Abstract_Customizer
 				)
 			);
 		});
+
+        $this->render_selectors('afft-content-button-buy-text-color-hover', function ($mod) {
+            $color = sanitize_hex_color($mod);
+
+            return array(
+                'selectors'    => array(
+                    '.btn-buy:hover'
+                ),
+                'declarations' => array(
+                    'color' => $color
+                )
+            );
+        });
 
 		$this->render_selectors('afft-content-button-review-background-color', function ($mod) {
 			$color = sanitize_hex_color($mod);
@@ -1016,13 +1210,26 @@ class Content_Customizer extends Abstract_Customizer
 
 			return array(
 				'selectors'    => array(
-					'.btn-review, .btn-review:hover'
+					'.btn-review'
 				),
 				'declarations' => array(
 					'border-color' => $color
 				)
 			);
 		});
+
+        $this->render_selectors('afft-content-button-review-border-color', function ($mod) {
+            $color = sanitize_hex_color($mod);
+
+            return array(
+                'selectors'    => array(
+                    '.btn-review:hover'
+                ),
+                'declarations' => array(
+                    'border-color' => $color
+                )
+            );
+        });
 
 		$this->render_selectors('afft-content-button-review-text-color', function ($mod) {
 			$color = sanitize_hex_color($mod);
@@ -1036,5 +1243,18 @@ class Content_Customizer extends Abstract_Customizer
 				)
 			);
 		});
+
+        $this->render_selectors('afft-content-button-review-text-color', function ($mod) {
+            $color = sanitize_hex_color($mod);
+
+            return array(
+                'selectors'    => array(
+                    '.btn-review'
+                ),
+                'declarations' => array(
+                    'color' => $color
+                )
+            );
+        });
 	}
 }
