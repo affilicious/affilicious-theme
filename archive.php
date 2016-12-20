@@ -13,11 +13,6 @@
                             <div class="col-md-6">
                                 <?php get_template_part('partials/content-entry-preview'); ?>
                             </div>
-
-                            <?php if($count % 2 == 0): ?>
-                                <div class="clearfix"></div>
-                            <?php endif; ?>
-
                         <?php endwhile; ?>
                     <?php else: ?>
                         <div class="col-md-6">
