@@ -8631,6 +8631,11 @@ body {
     display: block;
     margin: 15px auto 0 auto; }
 
+.product-upload-images {
+  flex-wrap: wrap;
+  text-align: center;
+  line-height: 0.5; }
+
 .btn-circle {
   width: 30px;
   height: 30px;
