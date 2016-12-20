@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: "
 "affilicious-theme\n"
 "POT-Creation-Date: "
-"2016-12-20 20:10+0100\n"
+"2016-12-20 20:30+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Your "
 "Name <you@example.com>\n"
@@ -717,6 +717,7 @@ msgid "Review Text Color"
 msgstr ""
 
 #: src/design/domain/customizer/footer-customizer.php:20
+#: src/settings/application/setting/design-settings.php:86
 msgid "Footer"
 msgstr ""
 
@@ -1220,62 +1221,73 @@ msgid ""
 "plugin."
 msgstr ""
 
-#: src/settings/application/setting/design-settings.php:46
-#: src/settings/application/setting/design-settings.php:48
-#: src/settings/application/setting/design-settings.php:50
-#: src/settings/application/setting/design-settings.php:52
-#: src/settings/application/setting/design-settings.php:54
+#: src/settings/application/setting/design-settings.php:47
+#: src/settings/application/setting/design-settings.php:49
+#: src/settings/application/setting/design-settings.php:51
+#: src/settings/application/setting/design-settings.php:53
+#: src/settings/application/setting/design-settings.php:55
 #, php-format
 msgid "%s Link"
 msgstr ""
 
-#: src/settings/application/setting/design-settings.php:59
+#: src/settings/application/setting/design-settings.php:60
+msgid "Hide Content Area"
+msgstr ""
+
+#: src/settings/application/setting/design-settings.php:61
+msgid ""
+"Hide the content area "
+"with the widgets and "
+"both menus."
+msgstr ""
+
+#: src/settings/application/setting/design-settings.php:65
 msgid ""
 "What will happen, if "
 "you click on the "
 "product image gallery?"
 msgstr ""
 
-#: src/settings/application/setting/design-settings.php:61
-#: src/settings/application/setting/design-settings.php:66
+#: src/settings/application/setting/design-settings.php:67
+#: src/settings/application/setting/design-settings.php:72
 msgid "Nothing"
 msgstr ""
 
-#: src/settings/application/setting/design-settings.php:62
-#: src/settings/application/setting/design-settings.php:67
+#: src/settings/application/setting/design-settings.php:68
+#: src/settings/application/setting/design-settings.php:73
 msgid "Open the shop"
 msgstr ""
 
-#: src/settings/application/setting/design-settings.php:64
+#: src/settings/application/setting/design-settings.php:70
 msgid ""
 "What will happen, if "
 "you click on the "
 "product preview image?"
 msgstr ""
 
-#: src/settings/application/setting/design-settings.php:72
+#: src/settings/application/setting/design-settings.php:78
 msgid "Raw Modifications"
 msgstr ""
 
-#: src/settings/application/setting/design-settings.php:74
+#: src/settings/application/setting/design-settings.php:80
 msgid ""
 "Please be aware that "
 "ill-considered changes "
 "may destroy your design."
 msgstr ""
 
-#: src/settings/application/setting/design-settings.php:77
+#: src/settings/application/setting/design-settings.php:83
 msgid "Design"
 msgstr ""
 
-#: src/settings/application/setting/design-settings.php:79
+#: src/settings/application/setting/design-settings.php:85
 msgid "Social Media"
 msgstr ""
 
-#: src/settings/application/setting/design-settings.php:80
+#: src/settings/application/setting/design-settings.php:87
 msgid "Links"
 msgstr ""
 
-#: src/settings/application/setting/design-settings.php:81
+#: src/settings/application/setting/design-settings.php:88
 msgid "Customizer"
 msgstr ""

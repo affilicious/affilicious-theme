@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-12-20 20:10+0100\n"
-"PO-Revision-Date: 2016-12-20 20:11+0100\n"
+"POT-Creation-Date: 2016-12-20 20:30+0100\n"
+"PO-Revision-Date: 2016-12-20 20:31+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -555,6 +555,7 @@ msgid "Review Text Color"
 msgstr "„Testbericht“ Textfarbe"
 
 #: src/design/domain/customizer/footer-customizer.php:20
+#: src/settings/application/setting/design-settings.php:86
 msgid "Footer"
 msgstr "Fußbereich"
 
@@ -1001,58 +1002,69 @@ msgstr ""
 "Das Affilicious Plugin konnte nicht gefunden werden. Bitte öffne deinen "
 "Admin Bereich um das fehlende Plugin zu installieren."
 
-#: src/settings/application/setting/design-settings.php:46
-#: src/settings/application/setting/design-settings.php:48
-#: src/settings/application/setting/design-settings.php:50
-#: src/settings/application/setting/design-settings.php:52
-#: src/settings/application/setting/design-settings.php:54
+#: src/settings/application/setting/design-settings.php:47
+#: src/settings/application/setting/design-settings.php:49
+#: src/settings/application/setting/design-settings.php:51
+#: src/settings/application/setting/design-settings.php:53
+#: src/settings/application/setting/design-settings.php:55
 #, php-format
 msgid "%s Link"
 msgstr "%s Link"
 
-#: src/settings/application/setting/design-settings.php:59
+#: src/settings/application/setting/design-settings.php:60
+msgid "Hide Content Area"
+msgstr "Inhaltsbereich verstecken"
+
+#: src/settings/application/setting/design-settings.php:61
+msgid "Hide the content area with the widgets and both menus."
+msgstr "Verstecke den Inhaltsbereich mit den Widgets und beiden Menüs."
+
+#: src/settings/application/setting/design-settings.php:65
 msgid "What will happen, if you click on the product image gallery?"
 msgstr "Was wird passieren, wenn du auf die Produkt Bildergalerie klickst?"
 
-#: src/settings/application/setting/design-settings.php:61
-#: src/settings/application/setting/design-settings.php:66
+#: src/settings/application/setting/design-settings.php:67
+#: src/settings/application/setting/design-settings.php:72
 msgid "Nothing"
 msgstr "Garnichts"
 
-#: src/settings/application/setting/design-settings.php:62
-#: src/settings/application/setting/design-settings.php:67
+#: src/settings/application/setting/design-settings.php:68
+#: src/settings/application/setting/design-settings.php:73
 msgid "Open the shop"
 msgstr "Shop öffnen"
 
-#: src/settings/application/setting/design-settings.php:64
+#: src/settings/application/setting/design-settings.php:70
 msgid "What will happen, if you click on the product preview image?"
 msgstr "Was wird passieren, wenn du auf die Produkt Vorschaubilder klickst?"
 
-#: src/settings/application/setting/design-settings.php:72
+#: src/settings/application/setting/design-settings.php:78
 msgid "Raw Modifications"
 msgstr "Rohe Modifikationen"
 
-#: src/settings/application/setting/design-settings.php:74
+#: src/settings/application/setting/design-settings.php:80
 msgid "Please be aware that ill-considered changes may destroy your design."
 msgstr ""
 "Bitte sei dir im Klaren, dass unüberlegte Änderungen dein Design beschädigen "
 "können."
 
-#: src/settings/application/setting/design-settings.php:77
+#: src/settings/application/setting/design-settings.php:83
 msgid "Design"
 msgstr "Design"
 
-#: src/settings/application/setting/design-settings.php:79
+#: src/settings/application/setting/design-settings.php:85
 msgid "Social Media"
 msgstr "Soziale Medien"
 
-#: src/settings/application/setting/design-settings.php:80
+#: src/settings/application/setting/design-settings.php:87
 msgid "Links"
 msgstr "Links"
 
-#: src/settings/application/setting/design-settings.php:81
+#: src/settings/application/setting/design-settings.php:88
 msgid "Customizer"
 msgstr "Customizer"
+
+#~ msgid "Hide Footer Content"
+#~ msgstr "Verstecke den Inhalt im Fußbereich"
 
 #~ msgid "Logo Color"
 #~ msgstr "Logo Farbe"

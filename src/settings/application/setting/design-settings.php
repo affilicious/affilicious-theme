@@ -19,6 +19,7 @@ class Design_Settings implements Settings_Interface
     const OPTION_SOCIAL_MEDIA_GOOGLE_PLUS_LINK = 'affilicious_theme_options_design_container_social_media_tab_google_plus_link_field';
     const OPTION_SOCIAL_MEDIA_PINTEREST_LINK = 'affilicious_theme_options_design_container_social_media_tab_pinterest_link_field';
     const OPTION_SOCIAL_MEDIA_REDDIT_LINK = 'affilicious_theme_options_design_container_social_media_tab_reddit_link_field';
+    const OPTION_FOOTER_HIDE_CONTENT_AREA  = 'affilicious_theme_options_design_container_footer_hide_content_area_field';
 
     /**
      * @var Customizer_Mods_Backup_Service
@@ -42,7 +43,7 @@ class Design_Settings implements Settings_Interface
 	{
 		do_action('affilicious_theme_options_design_before_render');
 
-        $social_tab = apply_filters('affilicious_theme_options_design_container_social_media_tab', array(
+        $social_media_tab = apply_filters('affilicious_theme_options_design_container_social_media_tab', array(
             Carbon_Field::make('text', self::OPTION_SOCIAL_MEDIA_FACEBOOK_LINK, sprintf(__('%s Link', 'affilicious-theme'), 'Facebook'))
                 ->set_default_value('#'),
             Carbon_Field::make('text', self::OPTION_SOCIAL_MEDIA_TWITTER_LINK, sprintf(__('%s Link', 'affilicious-theme'), 'Twitter'))
@@ -53,6 +54,11 @@ class Design_Settings implements Settings_Interface
                 ->set_default_value('#'),
             Carbon_Field::make('text', self::OPTION_SOCIAL_MEDIA_REDDIT_LINK, sprintf(__('%s Link', 'affilicious-theme'), 'Reddit'))
                 ->set_default_value('#'),
+        ));
+
+        $footer_tab = apply_filters('affilicious_theme_options_design_container_footer_tab', array(
+            Carbon_Field::make('checkbox', self::OPTION_FOOTER_HIDE_CONTENT_AREA, __('Hide Content Area', 'affilicious-theme'))
+                ->set_help_text(__('Hide the content area with the widgets and both menus.', 'affilicious-theme')),
         ));
 
 		$links_tab = apply_filters('affilicious_theme_options_design_container_links_tab', array(
@@ -76,7 +82,8 @@ class Design_Settings implements Settings_Interface
 
 		$container = Carbon_Container::make('theme_options', __('Design', 'affilicious-theme'))
 			->set_page_parent('affilicious')
-            ->add_tab(__('Social Media', 'affilicious-theme'), $social_tab)
+            ->add_tab(__('Social Media', 'affilicious-theme'), $social_media_tab)
+            ->add_tab(__('Footer', 'affilicious-theme'), $footer_tab)
             ->add_tab(__('Links', 'affilicious-theme'), $links_tab)
             ->add_tab(__('Customizer'), $customizer_tab);
 

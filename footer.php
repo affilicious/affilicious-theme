@@ -12,41 +12,43 @@
 		</div>
 	<?php endif; ?>
 
-	<div id="footer-content">
-		<div class="container">
-			<div class="row">
-				<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-					<div class="row">
-						<div class="col-xs-12">
-							<div id="footer-about-us">
-								<h4>Über uns</h4>
-								<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<p>
+	<?php if (afft_has_footer_content()): ?>
+		<div id="footer-content">
+			<div class="container">
+				<div class="row">
+					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+						<div class="row">
+							<div class="col-xs-12">
+								<div id="footer-about-us">
+									<h4>Über uns</h4>
+									<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<p>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col-xl-5 col-lg-6 col-md-6 col-sm-12 col-xs-12 offset-xl-1">
-					<div class="row">
-						<div class="col-md-6">
-							<?php if (afft_has_footer_content_first_menu()): ?>
-								<nav id="footer-content-first-menu">
-									<?php afft_the_footer_content_first_menu(); ?>
-								</nav>
-							<?php endif; ?>
-						</div>
+					<div class="col-xl-5 col-lg-6 col-md-6 col-sm-12 col-xs-12 offset-xl-1">
+						<div class="row">
+							<div class="col-md-6">
+								<?php if (afft_has_footer_content_first_menu()): ?>
+									<nav id="footer-content-first-menu">
+										<?php afft_the_footer_content_first_menu(); ?>
+									</nav>
+								<?php endif; ?>
+							</div>
 
-						<div class="col-md-6">
-							<?php if (afft_has_footer_content_second_menu()): ?>
-								<nav id="footer-content-second-menu">
-									<?php afft_the_footer_content_second_menu(); ?>
-								</nav>
-							<?php endif; ?>
+							<div class="col-md-6">
+								<?php if (afft_has_footer_content_second_menu()): ?>
+									<nav id="footer-content-second-menu">
+										<?php afft_the_footer_content_second_menu(); ?>
+									</nav>
+								<?php endif; ?>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
+	<?php endif; ?>
 
 	<div id="footer-plinth">
 		<div class="container">

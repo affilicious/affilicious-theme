@@ -375,6 +375,20 @@ function afft_the_breadcrumbs()
 }
 
 /**
+ * Check if the footer content is disabled.
+ *
+ * @since 0.6
+ * @return bool
+ */
+function afft_has_footer_content()
+{
+    $disabled = carbon_get_theme_option(Design_Settings::OPTION_FOOTER_HIDE_CONTENT_AREA);
+
+    return empty($disabled) && $disabled !== 'yes';
+
+}
+
+/**
  * Check if there is an existing Facebook link.
  *
  * @since 0.6
