@@ -8215,7 +8215,6 @@ button.close {
     margin-left: 91.66667%; } }
 
 #footer {
-  min-height: 250px;
   padding: 0; }
   #footer-breadcrumbs {
     padding: 5px 0;
@@ -8231,6 +8230,7 @@ button.close {
       #footer-breadcrumbs a:hover {
         color: black; }
   #footer-content {
+    min-height: 250px;
     padding: 30px 0; }
   #footer-about-us h4 {
     color: white; }
@@ -8371,10 +8371,9 @@ html {
   height: 100%; }
 
 body {
-  background-color: #ebebeb;
   display: flex;
   flex-direction: column;
-  height: 100%; }
+  min-height: 100vh; }
 
 #header {
   flex: 0 0 auto; }

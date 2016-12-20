@@ -2,7 +2,6 @@
 @import "../../vendor/bootstrap-4/scss/bootstrap-flex-grid";
 
 #footer {
-  min-height: 250px;
   padding: 0;
 
   &-breadcrumbs {
@@ -25,6 +24,7 @@
   }
 
   &-content {
+    min-height: 250px;
     padding: $space-size-medium 0;
   }
 
