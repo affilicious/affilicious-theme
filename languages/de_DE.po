@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-12-20 20:30+0100\n"
-"PO-Revision-Date: 2016-12-20 20:31+0100\n"
+"POT-Creation-Date: 2016-12-20 21:23+0100\n"
+"PO-Revision-Date: 2016-12-20 21:23+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -497,8 +497,8 @@ msgid "Danger Border Color"
 msgstr "„Danger“ Rahmenfarbe"
 
 #: src/design/domain/customizer/content-customizer.php:334
-msgid "Panel"
-msgstr "Panel"
+msgid "Widgets"
+msgstr "Widgets"
 
 #: src/design/domain/customizer/content-customizer.php:341
 msgid "Heading Background Color (Top)"
@@ -509,48 +509,42 @@ msgid "Heading Background Color (Bottom)"
 msgstr "Kopfbereich Hintergrundfarbe (Unten)"
 
 #: src/design/domain/customizer/content-customizer.php:359
-msgid "Heading Border Color"
-msgstr "Kopfbereich Rahmenfarbe"
+msgid "Heading Title Color"
+msgstr "Kopfbereich Überschriftenfarbe"
 
-#: src/design/domain/customizer/content-customizer.php:368
-#: src/design/domain/customizer/footer-customizer.php:195
-#: src/design/domain/customizer/header-customizer.php:132
-msgid "Title Color"
-msgstr "Titelfarbe"
-
-#: src/design/domain/customizer/content-customizer.php:379
+#: src/design/domain/customizer/content-customizer.php:370
 msgid "Button"
 msgstr "Button"
 
-#: src/design/domain/customizer/content-customizer.php:386
+#: src/design/domain/customizer/content-customizer.php:377
 msgid "Buy Background Color"
 msgstr "„Kaufen“ Hintergrundfarbe"
 
-#: src/design/domain/customizer/content-customizer.php:395
+#: src/design/domain/customizer/content-customizer.php:386
 msgid "Buy Background Color (Hover)"
 msgstr "„Kaufen“ Hintergrundfarbe (Hover)"
 
-#: src/design/domain/customizer/content-customizer.php:404
+#: src/design/domain/customizer/content-customizer.php:395
 msgid "Buy Border Color"
 msgstr "„Kaufen“ Rahmenfarbe"
 
-#: src/design/domain/customizer/content-customizer.php:413
+#: src/design/domain/customizer/content-customizer.php:404
 msgid "Buy Text Color"
 msgstr "„Kaufen“ Textfarbe"
 
-#: src/design/domain/customizer/content-customizer.php:424
+#: src/design/domain/customizer/content-customizer.php:413
 msgid "Review Background Color"
 msgstr "„Testbericht“ Hintergrundfarbe"
 
-#: src/design/domain/customizer/content-customizer.php:433
+#: src/design/domain/customizer/content-customizer.php:422
 msgid "Review Background Color (Hover)"
 msgstr "„Testbericht“ Hintergrundfarbe (Hover)"
 
-#: src/design/domain/customizer/content-customizer.php:442
+#: src/design/domain/customizer/content-customizer.php:431
 msgid "Review Border Color"
 msgstr "„Testbericht“ Rahmenfarbe"
 
-#: src/design/domain/customizer/content-customizer.php:451
+#: src/design/domain/customizer/content-customizer.php:440
 msgid "Review Text Color"
 msgstr "„Testbericht“ Textfarbe"
 
@@ -711,6 +705,11 @@ msgstr "Hintergrundhöhe"
 #: src/design/domain/customizer/footer-customizer.php:188
 msgid "Content Menu"
 msgstr "Inhaltsmenü"
+
+#: src/design/domain/customizer/footer-customizer.php:195
+#: src/design/domain/customizer/header-customizer.php:132
+msgid "Title Color"
+msgstr "Titelfarbe"
 
 #: src/design/domain/customizer/footer-customizer.php:224
 msgid "Plinth"
@@ -1062,6 +1061,12 @@ msgstr "Links"
 #: src/settings/application/setting/design-settings.php:88
 msgid "Customizer"
 msgstr "Customizer"
+
+#~ msgid "Panel"
+#~ msgstr "Panel"
+
+#~ msgid "Heading Border Color"
+#~ msgstr "Kopfbereich Rahmenfarbe"
 
 #~ msgid "Hide Footer Content"
 #~ msgstr "Verstecke den Inhalt im Fußbereich"

@@ -86,6 +86,55 @@
             border.css('border-color', color);
         });
     });
+
+    wp.customize('afft-content-widget-heading-background-color-top', function (value) {
+        value.bind(function (top) {
+            if (top == '') {
+                top = 'transparent';
+            }
+
+            var bottom = wp.customize.instance('afft-content-widget-heading-background-color-bottom').get();
+            if (bottom == '') {
+                bottom = 'transparent';
+            }
+
+            var header = $('.panel .panel-heading');
+            header.css('background-color', bottom);
+            header.css('background', '-webkit-gradient(linear, 0% 0%, 0% 100%, from(' + top + '), to(' + bottom + '))');
+            header.css('background', '-webkit-linear-gradient(top, ' + top + ', ' + bottom + ')');
+            header.css('background', '-moz-linear-gradient(top, ' + top + ', ' + bottom + ')');
+            header.css('background', '-o-linear-gradient(top, ' + top + ', ' + bottom + ')');
+            header.css('background', 'linear-gradient(' + top + ', ' + bottom + ')');
+        });
+    });
+
+    wp.customize('afft-content-widget-heading-background-color-bottom', function (value) {
+        value.bind(function (bottom) {
+            if (bottom == '') {
+                bottom = 'transparent';
+            }
+
+            var top = wp.customize.instance('afft-content-widget-heading-background-color-top').get();
+            if (top == '') {
+                top = 'transparent';
+            }
+
+            var header = $('.panel .panel-heading');
+            header.css('background-color', bottom);
+            header.css('background', '-webkit-gradient(linear, 0% 0%, 0% 100%, from(' + top + '), to(' + bottom + '))');
+            header.css('background', '-webkit-linear-gradient(top, ' + top + ', ' + bottom + ')');
+            header.css('background', '-moz-linear-gradient(top, ' + top + ', ' + bottom + ')');
+            header.css('background', '-o-linear-gradient(top, ' + top + ', ' + bottom + ')');
+            header.css('background', 'linear-gradient(' + top + ', ' + bottom + ')');
+        });
+    });
+
+    wp.customize('afft-content-widget-heading-title-color', function (value) {
+        value.bind(function (color) {
+            var border = $('.panel .panel-heading h1, .panel .panel-heading h2, .panel .panel-heading h3, .panel .panel-heading h4, .panel .panel-heading h5, .panel .panel-heading h6');
+            border.css('color', color);
+        });
+    });
 })(jQuery);
 (function ($) {
     wp.customize('afft-footer-breadcrumbs-background-color-top', function (value) {

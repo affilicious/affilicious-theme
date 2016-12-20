@@ -15,6 +15,10 @@
 
   .panel {
     &-heading {
+      border-top: none;
+      border-right: none;
+      border-left: none;
+
       h4 {
         margin: 0;
         text-align: center;
@@ -102,6 +106,15 @@
     }
   }
 }
+
+
+
+
+
+
+
+
+
 
 #wp-calendar {
   width:100%;
@@ -254,125 +267,4 @@
       }
     }
   }
-
-
-
-
-
-
-
-
-
-  /*.shop {
-    @include border-radius();
-    display: flex;
-    align-content: flex-start;
-    box-sizing: border-box;
-    min-height: $price-comparison-widget-shop-height;
-    border: $price-comparison-shop-border;
-    width: 100%;
-    background-color: $price-comparison-shop-background;
-    margin-bottom: $space-size-small;
-
-
-
-
-    &-buy {
-      border: 1px solid red;
-      clear: both;
-      width: 100%;
-    }
-
-
-    &-info {
-      border: 1px solid red;
-      clear: both;
-      width: 100%;
-    }
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-
-    &:first-child {
-      margin-top: 0;
-    }
-
-    &-thumbnail,
-    &-price  {
-      box-sizing: border-box;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: $space-size-small;
-    }
-
-    &-price,
-    &-buy {
-      width: 50%;
-    }
-
-    &-buy {
-      display: flex;
-      flex-wrap: wrap;
-    }
-
-    &-thumbnail {
-      img {
-        max-width: 100px;
-        width: 100%;
-        height: auto;
-      }
-    }
-
-    &-price {
-      display: flex;
-      flex-wrap: wrap;
-
-      .price {
-        width: 100%;
-        display: block;
-        box-sizing: border-box;
-        text-align: right;
-
-        .old-price {
-          float: right;
-          color: $price-comparison-old-price-color;
-          display: inline-block;
-          text-decoration: line-through;
-          line-height: $font-line-height-small-text;
-          font-size: $font-size-small-text;
-        }
-
-        .current-price {
-          float: right;
-          width: 100%;
-          padding: 0;
-          color: $price-comparison-current-price-color;
-          display: inline-block;
-          font-weight: $font-weight-text;
-          line-height: $font-size-text;
-          font-size: $font-size-text;
-        }
-      }
-
-      .price-tax {
-        margin-top: $space-size-small;
-        margin-bottom: 0;
-        line-height: $font-line-height-small-text;
-        font-size: $font-size-small-text;
-      }
-    }
-
-    &-buy {
-      @include border-radius-right();
-    }
-
-    &-updated-at p {
-      line-height: $font-line-height-small-text;
-      font-size: $font-size-small-text;
-      margin-top: 12px;
-      margin-bottom: 0;
-    }
-  }*/
 }
