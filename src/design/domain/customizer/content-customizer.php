@@ -327,45 +327,36 @@ class Content_Customizer extends Abstract_Customizer
 			'transport' => 'postMessage',
 		);
 
-		$section = 'afft-content-panel';
+		$section = 'afft-content-widget';
 
 		$sections[] = array(
 			'id'       => $section,
-			'title'    => __('Panel', 'affilicious-theme'),
+			'title'    => __('Widgets', 'affilicious-theme'),
 			'priority' => '10',
 			'panel'    => $panel
 		);
 
-		$options['afft-content-panel-default-heading-background-color-top'] = array(
-			'id'        => 'afft-content-panel-default-heading-background-color-top',
+		$options['afft-content-widget-heading-background-color-top'] = array(
+			'id'        => 'afft-content-widget-heading-background-color-top',
 			'label'     => __('Heading Background Color (Top)', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'color',
-			'default'   => '#e6e9ed',
+			'default'   => '',
 			'transport' => 'postMessage',
 		);
 
-		$options['afft-content-panel-default-heading-background-color-bottom'] = array(
-			'id'        => 'afft-content-panel-default-heading-background-color-bottom',
+		$options['afft-content-widget-heading-background-color-bottom'] = array(
+			'id'        => 'afft-content-widget-heading-background-color-bottom',
 			'label'     => __('Heading Background Color (Bottom)', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'color',
-			'default'   => '#e6e9ed',
+			'default'   => '',
 			'transport' => 'postMessage',
 		);
 
-		$options['afft-content-panel-default-heading-border-color'] = array(
-			'id'        => 'afft-content-panel-default-heading-border-color',
-			'label'     => __('Heading Border Color', 'affilicious-theme'),
-			'section'   => $section,
-			'type'      => 'color',
-			'default'   => '#e6e9ed',
-			'transport' => 'postMessage',
-		);
-
-		$options['afft-content-panel-default-title-color'] = array(
-			'id'        => 'afft-content-panel-default-title-color',
-			'label'     => __('Title Color', 'affilicious-theme'),
+		$options['afft-content-widget-heading-title-color'] = array(
+			'id'        => 'afft-content-widget-heading-title-color',
+			'label'     => __('Heading Title Color', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'color',
 			'default'   => '#000',
@@ -376,10 +367,64 @@ class Content_Customizer extends Abstract_Customizer
 
 		$sections[] = array(
 			'id'       => $section,
-			'title'    => __('Button', 'affilicious-theme'),
+			'title'    => __('Buttons', 'affilicious-theme'),
 			'priority' => '10',
 			'panel'    => $panel
 		);
+
+        $options['afft-content-button-search-background-color'] = array(
+            'id'        => 'afft-content-button-search-background-color',
+            'label'     => __('Search Background Color', 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'color',
+            'default'   => '#fff',
+            'transport' => 'postMessage',
+        );
+
+        $options['afft-content-button-search-background-color-hover'] = array(
+            'id'        => 'afft-content-button-search-background-color-hover',
+            'label'     => __('Search Background Color (Hover)', 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'color',
+            'default'   => '#3bafda',
+            'transport' => 'postMessage',
+        );
+
+        $options['afft-content-button-search-border-color'] = array(
+            'id'        => 'afft-content-button-search-border-color',
+            'label'     => __('Search Border Color', 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'color',
+            'default'   => '#ccc',
+            'transport' => 'postMessage',
+        );
+
+        $options['afft-content-button-search-border-color-hover'] = array(
+            'id'        => 'afft-content-button-search-border-color-hover',
+            'label'     => __('Search Border Color (Hover)', 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'color',
+            'default'   => '#ccc',
+            'transport' => 'postMessage',
+        );
+
+        $options['afft-content-button-search-icon-color'] = array(
+            'id'        => 'afft-content-button-search-icon-color',
+            'label'     => __('Search Icon Color', 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'color',
+            'default'   => '#000',
+            'transport' => 'postMessage',
+        );
+
+        $options['afft-content-button-search-icon-color-hover'] = array(
+            'id'        => 'afft-content-button-search-icon-color-hover',
+            'label'     => __('Search Icon Color (Hover)', 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'color',
+            'default'   => '#FFF',
+            'transport' => 'postMessage',
+        );
 
 		$options['afft-content-button-buy-background-color'] = array(
 			'id'        => 'afft-content-button-buy-background-color',
@@ -408,6 +453,15 @@ class Content_Customizer extends Abstract_Customizer
 			'transport' => 'postMessage',
 		);
 
+        $options['afft-content-button-buy-border-color-hover'] = array(
+            'id'        => 'afft-content-button-buy-border-color-hover',
+            'label'     => __('Buy Border Color (Hover)', 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'color',
+            'default'   => '#ff870a',
+            'transport' => 'postMessage',
+        );
+
 		$options['afft-content-button-buy-text-color'] = array(
 			'id'        => 'afft-content-button-buy-text-color',
 			'label'     => __('Buy Text Color', 'affilicious-theme'),
@@ -417,7 +471,14 @@ class Content_Customizer extends Abstract_Customizer
 			'transport' => 'postMessage',
 		);
 
-
+        $options['afft-content-button-buy-text-color-hover'] = array(
+            'id'        => 'afft-content-button-buy-text-color-hover',
+            'label'     => __('Buy Text Color (Hover)', 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'color',
+            'default'   => '#FFF',
+            'transport' => 'postMessage',
+        );
 
 		$options['afft-content-button-review-background-color'] = array(
 			'id'        => 'afft-content-button-review-background-color',
@@ -446,6 +507,15 @@ class Content_Customizer extends Abstract_Customizer
 			'transport' => 'postMessage',
 		);
 
+        $options['afft-content-button-review-border-color-hover'] = array(
+            'id'        => 'afft-content-button-review-border-color-hover',
+            'label'     => __('Review Border Color (Hover)', 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'color',
+            'default'   => '#35a0c6',
+            'transport' => 'postMessage',
+        );
+
 		$options['afft-content-button-review-text-color'] = array(
 			'id'        => 'afft-content-button-review-text-color',
 			'label'     => __('Review Text Color', 'affilicious-theme'),
@@ -454,6 +524,15 @@ class Content_Customizer extends Abstract_Customizer
 			'default'   => '#ffffff',
 			'transport' => 'postMessage',
 		);
+
+        $options['afft-content-button-review-text-color-hover'] = array(
+            'id'        => 'afft-content-button-review-text-color-hover',
+            'label'     => __('Review Text Color (Hover)', 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'color',
+            'default'   => '#FFF',
+            'transport' => 'postMessage',
+        );
 
 		$options['sections'] = $sections;
 		$options['panels'] = $panels;
@@ -819,7 +898,6 @@ class Content_Customizer extends Abstract_Customizer
 			);
 		});
 
-
 		$this->render_selectors('afft-content-alert-danger-background-color', function ($mod) {
 			$color = sanitize_hex_color($mod);
 
@@ -886,16 +964,24 @@ class Content_Customizer extends Abstract_Customizer
 		});
 
 		$this->render_selectors(
-			'afft-content-panel-default-heading-background-color-top',
-			'afft-content-panel-default-heading-background-color-bottom',
+			'afft-content-widget-heading-background-color-top',
+			'afft-content-widget-heading-background-color-bottom',
 			function ($mod1, $mod2) {
 				$top    = sanitize_hex_color($mod1);
 				$bottom = sanitize_hex_color($mod2);
 
+                if($top == '') {
+                    $top = 'transparent';
+                }
+
+                if($bottom == '') {
+                    $bottom = 'transparent';
+                }
+
 				if($top === $bottom) {
 					return array(
 						'selectors'    => array(
-							'.panel.panel-default .panel-heading',
+							'.panel .panel-heading',
 						),
 						'declarations' => array(
 							'background-color' => $bottom,
@@ -906,7 +992,7 @@ class Content_Customizer extends Abstract_Customizer
 				// The spaces are necessary to avoid duplicated keys
 				return array(
 					'selectors'    => array(
-						'.panel.panel-default .panel-heading'
+						'.panel .panel-heading'
 					),
 					'declarations' => array(
 						'background-color' => $bottom,
@@ -920,29 +1006,16 @@ class Content_Customizer extends Abstract_Customizer
 			}
 		);
 
-		$this->render_selectors('afft-content-panel-default-heading-border-color', function ($mod) {
+		$this->render_selectors('afft-content-widget-heading-title-color', function ($mod) {
 			$color = sanitize_hex_color($mod);
 
 			return array(
 				'selectors'    => array(
-					'.panel.panel-default .panel-heading'
-				),
-				'declarations' => array(
-					'border-color' => $color
-				)
-			);
-		});
-
-		$this->render_selectors('afft-content-panel-default-title-color', function ($mod) {
-			$color = sanitize_hex_color($mod);
-
-			return array(
-				'selectors'    => array(
-					'.panel.panel-default .panel-heading h1',
-					'.panel.panel-default .panel-heading h2',
-					'.panel.panel-default .panel-heading h3',
-					'.panel.panel-default .panel-heading h4',
-					'.panel.panel-default .panel-heading h5',
+					'.panel .panel-heading h1',
+					'.panel .panel-heading h2',
+					'.panel .panel-heading h3',
+					'.panel .panel-heading h4',
+					'.panel .panel-heading h5',
 				),
 				'declarations' => array(
 					'color' => $color
@@ -950,44 +1023,83 @@ class Content_Customizer extends Abstract_Customizer
 			);
 		});
 
-		$this->render_selectors('afft-content-panel-default-heading-border-color', function ($mod) {
-			$color = sanitize_hex_color($mod);
+        $this->render_selectors('afft-content-button-search-background-color', function ($mod) {
+            $color = sanitize_hex_color($mod);
 
-			return array(
-				'selectors'    => array(
-					'.panel.panel-default .panel-heading'
-				),
-				'declarations' => array(
-					'border-color' => $color
-				)
-			);
-		});
+            return array(
+                'selectors'    => array(
+                    '.searchform button.btn'
+                ),
+                'declarations' => array(
+                    'background-color' => $color
+                )
+            );
+        });
 
-		$this->render_selectors('afft-content-panel-default-heading-border-color', function ($mod) {
-			$color = sanitize_hex_color($mod);
+        $this->render_selectors('afft-content-button-search-background-color-hover', function ($mod) {
+            $color = sanitize_hex_color($mod);
 
-			return array(
-				'selectors'    => array(
-					'.panel.panel-default .panel-heading'
-				),
-				'declarations' => array(
-					'border-color' => $color
-				)
-			);
-		});
+            return array(
+                'selectors'    => array(
+                    '.searchform button.btn:hover'
+                ),
+                'declarations' => array(
+                    'background-color' => $color
+                )
+            );
+        });
 
-		$this->render_selectors('afft-content-panel-default-heading-border-color', function ($mod) {
-			$color = sanitize_hex_color($mod);
+        $this->render_selectors('afft-content-button-search-border-color', function ($mod) {
+            $color = sanitize_hex_color($mod);
 
-			return array(
-				'selectors'    => array(
-					'.panel.panel-default .panel-heading'
-				),
-				'declarations' => array(
-					'border-color' => $color
-				)
-			);
-		});
+            return array(
+                'selectors'    => array(
+                    '.searchform button.btn'
+                ),
+                'declarations' => array(
+                    'border-color' => $color
+                )
+            );
+        });
+
+        $this->render_selectors('afft-content-button-search-border-color-hover', function ($mod) {
+            $color = sanitize_hex_color($mod);
+
+            return array(
+                'selectors'    => array(
+                    '.searchform button.btn:hver'
+                ),
+                'declarations' => array(
+                    'border-color' => $color
+                )
+            );
+        });
+
+        $this->render_selectors('afft-content-button-search-icon-color', function ($mod) {
+            $color = sanitize_hex_color($mod);
+
+            return array(
+                'selectors'    => array(
+                    '.searchform button.btn i'
+                ),
+                'declarations' => array(
+                    'color' => $color
+                )
+            );
+        });
+
+        $this->render_selectors('afft-content-button-search-icon-color-hover', function ($mod) {
+            $color = sanitize_hex_color($mod);
+
+            return array(
+                'selectors'    => array(
+                    '.searchform button.btn:hover i'
+                ),
+                'declarations' => array(
+                    'color' => $color
+                )
+            );
+        });
 
 		$this->render_selectors('afft-content-button-buy-background-color', function ($mod) {
 			$color = sanitize_hex_color($mod);
@@ -1020,13 +1132,26 @@ class Content_Customizer extends Abstract_Customizer
 
 			return array(
 				'selectors'    => array(
-					'.btn-buy, .btn-buy:hover'
+					'.btn-buy'
 				),
 				'declarations' => array(
 					'border-color' => $color
 				)
 			);
 		});
+
+        $this->render_selectors('afft-content-button-buy-border-color-hover', function ($mod) {
+            $color = sanitize_hex_color($mod);
+
+            return array(
+                'selectors'    => array(
+                    '.btn-buy:hover'
+                ),
+                'declarations' => array(
+                    'border-color' => $color
+                )
+            );
+        });
 
 		$this->render_selectors('afft-content-button-buy-text-color', function ($mod) {
 			$color = sanitize_hex_color($mod);
@@ -1041,6 +1166,18 @@ class Content_Customizer extends Abstract_Customizer
 			);
 		});
 
+        $this->render_selectors('afft-content-button-buy-text-color-hover', function ($mod) {
+            $color = sanitize_hex_color($mod);
+
+            return array(
+                'selectors'    => array(
+                    '.btn-buy:hover'
+                ),
+                'declarations' => array(
+                    'color' => $color
+                )
+            );
+        });
 
 		$this->render_selectors('afft-content-button-review-background-color', function ($mod) {
 			$color = sanitize_hex_color($mod);
@@ -1073,13 +1210,26 @@ class Content_Customizer extends Abstract_Customizer
 
 			return array(
 				'selectors'    => array(
-					'.btn-review, .btn-review:hover'
+					'.btn-review'
 				),
 				'declarations' => array(
 					'border-color' => $color
 				)
 			);
 		});
+
+        $this->render_selectors('afft-content-button-review-border-color', function ($mod) {
+            $color = sanitize_hex_color($mod);
+
+            return array(
+                'selectors'    => array(
+                    '.btn-review:hover'
+                ),
+                'declarations' => array(
+                    'border-color' => $color
+                )
+            );
+        });
 
 		$this->render_selectors('afft-content-button-review-text-color', function ($mod) {
 			$color = sanitize_hex_color($mod);
@@ -1093,5 +1243,18 @@ class Content_Customizer extends Abstract_Customizer
 				)
 			);
 		});
+
+        $this->render_selectors('afft-content-button-review-text-color', function ($mod) {
+            $color = sanitize_hex_color($mod);
+
+            return array(
+                'selectors'    => array(
+                    '.btn-review'
+                ),
+                'declarations' => array(
+                    'color' => $color
+                )
+            );
+        });
 	}
 }

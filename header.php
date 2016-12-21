@@ -49,7 +49,7 @@
                         </a>
                     </div>
                     <?php if(afft_has_main_menu()): ?>
-                        <?php afft_main_menu(); ?>
+                        <?php afft_the_main_menu(); ?>
                     <?php endif; ?>
                 </div>
             </div>

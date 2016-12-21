@@ -28,7 +28,7 @@ function afft_check_requirements()
 }
 
 /**
- * Check if there is a main menu.
+ * Check the absence of the menu which is located in the main navigation.
  *
  * @since 0.2
  * @return bool
@@ -42,114 +42,89 @@ function afft_has_main_menu()
 }
 
 /**
- * Get the main menu.
+ * Print the menu which is located in the main navigation.
  *
- * @since 0.2
+ * @since 0.6
  */
-function afft_main_menu()
+function afft_the_main_menu()
 {
 	$main_menu = Menu_Helper::get_main_menu();
 	$main_menu->render();
 }
 
 /**
- * Check if there is a footer 1 menu.
+ * Check the absence of the menu which is located in the footer plinth.
  *
- * @since 0.3.4
+ * @since 0.6
  * @return bool
  */
-function afft_has_bottom_1_menu()
+function afft_has_footer_plinth_menu()
 {
-	$footer1_menu = Menu_Helper::get_bottom_1_menu();
-	$result = $footer1_menu->exists();
+	$menu = Menu_Helper::get_footer_plinth_menu();
+	$exists = $menu->exists();
 
-	return $result;
+	return $exists;
 }
 
 /**
- * Get the footer 1 menu.
+ * Print the menu which is located in the footer plinth.
  *
- * @since 0.3.4
+ * @since 0.6
  */
-function afft_bottom_1_menu()
+function afft_the_footer_plinth_menu()
 {
-	$footer1_menu = Menu_Helper::get_bottom_1_menu();
-	$footer1_menu->render();
+    $main_menu = Menu_Helper::get_footer_plinth_menu();
+    $main_menu->render();
 }
 
 /**
- * Check if there is a footer 2 menu.
+ * Check the absence of the first menu which is located in the footer content.
  *
- * @since 0.3.4
+ * @since 0.6
  * @return bool
  */
-function afft_has_bottom_2_menu()
+function afft_has_footer_content_first_menu()
 {
-	$footer2_menu = Menu_Helper::get_bottom_2_menu();
-	$result = $footer2_menu->exists();
+    $menu = Menu_Helper::get_footer_content_first_menu();
+    $exists = $menu->exists();
 
-	return $result;
+    return $exists;
 }
 
 /**
- * Get the footer 2 menu.
+ * Print the first menu which is located in the footer content.
  *
- * @since 0.3.4
+ * @since 0.6
  */
-function afft_bottom_2_menu()
+function afft_the_footer_content_first_menu()
 {
-	$footer2_menu = Menu_Helper::get_bottom_2_menu();
-	$footer2_menu->render();
+    $main_menu = Menu_Helper::get_footer_content_first_menu();
+    $main_menu->render();
 }
 
 /**
- * Check if there is a footer 3 menu.
+ * Check the absence of the second menu which is located in the footer content.
  *
- * @since 0.3.4
+ * @since 0.6
  * @return bool
  */
-function afft_has_bottom_3_menu()
+function afft_has_footer_content_second_menu()
 {
-	$footer3_menu = Menu_Helper::get_bottom_3_menu();
-	$result = $footer3_menu->exists();
+    $menu = Menu_Helper::get_footer_content_second_menu();
+    $exists = $menu->exists();
 
-	return $result;
+    return $exists;
 }
 
 /**
- * Get the footer 3 menu.
+ * Print the second menu which is located in the footer content.
  *
- * @since 0.3.4
+ * @since 0.6
  */
-function afft_bottom_3_menu()
+function afft_the_footer_content_second_menu()
 {
-	$footer3_menu = Menu_Helper::get_bottom_3_menu();
-	$footer3_menu->render();
-}
-
-/**
- * Check if there is a footer 4 menu.
- *
- * @since 0.3.4
- * @return bool
- */
-function afft_has_bottom_4_menu()
-{
-	$footer4_menu = Menu_Helper::get_bottom_4_menu();
-	$result = $footer4_menu->exists();
-
-	return $result;
-}
-
-/**
- * Get the footer 4 menu.
- *
- * @since 0.3.4
- */
-function afft_bottom_4_menu()
-{
-	$footer4_menu = Menu_Helper::get_bottom_4_menu();
-	$footer4_menu->render();
+    $main_menu = Menu_Helper::get_footer_content_second_menu();
+    $main_menu->render();
 }
 
 /**
@@ -324,4 +299,291 @@ function afft_is_post_type($type)
 	}
 
 	return false;
+}
+
+/**
+ * Check if the website has a copyright text.
+ *
+ * @since 0.6
+ * @return bool
+ */
+function afft_has_copyright()
+{
+    $copyright = get_theme_mod('afft-information-copyright-text');
+    $result = !empty($copyright);
+
+    return $result;
+}
+
+/**
+ * Get the copyright text of the website.
+ *
+ * @since 0.6
+ * @return string
+ */
+function afft_get_copyright()
+{
+    $copyright = get_theme_mod('afft-information-copyright-text');
+
+    return $copyright;
+}
+
+/**
+ * Print the copyright text of the website.
+ *
+ * @since 0.6
+ */
+function afft_the_copyright()
+{
+    echo afft_get_copyright();
+}
+
+/**
+ * Check if the breadcrumbs are enabled.
+ * This function uses the Yoast SEO breadcrumbs. Please install the related plugin:
+ * https://de.wordpress.org/plugins/wordpress-seo/
+ *
+ * @since 0.6
+ * @return bool
+ */
+function afft_has_breadcrumbs()
+{
+    if(!function_exists('yoast_breadcrumb')) {
+        return false;
+    }
+
+    $internalLinks = get_option('wpseo_internallinks', null);
+    if(!isset($internalLinks['breadcrumbs-enable']) || $internalLinks['breadcrumbs-enable'] == false) {
+        return false;
+    }
+
+    return true;
+}
+
+/**
+ * Print the breadcrumbs.
+ * This function uses the Yoast SEO breadcrumbs. Please install the related plugin:
+ * https://de.wordpress.org/plugins/wordpress-seo/
+ *
+ * @since 0.6
+ */
+function afft_the_breadcrumbs()
+{
+    if(afft_has_breadcrumbs()) {
+        yoast_breadcrumb('<nav aria-label="breadcrumb" role="navigation">', '</nav>');
+    }
+}
+
+/**
+ * Check if the footer content is disabled.
+ *
+ * @since 0.6
+ * @return bool
+ */
+function afft_has_footer_content()
+{
+    $disabled = carbon_get_theme_option(Design_Settings::OPTION_FOOTER_HIDE_CONTENT_AREA);
+
+    return empty($disabled) && $disabled !== 'yes';
+
+}
+
+/**
+ * Check if there is an existing Facebook link.
+ *
+ * @since 0.6
+ * @return bool
+ */
+function afft_has_facebook_link()
+{
+    return !empty(afft_get_facebook_link());
+}
+
+/**
+ * Get the Facebook link.
+ *
+ * @since 0.6
+ * @return null|string
+ */
+function afft_get_facebook_link()
+{
+    $facebook_link = carbon_get_theme_option(Design_Settings::OPTION_SOCIAL_MEDIA_FACEBOOK_LINK);
+    if(empty($facebook_link)) {
+        return null;
+    }
+
+    return $facebook_link;
+}
+
+/**
+ * Print the Facebook link.
+ *
+ * @since 0.6
+ */
+function afft_the_facebook_link()
+{
+    $link = afft_get_facebook_link();
+    $link = !empty($link) ? $link : '#';
+
+    echo $link;
+}
+
+/**
+ * Check if there is an existing Twitter link.
+ *
+ * @since 0.6
+ * @return bool
+ */
+function afft_has_twitter_link()
+{
+    return !empty(afft_get_twitter_link());
+}
+
+/**
+ * Get the Twitter link.
+ *
+ * @since 0.6
+ * @return null|string
+ */
+function afft_get_twitter_link()
+{
+    $twitter_link = carbon_get_theme_option(Design_Settings::OPTION_SOCIAL_MEDIA_TWITTER_LINK);
+    if(empty($twitter_link)) {
+        return null;
+    }
+
+    return $twitter_link;
+}
+
+/**
+ * Print the Twitter link.
+ *
+ * @since 0.6
+ */
+function afft_the_twitter_link()
+{
+    $link = afft_get_twitter_link();
+    $link = !empty($link) ? $link : '#';
+
+    echo $link;
+}
+
+/**
+ * Check if there is an existing Google Plus link.
+ *
+ * @since 0.6
+ * @return bool
+ */
+function afft_has_google_plus_link()
+{
+    return !empty(afft_get_google_plus_link());
+}
+
+/**
+ * Get the Google Plus link.
+ *
+ * @since 0.6
+ * @return null|string
+ */
+function afft_get_google_plus_link()
+{
+    $google_plus_link = carbon_get_theme_option(Design_Settings::OPTION_SOCIAL_MEDIA_GOOGLE_PLUS_LINK);
+    if(empty($google_plus_link)) {
+        return null;
+    }
+
+    return $google_plus_link;
+}
+
+/**
+ * Print the Google Plus link.
+ *
+ * @since 0.6
+ */
+function afft_the_google_plus_link()
+{
+    $link = afft_get_google_plus_link();
+    $link = !empty($link) ? $link : '#';
+
+    echo $link;
+}
+
+/**
+ * Check if there is an existing Pinterest link.
+ *
+ * @since 0.6
+ * @return bool
+ */
+function afft_has_pinterest_link()
+{
+    return !empty(afft_get_pinterest_link());
+}
+
+/**
+ * Get the Pinterest link.
+ *
+ * @since 0.6
+ * @return null|string
+ */
+function afft_get_pinterest_link()
+{
+    $pinterest_link = carbon_get_theme_option(Design_Settings::OPTION_SOCIAL_MEDIA_PINTEREST_LINK);
+    if(empty($pinterest_link)) {
+        return null;
+    }
+
+    return $pinterest_link;
+}
+
+/**
+ * Print the Pinterest link.
+ *
+ * @since 0.6
+ */
+function afft_the_pinterest_link()
+{
+    $link = afft_get_pinterest_link();
+    $link = !empty($link) ? $link : '#';
+
+    echo $link;
+}
+
+/**
+ * Check if there is an existing Reddit link.
+ *
+ * @since 0.6
+ * @return bool
+ */
+function afft_has_reddit_link()
+{
+    return !empty(afft_get_reddit_link());
+}
+
+/**
+ * Get the Reddit link.
+ *
+ * @since 0.6
+ * @return null|string
+ */
+function afft_get_reddit_link()
+{
+    $reddit_link = carbon_get_theme_option(Design_Settings::OPTION_SOCIAL_MEDIA_REDDIT_LINK);
+    if(empty($reddit_link)) {
+        return null;
+    }
+
+    return $reddit_link;
+}
+
+/**
+ * Print the Reddit link.
+ *
+ * @since 0.6
+ */
+function afft_the_reddit_link()
+{
+    $link = afft_get_reddit_link();
+    $link = !empty($link) ? $link : '#';
+
+    echo $link;
 }

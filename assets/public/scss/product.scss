@@ -113,4 +113,9 @@
       margin: $space-size-small auto 0 auto;
     }
   }
+  &-upload-images {
+    flex-wrap: wrap;
+    text-align: center;
+    line-height: 0.5;
+  }
 }

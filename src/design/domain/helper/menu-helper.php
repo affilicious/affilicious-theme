@@ -1,10 +1,9 @@
 <?php
 namespace Affilicious_Theme\Design\Domain\Helper;
 
-use Affilicious_Theme\Design\Domain\Menu\Bottom_1_Menu;
-use Affilicious_Theme\Design\Domain\Menu\Bottom_2_Menu;
-use Affilicious_Theme\Design\Domain\Menu\Bottom_3_Menu;
-use Affilicious_Theme\Design\Domain\Menu\Bottom_4_Menu;
+use Affilicious_Theme\Design\Domain\Menu\Footer_Content_First_Menu;
+use Affilicious_Theme\Design\Domain\Menu\Footer_Content_Second_Menu;
+use Affilicious_Theme\Design\Domain\Menu\Footer_Plinth_Menu;
 use Affilicious_Theme\Design\Domain\Menu\Main_Menu;
 
 if(!defined('ABSPATH')) {
@@ -14,8 +13,9 @@ if(!defined('ABSPATH')) {
 class Menu_Helper
 {
 	/**
-	 * Get the main menu
+	 * Get the menu which is located in the main navigation.
 	 *
+     * @since 0.6
 	 * @return Main_Menu
 	 */
 	public static function get_main_menu()
@@ -28,58 +28,47 @@ class Menu_Helper
 	}
 
 	/**
-	 * Get the bottom 1 menu
-	 *
-	 * @return Bottom_1_Menu
+     * Get the menu which is located in the footer plinth.
+     *
+     * @since 0.6
+	 * @return Footer_Plinth_Menu
 	 */
-	public static function get_bottom_1_menu()
+	public static function get_footer_plinth_menu()
 	{
 		$container = \Affilicious_Theme::get_instance()->get_container();
 		$menu_setup = $container['affilicious_theme.design.setup.menu'];
-		$bottom_1_menu = $menu_setup->get_bottom_1_menu();
+		$menu = $menu_setup->get_footer_plinth_menu();
 
-		return $bottom_1_menu;
+		return $menu;
 	}
 
-	/**
-	 * Get the bottom 2 menu
-	 *
-	 * @return Bottom_2_Menu
-	 */
-	public static function get_bottom_2_menu()
+    /**
+     * Get the first menu which is located in the footer content.
+     *
+     * @since 0.6
+     * @return Footer_Content_First_Menu
+     */
+	public static function get_footer_content_first_menu()
 	{
 		$container = \Affilicious_Theme::get_instance()->get_container();
 		$menu_setup = $container['affilicious_theme.design.setup.menu'];
-		$bottom_2_menu = $menu_setup->get_bottom_2_menu();
+		$menu = $menu_setup->get_footer_content_first_menu();
 
-		return $bottom_2_menu;
+		return $menu;
 	}
 
-	/**
-	 * Get the bottom 3 menu
-	 *
-	 * @return Bottom_3_Menu
-	 */
-	public static function get_bottom_3_menu()
-	{
-		$container = \Affilicious_Theme::get_instance()->get_container();
-		$menu_setup = $container['affilicious_theme.design.setup.menu'];
-		$bottom_3_menu = $menu_setup->get_bottom_3_menu();
+    /**
+     * Get the second menu which is located in the footer content.
+     *
+     * @since 0.6
+     * @return Footer_Content_Second_Menu
+     */
+    public static function get_footer_content_second_menu()
+    {
+        $container = \Affilicious_Theme::get_instance()->get_container();
+        $menu_setup = $container['affilicious_theme.design.setup.menu'];
+        $menu = $menu_setup->get_footer_content_second_menu();
 
-		return $bottom_3_menu;
-	}
-
-	/**
-	 * Get the bottom 4 menu
-	 *
-	 * @return Bottom_4_Menu
-	 */
-	public static function get_bottom_4_menu()
-	{
-		$container = \Affilicious_Theme::get_instance()->get_container();
-		$menu_setup = $container['affilicious_theme.design.setup.menu'];
-		$bottom_4_menu = $menu_setup->get_bottom_4_menu();
-
-		return $bottom_4_menu;
-	}
+        return $menu;
+    }
 }
