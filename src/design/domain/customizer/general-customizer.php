@@ -171,7 +171,7 @@ class General_Customizer extends Abstract_Customizer
 			);
 		});
 
-		$this->render_selectors('afft-general-background-image', function ($mod) {
+		$this->render_selectors('afft-general-background-repeat', function ($mod) {
 			if(empty($mod)) {
 				return null;
 			}

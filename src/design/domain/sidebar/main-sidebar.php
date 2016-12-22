@@ -32,7 +32,7 @@ class Main_Sidebar extends Abstract_Sidebar
             'id' => self::get_id(),
             'name' => self::get_name(),
             'description' => __('Place your widgets into this sidebar, which is visible on every page.', 'affilicious-theme'),
-            'before_widget' => '<li><div class="panel panel-default">',
+            'before_widget' => '<li><div class="panel panel">',
             'after_widget' => '</div></li>',
             'before_title' => '<div class="panel-heading"><h4>',
             'after_title' => '</h4></div>',

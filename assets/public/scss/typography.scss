@@ -7,6 +7,10 @@ html, body {
   color: $font-color-default;
   line-height: $font-line-height-default;
   letter-spacing: $font-letter-spacing-default;
+
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
 }
 
 h1 {
@@ -66,6 +70,15 @@ h6 {
 p {
   font-size: $font-size-text;
   font-weight: $font-weight-text;
+  font-family: $font-family-text;
+  color: $font-color-text;
+  line-height: $font-line-height-text;
+  letter-spacing: $font-letter-spacing-text;
+}
+
+small {
+  font-size: $font-size-text;
+  font-weight: $font-weight-small-text;
   font-family: $font-family-text;
   color: $font-color-text;
   line-height: $font-line-height-text;

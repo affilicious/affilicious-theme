@@ -19,7 +19,7 @@ class Custom_Sidebar_Filter
         }
 
         foreach ($params as $index => $param) {
-            $params[$index]['before_widget'] = '<li><div class="panel panel-default">';
+            $params[$index]['before_widget'] = '<li><div class="panel">';
             $params[$index]['after_widget'] = '</div></li>';
             $params[$index]['before_title'] = '<div class="panel-heading"><h4>';
             $params[$index]['after_title' ] = '</h4></div>';

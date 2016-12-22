@@ -53,9 +53,9 @@ $font-weight-headline-3:   500;
 $font-weight-headline-4:   500;
 $font-weight-headline-5:   500;
 $font-weight-headline-6:   500;
-$font-weight-big-text:     $font-weight-default;
-$font-weight-text:         $font-weight-default;
-$font-weight-small-text:   $font-weight-default;
+$font-weight-big-text:     normal;
+$font-weight-text:         normal;
+$font-weight-small-text:   normal;
 
 // Font color
 $font-color-default:      #555;
@@ -130,6 +130,18 @@ $navbar-toggle-background-color:             #f8f8f8;
 $navbar-toggle-background-color-hover:       #e7e7e7;
 $navbar-toggle-border-color:                 #555555;
 $navbar-toggle-border-color-hover:           #000000;
+
+// Footer
+
+$footer-copyright-color:                    #aab2bd;
+
+// Social Media Buttons
+$button-social-border-width:                2px;
+$button-social-facebook-base-color:         #3B5998;
+$button-social-pinterest-base-color:        #C92228;
+$button-social-google-base-color:           #DC4A38;
+$button-social-reddit-base-color:           #ff4500;
+$button-social-twitter-base-color:          #3CF;
 
 //TODO: Remove both variables
 $navbar-font-color:                          black;

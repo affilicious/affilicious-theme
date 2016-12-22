@@ -7,29 +7,32 @@ if(!defined('ABSPATH')) {
     exit('Not allowed to access pages directly.');
 }
 
-class Bottom_4_Menu extends Abstract_Menu
+class Footer_Content_Second_Menu extends Abstract_Menu
 {
 	/**
 	 * @inheritdoc
+     * @since 0.6
 	 */
 	public function get_location()
 	{
-		return 'bottom_4';
+		return 'afft_footer_content_second';
 	}
 
 	/**
 	 * @inheritdoc
+     * @since 0.6
 	 */
 	public function init()
 	{
 		register_nav_menu(
 			$this->get_location(),
-			__('Bottom 4 Menu', 'affilicious-theme')
+			__('Footer Content Second Menu', 'affilicious-theme')
 		);
 	}
 
 	/**
 	 * @inheritdoc
+     * @since 0.6
 	 */
 	public function render()
 	{
