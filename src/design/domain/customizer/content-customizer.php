@@ -440,7 +440,7 @@ class Content_Customizer extends Abstract_Customizer
 			'label'     => __('Buy Background Color (Hover)', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'color',
-			'default'   => '#ff870a',
+			'default'   => '#ed7709',
 			'transport' => 'postMessage',
 		);
 
@@ -458,7 +458,7 @@ class Content_Customizer extends Abstract_Customizer
             'label'     => __('Buy Border Color (Hover)', 'affilicious-theme'),
             'section'   => $section,
             'type'      => 'color',
-            'default'   => '#ff870a',
+            'default'   => '#ed7709',
             'transport' => 'postMessage',
         );
 
@@ -476,7 +476,7 @@ class Content_Customizer extends Abstract_Customizer
             'label'     => __('Buy Text Color (Hover)', 'affilicious-theme'),
             'section'   => $section,
             'type'      => 'color',
-            'default'   => '#FFF',
+            'default'   => '#ffffff',
             'transport' => 'postMessage',
         );
 
@@ -530,7 +530,7 @@ class Content_Customizer extends Abstract_Customizer
             'label'     => __('Review Text Color (Hover)', 'affilicious-theme'),
             'section'   => $section,
             'type'      => 'color',
-            'default'   => '#FFF',
+            'default'   => '#ffffff',
             'transport' => 'postMessage',
         );
 
@@ -1249,7 +1249,7 @@ class Content_Customizer extends Abstract_Customizer
 
             return array(
                 'selectors'    => array(
-                    '.btn-review'
+                    '.btn-review:hover'
                 ),
                 'declarations' => array(
                     'color' => $color
