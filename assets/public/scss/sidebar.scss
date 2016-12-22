@@ -1,5 +1,6 @@
 @import "variables";
 @import "mixins";
+@import "../../vendor/bootstrap-4/scss/bootstrap-flex-grid";
 
 .sidebar {
   margin: 0;
@@ -182,26 +183,30 @@
 
 #price-comparison {
   padding: 0;
+
   .price-comparison {
 
     .shop {
       width: 100%;
-      display: flex;
-      flex-wrap: wrap;
-      border-bottom: $price-comparison-shop-border;
-      background-color: $price-comparison-shop-background;
-      margin-bottom: $space-size-small;
-      min-height: $price-comparison-widget-shop-height;
       box-sizing: border-box;
-      padding: 10px 15px;
+      border-bottom: $price-comparison-shop-border;
+      padding: $space-size-small $space-size-small;
+
+      &:last-child {
+        border-bottom: none;
+      }
 
       &-thumbnail {
-        width: 50%;
-        padding: 0 0 10px 0;
-        margin: auto;
+        height: 100%;
+        width: 100%;
+        min-height: 75px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: $space-size-small;
 
         img {
-          display: block;
+          display: inline-block;
           max-width: 200px;
           width: 100%;
           height: auto;
@@ -209,60 +214,78 @@
         }
       }
 
+      &-info {
+        min-height: 75px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: $space-size-small;
+      }
+
+      &-no-info {
+        display: block;
+        line-height: $font-line-height-small-text;
+        font-size: $font-size-small-text;
+      }
+
       &-price {
-        width: 50%;
-        margin-bottom: $space-size-small;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
 
-        .price {
-          width: 100%;
+        &-old {
+          color: $price-comparison-old-price-color;
+          font-weight: $font-weight-headline-6;
+          line-height: $font-size-headline-6;
+          font-size: $font-size-headline-6;
+          text-decoration: line-through;
+        }
+
+        &-current {
+          color: $price-comparison-current-price-color;
+          font-weight: $font-weight-headline-5;
+          line-height: $font-size-headline-5;
+          font-size: $font-size-headline-5;
+        }
+
+        &-indication {
           display: block;
-          box-sizing: border-box;
-          text-align: center;
-
-          .old-price {
-            float: right;
-            color: $price-comparison-old-price-color !important;
-            display: inline-block;
-            text-decoration: line-through;
-            line-height: $font-line-height-text;
-            font-size: $font-size-text;
-          }
-
-          .current-price {
-            width: 100%;
-            padding: 0;
-            color: $price-comparison-current-price-color;
-            display: inline-block;
-            font-weight: $font-weight-headline-4;
-            line-height: $font-size-text;
-            font-size: $font-size-headline-4;
-          }
-          .tax-price {
-              line-height: $font-size-text;
-              font-size: $font-size-small-text;
-              width: 80%;
-              margin: 0 auto;
-              padding-top: 5px;
-          }
+          width: 100%;
+          padding-top: $space-size-extra-small;
+          line-height: $font-line-height-small-text;
+          font-size: $font-size-small-text;
         }
       }
 
       &-buy {
-        width: 100%;
-        margin-bottom: $space-size-extra-small;
-        padding: 0 10px;
-        a.btn {
+        height: 100%;
+        text-align: center;
+
+        .btn {
+          box-sizing: border-box;
           width: 100%;
         }
       }
 
-      &-info {
+      &-updated-at {
+        display: block;
         width: 100%;
+        padding-top: $space-size-small;
+        line-height: $font-line-height-small-text;
+        font-size: $font-size-small-text;
+      }
 
-        p {
-          text-align: center;
-          line-height: $font-line-height-small-text;
-          font-size: $font-size-small-text;
+      &.not-available {
+        .shop {
+          &-thumbnail {
+            img {
+              filter: grayscale(75%);
+            }
+          }
         }
       }
     }
