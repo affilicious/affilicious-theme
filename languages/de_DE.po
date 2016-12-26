@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-12-20 23:23+0100\n"
-"PO-Revision-Date: 2016-12-20 23:25+0100\n"
+"POT-Creation-Date: 2016-12-22 22:37+0100\n"
+"PO-Revision-Date: 2016-12-22 22:38+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -312,8 +312,6 @@ msgstr "Link zu %s"
 
 #: partials/content-product-relations.php:57
 #: partials/content-product-relations.php:107
-#: src/design/domain/widget/view/price-comparison.php:38
-#: src/design/domain/widget/view/price-comparison.php:47
 msgid "Buy"
 msgstr "Kaufen"
 
@@ -1020,18 +1018,18 @@ msgstr "AT Preisvergleich"
 msgid "Displays an Affilicious Theme price comparison only on product pages."
 msgstr "Zeigt ein Preisvergleich auf jeder Produktseite."
 
-#: src/design/domain/widget/view/price-comparison.php:42
-msgid "Not available"
-msgstr "Nicht verfügbar"
+#: src/design/domain/widget/view/price-comparison.php:36
+msgid "No information available."
+msgstr "Keine Angaben verfügbar."
 
-#: src/design/domain/widget/view/price-comparison.php:56
-msgid "Incl. 19 % VAT and excl. shipping costs."
-msgstr "Inkl. 19% MwSt und zzgl. Versandkosten."
-
-#: src/design/domain/widget/view/price-comparison.php:68
+#: src/design/domain/widget/view/price-comparison.php:45
 #, php-format
-msgid "Updated at %s."
-msgstr "Aktualisiert am %s Uhr."
+msgid "Buy now at %s"
+msgstr "Jetzt bei %s kaufen"
+
+#: src/design/domain/widget/view/price-comparison.php:49
+msgid "Unfortunately not available."
+msgstr "Leider nicht verfügbar."
 
 #: src/functions.php:26
 msgid ""
@@ -1101,6 +1099,15 @@ msgstr "Links"
 #: src/settings/application/setting/design-settings.php:88
 msgid "Customizer"
 msgstr "Customizer"
+
+#~ msgid "Not available"
+#~ msgstr "Nicht verfügbar"
+
+#~ msgid "Incl. 19 % VAT and excl. shipping costs."
+#~ msgstr "Inkl. 19% MwSt und zzgl. Versandkosten."
+
+#~ msgid "Updated at %s."
+#~ msgstr "Aktualisiert am %s Uhr."
 
 #~ msgid "Button"
 #~ msgstr "Button"

@@ -1,5 +1,6 @@
 @import "variables";
 @import "mixins";
+@import "../../vendor/bootstrap-4/scss/bootstrap-flex-grid";
 
 .sidebar {
   margin: 0;
@@ -180,80 +181,112 @@
   }
 }
 
-.price-comparison {
-  .shop {
-    @include border-radius();
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    border: $price-comparison-shop-border;
-    background-color: $price-comparison-shop-background;
-    margin-bottom: $space-size-small;
-    min-height: $price-comparison-widget-shop-height;
-    box-sizing: border-box;
-    padding: $space-size-small;
+#price-comparison {
+  padding: 0;
 
-    &-thumbnail {
-      width: 50%;
-      padding: 0;
-      margin-bottom: $space-size-medium;
+  .price-comparison {
 
-      img {
-        display: block;
-        max-width: 200px;
-        width: 100%;
-        height: auto;
+    .shop {
+      width: 100%;
+      box-sizing: border-box;
+      border-bottom: $price-comparison-shop-border;
+      padding: $space-size-small $space-size-small;
+
+      &:last-child {
+        border-bottom: none;
       }
-    }
 
-    &-price {
-      width: 50%;
-      margin-bottom: $space-size-medium;
-
-      .price {
+      &-thumbnail {
+        height: 100%;
         width: 100%;
-        display: block;
-        box-sizing: border-box;
-        text-align: right;
+        min-height: 75px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: $space-size-small;
 
-        .old-price {
-          float: right;
-          color: $price-comparison-old-price-color;
+        img {
           display: inline-block;
-          text-decoration: line-through;
-          line-height: $font-line-height-text;
-          font-size: $font-size-text;
-        }
-
-        .current-price {
-          float: right;
+          max-width: 200px;
           width: 100%;
-          padding: 0;
-          color: $price-comparison-current-price-color;
-          display: inline-block;
-          font-weight: $font-weight-text;
-          line-height: $font-size-text;
-          font-size: $font-size-headline-5;
+          height: auto;
+          margin: auto;
         }
       }
-    }
 
-    &-buy {
-      width: 100%;
-      margin-bottom: $space-size-small;
-
-      a.btn {
-        width: 100%;
-      }
-    }
-
-    &-info {
-      width: 100%;
-
-      p {
+      &-info {
+        min-height: 75px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
         text-align: center;
+        padding-bottom: $space-size-small;
+      }
+
+      &-no-info {
+        display: block;
         line-height: $font-line-height-small-text;
         font-size: $font-size-small-text;
+      }
+
+      &-price {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+
+        &-old {
+          color: $price-comparison-old-price-color;
+          font-weight: $font-weight-headline-6;
+          line-height: $font-size-headline-6;
+          font-size: $font-size-headline-6;
+          text-decoration: line-through;
+        }
+
+        &-current {
+          color: $price-comparison-current-price-color;
+          font-weight: $font-weight-headline-5;
+          line-height: $font-size-headline-5;
+          font-size: $font-size-headline-5;
+        }
+
+        &-indication {
+          display: block;
+          width: 100%;
+          padding-top: $space-size-extra-small;
+          line-height: $font-line-height-small-text;
+          font-size: $font-size-small-text;
+        }
+      }
+
+      &-buy {
+        height: 100%;
+        text-align: center;
+
+        .btn {
+          box-sizing: border-box;
+          width: 100%;
+        }
+      }
+
+      &-updated-at {
+        display: block;
+        width: 100%;
+        padding-top: $space-size-small;
+        line-height: $font-line-height-small-text;
+        font-size: $font-size-small-text;
+      }
+
+      &.not-available {
+        .shop {
+          &-thumbnail {
+            img {
+              filter: grayscale(75%);
+            }
+          }
+        }
       }
     }
   }
