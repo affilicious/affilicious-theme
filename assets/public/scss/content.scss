@@ -62,34 +62,7 @@
   }
 }
 
-.entry-content {
 
-  .panel {
-    border: none;
-    margin-bottom: 5px;
-    &-heading {
-      border-width: 1px 0 1px;
-      padding: 0;
-      border-color: lightgray;
-    }
-    &-title {
-      background-color: white;
-      padding: 10px 20px;
-    }
-    &-heading [data-toggle="collapse"]:after, [data-toggle="collapse"].collapsed:after {
-      font-family: "FontAwesome";
-      float: right;
-      color: lightgray;
-      font-size: 18px;
-    }
-    &-heading [data-toggle="collapse"]:after {
-      content: "\f068";
-    }
-    &-heading [data-toggle="collapse"].collapsed:after {
-      content: "\f067";
-    }
-  }
-}
 
 
 @media screen and (min-width: 768px) {

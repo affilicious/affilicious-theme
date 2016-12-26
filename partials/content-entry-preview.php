@@ -1,3 +1,4 @@
+<?php $product = aff_get_product(); ?>
 <article id="entry-<?php the_ID(); ?>" <?php post_class('entry'); ?> role="article"
          itemscope itemtype="http://schema.org/BlogPosting">
     <div class="row">
@@ -7,40 +8,42 @@
                     <?php $affiliateLink = aff_get_product_affiliate_link(); ?>
                     <?php $linkImageGallery = afft_link_product_preview_image(); ?>
                 <?php endif; ?>
-                <div style="position: relative;">
-                    <a href="<?php echo !empty($linkImageGallery) && !empty($affiliateLink) ? $affiliateLink : esc_url(get_permalink()) ; ?>" rel="nofollow" target="_blank">
-                        <div class="entry-thumbnail" itemprop="image">
+                <div class="entry-teaser">
+                    <div class="entry-thumbnail" itemprop="image">
+                        <a href="<?php echo !empty($linkImageGallery) && !empty($affiliateLink) ? $affiliateLink : esc_url(get_permalink()) ; ?>" rel="nofollow" target="_blank">
                             <?php the_post_thumbnail(); ?>
+                        </a>
+
+                        <div class="entry-badge-bar">
+                            <span class="entry-badge-item label label-success">300 Euro</span>
+                            <span class="entry-badge-item label label-info">Testsieger</span>
                         </div>
-                        <div class="badge-bar">
-                    <span class="label label-success">
-                        300 Euro
-                    </span>
-                    <span class="label label-info">
-                        Testsieger
-                    </span>
-                        </div>
-                    </a>
+                    </div>
+
+                    <small class="entry-price-indication">Inkl. 19% MwSt. zzgl. Versandkosten</small>
                 </div>
             <?php endif; ?>
         </div>
+
         <div class="col-md-6 col-xs-12 flex-md-unordered flex-sm-unordered flex-xs-unordered">
-            <div class="entry-details">
-                <div class="entry-content">
-                    <header class="entry-header">
-                        <h1 class="entry-title" itemprop="headline">
-                            <a href="<?php echo esc_url(get_permalink()); ?>" rel="bookmark">
-                                <?php the_title(); ?>
-                            </a>
-                        </h1>
-                    </header>
-                    <div class="panel">
+            <div class="entry-content">
+                <div class="entry-header">
+                    <h1 class="entry-title" itemprop="headline">
+                        <a href="<?php echo esc_url(get_permalink()); ?>" rel="bookmark">
+                            <?php the_title(); ?>
+                        </a>
+                    </h1>
+                </div>
+                <div class="entry-accordion panel-group" id="accordion-<?php the_ID(); ?>">
+                    <div class="entry-accordion-item entry-details panel">
                         <div class="panel-heading">
-                            <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Details</a>
-                            </h4>
+                            <h2 class="panel-title">
+                                <a data-parent="#accordion-<?php the_ID(); ?>" href="#collapse-<?php the_ID(); ?>" data-toggle="collapse" >
+                                    Details
+                                </a>
+                            </h2>
                         </div>
-                        <div id="collapse1" class="panel-collapse collapse in">
+                        <div id="collapse-<?php the_ID(); ?>" class="panel-collapse collapse in">
                             <div class="panel-body">
                                 <?php get_template_part('partials/content-product-details'); ?>
                             </div>
@@ -49,12 +52,12 @@
                 </div>
             </div>
         </div>
+
         <div class="col-md-6 col-xs-12 flex-md-last flex-sm-last flex-xs-last">
-            <div class="entry-caption">
-                <p>Inkl. 19% MwSt. zzgl. Versandkosten</p>
-                <a class="btn btn-buy btn-block">Hier Kaufen</a>
+            <div class="entry-info">
+                <a class="btn btn-buy btn-block">Jetzt bei Amazon kaufen</a>
                 <a class="btn btn-info btn-block">Testbericht ansehen</a>
-                <p>Aktualisiert am 13.12.16 22:34</p>
+                <small class="entry-updated-at">Aktualisiert am 13.12.16 22:34</small>
             </div>
         </div>
     </div>
