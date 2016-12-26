@@ -1,5 +1,6 @@
 @import "variables";
 @import "mixins";
+@import "mixins/fonts";
 @import "../../vendor/bootstrap-4/scss/bootstrap-flex-grid";
 
 .product-preview {
@@ -62,21 +63,25 @@
 
   &-badge {
     &-bar {
-      padding: $space-size-small;
-      position: absolute;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
       width: 100%;
-      background-color: rgba(0, 0, 0, 0.4);
+      padding: $space-size-extra-small $space-size-small;
+      position: absolute;
       bottom: 0;
       left: 0;
       right: 0;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.4);
+      min-height: 40px;
     }
 
     &-item {
-      padding: $space-size-extra-small;
+      @include font-small-text;
+      display: inline;
+      padding: 5px 10px;
       margin-right: $space-size-small;
+      color: white;
 
       &:last-child {
         margin-right: 0;
@@ -122,12 +127,9 @@
   }
 
   &-title {
+    @include font-headline-2;
     text-align: left;
     padding-bottom: $space-size-small;
-    color: $font-color-headline-2;
-    line-height: $font-line-height-headline-2;
-    font-size: $font-size-headline-2;
-    font-weight: $font-weight-headline-2;
   }
 
   &-actions {

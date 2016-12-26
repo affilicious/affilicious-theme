@@ -10,7 +10,7 @@
     </a>
 
     <div class="product-preview-badge-bar">
-        <span class="product-preview-badge-item label label-success">300 Euro</span>
+        <span class="product-preview-badge-item label label-success">300.00 €</span>
         <span class="product-preview-badge-item label label-info">Testsieger</span>
     </div>
 </div>
