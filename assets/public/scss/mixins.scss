@@ -34,6 +34,11 @@
   background-image: linear-gradient($from, $to);
 }
 
+@mixin hard-gradient($direction, $stop, $from, $to) {
+  background-image: linear-gradient($direction, $from $stop, $to $stop);
+
+}
+
 @mixin box-shadow($left: 0, $top: 2px, $blur: 2px, $color: rgba(black, 0.1), $inset: "") {
   -webkit-box-shadow: $left $top $blur $color #{$inset};
   -moz-box-shadow: $left $top $blur $color #{$inset};

@@ -6,12 +6,13 @@
 			<div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-xs-12">
 				<div class="row">
 					<?php if (have_posts()): ?>
-						<?php $count = 0; ?>
 						<?php while (have_posts()) : the_post(); ?>
-							<?php $count++; ?>
-
-							<div class="col-md-6">
-								<?php get_template_part('partials/content-entry-preview'); ?>
+							<div class="col-md-12">
+								<?php if(aff_is_product(get_post())): ?>
+									<?php get_template_part('partials/content-product-preview'); ?>
+								<?php else: ?>
+									<?php get_template_part('partials/content-entry-preview'); ?>
+								<?php endif; ?>
 							</div>
 						<?php endwhile; ?>
 					<?php else: ?>

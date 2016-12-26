@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-12-22 22:37+0100\n"
-"PO-Revision-Date: 2016-12-22 22:38+0100\n"
+"POT-Creation-Date: 2016-12-26 22:37+0100\n"
+"PO-Revision-Date: 2016-12-26 22:38+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -296,27 +296,42 @@ msgstr "Die angefragte Ressource wurde auf der Seite nicht gefunden."
 msgid "Download"
 msgstr "Download"
 
-#: partials/content-product-relations.php:12
+#: partials/content-product-preview-actions.php:6
+#: src/design/domain/widget/view/price-comparison.php:45
+#, php-format
+msgid "Buy now at %s"
+msgstr "Jetzt bei %s kaufen"
+
+#: partials/content-product-preview-actions.php:10
+#: src/design/domain/widget/view/price-comparison.php:49
+msgid "Unfortunately not available."
+msgstr "Leider nicht verfügbar."
+
+#: partials/content-product-preview-actions.php:16
+msgid "To the review"
+msgstr "Zum Testbericht"
+
+#: partials/content-product-relations.php:11
 msgid "Related products"
 msgstr "Ähnliche Produkte"
 
-#: partials/content-product-relations.php:19
+#: partials/content-product-relations.php:18
 msgid "Related accessories"
 msgstr "Ähnliches Zubehör"
 
-#: partials/content-product-relations.php:41
-#: partials/content-product-relations.php:91
+#: partials/content-product-relations.php:40
+#: partials/content-product-relations.php:90
 #, php-format
 msgid "Link to %s"
 msgstr "Link zu %s"
 
-#: partials/content-product-relations.php:57
-#: partials/content-product-relations.php:107
+#: partials/content-product-relations.php:56
+#: partials/content-product-relations.php:106
 msgid "Buy"
 msgstr "Kaufen"
 
-#: partials/content-product-relations.php:63
-#: partials/content-product-relations.php:113
+#: partials/content-product-relations.php:62
+#: partials/content-product-relations.php:112
 msgid "To The Test Report"
 msgstr "Zum Testbericht"
 
@@ -1021,15 +1036,6 @@ msgstr "Zeigt ein Preisvergleich auf jeder Produktseite."
 #: src/design/domain/widget/view/price-comparison.php:36
 msgid "No information available."
 msgstr "Keine Angaben verfügbar."
-
-#: src/design/domain/widget/view/price-comparison.php:45
-#, php-format
-msgid "Buy now at %s"
-msgstr "Jetzt bei %s kaufen"
-
-#: src/design/domain/widget/view/price-comparison.php:49
-msgid "Unfortunately not available."
-msgstr "Leider nicht verfügbar."
 
 #: src/functions.php:26
 msgid ""

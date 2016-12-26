@@ -4,26 +4,21 @@
    <div class="container">
         <div class="row">
             <div class="col-md-8">
-                <?php do_action('affilicious_theme_search_above_posts'); ?>
-
                 <?php if (have_posts()) : ?>
                     <div class="row">
-                        <?php $count = 0; ?>
                         <?php if (have_posts()): while (have_posts()) : the_post(); ?>
-                            <?php $count++; ?>
-                            <div class="col-md-6">
-                                <?php get_template_part('partials/content-preview'); ?>
+                            <div class="col-md-12">
+                                <?php if(aff_is_product(get_post())): ?>
+                                    <?php get_template_part('partials/content-product-preview'); ?>
+                                <?php else: ?>
+                                    <?php get_template_part('partials/content-entry-preview'); ?>
+                                <?php endif; ?>
                             </div>
-                            <?php if($count % 2 == 0): ?>
-                                <div class="clearfix"></div>
-                            <?php endif; ?>
                         <?php endwhile; endif; ?>
                     </div>
                 <?php else : ?>
                     <?php get_template_part('partials/content-none'); ?>
                 <?php endif; ?>
-
-                <?php do_action('affilicious_theme_search_below_posts'); ?>
             </div>
             <div class="col-md-4 col-xs-12">
                 <?php get_sidebar(); ?>

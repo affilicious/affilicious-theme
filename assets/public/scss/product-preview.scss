@@ -1,0 +1,165 @@
+@import "variables";
+@import "mixins";
+@import "../../vendor/bootstrap-4/scss/bootstrap-flex-grid";
+
+.product-preview {
+  @include border-radius($border-radius-default);
+  @include box-shadow(0, 1px, 1px, rgba(0, 0, 0, .2));
+  margin-bottom: $space-size-medium;
+  background-color: white;
+
+  @include media-breakpoint-up(sm) {
+    @include hard-gradient(to left, 55%, white, #f9f9f9);
+    display: table;
+  }
+
+  @include media-breakpoint-up(md) {
+    @include hard-gradient(to left, 60%, white, #f9f9f9);
+  }
+
+  &-teaser {
+    @include border-top-left-radius($border-radius-default);
+    width: 100%;
+    display: block;
+
+    @include media-breakpoint-up(sm) {
+      width: 45%;
+      display: table-cell;
+      float: left;
+      clear: left;
+    }
+
+    @include media-breakpoint-up(md) {
+      width: 40%;
+    }
+  }
+
+  &-thumbnail {
+    @include border-top-left-radius($border-radius-default);
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: $space-size-small;
+
+    @include media-breakpoint-down(xs) {
+      @include border-top-right-radius($border-radius-default);
+    }
+
+    img {
+      @include border-top-left-radius($border-radius-default);
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+
+      @include media-breakpoint-down(xs) {
+        @include border-top-right-radius($border-radius-default);
+      }
+    }
+  }
+
+  &-badge {
+    &-bar {
+      padding: $space-size-small;
+      position: absolute;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+
+    &-item {
+      padding: $space-size-extra-small;
+      margin-right: $space-size-small;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &-content {
+    width: 100%;
+    display: block;
+    padding: 0 $space-size-small $space-size-small $space-size-small;
+
+    @include media-breakpoint-up(sm) {
+      width: 55%;
+      padding-top: $space-size-small;
+      display: table-cell;
+      float: right;
+      clear: right;
+    }
+
+    @include media-breakpoint-up(md) {
+      width: 60%;
+    }
+  }
+
+  &-header {
+    display: block;
+    padding: 0;
+    margin: 0;
+
+    a {
+      &:hover,
+      &:focus {
+        text-decoration: none;
+      }
+
+      h1 {
+        display: block;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &-title {
+    text-align: left;
+    padding-bottom: $space-size-small;
+    color: $font-color-headline-2;
+    line-height: $font-line-height-headline-2;
+    font-size: $font-size-headline-2;
+    font-weight: $font-weight-headline-2;
+  }
+
+  &-actions {
+    @include border-bottom-left-radius($border-radius-default);
+    width: 100%;
+    display: block;
+    padding: $space-size-small;
+    padding-top: 0;
+
+    @include media-breakpoint-up(sm) {
+      width: 45%;
+      display: table-cell;
+      float: left;
+      clear: left;
+    }
+
+    @include media-breakpoint-up(md) {
+      width: 40%;
+    }
+  }
+
+  &-updated-at,
+  &-price-indication {
+    text-align: center;
+    display: block;
+    width: 100%;
+    line-height: $font-line-height-small-text;
+    font-size: $font-size-small-text;
+    padding-top: $space-size-small;
+  }
+
+  &-price-indication {
+    padding: 0 $space-size-small $space-size-small $space-size-small;
+  }
+}
