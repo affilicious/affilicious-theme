@@ -64,7 +64,7 @@
   &-badge {
     &-bar {
       width: 100%;
-      padding: $space-size-extra-small $space-size-small;
+      padding: $space-size-small $space-size-medium;
       position: absolute;
       bottom: 0;
       left: 0;
@@ -92,11 +92,11 @@
   &-content {
     width: 100%;
     display: block;
-    padding: 0 $space-size-small $space-size-small $space-size-small;
+    padding: 0 $space-size-medium $space-size-medium $space-size-medium;
 
     @include media-breakpoint-up(sm) {
       width: 55%;
-      padding-top: $space-size-small;
+      padding-top: $space-size-medium;
       display: table-cell;
       float: right;
       clear: right;
@@ -129,14 +129,14 @@
   &-title {
     @include font-headline-2;
     text-align: left;
-    padding-bottom: $space-size-small;
+    padding-bottom: $space-size-medium;
   }
 
   &-actions {
     @include border-bottom-left-radius($border-radius-default);
     width: 100%;
     display: block;
-    padding: $space-size-small;
+    padding: $space-size-medium;
     padding-top: 0;
 
     @include media-breakpoint-up(sm) {
@@ -153,15 +153,17 @@
 
   &-updated-at,
   &-price-indication {
+    @include font-small-text;
     text-align: center;
     display: block;
     width: 100%;
-    line-height: $font-line-height-small-text;
-    font-size: $font-size-small-text;
-    padding-top: $space-size-small;
   }
 
   &-price-indication {
-    padding: 0 $space-size-small $space-size-small $space-size-small;
+    padding: 0 $space-size-medium $space-size-small $space-size-medium;
+  }
+
+  &-updated-at {
+    padding-top: $space-size-small;
   }
 }
