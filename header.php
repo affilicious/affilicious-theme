@@ -7,7 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
     <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS2 Feed" href="<?php bloginfo('rss2_url'); ?>" />
-
     <!--[if IE]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -55,4 +54,16 @@
             </div>
         </div>
     </nav>
-    
+
+    <script>
+        $(document).ready(function() {
+            jQuery.ias({
+                container : '.',
+                item: '.post',
+                pagination: '.nav-links',
+                next: '.next',
+                loader: '<img src="http://vidi.ba/wp-content/themes/twentyfifteen/images/loader.gif"/>',
+                triggerPageThreshold: 3
+            });
+        });
+    </script>
