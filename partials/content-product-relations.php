@@ -4,7 +4,6 @@
 
 <?php if(!empty($relatedProductsQuery) || !empty($relatedAccessoriesQuery)): ?>
     <div class="panel">
-
         <ul class="nav nav-tabs nav-justified">
             <?php if(!empty($relatedProductsQuery)): ?>
                 <li class="active">

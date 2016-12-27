@@ -61,3 +61,28 @@
     height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
   }
 }
+
+
+
+
+@media screen and (min-width: 768px) {
+  .panel {
+    border: none;
+    &-heading {
+      border: none;
+    }
+    &-title {
+      background-color: white;
+      border: none;
+      a {
+        display: none;
+      }
+    }
+    &-heading [data-toggle="collapse"]:after, [data-toggle="collapse"].collapsed:after {
+      display: none;
+    }
+  }
+  header.entry-header {
+    padding: 20px 10px;
+  }
+}

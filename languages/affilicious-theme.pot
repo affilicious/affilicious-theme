@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: "
 "affilicious-theme\n"
 "POT-Creation-Date: "
-"2016-12-22 22:37+0100\n"
+"2016-12-26 22:37+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Your "
 "Name <you@example.com>\n"
@@ -404,28 +404,45 @@ msgstr ""
 msgid "Download"
 msgstr ""
 
-#: partials/content-product-relations.php:12
+#: partials/content-product-preview-actions.php:6
+#: src/design/domain/widget/view/price-comparison.php:45
+#, php-format
+msgid "Buy now at %s"
+msgstr ""
+
+#: partials/content-product-preview-actions.php:10
+#: src/design/domain/widget/view/price-comparison.php:49
+msgid ""
+"Unfortunately not "
+"available."
+msgstr ""
+
+#: partials/content-product-preview-actions.php:16
+msgid "To the review"
+msgstr ""
+
+#: partials/content-product-relations.php:11
 msgid "Related products"
 msgstr ""
 
-#: partials/content-product-relations.php:19
+#: partials/content-product-relations.php:18
 msgid ""
 "Related accessories"
 msgstr ""
 
-#: partials/content-product-relations.php:41
-#: partials/content-product-relations.php:91
+#: partials/content-product-relations.php:40
+#: partials/content-product-relations.php:90
 #, php-format
 msgid "Link to %s"
 msgstr ""
 
-#: partials/content-product-relations.php:57
-#: partials/content-product-relations.php:107
+#: partials/content-product-relations.php:56
+#: partials/content-product-relations.php:106
 msgid "Buy"
 msgstr ""
 
-#: partials/content-product-relations.php:63
-#: partials/content-product-relations.php:113
+#: partials/content-product-relations.php:62
+#: partials/content-product-relations.php:112
 msgid "To The Test Report"
 msgstr ""
 
@@ -1250,17 +1267,6 @@ msgstr ""
 #: src/design/domain/widget/view/price-comparison.php:36
 msgid ""
 "No information "
-"available."
-msgstr ""
-
-#: src/design/domain/widget/view/price-comparison.php:45
-#, php-format
-msgid "Buy now at %s"
-msgstr ""
-
-#: src/design/domain/widget/view/price-comparison.php:49
-msgid ""
-"Unfortunately not "
 "available."
 msgstr ""
 
