@@ -8,7 +8,7 @@
                     <div class="row">
                         <?php if (have_posts()): while (have_posts()) : the_post(); ?>
                             <div class="col-md-12">
-                                <?php if(aff_is_product(get_post())): ?>
+                                <?php if(aff_is_product_page()): ?>
                                     <?php get_template_part('partials/content-product-preview'); ?>
                                 <?php else: ?>
                                     <?php get_template_part('partials/content-entry-preview'); ?>
