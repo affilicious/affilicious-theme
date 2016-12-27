@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: "
 "affilicious-theme\n"
 "POT-Creation-Date: "
-"2016-12-27 14:55+0100\n"
+"2016-12-27 21:11+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Your "
 "Name <you@example.com>\n"
@@ -325,6 +325,14 @@ msgid ""
 "site for help."
 msgstr ""
 
+#: archive.php:27
+msgid "Show previous"
+msgstr ""
+
+#: archive.php:28
+msgid "Show next"
+msgstr ""
+
 #: comments.php:17
 #, php-format
 msgid "1 Comment"
@@ -337,7 +345,7 @@ msgid ""
 "Comments are closed."
 msgstr ""
 
-#: header.php:42
+#: header.php:41
 msgid "Toggle navigation"
 msgstr ""
 
@@ -474,6 +482,12 @@ msgstr[1] ""
 #: searchform.php:3
 #: searchform.php:4
 msgid "Search"
+msgstr ""
+
+#: src/common/application/setup/asset-setup.php:108
+msgid ""
+"No more results "
+"available."
 msgstr ""
 
 #: src/design/application/setup/comment-setup.php:35
@@ -796,7 +810,6 @@ msgid "Empty Search"
 msgstr ""
 
 #: src/design/domain/customizer/content-customizer.php:548
-#: src/design/domain/customizer/content-customizer.php:672
 msgid "Icon Color"
 msgstr ""
 
@@ -975,6 +988,10 @@ msgstr ""
 msgid "Background Height"
 msgstr ""
 
+#: src/design/domain/customizer/content-customizer.php:672
+msgid "Error Code Color"
+msgstr ""
+
 #: src/design/domain/customizer/footer-customizer.php:20
 #: src/settings/application/setting/design-settings.php:86
 msgid "Footer"
@@ -993,7 +1010,6 @@ msgstr ""
 #: src/design/domain/customizer/footer-customizer.php:204
 #: src/design/domain/customizer/footer-customizer.php:537
 #: src/design/domain/customizer/header-customizer.php:224
-#: src/design/domain/customizer/typography-customizer.php:90
 msgid "Link Color"
 msgstr ""
 
@@ -1001,7 +1017,6 @@ msgstr ""
 #: src/design/domain/customizer/footer-customizer.php:213
 #: src/design/domain/customizer/footer-customizer.php:546
 #: src/design/domain/customizer/header-customizer.php:233
-#: src/design/domain/customizer/typography-customizer.php:99
 msgid "Link Color (Hover)"
 msgstr ""
 
@@ -1235,16 +1250,26 @@ msgstr ""
 
 #: src/design/domain/customizer/typography-customizer.php:43
 #: src/design/domain/customizer/typography-customizer.php:71
+#: src/design/domain/customizer/typography-customizer.php:99
 msgid "Font Family"
 msgstr ""
 
 #: src/design/domain/customizer/typography-customizer.php:53
 #: src/design/domain/customizer/typography-customizer.php:81
+#: src/design/domain/customizer/typography-customizer.php:109
 msgid "Color"
 msgstr ""
 
 #: src/design/domain/customizer/typography-customizer.php:64
 msgid "Text"
+msgstr ""
+
+#: src/design/domain/customizer/typography-customizer.php:92
+msgid "Link"
+msgstr ""
+
+#: src/design/domain/customizer/typography-customizer.php:118
+msgid "Color (Hover)"
 msgstr ""
 
 #: src/design/domain/exception/view-not-found-exception.php:17

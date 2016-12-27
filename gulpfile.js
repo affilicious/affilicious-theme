@@ -34,6 +34,9 @@ var assetPaths = {
         ],
         js: [
             'assets/vendor/jquery/js/**',
+            'assets/vendor/jquery-ias/js/extension/**',
+            'assets/vendor/jquery-ias/js/callbacks.js',
+            'assets/vendor/jquery-ias/js/jquery-ias.js',
             'assets/vendor/retina/js/**',
             'assets/vendor/bootstrap-3/js/affix.js',
             'assets/vendor/bootstrap-3/js/alert.js',
