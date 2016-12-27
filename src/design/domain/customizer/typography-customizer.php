@@ -85,18 +85,37 @@ class Typography_Customizer extends Abstract_Customizer
 			'transport' => 'postMessage',
 		);
 
-		$options['afft-typography-text-link-color'] = array(
-			'id'        => 'afft-typography-text-link-color',
-			'label'     => __('Link Color', 'affilicious-theme'),
+        $section = 'afft-typography-link';
+
+        $sections[] = array(
+            'id'       => $section,
+            'title'    => __('Link', 'affilicious-theme'),
+            'priority' => '11',
+            'panel'    => $panel
+        );
+
+        $options['afft-typography-link-font-family'] = array(
+            'id'        => 'afft-typography-link-font-family',
+            'label'     => __('Font Family', 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'select',
+            'choices'   => $font_choices,
+            'default'   => 'helvetica neue',
+            'transport' => 'postMessage'
+        );
+
+		$options['afft-typography-link-color'] = array(
+			'id'        => 'afft-typography-link-color',
+			'label'     => __('Color', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'color',
 			'default'   => '#3bafda',
 			'transport' => 'postMessage',
 		);
 
-		$options['afft-typography-text-link-color-hover'] = array(
-			'id'        => 'afft-typography-text-link-color-hover',
-			'label'     => __('Link Color (Hover)', 'affilicious-theme'),
+		$options['afft-typography-link-color-hover'] = array(
+			'id'        => 'afft-typography-link-color-hover',
+			'label'     => __('Color (Hover)', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'color',
 			'default'   => '#3fc2ea',
@@ -185,7 +204,8 @@ class Typography_Customizer extends Abstract_Customizer
 
 			return array(
 				'selectors'    => array(
-					'main a',
+                    'main a:not(.price, .btn)',
+                    'main a > span.unit'
 				),
 				'declarations' => array(
 					'font-family' => $stack
@@ -193,7 +213,7 @@ class Typography_Customizer extends Abstract_Customizer
 			);
 		});
 
-		$this->render_selectors('afft-typography-text-link-color', function ($mod) {
+		$this->render_selectors('afft-typography-link-color', function ($mod) {
 			$color = sanitize_hex_color($mod);
 
 			return array(
@@ -207,7 +227,7 @@ class Typography_Customizer extends Abstract_Customizer
 			);
 		});
 
-		$this->render_selectors('afft-typography-text-link-color-hover', function ($mod) {
+		$this->render_selectors('afft-typography-link-color-hover', function ($mod) {
 			$color = sanitize_hex_color($mod);
 
 			return array(

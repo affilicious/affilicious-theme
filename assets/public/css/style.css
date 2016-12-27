@@ -9092,6 +9092,14 @@ body {
   line-height: 1.33;
   border-radius: 35px; }
 
+#pagination {
+  width: 100%;
+  min-height: 50px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between; }
+
 .btn-circle {
   width: 30px;
   height: 30px;

@@ -24,8 +24,8 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div id="pagination" class="ias-pagination">
-                            <div class="nav-previous alignleft"><?php previous_posts_link('Ältere Beiträge'); ?></div>
-                            <div class="nav-next ias-nav-next alignright"><?php next_posts_link('Neuere Beiträge'); ?></div>
+                            <div class="nav-previous"><?php previous_posts_link('Ältere Beiträge'); ?></div>
+                            <div class="nav-next ias-nav-next"><?php next_posts_link('Neuere Beiträge'); ?></div>
                         </div>
                     </div>
                 </div>
