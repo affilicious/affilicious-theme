@@ -1,0 +1,49 @@
+@import "variables";
+@import "mixins";
+@import "../../vendor/bootstrap-4/scss/bootstrap-flex-grid";
+
+#not-found,
+#empty-search {
+  @include border-radius($border-radius-default);
+  background-color: white;
+  min-height: 400px;
+  margin-bottom: $space-size-medium;
+  padding: $space-size-medium;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  & > * {
+    display: block;
+    width: 100%;
+
+    @include media-breakpoint-up(sm) {
+      max-width: 80%;
+    }
+  }
+
+  &-title {
+    margin: 0;
+  }
+
+  &-footer {
+
+
+  }
+}
+
+#not-found {
+  &-error-code {
+    @include font-error-code;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+#empty-search {
+  &-icon {
+    @include icon-size-huge;
+  }
+}

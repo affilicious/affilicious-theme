@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: "
 "affilicious-theme\n"
 "POT-Creation-Date: "
-"2016-12-26 22:37+0100\n"
+"2016-12-27 13:32+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Your "
 "Name <you@example.com>\n"
@@ -389,15 +389,26 @@ msgstr ""
 msgid "Vietnamese"
 msgstr ""
 
-#: partials/content-none.php:5
+#: partials/content-empty-search.php:4
+msgid "No search results"
+msgstr ""
+
+#: partials/content-empty-search.php:8
+#, php-format
+msgid ""
+"Sorry, but there are no "
+"results for \"%s\"."
+msgstr ""
+
+#: partials/content-not-found.php:4
 msgid "Not Found"
 msgstr ""
 
-#: partials/content-none.php:8
+#: partials/content-not-found.php:8
 msgid ""
 "Sorry, but the "
 "requested resource was "
-"not found on this site."
+"not found."
 msgstr ""
 
 #: partials/content-product-details.php:11

@@ -17,7 +17,7 @@
                         <?php endwhile; ?>
                     <?php else: ?>
                         <div class="col-md-12">
-                            <?php get_template_part('partials/content-none'); ?>
+                            <?php get_template_part('partials/content-not-found'); ?>
                         </div>
                     <?php endif; ?>
                 </div>

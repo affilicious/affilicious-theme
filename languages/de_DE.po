@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-12-26 22:37+0100\n"
-"PO-Revision-Date: 2016-12-26 22:38+0100\n"
+"POT-Creation-Date: 2016-12-27 13:32+0100\n"
+"PO-Revision-Date: 2016-12-27 13:33+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -284,13 +284,22 @@ msgstr "Latin erweitert"
 msgid "Vietnamese"
 msgstr "Vietnamesisch"
 
-#: partials/content-none.php:5
+#: partials/content-empty-search.php:4
+msgid "No search results"
+msgstr "Keine Suchergebnisse"
+
+#: partials/content-empty-search.php:8
+#, php-format
+msgid "Sorry, but there are no results for \"%s\"."
+msgstr "Leider gibt es keine Ergebnisse für „%s“."
+
+#: partials/content-not-found.php:4
 msgid "Not Found"
 msgstr "Nicht gefunden"
 
-#: partials/content-none.php:8
-msgid "Sorry, but the requested resource was not found on this site."
-msgstr "Die angefragte Ressource wurde auf der Seite nicht gefunden."
+#: partials/content-not-found.php:8
+msgid "Sorry, but the requested resource was not found."
+msgstr "Leider wurde die angefragte Ressource nicht gefunden."
 
 #: partials/content-product-details.php:11
 msgid "Download"
@@ -1105,6 +1114,20 @@ msgstr "Links"
 #: src/settings/application/setting/design-settings.php:88
 msgid "Customizer"
 msgstr "Customizer"
+
+#~ msgid ""
+#~ "Sorry, but there are no results for the query \"%s\" on this website."
+#~ msgstr ""
+#~ "Leider gibt es keine Ergebnisse für die Suchanfrage „%s“ auf dieser "
+#~ "Webseite."
+
+#~ msgid "Sorry, but the requested resource was not found on this website."
+#~ msgstr ""
+#~ "Leider wurde die angefragte Ressource auf dieser Webseite nicht gefunden."
+
+#~ msgid "Sorry, but the requested resource was not found on this site."
+#~ msgstr ""
+#~ "Leider wurde die angefragte Ressource auf dieser Webseite nicht gefunden."
 
 #~ msgid "Not available"
 #~ msgstr "Nicht verfügbar"

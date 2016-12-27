@@ -1,5 +1,6 @@
 @import "variables";
 @import "mixins";
+@import "../../vendor/bootstrap-4/scss/bootstrap-flex-grid";
 
 .product {
   &-body {
@@ -40,7 +41,7 @@
     margin-top: (-1 * $space-size-small);
     padding-bottom: $space-size-small;
 
-    @media #{$screen-xs-max} {
+    @include media-breakpoint-only(xs) {
       &-number-rating::before {
         content: '\A';
         display: block;
