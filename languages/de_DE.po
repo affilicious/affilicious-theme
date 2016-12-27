@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
 "POT-Creation-Date: 2016-12-27 14:55+0100\n"
-"PO-Revision-Date: 2016-12-27 14:55+0100\n"
+"PO-Revision-Date: 2016-12-27 18:23+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -623,7 +623,7 @@ msgstr "Symbol Farbe"
 #: src/design/domain/customizer/content-customizer.php:557
 #: src/design/domain/customizer/content-customizer.php:681
 msgid "Headline Color"
-msgstr ""
+msgstr "Überschriftenfarbe"
 
 #: src/design/domain/customizer/content-customizer.php:566
 #: src/design/domain/customizer/content-customizer.php:690
