@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: "
 "affilicious-theme\n"
 "POT-Creation-Date: "
-"2016-12-27 13:32+0100\n"
+"2016-12-27 14:55+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Your "
 "Name <you@example.com>\n"
@@ -401,6 +401,7 @@ msgid ""
 msgstr ""
 
 #: partials/content-not-found.php:4
+#: src/design/domain/customizer/content-customizer.php:665
 msgid "Not Found"
 msgstr ""
 
@@ -790,15 +791,28 @@ msgid ""
 "(Hover)"
 msgstr ""
 
-#: src/design/domain/customizer/footer-customizer.php:20
-#: src/settings/application/setting/design-settings.php:86
-msgid "Footer"
+#: src/design/domain/customizer/content-customizer.php:541
+msgid "Empty Search"
 msgstr ""
 
-#: src/design/domain/customizer/footer-customizer.php:28
-msgid "Breadcrumbs"
+#: src/design/domain/customizer/content-customizer.php:548
+#: src/design/domain/customizer/content-customizer.php:672
+msgid "Icon Color"
 msgstr ""
 
+#: src/design/domain/customizer/content-customizer.php:557
+#: src/design/domain/customizer/content-customizer.php:681
+msgid "Headline Color"
+msgstr ""
+
+#: src/design/domain/customizer/content-customizer.php:566
+#: src/design/domain/customizer/content-customizer.php:690
+#: src/design/domain/customizer/footer-customizer.php:62
+msgid "Text Color"
+msgstr ""
+
+#: src/design/domain/customizer/content-customizer.php:575
+#: src/design/domain/customizer/content-customizer.php:699
 #: src/design/domain/customizer/footer-customizer.php:35
 #: src/design/domain/customizer/footer-customizer.php:98
 #: src/design/domain/customizer/footer-customizer.php:231
@@ -809,6 +823,8 @@ msgid ""
 "Background Color (Top)"
 msgstr ""
 
+#: src/design/domain/customizer/content-customizer.php:584
+#: src/design/domain/customizer/content-customizer.php:708
 #: src/design/domain/customizer/footer-customizer.php:44
 #: src/design/domain/customizer/footer-customizer.php:107
 #: src/design/domain/customizer/footer-customizer.php:240
@@ -820,13 +836,157 @@ msgid ""
 "(Bottom)"
 msgstr ""
 
+#: src/design/domain/customizer/content-customizer.php:593
+#: src/design/domain/customizer/content-customizer.php:717
+#: src/design/domain/customizer/footer-customizer.php:116
+#: src/design/domain/customizer/general-customizer.php:44
+#: src/design/domain/customizer/header-customizer.php:53
+msgid "Background Image"
+msgstr ""
+
+#: src/design/domain/customizer/content-customizer.php:602
+#: src/design/domain/customizer/content-customizer.php:726
+#: src/design/domain/customizer/footer-customizer.php:125
+#: src/design/domain/customizer/general-customizer.php:53
+#: src/design/domain/customizer/header-customizer.php:62
+msgid "Background Repeat"
+msgstr ""
+
+#: src/design/domain/customizer/content-customizer.php:606
+#: src/design/domain/customizer/content-customizer.php:621
+#: src/design/domain/customizer/content-customizer.php:636
+#: src/design/domain/customizer/content-customizer.php:730
+#: src/design/domain/customizer/content-customizer.php:745
+#: src/design/domain/customizer/content-customizer.php:760
+#: src/design/domain/customizer/footer-customizer.php:129
+#: src/design/domain/customizer/footer-customizer.php:144
+#: src/design/domain/customizer/footer-customizer.php:159
+#: src/design/domain/customizer/general-customizer.php:57
+#: src/design/domain/customizer/general-customizer.php:72
+#: src/design/domain/customizer/general-customizer.php:87
+#: src/design/domain/customizer/header-customizer.php:66
+#: src/design/domain/customizer/header-customizer.php:81
+#: src/design/domain/customizer/header-customizer.php:96
+msgid "None"
+msgstr ""
+
+#: src/design/domain/customizer/content-customizer.php:607
+#: src/design/domain/customizer/content-customizer.php:731
+#: src/design/domain/customizer/footer-customizer.php:130
+#: src/design/domain/customizer/general-customizer.php:58
+#: src/design/domain/customizer/header-customizer.php:67
+msgid "Repeat"
+msgstr ""
+
+#: src/design/domain/customizer/content-customizer.php:608
+#: src/design/domain/customizer/content-customizer.php:732
+#: src/design/domain/customizer/footer-customizer.php:131
+#: src/design/domain/customizer/general-customizer.php:59
+#: src/design/domain/customizer/header-customizer.php:68
+msgid "Repeat X"
+msgstr ""
+
+#: src/design/domain/customizer/content-customizer.php:609
+#: src/design/domain/customizer/content-customizer.php:733
+#: src/design/domain/customizer/footer-customizer.php:132
+#: src/design/domain/customizer/general-customizer.php:60
+#: src/design/domain/customizer/header-customizer.php:69
+msgid "Repeat Y"
+msgstr ""
+
+#: src/design/domain/customizer/content-customizer.php:617
+#: src/design/domain/customizer/content-customizer.php:741
+#: src/design/domain/customizer/footer-customizer.php:140
+#: src/design/domain/customizer/general-customizer.php:68
+#: src/design/domain/customizer/header-customizer.php:77
+msgid ""
+"Background Attachment"
+msgstr ""
+
+#: src/design/domain/customizer/content-customizer.php:622
+#: src/design/domain/customizer/content-customizer.php:746
+#: src/design/domain/customizer/footer-customizer.php:145
+#: src/design/domain/customizer/general-customizer.php:73
+#: src/design/domain/customizer/header-customizer.php:82
+msgid "Scroll"
+msgstr ""
+
+#: src/design/domain/customizer/content-customizer.php:623
+#: src/design/domain/customizer/content-customizer.php:747
+#: src/design/domain/customizer/footer-customizer.php:146
+#: src/design/domain/customizer/general-customizer.php:74
+#: src/design/domain/customizer/header-customizer.php:83
+msgid "Fixed"
+msgstr ""
+
+#: src/design/domain/customizer/content-customizer.php:624
+#: src/design/domain/customizer/content-customizer.php:748
+#: src/design/domain/customizer/footer-customizer.php:147
+#: src/design/domain/customizer/general-customizer.php:75
+#: src/design/domain/customizer/header-customizer.php:84
+msgid "Local"
+msgstr ""
+
+#: src/design/domain/customizer/content-customizer.php:632
+#: src/design/domain/customizer/content-customizer.php:756
+#: src/design/domain/customizer/footer-customizer.php:155
+#: src/design/domain/customizer/general-customizer.php:83
+#: src/design/domain/customizer/header-customizer.php:92
+msgid "Background Size"
+msgstr ""
+
+#: src/design/domain/customizer/content-customizer.php:637
+#: src/design/domain/customizer/content-customizer.php:761
+#: src/design/domain/customizer/footer-customizer.php:160
+#: src/design/domain/customizer/general-customizer.php:88
+#: src/design/domain/customizer/header-customizer.php:97
+msgid "Custom"
+msgstr ""
+
+#: src/design/domain/customizer/content-customizer.php:638
+#: src/design/domain/customizer/content-customizer.php:762
+#: src/design/domain/customizer/footer-customizer.php:161
+#: src/design/domain/customizer/general-customizer.php:89
+#: src/design/domain/customizer/header-customizer.php:98
+msgid "Contain"
+msgstr ""
+
+#: src/design/domain/customizer/content-customizer.php:639
+#: src/design/domain/customizer/content-customizer.php:763
+#: src/design/domain/customizer/footer-customizer.php:162
+#: src/design/domain/customizer/general-customizer.php:90
+#: src/design/domain/customizer/header-customizer.php:99
+msgid "Cover"
+msgstr ""
+
+#: src/design/domain/customizer/content-customizer.php:647
+#: src/design/domain/customizer/content-customizer.php:771
+#: src/design/domain/customizer/footer-customizer.php:170
+#: src/design/domain/customizer/general-customizer.php:98
+#: src/design/domain/customizer/header-customizer.php:107
+msgid "Background Width"
+msgstr ""
+
+#: src/design/domain/customizer/content-customizer.php:655
+#: src/design/domain/customizer/content-customizer.php:779
+#: src/design/domain/customizer/footer-customizer.php:178
+#: src/design/domain/customizer/general-customizer.php:106
+#: src/design/domain/customizer/header-customizer.php:115
+msgid "Background Height"
+msgstr ""
+
+#: src/design/domain/customizer/footer-customizer.php:20
+#: src/settings/application/setting/design-settings.php:86
+msgid "Footer"
+msgstr ""
+
+#: src/design/domain/customizer/footer-customizer.php:28
+msgid "Breadcrumbs"
+msgstr ""
+
 #: src/design/domain/customizer/footer-customizer.php:53
 #: src/design/domain/customizer/header-customizer.php:197
 msgid "Border Color"
-msgstr ""
-
-#: src/design/domain/customizer/footer-customizer.php:62
-msgid "Text Color"
 msgstr ""
 
 #: src/design/domain/customizer/footer-customizer.php:71
@@ -843,109 +1003,6 @@ msgstr ""
 #: src/design/domain/customizer/header-customizer.php:233
 #: src/design/domain/customizer/typography-customizer.php:99
 msgid "Link Color (Hover)"
-msgstr ""
-
-#: src/design/domain/customizer/footer-customizer.php:116
-#: src/design/domain/customizer/general-customizer.php:44
-#: src/design/domain/customizer/header-customizer.php:53
-msgid "Background Image"
-msgstr ""
-
-#: src/design/domain/customizer/footer-customizer.php:125
-#: src/design/domain/customizer/general-customizer.php:53
-#: src/design/domain/customizer/header-customizer.php:62
-msgid "Background Repeat"
-msgstr ""
-
-#: src/design/domain/customizer/footer-customizer.php:129
-#: src/design/domain/customizer/footer-customizer.php:144
-#: src/design/domain/customizer/footer-customizer.php:159
-#: src/design/domain/customizer/general-customizer.php:57
-#: src/design/domain/customizer/general-customizer.php:72
-#: src/design/domain/customizer/general-customizer.php:87
-#: src/design/domain/customizer/header-customizer.php:66
-#: src/design/domain/customizer/header-customizer.php:81
-#: src/design/domain/customizer/header-customizer.php:96
-msgid "None"
-msgstr ""
-
-#: src/design/domain/customizer/footer-customizer.php:130
-#: src/design/domain/customizer/general-customizer.php:58
-#: src/design/domain/customizer/header-customizer.php:67
-msgid "Repeat"
-msgstr ""
-
-#: src/design/domain/customizer/footer-customizer.php:131
-#: src/design/domain/customizer/general-customizer.php:59
-#: src/design/domain/customizer/header-customizer.php:68
-msgid "Repeat X"
-msgstr ""
-
-#: src/design/domain/customizer/footer-customizer.php:132
-#: src/design/domain/customizer/general-customizer.php:60
-#: src/design/domain/customizer/header-customizer.php:69
-msgid "Repeat Y"
-msgstr ""
-
-#: src/design/domain/customizer/footer-customizer.php:140
-#: src/design/domain/customizer/general-customizer.php:68
-#: src/design/domain/customizer/header-customizer.php:77
-msgid ""
-"Background Attachment"
-msgstr ""
-
-#: src/design/domain/customizer/footer-customizer.php:145
-#: src/design/domain/customizer/general-customizer.php:73
-#: src/design/domain/customizer/header-customizer.php:82
-msgid "Scroll"
-msgstr ""
-
-#: src/design/domain/customizer/footer-customizer.php:146
-#: src/design/domain/customizer/general-customizer.php:74
-#: src/design/domain/customizer/header-customizer.php:83
-msgid "Fixed"
-msgstr ""
-
-#: src/design/domain/customizer/footer-customizer.php:147
-#: src/design/domain/customizer/general-customizer.php:75
-#: src/design/domain/customizer/header-customizer.php:84
-msgid "Local"
-msgstr ""
-
-#: src/design/domain/customizer/footer-customizer.php:155
-#: src/design/domain/customizer/general-customizer.php:83
-#: src/design/domain/customizer/header-customizer.php:92
-msgid "Background Size"
-msgstr ""
-
-#: src/design/domain/customizer/footer-customizer.php:160
-#: src/design/domain/customizer/general-customizer.php:88
-#: src/design/domain/customizer/header-customizer.php:97
-msgid "Custom"
-msgstr ""
-
-#: src/design/domain/customizer/footer-customizer.php:161
-#: src/design/domain/customizer/general-customizer.php:89
-#: src/design/domain/customizer/header-customizer.php:98
-msgid "Contain"
-msgstr ""
-
-#: src/design/domain/customizer/footer-customizer.php:162
-#: src/design/domain/customizer/general-customizer.php:90
-#: src/design/domain/customizer/header-customizer.php:99
-msgid "Cover"
-msgstr ""
-
-#: src/design/domain/customizer/footer-customizer.php:170
-#: src/design/domain/customizer/general-customizer.php:98
-#: src/design/domain/customizer/header-customizer.php:107
-msgid "Background Width"
-msgstr ""
-
-#: src/design/domain/customizer/footer-customizer.php:178
-#: src/design/domain/customizer/general-customizer.php:106
-#: src/design/domain/customizer/header-customizer.php:115
-msgid "Background Height"
 msgstr ""
 
 #: src/design/domain/customizer/footer-customizer.php:188
@@ -1281,7 +1338,7 @@ msgid ""
 "available."
 msgstr ""
 
-#: src/functions.php:26
+#: src/functions.php:27
 msgid ""
 "Failed to find the "
 "required Affilicious "

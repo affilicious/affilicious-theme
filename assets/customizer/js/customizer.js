@@ -279,6 +279,222 @@
             });
         });
     });
+
+    wp.customize('afft-content-empty-search-icon-color', function (value) {
+        value.bind(function (color) {
+            $('#empty-search-icon').css('color', color);
+        });
+    });
+
+    wp.customize('afft-content-empty-search-headline-color', function (value) {
+        value.bind(function (color) {
+            $('#empty-search-headline').css('color', color);
+        });
+    });
+
+    wp.customize('afft-content-empty-search-text-color', function (value) {
+        value.bind(function (color) {
+            $('#empty-search-text').css('color', color);
+        });
+    });
+
+    wp.customize('afft-content-empty-search-background-color-top', function (value) {
+        value.bind(function (top) {
+            var bottom = wp.customize.instance('afft-content-empty-search-background-color-bottom').get();
+
+            var footer = $('#empty-search');
+            footer.css('background-color', bottom);
+            footer.css('background', '-webkit-gradient(linear, 0% 0%, 0% 100%, from(' + top + '), to(' + bottom + '))');
+            footer.css('background', '-webkit-linear-gradient(top, ' + top + ', ' + bottom + ')');
+            footer.css('background', '-moz-linear-gradient(top, ' + top + ', ' + bottom + ')');
+            footer.css('background', '-o-linear-gradient(top, ' + top + ', ' + bottom + ')');
+            footer.css('background', 'linear-gradient(' + top + ', ' + bottom + ')');
+        });
+    });
+
+    wp.customize('afft-content-empty-search-background-color-bottom', function (value) {
+        value.bind(function (bottom) {
+            var top = wp.customize.instance('afft-content-empty-search-background-color-top').get();
+
+            var footer = $('#empty-search');
+            footer.css('background-color', bottom);
+            footer.css('background', '-webkit-gradient(linear, 0% 0%, 0% 100%, from(' + top + '), to(' + bottom + '))');
+            footer.css('background', '-webkit-linear-gradient(top, ' + top + ', ' + bottom + ')');
+            footer.css('background', '-moz-linear-gradient(top, ' + top + ', ' + bottom + ')');
+            footer.css('background', '-o-linear-gradient(top, ' + top + ', ' + bottom + ')');
+            footer.css('background', 'linear-gradient(' + top + ', ' + bottom + ')');
+        });
+    });
+
+    wp.customize('afft-content-empty-search-background-image', function (value) {
+        value.bind(function (image) {
+            var body = $('#empty-search');
+            body.css('background-image', 'url(' + image + ')');
+        });
+    });
+
+    wp.customize('afft-content-empty-search-background-repeat', function (value) {
+        value.bind(function (repeat) {
+            var body = $('#empty-search');
+            body.css('background-repeat', repeat);
+        });
+    });
+
+    wp.customize('afft-content-empty-search-background-attachment', function (value) {
+        value.bind(function (attachment) {
+            var body = $('#empty-search');
+            body.css('background-attachment', attachment);
+        });
+    });
+
+    wp.customize('afft-content-empty-search-background-size', function (value) {
+        value.bind(function (size) {
+            var body = $('#empty-search');
+
+            if (size === 'custom') {
+                var width = wp.customize.instance('afft-content-empty-search-background-width').get();
+                var height = wp.customize.instance('afft-content-empty-search-background-height').get();
+
+                body.css('background-size', width + ' ' + height);
+            } else {
+                body.css('background-size', size);
+            }
+        });
+    });
+
+    wp.customize('afft-content-empty-search-background-width', function (value) {
+        value.bind(function (width) {
+            var size = wp.customize.instance('afft-content-empty-search-background-size').get();
+
+            if (size === 'custom') {
+                var height = wp.customize.instance('afft-content-empty-search-background-height').get();
+
+                var body = $('#empty-search');
+                body.css('background-size', width + ' ' + height);
+            }
+        });
+    });
+
+    wp.customize('afft-content-empty-search-background-height', function (value) {
+        value.bind(function (height) {
+            var size = wp.customize.instance('afft-content-empty-search-background-size').get();
+
+            if (size === 'custom') {
+                var width = wp.customize.instance('afft-content-empty-search-background-width').get();
+
+                var body = $('#empty-search');
+                body.css('background-size', width + ' ' + height);
+            }
+        });
+    });
+
+    wp.customize('afft-content-not-found-error-code-color', function (value) {
+        value.bind(function (color) {
+            $('#not-found-error-code').css('color', color);
+        });
+    });
+
+    wp.customize('afft-content-not-found-headline-color', function (value) {
+        value.bind(function (color) {
+            $('#not-found-headline').css('color', color);
+        });
+    });
+
+    wp.customize('afft-content-not-found-text-color', function (value) {
+        value.bind(function (color) {
+            $('#not-found-text').css('color', color);
+        });
+    });
+
+    wp.customize('afft-content-not-found-background-color-top', function (value) {
+        value.bind(function (top) {
+            var bottom = wp.customize.instance('afft-content-not-found-background-color-bottom').get();
+
+            var footer = $('#not-found');
+            footer.css('background-color', bottom);
+            footer.css('background', '-webkit-gradient(linear, 0% 0%, 0% 100%, from(' + top + '), to(' + bottom + '))');
+            footer.css('background', '-webkit-linear-gradient(top, ' + top + ', ' + bottom + ')');
+            footer.css('background', '-moz-linear-gradient(top, ' + top + ', ' + bottom + ')');
+            footer.css('background', '-o-linear-gradient(top, ' + top + ', ' + bottom + ')');
+            footer.css('background', 'linear-gradient(' + top + ', ' + bottom + ')');
+        });
+    });
+
+    wp.customize('afft-content-not-found-background-color-bottom', function (value) {
+        value.bind(function (bottom) {
+            var top = wp.customize.instance('afft-content-not-found-background-color-top').get();
+
+            var footer = $('#not-found');
+            footer.css('background-color', bottom);
+            footer.css('background', '-webkit-gradient(linear, 0% 0%, 0% 100%, from(' + top + '), to(' + bottom + '))');
+            footer.css('background', '-webkit-linear-gradient(top, ' + top + ', ' + bottom + ')');
+            footer.css('background', '-moz-linear-gradient(top, ' + top + ', ' + bottom + ')');
+            footer.css('background', '-o-linear-gradient(top, ' + top + ', ' + bottom + ')');
+            footer.css('background', 'linear-gradient(' + top + ', ' + bottom + ')');
+        });
+    });
+
+    wp.customize('afft-content-not-found-background-image', function (value) {
+        value.bind(function (image) {
+            var body = $('#not-found');
+            body.css('background-image', 'url(' + image + ')');
+        });
+    });
+
+    wp.customize('afft-content-not-found-background-repeat', function (value) {
+        value.bind(function (repeat) {
+            var body = $('#not-found');
+            body.css('background-repeat', repeat);
+        });
+    });
+
+    wp.customize('afft-content-not-found-background-attachment', function (value) {
+        value.bind(function (attachment) {
+            var body = $('#not-found');
+            body.css('background-attachment', attachment);
+        });
+    });
+
+    wp.customize('afft-content-not-found-background-size', function (value) {
+        value.bind(function (size) {
+            var body = $('#not-found');
+
+            if (size === 'custom') {
+                var width = wp.customize.instance('afft-content-not-found-background-width').get();
+                var height = wp.customize.instance('afft-content-not-found-background-height').get();
+
+                body.css('background-size', width + ' ' + height);
+            } else {
+                body.css('background-size', size);
+            }
+        });
+    });
+
+    wp.customize('afft-content-not-found-background-width', function (value) {
+        value.bind(function (width) {
+            var size = wp.customize.instance('afft-content-not-found-background-size').get();
+
+            if (size === 'custom') {
+                var height = wp.customize.instance('afft-content-not-found-background-height').get();
+
+                var body = $('#not-found');
+                body.css('background-size', width + ' ' + height);
+            }
+        });
+    });
+
+    wp.customize('afft-content-not-found-background-height', function (value) {
+        value.bind(function (height) {
+            var size = wp.customize.instance('afft-content-not-found-background-size').get();
+
+            if (size === 'custom') {
+                var width = wp.customize.instance('afft-content-not-found-background-width').get();
+
+                var body = $('#not-found');
+                body.css('background-size', width + ' ' + height);
+            }
+        });
+    });
 })(jQuery);
 (function ($) {
     wp.customize('afft-footer-breadcrumbs-background-color-top', function (value) {
