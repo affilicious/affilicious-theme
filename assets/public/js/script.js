@@ -3959,7 +3959,7 @@ b[_type],e=/wn|up/.test(d)?t:v;if(!c[n]){if(d==_click)A(a,!1,!0);else{if(/wn|er|
     }));
 
     ias.extension(new IASNoneLeftExtension({
-        text: 'No more results available.',
+        text: translations.noMoreResults,
         html: '<div class="col-md-12"><div class="ias-end-container"><p class="ias-end">{text}</p></div></div>'
     }));
 })(jQuery);

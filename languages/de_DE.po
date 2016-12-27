@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-12-27 14:55+0100\n"
-"PO-Revision-Date: 2016-12-27 14:55+0100\n"
+"POT-Creation-Date: 2016-12-27 21:05+0100\n"
+"PO-Revision-Date: 2016-12-27 21:06+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -221,6 +221,14 @@ msgstr ""
 msgid "Please contact the administrator of this site for help."
 msgstr "Bitte kontaktiere den Administrator dieser Seite für Hilfe."
 
+#: archive.php:27
+msgid "Show previous"
+msgstr "Vorherige anzeigen"
+
+#: archive.php:28
+msgid "Show next"
+msgstr "Nächste anzeigen"
+
 #: comments.php:17
 #, php-format
 msgid "1 Comment"
@@ -232,7 +240,7 @@ msgstr[1] "%s Kommentare"
 msgid "Comments are closed."
 msgstr "Kommentare sind geschlossen."
 
-#: header.php:42
+#: header.php:41
 msgid "Toggle navigation"
 msgstr "Navigation ein/aus"
 
@@ -355,6 +363,10 @@ msgstr[1] "anhand von <span itemprop=\"reviewCount\">%s</span> Bewertungen"
 #: searchform.php:3 searchform.php:4
 msgid "Search"
 msgstr "Suchen"
+
+#: src/common/application/setup/asset-setup.php:108
+msgid "No more results available."
+msgstr "Keine weiteren Ergebnisse verfügbar."
 
 #: src/design/application/setup/comment-setup.php:35
 msgid "Name"
@@ -616,14 +628,13 @@ msgid "Empty Search"
 msgstr "Leere Suche"
 
 #: src/design/domain/customizer/content-customizer.php:548
-#: src/design/domain/customizer/content-customizer.php:672
 msgid "Icon Color"
-msgstr "Symbol Farbe"
+msgstr "Symbolfarbe"
 
 #: src/design/domain/customizer/content-customizer.php:557
 #: src/design/domain/customizer/content-customizer.php:681
 msgid "Headline Color"
-msgstr ""
+msgstr "Überschriftenfarbe"
 
 #: src/design/domain/customizer/content-customizer.php:566
 #: src/design/domain/customizer/content-customizer.php:690
@@ -791,6 +802,10 @@ msgstr "Hintergrundbreite"
 msgid "Background Height"
 msgstr "Hintergrundhöhe"
 
+#: src/design/domain/customizer/content-customizer.php:672
+msgid "Error Code Color"
+msgstr "Fehlercodefarbe"
+
 #: src/design/domain/customizer/footer-customizer.php:20
 #: src/settings/application/setting/design-settings.php:86
 msgid "Footer"
@@ -809,7 +824,6 @@ msgstr "Rahmenfarbe"
 #: src/design/domain/customizer/footer-customizer.php:204
 #: src/design/domain/customizer/footer-customizer.php:537
 #: src/design/domain/customizer/header-customizer.php:224
-#: src/design/domain/customizer/typography-customizer.php:90
 msgid "Link Color"
 msgstr "Linkfarbe"
 
@@ -817,7 +831,6 @@ msgstr "Linkfarbe"
 #: src/design/domain/customizer/footer-customizer.php:213
 #: src/design/domain/customizer/footer-customizer.php:546
 #: src/design/domain/customizer/header-customizer.php:233
-#: src/design/domain/customizer/typography-customizer.php:99
 msgid "Link Color (Hover)"
 msgstr "Linkfarbe (Hover)"
 
@@ -1020,17 +1033,27 @@ msgstr "Überschrift"
 
 #: src/design/domain/customizer/typography-customizer.php:43
 #: src/design/domain/customizer/typography-customizer.php:71
+#: src/design/domain/customizer/typography-customizer.php:99
 msgid "Font Family"
 msgstr "Schriftfamilie"
 
 #: src/design/domain/customizer/typography-customizer.php:53
 #: src/design/domain/customizer/typography-customizer.php:81
+#: src/design/domain/customizer/typography-customizer.php:109
 msgid "Color"
 msgstr "Farbe"
 
 #: src/design/domain/customizer/typography-customizer.php:64
 msgid "Text"
 msgstr "Text"
+
+#: src/design/domain/customizer/typography-customizer.php:92
+msgid "Link"
+msgstr "Link"
+
+#: src/design/domain/customizer/typography-customizer.php:118
+msgid "Color (Hover)"
+msgstr "Farbe (Hover)"
 
 #: src/design/domain/exception/view-not-found-exception.php:17
 #, php-format
@@ -1254,9 +1277,6 @@ msgstr "Customizer"
 
 #~ msgid "Main"
 #~ msgstr "Haupt"
-
-#~ msgid "Color (Hover)"
-#~ msgstr "Farbe (Hover)"
 
 #~ msgid "Main Navigation"
 #~ msgstr "Hauptnavigation"
