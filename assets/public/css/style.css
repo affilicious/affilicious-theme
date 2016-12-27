@@ -9040,6 +9040,15 @@ button.close {
     padding: 0;
     margin: 0; }
 
+.ias-spinner-container,
+.ias-end-container {
+  width: 100%;
+  min-height: 50px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
 html {
   height: 100%; }
 

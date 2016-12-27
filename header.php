@@ -54,16 +54,3 @@
             </div>
         </div>
     </nav>
-
-    <script>
-        $(document).ready(function() {
-            jQuery.ias({
-                container : '.',
-                item: '.post',
-                pagination: '.nav-links',
-                next: '.next',
-                loader: '<img src="http://vidi.ba/wp-content/themes/twentyfifteen/images/loader.gif"/>',
-                triggerPageThreshold: 3
-            });
-        });
-    </script>
