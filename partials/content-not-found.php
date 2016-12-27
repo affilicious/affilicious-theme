@@ -11,8 +11,4 @@
 			<?php get_search_form(); ?>
 		</div>
 	</section>
-
-	<footer id="not-found-footer">
-
-	</footer>
 </article>
