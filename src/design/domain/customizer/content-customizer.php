@@ -534,6 +534,254 @@ class Content_Customizer extends Abstract_Customizer
             'transport' => 'postMessage',
         );
 
+        $section = 'afft-content-empty-search';
+
+        $sections[] = array(
+            'id'       => $section,
+            'title'    => __('Empty Search', 'affilicious-theme'),
+            'priority' => '10',
+            'panel'    => $panel
+        );
+
+        $options['afft-content-empty-search-icon-color'] = array(
+            'id'        => 'afft-content-empty-search-icon-color',
+            'label'     => __('Icon Color', 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'color',
+            'default'   => '#999',
+            'transport' => 'postMessage',
+        );
+
+        $options['afft-content-empty-search-headline-color'] = array(
+            'id'        => 'afft-content-empty-search-headline-color',
+            'label'     => __('Headline Color', 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'color',
+            'default'   => '#000',
+            'transport' => 'postMessage',
+        );
+
+        $options['afft-content-empty-search-text-color'] = array(
+            'id'        => 'afft-content-empty-search-text-color',
+            'label'     => __('Text Color', 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'color',
+            'default'   => '#555555',
+            'transport' => 'postMessage',
+        );
+
+        $options['afft-content-empty-search-background-color-top'] = array(
+            'id'        => 'afft-content-empty-search-background-color-top',
+            'label'     => __('Background Color (Top)', 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'color',
+            'default'   => '#fff',
+            'transport' => 'postMessage',
+        );
+
+        $options['afft-content-empty-search-background-color-bottom'] = array(
+            'id'        => 'afft-content-empty-search-background-color-bottom',
+            'label'     => __('Background Color (Bottom)', 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'color',
+            'default'   => '#fff',
+            'transport' => 'postMessage',
+        );
+
+        $options['afft-content-empty-search-background-image'] = array(
+            'id'        => 'afft-content-empty-search-background-image',
+            'label'     => __('Background Image', 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'upload',
+            'default'   => '',
+            'transport' => 'postMessage',
+        );
+
+        $options['afft-content-empty-search-background-repeat'] = array(
+            'id'        => 'afft-content-empty-search-background-repeat',
+            'label'     => __('Background Repeat', 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'select',
+            'choices'   => array(
+                'no-repeat' => __('None', 'affilicious-theme'),
+                'repeat'    => __('Repeat', 'affilicious-theme'),
+                'repeat-x'  => __('Repeat X', 'affilicious-theme'),
+                'repeat-y'  => __('Repeat Y', 'affilicious-theme'),
+            ),
+            'default'   => 'no-repeat',
+            'transport' => 'postMessage',
+        );
+
+        $options['afft-content-empty-search-background-attachment'] = array(
+            'id'        => 'afft-content-empty-search-background-attachment',
+            'label'     => __('Background Attachment', 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'select',
+            'choices'   => array(
+                'initial' => __('None', 'affilicious-theme'),
+                'scroll'  => __('Scroll', 'affilicious-theme'),
+                'fixed'   => __('Fixed', 'affilicious-theme'),
+                'local'   => __('Local', 'affilicious-theme'),
+            ),
+            'default'   => 'initial',
+            'transport' => 'postMessage',
+        );
+
+        $options['afft-content-empty-search-background-size'] = array(
+            'id'        => 'afft-content-empty-search-background-size',
+            'label'     => __('Background Size', 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'select',
+            'choices'   => array(
+                'auto'    => __('None', 'affilicious-theme'),
+                'custom'  => __('Custom', 'affilicious-theme'),
+                'contain' => __('Contain', 'affilicious-theme'),
+                'cover'   => __('Cover', 'affilicious-theme'),
+            ),
+            'default'   => 'auto',
+            'transport' => 'postMessage',
+        );
+
+        $options['afft-content-empty-search-background-width'] = array(
+            'id'        => 'afft-content-empty-search-background-width',
+            'label'     => __('Background Width', 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'text',
+            'transport' => 'postMessage',
+        );
+
+        $options['afft-content-empty-search-background-height'] = array(
+            'id'        => 'afft-content-empty-search-background-height',
+            'label'     => __('Background Height', 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'text',
+            'transport' => 'postMessage',
+        );
+
+        $section = 'afft-content-not-found';
+
+        $sections[] = array(
+            'id'       => $section,
+            'title'    => __('Not Found', 'affilicious-theme'),
+            'priority' => '10',
+            'panel'    => $panel
+        );
+
+        $options['afft-content-not-found-error-code-color'] = array(
+            'id'        => 'afft-content-not-found-error-code-color',
+            'label'     => __('Error Code Color', 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'color',
+            'default'   => '#999',
+            'transport' => 'postMessage',
+        );
+
+        $options['afft-content-not-found-headline-color'] = array(
+            'id'        => 'afft-content-not-found-headline-color',
+            'label'     => __('Headline Color', 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'color',
+            'default'   => '#000',
+            'transport' => 'postMessage',
+        );
+
+        $options['afft-content-not-found-text-color'] = array(
+            'id'        => 'afft-content-not-found-text-color',
+            'label'     => __('Text Color', 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'color',
+            'default'   => '#555555',
+            'transport' => 'postMessage',
+        );
+
+        $options['afft-content-not-found-background-color-top'] = array(
+            'id'        => 'afft-content-not-found-background-color-top',
+            'label'     => __('Background Color (Top)', 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'color',
+            'default'   => '#fff',
+            'transport' => 'postMessage',
+        );
+
+        $options['afft-content-not-found-background-color-bottom'] = array(
+            'id'        => 'afft-content-not-found-background-color-bottom',
+            'label'     => __('Background Color (Bottom)', 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'color',
+            'default'   => '#fff',
+            'transport' => 'postMessage',
+        );
+
+        $options['afft-content-not-found-background-image'] = array(
+            'id'        => 'afft-content-not-found-background-image',
+            'label'     => __('Background Image', 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'upload',
+            'default'   => '',
+            'transport' => 'postMessage',
+        );
+
+        $options['afft-content-not-found-background-repeat'] = array(
+            'id'        => 'afft-content-not-found-background-repeat',
+            'label'     => __('Background Repeat', 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'select',
+            'choices'   => array(
+                'no-repeat' => __('None', 'affilicious-theme'),
+                'repeat'    => __('Repeat', 'affilicious-theme'),
+                'repeat-x'  => __('Repeat X', 'affilicious-theme'),
+                'repeat-y'  => __('Repeat Y', 'affilicious-theme'),
+            ),
+            'default'   => 'no-repeat',
+            'transport' => 'postMessage',
+        );
+
+        $options['afft-content-not-found-background-attachment'] = array(
+            'id'        => 'afft-content-not-found-background-attachment',
+            'label'     => __('Background Attachment', 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'select',
+            'choices'   => array(
+                'initial' => __('None', 'affilicious-theme'),
+                'scroll'  => __('Scroll', 'affilicious-theme'),
+                'fixed'   => __('Fixed', 'affilicious-theme'),
+                'local'   => __('Local', 'affilicious-theme'),
+            ),
+            'default'   => 'initial',
+            'transport' => 'postMessage',
+        );
+
+        $options['afft-content-not-found-background-size'] = array(
+            'id'        => 'afft-content-not-found-background-size',
+            'label'     => __('Background Size', 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'select',
+            'choices'   => array(
+                'auto'    => __('None', 'affilicious-theme'),
+                'custom'  => __('Custom', 'affilicious-theme'),
+                'contain' => __('Contain', 'affilicious-theme'),
+                'cover'   => __('Cover', 'affilicious-theme'),
+            ),
+            'default'   => 'auto',
+            'transport' => 'postMessage',
+        );
+
+        $options['afft-content-not-found-background-width'] = array(
+            'id'        => 'afft-content-not-found-background-width',
+            'label'     => __('Background Width', 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'text',
+            'transport' => 'postMessage',
+        );
+
+        $options['afft-content-not-found-background-height'] = array(
+            'id'        => 'afft-content-not-found-background-height',
+            'label'     => __('Background Height', 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'text',
+            'transport' => 'postMessage',
+        );
+
 		$options['sections'] = $sections;
 		$options['panels'] = $panels;
 
@@ -1256,5 +1504,285 @@ class Content_Customizer extends Abstract_Customizer
                 )
             );
         });
+
+        $this->render_selectors('afft-content-empty-search-icon-color', function ($mod) {
+            $color = sanitize_hex_color($mod);
+
+            return array(
+                'selectors'    => array(
+                    '#empty-search-icon',
+                ),
+                'declarations' => array(
+                    'color' => $color
+                )
+            );
+        });
+
+        $this->render_selectors('afft-content-empty-search-headline-color', function ($mod) {
+            $color = sanitize_hex_color($mod);
+
+            return array(
+                'selectors'    => array(
+                    '#empty-search-headline',
+                ),
+                'declarations' => array(
+                    'color' => $color
+                )
+            );
+        });
+
+        $this->render_selectors('afft-content-empty-search-text-color', function ($mod) {
+            $color = sanitize_hex_color($mod);
+
+            return array(
+                'selectors'    => array(
+                    '#empty-search-text',
+                ),
+                'declarations' => array(
+                    'color' => $color
+                )
+            );
+        });
+
+        $this->render_selectors(
+            'afft-content-empty-search-background-color-top',
+            'afft-content-empty-search-background-color-bottom',
+            function ($mod1, $mod2) {
+                $top    = sanitize_hex_color($mod1);
+                $bottom = sanitize_hex_color($mod2);
+
+                // The spaces are necessary to avoid duplicated keys
+                return array(
+                    'selectors'    => array(
+                        '#empty-search'
+                    ),
+                    'declarations' => array(
+                        'background-color' => $bottom,
+                        'background'       => "-webkit-gradient(linear, 0% 0%, 0% 100%, from($top), to($bottom))",
+                        'background '      => "-webkit-linear-gradient(top, $top, $bottom)",
+                        'background  '     => "-moz-linear-gradient(top, $top, $bottom)",
+                        'background   '    => "-o-linear-gradient(top, $top, $bottom)",
+                        'background    '   => "linear-gradient($top, $bottom)",
+                    )
+                );
+            }
+        );
+
+        $this->render_selectors('afft-content-empty-search-background-image', function ($mod) {
+            $url = esc_url($mod);
+            if(empty($url)) {
+                return null;
+            }
+
+            return array(
+                'selectors'    => array(
+                    '#empty-search',
+                ),
+                'declarations' => array(
+                    'background-image' => 'url(' . $url . ')'
+                )
+            );
+        });
+
+        $this->render_selectors('afft-content-empty-search-background-repeat', function ($mod) {
+            if(empty($mod)) {
+                return null;
+            }
+
+            return array(
+                'selectors'    => array(
+                    '#empty-search',
+                ),
+                'declarations' => array(
+                    'background-repeat' => $mod
+                )
+            );
+        });
+
+        $this->render_selectors('afft-content-empty-search-background-attachment', function ($mod) {
+            if(empty($mod)) {
+                return null;
+            }
+
+            return array(
+                'selectors'    => array(
+                    '#empty-search',
+                ),
+                'declarations' => array(
+                    'background-attachment' => $mod
+                )
+            );
+        });
+
+        $this->render_selectors(
+            'afft-content-empty-search-background-size',
+            'afft-content-empty-search-background-width',
+            'afft-content-empty-search-background-height',
+            function ($size, $width, $height) {
+                if(empty($size)) {
+                    return null;
+                }
+
+                if ($size === 'custom') {
+                    return array(
+                        'selectors'    => array(
+                            '#empty-search',
+                        ),
+                        'declarations' => array(
+                            'background-size' => $width . ' ' . $height,
+                        )
+                    );
+                }
+
+                return array(
+                    'selectors'    => array(
+                        '#empty-search',
+                    ),
+                    'declarations' => array(
+                        'background-size' => $size
+                    )
+                );
+            }
+        );
+
+        $this->render_selectors('afft-content-not-found-error-code-color', function ($mod) {
+            $color = sanitize_hex_color($mod);
+
+            return array(
+                'selectors'    => array(
+                    '#not-found-error-code',
+                ),
+                'declarations' => array(
+                    'color' => $color
+                )
+            );
+        });
+
+        $this->render_selectors('afft-content-not-found-headline-color', function ($mod) {
+            $color = sanitize_hex_color($mod);
+
+            return array(
+                'selectors'    => array(
+                    '#not-found-headline',
+                ),
+                'declarations' => array(
+                    'color' => $color
+                )
+            );
+        });
+
+        $this->render_selectors('afft-content-not-found-text-color', function ($mod) {
+            $color = sanitize_hex_color($mod);
+
+            return array(
+                'selectors'    => array(
+                    '#not-found-text',
+                ),
+                'declarations' => array(
+                    'color' => $color
+                )
+            );
+        });
+
+        $this->render_selectors(
+            'afft-content-not-found-background-color-top',
+            'afft-content-not-found-background-color-bottom',
+            function ($mod1, $mod2) {
+                $top    = sanitize_hex_color($mod1);
+                $bottom = sanitize_hex_color($mod2);
+
+                // The spaces are necessary to avoid duplicated keys
+                return array(
+                    'selectors'    => array(
+                        '#not-found'
+                    ),
+                    'declarations' => array(
+                        'background-color' => $bottom,
+                        'background'       => "-webkit-gradient(linear, 0% 0%, 0% 100%, from($top), to($bottom))",
+                        'background '      => "-webkit-linear-gradient(top, $top, $bottom)",
+                        'background  '     => "-moz-linear-gradient(top, $top, $bottom)",
+                        'background   '    => "-o-linear-gradient(top, $top, $bottom)",
+                        'background    '   => "linear-gradient($top, $bottom)",
+                    )
+                );
+            }
+        );
+
+        $this->render_selectors('afft-content-not-found-background-image', function ($mod) {
+            $url = esc_url($mod);
+            if(empty($url)) {
+                return null;
+            }
+
+            return array(
+                'selectors'    => array(
+                    '#not-found',
+                ),
+                'declarations' => array(
+                    'background-image' => 'url(' . $url . ')'
+                )
+            );
+        });
+
+        $this->render_selectors('afft-content-not-found-background-repeat', function ($mod) {
+            if(empty($mod)) {
+                return null;
+            }
+
+            return array(
+                'selectors'    => array(
+                    '#not-found',
+                ),
+                'declarations' => array(
+                    'background-repeat' => $mod
+                )
+            );
+        });
+
+        $this->render_selectors('afft-content-not-found-background-attachment', function ($mod) {
+            if(empty($mod)) {
+                return null;
+            }
+
+            return array(
+                'selectors'    => array(
+                    '#not-found',
+                ),
+                'declarations' => array(
+                    'background-attachment' => $mod
+                )
+            );
+        });
+
+        $this->render_selectors(
+            'afft-content-not-found-background-size',
+            'afft-content-not-found-background-width',
+            'afft-content-not-found-background-height',
+            function ($size, $width, $height) {
+                if(empty($size)) {
+                    return null;
+                }
+
+                if ($size === 'custom') {
+                    return array(
+                        'selectors'    => array(
+                            '#not-found',
+                        ),
+                        'declarations' => array(
+                            'background-size' => $width . ' ' . $height,
+                        )
+                    );
+                }
+
+                return array(
+                    'selectors'    => array(
+                        '#not-found',
+                    ),
+                    'declarations' => array(
+                        'background-size' => $size
+                    )
+                );
+            }
+        );
 	}
 }

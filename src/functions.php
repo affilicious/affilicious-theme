@@ -6,6 +6,7 @@ use Affilicious\Product\Domain\Model\Variant\Product_Variant_Interface;
 use Affilicious_Theme\Design\Application\Setup\Sidebar_Setup;
 use Affilicious_Theme\Settings\Application\Setting\Design_Settings;
 use Affilicious_Theme\Design\Domain\Walker\Bootstrap_Comment_Walker;
+use Affilicious\Product\Infrastructure\Repository\Carbon\Carbon_Product_Repository;
 
 if(!defined('ABSPATH')) {
     exit('Not allowed to access pages directly.');
@@ -586,4 +587,41 @@ function afft_the_reddit_link()
     $link = !empty($link) ? $link : '#';
 
     echo $link;
+}
+
+/**
+ * Get the query for the latest products.
+ *
+ * @since 0.6
+ * @param int $number
+ * @return WP_Query
+ */
+function afft_get_latest_products_query($number = 3)
+{
+    $query = aff_get_products_query(array(
+        'posts_per_page' => $number,
+        'order_by' => 'date',
+        'order' => 'DESC'
+    ));
+
+    return $query;
+}
+
+/**
+ * Get the query for the best rated products.
+ *
+ * @since 0.6
+ * @param int $number
+ * @return WP_Query
+ */
+function afft_get_best_rated_products_query($number = 3)
+{
+    $query = aff_get_products_query(array(
+        'posts_per_page' => $number,
+        'meta_key' => Carbon_Product_Repository::REVIEW_RATING,
+        'order_by' => 'meta_value',
+        'order' => 'DESC'
+    ));
+
+    return $query;
 }

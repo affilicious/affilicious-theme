@@ -63,6 +63,15 @@
   letter-spacing: $font-letter-spacing-headline-6;
 }
 
+@mixin font-error-code {
+  font-size: $font-size-error-code;
+  font-weight: $font-weight-error-code;
+  font-family: $font-family-error-code;
+  color: $font-color-error-code;
+  line-height: $font-line-height-error-code;
+  letter-spacing: $font-letter-spacing-error-code;
+}
+
 @mixin font-big-text {
   font-size: $font-size-big-text;
   font-weight: $font-weight-big-text;

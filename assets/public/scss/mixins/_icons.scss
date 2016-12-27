@@ -1,0 +1,6 @@
+@import "../variables";
+
+@mixin icon-size-huge {
+  font-size: $icon-size-huge;
+  line-height: $icon-line-height-huge;
+}
