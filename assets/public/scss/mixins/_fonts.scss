@@ -9,7 +9,19 @@
   letter-spacing: $font-letter-spacing-default;
 }
 
+@mixin font-headline-link($color) {
+  a {
+    color: $color !important;
+    text-decoration: none;
+
+    &:hover, &:focus {
+      color: $color !important;
+    }
+  }
+}
+
 @mixin font-headline-1 {
+  @include font-headline-link($font-color-headline-1);
   font-size: $font-size-headline-1;
   font-weight: $font-weight-headline-1;
   font-family: $font-family-headline-1;
@@ -19,6 +31,7 @@
 }
 
 @mixin font-headline-2 {
+  @include font-headline-link($font-color-headline-2);
   font-size: $font-size-headline-2;
   font-weight: $font-weight-headline-2;
   font-family: $font-family-headline-2;
@@ -28,6 +41,7 @@
 }
 
 @mixin font-headline-3 {
+  @include font-headline-link($font-color-headline-3);
   font-size: $font-size-headline-3;
   font-weight: $font-weight-headline-3;
   font-family: $font-family-headline-3;
@@ -37,6 +51,7 @@
 }
 
 @mixin font-headline-4 {
+  @include font-headline-link($font-color-headline-4);
   font-size: $font-size-headline-4;
   font-weight: $font-weight-headline-4;
   font-family: $font-family-headline-4;
@@ -46,6 +61,7 @@
 }
 
 @mixin font-headline-5 {
+  @include font-headline-link($font-color-headline-5);
   font-size: $font-size-headline-5;
   font-weight: $font-weight-headline-5;
   font-family: $font-family-headline-5;
@@ -55,6 +71,7 @@
 }
 
 @mixin font-headline-6 {
+  @include font-headline-link($font-color-headline-6);
   font-size: $font-size-headline-6;
   font-weight: $font-weight-headline-6;
   font-family: $font-family-headline-6;

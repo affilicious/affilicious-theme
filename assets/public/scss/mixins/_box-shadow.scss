@@ -1,5 +1,11 @@
-@mixin box-shadow($left: 0, $top: 2px, $blur: 2px, $color: rgba(black, 0.1), $inset: "") {
-  -webkit-box-shadow: $left $top $blur $color #{$inset};
-  -moz-box-shadow: $left $top $blur $color #{$inset};
-  box-shadow: $left $top $blur $color #{$inset};
+@mixin box-shadow($horizontal: 0, $vertical: 1px, $blur: 1px, $spread: 0, $color: rgba(black, .2)) {
+  -webkit-box-shadow: $horizontal $vertical $blur $spread $color;
+  -moz-box-shadow: $horizontal $vertical $blur $spread $color;
+  box-shadow: $horizontal $vertical $blur $spread $color;
+}
+
+@mixin box-inner-shadow($horizontal: 0, $vertical: 5px, $blur: 10px, $spread: 0, $color: rgba(black, 1)) {
+  -webkit-box-shadow: inset $horizontal $vertical $blur $spread $color;
+  -moz-box-shadow: inset $horizontal $vertical $blur $spread $color;
+  box-shadow: inset $horizontal $vertical $blur $spread $color;
 }

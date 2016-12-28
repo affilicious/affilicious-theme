@@ -1,10 +1,12 @@
-@mixin border-radius($value) {
+@import "../variables";
+
+@mixin border-radius($value: $border-radius-default) {
   -moz-border-radius: $value;
   -webkit-border-radius: $value;
   border-radius: $value;
 }
 
-@mixin border-top-radius($value) {
+@mixin border-top-radius($value: $border-radius-default) {
   -moz-border-radius-topleft: $value;
   -webkit-border-top-left-radius: $value;
   border-top-left-radius: $value;
@@ -14,7 +16,7 @@
   border-top-right-radius: $value;
 }
 
-@mixin border-bottom-radius($value) {
+@mixin border-bottom-radius($value: $border-radius-default) {
   -moz-border-radius-bottomleft: $value;
   -webkit-border-bottom-left-radius: $value;
   border-bottom-left-radius: $value;
@@ -24,46 +26,46 @@
   border-bottom-right-radius: $value;
 }
 
-@mixin border-top-left-radius($value) {
+@mixin border-top-left-radius($value: $border-radius-default) {
   -moz-border-radius-topleft: $value;
   -webkit-border-top-left-radius: $value;
   border-top-left-radius: $value;
 }
 
-@mixin border-top-right-radius($value) {
+@mixin border-top-right-radius($value: $border-radius-default) {
   -moz-border-radius-topright: $value;
   -webkit-border-top-right-radius: $value;
   border-top-right-radius: $value;
 }
 
-@mixin border-bottom-left-radius($value) {
+@mixin border-bottom-left-radius($value: $border-radius-default) {
   -moz-border-radius-bottomleft: $value;
   -webkit-border-bottom-left-radius: $value;
   border-bottom-left-radius: $value;
 }
 
-@mixin border-bottom-right-radius($value) {
+@mixin border-bottom-right-radius($value: $border-radius-default) {
   -moz-border-radius-bottomright: $value;
   -webkit-border-bottom-right-radius: $value;
   border-bottom-right-radius: $value;
 }
 
-@mixin border-top-radius($value) {
+@mixin border-top-radius($value: $border-radius-default) {
   @include border-top-right-radius($value);
   @include border-top-left-radius($value);
 }
 
-@mixin border-right-radius($value) {
+@mixin border-right-radius($value: $border-radius-default) {
   @include border-top-right-radius($value);
   @include border-bottom-right-radius($value);
 }
 
-@mixin border-bottom-radius($value) {
+@mixin border-bottom-radius($value: $border-radius-default) {
   @include border-bottom-right-radius($value);
   @include border-bottom-left-radius($value);
 }
 
-@mixin border-left-radius($value) {
+@mixin border-left-radius($value: $border-radius-default) {
   @include border-top-left-radius($value);
   @include border-bottom-left-radius($value);
 }

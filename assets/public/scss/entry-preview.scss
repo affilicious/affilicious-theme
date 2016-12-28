@@ -2,72 +2,91 @@
 @import "mixins";
 
 .entry-preview {
-  @include border-radius(5px);
-  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, .2);
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .2);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, .2);
+  @include border-radius();
+  @include box-shadow();
   box-sizing: border-box;
   background-color: white;
   margin-bottom: $space-size-medium;
 
-  &-header {
+  &-header, &-body {
     box-sizing: border-box;
+    display: flex;
+    align-content: center;
     position: relative;
-    padding: $space-size-medium;
-    padding-bottom: $space-size-small;
   }
 
   &-title {
-    font-size: $font-size-headline-2;
-    line-height: $font-color-headline-2;
+    @include font-headline-3;
+    align-self: center;
+    justify-self: flex-start;
     text-align: left;
-    margin-top: 0 !important;
-
-    a {
-      color: $font-color-headline-2;
-    }
+    margin: 0;
+    padding: $space-size-small $space-size-medium;
   }
 
-  &-meta {
-    display: inline-block;
-    padding: 0;
+  &-date {
+    @include border-top-left-radius();
+    padding: $space-size-small $space-size-medium;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #f9f9f9;
+    width: 100px;
 
-    li {
+    .day, .month, .year {
+      width: 100%;
+      margin: 0;
+      padding: 0;
       display: inline;
-      list-style: none;
+    }
 
-      &:not(&:first-child):before {
-        content: "/";
-      }
+    .day {
+      @include font-headline-2;
+      line-height: $font-size-headline-2 * 1.1;
+    }
+
+    .month {
+      @include font-small-text;
+      line-height: 1.2rem;
+    }
+
+    .year {
+      @include font-small-text;
+      line-height: 1.2rem;
     }
   }
 
   &-thumbnail {
-    @include border-top-radius($border-radius-default);
+    @include border-bottom-radius();
     margin-bottom: 0;
     box-sizing: border-box;
     min-height: 200px;
     max-height: 350px;
-    position: relative;
     background-color: #fafafa;
     overflow: hidden;
 
     img {
+      @include box-inner-shadow(0, 100px);
+      @include box-inner-shadow(0, -100px);
       width: 100%;
       height: auto;
     }
   }
 
-  &-body {
-    box-sizing: border-box;
-    padding: $space-size-medium;
-    padding-top: 0;
-  }
-
-  &-footer {
-    box-sizing: border-box;
-    padding: $space-size-medium;
-    padding-top: 0;
+  &-bar {
+    @include border-bottom-radius();
+    width: 100%;
+    padding: $space-size-small $space-size-medium;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(black, .5);
   }
 
   &-tags {
