@@ -5,15 +5,15 @@
         <div class="row">
             <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-xs-12">
                 <?php if (have_posts()): while (have_posts()) : the_post(); ?>
-                    <?php if(aff_is_product_page()): ?>
+                    <?php if(aff_is_product()): ?>
                         <?php get_template_part('partials/content-product'); ?>
                     <?php else: ?>
                         <?php get_template_part('partials/content-entry'); ?>
                     <?php endif; ?>
 
-                    <?php if ( comments_open() || '0' != get_comments_number() ) { ?>
+                    <?php if (comments_open() || '0' != get_comments_number()): ?>
                         <?php comments_template(); ?>
-                    <?php } ?>
+                    <?php endif ?>
                 <?php endwhile; endif; ?>
             </div>
             <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">

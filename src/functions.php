@@ -295,7 +295,7 @@ function afft_is_post_type($type)
 {
 	global $wp_query;
 
-	if($type == get_post_type($wp_query->post->_i_d)) {
+	if($type == get_post_type($wp_query->post->id)) {
 		return true;
 	}
 
