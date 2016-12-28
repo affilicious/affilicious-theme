@@ -3,11 +3,11 @@
 <main id="content" role="main" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/Blog">
 	<div class="container">
 		<div class="row">
-			<div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-xs-12">
-				<div class="row">
+			<div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-xs-12">
+				<div class="row ias-container">
 					<?php if (have_posts()): ?>
 						<?php while (have_posts()) : the_post(); ?>
-							<div class="col-md-12">
+							<div class="col-md-12 ias-item">
 								<?php if(aff_is_product()): ?>
 									<?php get_template_part('partials/content-product-preview'); ?>
 								<?php else: ?>
@@ -20,6 +20,11 @@
 							<?php get_template_part('partials/content-not-found'); ?>
 						</div>
 					<?php endif; ?>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<?php get_template_part('partials/content-pagination'); ?>
+					</div>
 				</div>
 			</div>
 			<div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
