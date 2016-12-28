@@ -13,6 +13,7 @@
     display: flex;
     align-content: center;
     position: relative;
+    justify-content: space-between;
   }
 
   &-title {
@@ -25,9 +26,10 @@
   }
 
   &-date {
-    @include border-top-left-radius();
+    @include border-top-right-radius();
     padding: $space-size-small $space-size-medium;
     display: flex;
+    justify-self: flex-end;
     flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
@@ -93,6 +95,7 @@
     span {
       display: inline-block;
       margin-left: $space-size-small;
+      font-weight: 300;
 
       &:first-child {
         margin-left: 0;

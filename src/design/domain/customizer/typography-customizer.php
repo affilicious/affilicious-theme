@@ -204,7 +204,7 @@ class Typography_Customizer extends Abstract_Customizer
 
 			return array(
 				'selectors'    => array(
-                    'main a:not(.price, .btn)',
+                    'main a:not(.price, .btn, [rel="tag"], [rel="category"])',
                     'main a > span.unit'
 				),
 				'declarations' => array(
@@ -218,7 +218,7 @@ class Typography_Customizer extends Abstract_Customizer
 
 			return array(
 				'selectors'    => array(
-					'main a:not(.price, .btn)',
+					'main a:not(.price, .btn, [rel="tag"], [rel="category"], [rel="category tag"])',
                     'main a > span.unit'
 				),
 				'declarations' => array(
@@ -232,7 +232,7 @@ class Typography_Customizer extends Abstract_Customizer
 
 			return array(
 				'selectors'    => array(
-					'main a:hover:not(.price, .btn)',
+					'main a:hover:not(.price, .btn, [rel="tag"], [rel="category"], [rel="tag"], [rel="category tag"])',
                     'main a > span.unit:hover'
 				),
 				'declarations' => array(

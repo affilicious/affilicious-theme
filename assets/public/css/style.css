@@ -7358,7 +7358,8 @@ button.close {
     box-sizing: border-box;
     display: flex;
     align-content: center;
-    position: relative; }
+    position: relative;
+    justify-content: space-between; }
   .entry-preview-title {
     font-size: 1.6rem;
     font-weight: 500;
@@ -7377,11 +7378,12 @@ button.close {
       .entry-preview-title a:hover, .entry-preview-title a:focus {
         color: black !important; }
   .entry-preview-date {
-    -moz-border-radius-topleft: 5px;
-    -webkit-border-top-left-radius: 5px;
-    border-top-left-radius: 5px;
+    -moz-border-radius-topright: 5px;
+    -webkit-border-top-right-radius: 5px;
+    border-top-right-radius: 5px;
     padding: 10px 20px;
     display: flex;
+    justify-self: flex-end;
     flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
@@ -7463,7 +7465,8 @@ button.close {
     background-color: rgba(0, 0, 0, 0.5); }
   .entry-preview-tags span {
     display: inline-block;
-    margin-left: 10px; }
+    margin-left: 10px;
+    font-weight: 300; }
     .entry-preview-tags span:first-child {
       margin-left: 0; }
 
