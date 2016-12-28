@@ -7,6 +7,7 @@
   @include box-shadow(0, 1px, 1px, rgba(0, 0, 0, .2));
   margin-bottom: $space-size-medium;
   background-color: white;
+  width: 100%;
 
   @include media-breakpoint-up(sm) {
     @include hard-gradient(to left, 55%, white, #f9f9f9);
@@ -40,9 +41,10 @@
     box-sizing: border-box;
     position: relative;
     display: flex;
-    justify-content: center;
+    justify-items: center;
     align-items: center;
     margin-bottom: $space-size-small;
+    overflow: hidden;
 
     @include media-breakpoint-down(xs) {
       @include border-top-right-radius($border-radius-default);
@@ -52,11 +54,18 @@
       @include border-top-left-radius($border-radius-default);
       width: 100%;
       height: auto;
-      overflow: hidden;
 
       @include media-breakpoint-down(xs) {
         @include border-top-right-radius($border-radius-default);
       }
+    }
+  }
+
+  &-no-thumbnail {
+    min-height: 250px;
+
+    .no-thumbnail-container {
+      padding-bottom: 50px;
     }
   }
 

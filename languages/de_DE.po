@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-12-27 21:05+0100\n"
-"PO-Revision-Date: 2016-12-27 21:11+0100\n"
+"POT-Creation-Date: 2016-12-28 12:59+0100\n"
+"PO-Revision-Date: 2016-12-28 13:00+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -300,6 +300,14 @@ msgstr "Keine Suchergebnisse"
 #, php-format
 msgid "Sorry, but there are no results for \"%s\"."
 msgstr "Leider gibt es keine Ergebnisse für „%s“."
+
+#: partials/content-no-thumbnail.php:5
+msgid "No image available"
+msgstr "Kein Bild verfügbar"
+
+#: partials/content-no-thumbnail.php:10
+msgid "Add now"
+msgstr "Jetzt hinzufügen"
 
 #: partials/content-not-found.php:4
 #: src/design/domain/customizer/content-customizer.php:665

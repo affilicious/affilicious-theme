@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: "
 "affilicious-theme\n"
 "POT-Creation-Date: "
-"2016-12-27 21:11+0100\n"
+"2016-12-28 12:59+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Your "
 "Name <you@example.com>\n"
@@ -406,6 +406,14 @@ msgstr ""
 msgid ""
 "Sorry, but there are no "
 "results for \"%s\"."
+msgstr ""
+
+#: partials/content-no-thumbnail.php:5
+msgid "No image available"
+msgstr ""
+
+#: partials/content-no-thumbnail.php:10
+msgid "Add now"
 msgstr ""
 
 #: partials/content-not-found.php:4

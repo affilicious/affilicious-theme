@@ -4,3 +4,8 @@
   font-size: $icon-size-huge;
   line-height: $icon-line-height-huge;
 }
+
+@mixin icon-size-big {
+  font-size: $icon-size-big;
+  line-height: $icon-line-height-big;
+}

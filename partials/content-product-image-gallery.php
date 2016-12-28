@@ -47,11 +47,7 @@
                 </a>
             <?php endif; ?>
         <?php else: ?>
-            <div class="product-upload-images">
-                <i class="fa fa-question-circle-o fa-2x"></i>
-                <p>Keine Produktbilder verfügbar</p>
-                <a href="<?php echo admin_url('upload.php')?>">Jetzt Hinzufügen</a>
-            </div>
+            <?php get_template_part('partials/content-no-thumbnail'); ?>
         <?php endif; ?>
     </div>
 <?php endif; ?>
