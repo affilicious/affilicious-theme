@@ -1,18 +1,20 @@
-<div class="sidebars">
-    <?php if(aff_is_product_page() && afft_is_active_product_sidebar()): ?>
-        <div class="sidebar sidebar-product">
-            <ul>
-                <?php afft_get_product_sidebar(); ?>
-            </ul>
+<div class="row">
+    <?php if(aff_is_product_page()): ?>
+        <div class="col-xs-12">
+            <div id="product-sidebar">
+                <?php get_template_part('partials/product-sidebar'); ?>
+            </div>
         </div>
     <?php endif; ?>
 
-    <?php if(is_active_sidebar('main-sidebar')): ?>
-        <aside class="sidebar sidebar-main" role="complementary"
-               itemscope itemtype="http://schema.org/WPSideBar">
-            <ul>
-                <?php dynamic_sidebar('main-sidebar'); ?>
-            </ul>
-        </aside>
+    <?php if(is_active_sidebar('afft-main-sidebar')): ?>
+        <div class="col-xs-12">
+            <aside id="main-sidebar"
+                   role="complementary" itemscope itemtype="http://schema.org/WPSideBar">
+                <div class="row">
+                    <?php dynamic_sidebar('afft-main-sidebar'); ?>
+                </div>
+            </aside>
+        </div>
     <?php endif; ?>
 </div>

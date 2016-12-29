@@ -1,9 +1,6 @@
 <?php
 use Affilicious_Theme\Design\Domain\Helper\Menu_Helper;
 use Affilicious_Theme\Design\Domain\Helper\Logo_Helper;
-use Affilicious\Product\Domain\Model\Product_Interface;
-use Affilicious\Product\Domain\Model\Variant\Product_Variant_Interface;
-use Affilicious_Theme\Design\Application\Setup\Sidebar_Setup;
 use Affilicious_Theme\Settings\Application\Setting\Design_Settings;
 use Affilicious_Theme\Design\Domain\Walker\Bootstrap_Comment_Walker;
 use Affilicious\Product\Infrastructure\Repository\Carbon\Carbon_Product_Repository;
@@ -170,69 +167,6 @@ function afft_has_retina_logo()
 function afft_get_retina_logo()
 {
     return Logo_Helper::get_retina_logo();
-}
-
-/**
- * Check if the product sidebar is active.
- *
- * @since 0.3
- * @param int|\WP_Post|Product_Interface|null $product_or_id
- * @return bool
- */
-function afft_is_active_product_sidebar($product_or_id = null)
-{
-    $product = aff_get_product($product_or_id);
-    if($product === null) {
-        return false;
-    }
-
-    if($product instanceof Product_Variant_Interface) {
-        $product = $product->get_parent();
-    }
-
-    if(!$product->has_id()) {
-        return false;
-    }
-
-    $sidebar = carbon_get_post_meta($product->get_id()->get_value(), Sidebar_Setup::PRODUCT_SIDEBAR);
-    if (empty($sidebar)) {
-        return false;
-    }
-
-    return true;
-}
-
-/**
- * Get the product sidebar.
- * This function prints the result directly to the screen.
- *
- * @since 0.4
- * @param int|\WP_Post|Product_Interface|null $product_or_id
- * @return bool
- */
-function afft_get_product_sidebar($product_or_id = null)
-{
-    $product = aff_get_product($product_or_id);
-    if($product === null) {
-        return false;
-    }
-
-    if($product instanceof Product_Variant_Interface) {
-        $product = $product->get_parent();
-    }
-
-    if(!$product->has_id()) {
-        return false;
-    }
-
-    $sidebar = carbon_get_post_meta($product->get_id()->get_value(), Sidebar_Setup::PRODUCT_SIDEBAR);
-    if (!empty($sidebar)) {
-        dynamic_sidebar($sidebar);
-
-        return true;
-    }
-
-    return false;
 }
 
 /**

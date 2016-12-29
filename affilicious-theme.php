@@ -480,7 +480,6 @@ class Affilicious_Theme
 	    // Hook the sidebars
 	    $sidebar_setup = $this->container['affilicious_theme.design.setup.sidebar'];
 	    add_action('init', array($sidebar_setup, 'init'));
-        add_filter('affilicious_product_render_affilicious_product_container_general_fields', array($sidebar_setup, 'render'), 0);
 
 	    // Hook the widgets
 	    $widget_setup = $this->container['affilicious_theme.design.setup.widget'];
@@ -535,10 +534,6 @@ class Affilicious_Theme
         add_action('admin_enqueue_scripts', array($asset_setup, 'add_admin_styles'));
         add_action('admin_enqueue_scripts', array($asset_setup, 'add_admin_scripts'));
 	    add_action('customize_preview_init', array($asset_setup, 'add_customizer_scripts'));
-
-	    // Hook the sidebars
-	    $sidebar_setup = $this->container['affilicious_theme.design.setup.sidebar'];
-	    add_action('admin_init', array($sidebar_setup, 'set_default_sidebar'), 0);
 
 	    // Hook the settings
 	    $design_settings = $this->container['affilicious_theme.settings.setting.design'];

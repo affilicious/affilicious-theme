@@ -19,8 +19,7 @@ class Widget_Setup
     public function register_widgets()
     {
         if (class_exists('Carbon_Fields\Widget\Widget')) {
-            register_widget('Affilicious_Theme\Design\Domain\Widget\Price_Comparison_Widget');
-            register_widget('Affilicious_Theme\Design\Domain\Widget\Details_Widget');
+            //register_widget('Affilicious_Theme\Design\Domain\Widget\Details_Widget');
         }
     }
 

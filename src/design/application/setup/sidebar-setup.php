@@ -27,18 +27,12 @@ class Sidebar_Setup
     private $footer_sidebar;
 
     /**
-     * @var Product_Sidebar
-     */
-    private $product_sidebar;
-
-    /**
      * @since 0.3
      */
     public function __construct()
     {
         $this->main_sidebar = new Main_Sidebar();
         $this->footer_sidebar = new Footer_Sidebar();
-        $this->product_sidebar = new Product_Sidebar();
     }
 
     /**
@@ -48,39 +42,5 @@ class Sidebar_Setup
     {
         $this->main_sidebar->init();
         $this->footer_sidebar->init();
-        $this->product_sidebar->init();
-    }
-
-    /**
-     * @inheritdoc
-     */
-    public function render($carbon_fields)
-    {
-        $result = array_merge($carbon_fields, array(
-             Carbon_Field::make('sidebar', self::PRODUCT_SIDEBAR, __('Select a Sidebar', 'affilicious-theme'))
-                ->exclude_sidebars(Main_Sidebar::get_id())
-                ->set_help_text(__('The selected product sidebar will be shown above the main sidebar.', 'affilicious-theme'))
-        ));
-
-        return $result;
-    }
-
-	/**
-	 * Set the default sidebar of the products
-	 *
-	 * @since 0.4.1
-	 */
-    public function set_default_sidebar()
-    {
-	    $post_id = !empty($_GET['post']) ? $_GET['post'] : null;
-	    $post_id = empty($post_id) && !empty($_POST['post_ID']) ? $_POST['post_ID'] : $post_id;
-	    if(empty($post_id) && get_post_type($post_id) !== Product::POST_TYPE) {
-	    	return;
-	    }
-
-	    $sidebar = carbon_get_post_meta($post_id, self::PRODUCT_SIDEBAR);
-	    if(empty($sidebar)) {
-			add_post_meta($post_id, self::PRODUCT_SIDEBAR, Product_Sidebar::get_id());
-	    }
     }
 }

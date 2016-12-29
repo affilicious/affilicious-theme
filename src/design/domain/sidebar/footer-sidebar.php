@@ -9,6 +9,7 @@ class Footer_Sidebar extends Abstract_Sidebar
 {
 	/**
 	 * @inheritdoc
+     * @since 0.6
 	 */
 	public static function get_id()
 	{
@@ -17,6 +18,7 @@ class Footer_Sidebar extends Abstract_Sidebar
 
 	/**
 	 * @inheritdoc
+     * @since 0.6
 	 */
 	public static function get_name()
 	{
@@ -25,6 +27,7 @@ class Footer_Sidebar extends Abstract_Sidebar
 
 	/**
      * @inheritdoc
+     * @since 0.6
      */
     public function init()
     {
@@ -32,10 +35,10 @@ class Footer_Sidebar extends Abstract_Sidebar
             'id' => self::get_id(),
             'name' => self::get_name(),
             'description' => __('Place your widgets into this sidebar, which is visible on the footer.', 'affilicious-theme'),
-            'before_widget' => '<div class="col-xs-12">',
-            'after_widget' => '</div>',
-            'before_title' => '<h4>',
-            'after_title' => '</h4>',
+            'before_widget' => '<div class="col-xl-12"><div class="widget">',
+            'before_title' => '<div class="widget-heading"><h4 class="widget-headline">',
+            'after_title' => '</h4></div><div class="widget-body">',
+            'after_widget' => '</div></div></div>',
         ));
     }
 }
