@@ -27,6 +27,7 @@ class Affilicious_Theme
     const THEME_NAME = 'affilicious-theme';
     const THEME_VERSION = '0.5.6';
     const THEME_MIN_PHP_VERSION = '5.6';
+    const THEME_MIN_AFFILICIOUS_PLUGIN_VERSION = '0.7';
     const THEME_NAMESPACE = 'Affilicious_Theme\\';
     const THEME_TESTS_NAMESPACE = 'Affilicious_Theme\\Tests\\';
     const THEME_SOURCE_DIR = 'src/';
@@ -231,7 +232,7 @@ class Affilicious_Theme
 
             $this->load_textdomain();
             wp_die(sprintf(
-                __('The Affilicious Theme requires at least the PHP Version %s to reveal the full potential. Please switch the PHP version in your hosting provider.', 'affilicious-theme'),
+                __('The Affilicious Theme requires at least the PHP version %s to reveal the full potential. Please switch the PHP version in your hosting provider.', 'affilicious-theme'),
                 self::THEME_MIN_PHP_VERSION
             ));
         }
@@ -355,8 +356,9 @@ class Affilicious_Theme
                 'name'               => 'Affilicious',
                 'slug'               => 'affilicious',
                 'source'             => 'https://github.com/affilicious/affilicious/archive/master.zip',
-	            'version'            => '0.6',
+	            'version'            => self::THEME_MIN_AFFILICIOUS_PLUGIN_VERSION,
                 'required'           => true,
+                //'force_activation'   => true,
             ),
             array(
                 'name'        => 'WordPress SEO by Yoast',
@@ -372,7 +374,7 @@ class Affilicious_Theme
             'menu'         => 'tgmpa-install-plugins',
             'parent_slug'  => 'themes.php',
             'capability'   => 'edit_theme_options',
-            'has_notices'  => true,
+            'has_notices'  => false,
             'dismissable'  => true,
             'strings'      => array(
                 'page_title'                      => __('Install Required Plugins', 'affilicious-theme'),

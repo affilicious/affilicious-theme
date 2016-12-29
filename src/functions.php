@@ -19,10 +19,27 @@ if(!defined('ABSPATH')) {
 function afft_check_requirements()
 {
 	if (!class_exists('\Affilicious_Plugin')) {
-		wp_footer();
-		echo '<br><br><br>';
-		exit(__('Failed to find the required Affilicious Plugin. Please open your admin area and install the missing plugin.', 'affilicious-theme'));
+        wp_footer();
+		get_template_part('partials/error/plugin-not-found');
+        die();
 	}
+
+	if (!version_compare(Affilicious_Plugin::PLUGIN_VERSION, Affilicious_Theme::THEME_MIN_AFFILICIOUS_PLUGIN_VERSION, '>=')) {
+        wp_footer();
+        get_template_part('partials/error/plugin-version-requirement');
+        die();
+    }
+}
+
+/**
+ * Get the min Affilicious plugin version requirement.
+ *
+ * @since 0.7
+ * @return string
+ */
+function afft_get_min_plugin_version()
+{
+    return Affilicious_Theme::THEME_MIN_AFFILICIOUS_PLUGIN_VERSION;
 }
 
 /**
