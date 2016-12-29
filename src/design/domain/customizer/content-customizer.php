@@ -206,7 +206,7 @@ class Content_Customizer extends Abstract_Customizer
             'label'     => __('Tag Link Color (Hover)', 'affilicious-theme'),
             'section'   => $section,
             'type'      => 'color',
-            'default'   => '#3fc2ea',
+            'default'   => '#9ad3e8',
             'transport' => 'postMessage',
         );
 
@@ -224,7 +224,7 @@ class Content_Customizer extends Abstract_Customizer
             'label'     => __('Tag Background Color (Hover)', 'affilicious-theme'),
             'section'   => $section,
             'type'      => 'color',
-            'default'   => '#3bafda',
+            'default'   => '#359dc4',
             'transport' => 'postMessage',
         );
 
@@ -1046,6 +1046,7 @@ class Content_Customizer extends Abstract_Customizer
 
             return array(
                 'selectors'    => array(
+                    '.entry-date .day',
                     '.entry-preview-date .day'
                 ),
                 'declarations' => array(
@@ -1059,6 +1060,7 @@ class Content_Customizer extends Abstract_Customizer
 
             return array(
                 'selectors'    => array(
+                    '.entry-date .month',
                     '.entry-preview-date .month'
                 ),
                 'declarations' => array(
@@ -1072,6 +1074,7 @@ class Content_Customizer extends Abstract_Customizer
 
             return array(
                 'selectors'    => array(
+                    '.entry-date .year',
                     '.entry-preview-date .year'
                 ),
                 'declarations' => array(
@@ -1085,6 +1088,7 @@ class Content_Customizer extends Abstract_Customizer
 
             return array(
                 'selectors'    => array(
+                    '.entry-categories a',
                     '.entry-preview-categories a'
                 ),
                 'declarations' => array(
@@ -1098,6 +1102,7 @@ class Content_Customizer extends Abstract_Customizer
 
             return array(
                 'selectors'    => array(
+                    '.entry-categories a:hover',
                     '.entry-preview-categories a:hover'
                 ),
                 'declarations' => array(
@@ -1111,6 +1116,7 @@ class Content_Customizer extends Abstract_Customizer
 
             return array(
                 'selectors'    => array(
+                    '.entry-tags .label a',
                     '.entry-preview-tags .label a'
                 ),
                 'declarations' => array(
@@ -1124,6 +1130,7 @@ class Content_Customizer extends Abstract_Customizer
 
             return array(
                 'selectors'    => array(
+                    '.entry-tags .label:hover a',
                     '.entry-preview-tags .label:hover a'
                 ),
                 'declarations' => array(
@@ -1137,6 +1144,7 @@ class Content_Customizer extends Abstract_Customizer
 
             return array(
                 'selectors'    => array(
+                    '.entry-tags .label',
                     '.entry-preview-tags .label'
                 ),
                 'declarations' => array(
@@ -1150,6 +1158,7 @@ class Content_Customizer extends Abstract_Customizer
 
             return array(
                 'selectors'    => array(
+                    '.entry-tags .label:hover',
                     '.entry-preview-tags .label:hover'
                 ),
                 'declarations' => array(

@@ -89,31 +89,31 @@
 
     wp.customize('afft-content-post-date-day-color', function (value) {
         value.bind(function (color) {
-            $('.entry-preview-date .day').css('color', color);
+            $('.entry-date .day, .entry-preview-date .day').css('color', color);
         });
     });
 
     wp.customize('afft-content-post-date-month-color', function (value) {
         value.bind(function (color) {
-            $('.entry-preview-date .month').css('color', color);
+            $('.entry-date .month, .entry-preview-date .month').css('color', color);
         });
     });
 
     wp.customize('afft-content-post-date-year-color', function (value) {
         value.bind(function (color) {
-            $('.entry-preview-date .year').css('color', color);
+            $('.entry-date .year, .entry-preview-date .year').css('color', color);
         });
     });
 
     wp.customize('afft-content-post-category-color', function (value) {
         value.bind(function (color) {
-            $('.entry-preview-categories a').css('color', color);
+            $('.entry-categories a, .entry-preview-categories a').css('color', color);
         });
     });
 
     wp.customize('afft-content-post-category-color-hover', function (value) {
         value.bind(function (color) {
-            $('.entry-preview-categories a').hover(function (e) {
+            $('.entry-categories a, .entry-preview-categories a').hover(function (e) {
                 var fallback = wp.customize.instance('afft-content-post-category-color').get();
                 $(this).css('color', e.type === "mouseenter" ? color : fallback);
             });
@@ -122,13 +122,13 @@
 
     wp.customize('afft-content-post-tag-link-color', function (value) {
         value.bind(function (color) {
-            $('.entry-preview-tags .label a').css('color', color);
+            $('.entry-tags .label a, .entry-preview-tags .label a').css('color', color);
         });
     });
 
     wp.customize('afft-content-post-tag-link-color-hover', function (value) {
         value.bind(function (color) {
-            $('.entry-preview-tags .label a').hover(function (e) {
+            $('.entry-tags .label a, .entry-preview-tags .label a').hover(function (e) {
                 var fallback = wp.customize.instance('afft-content-post-tag-link-color').get();
                 $(this).css('color', e.type === "mouseenter" ? color : fallback);
             });
@@ -137,13 +137,13 @@
 
     wp.customize('afft-content-post-tag-background-color', function (value) {
         value.bind(function (color) {
-            $('.entry-preview-tags .label').css('background-color', color);
+            $('.entry-tags .label, .entry-preview-tags .label').css('background-color', color);
         });
     });
 
     wp.customize('afft-content-post-tag-background-color-hover', function (value) {
         value.bind(function (color) {
-            $('.entry-preview-tags .label').hover(function (e) {
+            $('.entry-tags .label, .entry-preview-tags .label').hover(function (e) {
                 var fallback = wp.customize.instance('afft-content-post-tag-background-color').get();
                 $(this).css('background-color', e.type === "mouseenter" ? color : fallback);
             });
