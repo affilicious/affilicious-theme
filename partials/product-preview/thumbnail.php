@@ -8,5 +8,5 @@
         )); ?>
     </a>
 <?php else: ?>
-    <?php get_template_part('partials/content-no-thumbnail'); ?>
+    <?php get_template_part('partials/misc/no-thumbnail'); ?>
 <?php endif; ?>

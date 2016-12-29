@@ -1,5 +1,5 @@
 <div class="product-preview-thumbnail <?php if(!has_post_thumbnail()): ?>product-preview-no-thumbnail<?php endif; ?>">
-    <?php get_template_part('partials/content-product-preview-thumbnail'); ?>
+    <?php get_template_part('partials/product-preview/thumbnail'); ?>
 
     <div class="product-preview-badge-bar">
         <span class="product-preview-badge-item label label-success">300.00 €</span>
