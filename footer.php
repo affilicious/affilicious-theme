@@ -17,12 +17,11 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-						<div class="row">
-							<div class="col-xs-12">
-								<div id="footer-about-us">
-									<h4>Über uns</h4>
-									<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<p>
-								</div>
+						<div id="footer-sidebar">
+							<div class="row">
+								<?php if(is_active_sidebar('afft-footer-sidebar')): ?>
+									<?php dynamic_sidebar('afft-footer-sidebar'); ?>
+								<?php endif; ?>
 							</div>
 						</div>
 					</div>

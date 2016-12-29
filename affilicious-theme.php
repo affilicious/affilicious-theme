@@ -342,10 +342,6 @@ class Affilicious_Theme
             );
 		};
 
-		$this->container['affilicious_theme.design.filter.custom_sidebar'] = function() {
-		    return new \Affilicious_Theme\Design\Application\Filter\Custom_Sidebar_Filter();
-        };
-
         $this->container['affilicious_theme.design.application.service.customizer_mods_backup'] = function() {
             return new \Affilicious_Theme\Design\Application\Service\Customizer_Mods_Backup_Service();
         };
@@ -516,9 +512,6 @@ class Affilicious_Theme
 	    add_action('init', array($customizer_setup, 'render'), 102);
 	    add_action('wp_enqueue_scripts', array($customizer_setup, 'enqueue_scripts'));
 	    add_action('wp_head', array($customizer_setup, 'head'));
-
-        $custom_sidebar_filter = $this->container['affilicious_theme.design.filter.custom_sidebar'];
-        add_filter('dynamic_sidebar_params', array($custom_sidebar_filter, 'filter'));
     }
 
     /**

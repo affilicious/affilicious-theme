@@ -29,13 +29,13 @@
     padding: $space-size-medium 0;
   }
 
-  &-about-us {
-    h4 {
-      color: white;
-    }
-
-    p {
-      color: #aab2bd;
+  &-sidebar {
+    ul {
+      list-style: none;
+      margin-left: 0;
+      margin-right: 0;
+      padding-left: 0;
+      padding-right: 0;
     }
   }
 

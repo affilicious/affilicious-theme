@@ -45,44 +45,57 @@
     }
   }
 
+  .searchform {
+    padding: $space-size-medium;
+  }
+
   .textwidget {
     box-sizing: border-box;
     padding: $space-size-medium;
   }
 
   .tagcloud {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-
     padding: $space-size-small;
+  }
 
-    a {
-      display: inline-block;
-      margin: 0.2rem;
-      padding: 0.2rem 0.5rem;
+  #wp-calendar {
+    padding: $space-size-medium;
+  }
+}
 
-      background: $widget-tagcloud-tag-background-color;
-      border: 1px solid $widget-tagcloud-tag-border-color;
-      transition: all 0.1s ease-in-out;
+.tagcloud {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
 
-      &:hover,
-      &:focus {
-        transform: scale(1.1);
-        text-decoration: none;
-      }
+  a {
+    display: inline-block;
+    margin: $space-size-small $space-size-small $space-size-small 0;
+    padding: 0.2rem 0.5rem;
+
+    background: $widget-tagcloud-tag-background-color;
+    border: 1px solid $widget-tagcloud-tag-border-color;
+    transition: all 0.1s ease-in-out;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover,
+    &:focus {
+      transform: scale(1.1);
+      text-decoration: none;
     }
   }
 }
 
 #wp-calendar {
   width:100%;
-  font-size:12px;
-  font-weight:300;
-  border-collapse:separate;
-  border-spacing:8px;
-  margin-left:-2px;
-  padding: $space-size-medium;
+  font-size: 12px;
+  font-weight: 300;
+  border-collapse: separate;
+  border-spacing: 8px;
+
 
   tbody td a,
   tfoot td#prev a:hover,

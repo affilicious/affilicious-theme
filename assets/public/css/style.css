@@ -9075,10 +9075,12 @@ button.close {
   #footer-content {
     min-height: 250px;
     padding: 20px 0; }
-  #footer-about-us h4 {
-    color: white; }
-  #footer-about-us p {
-    color: #aab2bd; }
+  #footer-sidebar ul {
+    list-style: none;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0; }
   #footer-content-first-menu dt, #footer-content-second-menu dt {
     font-size: 1.4rem;
     font-weight: 500;
@@ -10297,8 +10299,7 @@ body {
   border-radius: 35px; }
 
 .searchform {
-  box-sizing: border-box;
-  padding: 20px; }
+  box-sizing: border-box; }
   .searchform .form-group {
     -moz-border-radius-topleft: 5px;
     -webkit-border-top-left-radius: 5px;
@@ -11102,33 +11103,39 @@ body {
     .sidebar .panel > ul, .sidebar .panel ul.menu {
       box-sizing: border-box;
       padding: 10px 20px; }
+  .sidebar .searchform {
+    padding: 20px; }
   .sidebar .textwidget {
     box-sizing: border-box;
     padding: 20px; }
   .sidebar .tagcloud {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
     padding: 10px; }
-    .sidebar .tagcloud a {
-      display: inline-block;
-      margin: 0.2rem;
-      padding: 0.2rem 0.5rem;
-      background: rgba(85, 85, 85, 0.1);
-      border: 1px solid rgba(85, 85, 85, 0.1);
-      transition: all 0.1s ease-in-out; }
-      .sidebar .tagcloud a:hover, .sidebar .tagcloud a:focus {
-        transform: scale(1.1);
-        text-decoration: none; }
+  .sidebar #wp-calendar {
+    padding: 20px; }
+
+.tagcloud {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center; }
+  .tagcloud a {
+    display: inline-block;
+    margin: 10px 10px 10px 0;
+    padding: 0.2rem 0.5rem;
+    background: rgba(85, 85, 85, 0.1);
+    border: 1px solid rgba(85, 85, 85, 0.1);
+    transition: all 0.1s ease-in-out; }
+    .tagcloud a:last-child {
+      margin-right: 0; }
+    .tagcloud a:hover, .tagcloud a:focus {
+      transform: scale(1.1);
+      text-decoration: none; }
 
 #wp-calendar {
   width: 100%;
   font-size: 12px;
   font-weight: 300;
   border-collapse: separate;
-  border-spacing: 8px;
-  margin-left: -2px;
-  padding: 20px; }
+  border-spacing: 8px; }
   #wp-calendar tbody td a,
   #wp-calendar tfoot td#prev a:hover,
   #wp-calendar tfoot td#next a:hover {

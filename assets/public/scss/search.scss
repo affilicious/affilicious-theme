@@ -3,7 +3,6 @@
 
 .searchform {
   box-sizing: border-box;
-  padding: $space-size-medium;
 
   .form-group {
     @include border-left-radius();

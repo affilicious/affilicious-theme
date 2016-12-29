@@ -169,6 +169,35 @@
         });
     });
 
+    wp.customize('afft-footer-sidebar-headline-color', function (value) {
+        value.bind(function (color) {
+            $('#footer-sidebar h1, #footer-sidebar h2, #footer-sidebar h3, #footer-sidebar h4, #footer-sidebar h5, #footer-sidebar h6').css('color', color);
+        });
+    });
+
+    wp.customize('afft-footer-sidebar-text-color', function (value) {
+        value.bind(function (color) {
+            $('#footer-sidebar').css('color', color);
+        });
+    });
+
+    wp.customize('afft-footer-sidebar-link-color', function (value) {
+        value.bind(function (color) {
+            $('#footer-sidebar a').css('color', color);
+        });
+    });
+
+    wp.customize('afft-footer-sidebar-link-color-hover', function (value) {
+        value.bind(function (color) {
+            $('#footer-sidebar a').hover(function(e) {
+                var standart = wp.customize.instance('afft-footer-sidebar-link-color').get();
+                var link = $(this);
+
+                link.css('color', e.type === "mouseenter" ? color : standart);
+            });
+        });
+    });
+
     wp.customize('afft-footer-plinth-background-color-top', function (value) {
         value.bind(function (top) {
             var bottom = wp.customize.instance('afft-footer-plinth-background-color-bottom').get();
