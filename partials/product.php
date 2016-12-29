@@ -1,5 +1,3 @@
-<?php do_action('affilicious_theme_product_above_post'); ?>
-
 <?php $product = aff_get_product(); ?>
 <article id="product-<?php the_ID(); ?>" <?php post_class('product'); ?>
          itemscope itemtype="http://schema.org/Product">
@@ -12,14 +10,14 @@
                         <?php the_title(); ?>
                     </h1>
 
-                    <?php get_template_part('partials/content-product-review'); ?>
+                    <?php get_template_part('partials/product/review'); ?>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-5 col-sm-6">
                     <div class="row">
                         <div class="col-xs-12">
-                            <?php get_template_part('partials/content-product-image-gallery'); ?>
+                            <?php get_template_part('partials/product/image-gallery'); ?>
                         </div>
                     </div>
                 </div>
@@ -42,7 +40,7 @@
 
                     <div class="row">
                         <div class="col-md-12">
-                            <?php get_template_part('partials/content-product-details'); ?>
+                            <?php get_template_part('partials/product/details'); ?>
                         </div>
                     </div>
                 </div>
@@ -57,8 +55,6 @@
     <?php endif; ?>
 
     <footer class="product-footer">
-        <?php get_template_part('partials/content-product-relations'); ?>
+        <?php get_template_part('partials/product/relations'); ?>
     </footer>
 </article>
-
-<?php do_action('affilicious_theme_product_below_post'); ?>

@@ -9,21 +9,21 @@
 						<?php while (have_posts()) : the_post(); ?>
 							<div class="col-md-12 ias-item">
 								<?php if(aff_is_product()): ?>
-									<?php get_template_part('partials/content-product-preview'); ?>
+									<?php get_template_part('partials/product-preview'); ?>
 								<?php else: ?>
-									<?php get_template_part('partials/content-entry-preview'); ?>
+									<?php get_template_part('partials/entry-preview'); ?>
 								<?php endif; ?>
 							</div>
 						<?php endwhile; ?>
 					<?php else: ?>
 						<div class="col-md-12">
-							<?php get_template_part('partials/content-not-found'); ?>
+							<?php get_template_part('partials/not-found'); ?>
 						</div>
 					<?php endif; ?>
 				</div>
 				<div class="row">
 					<div class="col-md-12">
-						<?php get_template_part('partials/content-pagination'); ?>
+						<?php get_template_part('partials/pagination'); ?>
 					</div>
 				</div>
 			</div>

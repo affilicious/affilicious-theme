@@ -5,7 +5,9 @@
 	</header>
 
 	<section id="not-found-body">
-		<p id="not-found-text"><?php _e('Sorry, but the requested resource was not found.', 'affilicious-theme'); ?></p>
+		<p id="not-found-text">
+			<?php _e('Sorry, but the requested resource was not found.', 'affilicious-theme'); ?>
+		</p>
 
 		<div id="not-found-search">
 			<?php get_search_form(); ?>

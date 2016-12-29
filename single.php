@@ -6,9 +6,9 @@
             <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-xs-12">
                 <?php if (have_posts()): while (have_posts()) : the_post(); ?>
                     <?php if(aff_is_product()): ?>
-                        <?php get_template_part('partials/content-product'); ?>
+                        <?php get_template_part('partials/product'); ?>
                     <?php else: ?>
-                        <?php get_template_part('partials/content-entry'); ?>
+                        <?php get_template_part('partials/entry'); ?>
                     <?php endif; ?>
 
                     <?php if (comments_open() || '0' != get_comments_number()): ?>
