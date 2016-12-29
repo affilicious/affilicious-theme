@@ -1,0 +1,17 @@
+@import "variables";
+@import "mixins";
+
+.tag {
+  @include border-radius;
+  @include font-text;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 0 $space-size-small;
+  margin-left: $space-size-extra-small;
+  transition: all 0.1s ease-in-out;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.1);
+  }
+}

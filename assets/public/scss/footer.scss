@@ -10,33 +10,14 @@
     display: flex;
     align-items: center;
     min-height: 50px;
-    color: #797979;
     background-color: #f8f8f8;
     border-width: 1px 0 0 0;
     border-style: solid;
-
-    a {
-      color: #797979;
-
-      &:hover {
-        color: black;
-      }
-    }
   }
 
   &-content {
     min-height: 250px;
     padding: $space-size-medium 0;
-  }
-
-  &-sidebar {
-    ul {
-      list-style: none;
-      margin-left: 0;
-      margin-right: 0;
-      padding-left: 0;
-      padding-right: 0;
-    }
   }
 
   &-content-first-menu,

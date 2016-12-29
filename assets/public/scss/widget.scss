@@ -80,22 +80,17 @@
   align-items: center;
 
   a {
+    @include border-radius;
+    @include font-text;
     display: inline-block;
-    margin: $space-size-small $space-size-small $space-size-small 0;
-    padding: 0.2rem 0.5rem;
-
-    background: $widget-tagcloud-tag-background-color;
-    border: 1px solid $widget-tagcloud-tag-border-color;
-    transition: all 0.1s ease-in-out;
-
-    &:last-child {
-      margin-right: 0;
-    }
+    box-sizing: border-box;
+    padding: 0 $space-size-small;
+    margin: $space-size-extra-small $space-size-small $space-size-extra-small 0;
+    transition: transform 0.1s ease-in-out;
 
     &:hover,
     &:focus {
       transform: scale(1.1);
-      text-decoration: none;
     }
   }
 }
@@ -104,6 +99,7 @@
   width:100%;
   font-size: 12px;
   font-weight: 300;
+  max-width: 400px;
   border-collapse: separate;
   border-spacing: 8px;
 

@@ -221,7 +221,7 @@ class Footer_Customizer extends Abstract_Customizer
 
         $sections[] = array(
             'id'       => $section,
-            'title'    => __('Sidebar', 'affilicious-theme'),
+            'title'    => __('Footer Sidebar', 'affilicious-theme'),
             'priority' => '10',
             'panel'    => $panel
         );
@@ -261,7 +261,43 @@ class Footer_Customizer extends Abstract_Customizer
             'default'   => '#3bafda',
             'transport' => 'postMessage',
         );
-        
+
+        $options['afft-footer-footer-sidebar-tag-link-color'] = array(
+            'id'        => 'afft-footer-footer-sidebar-tag-link-color',
+            'label'     => __('Tag Link Color', 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'color',
+            'default'   => '#fff',
+            'transport' => 'postMessage',
+        );
+
+        $options['afft-footer-footer-sidebar-tag-link-color-hover'] = array(
+            'id'        => 'afft-footer-footer-sidebar-tag-link-color-hover',
+            'label'     => __('Tag Link Color (Hover)', 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'color',
+            'default'   => '#fff',
+            'transport' => 'postMessage',
+        );
+
+        $options['afft-footer-footer-sidebar-tag-background-color'] = array(
+            'id'        => 'afft-footer-footer-sidebar-tag-background-color',
+            'label'     => __('Tag Background Color', 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'color',
+            'default'   => '#333',
+            'transport' => 'postMessage',
+        );
+
+        $options['afft-footer-footer-sidebar-tag-background-color-hover'] = array(
+            'id'        => 'afft-footer-footer-sidebar-tag-background-color-hover',
+            'label'     => __('Tag Background Color (Hover)', 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'color',
+            'default'   => '#222',
+            'transport' => 'postMessage',
+        );
+
         $section = 'afft-footer-plinth';
 
         $sections[] = array(
@@ -693,7 +729,7 @@ class Footer_Customizer extends Abstract_Customizer
 				// The spaces are necessary to avoid duplicated keys
 				return array(
 					'selectors'    => array(
-						'#footer-content a:hover'
+						'#footer-content'
 					),
 					'declarations' => array(
 						'background-color' => $bottom,
@@ -879,6 +915,58 @@ class Footer_Customizer extends Abstract_Customizer
                 ),
                 'declarations' => array(
                     'color' => $color
+                )
+            );
+        });
+
+        $this->render_selectors('afft-footer-footer-sidebar-tag-link-color', function ($mod) {
+            $color = sanitize_hex_color($mod);
+
+            return array(
+                'selectors'    => array(
+                    '#footer-sidebar .tagcloud a'
+                ),
+                'declarations' => array(
+                    'color' => $color
+                )
+            );
+        });
+
+        $this->render_selectors('afft-footer-footer-sidebar-tag-link-color-hover', function ($mod) {
+            $color = sanitize_hex_color($mod);
+
+            return array(
+                'selectors'    => array(
+                    '#footer-sidebar .tagcloud a:hover'
+                ),
+                'declarations' => array(
+                    'color' => $color
+                )
+            );
+        });
+
+        $this->render_selectors('afft-footer-footer-sidebar-tag-background-color', function ($mod) {
+            $color = sanitize_hex_color($mod);
+
+            return array(
+                'selectors'    => array(
+                    '#footer-sidebar .tagcloud a'
+                ),
+                'declarations' => array(
+                    'background-color' => $color
+                )
+            );
+        });
+
+        $this->render_selectors('afft-footer-footer-sidebar-tag-background-color-hover', function ($mod) {
+            $color = sanitize_hex_color($mod);
+
+            return array(
+                'selectors'    => array(
+                    '#footer-sidebar .tagcloud a:hover'
+                ),
+                'declarations' => array(
+                    'background-color' => $color
                 )
             );
         });

@@ -7303,19 +7303,6 @@ button.close {
   height: auto;
   /* Make sure images with WordPress-added height and width attributes are scaled correctly */ }
 
-@media screen and (min-width: 768px) {
-  .panel {
-    border: none; }
-    .panel-heading {
-      border: none; }
-    .panel-title {
-      background-color: white;
-      border: none; }
-      .panel-title a {
-        display: none; }
-    .panel-heading [data-toggle="collapse"]:after, .panel [data-toggle="collapse"].collapsed:after {
-      display: none; } }
-
 .btn-circle {
   width: 30px;
   height: 30px;
@@ -9064,23 +9051,12 @@ button.close {
     display: flex;
     align-items: center;
     min-height: 50px;
-    color: #797979;
     background-color: #f8f8f8;
     border-width: 1px 0 0 0;
     border-style: solid; }
-    #footer-breadcrumbs a {
-      color: #797979; }
-      #footer-breadcrumbs a:hover {
-        color: black; }
   #footer-content {
     min-height: 250px;
     padding: 20px 0; }
-  #footer-sidebar ul {
-    list-style: none;
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 0;
-    padding-right: 0; }
   #footer-content-first-menu dt, #footer-content-second-menu dt {
     font-size: 1.4rem;
     font-weight: 500;
@@ -10345,6 +10321,76 @@ body {
 .tab-content {
   padding: 20px; }
 
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.428571429;
+  border-radius: 15px;
+  display: inline; }
+
+.btn-circle.btn-lg {
+  width: 50px;
+  height: 50px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 25px; }
+
+.btn-circle.btn-xl {
+  width: 70px;
+  height: 70px;
+  padding: 10px 16px;
+  font-size: 24px;
+  line-height: 1.33;
+  border-radius: 35px; }
+
+.tag {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: normal;
+  font-family: "Helvetica Neue", Arial, Helvetica, Verdana, sans-serif;
+  color: #555;
+  line-height: 28.8px;
+  letter-spacing: 0.01rem;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 0 10px;
+  margin-left: 5px;
+  transition: all 0.1s ease-in-out; }
+  .tag:hover, .tag:focus {
+    transform: scale(1.1); }
+
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.428571429;
+  border-radius: 15px;
+  display: inline; }
+
+.btn-circle.btn-lg {
+  width: 50px;
+  height: 50px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 25px; }
+
+.btn-circle.btn-xl {
+  width: 70px;
+  height: 70px;
+  padding: 10px 16px;
+  font-size: 24px;
+  line-height: 1.33;
+  border-radius: 35px; }
+
 html, body {
   font-size: 16px;
   font-weight: normal;
@@ -10519,22 +10565,28 @@ p, small {
   flex-flow: row wrap;
   align-items: center; }
   .tagcloud a {
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: normal;
+    font-family: "Helvetica Neue", Arial, Helvetica, Verdana, sans-serif;
+    color: #555;
+    line-height: 28.8px;
+    letter-spacing: 0.01rem;
     display: inline-block;
-    margin: 10px 10px 10px 0;
-    padding: 0.2rem 0.5rem;
-    background: rgba(85, 85, 85, 0.1);
-    border: 1px solid rgba(85, 85, 85, 0.1);
-    transition: all 0.1s ease-in-out; }
-    .tagcloud a:last-child {
-      margin-right: 0; }
+    box-sizing: border-box;
+    padding: 0 10px;
+    margin: 5px 10px 5px 0;
+    transition: transform 0.1s ease-in-out; }
     .tagcloud a:hover, .tagcloud a:focus {
-      transform: scale(1.1);
-      text-decoration: none; }
+      transform: scale(1.1); }
 
 #wp-calendar {
   width: 100%;
   font-size: 12px;
   font-weight: 300;
+  max-width: 400px;
   border-collapse: separate;
   border-spacing: 8px; }
   #wp-calendar tbody td a,

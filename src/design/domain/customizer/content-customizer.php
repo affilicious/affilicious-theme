@@ -228,6 +228,78 @@ class Content_Customizer extends Abstract_Customizer
             'transport' => 'postMessage',
         );
 
+        $section = 'afft-content-main-sidebar';
+
+        $sections[] = array(
+            'id'       => $section,
+            'title'    => __('Main Sidebar', 'affilicious-theme'),
+            'priority' => '10',
+            'panel'    => $panel
+        );
+
+        $options['afft-content-main-sidebar-heading-background-color-top'] = array(
+            'id'        => 'afft-content-main-sidebar-heading-background-color-top',
+            'label'     => __('Heading Background Color (Top)', 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'color',
+            'default'   => '',
+            'transport' => 'postMessage',
+        );
+
+        $options['afft-content-main-sidebar-heading-background-color-bottom'] = array(
+            'id'        => 'afft-content-main-sidebar-heading-background-color-bottom',
+            'label'     => __('Heading Background Color (Bottom)', 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'color',
+            'default'   => '',
+            'transport' => 'postMessage',
+        );
+
+        $options['afft-content-main-sidebar-headline-color'] = array(
+            'id'        => 'afft-content-main-sidebar-headline-color',
+            'label'     => __('Heading Title Color', 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'color',
+            'default'   => '#000',
+            'transport' => 'postMessage',
+        );
+
+        $options['afft-content-main-sidebar-tag-link-color'] = array(
+            'id'        => 'afft-content-main-sidebar-tag-link-color',
+            'label'     => __('Tag Link Color', 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'color',
+            'default'   => '#fff',
+            'transport' => 'postMessage',
+        );
+
+        $options['afft-content-main-sidebar-tag-link-color-hover'] = array(
+            'id'        => 'afft-content-main-sidebar-tag-link-color-hover',
+            'label'     => __('Tag Link Color (Hover)', 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'color',
+            'default'   => '#9ad3e8',
+            'transport' => 'postMessage',
+        );
+
+        $options['afft-content-main-sidebar-tag-background-color'] = array(
+            'id'        => 'afft-content-main-sidebar-tag-background-color',
+            'label'     => __('Tag Background Color', 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'color',
+            'default'   => '#3bafda',
+            'transport' => 'postMessage',
+        );
+
+        $options['afft-content-main-sidebar-tag-background-color-hover'] = array(
+            'id'        => 'afft-content-main-sidebar-tag-background-color-hover',
+            'label'     => __('Tag Background Color (Hover)', 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'color',
+            'default'   => '#359dc4',
+            'transport' => 'postMessage',
+        );
+
 		$section = 'afft-content-alert';
 
 		$sections[] = array(
@@ -414,42 +486,6 @@ class Content_Customizer extends Abstract_Customizer
 			'section'   => $section,
 			'type'      => 'color',
 			'default'   => '#ed5565',
-			'transport' => 'postMessage',
-		);
-
-		$section = 'afft-content-widget';
-
-		$sections[] = array(
-			'id'       => $section,
-			'title'    => __('Widgets', 'affilicious-theme'),
-			'priority' => '10',
-			'panel'    => $panel
-		);
-
-		$options['afft-content-widget-heading-background-color-top'] = array(
-			'id'        => 'afft-content-widget-heading-background-color-top',
-			'label'     => __('Heading Background Color (Top)', 'affilicious-theme'),
-			'section'   => $section,
-			'type'      => 'color',
-			'default'   => '',
-			'transport' => 'postMessage',
-		);
-
-		$options['afft-content-widget-heading-background-color-bottom'] = array(
-			'id'        => 'afft-content-widget-heading-background-color-bottom',
-			'label'     => __('Heading Background Color (Bottom)', 'affilicious-theme'),
-			'section'   => $section,
-			'type'      => 'color',
-			'default'   => '',
-			'transport' => 'postMessage',
-		);
-
-		$options['afft-content-widget-heading-title-color'] = array(
-			'id'        => 'afft-content-widget-heading-title-color',
-			'label'     => __('Heading Title Color', 'affilicious-theme'),
-			'section'   => $section,
-			'type'      => 'color',
-			'default'   => '#000',
 			'transport' => 'postMessage',
 		);
 
@@ -1116,8 +1152,8 @@ class Content_Customizer extends Abstract_Customizer
 
             return array(
                 'selectors'    => array(
-                    '.entry-tags .label a',
-                    '.entry-preview-tags .label a'
+                    '.entry-tags a.tag',
+                    '.entry-preview-tags a.tag'
                 ),
                 'declarations' => array(
                     'color' => $color
@@ -1130,8 +1166,8 @@ class Content_Customizer extends Abstract_Customizer
 
             return array(
                 'selectors'    => array(
-                    '.entry-tags .label:hover a',
-                    '.entry-preview-tags .label:hover a'
+                    '.entry-tags a.tag:hover',
+                    '.entry-preview-tags a.tag:hover'
                 ),
                 'declarations' => array(
                     'color' => $color
@@ -1144,8 +1180,8 @@ class Content_Customizer extends Abstract_Customizer
 
             return array(
                 'selectors'    => array(
-                    '.entry-tags .label',
-                    '.entry-preview-tags .label'
+                    '.entry-tags a.tag',
+                    '.entry-preview-tags a.tag'
                 ),
                 'declarations' => array(
                     'background-color' => $color
@@ -1158,8 +1194,8 @@ class Content_Customizer extends Abstract_Customizer
 
             return array(
                 'selectors'    => array(
-                    '.entry-tags .label:hover',
-                    '.entry-preview-tags .label:hover'
+                    '.entry-tags a.tag:hover',
+                    '.entry-preview-tags a.tag:hover'
                 ),
                 'declarations' => array(
                     'background-color' => $color
@@ -1167,7 +1203,115 @@ class Content_Customizer extends Abstract_Customizer
             );
         });
 
-		$this->render_selectors('afft-content-alert-success-link-color-hover', function ($mod) {
+        $this->render_selectors('afft-content-main-sidebar-tag-link-color', function ($mod) {
+            $color = sanitize_hex_color($mod);
+
+            return array(
+                'selectors'    => array(
+                    '#main-sidebar .tagcloud a'
+                ),
+                'declarations' => array(
+                    'color' => $color
+                )
+            );
+        });
+
+        $this->render_selectors('afft-content-main-sidebar-tag-link-color-hover', function ($mod) {
+            $color = sanitize_hex_color($mod);
+
+            return array(
+                'selectors'    => array(
+                    '#main-sidebar .tagcloud a:hover'
+                ),
+                'declarations' => array(
+                    'color' => $color
+                )
+            );
+        });
+
+        $this->render_selectors('afft-content-main-sidebar-tag-background-color', function ($mod) {
+            $color = sanitize_hex_color($mod);
+
+            return array(
+                'selectors'    => array(
+                    '#main-sidebar .tagcloud a'
+                ),
+                'declarations' => array(
+                    'background-color' => $color
+                )
+            );
+        });
+
+        $this->render_selectors('afft-content-main-sidebar-tag-background-color-hover', function ($mod) {
+            $color = sanitize_hex_color($mod);
+
+            return array(
+                'selectors'    => array(
+                    '#main-sidebar .tagcloud a:hover'
+                ),
+                'declarations' => array(
+                    'background-color' => $color
+                )
+            );
+        });
+
+        $this->render_selectors(
+            'afft-content-main-sidebar-heading-background-color-top',
+            'afft-content-main-sidebar-heading-background-color-bottom',
+            function ($mod1, $mod2) {
+                $top    = sanitize_hex_color($mod1);
+                $bottom = sanitize_hex_color($mod2);
+
+                if($top == '') {
+                    $top = 'transparent';
+                }
+
+                if($bottom == '') {
+                    $bottom = 'transparent';
+                }
+
+                if($top === $bottom) {
+                    return array(
+                        'selectors'    => array(
+                            '#main-sidebar .widget-heading',
+                        ),
+                        'declarations' => array(
+                            'background-color' => $bottom,
+                        )
+                    );
+                }
+
+                // The spaces are necessary to avoid duplicated keys
+                return array(
+                    'selectors'    => array(
+                        '#main-sidebar .widget-heading'
+                    ),
+                    'declarations' => array(
+                        'background-color' => $bottom,
+                        'background'       => "-webkit-gradient(linear, 0% 0%, 0% 100%, from($top), to($bottom))",
+                        'background '      => "-webkit-linear-gradient(top, $top, $bottom)",
+                        'background  '     => "-moz-linear-gradient(top, $top, $bottom)",
+                        'background   '    => "-o-linear-gradient(top, $top, $bottom)",
+                        'background    '   => "linear-gradient($top, $bottom)",
+                    )
+                );
+            }
+        );
+
+        $this->render_selectors('afft-content-main-sidebar-headline-color', function ($mod) {
+            $color = sanitize_hex_color($mod);
+
+            return array(
+                'selectors'    => array(
+                    '#main-sidebar .widget-headline',
+                ),
+                'declarations' => array(
+                    'color' => $color
+                )
+            );
+        });
+
+        $this->render_selectors('afft-content-alert-success-link-color-hover', function ($mod) {
 			$color = sanitize_hex_color($mod);
 
 			return array(
@@ -1423,66 +1567,6 @@ class Content_Customizer extends Abstract_Customizer
 				),
 				'declarations' => array(
 					'border-color' => $color
-				)
-			);
-		});
-
-		$this->render_selectors(
-			'afft-content-widget-heading-background-color-top',
-			'afft-content-widget-heading-background-color-bottom',
-			function ($mod1, $mod2) {
-				$top    = sanitize_hex_color($mod1);
-				$bottom = sanitize_hex_color($mod2);
-
-                if($top == '') {
-                    $top = 'transparent';
-                }
-
-                if($bottom == '') {
-                    $bottom = 'transparent';
-                }
-
-				if($top === $bottom) {
-					return array(
-						'selectors'    => array(
-							'.panel .panel-heading',
-						),
-						'declarations' => array(
-							'background-color' => $bottom,
-						)
-					);
-				}
-
-				// The spaces are necessary to avoid duplicated keys
-				return array(
-					'selectors'    => array(
-						'.panel .panel-heading'
-					),
-					'declarations' => array(
-						'background-color' => $bottom,
-						'background'       => "-webkit-gradient(linear, 0% 0%, 0% 100%, from($top), to($bottom))",
-						'background '      => "-webkit-linear-gradient(top, $top, $bottom)",
-						'background  '     => "-moz-linear-gradient(top, $top, $bottom)",
-						'background   '    => "-o-linear-gradient(top, $top, $bottom)",
-						'background    '   => "linear-gradient($top, $bottom)",
-					)
-				);
-			}
-		);
-
-		$this->render_selectors('afft-content-widget-heading-title-color', function ($mod) {
-			$color = sanitize_hex_color($mod);
-
-			return array(
-				'selectors'    => array(
-					'.panel .panel-heading h1',
-					'.panel .panel-heading h2',
-					'.panel .panel-heading h3',
-					'.panel .panel-heading h4',
-					'.panel .panel-heading h5',
-				),
-				'declarations' => array(
-					'color' => $color
 				)
 			);
 		});

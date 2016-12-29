@@ -1,4 +1,4 @@
-@import "mixins/fonts";
+@import "mixins";
 
 html, body {
   @include font-default;

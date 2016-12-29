@@ -32,6 +32,7 @@ class Widget_Setup
      */
     public function modifiy_tag_cloud($args)
     {
+        $args['class'] = 'tag';
         $args['largest'] = self::TAG_CLOUD_LARGEST;
         $args['smallest'] = self::TAG_CLOUD_SMALLEST;
         $args['unit'] = self::TAG_CLOUD_UNIT;

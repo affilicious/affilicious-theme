@@ -5,9 +5,5 @@
 <?php endif; ?>
 
 <span class="entry-tags">
-    <?php the_tags(
-        '<span class="label label-default label-md">',
-        '</span><span class="label label-default label-md">',
-        '</span>');
-    ?>
+    <?php get_template_part('partials/entry/tags'); ?>
 </span>
