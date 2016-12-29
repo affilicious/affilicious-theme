@@ -53,11 +53,15 @@
   margin-bottom: $space-size-medium;
 
   &-heading {
+    box-sizing: border-box;
+    display: block;
     border: none;
     padding: $space-size-small $space-size-medium;
   }
 
   &-body {
+    box-sizing: border-box;
+    display: block;
     padding: $space-size-small $space-size-medium;
 
     ul {

@@ -10546,9 +10546,13 @@ p, small {
   width: 100%;
   margin-bottom: 20px; }
   .widget-heading {
+    box-sizing: border-box;
+    display: block;
     border: none;
     padding: 10px 20px; }
   .widget-body {
+    box-sizing: border-box;
+    display: block;
     padding: 10px 20px; }
     .widget-body ul {
       list-style: none;

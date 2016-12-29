@@ -476,6 +476,7 @@ class Affilicious_Theme
 	    // Hook the sidebars
 	    $sidebar_setup = $this->container['affilicious_theme.design.setup.sidebar'];
 	    add_action('init', array($sidebar_setup, 'init'));
+        add_filter('dynamic_sidebar_params', array($sidebar_setup, 'modify_sidebar_params'));
 
 	    // Hook the widgets
 	    $widget_setup = $this->container['affilicious_theme.design.setup.widget'];
