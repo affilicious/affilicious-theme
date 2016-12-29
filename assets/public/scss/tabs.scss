@@ -1,12 +1,32 @@
 @import "variables";
 
 .nav-tabs {
+  background-color: white;
   li {
+    border-bottom: solid white;
+    border-width: 0 4px 0 0;
     a {
-      border-top: 1px solid #ddd !important;
-      border-bottom: 0 !important;
+      opacity: 0.7;
+      border: 0;
+      &:hover {
+        background-color: rgba(53, 160, 198, 0.07);
+        transition: 0.3s background ease-in-out;
+      }
     }
   }
+  .active {
+    border-bottom: 4px solid #35a0c6;
+    transition: 0.2s all ease-in-out;
+    background-color: white;
+  }
+}
+.nav-tabs.nav-justified>li>a {
+  border-bottom: 1px solid lightgray;
+}
+.nav-tabs.nav-justified>.active>a, .nav-tabs.nav-justified>.active>a:hover {
+  border: none;
+  color: #35a0c6;
+  opacity: 1;
 }
 
 .tab-content {
