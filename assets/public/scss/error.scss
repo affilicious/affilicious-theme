@@ -4,7 +4,7 @@
 
 #not-found,
 #empty-search {
-  @include border-radius($border-radius-default);
+  @include border-radius();
   min-height: 400px;
   margin-bottom: $space-size-medium;
   padding: $space-size-medium;

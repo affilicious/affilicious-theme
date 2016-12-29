@@ -69,8 +69,6 @@
     overflow: hidden;
 
     img {
-      @include box-inner-shadow(0, 100px);
-      @include box-inner-shadow(0, -100px);
       width: 100%;
       height: auto;
     }

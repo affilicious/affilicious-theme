@@ -1,4 +1,5 @@
 @import "variables";
+@import "mixins";
 @import "../../vendor/bootstrap-4/scss/bootstrap-flex-grid";
 
 #footer {
@@ -137,6 +138,7 @@
     }
 
     .social-btn {
+      @include border-radius(25%);
       box-sizing: border-box;
       display: block;
       width: 40px;
@@ -146,7 +148,6 @@
       position: relative;
       overflow: hidden;
       opacity: .99;
-      border-radius: 23%;
       transition: all 0.35s cubic-bezier(0.31, -0.105, 0.43, 1.59);
       padding: 0;
       border-width: $button-social-border-width;

@@ -2,10 +2,8 @@
 @import "mixins";
 
 .comments {
-  @include border-radius($border-radius-default);
-  -moz-box-shadow: $box-shadow-default;
-  -webkit-box-shadow: $box-shadow-default;
-  box-shadow: $box-shadow-default;
+  @include box-shadow();
+  @include border-radius();
   box-sizing: content-box;
   background-color: white;
   margin-bottom: $space-size-medium;

@@ -15,6 +15,8 @@
   }
 
   .panel {
+    @include box-shadow();
+
     &-heading {
       border-top: none;
       border-right: none;

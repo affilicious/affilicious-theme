@@ -6,7 +6,7 @@
   padding: $space-size-medium;
 
   .form-group {
-    @include border-left-radius($border-radius-default);
+    @include border-left-radius();
     box-sizing: border-box;
     float: left;
     height: 34px;
@@ -16,7 +16,7 @@
     border-right: 0;
 
     input {
-      @include border-left-radius($border-radius-default);
+      @include border-left-radius();
       padding-left: 10px;
       box-sizing: border-box;
       width: 100%;
