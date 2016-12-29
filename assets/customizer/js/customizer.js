@@ -1184,6 +1184,18 @@
     });
 })(jQuery);
 (function ($) {
+    wp.customize('afft-general-sidebar-position', function (value) {
+        value.bind(function (position) {
+            var sidebar = $('#content').children('.container').children('.row').children('div:last-child');
+
+            if (position == 'left') {
+                sidebar.addClass('flex-xl-first').addClass(' flex-lg-first');
+            } else {
+                sidebar.removeClass('flex-xl-first').removeClass('flex-lg-first');
+            }
+        });
+    });
+
     wp.customize('afft-general-background-color-top', function (value) {
         value.bind(function (top) {
             var bottom = wp.customize.instance('afft-general-background-color-bottom').get();

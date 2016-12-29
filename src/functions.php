@@ -576,3 +576,43 @@ function afft_get_best_rated_products_query($number = 3)
 
     return $query;
 }
+
+/**
+ * Get the sidebar position of the whole website.
+ *
+ * @since 0.7
+ * @return string
+ */
+function afft_get_sidebar_position()
+{
+    $position = get_theme_mod('afft-general-sidebar-position');
+    $position = !empty($position) ? $position : 'right';
+
+    return $position;
+}
+
+/**
+ * Check if the sidebar of the whole website is on the left side.
+ *
+ * @since 0.7
+ * @return bool
+ */
+function afft_is_sidebar_position_left()
+{
+    $position = afft_get_sidebar_position();
+
+    return $position === 'left';
+}
+
+/**
+ * Check if the sidebar of the whole website is on the right side.
+ *
+ * @since 0.7
+ * @return bool
+ */
+function afft_is_sidebar_position_right()
+{
+    $position = afft_get_sidebar_position();
+
+    return $position === 'right';
+}
