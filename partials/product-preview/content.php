@@ -10,7 +10,7 @@
     <input type="checkbox" id="#product-preview-<?php the_ID(); ?>"/>
     <label for="#product-preview-<?php the_ID(); ?>"><?php _e('Details', 'affilicious-theme')?><i class="fa fa-plus"></i></label>
     <div class="accordion-content">
-        <?php get_template_part('partials/content-product-details'); ?>
+        <?php get_template_part('partials/product/details'); ?>
     </div>
 </section>
 
