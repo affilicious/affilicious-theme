@@ -1,8 +1,8 @@
 <?php
-use Affilicious_Theme\Design\Domain\Helper\Menu_Helper;
-use Affilicious_Theme\Design\Domain\Helper\Logo_Helper;
-use Affilicious_Theme\Settings\Application\Setting\Design_Settings;
-use Affilicious_Theme\Design\Domain\Walker\Bootstrap_Comment_Walker;
+use Affilicious_Theme\Design\Presentation\Helper\Menu_Helper;
+use Affilicious_Theme\Design\Presentation\Helper\Logo_Helper;
+use Affilicious_Theme\Design\Application\Options\Design_Options;
+use Affilicious_Theme\Design\Presentation\Walker\Bootstrap_Comment_Walker;
 use Affilicious\Product\Infrastructure\Repository\Carbon\Carbon_Product_Repository;
 
 if(!defined('ABSPATH')) {
@@ -215,7 +215,7 @@ function afft_list_comments($args = array())
  */
 function afft_link_product_image_gallery()
 {
-	$raw = carbon_get_theme_option(Design_Settings::SETTING_PRODUCT_IMAGE_GALLERY_CLICK_ACTION);
+	$raw = carbon_get_theme_option(Design_Options::SETTING_PRODUCT_IMAGE_GALLERY_CLICK_ACTION);
 	$result = $raw === 'open_shop' ? true : false;
 
 	return $result;
@@ -229,7 +229,7 @@ function afft_link_product_image_gallery()
  */
 function afft_link_product_preview_image()
 {
-	$raw = carbon_get_theme_option(Design_Settings::SETTING_PRODUCT_PREVIEW_IMAGE_CLICK_ACTION);
+	$raw = carbon_get_theme_option(Design_Options::SETTING_PRODUCT_PREVIEW_IMAGE_CLICK_ACTION);
 	$result = $raw === 'open_shop' ? true : false;
 
 	return $result;
@@ -334,7 +334,7 @@ function afft_the_breadcrumbs()
  */
 function afft_has_footer_content()
 {
-    $disabled = carbon_get_theme_option(Design_Settings::OPTION_FOOTER_HIDE_CONTENT_AREA);
+    $disabled = carbon_get_theme_option(Design_Options::OPTION_FOOTER_HIDE_CONTENT_AREA);
 
     return empty($disabled) && $disabled !== 'yes';
 
@@ -359,7 +359,7 @@ function afft_has_facebook_link()
  */
 function afft_get_facebook_link()
 {
-    $facebook_link = carbon_get_theme_option(Design_Settings::OPTION_SOCIAL_MEDIA_FACEBOOK_LINK);
+    $facebook_link = carbon_get_theme_option(Design_Options::OPTION_SOCIAL_MEDIA_FACEBOOK_LINK);
     if(empty($facebook_link)) {
         return null;
     }
@@ -399,7 +399,7 @@ function afft_has_twitter_link()
  */
 function afft_get_twitter_link()
 {
-    $twitter_link = carbon_get_theme_option(Design_Settings::OPTION_SOCIAL_MEDIA_TWITTER_LINK);
+    $twitter_link = carbon_get_theme_option(Design_Options::OPTION_SOCIAL_MEDIA_TWITTER_LINK);
     if(empty($twitter_link)) {
         return null;
     }
@@ -439,7 +439,7 @@ function afft_has_google_plus_link()
  */
 function afft_get_google_plus_link()
 {
-    $google_plus_link = carbon_get_theme_option(Design_Settings::OPTION_SOCIAL_MEDIA_GOOGLE_PLUS_LINK);
+    $google_plus_link = carbon_get_theme_option(Design_Options::OPTION_SOCIAL_MEDIA_GOOGLE_PLUS_LINK);
     if(empty($google_plus_link)) {
         return null;
     }
@@ -479,7 +479,7 @@ function afft_has_pinterest_link()
  */
 function afft_get_pinterest_link()
 {
-    $pinterest_link = carbon_get_theme_option(Design_Settings::OPTION_SOCIAL_MEDIA_PINTEREST_LINK);
+    $pinterest_link = carbon_get_theme_option(Design_Options::OPTION_SOCIAL_MEDIA_PINTEREST_LINK);
     if(empty($pinterest_link)) {
         return null;
     }
@@ -519,7 +519,7 @@ function afft_has_reddit_link()
  */
 function afft_get_reddit_link()
 {
-    $reddit_link = carbon_get_theme_option(Design_Settings::OPTION_SOCIAL_MEDIA_REDDIT_LINK);
+    $reddit_link = carbon_get_theme_option(Design_Options::OPTION_SOCIAL_MEDIA_REDDIT_LINK);
     if(empty($reddit_link)) {
         return null;
     }
