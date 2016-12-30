@@ -3,18 +3,37 @@
         asNavFor: '.slick-nav',
         arrows: true,
         dots: true,
-        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: false,
         autoplay: false,
         mobileFirst: true,
         pauseOnHover: true,
         swipe: true,
-        lazyload: 'ondemand'
+        lazyload: 'ondemand',
+        responsive: [
+            {
+                breakpoint: 1300,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            }
+        ]
+
     });
     jQuery('.slick-nav').slick({
         asNavFor: '.slick-gallery',
         infinite: true,
         mobileFirst: true,
-        slidesToScroll: 1,
+        slidesToScroll: 3,
         focusOnSelect: true
     });
 })(jQuery);
