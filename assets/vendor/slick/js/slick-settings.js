@@ -60,6 +60,8 @@
     jQuery('.slick-product-nav').slick({
         asNavFor: '.slick-product-gallery',
         infinite: false,
-        
+        slidesToScroll: 1,
+        slidesToShow: 4,
+        focusOnSelect: true
     });
 })(jQuery);

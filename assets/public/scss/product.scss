@@ -297,8 +297,7 @@
 #product-image-gallery {
   .slick-container {
     box-sizing: border-box;
-    /*border: 1px dashed lightgrey;*/
-    max-width: 300px;
+    max-width: 500px;
     padding: 15px;
   }
 
@@ -342,15 +341,16 @@
   .slick-product-nav {
     margin-top: 15px;
     width: 100%;
-    max-width: 300px;
   }
 
   .slick-product-nav .slick-track {
     height: 100px;
+    width: 100% !important;
+    transform: translate3d(0, 0, 0) !important;
   }
 
   .slick-product-nav .slick-slide {
-    width: 25%;
+    width: 25% !important;
     outline: none;
   }
 

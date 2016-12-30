@@ -23,15 +23,15 @@
                 </a>
                 <?php endif; ?>
 
-                <div class="slick-product-nav">
-                    <?php foreach ($imageGallery as $image): ?>
+            </div>
+            <div class="slick-product-nav">
+                <?php foreach ($imageGallery as $image): ?>
                     <div class="slick-slide">
                         <div class="figure">
-                                <?php echo wp_get_attachment_image($image['id'], array(50, 50)); ?>
+                            <?php echo wp_get_attachment_image($image['id'], array(50, 50)); ?>
                         </div>
                     </div>
-                    <?php endforeach; ?>
-                </div>
+                <?php endforeach; ?>
             </div>
         </div>
 
