@@ -12544,10 +12544,8 @@ body {
     min-height: 40px; }
   .product-preview-tag-item {
     display: inline;
-    margin-right: 10px;
+    margin-left: 10px;
     margin-bottom: 10px; }
-    .product-preview-tag-item:last-child {
-      margin-right: 0; }
   .product-preview-content {
     width: 100%;
     display: block;

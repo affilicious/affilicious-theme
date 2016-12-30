@@ -205,12 +205,8 @@
 
     &-item {
       display: inline;
-      margin-right: $space-size-small;
+      margin-left: $space-size-small;
       margin-bottom: $space-size-small;
-
-      &:last-child {
-        margin-right: 0;
-      }
     }
   }
 
