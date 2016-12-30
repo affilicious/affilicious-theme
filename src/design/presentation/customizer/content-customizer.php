@@ -57,6 +57,78 @@ class Content_Customizer extends Abstract_Customizer
 			'transport' => 'postMessage',
 		);
 
+        $options['afft-content-product-custom-tag-text-color'] = array(
+            'id'        => 'afft-content-product-custom-tag-text-color',
+            'label'     => __('Custom Tag Text Color', 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'color',
+            'default'   => '#fff',
+            'transport' => 'postMessage',
+        );
+
+        $options['afft-content-product-custom-tag-text-color-hover'] = array(
+            'id'        => 'afft-content-product-custom-tag-text-color-hover',
+            'label'     => __('Custom Tag Text Color (Hover)', 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'color',
+            'default'   => '#9ad3e8',
+            'transport' => 'postMessage',
+        );
+
+        $options['afft-content-product-custom-tag-background-color'] = array(
+            'id'        => 'afft-content-product-custom-tag-background-color',
+            'label'     => __('Custom Tag Background Color', 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'color',
+            'default'   => '#3bafda',
+            'transport' => 'postMessage',
+        );
+
+        $options['afft-content-product-custom-tag-background-color-hover'] = array(
+            'id'        => 'afft-content-product-custom-tag-background-color-hover',
+            'label'     => __('Custom Tag Background Color (Hover)', 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'color',
+            'default'   => '#359dc4',
+            'transport' => 'postMessage',
+        );
+
+        $options['afft-content-product-price-tag-text-color'] = array(
+            'id'        => 'afft-content-product-price-tag-text-color',
+            'label'     => __('Price Tag Text Color', 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'color',
+            'default'   => '#fff',
+            'transport' => 'postMessage',
+        );
+
+        $options['afft-content-product-price-tag-text-color-hover'] = array(
+            'id'        => 'afft-content-product-price-tag-text-color-hover',
+            'label'     => __('Price Tag Text Color (Hover)', 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'color',
+            'default'   => '#ceeace',
+            'transport' => 'postMessage',
+        );
+
+        $options['afft-content-product-price-tag-background-color'] = array(
+            'id'        => 'afft-content-product-price-tag-background-color',
+            'label'     => __('Price Tag Background Color', 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'color',
+            'default'   => '#5cb85c',
+            'transport' => 'postMessage',
+        );
+
+        $options['afft-content-product-price-tag-background-color-hover'] = array(
+            'id'        => 'afft-content-product-price-tag-background-color-hover',
+            'label'     => __('Price Tag Background Color (Hover)', 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'color',
+            'default'   => '#5ab45a',
+            'transport' => 'postMessage',
+        );
+
 		$options['afft-content-product-details-background-color-odd'] = array(
 			'id'        => 'afft-content-product-details-background-color-odd',
 			'label'     => __('Details Background Color (Odd)', 'affilicious-theme'),
@@ -959,6 +1031,110 @@ class Content_Customizer extends Abstract_Customizer
 				)
 			);
 		});
+
+        $this->render_selectors('afft-content-product-custom-tag-text-color', function ($mod) {
+            $color = sanitize_hex_color($mod);
+
+            return array(
+                'selectors'    => array(
+                    '.product-preview-tag-bar .tag',
+                ),
+                'declarations' => array(
+                    'color' => $color
+                )
+            );
+        });
+
+        $this->render_selectors('afft-content-product-custom-tag-text-color-hover', function ($mod) {
+            $color = sanitize_hex_color($mod);
+
+            return array(
+                'selectors'    => array(
+                    '.product-preview-tag-bar .tag:hover',
+                ),
+                'declarations' => array(
+                    'color' => $color
+                )
+            );
+        });
+
+        $this->render_selectors('afft-content-product-custom-tag-background-color', function ($mod) {
+            $color = sanitize_hex_color($mod);
+
+            return array(
+                'selectors'    => array(
+                    '.product-preview-tag-bar .tag',
+                ),
+                'declarations' => array(
+                    'background-color' => $color
+                )
+            );
+        });
+
+        $this->render_selectors('afft-content-product-custom-tag-background-color-hover', function ($mod) {
+            $color = sanitize_hex_color($mod);
+
+            return array(
+                'selectors'    => array(
+                    '.product-preview-tag-bar .tag:hover',
+                ),
+                'declarations' => array(
+                    'background-color' => $color
+                )
+            );
+        });
+
+        $this->render_selectors('afft-content-product-price-tag-text-color', function ($mod) {
+            $color = sanitize_hex_color($mod);
+
+            return array(
+                'selectors'    => array(
+                    '.product-preview-tag-bar .tag-price',
+                ),
+                'declarations' => array(
+                    'color' => $color
+                )
+            );
+        });
+
+        $this->render_selectors('afft-content-product-price-tag-text-color-hover', function ($mod) {
+            $color = sanitize_hex_color($mod);
+
+            return array(
+                'selectors'    => array(
+                    '.product-preview-tag-bar .tag-price:hover',
+                ),
+                'declarations' => array(
+                    'color' => $color
+                )
+            );
+        });
+
+        $this->render_selectors('afft-content-product-price-tag-background-color', function ($mod) {
+            $color = sanitize_hex_color($mod);
+
+            return array(
+                'selectors'    => array(
+                    '.product-preview-tag-bar .tag-price',
+                ),
+                'declarations' => array(
+                    'background-color' => $color
+                )
+            );
+        });
+
+        $this->render_selectors('afft-content-product-price-tag-background-color-hover', function ($mod) {
+            $color = sanitize_hex_color($mod);
+
+            return array(
+                'selectors'    => array(
+                    '.product-preview-tag-bar .tag-price:hover',
+                ),
+                'declarations' => array(
+                    'background-color' => $color
+                )
+            );
+        });
 
 		$this->render_selectors('afft-content-product-details-background-color-odd', function ($mod) {
 			$color = sanitize_hex_color($mod);

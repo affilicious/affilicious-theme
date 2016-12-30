@@ -12529,30 +12529,24 @@ body {
     min-height: 250px; }
     .product-preview-no-thumbnail .no-thumbnail-container {
       padding-bottom: 50px; }
-  .product-preview-badge-bar {
+  .product-preview-tag-bar {
     width: 100%;
-    padding: 10px 20px;
+    padding: 10px 20px 0 20px;
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
     display: flex;
+    flex-flow: row wrap;
     justify-content: flex-end;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.4);
     min-height: 40px; }
-  .product-preview-badge-item {
-    font-size: 0.8rem;
-    font-weight: normal;
-    font-family: "Helvetica Neue", Arial, Helvetica, Verdana, sans-serif;
-    color: #555;
-    line-height: 0.96rem;
-    letter-spacing: 0.01rem;
+  .product-preview-tag-item {
     display: inline;
-    padding: 5px 10px;
     margin-right: 10px;
-    color: white; }
-    .product-preview-badge-item:last-child {
+    margin-bottom: 10px; }
+    .product-preview-tag-item:last-child {
       margin-right: 0; }
   .product-preview-content {
     width: 100%;
@@ -12733,6 +12727,7 @@ body {
   color: #555;
   line-height: 28.8px;
   letter-spacing: 0.01rem;
+  font-size: 0.8rem;
   display: inline-block;
   box-sizing: border-box;
   padding: 0 10px;

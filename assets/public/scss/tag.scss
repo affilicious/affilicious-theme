@@ -4,6 +4,7 @@
 .tag {
   @include border-radius;
   @include font-text;
+  font-size: $font-size-text * 0.8;
   display: inline-block;
   box-sizing: border-box;
   padding: 0 $space-size-small;
