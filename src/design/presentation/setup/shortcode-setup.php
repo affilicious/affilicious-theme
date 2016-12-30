@@ -27,8 +27,5 @@ class Shortcode_Setup
     public function init()
     {
         add_shortcode($this->alert_shortcode->get_name(), array($this->alert_shortcode, 'render'));
-
-        // Legacy support
-        add_shortcode('alert' , array($this->alert_shortcode, 'render'));
     }
 }

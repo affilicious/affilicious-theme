@@ -7,7 +7,7 @@ if(!defined('ABSPATH')) {
 
 class Alert_Shortcode extends Abstract_Shortcode
 {
-	const NAME = 'afft-alert';
+	const NAME = 'alert';
 
 	/**
 	 * @inheritdoc
