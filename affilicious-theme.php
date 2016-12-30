@@ -22,6 +22,9 @@ if(!defined('ABSPATH')) {
     exit('Not allowed to access pages directly.');
 }
 
+define('AFFILICIOUS_THEME_ROOT_PATH', get_template_directory());
+define('AFFILICIOUS_THEME_ROOT_URL', get_template_directory_uri());
+
 final class Affilicious_Theme
 {
     const THEME_NAME = 'affilicious-theme';
@@ -84,7 +87,7 @@ final class Affilicious_Theme
 	 */
 	public static function get_root_path()
 	{
-		return get_template_directory();
+		return AFFILICIOUS_THEME_ROOT_PATH;
 	}
 
 	/**
@@ -95,7 +98,7 @@ final class Affilicious_Theme
 	 */
 	public static function get_root_url()
 	{
-		return get_template_directory_uri();
+		return AFFILICIOUS_THEME_ROOT_URL;
 	}
 
     /**
