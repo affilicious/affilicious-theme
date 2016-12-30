@@ -38,14 +38,14 @@ final class Affilicious_Theme
     const THEME_AUTHOR = 'Affilicious Team';
 
 	/**
-	 * Stores the singleton instance
+	 * Stores the singleton instance.
 	 *
 	 * @var \Affilicious_Theme
 	 */
 	private static $instance;
 
 	/**
-	 * A reference to the main plugin
+	 * A reference to the main plugin.
 	 *
 	 * @see https://github.com/affilicious/affilicious
 	 * @var Affilicious_Plugin
@@ -62,7 +62,7 @@ final class Affilicious_Theme
 	private $container;
 
 	/**
-	 * Get the instance of the affilicious theme
+	 * Get the instance of the affilicious theme.
 	 *
 	 * @since 0.3
 	 * @return Affilicious_Theme
@@ -77,7 +77,7 @@ final class Affilicious_Theme
 	}
 
 	/**
-	 * Get the root dir of the affilicious theme
+	 * Get the root path of the affilicious theme.
 	 *
 	 * @since 0.2
 	 * @return string
@@ -88,7 +88,7 @@ final class Affilicious_Theme
 	}
 
 	/**
-	 * Get the root url of the affilicious theme
+	 * Get the root url of the affilicious theme.
 	 *
 	 * @since 0.2
 	 * @return string
@@ -99,7 +99,7 @@ final class Affilicious_Theme
 	}
 
     /**
-     * Prepare the plugin with for usage with Wordpress and namespaces
+     * Prepare the plugin with for usage with Wordpress and namespaces.
      *
      * @since 0.2
      */
@@ -113,7 +113,7 @@ final class Affilicious_Theme
     }
 
     /**
-     * Make namespaces compatible with the source code of this theme
+     * Make namespaces compatible with the source code of this theme.
      *
      * @since 0.2
      * @param string $class
@@ -143,7 +143,7 @@ final class Affilicious_Theme
     }
 
     /**
-     * _run all of the theme code
+     * Run all of the theme code.
      *
      * @since 0.2
      */
@@ -176,7 +176,7 @@ final class Affilicious_Theme
     }
 
 	/**
-	 * Update the theme with the help of the software licensing from Easy Digital Downloads
+	 * Update the theme with the help of the software licensing from Easy Digital Downloads.
 	 *
 	 * @since 0.2
 	 * @see https://easydigitaldownloads.com/downloads/software-licensing/
@@ -265,7 +265,7 @@ final class Affilicious_Theme
 	}
 
 	/**
-	 * Load the supported theme options
+	 * Load the supported theme options.
 	 *
 	 * @since 0.2
 	 */
@@ -287,7 +287,7 @@ final class Affilicious_Theme
 	}
 
 	/**
-	 * Load the includes
+	 * Load the includes.
 	 *
 	 * @since 0.3.4
 	 */
@@ -299,7 +299,7 @@ final class Affilicious_Theme
     }
 
 	/**
-	 * Register the services for the dependency injection
+	 * Register the services for the dependency injection.
 	 *
 	 * @since 0.3.4
 	 */
@@ -447,7 +447,7 @@ final class Affilicious_Theme
     }
 
 	/**
-	 * Load all required shortcodes
+	 * Load all required shortcodes.
 	 *
 	 * @since 0.3.4
 	 */
@@ -458,7 +458,7 @@ final class Affilicious_Theme
     }
 
     /**
-     * Load the simple functions for an easier usage in templates
+     * Load the simple functions for an easier usage in templates.
      *
      * @since 0.2
      */
@@ -468,7 +468,7 @@ final class Affilicious_Theme
     }
 
     /**
-     * Register all of the hooks related to the public-facing functionality
+     * Register all of the hooks related to the public-facing functionality.
      *
      * @since 0.2
      */
@@ -517,7 +517,7 @@ final class Affilicious_Theme
     }
 
     /**
-     * Register all of the hooks related to the admin area functionality
+     * Register all of the hooks related to the admin area functionality.
      *
      * @since 0.2
      */
@@ -545,6 +545,8 @@ final class Affilicious_Theme
     }
 
 	/**
+     * Get the dependency injection container.
+     *
 	 * @since 0.3.4
 	 * @return Container
 	 */
