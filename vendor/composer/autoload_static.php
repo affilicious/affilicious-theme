@@ -34,12 +34,24 @@ class ComposerStaticInita82e0fed33de0f919d32d1d989a0cc78
         ),
     );
 
+    public static $classMap = array (
+        'Pimple\\Container' => __DIR__ . '/..' . '/pimple/pimple/src/Pimple/Container.php',
+        'Pimple\\ServiceProviderInterface' => __DIR__ . '/..' . '/pimple/pimple/src/Pimple/ServiceProviderInterface.php',
+        'Pimple\\Tests\\Fixtures\\Invokable' => __DIR__ . '/..' . '/pimple/pimple/src/Pimple/Tests/Fixtures/Invokable.php',
+        'Pimple\\Tests\\Fixtures\\NonInvokable' => __DIR__ . '/..' . '/pimple/pimple/src/Pimple/Tests/Fixtures/NonInvokable.php',
+        'Pimple\\Tests\\Fixtures\\PimpleServiceProvider' => __DIR__ . '/..' . '/pimple/pimple/src/Pimple/Tests/Fixtures/PimpleServiceProvider.php',
+        'Pimple\\Tests\\Fixtures\\Service' => __DIR__ . '/..' . '/pimple/pimple/src/Pimple/Tests/Fixtures/Service.php',
+        'Pimple\\Tests\\PimpleServiceProviderInterfaceTest' => __DIR__ . '/..' . '/pimple/pimple/src/Pimple/Tests/PimpleServiceProviderInterfaceTest.php',
+        'Pimple\\Tests\\PimpleTest' => __DIR__ . '/..' . '/pimple/pimple/src/Pimple/Tests/PimpleTest.php',
+    );
+
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInita82e0fed33de0f919d32d1d989a0cc78::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInita82e0fed33de0f919d32d1d989a0cc78::$prefixDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInita82e0fed33de0f919d32d1d989a0cc78::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInita82e0fed33de0f919d32d1d989a0cc78::$classMap;
 
         }, null, ClassLoader::class);
     }

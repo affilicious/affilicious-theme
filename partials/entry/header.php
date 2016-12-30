@@ -4,8 +4,10 @@
     </a>
 </h1>
 
-<time class="entry-date" datetime="<?php the_time('Y-m-d H:i'); ?>" itemprop="datePublished">
-    <span class="day"><?php the_time('j'); ?></span>
-    <span class="month"><?php the_time('F'); ?></span>
-    <span class="year"><?php the_time('Y'); ?></span>
-</time>
+<?php if(!is_page()): ?>
+    <time class="entry-preview-date" datetime="<?php the_time('Y-m-d H:i'); ?>" itemprop="datePublished">
+        <span class="day"><?php the_time('j'); ?></span>
+        <span class="month"><?php the_time('F'); ?></span>
+        <span class="year"><?php the_time('Y'); ?></span>
+    </time>
+<?php endif; ?>

@@ -30,7 +30,6 @@ if (post_password_required()) {
 	<?php if (!comments_open() && get_comments_number() && post_type_supports(get_post_type(), 'comments')): ?>
 		<div class="comments-closed">
 			<div class="alert alert-info">
-
 				<?php _e('Comments are closed.'); ?>
 			</div>
 		</div>

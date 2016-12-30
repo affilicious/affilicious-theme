@@ -20,6 +20,66 @@
         });
     });
 
+    wp.customize('afft-content-product-custom-tag-text-color', function (value) {
+        value.bind(function (color) {
+            $('.product-preview-tag-bar .tag:not(.tag-price)').css('color', color);
+        });
+    });
+
+    wp.customize('afft-content-product-custom-tag-text-color-hover', function (value) {
+        value.bind(function (color) {
+            $('.product-preview-tag-bar .tag:not(.tag-price)').hover(function (e) {
+                var fallback = wp.customize.instance('afft-content-product-custom-tag-text-color').get();
+                $(this).css('color', e.type === "mouseenter" ? color : fallback);
+            });
+        });
+    });
+
+    wp.customize('afft-content-product-custom-tag-background-color', function (value) {
+        value.bind(function (color) {
+            $('.product-preview-tag-bar .tag:not(.tag-price)').css('background-color', color);
+        });
+    });
+
+    wp.customize('afft-content-product-custom-tag-background-color-hover', function (value) {
+        value.bind(function (color) {
+            $('.product-preview-tag-bar .tag:not(.tag-price)').hover(function (e) {
+                var fallback = wp.customize.instance('afft-content-product-custom-tag-background-color').get();
+                $(this).css('background-color', e.type === "mouseenter" ? color : fallback);
+            });
+        });
+    });
+
+    wp.customize('afft-content-product-price-tag-text-color', function (value) {
+        value.bind(function (color) {
+            $('.product-preview-tag-bar .tag-price').css('color', color);
+        });
+    });
+
+    wp.customize('afft-content-product-price-tag-text-color-hover', function (value) {
+        value.bind(function (color) {
+            $('.product-preview-tag-bar .tag-price').hover(function (e) {
+                var fallback = wp.customize.instance('afft-content-product-price-tag-text-color').get();
+                $(this).css('color', e.type === "mouseenter" ? color : fallback);
+            });
+        });
+    });
+
+    wp.customize('afft-content-product-price-tag-background-color', function (value) {
+        value.bind(function (color) {
+            $('.product-preview-tag-bar .tag-price').css('background-color', color);
+        });
+    });
+
+    wp.customize('afft-content-product-price-tag-background-color-hover', function (value) {
+        value.bind(function (color) {
+            $('.product-preview-tag-bar .tag-price').hover(function (e) {
+                var fallback = wp.customize.instance('afft-content-product-price-tag-background-color').get();
+                $(this).css('background-color', e.type === "mouseenter" ? color : fallback);
+            });
+        });
+    });
+
     wp.customize('afft-content-product-details-background-color-odd', function (value) {
         value.bind(function (color) {
             var details = $('.product-details.table > tbody > tr:nth-child(odd)');
@@ -1184,6 +1244,18 @@
     });
 })(jQuery);
 (function ($) {
+    wp.customize('afft-general-sidebar-position', function (value) {
+        value.bind(function (position) {
+            var sidebar = $('#content').children('.container').children('.row').children('div:last-child');
+
+            if (position == 'left') {
+                sidebar.addClass('flex-xl-first').addClass(' flex-lg-first');
+            } else {
+                sidebar.removeClass('flex-xl-first').removeClass('flex-lg-first');
+            }
+        });
+    });
+
     wp.customize('afft-general-background-color-top', function (value) {
         value.bind(function (top) {
             var bottom = wp.customize.instance('afft-general-background-color-bottom').get();

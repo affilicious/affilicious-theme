@@ -34,3 +34,8 @@ h6 {
 p, small {
   @include font-text;
 }
+
+#title {
+  @include font-headline-1;
+  text-decoration: none;
+}

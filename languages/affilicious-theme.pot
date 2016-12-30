@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: "
 "affilicious-theme\n"
 "POT-Creation-Date: "
-"2016-12-29 19:18+0100\n"
+"2016-12-29 23:03+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Your "
 "Name <you@example.com>\n"
@@ -483,6 +483,10 @@ msgstr ""
 msgid "To the review"
 msgstr ""
 
+#: partials/product-preview/content.php:11
+msgid "Details"
+msgstr ""
+
 #: partials/product-sidebar.php:36
 msgid ""
 "No information "
@@ -949,7 +953,7 @@ msgstr ""
 #: src/design/domain/customizer/content-customizer.php:719
 #: src/design/domain/customizer/content-customizer.php:843
 #: src/design/domain/customizer/footer-customizer.php:116
-#: src/design/domain/customizer/general-customizer.php:44
+#: src/design/domain/customizer/general-customizer.php:57
 #: src/design/domain/customizer/header-customizer.php:53
 msgid "Background Image"
 msgstr ""
@@ -957,7 +961,7 @@ msgstr ""
 #: src/design/domain/customizer/content-customizer.php:728
 #: src/design/domain/customizer/content-customizer.php:852
 #: src/design/domain/customizer/footer-customizer.php:125
-#: src/design/domain/customizer/general-customizer.php:53
+#: src/design/domain/customizer/general-customizer.php:66
 #: src/design/domain/customizer/header-customizer.php:62
 msgid "Background Repeat"
 msgstr ""
@@ -971,9 +975,9 @@ msgstr ""
 #: src/design/domain/customizer/footer-customizer.php:129
 #: src/design/domain/customizer/footer-customizer.php:144
 #: src/design/domain/customizer/footer-customizer.php:159
-#: src/design/domain/customizer/general-customizer.php:57
-#: src/design/domain/customizer/general-customizer.php:72
-#: src/design/domain/customizer/general-customizer.php:87
+#: src/design/domain/customizer/general-customizer.php:70
+#: src/design/domain/customizer/general-customizer.php:85
+#: src/design/domain/customizer/general-customizer.php:100
 #: src/design/domain/customizer/header-customizer.php:66
 #: src/design/domain/customizer/header-customizer.php:81
 #: src/design/domain/customizer/header-customizer.php:96
@@ -983,7 +987,7 @@ msgstr ""
 #: src/design/domain/customizer/content-customizer.php:733
 #: src/design/domain/customizer/content-customizer.php:857
 #: src/design/domain/customizer/footer-customizer.php:130
-#: src/design/domain/customizer/general-customizer.php:58
+#: src/design/domain/customizer/general-customizer.php:71
 #: src/design/domain/customizer/header-customizer.php:67
 msgid "Repeat"
 msgstr ""
@@ -991,7 +995,7 @@ msgstr ""
 #: src/design/domain/customizer/content-customizer.php:734
 #: src/design/domain/customizer/content-customizer.php:858
 #: src/design/domain/customizer/footer-customizer.php:131
-#: src/design/domain/customizer/general-customizer.php:59
+#: src/design/domain/customizer/general-customizer.php:72
 #: src/design/domain/customizer/header-customizer.php:68
 msgid "Repeat X"
 msgstr ""
@@ -999,7 +1003,7 @@ msgstr ""
 #: src/design/domain/customizer/content-customizer.php:735
 #: src/design/domain/customizer/content-customizer.php:859
 #: src/design/domain/customizer/footer-customizer.php:132
-#: src/design/domain/customizer/general-customizer.php:60
+#: src/design/domain/customizer/general-customizer.php:73
 #: src/design/domain/customizer/header-customizer.php:69
 msgid "Repeat Y"
 msgstr ""
@@ -1007,7 +1011,7 @@ msgstr ""
 #: src/design/domain/customizer/content-customizer.php:743
 #: src/design/domain/customizer/content-customizer.php:867
 #: src/design/domain/customizer/footer-customizer.php:140
-#: src/design/domain/customizer/general-customizer.php:68
+#: src/design/domain/customizer/general-customizer.php:81
 #: src/design/domain/customizer/header-customizer.php:77
 msgid ""
 "Background Attachment"
@@ -1016,7 +1020,7 @@ msgstr ""
 #: src/design/domain/customizer/content-customizer.php:748
 #: src/design/domain/customizer/content-customizer.php:872
 #: src/design/domain/customizer/footer-customizer.php:145
-#: src/design/domain/customizer/general-customizer.php:73
+#: src/design/domain/customizer/general-customizer.php:86
 #: src/design/domain/customizer/header-customizer.php:82
 msgid "Scroll"
 msgstr ""
@@ -1024,7 +1028,7 @@ msgstr ""
 #: src/design/domain/customizer/content-customizer.php:749
 #: src/design/domain/customizer/content-customizer.php:873
 #: src/design/domain/customizer/footer-customizer.php:146
-#: src/design/domain/customizer/general-customizer.php:74
+#: src/design/domain/customizer/general-customizer.php:87
 #: src/design/domain/customizer/header-customizer.php:83
 msgid "Fixed"
 msgstr ""
@@ -1032,7 +1036,7 @@ msgstr ""
 #: src/design/domain/customizer/content-customizer.php:750
 #: src/design/domain/customizer/content-customizer.php:874
 #: src/design/domain/customizer/footer-customizer.php:147
-#: src/design/domain/customizer/general-customizer.php:75
+#: src/design/domain/customizer/general-customizer.php:88
 #: src/design/domain/customizer/header-customizer.php:84
 msgid "Local"
 msgstr ""
@@ -1040,7 +1044,7 @@ msgstr ""
 #: src/design/domain/customizer/content-customizer.php:758
 #: src/design/domain/customizer/content-customizer.php:882
 #: src/design/domain/customizer/footer-customizer.php:155
-#: src/design/domain/customizer/general-customizer.php:83
+#: src/design/domain/customizer/general-customizer.php:96
 #: src/design/domain/customizer/header-customizer.php:92
 msgid "Background Size"
 msgstr ""
@@ -1048,7 +1052,7 @@ msgstr ""
 #: src/design/domain/customizer/content-customizer.php:763
 #: src/design/domain/customizer/content-customizer.php:887
 #: src/design/domain/customizer/footer-customizer.php:160
-#: src/design/domain/customizer/general-customizer.php:88
+#: src/design/domain/customizer/general-customizer.php:101
 #: src/design/domain/customizer/header-customizer.php:97
 msgid "Custom"
 msgstr ""
@@ -1056,7 +1060,7 @@ msgstr ""
 #: src/design/domain/customizer/content-customizer.php:764
 #: src/design/domain/customizer/content-customizer.php:888
 #: src/design/domain/customizer/footer-customizer.php:161
-#: src/design/domain/customizer/general-customizer.php:89
+#: src/design/domain/customizer/general-customizer.php:102
 #: src/design/domain/customizer/header-customizer.php:98
 msgid "Contain"
 msgstr ""
@@ -1064,7 +1068,7 @@ msgstr ""
 #: src/design/domain/customizer/content-customizer.php:765
 #: src/design/domain/customizer/content-customizer.php:889
 #: src/design/domain/customizer/footer-customizer.php:162
-#: src/design/domain/customizer/general-customizer.php:90
+#: src/design/domain/customizer/general-customizer.php:103
 #: src/design/domain/customizer/header-customizer.php:99
 msgid "Cover"
 msgstr ""
@@ -1072,7 +1076,7 @@ msgstr ""
 #: src/design/domain/customizer/content-customizer.php:773
 #: src/design/domain/customizer/content-customizer.php:897
 #: src/design/domain/customizer/footer-customizer.php:170
-#: src/design/domain/customizer/general-customizer.php:98
+#: src/design/domain/customizer/general-customizer.php:111
 #: src/design/domain/customizer/header-customizer.php:107
 msgid "Background Width"
 msgstr ""
@@ -1080,7 +1084,7 @@ msgstr ""
 #: src/design/domain/customizer/content-customizer.php:781
 #: src/design/domain/customizer/content-customizer.php:905
 #: src/design/domain/customizer/footer-customizer.php:178
-#: src/design/domain/customizer/general-customizer.php:106
+#: src/design/domain/customizer/general-customizer.php:119
 #: src/design/domain/customizer/header-customizer.php:115
 msgid "Background Height"
 msgstr ""
@@ -1207,6 +1211,18 @@ msgstr ""
 #: src/design/domain/customizer/general-customizer.php:20
 #: src/design/domain/customizer/header-customizer.php:28
 msgid "General"
+msgstr ""
+
+#: src/design/domain/customizer/general-customizer.php:44
+msgid "Sidebar position"
+msgstr ""
+
+#: src/design/domain/customizer/general-customizer.php:48
+msgid "Right"
+msgstr ""
+
+#: src/design/domain/customizer/general-customizer.php:49
+msgid "Left"
 msgstr ""
 
 #: src/design/domain/customizer/header-customizer.php:20

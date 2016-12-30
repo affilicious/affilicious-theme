@@ -187,15 +187,16 @@
     }
   }
 
-  &-badge {
+  &-tag {
     &-bar {
       width: 100%;
-      padding: $space-size-small $space-size-medium;
+      padding: $space-size-small $space-size-medium 0 $space-size-medium;
       position: absolute;
       bottom: 0;
       left: 0;
       right: 0;
       display: flex;
+      flex-flow: row wrap;
       justify-content: flex-end;
       align-items: center;
       background-color: rgba(0, 0, 0, 0.4);
@@ -203,15 +204,9 @@
     }
 
     &-item {
-      @include font-small-text;
       display: inline;
-      padding: 5px 10px;
-      margin-right: $space-size-small;
-      color: white;
-
-      &:last-child {
-        margin-right: 0;
-      }
+      margin-left: $space-size-small;
+      margin-bottom: $space-size-small;
     }
   }
 
