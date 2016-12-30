@@ -1,6 +1,8 @@
+// Relations Image Gallery Settings
+
 (function(){
-    jQuery('.slick-gallery').slick({
-        asNavFor: '.slick-nav',
+    jQuery('.slick-relations-gallery').slick({
+        asNavFor: '.slick-relations-nav',
         arrows: true,
         dots: true,
         slidesToShow: 1,
@@ -29,11 +31,35 @@
         ]
 
     });
-    jQuery('.slick-nav').slick({
-        asNavFor: '.slick-gallery',
+    jQuery('.slick-relations-nav').slick({
+        asNavFor: '.slick-relations-gallery',
         infinite: true,
         mobileFirst: true,
-        slidesToScroll: 3,
+        slidesToScroll: 1,
         focusOnSelect: true
+    });
+})(jQuery);
+
+// Product Image Gallery Settings
+
+(function(){
+    jQuery('.slick-product-gallery').slick({
+        asNavFor: '.slick-product-nav',
+        arrows: false,
+        dots: false,
+        adaptiveHeight: true,
+        slidesToShow: 1,
+        autoplay: false,
+        infinite: false,
+        mobileFirst: true,
+        pauseOnHover: true,
+        swipe: true,
+        lazyload: 'ondemand'
+
+    });
+    jQuery('.slick-product-nav').slick({
+        asNavFor: '.slick-product-gallery',
+        infinite: false,
+        
     });
 })(jQuery);

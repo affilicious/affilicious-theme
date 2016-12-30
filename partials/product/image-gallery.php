@@ -2,52 +2,57 @@
 <?php $affiliateLink = aff_get_product_affiliate_link($product); ?>
 
 <?php if($imageGallery = aff_get_product_image_gallery($product)): ?>
-    <div class="product-image-gallery">
-        <div class="portfolio-slider">
-            <?php $linkImageGallery = afft_link_product_image_gallery(); ?>
+    <div id="product-image-gallery">
+        <div class="slick-container">
+            <div class="slick-product-gallery">
+                <?php $linkImageGallery = afft_link_product_image_gallery(); ?>
 
-            <?php if($linkImageGallery): ?>
+                <?php if($linkImageGallery): ?>
                 <a href="<?php echo $affiliateLink; ?>" rel="nofollow" target="_blank">
-            <?php endif; ?>
+                    <?php endif; ?>
 
-            <div class="slick-slider">
-                <?php foreach ($imageGallery as $image): ?>
-                    <div class="slick-slider-item" itemprop="image">
-                        <?php echo wp_get_attachment_image($image['id'], array(250, 250)); ?>
+                    <?php foreach ($imageGallery as $image): ?>
+                    <div class="slick-slide">
+                        <div class="figure">
+                            <?php echo wp_get_attachment_image($image['id'], array(250, 250)); ?>
+                        </div>
                     </div>
-                <?php endforeach; ?>
-            </div>
+                    <?php endforeach; ?>
 
-            <?php if($linkImageGallery): ?>
+                    <?php if($linkImageGallery): ?>
                 </a>
-            <?php endif; ?>
-        </div>
-        <div class="thumb-slider">
-            <div class="slick-slider">
-                <?php foreach ($imageGallery as $image): ?>
-                    <div class="slick-slider-item">
-                        <?php echo wp_get_attachment_image($image['id'], array(50, 50)); ?>
+                <?php endif; ?>
+
+                <div class="slick-product-nav">
+                    <?php foreach ($imageGallery as $image): ?>
+                    <div class="slick-slide">
+                        <div class="figure">
+                                <?php echo wp_get_attachment_image($image['id'], array(50, 50)); ?>
+                        </div>
                     </div>
-                <?php endforeach; ?>
+                    <?php endforeach; ?>
+                </div>
             </div>
         </div>
-    </div>
+
 <?php else: ?>
-    <div class="product-thumbnail">
-        <?php if(has_post_thumbnail()): ?>
-            <?php $linkImageGallery = afft_link_product_image_gallery(); ?>
+        <div class="product-thumbnail">
+            <?php if(has_post_thumbnail()): ?>
+                <?php $linkImageGallery = afft_link_product_image_gallery(); ?>
 
-            <?php if($linkImageGallery): ?>
-                <a href="<?php echo $affiliateLink; ?>" rel="nofollow" target="_blank">
+                <?php if($linkImageGallery): ?>
+                    <a href="<?php echo $affiliateLink; ?>" rel="nofollow" target="_blank">
+                <?php endif; ?>
+
+                <?php the_post_thumbnail(); ?>
+
+                <?php if($linkImageGallery): ?>
+                    </a>
+                <?php endif; ?>
+            <?php else: ?>
+                <?php get_template_part('partials/misc/no-thumbnail'); ?>
             <?php endif; ?>
-
-            <?php the_post_thumbnail(); ?>
-
-            <?php if($linkImageGallery): ?>
-                </a>
-            <?php endif; ?>
-        <?php else: ?>
-            <?php get_template_part('partials/misc/no-thumbnail'); ?>
-        <?php endif; ?>
-    </div>
+        </div>
 <?php endif; ?>
+    </div>
+

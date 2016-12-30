@@ -27,11 +27,11 @@
             <?php if(!empty($relatedProductsQuery)): ?>
                 <div class="tab-pane fade in active" id="related-products">
                     <div class="slick-container">
-                        <div class="slick-gallery">
+                        <div class="slick-relations-gallery">
                             <?php if(!empty($relatedProductsQuery) && $relatedProductsQuery->have_posts()): ?>
                                 <?php while($relatedProductsQuery->have_posts()): $relatedProductsQuery->the_post(); ?>
                                     <?php $affiliateLink = aff_get_product_affiliate_link($relatedProductsQuery->post); ?>
-                                    <div class="slick-nav">
+                                    <div class="slick-relations-nav">
                                         <div class="slick-slide">
                                             <figure class="center">
 
@@ -81,11 +81,11 @@
             <?php if(!empty($relatedAccessoriesQuery)): ?>
                 <div class="tab-pane fade <?php if(empty($relatedAccessoriesQuery)) echo 'in active'; ?>" id="related-accessories">
                     <div class="slick-container">
-                        <div class="slick-gallery">
+                        <div class="slick-relations-gallery">
                             <?php if(!empty($relatedAccessoriesQuery) && $relatedAccessoriesQuery->have_posts()): ?>
                                 <?php while($relatedAccessoriesQuery->have_posts()): $relatedAccessoriesQuery->the_post(); ?>
                                     <?php $affiliateLink = aff_get_product_affiliate_link($relatedAccessoriesQuery->post); ?>
-                                    <div class="slick-nav">
+                                    <div class="slick-relations-nav">
                                         <div class="slick-slide">
                                             <figure class="center">
 
