@@ -295,68 +295,58 @@
 }
 
 #product-image-gallery {
-  .slick-container {
-    box-sizing: border-box;
-    max-width: 500px;
-    padding: 15px;
-  }
 
-  .slick-product-gallery {
-    border: 1px solid #cdcdcd;
-    background-color: #f9f9f9;
-    width: 100%;
-
-  }
-
-  .slick-product-gallery .slick-track {
-    height: 300px;
-  }
-
-  .slick-product-gallery .slick-slide {
-    height: 100%;
-    outline: none;
-  }
-
-  .slick-product-gallery .slick-slide figure,
-  .slick-product-gallery .slick-slide img {
-    width: 100%;
-    display: block;
-    margin: auto;
-  }
-
-  .slick-product-gallery .slick-prev:before,
-  .slick-product-gallery .slick-next:before {
-    color: black;
-  }
-
-  .slick-product-gallery .slick-slide .center,
-  .slick-product-nav .slick-slide .center {
-    margin: 0;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .slick-product-nav {
-    margin-top: 15px;
-    width: 100%;
-  }
-
-  .slick-product-nav .slick-track {
-    height: 100px;
-  }
-
-  .slick-product-nav .slick-slide {
-    width: 25%;
-    outline: none;
-  }
-
-  .slick-product-nav .slick-slide figure,
-  .slick-product-nav .slick-slide img {
-    height: 100%;
-    overflow-x: hidden;
-    display: block;
-    margin: auto;
+  .slick {
+    &-container {
+      box-sizing: border-box;
+      max-width: 500px;
+      padding: 15px;
+    }
+    &-product {
+      &-gallery {
+        border: 1px solid #cdcdcd;
+        background-color: #f9f9f9;
+        width: 100%;
+        .slick-track {
+          height: 300px;
+        }
+        .slick-slide {
+          height: 100%;
+          outline: none;
+        }
+        .slick-slide figure, img {
+          width: 100%;
+          display: block;
+          margin: auto;
+        }
+        .slick-prev:before, .slick-next:before {
+          color: black;
+        }
+      }
+      &-nav {
+        margin-top: 15px;
+        width: 100%;
+        .slide-track {
+          height: 100px;
+        }
+        .slick-slide {
+          width: 25%;
+          outline: none;
+        }
+        .slick-slide img, figure {
+          height: 100%;
+          overflow-x: hidden;
+          display: block;
+          margin: auto;
+        }
+      }
+      &-gallery, &-nav .slick-slide .center {
+        margin: 0;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
   }
 }
