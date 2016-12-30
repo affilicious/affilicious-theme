@@ -22,7 +22,7 @@ if(!defined('ABSPATH')) {
     exit('Not allowed to access pages directly.');
 }
 
-class Affilicious_Theme
+final class Affilicious_Theme
 {
     const THEME_NAME = 'affilicious-theme';
     const THEME_VERSION = '0.5.6';
