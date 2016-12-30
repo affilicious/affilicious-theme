@@ -32,7 +32,7 @@ class Affilicious_Theme
     const THEME_TESTS_NAMESPACE = 'Affilicious_Theme\\Tests\\';
     const THEME_SOURCE_DIR = 'src/';
     const THEME_TESTS_DIR= 'tests/';
-    const THEME_STORE_URL = 'http://affilicioustheme.de';
+    const THEME_STORE_URL = 'https://affilicioustheme.de';
     const THEME_ITEM_NAME= 'Affilicious Theme';
     const THEME_LICENSE_KEY = '42aa4d279329fe829a6022f47e1a47b8';
     const THEME_AUTHOR = 'Affilicious Team';
