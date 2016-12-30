@@ -50,7 +50,7 @@
         adaptiveHeight: true,
         slidesToShow: 1,
         autoplay: false,
-        infinite: false,
+        infinite: true,
         mobileFirst: true,
         pauseOnHover: true,
         swipe: true,
@@ -59,9 +59,11 @@
     });
     jQuery('.slick-product-nav').slick({
         asNavFor: '.slick-product-gallery',
-        infinite: false,
-        slidesToScroll: 1,
+        infinite: true,
+        mobileFirst: true,
+        arrows: false,
         slidesToShow: 4,
+        slidesToScroll: 1,
         focusOnSelect: true
     });
 })(jQuery);
