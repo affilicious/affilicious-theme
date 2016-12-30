@@ -8213,7 +8213,7 @@ button.close {
 
 .entry-body {
   box-sizing: border-box;
-  padding: 20px; }
+  padding: 10px 20px; }
 
 .entry-preview-thumbnail, .entry-preview-bar {
   -moz-border-radius-bottomright: 5px;

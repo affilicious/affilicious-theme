@@ -103,7 +103,7 @@
 .entry {
   &-body {
     box-sizing: border-box;
-    padding: $space-size-medium;
+    padding: $space-size-small $space-size-medium;
   }
 }
 
