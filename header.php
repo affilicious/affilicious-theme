@@ -24,7 +24,11 @@
                                  data-rjs="<?php echo afft_get_retina_logo() ?>" alt="<?php bloginfo('name'); ?>">
                         </a>
                     <?php else: ?>
-                        <h1 id="title" class="display-4" itemprop="headline"><?php bloginfo('name') ?></h1>
+                        <h1 id="title" class="display-4" itemprop="headline">
+                            <a href="<?php home_url('/'); ?>" rel='home'>
+                                <?php bloginfo('name') ?>
+                            </a>
+                        </h1>
                         <p id="tagline" class="lead text-muted" itemprop="description"><?php bloginfo('description') ?></p>
                     <?php endif; ?>
                 </div>
