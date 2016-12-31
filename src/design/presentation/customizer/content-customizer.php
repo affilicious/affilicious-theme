@@ -565,7 +565,7 @@ class Content_Customizer extends Abstract_Customizer
 
 		$sections[] = array(
 			'id'       => $section,
-			'title'    => __('Buttons', 'affilicious-theme'),
+			'title'    => __('Button', 'affilicious-theme'),
 			'priority' => '10',
 			'panel'    => $panel
 		);

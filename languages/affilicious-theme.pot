@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: "
 "affilicious-theme\n"
 "POT-Creation-Date: "
-"2016-12-29 23:03+0100\n"
+"2016-12-31 19:47+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Your "
 "Name <you@example.com>\n"
@@ -58,96 +58,96 @@ msgstr ""
 "SearchPathExcluded-3: "
 "node_modules\n"
 
-#: affilicious-theme.php:187
+#: affilicious-theme.php:190
 msgid "Theme License"
 msgstr ""
 
-#: affilicious-theme.php:188
+#: affilicious-theme.php:191
 msgid ""
 "Enter your theme "
 "license key."
 msgstr ""
 
-#: affilicious-theme.php:189
+#: affilicious-theme.php:192
 msgid "License Key"
 msgstr ""
 
-#: affilicious-theme.php:190
+#: affilicious-theme.php:193
 msgid "License Action"
 msgstr ""
 
-#: affilicious-theme.php:191
+#: affilicious-theme.php:194
 msgid "Deactivate License"
 msgstr ""
 
-#: affilicious-theme.php:192
+#: affilicious-theme.php:195
 msgid "Activate License"
 msgstr ""
 
-#: affilicious-theme.php:193
-#: affilicious-theme.php:205
+#: affilicious-theme.php:196
+#: affilicious-theme.php:208
 msgid ""
 "License status is "
 "unknown."
 msgstr ""
 
-#: affilicious-theme.php:194
+#: affilicious-theme.php:197
 msgid "Renew?"
 msgstr ""
 
-#: affilicious-theme.php:195
+#: affilicious-theme.php:198
 msgid "unlimited"
 msgstr ""
 
-#: affilicious-theme.php:196
+#: affilicious-theme.php:199
 msgid ""
 "License key is active."
 msgstr ""
 
-#: affilicious-theme.php:197
+#: affilicious-theme.php:200
 #, php-format
 msgid "Expires %s."
 msgstr ""
 
-#: affilicious-theme.php:198
+#: affilicious-theme.php:201
 #, php-format
 msgid ""
 "You have %1$s / %2$s "
 "sites activated."
 msgstr ""
 
-#: affilicious-theme.php:199
+#: affilicious-theme.php:202
 #, php-format
 msgid ""
 "License key expired %s."
 msgstr ""
 
-#: affilicious-theme.php:200
+#: affilicious-theme.php:203
 msgid ""
 "License key has expired."
 msgstr ""
 
-#: affilicious-theme.php:201
+#: affilicious-theme.php:204
 msgid ""
 "License keys do not "
 "match."
 msgstr ""
 
-#: affilicious-theme.php:202
+#: affilicious-theme.php:205
 msgid ""
 "License is inactive."
 msgstr ""
 
-#: affilicious-theme.php:203
+#: affilicious-theme.php:206
 msgid ""
 "License key is disabled."
 msgstr ""
 
-#: affilicious-theme.php:204
+#: affilicious-theme.php:207
 msgid "Site is inactive."
 msgstr ""
 
-#: affilicious-theme.php:206
+#: affilicious-theme.php:209
 msgid ""
 "Updating this theme "
 "will lose any "
@@ -156,7 +156,7 @@ msgid ""
 "'OK' to update."
 msgstr ""
 
-#: affilicious-theme.php:207
+#: affilicious-theme.php:210
 #, php-format
 msgid ""
 "<strong>%1$s %2$s</"
@@ -169,7 +169,7 @@ msgid ""
 "now</a>."
 msgstr ""
 
-#: affilicious-theme.php:235
+#: affilicious-theme.php:238
 #, php-format
 msgid ""
 "The Affilicious Theme "
@@ -182,41 +182,41 @@ msgid ""
 "provider."
 msgstr ""
 
-#: affilicious-theme.php:380
+#: affilicious-theme.php:387
 msgid ""
 "Install Required Plugins"
 msgstr ""
 
-#: affilicious-theme.php:381
+#: affilicious-theme.php:388
 msgid "Install Plugins"
 msgstr ""
 
-#: affilicious-theme.php:382
+#: affilicious-theme.php:389
 #, php-format
 msgid ""
 "Installing Plugin: %s"
 msgstr ""
 
-#: affilicious-theme.php:383
+#: affilicious-theme.php:390
 #, php-format
 msgid ""
 "Updating Plugin: %s"
 msgstr ""
 
-#: affilicious-theme.php:384
+#: affilicious-theme.php:391
 msgid ""
 "Something went wrong "
 "with the plugin API."
 msgstr ""
 
-#: affilicious-theme.php:386
+#: affilicious-theme.php:393
 #, php-format
 msgid ""
 "This theme requires the "
 "following plugin: %1$s."
 msgstr ""
 
-#: affilicious-theme.php:391
+#: affilicious-theme.php:398
 #, php-format
 msgid ""
 "This theme recommends "
@@ -224,7 +224,7 @@ msgid ""
 "%1$s."
 msgstr ""
 
-#: affilicious-theme.php:396
+#: affilicious-theme.php:403
 #, php-format
 msgid ""
 "The following plugin "
@@ -235,14 +235,14 @@ msgid ""
 "theme: %1$s."
 msgstr ""
 
-#: affilicious-theme.php:401
+#: affilicious-theme.php:408
 #, php-format
 msgid ""
 "There is an update "
 "available for: %1$s."
 msgstr ""
 
-#: affilicious-theme.php:406
+#: affilicious-theme.php:413
 #, php-format
 msgid ""
 "The following required "
@@ -250,7 +250,7 @@ msgid ""
 "inactive: %1$s."
 msgstr ""
 
-#: affilicious-theme.php:411
+#: affilicious-theme.php:418
 #, php-format
 msgid ""
 "The following "
@@ -259,48 +259,48 @@ msgid ""
 "%1$s."
 msgstr ""
 
-#: affilicious-theme.php:416
+#: affilicious-theme.php:423
 msgid ""
 "Begin installing plugin"
 msgstr ""
 
-#: affilicious-theme.php:421
+#: affilicious-theme.php:428
 msgid ""
 "Begin updating plugin"
 msgstr ""
 
-#: affilicious-theme.php:426
+#: affilicious-theme.php:433
 msgid ""
 "Begin activating plugin"
 msgstr ""
 
-#: affilicious-theme.php:430
+#: affilicious-theme.php:437
 msgid ""
 "Return to Required "
 "Plugins Installer"
 msgstr ""
 
-#: affilicious-theme.php:431
+#: affilicious-theme.php:438
 msgid ""
 "Plugin activated "
 "successfully."
 msgstr ""
 
-#: affilicious-theme.php:432
+#: affilicious-theme.php:439
 msgid ""
 "The following plugin "
 "was activated "
 "successfully:"
 msgstr ""
 
-#: affilicious-theme.php:433
+#: affilicious-theme.php:440
 #, php-format
 msgid ""
 "No action taken. Plugin "
 "%1$s was already active."
 msgstr ""
 
-#: affilicious-theme.php:434
+#: affilicious-theme.php:441
 #, php-format
 msgid ""
 "Plugin not activated. A "
@@ -310,7 +310,7 @@ msgid ""
 "plugin."
 msgstr ""
 
-#: affilicious-theme.php:435
+#: affilicious-theme.php:442
 #, php-format
 msgid ""
 "All plugins installed "
@@ -318,12 +318,12 @@ msgid ""
 "successfully. %1$s"
 msgstr ""
 
-#: affilicious-theme.php:436
+#: affilicious-theme.php:443
 msgid ""
 "Dismiss this notice"
 msgstr ""
 
-#: affilicious-theme.php:437
+#: affilicious-theme.php:444
 msgid ""
 "There are one or more "
 "required or recommended "
@@ -331,7 +331,7 @@ msgid ""
 "update or activate."
 msgstr ""
 
-#: affilicious-theme.php:438
+#: affilicious-theme.php:445
 msgid ""
 "Please contact the "
 "administrator of this "
@@ -345,12 +345,12 @@ msgid_plural "%s Comments"
 msgstr[0] ""
 msgstr[1] ""
 
-#: comments.php:34
+#: comments.php:33
 msgid ""
 "Comments are closed."
 msgstr ""
 
-#: header.php:41
+#: header.php:45
 msgid "Toggle navigation"
 msgstr ""
 
@@ -447,7 +447,7 @@ msgid "Add now"
 msgstr ""
 
 #: partials/not-found.php:4
-#: src/design/domain/customizer/content-customizer.php:791
+#: src/design/presentation/customizer/content-customizer.php:917
 msgid "Not Found"
 msgstr ""
 
@@ -467,27 +467,30 @@ msgid "Show next"
 msgstr ""
 
 #: partials/product-preview/actions.php:6
-#: partials/product-sidebar.php:45
+#: partials/product-sidebar.php:46
+#: partials/product/relations/item/actions.php:6
 #, php-format
 msgid "Buy now at %s"
 msgstr ""
 
 #: partials/product-preview/actions.php:10
-#: partials/product-sidebar.php:49
+#: partials/product-sidebar.php:50
+#: partials/product/relations/item/actions.php:10
 msgid ""
 "Unfortunately not "
 "available."
 msgstr ""
 
 #: partials/product-preview/actions.php:16
-msgid "To the review"
+#: partials/product/relations/item/actions.php:16
+msgid "To the test report"
 msgstr ""
 
 #: partials/product-preview/content.php:11
 msgid "Details"
 msgstr ""
 
-#: partials/product-sidebar.php:36
+#: partials/product-sidebar.php:37
 msgid ""
 "No information "
 "available."
@@ -497,29 +500,18 @@ msgstr ""
 msgid "Download"
 msgstr ""
 
-#: partials/product/relations.php:11
-msgid "Related products"
-msgstr ""
-
-#: partials/product/relations.php:18
+#: partials/product/relations/accessory.php:2
 msgid ""
 "Related accessories"
 msgstr ""
 
-#: partials/product/relations.php:40
-#: partials/product/relations.php:90
+#: partials/product/relations/item/thumbnail.php:7
 #, php-format
 msgid "Link to %s"
 msgstr ""
 
-#: partials/product/relations.php:56
-#: partials/product/relations.php:106
-msgid "Buy"
-msgstr ""
-
-#: partials/product/relations.php:62
-#: partials/product/relations.php:112
-msgid "To The Test Report"
+#: partials/product/relations/product.php:2
+msgid "Related products"
 msgstr ""
 
 #: partials/product/review.php:28
@@ -540,804 +532,937 @@ msgstr[1] ""
 msgid "Search"
 msgstr ""
 
-#: src/common/application/setup/asset-setup.php:108
+#: src/design/application/options/design-options.php:47
+#: src/design/application/options/design-options.php:49
+#: src/design/application/options/design-options.php:51
+#: src/design/application/options/design-options.php:53
+#: src/design/application/options/design-options.php:55
+#, php-format
+msgid "%s Link"
+msgstr ""
+
+#: src/design/application/options/design-options.php:60
+msgid "Hide Content Area"
+msgstr ""
+
+#: src/design/application/options/design-options.php:61
 msgid ""
-"No more results "
-"available."
+"Hide the content area "
+"with the widgets and "
+"both menus."
 msgstr ""
 
-#: src/design/application/setup/comment-setup.php:35
-msgid "Name"
+#: src/design/application/options/design-options.php:65
+msgid ""
+"What will happen, if "
+"you click on the "
+"product image gallery?"
 msgstr ""
 
-#: src/design/application/setup/comment-setup.php:37
-msgid "Email"
+#: src/design/application/options/design-options.php:67
+#: src/design/application/options/design-options.php:72
+msgid "Nothing"
 msgstr ""
 
-#: src/design/application/setup/comment-setup.php:39
-msgid "Website"
+#: src/design/application/options/design-options.php:68
+#: src/design/application/options/design-options.php:73
+msgid "Open the shop"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:20
-#: src/design/domain/customizer/footer-customizer.php:91
+#: src/design/application/options/design-options.php:70
+msgid ""
+"What will happen, if "
+"you click on the "
+"product preview image?"
+msgstr ""
+
+#: src/design/application/options/design-options.php:78
+msgid "Raw Modifications"
+msgstr ""
+
+#: src/design/application/options/design-options.php:80
+msgid ""
+"Please be aware that "
+"ill-considered changes "
+"may destroy your design."
+msgstr ""
+
+#: src/design/application/options/design-options.php:83
+msgid "Design"
+msgstr ""
+
+#: src/design/application/options/design-options.php:85
+msgid "Social Media"
+msgstr ""
+
+#: src/design/application/options/design-options.php:86
+#: src/design/presentation/customizer/footer-customizer.php:20
+msgid "Footer"
+msgstr ""
+
+#: src/design/application/options/design-options.php:87
+msgid "Links"
+msgstr ""
+
+#: src/design/application/options/design-options.php:88
+msgid "Customizer"
+msgstr ""
+
+#: src/design/presentation/customizer/content-customizer.php:20
+#: src/design/presentation/customizer/footer-customizer.php:91
 msgid "Content"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:28
+#: src/design/presentation/customizer/content-customizer.php:28
 msgid "Product"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:35
+#: src/design/presentation/customizer/content-customizer.php:35
 msgid ""
 "Current Price Color"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:44
+#: src/design/presentation/customizer/content-customizer.php:44
 msgid "Old Price Color"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:53
+#: src/design/presentation/customizer/content-customizer.php:53
 msgid "Star Rating Color"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:62
+#: src/design/presentation/customizer/content-customizer.php:62
+msgid ""
+"Custom Tag Text Color"
+msgstr ""
+
+#: src/design/presentation/customizer/content-customizer.php:71
+msgid ""
+"Custom Tag Text Color "
+"(Hover)"
+msgstr ""
+
+#: src/design/presentation/customizer/content-customizer.php:80
+msgid ""
+"Custom Tag Background "
+"Color"
+msgstr ""
+
+#: src/design/presentation/customizer/content-customizer.php:89
+msgid ""
+"Custom Tag Background "
+"Color (Hover)"
+msgstr ""
+
+#: src/design/presentation/customizer/content-customizer.php:98
+msgid ""
+"Price Tag Text Color"
+msgstr ""
+
+#: src/design/presentation/customizer/content-customizer.php:107
+msgid ""
+"Price Tag Text Color "
+"(Hover)"
+msgstr ""
+
+#: src/design/presentation/customizer/content-customizer.php:116
+msgid ""
+"Price Tag Background "
+"Color"
+msgstr ""
+
+#: src/design/presentation/customizer/content-customizer.php:125
+msgid ""
+"Price Tag Background "
+"Color (Hover)"
+msgstr ""
+
+#: src/design/presentation/customizer/content-customizer.php:134
 msgid ""
 "Details Background "
 "Color (Odd)"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:71
+#: src/design/presentation/customizer/content-customizer.php:143
 msgid ""
 "Details Background "
 "Color (Even)"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:80
+#: src/design/presentation/customizer/content-customizer.php:152
 msgid ""
 "Details Border Color"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:89
+#: src/design/presentation/customizer/content-customizer.php:161
 msgid ""
 "Attribute Choice "
 "Background Color"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:98
+#: src/design/presentation/customizer/content-customizer.php:170
 msgid ""
 "Attribute Choice "
 "Background Color (Hover)"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:107
+#: src/design/presentation/customizer/content-customizer.php:179
 msgid ""
 "Attribute Choice "
 "Background Color "
 "(Selected)"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:116
+#: src/design/presentation/customizer/content-customizer.php:188
 msgid ""
 "Attribute Choice Border "
 "Color"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:125
+#: src/design/presentation/customizer/content-customizer.php:197
 msgid ""
 "Attribute Choice Border "
 "Color (Hover)"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:134
+#: src/design/presentation/customizer/content-customizer.php:206
 msgid ""
 "Attribute Choice Border "
 "Color (Selected)"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:145
+#: src/design/presentation/customizer/content-customizer.php:217
 msgid "Post"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:152
+#: src/design/presentation/customizer/content-customizer.php:224
 msgid "Day Color"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:161
+#: src/design/presentation/customizer/content-customizer.php:233
 msgid "Month Color"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:170
+#: src/design/presentation/customizer/content-customizer.php:242
 msgid "Year Color"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:179
+#: src/design/presentation/customizer/content-customizer.php:251
 msgid "Category Color"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:188
+#: src/design/presentation/customizer/content-customizer.php:260
 msgid ""
 "Category Color (Hover)"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:197
-#: src/design/domain/customizer/content-customizer.php:269
-#: src/design/domain/customizer/footer-customizer.php:267
+#: src/design/presentation/customizer/content-customizer.php:269
+#: src/design/presentation/customizer/content-customizer.php:341
+#: src/design/presentation/customizer/footer-customizer.php:267
 msgid "Tag Link Color"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:206
-#: src/design/domain/customizer/content-customizer.php:278
-#: src/design/domain/customizer/footer-customizer.php:276
+#: src/design/presentation/customizer/content-customizer.php:278
+#: src/design/presentation/customizer/content-customizer.php:350
+#: src/design/presentation/customizer/footer-customizer.php:276
 msgid ""
 "Tag Link Color (Hover)"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:215
-#: src/design/domain/customizer/content-customizer.php:287
-#: src/design/domain/customizer/footer-customizer.php:285
+#: src/design/presentation/customizer/content-customizer.php:287
+#: src/design/presentation/customizer/content-customizer.php:359
+#: src/design/presentation/customizer/footer-customizer.php:285
 msgid ""
 "Tag Background Color"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:224
-#: src/design/domain/customizer/content-customizer.php:296
-#: src/design/domain/customizer/footer-customizer.php:294
+#: src/design/presentation/customizer/content-customizer.php:296
+#: src/design/presentation/customizer/content-customizer.php:368
+#: src/design/presentation/customizer/footer-customizer.php:294
 msgid ""
 "Tag Background Color "
 "(Hover)"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:235
-#: src/design/domain/sidebar/main-sidebar.php:25
+#: src/design/presentation/customizer/content-customizer.php:307
+#: src/design/presentation/sidebar/main-sidebar.php:29
 msgid "Main Sidebar"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:242
+#: src/design/presentation/customizer/content-customizer.php:314
 msgid ""
 "Heading Background "
 "Color (Top)"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:251
+#: src/design/presentation/customizer/content-customizer.php:323
 msgid ""
 "Heading Background "
 "Color (Bottom)"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:260
+#: src/design/presentation/customizer/content-customizer.php:332
 msgid ""
 "Heading Title Color"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:307
+#: src/design/presentation/customizer/content-customizer.php:379
 msgid "Alert"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:314
+#: src/design/presentation/customizer/content-customizer.php:386
 msgid ""
 "Success Background Color"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:323
+#: src/design/presentation/customizer/content-customizer.php:395
 msgid "Success Text Color"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:332
+#: src/design/presentation/customizer/content-customizer.php:404
 msgid "Success Link Color"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:341
+#: src/design/presentation/customizer/content-customizer.php:413
 msgid ""
 "Success Link Color "
 "(Hover)"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:350
+#: src/design/presentation/customizer/content-customizer.php:422
 msgid ""
 "Success Border Color"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:359
+#: src/design/presentation/customizer/content-customizer.php:431
 msgid ""
 "Info Background Color"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:368
+#: src/design/presentation/customizer/content-customizer.php:440
 msgid "Info Text Color"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:377
+#: src/design/presentation/customizer/content-customizer.php:449
 msgid "Info Link Color"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:386
+#: src/design/presentation/customizer/content-customizer.php:458
 msgid ""
 "Info Link Color (Hover)"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:395
+#: src/design/presentation/customizer/content-customizer.php:467
 msgid "Info Border Color"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:404
+#: src/design/presentation/customizer/content-customizer.php:476
 msgid ""
 "Warning Background Color"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:413
+#: src/design/presentation/customizer/content-customizer.php:485
 msgid "Warning Text Color"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:422
+#: src/design/presentation/customizer/content-customizer.php:494
 msgid "Warning Link Color"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:431
+#: src/design/presentation/customizer/content-customizer.php:503
 msgid ""
 "Warning Link Color "
 "(Hover)"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:440
+#: src/design/presentation/customizer/content-customizer.php:512
 msgid ""
 "Warning Border Color"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:449
+#: src/design/presentation/customizer/content-customizer.php:521
 msgid ""
 "Danger Background Color"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:458
+#: src/design/presentation/customizer/content-customizer.php:530
 msgid "Danger Text Color"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:467
+#: src/design/presentation/customizer/content-customizer.php:539
 msgid "Danger Link Color"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:476
+#: src/design/presentation/customizer/content-customizer.php:548
 msgid ""
 "Danger Link Color "
 "(Hover)"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:485
+#: src/design/presentation/customizer/content-customizer.php:557
 msgid ""
 "Danger Border Color"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:496
-msgid "Buttons"
+#: src/design/presentation/customizer/content-customizer.php:568
+msgid "Button"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:503
+#: src/design/presentation/customizer/content-customizer.php:575
 msgid ""
 "Search Background Color"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:512
+#: src/design/presentation/customizer/content-customizer.php:584
 msgid ""
 "Search Background Color "
 "(Hover)"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:521
+#: src/design/presentation/customizer/content-customizer.php:593
 msgid ""
 "Search Border Color"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:530
+#: src/design/presentation/customizer/content-customizer.php:602
 msgid ""
 "Search Border Color "
 "(Hover)"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:539
+#: src/design/presentation/customizer/content-customizer.php:611
 msgid "Search Icon Color"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:548
+#: src/design/presentation/customizer/content-customizer.php:620
 msgid ""
 "Search Icon Color "
 "(Hover)"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:557
+#: src/design/presentation/customizer/content-customizer.php:629
 msgid ""
 "Buy Background Color"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:566
+#: src/design/presentation/customizer/content-customizer.php:638
 msgid ""
 "Buy Background Color "
 "(Hover)"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:575
+#: src/design/presentation/customizer/content-customizer.php:647
 msgid "Buy Border Color"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:584
+#: src/design/presentation/customizer/content-customizer.php:656
 msgid ""
 "Buy Border Color (Hover)"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:593
+#: src/design/presentation/customizer/content-customizer.php:665
 msgid "Buy Text Color"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:602
+#: src/design/presentation/customizer/content-customizer.php:674
 msgid ""
 "Buy Text Color (Hover)"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:611
+#: src/design/presentation/customizer/content-customizer.php:683
+msgid ""
+"Not Available "
+"Background Color"
+msgstr ""
+
+#: src/design/presentation/customizer/content-customizer.php:692
+msgid ""
+"Not Available "
+"Background Color (Hover)"
+msgstr ""
+
+#: src/design/presentation/customizer/content-customizer.php:701
+msgid ""
+"Not Available Border "
+"Color"
+msgstr ""
+
+#: src/design/presentation/customizer/content-customizer.php:710
+msgid ""
+"Not Available Border "
+"Color (Hover)"
+msgstr ""
+
+#: src/design/presentation/customizer/content-customizer.php:719
+msgid ""
+"Not Available Text Color"
+msgstr ""
+
+#: src/design/presentation/customizer/content-customizer.php:728
+msgid ""
+"Not Available Text "
+"Color (Hover)"
+msgstr ""
+
+#: src/design/presentation/customizer/content-customizer.php:737
 msgid ""
 "Review Background Color"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:620
+#: src/design/presentation/customizer/content-customizer.php:746
 msgid ""
 "Review Background Color "
 "(Hover)"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:629
+#: src/design/presentation/customizer/content-customizer.php:755
 msgid ""
 "Review Border Color"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:638
+#: src/design/presentation/customizer/content-customizer.php:764
 msgid ""
 "Review Border Color "
 "(Hover)"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:647
+#: src/design/presentation/customizer/content-customizer.php:773
 msgid "Review Text Color"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:656
+#: src/design/presentation/customizer/content-customizer.php:782
 msgid ""
 "Review Text Color "
 "(Hover)"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:667
+#: src/design/presentation/customizer/content-customizer.php:793
 msgid "Empty Search"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:674
+#: src/design/presentation/customizer/content-customizer.php:800
 msgid "Icon Color"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:683
-#: src/design/domain/customizer/content-customizer.php:807
-#: src/design/domain/customizer/footer-customizer.php:231
+#: src/design/presentation/customizer/content-customizer.php:809
+#: src/design/presentation/customizer/content-customizer.php:933
+#: src/design/presentation/customizer/footer-customizer.php:195
+#: src/design/presentation/customizer/footer-customizer.php:231
 msgid "Headline Color"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:692
-#: src/design/domain/customizer/content-customizer.php:816
-#: src/design/domain/customizer/footer-customizer.php:62
-#: src/design/domain/customizer/footer-customizer.php:240
+#: src/design/presentation/customizer/content-customizer.php:818
+#: src/design/presentation/customizer/content-customizer.php:942
+#: src/design/presentation/customizer/footer-customizer.php:62
+#: src/design/presentation/customizer/footer-customizer.php:240
 msgid "Text Color"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:701
-#: src/design/domain/customizer/content-customizer.php:825
-#: src/design/domain/customizer/footer-customizer.php:35
-#: src/design/domain/customizer/footer-customizer.php:98
-#: src/design/domain/customizer/footer-customizer.php:312
-#: src/design/domain/customizer/general-customizer.php:26
-#: src/design/domain/customizer/header-customizer.php:35
-#: src/design/domain/customizer/header-customizer.php:179
+#: src/design/presentation/customizer/content-customizer.php:827
+#: src/design/presentation/customizer/content-customizer.php:951
+#: src/design/presentation/customizer/footer-customizer.php:35
+#: src/design/presentation/customizer/footer-customizer.php:98
+#: src/design/presentation/customizer/footer-customizer.php:312
+#: src/design/presentation/customizer/general-customizer.php:26
+#: src/design/presentation/customizer/header-customizer.php:35
+#: src/design/presentation/customizer/header-customizer.php:170
 msgid ""
 "Background Color (Top)"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:710
-#: src/design/domain/customizer/content-customizer.php:834
-#: src/design/domain/customizer/footer-customizer.php:44
-#: src/design/domain/customizer/footer-customizer.php:107
-#: src/design/domain/customizer/footer-customizer.php:321
-#: src/design/domain/customizer/general-customizer.php:35
-#: src/design/domain/customizer/header-customizer.php:44
-#: src/design/domain/customizer/header-customizer.php:188
+#: src/design/presentation/customizer/content-customizer.php:836
+#: src/design/presentation/customizer/content-customizer.php:960
+#: src/design/presentation/customizer/footer-customizer.php:44
+#: src/design/presentation/customizer/footer-customizer.php:107
+#: src/design/presentation/customizer/footer-customizer.php:321
+#: src/design/presentation/customizer/general-customizer.php:35
+#: src/design/presentation/customizer/header-customizer.php:44
+#: src/design/presentation/customizer/header-customizer.php:179
 msgid ""
 "Background Color "
 "(Bottom)"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:719
-#: src/design/domain/customizer/content-customizer.php:843
-#: src/design/domain/customizer/footer-customizer.php:116
-#: src/design/domain/customizer/general-customizer.php:57
-#: src/design/domain/customizer/header-customizer.php:53
+#: src/design/presentation/customizer/content-customizer.php:845
+#: src/design/presentation/customizer/content-customizer.php:969
+#: src/design/presentation/customizer/footer-customizer.php:116
+#: src/design/presentation/customizer/general-customizer.php:57
+#: src/design/presentation/customizer/header-customizer.php:53
 msgid "Background Image"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:728
-#: src/design/domain/customizer/content-customizer.php:852
-#: src/design/domain/customizer/footer-customizer.php:125
-#: src/design/domain/customizer/general-customizer.php:66
-#: src/design/domain/customizer/header-customizer.php:62
+#: src/design/presentation/customizer/content-customizer.php:854
+#: src/design/presentation/customizer/content-customizer.php:978
+#: src/design/presentation/customizer/footer-customizer.php:125
+#: src/design/presentation/customizer/general-customizer.php:66
+#: src/design/presentation/customizer/header-customizer.php:62
 msgid "Background Repeat"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:732
-#: src/design/domain/customizer/content-customizer.php:747
-#: src/design/domain/customizer/content-customizer.php:762
-#: src/design/domain/customizer/content-customizer.php:856
-#: src/design/domain/customizer/content-customizer.php:871
-#: src/design/domain/customizer/content-customizer.php:886
-#: src/design/domain/customizer/footer-customizer.php:129
-#: src/design/domain/customizer/footer-customizer.php:144
-#: src/design/domain/customizer/footer-customizer.php:159
-#: src/design/domain/customizer/general-customizer.php:70
-#: src/design/domain/customizer/general-customizer.php:85
-#: src/design/domain/customizer/general-customizer.php:100
-#: src/design/domain/customizer/header-customizer.php:66
-#: src/design/domain/customizer/header-customizer.php:81
-#: src/design/domain/customizer/header-customizer.php:96
+#: src/design/presentation/customizer/content-customizer.php:858
+#: src/design/presentation/customizer/content-customizer.php:873
+#: src/design/presentation/customizer/content-customizer.php:888
+#: src/design/presentation/customizer/content-customizer.php:982
+#: src/design/presentation/customizer/content-customizer.php:997
+#: src/design/presentation/customizer/content-customizer.php:1012
+#: src/design/presentation/customizer/footer-customizer.php:129
+#: src/design/presentation/customizer/footer-customizer.php:144
+#: src/design/presentation/customizer/footer-customizer.php:159
+#: src/design/presentation/customizer/general-customizer.php:70
+#: src/design/presentation/customizer/general-customizer.php:85
+#: src/design/presentation/customizer/general-customizer.php:100
+#: src/design/presentation/customizer/header-customizer.php:66
+#: src/design/presentation/customizer/header-customizer.php:81
+#: src/design/presentation/customizer/header-customizer.php:96
 msgid "None"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:733
-#: src/design/domain/customizer/content-customizer.php:857
-#: src/design/domain/customizer/footer-customizer.php:130
-#: src/design/domain/customizer/general-customizer.php:71
-#: src/design/domain/customizer/header-customizer.php:67
+#: src/design/presentation/customizer/content-customizer.php:859
+#: src/design/presentation/customizer/content-customizer.php:983
+#: src/design/presentation/customizer/footer-customizer.php:130
+#: src/design/presentation/customizer/general-customizer.php:71
+#: src/design/presentation/customizer/header-customizer.php:67
 msgid "Repeat"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:734
-#: src/design/domain/customizer/content-customizer.php:858
-#: src/design/domain/customizer/footer-customizer.php:131
-#: src/design/domain/customizer/general-customizer.php:72
-#: src/design/domain/customizer/header-customizer.php:68
+#: src/design/presentation/customizer/content-customizer.php:860
+#: src/design/presentation/customizer/content-customizer.php:984
+#: src/design/presentation/customizer/footer-customizer.php:131
+#: src/design/presentation/customizer/general-customizer.php:72
+#: src/design/presentation/customizer/header-customizer.php:68
 msgid "Repeat X"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:735
-#: src/design/domain/customizer/content-customizer.php:859
-#: src/design/domain/customizer/footer-customizer.php:132
-#: src/design/domain/customizer/general-customizer.php:73
-#: src/design/domain/customizer/header-customizer.php:69
+#: src/design/presentation/customizer/content-customizer.php:861
+#: src/design/presentation/customizer/content-customizer.php:985
+#: src/design/presentation/customizer/footer-customizer.php:132
+#: src/design/presentation/customizer/general-customizer.php:73
+#: src/design/presentation/customizer/header-customizer.php:69
 msgid "Repeat Y"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:743
-#: src/design/domain/customizer/content-customizer.php:867
-#: src/design/domain/customizer/footer-customizer.php:140
-#: src/design/domain/customizer/general-customizer.php:81
-#: src/design/domain/customizer/header-customizer.php:77
+#: src/design/presentation/customizer/content-customizer.php:869
+#: src/design/presentation/customizer/content-customizer.php:993
+#: src/design/presentation/customizer/footer-customizer.php:140
+#: src/design/presentation/customizer/general-customizer.php:81
+#: src/design/presentation/customizer/header-customizer.php:77
 msgid ""
 "Background Attachment"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:748
-#: src/design/domain/customizer/content-customizer.php:872
-#: src/design/domain/customizer/footer-customizer.php:145
-#: src/design/domain/customizer/general-customizer.php:86
-#: src/design/domain/customizer/header-customizer.php:82
+#: src/design/presentation/customizer/content-customizer.php:874
+#: src/design/presentation/customizer/content-customizer.php:998
+#: src/design/presentation/customizer/footer-customizer.php:145
+#: src/design/presentation/customizer/general-customizer.php:86
+#: src/design/presentation/customizer/header-customizer.php:82
 msgid "Scroll"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:749
-#: src/design/domain/customizer/content-customizer.php:873
-#: src/design/domain/customizer/footer-customizer.php:146
-#: src/design/domain/customizer/general-customizer.php:87
-#: src/design/domain/customizer/header-customizer.php:83
+#: src/design/presentation/customizer/content-customizer.php:875
+#: src/design/presentation/customizer/content-customizer.php:999
+#: src/design/presentation/customizer/footer-customizer.php:146
+#: src/design/presentation/customizer/general-customizer.php:87
+#: src/design/presentation/customizer/header-customizer.php:83
 msgid "Fixed"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:750
-#: src/design/domain/customizer/content-customizer.php:874
-#: src/design/domain/customizer/footer-customizer.php:147
-#: src/design/domain/customizer/general-customizer.php:88
-#: src/design/domain/customizer/header-customizer.php:84
+#: src/design/presentation/customizer/content-customizer.php:876
+#: src/design/presentation/customizer/content-customizer.php:1000
+#: src/design/presentation/customizer/footer-customizer.php:147
+#: src/design/presentation/customizer/general-customizer.php:88
+#: src/design/presentation/customizer/header-customizer.php:84
 msgid "Local"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:758
-#: src/design/domain/customizer/content-customizer.php:882
-#: src/design/domain/customizer/footer-customizer.php:155
-#: src/design/domain/customizer/general-customizer.php:96
-#: src/design/domain/customizer/header-customizer.php:92
+#: src/design/presentation/customizer/content-customizer.php:884
+#: src/design/presentation/customizer/content-customizer.php:1008
+#: src/design/presentation/customizer/footer-customizer.php:155
+#: src/design/presentation/customizer/general-customizer.php:96
+#: src/design/presentation/customizer/header-customizer.php:92
 msgid "Background Size"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:763
-#: src/design/domain/customizer/content-customizer.php:887
-#: src/design/domain/customizer/footer-customizer.php:160
-#: src/design/domain/customizer/general-customizer.php:101
-#: src/design/domain/customizer/header-customizer.php:97
+#: src/design/presentation/customizer/content-customizer.php:889
+#: src/design/presentation/customizer/content-customizer.php:1013
+#: src/design/presentation/customizer/footer-customizer.php:160
+#: src/design/presentation/customizer/general-customizer.php:101
+#: src/design/presentation/customizer/header-customizer.php:97
 msgid "Custom"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:764
-#: src/design/domain/customizer/content-customizer.php:888
-#: src/design/domain/customizer/footer-customizer.php:161
-#: src/design/domain/customizer/general-customizer.php:102
-#: src/design/domain/customizer/header-customizer.php:98
+#: src/design/presentation/customizer/content-customizer.php:890
+#: src/design/presentation/customizer/content-customizer.php:1014
+#: src/design/presentation/customizer/footer-customizer.php:161
+#: src/design/presentation/customizer/general-customizer.php:102
+#: src/design/presentation/customizer/header-customizer.php:98
 msgid "Contain"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:765
-#: src/design/domain/customizer/content-customizer.php:889
-#: src/design/domain/customizer/footer-customizer.php:162
-#: src/design/domain/customizer/general-customizer.php:103
-#: src/design/domain/customizer/header-customizer.php:99
+#: src/design/presentation/customizer/content-customizer.php:891
+#: src/design/presentation/customizer/content-customizer.php:1015
+#: src/design/presentation/customizer/footer-customizer.php:162
+#: src/design/presentation/customizer/general-customizer.php:103
+#: src/design/presentation/customizer/header-customizer.php:99
 msgid "Cover"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:773
-#: src/design/domain/customizer/content-customizer.php:897
-#: src/design/domain/customizer/footer-customizer.php:170
-#: src/design/domain/customizer/general-customizer.php:111
-#: src/design/domain/customizer/header-customizer.php:107
+#: src/design/presentation/customizer/content-customizer.php:899
+#: src/design/presentation/customizer/content-customizer.php:1023
+#: src/design/presentation/customizer/footer-customizer.php:170
+#: src/design/presentation/customizer/general-customizer.php:111
+#: src/design/presentation/customizer/header-customizer.php:107
 msgid "Background Width"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:781
-#: src/design/domain/customizer/content-customizer.php:905
-#: src/design/domain/customizer/footer-customizer.php:178
-#: src/design/domain/customizer/general-customizer.php:119
-#: src/design/domain/customizer/header-customizer.php:115
+#: src/design/presentation/customizer/content-customizer.php:907
+#: src/design/presentation/customizer/content-customizer.php:1031
+#: src/design/presentation/customizer/footer-customizer.php:178
+#: src/design/presentation/customizer/general-customizer.php:119
+#: src/design/presentation/customizer/header-customizer.php:115
 msgid "Background Height"
 msgstr ""
 
-#: src/design/domain/customizer/content-customizer.php:798
+#: src/design/presentation/customizer/content-customizer.php:924
 msgid "Error Code Color"
 msgstr ""
 
-#: src/design/domain/customizer/footer-customizer.php:20
-#: src/settings/application/setting/design-settings.php:86
-msgid "Footer"
-msgstr ""
-
-#: src/design/domain/customizer/footer-customizer.php:28
+#: src/design/presentation/customizer/footer-customizer.php:28
 msgid "Breadcrumbs"
 msgstr ""
 
-#: src/design/domain/customizer/footer-customizer.php:53
-#: src/design/domain/customizer/header-customizer.php:197
+#: src/design/presentation/customizer/footer-customizer.php:53
+#: src/design/presentation/customizer/header-customizer.php:188
 msgid "Border Color"
 msgstr ""
 
-#: src/design/domain/customizer/footer-customizer.php:71
-#: src/design/domain/customizer/footer-customizer.php:204
-#: src/design/domain/customizer/footer-customizer.php:249
-#: src/design/domain/customizer/footer-customizer.php:618
-#: src/design/domain/customizer/header-customizer.php:224
+#: src/design/presentation/customizer/footer-customizer.php:71
+#: src/design/presentation/customizer/footer-customizer.php:204
+#: src/design/presentation/customizer/footer-customizer.php:249
+#: src/design/presentation/customizer/footer-customizer.php:618
+#: src/design/presentation/customizer/header-customizer.php:215
 msgid "Link Color"
 msgstr ""
 
-#: src/design/domain/customizer/footer-customizer.php:80
-#: src/design/domain/customizer/footer-customizer.php:213
-#: src/design/domain/customizer/footer-customizer.php:258
-#: src/design/domain/customizer/footer-customizer.php:627
-#: src/design/domain/customizer/header-customizer.php:233
+#: src/design/presentation/customizer/footer-customizer.php:80
+#: src/design/presentation/customizer/footer-customizer.php:213
+#: src/design/presentation/customizer/footer-customizer.php:258
+#: src/design/presentation/customizer/footer-customizer.php:627
+#: src/design/presentation/customizer/header-customizer.php:224
 msgid "Link Color (Hover)"
 msgstr ""
 
-#: src/design/domain/customizer/footer-customizer.php:188
+#: src/design/presentation/customizer/footer-customizer.php:188
 msgid "Content Menu"
 msgstr ""
 
-#: src/design/domain/customizer/footer-customizer.php:195
-#: src/design/domain/customizer/header-customizer.php:132
-msgid "Title Color"
-msgstr ""
-
-#: src/design/domain/customizer/footer-customizer.php:224
-#: src/design/domain/sidebar/footer-sidebar.php:25
+#: src/design/presentation/customizer/footer-customizer.php:224
+#: src/design/presentation/sidebar/footer-sidebar.php:29
 msgid "Footer Sidebar"
 msgstr ""
 
-#: src/design/domain/customizer/footer-customizer.php:305
+#: src/design/presentation/customizer/footer-customizer.php:305
 msgid "Plinth"
 msgstr ""
 
-#: src/design/domain/customizer/footer-customizer.php:330
+#: src/design/presentation/customizer/footer-customizer.php:330
 msgid "Copyright Color"
 msgstr ""
 
-#: src/design/domain/customizer/footer-customizer.php:339
-#: src/design/domain/customizer/footer-customizer.php:393
-#: src/design/domain/customizer/footer-customizer.php:447
-#: src/design/domain/customizer/footer-customizer.php:501
-#: src/design/domain/customizer/footer-customizer.php:555
+#: src/design/presentation/customizer/footer-customizer.php:339
+#: src/design/presentation/customizer/footer-customizer.php:393
+#: src/design/presentation/customizer/footer-customizer.php:447
+#: src/design/presentation/customizer/footer-customizer.php:501
+#: src/design/presentation/customizer/footer-customizer.php:555
 #, php-format
 msgid "%s Icon Color"
 msgstr ""
 
-#: src/design/domain/customizer/footer-customizer.php:348
-#: src/design/domain/customizer/footer-customizer.php:402
-#: src/design/domain/customizer/footer-customizer.php:456
-#: src/design/domain/customizer/footer-customizer.php:510
-#: src/design/domain/customizer/footer-customizer.php:564
+#: src/design/presentation/customizer/footer-customizer.php:348
+#: src/design/presentation/customizer/footer-customizer.php:402
+#: src/design/presentation/customizer/footer-customizer.php:456
+#: src/design/presentation/customizer/footer-customizer.php:510
+#: src/design/presentation/customizer/footer-customizer.php:564
 #, php-format
 msgid ""
 "%s Icon Color (Hover)"
 msgstr ""
 
-#: src/design/domain/customizer/footer-customizer.php:357
-#: src/design/domain/customizer/footer-customizer.php:411
-#: src/design/domain/customizer/footer-customizer.php:465
-#: src/design/domain/customizer/footer-customizer.php:519
-#: src/design/domain/customizer/footer-customizer.php:573
+#: src/design/presentation/customizer/footer-customizer.php:357
+#: src/design/presentation/customizer/footer-customizer.php:411
+#: src/design/presentation/customizer/footer-customizer.php:465
+#: src/design/presentation/customizer/footer-customizer.php:519
+#: src/design/presentation/customizer/footer-customizer.php:573
 #, php-format
 msgid ""
 "%s Background Color"
 msgstr ""
 
-#: src/design/domain/customizer/footer-customizer.php:366
-#: src/design/domain/customizer/footer-customizer.php:420
-#: src/design/domain/customizer/footer-customizer.php:474
-#: src/design/domain/customizer/footer-customizer.php:528
-#: src/design/domain/customizer/footer-customizer.php:582
+#: src/design/presentation/customizer/footer-customizer.php:366
+#: src/design/presentation/customizer/footer-customizer.php:420
+#: src/design/presentation/customizer/footer-customizer.php:474
+#: src/design/presentation/customizer/footer-customizer.php:528
+#: src/design/presentation/customizer/footer-customizer.php:582
 #, php-format
 msgid ""
 "%s Background Color "
 "(Hover)"
 msgstr ""
 
-#: src/design/domain/customizer/footer-customizer.php:375
-#: src/design/domain/customizer/footer-customizer.php:429
-#: src/design/domain/customizer/footer-customizer.php:483
-#: src/design/domain/customizer/footer-customizer.php:537
-#: src/design/domain/customizer/footer-customizer.php:591
+#: src/design/presentation/customizer/footer-customizer.php:375
+#: src/design/presentation/customizer/footer-customizer.php:429
+#: src/design/presentation/customizer/footer-customizer.php:483
+#: src/design/presentation/customizer/footer-customizer.php:537
+#: src/design/presentation/customizer/footer-customizer.php:591
 #, php-format
 msgid "%s Border Color"
 msgstr ""
 
-#: src/design/domain/customizer/footer-customizer.php:384
-#: src/design/domain/customizer/footer-customizer.php:438
-#: src/design/domain/customizer/footer-customizer.php:492
-#: src/design/domain/customizer/footer-customizer.php:546
-#: src/design/domain/customizer/footer-customizer.php:600
+#: src/design/presentation/customizer/footer-customizer.php:384
+#: src/design/presentation/customizer/footer-customizer.php:438
+#: src/design/presentation/customizer/footer-customizer.php:492
+#: src/design/presentation/customizer/footer-customizer.php:546
+#: src/design/presentation/customizer/footer-customizer.php:600
 #, php-format
 msgid ""
 "%s Border Color (Hover)"
 msgstr ""
 
-#: src/design/domain/customizer/footer-customizer.php:611
+#: src/design/presentation/customizer/footer-customizer.php:611
 msgid "Plinth Menu"
 msgstr ""
 
-#: src/design/domain/customizer/general-customizer.php:20
-#: src/design/domain/customizer/header-customizer.php:28
+#: src/design/presentation/customizer/general-customizer.php:20
 msgid "General"
 msgstr ""
 
-#: src/design/domain/customizer/general-customizer.php:44
+#: src/design/presentation/customizer/general-customizer.php:44
 msgid "Sidebar position"
 msgstr ""
 
-#: src/design/domain/customizer/general-customizer.php:48
+#: src/design/presentation/customizer/general-customizer.php:48
 msgid "Right"
 msgstr ""
 
-#: src/design/domain/customizer/general-customizer.php:49
+#: src/design/presentation/customizer/general-customizer.php:49
 msgid "Left"
 msgstr ""
 
-#: src/design/domain/customizer/header-customizer.php:20
+#: src/design/presentation/customizer/header-customizer.php:20
 msgid "Header"
 msgstr ""
 
-#: src/design/domain/customizer/header-customizer.php:125
+#: src/design/presentation/customizer/header-customizer.php:28
 msgid "Banner"
 msgstr ""
 
-#: src/design/domain/customizer/header-customizer.php:141
+#: src/design/presentation/customizer/header-customizer.php:123
+msgid "Title Color"
+msgstr ""
+
+#: src/design/presentation/customizer/header-customizer.php:132
 msgid "Title Shadow Color"
 msgstr ""
 
-#: src/design/domain/customizer/header-customizer.php:143
-#: src/design/domain/customizer/header-customizer.php:162
+#: src/design/presentation/customizer/header-customizer.php:134
+#: src/design/presentation/customizer/header-customizer.php:153
 msgid ""
 "Set the default color "
 "#600099 for "
 "transparency."
 msgstr ""
 
-#: src/design/domain/customizer/header-customizer.php:151
+#: src/design/presentation/customizer/header-customizer.php:142
 msgid "Tagline Color"
 msgstr ""
 
-#: src/design/domain/customizer/header-customizer.php:160
+#: src/design/presentation/customizer/header-customizer.php:151
 msgid ""
 "Tagline Shadow Color"
 msgstr ""
 
-#: src/design/domain/customizer/header-customizer.php:172
-#: src/design/domain/menu/main-menu.php:27
+#: src/design/presentation/customizer/header-customizer.php:163
+#: src/design/presentation/menu/main-menu.php:31
 msgid "Main Menu"
 msgstr ""
 
-#: src/design/domain/customizer/header-customizer.php:206
+#: src/design/presentation/customizer/header-customizer.php:197
 msgid ""
 "Item Background Color "
 "(Hover Top)"
 msgstr ""
 
-#: src/design/domain/customizer/header-customizer.php:215
+#: src/design/presentation/customizer/header-customizer.php:206
 msgid ""
 "Item Background Color "
 "(Hover Bottom)"
 msgstr ""
 
-#: src/design/domain/customizer/header-customizer.php:242
+#: src/design/presentation/customizer/header-customizer.php:233
 msgid ""
 "Dropdown Background "
 "Color"
 msgstr ""
 
-#: src/design/domain/customizer/header-customizer.php:251
+#: src/design/presentation/customizer/header-customizer.php:242
 msgid ""
 "Dropdown Item "
 "Background Color (Hover)"
 msgstr ""
 
-#: src/design/domain/customizer/header-customizer.php:260
+#: src/design/presentation/customizer/header-customizer.php:251
 msgid ""
 "Dropdown Link Color"
 msgstr ""
 
-#: src/design/domain/customizer/header-customizer.php:269
+#: src/design/presentation/customizer/header-customizer.php:260
 msgid ""
 "Dropdown Link Color "
 "(Hover)"
 msgstr ""
 
-#: src/design/domain/customizer/header-customizer.php:278
+#: src/design/presentation/customizer/header-customizer.php:269
 msgid ""
 "Toggle Background Color"
 msgstr ""
 
-#: src/design/domain/customizer/header-customizer.php:279
-#: src/design/domain/customizer/header-customizer.php:289
-#: src/design/domain/customizer/header-customizer.php:299
-#: src/design/domain/customizer/header-customizer.php:309
+#: src/design/presentation/customizer/header-customizer.php:270
+#: src/design/presentation/customizer/header-customizer.php:280
+#: src/design/presentation/customizer/header-customizer.php:290
+#: src/design/presentation/customizer/header-customizer.php:300
 msgid ""
 "Only visible on mobile "
 "devices"
 msgstr ""
 
-#: src/design/domain/customizer/header-customizer.php:288
+#: src/design/presentation/customizer/header-customizer.php:279
 msgid ""
 "Toggle Background Color "
 "(Hover)"
 msgstr ""
 
-#: src/design/domain/customizer/header-customizer.php:298
+#: src/design/presentation/customizer/header-customizer.php:289
 msgid ""
 "Toggle Border Color"
 msgstr ""
 
-#: src/design/domain/customizer/header-customizer.php:308
+#: src/design/presentation/customizer/header-customizer.php:299
 msgid ""
 "Toggle Border Color "
 "(Hover)"
 msgstr ""
 
-#: src/design/domain/customizer/information-customizer.php:20
+#: src/design/presentation/customizer/information-customizer.php:20
 msgid "Information"
 msgstr ""
 
-#: src/design/domain/customizer/information-customizer.php:34
+#: src/design/presentation/customizer/information-customizer.php:34
 msgid "Copyright"
 msgstr ""
 
-#: src/design/domain/customizer/information-customizer.php:44
+#: src/design/presentation/customizer/information-customizer.php:44
 msgid "Logo"
 msgstr ""
 
-#: src/design/domain/customizer/information-customizer.php:45
+#: src/design/presentation/customizer/information-customizer.php:45
 msgid ""
 "Upload a logo for your "
 "site. The recommend "
@@ -1346,11 +1471,11 @@ msgid ""
 "any size."
 msgstr ""
 
-#: src/design/domain/customizer/information-customizer.php:54
+#: src/design/presentation/customizer/information-customizer.php:54
 msgid "Logo (Retina)"
 msgstr ""
 
-#: src/design/domain/customizer/information-customizer.php:55
+#: src/design/presentation/customizer/information-customizer.php:55
 msgid ""
 "Upload a retina logo "
 "for your site. The "
@@ -1360,90 +1485,108 @@ msgid ""
 "than the regular logo."
 msgstr ""
 
-#: src/design/domain/customizer/typography-customizer.php:28
+#: src/design/presentation/customizer/typography-customizer.php:28
 msgid "Typography"
 msgstr ""
 
-#: src/design/domain/customizer/typography-customizer.php:36
+#: src/design/presentation/customizer/typography-customizer.php:36
 msgid "Headline"
 msgstr ""
 
-#: src/design/domain/customizer/typography-customizer.php:43
-#: src/design/domain/customizer/typography-customizer.php:71
-#: src/design/domain/customizer/typography-customizer.php:99
+#: src/design/presentation/customizer/typography-customizer.php:43
+#: src/design/presentation/customizer/typography-customizer.php:71
+#: src/design/presentation/customizer/typography-customizer.php:99
 msgid "Font Family"
 msgstr ""
 
-#: src/design/domain/customizer/typography-customizer.php:53
-#: src/design/domain/customizer/typography-customizer.php:81
-#: src/design/domain/customizer/typography-customizer.php:109
+#: src/design/presentation/customizer/typography-customizer.php:53
+#: src/design/presentation/customizer/typography-customizer.php:81
+#: src/design/presentation/customizer/typography-customizer.php:109
 msgid "Color"
 msgstr ""
 
-#: src/design/domain/customizer/typography-customizer.php:64
+#: src/design/presentation/customizer/typography-customizer.php:64
 msgid "Text"
 msgstr ""
 
-#: src/design/domain/customizer/typography-customizer.php:92
+#: src/design/presentation/customizer/typography-customizer.php:92
 msgid "Link"
 msgstr ""
 
-#: src/design/domain/customizer/typography-customizer.php:118
+#: src/design/presentation/customizer/typography-customizer.php:118
 msgid "Color (Hover)"
 msgstr ""
 
-#: src/design/domain/exception/view-not-found-exception.php:17
+#: src/design/presentation/exception/view-not-found-exception.php:18
 #, php-format
 msgid ""
 "View \"%s\" at \"%s\" "
 "not found."
 msgstr ""
 
-#: src/design/domain/menu/footer-content-first-menu.php:29
+#: src/design/presentation/menu/footer-content-first-menu.php:31
 msgid ""
 "Footer Content First "
 "Menu"
 msgstr ""
 
-#: src/design/domain/menu/footer-content-second-menu.php:29
+#: src/design/presentation/menu/footer-content-second-menu.php:31
 msgid ""
 "Footer Content Second "
 "Menu"
 msgstr ""
 
-#: src/design/domain/menu/footer-plinth-menu.php:27
+#: src/design/presentation/menu/footer-plinth-menu.php:29
 msgid "Footer Plinth Menu"
 msgstr ""
 
-#: src/design/domain/sidebar/footer-sidebar.php:37
+#: src/design/presentation/setup/asset-setup.php:108
+msgid ""
+"No more results "
+"available."
+msgstr ""
+
+#: src/design/presentation/setup/comment-setup.php:35
+msgid "Name"
+msgstr ""
+
+#: src/design/presentation/setup/comment-setup.php:37
+msgid "Email"
+msgstr ""
+
+#: src/design/presentation/setup/comment-setup.php:39
+msgid "Website"
+msgstr ""
+
+#: src/design/presentation/sidebar/footer-sidebar.php:30
 msgid ""
 "Place your widgets into "
 "this sidebar, which is "
 "visible on the footer."
 msgstr ""
 
-#: src/design/domain/sidebar/main-sidebar.php:37
+#: src/design/presentation/sidebar/main-sidebar.php:30
 msgid ""
 "Place your widgets into "
 "this sidebar, which is "
 "visible on every page."
 msgstr ""
 
-#: src/design/domain/walker/bootstrap-comment-walker.php:61
+#: src/design/presentation/walker/bootstrap-comment-walker.php:53
 msgid ""
 "Your comment is "
 "awaiting moderation."
 msgstr ""
 
-#: src/design/domain/walker/bootstrap-comment-walker.php:69
+#: src/design/presentation/walker/bootstrap-comment-walker.php:61
 msgid "Edit"
 msgstr ""
 
-#: src/design/domain/widget/details-widget.php:15
+#: src/design/presentation/widget/details-widget.php:18
 msgid "AT Details"
 msgstr ""
 
-#: src/design/domain/widget/details-widget.php:16
+#: src/design/presentation/widget/details-widget.php:19
 msgid ""
 "Displays the "
 "Affilicious Theme "
@@ -1451,77 +1594,6 @@ msgid ""
 "pages."
 msgstr ""
 
-#: src/design/domain/widget/details-widget.php:18
+#: src/design/presentation/widget/details-widget.php:21
 msgid "Title"
-msgstr ""
-
-#: src/settings/application/setting/design-settings.php:47
-#: src/settings/application/setting/design-settings.php:49
-#: src/settings/application/setting/design-settings.php:51
-#: src/settings/application/setting/design-settings.php:53
-#: src/settings/application/setting/design-settings.php:55
-#, php-format
-msgid "%s Link"
-msgstr ""
-
-#: src/settings/application/setting/design-settings.php:60
-msgid "Hide Content Area"
-msgstr ""
-
-#: src/settings/application/setting/design-settings.php:61
-msgid ""
-"Hide the content area "
-"with the widgets and "
-"both menus."
-msgstr ""
-
-#: src/settings/application/setting/design-settings.php:65
-msgid ""
-"What will happen, if "
-"you click on the "
-"product image gallery?"
-msgstr ""
-
-#: src/settings/application/setting/design-settings.php:67
-#: src/settings/application/setting/design-settings.php:72
-msgid "Nothing"
-msgstr ""
-
-#: src/settings/application/setting/design-settings.php:68
-#: src/settings/application/setting/design-settings.php:73
-msgid "Open the shop"
-msgstr ""
-
-#: src/settings/application/setting/design-settings.php:70
-msgid ""
-"What will happen, if "
-"you click on the "
-"product preview image?"
-msgstr ""
-
-#: src/settings/application/setting/design-settings.php:78
-msgid "Raw Modifications"
-msgstr ""
-
-#: src/settings/application/setting/design-settings.php:80
-msgid ""
-"Please be aware that "
-"ill-considered changes "
-"may destroy your design."
-msgstr ""
-
-#: src/settings/application/setting/design-settings.php:83
-msgid "Design"
-msgstr ""
-
-#: src/settings/application/setting/design-settings.php:85
-msgid "Social Media"
-msgstr ""
-
-#: src/settings/application/setting/design-settings.php:87
-msgid "Links"
-msgstr ""
-
-#: src/settings/application/setting/design-settings.php:88
-msgid "Customizer"
 msgstr ""
