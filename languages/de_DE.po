@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
 "POT-Creation-Date: 2016-12-31 19:47+0100\n"
-"PO-Revision-Date: 2016-12-31 19:49+0100\n"
+"PO-Revision-Date: 2016-12-31 21:37+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -310,7 +310,7 @@ msgid ""
 "\">admin area</a> and install the missing plugin."
 msgstr ""
 "Das erforderliche Affilicious Plugin wurde nicht gefunden. Bitte öffne "
-"deinen <a href=„%s“>Adminbereich</a> und installiere das Plugin."
+"deinen <a href=\"%s\">Adminbereich</a> und installiere das Plugin."
 
 #: partials/error/plugin-version-requirement.php:5
 #, php-format
@@ -319,7 +319,7 @@ msgid ""
 "your <a href=\"%s\">admin area</a> and update the missing plugin."
 msgstr ""
 "Die erforderliche Affilicious Plugin Version %s ist nicht installiert. Bitte "
-"öffne deinen <a href=„%s“>Adminbereich</a> und aktualisiere das Plugin."
+"öffne deinen <a href=\"%s\">Adminbereich</a> und aktualisiere das Plugin."
 
 #: partials/misc/no-thumbnail.php:5
 msgid "No image available"
