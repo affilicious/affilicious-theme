@@ -385,6 +385,54 @@
         });
     });
 
+    wp.customize('afft-content-button-not-available-background-color', function (value) {
+        value.bind(function (color) {
+            var border = $('.btn-not-available');
+            border.css('background-color', color);
+        });
+    });
+
+    wp.customize('afft-content-button-not-available-background-color-hover', function (value) {
+        value.bind(function (color) {
+            $('.btn-not-available').hover(function(e) {
+                var fallback = wp.customize.instance('afft-content-button-not-available-background-color').get();
+                $(this).css('background-color', e.type === "mouseenter" ? color : fallback);
+            });
+        });
+    });
+
+    wp.customize('afft-content-button-not-available-border-color', function (value) {
+        value.bind(function (color) {
+            var border = $('.btn-not-available');
+            border.css('border-color', color);
+        });
+    });
+
+    wp.customize('afft-content-button-not-available-border-color-hover', function (value) {
+        value.bind(function (color) {
+            $('.btn-not-available').hover(function(e) {
+                var fallback = wp.customize.instance('afft-content-button-not-available-border-color').get();
+                $(this).css('border-color', e.type === "mouseenter" ? color : fallback);
+            });
+        });
+    });
+
+    wp.customize('afft-content-button-not-available-text-color', function (value) {
+        value.bind(function (color) {
+            var border = $('.btn-not-available');
+            border.css('color', color);
+        });
+    });
+
+    wp.customize('afft-content-button-not-available-text-color-hover', function (value) {
+        value.bind(function (color) {
+            $('.btn-not-available').hover(function(e) {
+                var fallback = wp.customize.instance('afft-content-button-not-available-text-color').get();
+                $(this).css('color', e.type === "mouseenter" ? color : fallback);
+            });
+        });
+    });
+
     wp.customize('afft-content-button-review-background-color', function (value) {
         value.bind(function (color) {
             var border = $('.btn-review');

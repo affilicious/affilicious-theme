@@ -678,6 +678,60 @@ class Content_Customizer extends Abstract_Customizer
             'transport' => 'postMessage',
         );
 
+        $options['afft-content-button-not-available-background-color'] = array(
+            'id'        => 'afft-content-button-not-available-background-color',
+            'label'     => __('Not Available Background Color', 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'color',
+            'default'   => '#fff',
+            'transport' => 'postMessage',
+        );
+
+        $options['afft-content-button-not-available-background-color-hover'] = array(
+            'id'        => 'afft-content-button-not-available-background-color-hover',
+            'label'     => __('Not Available Background Color (Hover)', 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'color',
+            'default'   => '#e6e6e6',
+            'transport' => 'postMessage',
+        );
+
+        $options['afft-content-button-not-available-border-color'] = array(
+            'id'        => 'afft-content-button-not-available-border-color',
+            'label'     => __('Not Available Border Color', 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'color',
+            'default'   => '#ccc',
+            'transport' => 'postMessage',
+        );
+
+        $options['afft-content-button-not-available-border-color-hover'] = array(
+            'id'        => 'afft-content-button-not-available-border-color-hover',
+            'label'     => __('Not Available Border Color (Hover)', 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'color',
+            'default'   => '#adadad',
+            'transport' => 'postMessage',
+        );
+
+        $options['afft-content-button-not-available-text-color'] = array(
+            'id'        => 'afft-content-button-not-available-text-color',
+            'label'     => __('Not Available Text Color', 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'color',
+            'default'   => '#000',
+            'transport' => 'postMessage',
+        );
+
+        $options['afft-content-button-not-available-text-color-hover'] = array(
+            'id'        => 'afft-content-button-not-available-text-color-hover',
+            'label'     => __('Not Available Text Color (Hover)', 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'color',
+            'default'   => '#000',
+            'transport' => 'postMessage',
+        );
+
 		$options['afft-content-button-review-background-color'] = array(
 			'id'        => 'afft-content-button-review-background-color',
 			'label'     => __('Review Background Color', 'affilicious-theme'),
@@ -1908,6 +1962,84 @@ class Content_Customizer extends Abstract_Customizer
             return array(
                 'selectors'    => array(
                     '.btn-buy:hover'
+                ),
+                'declarations' => array(
+                    'color' => $color
+                )
+            );
+        });
+
+        $this->render_selectors('afft-content-button-not-available-background-color', function ($mod) {
+            $color = sanitize_hex_color($mod);
+
+            return array(
+                'selectors'    => array(
+                    '.btn-not-available'
+                ),
+                'declarations' => array(
+                    'background-color' => $color
+                )
+            );
+        });
+
+        $this->render_selectors('afft-content-button-not-available-background-color-hover', function ($mod) {
+            $color = sanitize_hex_color($mod);
+
+            return array(
+                'selectors'    => array(
+                    '.btn-not-available:hover'
+                ),
+                'declarations' => array(
+                    'background-color' => $color
+                )
+            );
+        });
+
+        $this->render_selectors('afft-content-button-not-available-border-color', function ($mod) {
+            $color = sanitize_hex_color($mod);
+
+            return array(
+                'selectors'    => array(
+                    '.btn-not-available'
+                ),
+                'declarations' => array(
+                    'border-color' => $color
+                )
+            );
+        });
+
+        $this->render_selectors('afft-content-button-not-available-border-color-hover', function ($mod) {
+            $color = sanitize_hex_color($mod);
+
+            return array(
+                'selectors'    => array(
+                    '.btn-not-available:hover'
+                ),
+                'declarations' => array(
+                    'border-color' => $color
+                )
+            );
+        });
+
+        $this->render_selectors('afft-content-button-not-available-text-color', function ($mod) {
+            $color = sanitize_hex_color($mod);
+
+            return array(
+                'selectors'    => array(
+                    '.btn-not-available'
+                ),
+                'declarations' => array(
+                    'color' => $color
+                )
+            );
+        });
+
+        $this->render_selectors('afft-content-button-not-available-text-color-hover', function ($mod) {
+            $color = sanitize_hex_color($mod);
+
+            return array(
+                'selectors'    => array(
+                    '.btn-not-available:hover'
                 ),
                 'declarations' => array(
                     'color' => $color

@@ -46,7 +46,7 @@
                                             <?php echo sprintf(__('Buy now at %s', 'affilicious-theme'), $shop['title']); ?>
                                         </a>
                                     <?php else: ?>
-                                        <a class="btn btn-default" href="<?php echo $shop['affiliate_link']; ?>"  rel="nofollow" target="_blank">
+                                        <a class="btn btn-not-available" href="<?php echo $shop['affiliate_link']; ?>"  rel="nofollow" target="_blank">
                                             <?php _e('Unfortunately not available.', 'affilicious-theme'); ?>
                                         </a>
                                     <?php endif; ?>

@@ -190,9 +190,9 @@ class Footer_Customizer extends Abstract_Customizer
             'panel'    => $panel
         );
 
-        $options['afft-footer-content-menu-title-color'] = array(
-            'id'        => 'afft-footer-content-menu-title-color',
-            'label'     => __('Title Color', 'affilicious-theme'),
+        $options['afft-footer-content-menu-headline-color'] = array(
+            'id'        => 'afft-footer-content-menu-headline-color',
+            'label'     => __('Headline Color', 'affilicious-theme'),
             'section'   => $section,
             'type'      => 'color',
             'default'   => '#ffffff',
@@ -226,8 +226,8 @@ class Footer_Customizer extends Abstract_Customizer
             'panel'    => $panel
         );
 
-        $options['afft-footer-sidebar-headline-color'] = array(
-            'id'        => 'afft-footer-sidebar-headline-color',
+        $options['afft-footer-footer-sidebar-headline-color'] = array(
+            'id'        => 'afft-footer-footer-sidebar-headline-color',
             'label'     => __('Headline Color', 'affilicious-theme'),
             'section'   => $section,
             'type'      => 'color',
@@ -235,8 +235,8 @@ class Footer_Customizer extends Abstract_Customizer
             'transport' => 'postMessage',
         );
 
-        $options['afft-footer-sidebar-text-color'] = array(
-            'id'        => 'afft-footer-sidebar-text-color',
+        $options['afft-footer-footer-sidebar-text-color'] = array(
+            'id'        => 'afft-footer-footer-sidebar-text-color',
             'label'     => __('Text Color', 'affilicious-theme'),
             'section'   => $section,
             'type'      => 'color',
@@ -244,8 +244,8 @@ class Footer_Customizer extends Abstract_Customizer
             'transport' => 'postMessage',
         );
 
-        $options['afft-footer-sidebar-link-color'] = array(
-            'id'        => 'afft-footer-sidebar-link-color',
+        $options['afft-footer-footer-sidebar-link-color'] = array(
+            'id'        => 'afft-footer-footer-sidebar-link-color',
             'label'     => __('Link Color', 'affilicious-theme'),
             'section'   => $section,
             'type'      => 'color',
@@ -253,8 +253,8 @@ class Footer_Customizer extends Abstract_Customizer
             'transport' => 'postMessage',
         );
 
-        $options['afft-footer-sidebar-link-color-hover'] = array(
-            'id'        => 'afft-footer-sidebar-link-color-hover',
+        $options['afft-footer-footer-sidebar-link-color-hover'] = array(
+            'id'        => 'afft-footer-footer-sidebar-link-color-hover',
             'label'     => __('Link Color (Hover)', 'affilicious-theme'),
             'section'   => $section,
             'type'      => 'color',
@@ -820,7 +820,7 @@ class Footer_Customizer extends Abstract_Customizer
             }
         );
 
-        $this->render_selectors('afft-footer-content-menu-title-color', function ($mod) {
+        $this->render_selectors('afft-footer-content-menu-headline-color', function ($mod) {
             $color = sanitize_hex_color($mod);
 
             return array(
@@ -862,7 +862,7 @@ class Footer_Customizer extends Abstract_Customizer
             );
         });
 
-        $this->render_selectors('afft-footer-sidebar-headline-color', function ($mod) {
+        $this->render_selectors('afft-footer-footer-sidebar-headline-color', function ($mod) {
             $color = sanitize_hex_color($mod);
 
             return array(
@@ -880,7 +880,7 @@ class Footer_Customizer extends Abstract_Customizer
             );
         });
 
-        $this->render_selectors('afft-footer-sidebar-text-color', function ($mod) {
+        $this->render_selectors('afft-footer-footer-sidebar-text-color', function ($mod) {
             $color = sanitize_hex_color($mod);
 
             return array(
@@ -893,7 +893,7 @@ class Footer_Customizer extends Abstract_Customizer
             );
         });
 
-        $this->render_selectors('afft-footer-sidebar-link-color', function ($mod) {
+        $this->render_selectors('afft-footer-footer-sidebar-link-color', function ($mod) {
             $color = sanitize_hex_color($mod);
 
             return array(
@@ -906,7 +906,7 @@ class Footer_Customizer extends Abstract_Customizer
             );
         });
 
-        $this->render_selectors('afft-footer-sidebar-link-color-hover', function ($mod) {
+        $this->render_selectors('afft-footer-footer-sidebar-link-color-hover', function ($mod) {
             $color = sanitize_hex_color($mod);
 
             return array(
