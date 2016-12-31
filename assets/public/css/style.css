@@ -8184,6 +8184,7 @@ button.close {
       color: black;
       line-height: 2.16rem;
       letter-spacing: 0.01rem;
+      margin-top: 0;
       line-height: 1.98rem; }
       .entry-date .day a, .entry-preview-date .day a {
         color: black !important;
@@ -11631,6 +11632,7 @@ body {
     color: black;
     line-height: 2.16rem;
     letter-spacing: 0.01rem;
+    margin-top: 0;
     text-align: left;
     padding-bottom: 20px; }
     .product-preview-title a {
@@ -12405,7 +12407,7 @@ body {
   .offset-xl-11 {
     margin-left: 91.66667%; } }
 
-.product-body {
+.product-header, .product-body {
   -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
@@ -12414,10 +12416,6 @@ body {
   border-radius: 5px;
   background-color: white;
   margin-bottom: 20px;
-  box-sizing: border-box;
-  padding: 20px; }
-
-.product-header .panel {
   box-sizing: border-box;
   padding: 20px; }
 
@@ -12600,6 +12598,7 @@ body {
     color: black;
     line-height: 2.16rem;
     letter-spacing: 0.01rem;
+    margin-top: 0;
     text-align: left;
     padding-bottom: 20px; }
     .product-preview-title a {
@@ -12873,7 +12872,8 @@ h1 {
   font-family: "Helvetica Neue", Arial, Helvetica, Verdana, sans-serif;
   color: black;
   line-height: 2.64rem;
-  letter-spacing: 0.01rem; }
+  letter-spacing: 0.01rem;
+  margin-top: 0; }
   h1 a {
     color: black !important;
     text-decoration: none; }
@@ -12886,7 +12886,8 @@ h2 {
   font-family: "Helvetica Neue", Arial, Helvetica, Verdana, sans-serif;
   color: black;
   line-height: 2.16rem;
-  letter-spacing: 0.01rem; }
+  letter-spacing: 0.01rem;
+  margin-top: 0; }
   h2 a {
     color: black !important;
     text-decoration: none; }
@@ -12960,6 +12961,7 @@ p, small {
   color: black;
   line-height: 2.64rem;
   letter-spacing: 0.01rem;
+  margin-top: 0;
   text-decoration: none; }
   #title a {
     color: black !important;

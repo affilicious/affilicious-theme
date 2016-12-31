@@ -3,45 +3,43 @@
          itemscope itemtype="http://schema.org/Product">
 
     <header class="product-header">
-        <div class="panel">
-            <div class="row">
-                <div class="col-xs-12">
-                    <h1 class="product-title" itemprop="name">
-                        <?php the_title(); ?>
-                    </h1>
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="product-title" itemprop="name">
+                    <?php the_title(); ?>
+                </h1>
 
-                    <?php get_template_part('partials/product/review'); ?>
+                <?php get_template_part('partials/product/review'); ?>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-5 col-sm-6">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <?php get_template_part('partials/product/image-gallery'); ?>
+                    </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-5 col-sm-6">
+            <div class="col-md-7 col-sm-6">
+                <?php if(has_excerpt()): ?>
                     <div class="row">
-                        <div class="col-xs-12">
-                            <?php get_template_part('partials/product/image-gallery'); ?>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-7 col-sm-6">
-                    <?php if(has_excerpt()): ?>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="product-excerpt" itemprop="description">
-                                    <?php the_excerpt(); ?>
-                                </div>
+                        <div class="col-md-12">
+                            <div class="product-excerpt" itemprop="description">
+                                <?php the_excerpt(); ?>
                             </div>
                         </div>
-                    <?php endif; ?>
-
-                    <div class="row">
-                        <div class="col-md-12">
-                            <?php aff_the_product_attribute_choices($product); ?>
-                        </div>
                     </div>
+                <?php endif; ?>
 
-                    <div class="row">
-                        <div class="col-md-12">
-                            <?php get_template_part('partials/product/details'); ?>
-                        </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <?php aff_the_product_attribute_choices($product); ?>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <?php get_template_part('partials/product/details'); ?>
                     </div>
                 </div>
             </div>

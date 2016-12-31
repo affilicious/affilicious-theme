@@ -3,6 +3,7 @@
 @import "../../vendor/bootstrap-4/scss/bootstrap-flex-grid";
 
 .product {
+  &-header,
   &-body {
     @include box-shadow();
     @include border-radius(5px);
@@ -10,13 +11,6 @@
     margin-bottom: $space-size-medium;
     box-sizing: border-box;
     padding: $space-size-medium;
-  }
-
-  &-header {
-    .panel {
-      box-sizing: border-box;
-      padding: $space-size-medium;
-    }
   }
 
   &-title {

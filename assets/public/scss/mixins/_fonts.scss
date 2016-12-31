@@ -28,6 +28,7 @@
   color: $font-color-headline-1;
   line-height: $font-line-height-headline-1;
   letter-spacing: $font-letter-spacing-headline-1;
+  margin-top: 0;
 }
 
 @mixin font-headline-2 {
@@ -38,6 +39,7 @@
   color: $font-color-headline-2;
   line-height: $font-line-height-headline-2;
   letter-spacing: $font-letter-spacing-headline-2;
+  margin-top: 0;
 }
 
 @mixin font-headline-3 {
