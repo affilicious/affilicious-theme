@@ -21,17 +21,17 @@ class Header_Customizer extends Abstract_Customizer
 			'priority' => '30'
 		);
 
-		$section = 'afft-header-general';
+        $section = 'afft-header-banner';
 
-		$sections[] = array(
-			'id'       => $section,
-			'title'    => __('General', 'affilicious-theme'),
-			'priority' => '10',
-			'panel'    => $panel
-		);
+        $sections[] = array(
+            'id'       => $section,
+            'title'    => __('Banner', 'affilicious-theme'),
+            'priority' => '10',
+            'panel'    => $panel
+        );
 
-		$options['afft-header-general-background-color-top'] = array(
-			'id'        => 'afft-header-general-background-color-top',
+		$options['afft-header-banner-background-color-top'] = array(
+			'id'        => 'afft-header-banner-background-color-top',
 			'label'     => __('Background Color (Top)', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'color',
@@ -39,8 +39,8 @@ class Header_Customizer extends Abstract_Customizer
 			'transport' => 'postMessage',
 		);
 
-		$options['afft-header-general-background-color-bottom'] = array(
-			'id'        => 'afft-header-general-background-color-bottom',
+		$options['afft-header-banner-background-color-bottom'] = array(
+			'id'        => 'afft-header-banner-background-color-bottom',
 			'label'     => __('Background Color (Bottom)', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'color',
@@ -48,8 +48,8 @@ class Header_Customizer extends Abstract_Customizer
 			'transport' => 'postMessage',
 		);
 
-		$options['afft-header-general-background-image'] = array(
-			'id'        => 'afft-header-general-background-image',
+		$options['afft-header-banner-background-image'] = array(
+			'id'        => 'afft-header-banner-background-image',
 			'label'     => __('Background Image', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'upload',
@@ -57,8 +57,8 @@ class Header_Customizer extends Abstract_Customizer
 			'transport' => 'postMessage',
 		);
 
-		$options['afft-header-general-background-repeat'] = array(
-			'id'        => 'afft-header-general-background-repeat',
+		$options['afft-header-banner-background-repeat'] = array(
+			'id'        => 'afft-header-banner-background-repeat',
 			'label'     => __('Background Repeat', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'select',
@@ -72,8 +72,8 @@ class Header_Customizer extends Abstract_Customizer
 			'transport' => 'postMessage',
 		);
 
-		$options['afft-header-general-background-attachment'] = array(
-			'id'        => 'afft-header-general-background-attachment',
+		$options['afft-header-banner-background-attachment'] = array(
+			'id'        => 'afft-header-banner-background-attachment',
 			'label'     => __('Background Attachment', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'select',
@@ -87,8 +87,8 @@ class Header_Customizer extends Abstract_Customizer
 			'transport' => 'postMessage',
 		);
 
-		$options['afft-header-general-background-size'] = array(
-			'id'        => 'afft-header-general-background-size',
+		$options['afft-header-banner-background-size'] = array(
+			'id'        => 'afft-header-banner-background-size',
 			'label'     => __('Background Size', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'select',
@@ -102,29 +102,20 @@ class Header_Customizer extends Abstract_Customizer
 			'transport' => 'postMessage',
 		);
 
-		$options['afft-header-general-background-width'] = array(
-			'id'        => 'afft-header-general-background-width',
+		$options['afft-header-banner-background-width'] = array(
+			'id'        => 'afft-header-banner-background-width',
 			'label'     => __('Background Width', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'text',
 			'transport' => 'postMessage',
 		);
 
-		$options['afft-header-general-background-height'] = array(
-			'id'        => 'afft-header-general-background-height',
+		$options['afft-header-banner-background-height'] = array(
+			'id'        => 'afft-header-banner-background-height',
 			'label'     => __('Background Height', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'text',
 			'transport' => 'postMessage',
-		);
-
-		$section = 'afft-header-banner';
-
-		$sections[] = array(
-			'id'       => $section,
-			'title'    => __('Banner', 'affilicious-theme'),
-			'priority' => '10',
-			'panel'    => $panel
 		);
 
 		$options['afft-header-banner-title-color'] = array(
@@ -206,7 +197,7 @@ class Header_Customizer extends Abstract_Customizer
 			'label'     => __('Item Background Color (Hover Top)', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'color',
-			'default'   => '#e7e7e7',
+			'default'   => '#f2f2f2',
 			'transport' => 'postMessage',
 		);
 
@@ -215,7 +206,7 @@ class Header_Customizer extends Abstract_Customizer
 			'label'     => __('Item Background Color (Hover Bottom)', 'affilicious-theme'),
 			'section'   => $section,
 			'type'      => 'color',
-			'default'   => '#e7e7e7',
+			'default'   => '#f2f2f2',
 			'transport' => 'postMessage',
 		);
 
@@ -326,8 +317,8 @@ class Header_Customizer extends Abstract_Customizer
 	public function render()
 	{
 		$this->render_selectors(
-			'afft-header-general-background-color-top',
-			'afft-header-general-background-color-bottom',
+			'afft-header-banner-background-color-top',
+			'afft-header-banner-background-color-bottom',
 			function ($mod1, $mod2) {
 				$top    = sanitize_hex_color($mod1);
 				$bottom = sanitize_hex_color($mod2);
@@ -360,7 +351,7 @@ class Header_Customizer extends Abstract_Customizer
 			}
 		);
 
-		$this->render_selectors('afft-header-general-background-image', function ($mod) {
+		$this->render_selectors('afft-header-banner-background-image', function ($mod) {
 			$url = esc_url($mod);
 			if(empty($url)) {
 				return null;
@@ -376,7 +367,7 @@ class Header_Customizer extends Abstract_Customizer
 			);
 		});
 
-		$this->render_selectors('afft-header-general-background-repeat', function ($mod) {
+		$this->render_selectors('afft-header-banner-background-repeat', function ($mod) {
 			if(empty($mod)) {
 				return null;
 			}
@@ -391,7 +382,7 @@ class Header_Customizer extends Abstract_Customizer
 			);
 		});
 
-		$this->render_selectors('afft-header-general-background-attachment', function ($mod) {
+		$this->render_selectors('afft-header-banner-background-attachment', function ($mod) {
 			if(empty($mod)) {
 				return null;
 			}
@@ -407,9 +398,9 @@ class Header_Customizer extends Abstract_Customizer
 		});
 
 		$this->render_selectors(
-			'afft-header-general-background-size',
-			'afft-header-general-background-width',
-			'afft-header-general-background-height',
+			'afft-header-banner-background-size',
+			'afft-header-banner-background-width',
+			'afft-header-banner-background-height',
 			function ($size, $width, $height) {
 				if(empty($size)) {
 					return null;

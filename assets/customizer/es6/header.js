@@ -1,7 +1,7 @@
 (function ($) {
-    wp.customize('afft-header-general-background-color-top', function (value) {
+    wp.customize('afft-header-banner-background-color-top', function (value) {
         value.bind(function (top) {
-            var bottom = wp.customize.instance('afft-header-general-background-color-bottom').get();
+            var bottom = wp.customize.instance('afft-header-banner-background-color-bottom').get();
 
             var header = $('#header');
             header.css('background-color', bottom);
@@ -13,9 +13,9 @@
         });
     });
 
-    wp.customize('afft-header-general-background-color-bottom', function (value) {
+    wp.customize('afft-header-banner-background-color-bottom', function (value) {
         value.bind(function (bottom) {
-            var top = wp.customize.instance('afft-header-general-background-color-top').get();
+            var top = wp.customize.instance('afft-header-banner-background-color-top').get();
 
             var header = $('#header');
             header.css('background-color', bottom);
@@ -27,34 +27,34 @@
         });
     });
 
-    wp.customize('afft-header-general-background-image', function (value) {
+    wp.customize('afft-header-banner-background-image', function (value) {
         value.bind(function (image) {
             var body = $('#header');
             body.css('background-image', 'url(' + image + ')');
         });
     });
 
-    wp.customize('afft-header-general-background-repeat', function (value) {
+    wp.customize('afft-header-banner-background-repeat', function (value) {
         value.bind(function (repeat) {
             var body = $('#header');
             body.css('background-repeat', repeat);
         });
     });
 
-    wp.customize('afft-header-general-background-attachment', function (value) {
+    wp.customize('afft-header-banner-background-attachment', function (value) {
         value.bind(function (attachment) {
             var body = $('#header');
             body.css('background-attachment', attachment);
         });
     });
 
-    wp.customize('afft-header-general-background-size', function (value) {
+    wp.customize('afft-header-banner-background-size', function (value) {
         value.bind(function (size) {
             var body = $('#header');
 
             if (size === 'custom') {
-                var width = wp.customize.instance('afft-header-general-background-width').get();
-                var height = wp.customize.instance('afft-header-general-background-height').get();
+                var width = wp.customize.instance('afft-header-banner-background-width').get();
+                var height = wp.customize.instance('afft-header-banner-background-height').get();
 
                 body.css('background-size', width + ' ' + height);
             } else {
@@ -63,12 +63,12 @@
         });
     });
 
-    wp.customize('afft-header-general-background-width', function (value) {
+    wp.customize('afft-header-banner-background-width', function (value) {
         value.bind(function (width) {
-            var size = wp.customize.instance('afft-header-general-background-size').get();
+            var size = wp.customize.instance('afft-header-banner-background-size').get();
 
             if (size === 'custom') {
-                var height = wp.customize.instance('afft-header-general-background-height').get();
+                var height = wp.customize.instance('afft-header-banner-background-height').get();
 
                 var body = $('#header');
                 body.css('background-size', width + ' ' + height);
@@ -76,12 +76,12 @@
         });
     });
 
-    wp.customize('afft-header-general-background-height', function (value) {
+    wp.customize('afft-header-banner-background-height', function (value) {
         value.bind(function (height) {
-            var size = wp.customize.instance('afft-header-general-background-size').get();
+            var size = wp.customize.instance('afft-header-banner-background-size').get();
 
             if (size === '#header') {
-                var width = wp.customize.instance('afft-header-general-background-width').get();
+                var width = wp.customize.instance('afft-header-banner-background-width').get();
 
                 var body = $('header');
                 body.css('background-size', width + ' ' + height);
@@ -99,7 +99,7 @@
         value.bind(function (color) {
 
             // There is no transparent color picker. The color #600099 stands for transparency
-            if(color !== '#600099') {
+            if(color !== '') {
                 $('#title').css('text-shadow', '1px 1px 1px ' + color);
             } else {
                 $('#title').css('text-shadow', '0 0 0 rgba(0, 0, 0, 0)');
@@ -117,7 +117,7 @@
         value.bind(function (color) {
 
             // There is no transparent color picker. The color #600099 stands for transparency
-            if(color !== '#600099') {
+            if(color !== '') {
                 $('#tagline').css('text-shadow', '1px 1px 1px ' + color);
             } else {
                 $('#tagline').css('text-shadow', '0 0 0 rgba(0, 0, 0, 0)');
