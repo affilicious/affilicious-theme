@@ -1,5 +1,5 @@
 <div class="row">
-    <?php if(aff_is_product_page()): ?>
+    <?php if(aff_is_product_page() && aff_has_product_shops()): ?>
         <div class="col-xs-12">
             <div id="product-sidebar">
                 <?php get_template_part('partials/product-sidebar'); ?>
