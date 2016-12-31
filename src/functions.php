@@ -616,3 +616,21 @@ function afft_is_sidebar_position_right()
 
     return $position === 'right';
 }
+
+/**
+ * Check if the current user can edit posts.
+ *
+ * @since 0.7
+ * @return bool
+ */
+function afft_can_edit_post()
+{
+    if(!is_user_logged_in()) {
+       return false;
+    }
+
+    $current_user = wp_get_current_user();
+    $allowed_roles = array('editor', 'administrator', 'author');
+
+    return !empty(array_intersect($allowed_roles, $current_user->roles));
+}
