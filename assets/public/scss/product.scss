@@ -6,7 +6,7 @@
   &-header,
   &-body {
     @include box-shadow();
-    @include border-radius(5px);
+    @include border-radius();
     background-color: white;
     margin-bottom: $space-size-medium;
     box-sizing: border-box;
@@ -25,6 +25,118 @@
     p {
       margin: 0;
       padding: 0;
+    }
+  }
+
+  &-relations {
+    @include box-shadow();
+    @include border-radius();
+    padding: $space-size-medium 0;
+    margin-bottom: $space-size-medium;
+    box-sizing: border-box;
+    background-color: white;
+
+    &-headline {
+      padding: 0 $space-size-medium;
+    }
+
+    &-item {
+      @include border-radius();
+      width: 100%;
+      margin: 0 $space-size-small;
+      box-sizing: border-box;
+      border: 1px solid #ddd;
+
+      &-teaser {
+        @include border-top-left-radius();
+        width: 100%;
+        display: block;
+      }
+
+      &-thumbnail {
+        @include border-top-left-radius();
+        width: 100%;
+        box-sizing: border-box;
+        position: relative;
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        margin-bottom: $space-size-small;
+        overflow: hidden;
+
+        img {
+          @include border-top-radius();
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      &-no-thumbnail {
+        min-height: 250px;
+        position: relative;
+
+        .no-thumbnail-container {
+          padding-bottom: 50px;
+        }
+      }
+
+      &-tag {
+        &-bar {
+          width: 100%;
+          padding: $space-size-small $space-size-medium 0 $space-size-medium;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: flex-end;
+          align-items: center;
+          background-color: rgba(0, 0, 0, 0.4);
+          min-height: 40px;
+        }
+
+        &-item {
+          display: inline;
+          margin-left: $space-size-small;
+          margin-bottom: $space-size-small;
+        }
+      }
+
+      &-actions {
+        padding: $space-size-small $space-size-medium;
+      }
+
+      &-headline {
+        padding: 0 $space-size-medium;
+        margin: 0;
+      }
+
+      &-updated-at,
+      &-price-indication {
+        @include font-small-text;
+        text-align: center;
+        display: block;
+        width: 100%;
+      }
+
+      &-price-indication {
+        padding: 0 $space-size-medium $space-size-small $space-size-medium;
+      }
+
+      &-updated-at {
+        padding-top: $space-size-small;
+      }
+    }
+
+    .slick {
+      &-slide {
+        outline: none;
+      }
+
+      &-relations-gallery {
+        padding: 0 $space-size-medium;
+      }
     }
   }
 

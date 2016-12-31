@@ -1573,75 +1573,6 @@ IASCallbacks.prototype = {
   };
 })(jQuery);
 
-// Relations Image Gallery Settings
-
-(function(){
-    jQuery('.slick-relations-gallery').slick({
-        asNavFor: '.slick-relations-nav',
-        arrows: true,
-        dots: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        infinite: false,
-        autoplay: false,
-        mobileFirst: true,
-        pauseOnHover: true,
-        swipe: true,
-        lazyload: 'ondemand',
-        responsive: [
-            {
-                breakpoint: 1300,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2
-                }
-            }
-        ]
-
-    });
-    jQuery('.slick-relations-nav').slick({
-        asNavFor: '.slick-relations-gallery',
-        infinite: true,
-        mobileFirst: true,
-        slidesToScroll: 1,
-        focusOnSelect: true
-    });
-})(jQuery);
-
-// Product Image Gallery Settings
-
-(function(){
-    jQuery('.slick-product-gallery').slick({
-        asNavFor: '.slick-product-nav',
-        arrows: false,
-        dots: false,
-        adaptiveHeight: true,
-        slidesToShow: 1,
-        autoplay: false,
-        infinite: true,
-        mobileFirst: true,
-        pauseOnHover: true,
-        swipe: true,
-        lazyload: 'ondemand'
-
-    });
-    jQuery('.slick-product-nav').slick({
-        asNavFor: '.slick-product-gallery',
-        infinite: true,
-        mobileFirst: true,
-        arrows: false,
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        focusOnSelect: true
-    });
-})(jQuery);
 /*
      _ _      _       _
  ___| (_) ___| | __  (_)___
@@ -6925,32 +6856,52 @@ b[_type],e=/wn|up/.test(d)?t:v;if(!c[n]){if(d==_click)A(a,!1,!0);else{if(/wn|er|
         html: '<div class="col-md-12"><div class="ias-end-container"><p class="ias-end">{text}</p></div></div>'
     }));
 })(jQuery);
+// Product Image Gallery Settings
 (function ($) {
-    $('.thumb-slider .slick-slider').slick({
+    $('.slick-product-gallery').slick({
+        asNavFor: '.slick-product-nav',
+        arrows: false,
+        dots: false,
+        adaptiveHeight: true,
+        slidesToShow: 1,
+        autoplay: false,
+        infinite: true,
+        mobileFirst: true,
+        pauseOnHover: true,
+        swipe: true
+    });
+
+    $('.slick-product-nav').slick({
+        asNavFor: '.slick-product-gallery',
+        infinite: true,
+        mobileFirst: true,
+        arrows: false,
         slidesToShow: 4,
         slidesToScroll: 1,
-        dots: false,
-        arrows: false,
-        focusOnSelect: true,
-        adaptiveHeight: true,
-        asNavFor: '.portfolio-slider .slick-slider'
+        focusOnSelect: true
     });
+})(jQuery);
 
-    $('.portfolio-slider .slick-slider').slick({
+// Relations Image Gallery Settings
+(function ($) {
+    $('.slick-relations-gallery').slick({
+        arrows: true,
+        dots: true,
         slidesToShow: 1,
         slidesToScroll: 1,
-        arrows: false,
-        asNavFor: '.thumb-slider .slick-slider'
+        infinite: false,
+        autoplay: false,
+        mobileFirst: true,
+        pauseOnHover: true,
+        swipe: true,
+        responsive: [{
+            breakpoint: 544,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+            }
+        }]
     });
-
-    var container = $('.portfolio-slider');
-    var content = $('.portfolio-slider .slick-list');
-    var containerHeight = container.height();
-    var contentHeight = content.height();
-
-    if (containerHeight > contentHeight) {
-        content.css('margin-top', (containerHeight - contentHeight) / 2);
-    }
 })(jQuery);
 (function ($) {
     $('document').ready(function () {

@@ -20,7 +20,12 @@
   }
 }
 
+@mixin font-headline {
+  margin-top: 0;
+}
+
 @mixin font-headline-1 {
+  @include font-headline();
   @include font-headline-link($font-color-headline-1);
   font-size: $font-size-headline-1;
   font-weight: $font-weight-headline-1;
@@ -28,10 +33,10 @@
   color: $font-color-headline-1;
   line-height: $font-line-height-headline-1;
   letter-spacing: $font-letter-spacing-headline-1;
-  margin-top: 0;
 }
 
 @mixin font-headline-2 {
+  @include font-headline();
   @include font-headline-link($font-color-headline-2);
   font-size: $font-size-headline-2;
   font-weight: $font-weight-headline-2;
@@ -39,10 +44,10 @@
   color: $font-color-headline-2;
   line-height: $font-line-height-headline-2;
   letter-spacing: $font-letter-spacing-headline-2;
-  margin-top: 0;
 }
 
 @mixin font-headline-3 {
+  @include font-headline();
   @include font-headline-link($font-color-headline-3);
   font-size: $font-size-headline-3;
   font-weight: $font-weight-headline-3;
@@ -53,6 +58,7 @@
 }
 
 @mixin font-headline-4 {
+  @include font-headline();
   @include font-headline-link($font-color-headline-4);
   font-size: $font-size-headline-4;
   font-weight: $font-weight-headline-4;
@@ -63,6 +69,7 @@
 }
 
 @mixin font-headline-5 {
+  @include font-headline();
   @include font-headline-link($font-color-headline-5);
   font-size: $font-size-headline-5;
   font-weight: $font-weight-headline-5;
@@ -73,6 +80,7 @@
 }
 
 @mixin font-headline-6 {
+  @include font-headline();
   @include font-headline-link($font-color-headline-6);
   font-size: $font-size-headline-6;
   font-weight: $font-weight-headline-6;

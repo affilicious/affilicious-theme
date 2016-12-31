@@ -1038,6 +1038,7 @@ class Content_Customizer extends Abstract_Customizer
             return array(
                 'selectors'    => array(
                     '.product-preview-tag-bar .tag',
+                    '.product-relations-item-tag-bar .tag',
                 ),
                 'declarations' => array(
                     'color' => $color
@@ -1051,6 +1052,7 @@ class Content_Customizer extends Abstract_Customizer
             return array(
                 'selectors'    => array(
                     '.product-preview-tag-bar .tag:hover',
+                    '.product-relations-item-tag-bar .tag:hover',
                 ),
                 'declarations' => array(
                     'color' => $color
@@ -1064,6 +1066,7 @@ class Content_Customizer extends Abstract_Customizer
             return array(
                 'selectors'    => array(
                     '.product-preview-tag-bar .tag',
+                    '.product-relations-item-tag-bar .tag',
                 ),
                 'declarations' => array(
                     'background-color' => $color
@@ -1077,6 +1080,7 @@ class Content_Customizer extends Abstract_Customizer
             return array(
                 'selectors'    => array(
                     '.product-preview-tag-bar .tag:hover',
+                    '.product-relations-item-tag-bar .tag:hover',
                 ),
                 'declarations' => array(
                     'background-color' => $color
@@ -1090,6 +1094,7 @@ class Content_Customizer extends Abstract_Customizer
             return array(
                 'selectors'    => array(
                     '.product-preview-tag-bar .tag-price',
+                    '.product-relations-item-tag-bar .tag-price',
                 ),
                 'declarations' => array(
                     'color' => $color
@@ -1103,6 +1108,7 @@ class Content_Customizer extends Abstract_Customizer
             return array(
                 'selectors'    => array(
                     '.product-preview-tag-bar .tag-price:hover',
+                    '.product-relations-item-tag-bar .tag-price:hover',
                 ),
                 'declarations' => array(
                     'color' => $color
@@ -1116,6 +1122,7 @@ class Content_Customizer extends Abstract_Customizer
             return array(
                 'selectors'    => array(
                     '.product-preview-tag-bar .tag-price',
+                    '.product-relations-item-tag-bar .tag-price',
                 ),
                 'declarations' => array(
                     'background-color' => $color
@@ -1129,6 +1136,7 @@ class Content_Customizer extends Abstract_Customizer
             return array(
                 'selectors'    => array(
                     '.product-preview-tag-bar .tag-price:hover',
+                    '.product-relations-item-tag-bar .tag-price:hover',
                 ),
                 'declarations' => array(
                     'background-color' => $color

@@ -1,28 +1,49 @@
+// Product Image Gallery Settings
 (function($){
-    $('.thumb-slider .slick-slider').slick({
+    $('.slick-product-gallery').slick({
+        asNavFor: '.slick-product-nav',
+        arrows: false,
+        dots: false,
+        adaptiveHeight: true,
+        slidesToShow: 1,
+        autoplay: false,
+        infinite: true,
+        mobileFirst: true,
+        pauseOnHover: true,
+        swipe: true,
+    });
+
+    $('.slick-product-nav').slick({
+        asNavFor: '.slick-product-gallery',
+        infinite: true,
+        mobileFirst: true,
+        arrows: false,
         slidesToShow: 4,
         slidesToScroll: 1,
-        dots: false,
-        arrows: false,
-        focusOnSelect: true,
-        adaptiveHeight: true,
-        asNavFor: '.portfolio-slider .slick-slider'
+        focusOnSelect: true
     });
+})(jQuery);
 
-    $('.portfolio-slider .slick-slider').slick({
+// Relations Image Gallery Settings
+(function($){
+    $('.slick-relations-gallery').slick({
+        arrows: true,
+        dots: true,
         slidesToShow: 1,
         slidesToScroll: 1,
-        arrows: false,
-        asNavFor: '.thumb-slider .slick-slider',
+        infinite: false,
+        autoplay: false,
+        mobileFirst: true,
+        pauseOnHover: true,
+        swipe: true,
+        responsive: [
+            {
+                breakpoint: 544,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            }
+        ]
     });
-
-    var container = $('.portfolio-slider');
-    var content = $('.portfolio-slider .slick-list');
-    var containerHeight = container.height();
-    var contentHeight = content.height();
-
-    if (containerHeight > contentHeight) {
-        content.css('margin-top', (containerHeight - contentHeight) / 2);
-    }
-
 })(jQuery);

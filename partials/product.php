@@ -53,6 +53,6 @@
     <?php endif; ?>
 
     <footer class="product-footer">
-        <?php get_template_part('partials/product/relations'); ?>
+        <?php get_template_part('partials/product/footer'); ?>
     </footer>
 </article>
