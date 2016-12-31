@@ -27,7 +27,7 @@
     border-width: 1px;
     border-style: solid;
     padding: $space-size-extra-small $space-size-small;
-    margin-left: $space-size-small;
+    margin: 0 $space-size-small $space-size-small 0;
 
     &.unreachable {
       opacity: 0.5;

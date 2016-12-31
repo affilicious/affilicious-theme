@@ -7898,7 +7898,7 @@ button.close {
   border-width: 1px;
   border-style: solid;
   padding: 5px 10px;
-  margin-left: 10px; }
+  margin: 0 10px 10px 0; }
   .aff-product-attributes-choice.unreachable {
     opacity: 0.5;
     border-style: dotted; }
