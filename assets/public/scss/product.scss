@@ -28,6 +28,16 @@
     }
   }
 
+  &-tags {
+    padding-bottom: $space-size-small;
+
+    .tag {
+      margin-left: 0;
+      margin-right: $space-size-extra-small;
+      margin-bottom: $space-size-extra-small;
+    }
+  }
+
   &-relations {
     @include box-shadow();
     @include border-radius();
@@ -396,6 +406,8 @@
 }
 
 #product-image-gallery {
+  padding-bottom: $space-size-small;
+
   .slick {
     &-container {
       max-width: 500px;

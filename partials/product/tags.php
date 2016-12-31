@@ -1,0 +1,1 @@
+<?php aff_the_product_tags(null, '<span class="product-tag-item tag">', '</span>'); ?>

@@ -10,6 +10,12 @@
                 </h1>
 
                 <?php get_template_part('partials/product/review'); ?>
+
+                <?php if(aff_has_product_tags()): ?>
+                    <div class="product-tags">
+                        <?php get_template_part('partials/product/tags'); ?>
+                    </div>
+                <?php endif; ?>
             </div>
         </div>
         <div class="row">

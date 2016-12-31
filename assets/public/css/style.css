@@ -12431,6 +12431,13 @@ body {
     margin: 0;
     padding: 0; }
 
+.product-tags {
+  padding-bottom: 10px; }
+  .product-tags .tag {
+    margin-left: 0;
+    margin-right: 5px;
+    margin-bottom: 5px; }
+
 .product-relations {
   -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
@@ -12733,58 +12740,57 @@ body {
   .product-preview-updated-at {
     padding-top: 10px; }
 
-#product-image-gallery .slick-container {
-  max-width: 500px; }
-
-#product-image-gallery .slick-product-gallery {
-  border: 1px solid #cdcdcd;
-  background-color: #f9f9f9;
-  width: 100%; }
-  #product-image-gallery .slick-product-gallery .slick-track {
-    height: 250px; }
-  #product-image-gallery .slick-product-gallery .slick-slide {
+#product-image-gallery {
+  padding-bottom: 10px; }
+  #product-image-gallery .slick-container {
+    max-width: 500px; }
+  #product-image-gallery .slick-product-gallery {
+    border: 1px solid #cdcdcd;
+    background-color: #f9f9f9;
+    width: 100%; }
+    #product-image-gallery .slick-product-gallery .slick-track {
+      height: 250px; }
+    #product-image-gallery .slick-product-gallery .slick-slide {
+      height: 100%;
+      outline: none; }
+      #product-image-gallery .slick-product-gallery .slick-slide .center {
+        margin: 0;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+      #product-image-gallery .slick-product-gallery .slick-slide figure, #product-image-gallery .slick-product-gallery .slick-slide img {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: auto; }
+    #product-image-gallery .slick-product-gallery .slick-prev:before, #product-image-gallery .slick-product-gallery .slick-next:before {
+      color: black; }
+  #product-image-gallery .slick-product-nav {
+    margin-top: 15px;
+    width: 100%; }
+    #product-image-gallery .slick-product-nav .slide-track {
+      height: 100px; }
+    #product-image-gallery .slick-product-nav .slick-slide {
+      width: 25%;
+      outline: none; }
+      #product-image-gallery .slick-product-nav .slick-slide .center {
+        margin: 0;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+      #product-image-gallery .slick-product-nav .slick-slide img, #product-image-gallery .slick-product-nav .slick-slide figure {
+        height: 100%;
+        overflow-x: hidden;
+        display: block;
+        margin: auto; }
+  #product-image-gallery .slick-product-gallery, #product-image-gallery .slick-product-nav .slick-slide .center {
+    margin: 0;
     height: 100%;
-    outline: none; }
-    #product-image-gallery .slick-product-gallery .slick-slide .center {
-      margin: 0;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center; }
-    #product-image-gallery .slick-product-gallery .slick-slide figure, #product-image-gallery .slick-product-gallery .slick-slide img {
-      width: 100%;
-      height: auto;
-      display: block;
-      margin: auto; }
-  #product-image-gallery .slick-product-gallery .slick-prev:before, #product-image-gallery .slick-product-gallery .slick-next:before {
-    color: black; }
-
-#product-image-gallery .slick-product-nav {
-  margin-top: 15px;
-  width: 100%; }
-  #product-image-gallery .slick-product-nav .slide-track {
-    height: 100px; }
-  #product-image-gallery .slick-product-nav .slick-slide {
-    width: 25%;
-    outline: none; }
-    #product-image-gallery .slick-product-nav .slick-slide .center {
-      margin: 0;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center; }
-    #product-image-gallery .slick-product-nav .slick-slide img, #product-image-gallery .slick-product-nav .slick-slide figure {
-      height: 100%;
-      overflow-x: hidden;
-      display: block;
-      margin: auto; }
-
-#product-image-gallery .slick-product-gallery, #product-image-gallery .slick-product-nav .slick-slide .center {
-  margin: 0;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center; }
+    display: flex;
+    align-items: center;
+    justify-content: center; }
 
 .btn-circle {
   width: 30px;

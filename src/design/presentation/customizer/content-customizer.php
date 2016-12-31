@@ -1037,6 +1037,7 @@ class Content_Customizer extends Abstract_Customizer
 
             return array(
                 'selectors'    => array(
+                    '.product-tags .tag',
                     '.product-preview-tag-bar .tag',
                     '.product-relations-item-tag-bar .tag',
                 ),
@@ -1051,6 +1052,7 @@ class Content_Customizer extends Abstract_Customizer
 
             return array(
                 'selectors'    => array(
+                    '.product-tags .tag:hover',
                     '.product-preview-tag-bar .tag:hover',
                     '.product-relations-item-tag-bar .tag:hover',
                 ),
@@ -1065,6 +1067,7 @@ class Content_Customizer extends Abstract_Customizer
 
             return array(
                 'selectors'    => array(
+                    '.product-tags .tag',
                     '.product-preview-tag-bar .tag',
                     '.product-relations-item-tag-bar .tag',
                 ),
@@ -1079,6 +1082,7 @@ class Content_Customizer extends Abstract_Customizer
 
             return array(
                 'selectors'    => array(
+                    '.product-tags .tag:hover',
                     '.product-preview-tag-bar .tag:hover',
                     '.product-relations-item-tag-bar .tag:hover',
                 ),

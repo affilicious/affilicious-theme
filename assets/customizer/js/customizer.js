@@ -22,13 +22,13 @@
 
     wp.customize('afft-content-product-custom-tag-text-color', function (value) {
         value.bind(function (color) {
-            $('.product-preview-tag-bar .tag:not(.tag-price), .product-relations-item-tag-bar .tag:not(.tag-price)').css('color', color);
+            $('.product-tags .tag, .product-preview-tag-bar .tag:not(.tag-price), .product-relations-item-tag-bar .tag:not(.tag-price)').css('color', color);
         });
     });
 
     wp.customize('afft-content-product-custom-tag-text-color-hover', function (value) {
         value.bind(function (color) {
-            $('.product-preview-tag-bar .tag:not(.tag-price), .product-relations-item-tag-bar .tag:not(.tag-price)').hover(function (e) {
+            $('.product-tags .tag, .product-preview-tag-bar .tag:not(.tag-price), .product-relations-item-tag-bar .tag:not(.tag-price)').hover(function (e) {
                 var fallback = wp.customize.instance('afft-content-product-custom-tag-text-color').get();
                 $(this).css('color', e.type === "mouseenter" ? color : fallback);
             });
@@ -37,13 +37,13 @@
 
     wp.customize('afft-content-product-custom-tag-background-color', function (value) {
         value.bind(function (color) {
-            $('.product-preview-tag-bar .tag:not(.tag-price), .product-relations-item-tag-bar .tag:not(.tag-price)').css('background-color', color);
+            $('.product-tags .tag, .product-preview-tag-bar .tag:not(.tag-price), .product-relations-item-tag-bar .tag:not(.tag-price)').css('background-color', color);
         });
     });
 
     wp.customize('afft-content-product-custom-tag-background-color-hover', function (value) {
         value.bind(function (color) {
-            $('.product-preview-tag-bar .tag:not(.tag-price), .product-relations-item-tag-bar .tag:not(.tag-price)').hover(function (e) {
+            $('.product-tags .tag, .product-preview-tag-bar .tag:not(.tag-price), .product-relations-item-tag-bar .tag:not(.tag-price)').hover(function (e) {
                 var fallback = wp.customize.instance('afft-content-product-custom-tag-background-color').get();
                 $(this).css('background-color', e.type === "mouseenter" ? color : fallback);
             });
