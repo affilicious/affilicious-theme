@@ -1597,7 +1597,7 @@ class Content_Customizer extends Abstract_Customizer
 
 			return array(
 				'selectors'    => array(
-					'.alert.alert-success'
+					'.alert.alert-success p'
 				),
 				'declarations' => array(
 					'color' => $color
@@ -1636,7 +1636,7 @@ class Content_Customizer extends Abstract_Customizer
 
 			return array(
 				'selectors'    => array(
-					'.alert.alert-info'
+					'.alert.alert-info p'
 				),
 				'declarations' => array(
 					'color' => $color
@@ -1701,7 +1701,7 @@ class Content_Customizer extends Abstract_Customizer
 
 			return array(
 				'selectors'    => array(
-					'.alert.alert-warning'
+					'.alert.alert-warning p'
 				),
 				'declarations' => array(
 					'color' => $color
@@ -1766,7 +1766,7 @@ class Content_Customizer extends Abstract_Customizer
 
 			return array(
 				'selectors'    => array(
-					'.alert.alert-danger'
+					'.alert.alert-danger p'
 				),
 				'declarations' => array(
 					'color' => $color

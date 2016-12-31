@@ -696,4 +696,168 @@
             }
         });
     });
+
+    wp.customize('afft-content-alert-info-text-color', function (value) {
+        value.bind(function (color) {
+            $('.alert-info p').css('color', color);
+        });
+    });
+
+    wp.customize('afft-content-alert-info-link-color', function (value) {
+        value.bind(function (color) {
+            $('.alert-info a').css('color', color);
+        });
+    });
+
+    wp.customize('afft-content-alert-info-link-color-hover', function (value) {
+        value.bind(function (color) {
+            $('.alert-info a').hover(function(e) {
+                var fallback = wp.customize.instance('afft-content-alert-info-link-color').get();
+                $(this).css('color', e.type === "mouseenter" ? color : fallback);
+            });
+        });
+    });
+
+    wp.customize('afft-content-alert-info-background-color', function (value) {
+        value.bind(function (color) {
+            $('.alert-info').css('background-color', color);
+        });
+    });
+
+    wp.customize('afft-content-alert-info-border-color', function (value) {
+        value.bind(function (color) {
+            $('.alert-info').css('border-color', color);
+        });
+    });
+
+    wp.customize('afft-content-alert-success-text-color', function (value) {
+        value.bind(function (color) {
+            $('.alert-success p').css('color', color);
+        });
+    });
+
+    wp.customize('afft-content-alert-success-link-color', function (value) {
+        value.bind(function (color) {
+            $('.alert-success a').css('color', color);
+        });
+    });
+
+    wp.customize('afft-content-alert-success-link-color-hover', function (value) {
+        value.bind(function (color) {
+            $('.alert-success a').hover(function(e) {
+                var fallback = wp.customize.instance('afft-content-alert-success-link-color').get();
+                $(this).css('color', e.type === "mouseenter" ? color : fallback);
+            });
+        });
+    });
+
+    wp.customize('afft-content-alert-success-background-color', function (value) {
+        value.bind(function (color) {
+            $('.alert-success').css('background-color', color);
+        });
+    });
+
+    wp.customize('afft-content-alert-success-border-color', function (value) {
+        value.bind(function (color) {
+            $('.alert-success').css('border-color', color);
+        });
+    });
+
+    wp.customize('afft-content-alert-warning-text-color', function (value) {
+        value.bind(function (color) {
+            $('.alert-warning p').css('color', color);
+        });
+    });
+
+    wp.customize('afft-content-alert-warning-link-color', function (value) {
+        value.bind(function (color) {
+            $('.alert-warning a').css('color', color);
+        });
+    });
+
+    wp.customize('afft-content-alert-warning-link-color-hover', function (value) {
+        value.bind(function (color) {
+            $('.alert-warning a').hover(function(e) {
+                var fallback = wp.customize.instance('afft-content-alert-warning-link-color').get();
+                $(this).css('color', e.type === "mouseenter" ? color : fallback);
+            });
+        });
+    });
+
+    wp.customize('afft-content-alert-warning-background-color', function (value) {
+        value.bind(function (color) {
+            $('.alert-warning').css('background-color', color);
+        });
+    });
+
+    wp.customize('afft-content-alert-warning-border-color', function (value) {
+        value.bind(function (color) {
+            $('.alert-warning').css('border-color', color);
+        });
+    });
+
+    wp.customize('afft-content-alert-danger-text-color', function (value) {
+        value.bind(function (color) {
+            $('.alert-danger p').css('color', color);
+        });
+    });
+
+    wp.customize('afft-content-alert-danger-link-color', function (value) {
+        value.bind(function (color) {
+            $('.alert-danger a').css('color', color);
+        });
+    });
+
+    wp.customize('afft-content-alert-danger-link-color-hover', function (value) {
+        value.bind(function (color) {
+            $('.alert-danger a').hover(function(e) {
+                var fallback = wp.customize.instance('afft-content-alert-danger-link-color').get();
+                $(this).css('color', e.type === "mouseenter" ? color : fallback);
+            });
+        });
+    });
+
+    wp.customize('afft-content-alert-danger-border-color', function (value) {
+        value.bind(function (color) {
+            $('.alert-danger').css('border-color', color);
+        });
+    });
 })(jQuery);
+
+/*
+ $options['afft-content-alert-danger-text-color'] = array(
+ 'id'        => 'afft-content-alert-danger-text-color',
+ 'label'     => __('Danger Text Color', 'affilicious-theme'),
+ 'section'   => $section,
+ 'type'      => 'color',
+ 'default'   => '#a94442',
+ 'transport' => 'postMessage',
+ );
+
+ $options['afft-content-alert-danger-link-color'] = array(
+ 'id'        => 'afft-content-alert-danger-link-color',
+ 'label'     => __('Danger Link Color', 'affilicious-theme'),
+ 'section'   => $section,
+ 'type'      => 'color',
+ 'default'   => '#843534',
+ 'transport' => 'postMessage',
+ );
+
+ $options['afft-content-alert-danger-link-color-hover'] = array(
+ 'id'        => 'afft-content-alert-danger-link-color-hover',
+ 'label'     => __('Danger Link Color (Hover)', 'affilicious-theme'),
+ 'section'   => $section,
+ 'type'      => 'color',
+ 'default'   => '#9b3c3c',
+ 'transport' => 'postMessage',
+ );
+
+ $options['afft-content-alert-danger-border-color'] = array(
+ 'id'        => 'afft-content-alert-danger-border-color',
+ 'label'     => __('Danger Border Color', 'affilicious-theme'),
+ 'section'   => $section,
+ 'type'      => 'color',
+ 'default'   => '#ed5565',
+ 'transport' => 'postMessage',
+ );
+ */
