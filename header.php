@@ -19,13 +19,13 @@
             <div class="row">
                 <div class="col-xs-12">
                     <?php if(afft_has_logo() || afft_has_retina_logo()): ?>
-                        <a href="<?php home_url('/'); ?>" title="<?php bloginfo('name'); ?>" rel='home'>
+                        <a href="<?php echo get_bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>" rel='home'>
                             <img id="logo" src="<?php echo (!afft_has_logo() ? afft_get_retina_logo() : afft_get_logo()); ?>"
                                  data-rjs="<?php echo afft_get_retina_logo() ?>" alt="<?php bloginfo('name'); ?>">
                         </a>
                     <?php else: ?>
                         <h1 id="title" class="display-4" itemprop="headline">
-                            <a href="<?php home_url('/'); ?>" rel='home'>
+                            <a href="<?php echo get_bloginfo('url'); ?>" rel='home'>
                                 <?php bloginfo('name') ?>
                             </a>
                         </h1>
