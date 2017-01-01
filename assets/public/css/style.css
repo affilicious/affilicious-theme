@@ -12475,8 +12475,7 @@ body {
       display: flex;
       justify-items: center;
       align-items: center;
-      margin-bottom: 10px;
-      overflow: hidden; }
+      margin-bottom: 10px; }
       .product-relations-item-thumbnail img {
         -moz-border-radius-topright: 5px;
         -webkit-border-top-right-radius: 5px;
@@ -12547,8 +12546,8 @@ body {
 .product-thumbnail {
   padding: 0;
   margin: 0 auto 10px auto;
-  width: 250px;
-  height: 250px;
+  max-width: 250px;
+  min-height: 250px;
   overflow: hidden;
   display: flex;
   justify-content: center;

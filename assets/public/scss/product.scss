@@ -72,7 +72,6 @@
         justify-items: center;
         align-items: center;
         margin-bottom: $space-size-small;
-        overflow: hidden;
 
         img {
           @include border-top-radius();
@@ -172,8 +171,8 @@
   &-thumbnail {
     padding: 0;
     margin: 0 auto $space-size-small auto;
-    width: $product-thumbnail-width;
-    height: $product-thumbnail-height;
+    max-width: $product-thumbnail-width;
+    min-height: $product-thumbnail-height;
     overflow: hidden;
     display: flex;
     justify-content: center;
