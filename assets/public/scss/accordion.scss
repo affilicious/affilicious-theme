@@ -6,6 +6,7 @@
   input[type="checkbox"] {
     display: none;
   }
+
   .accordion-content {
     height: 0;
     overflow:hidden;
@@ -13,30 +14,44 @@
     transition: all 0.4s ease-in-out;
     opacity: 0;
   }
+
   label {
+    @include font-big-text;
     width: 100%;
+    border-top: 1px solid lightgray;
     border-bottom: 1px solid lightgray;
-    padding: 10px 0;
+    padding: $space-size-small;
+
     i {
+      font-weight: $font-weight-text;
       float: right;
       line-height: 1.9;
     }
   }
+
+  input[type="checkbox"]:checked ~ label {
+    border-bottom: none;
+  }
+
   input[type="checkbox"]:checked ~ label i {
     transform: rotate(225deg);
     transition: 0.4s all ease-in-out;
   }
+
   input[type="checkbox"]:not(:checked) ~ label i {
     transition: 0.4s all ease-in-out;
   }
+
   input[type="checkbox"]:checked ~ .accordion-content {
     height: calc(100%);
     transform: translateY(0px);
     transition: all 0.4s ease-in-out;
     opacity: 1;
     overflow: hidden;
+    border-bottom: 1px solid lightgray;
   }
 }
+
 @media screen and (min-width: 576px) {
   #accordion {
     label, input {

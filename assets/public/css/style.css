@@ -7850,12 +7850,23 @@ button.close {
   opacity: 0; }
 
 #accordion label {
+  font-size: 1.2rem;
+  font-weight: normal;
+  font-family: "Helvetica Neue", Arial, Helvetica, Verdana, sans-serif;
+  color: #555;
+  line-height: 28.8px;
+  letter-spacing: 0.01rem;
   width: 100%;
+  border-top: 1px solid lightgray;
   border-bottom: 1px solid lightgray;
-  padding: 10px 0; }
+  padding: 10px; }
   #accordion label i {
+    font-weight: normal;
     float: right;
     line-height: 1.9; }
+
+#accordion input[type="checkbox"]:checked ~ label {
+  border-bottom: none; }
 
 #accordion input[type="checkbox"]:checked ~ label i {
   transform: rotate(225deg);
@@ -7869,7 +7880,8 @@ button.close {
   transform: translateY(0px);
   transition: all 0.4s ease-in-out;
   opacity: 1;
-  overflow: hidden; }
+  overflow: hidden;
+  border-bottom: 1px solid lightgray; }
 
 @media screen and (min-width: 576px) {
   #accordion label, #accordion input {
