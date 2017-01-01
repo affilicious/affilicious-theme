@@ -13273,13 +13273,11 @@ p, small {
     justify-content: center;
     align-items: flex-end; }
     #price-comparison .shop-price-old {
-      color: #ff6c60;
       font-weight: 500;
       line-height: 1rem;
       font-size: 1rem;
       text-decoration: line-through; }
     #price-comparison .shop-price-current {
-      color: #2fa32f;
       font-weight: 500;
       line-height: 1.2rem;
       font-size: 1.2rem; }

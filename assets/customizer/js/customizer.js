@@ -1,15 +1,13 @@
 (function ($) {
     wp.customize('afft-content-product-current-price-color', function (value) {
         value.bind(function (color) {
-            var price = $('.current-price, .price');
-            price.css('color', color);
+            $('.current-price').css('color', color);
         });
     });
 
     wp.customize('afft-content-product-old-price-color', function (value) {
         value.bind(function (color) {
-            var price = $('.old-price');
-            price.css('color', color);
+            $('.old-price').css('color', color);
         });
     });
 

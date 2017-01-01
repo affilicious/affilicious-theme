@@ -22,11 +22,11 @@
                                         <div class="shop-price">
                                             <?php if($old_price = $shop['old_price']): ?>
                                                 <?php if(aff_should_shop_display_old_price($shop)): ?>
-                                                    <span class="shop-price-old"><?php echo $old_price['value'] . ' ' . $old_price['currency']['symbol'] ?></span>
+                                                    <span class="shop-price-old old-price"><?php echo $old_price['value'] . ' ' . $old_price['currency']['symbol'] ?></span>
                                                 <?php endif; ?>
                                             <?php endif; ?>
 
-                                            <span class="shop-price-current"><?php echo $price['value'] . ' ' . $price['currency']['symbol'] ?></span>
+                                            <span class="shop-price-current current-price"><?php echo $price['value'] . ' ' . $price['currency']['symbol'] ?></span>
                                         </div>
 
                                         <small class="shop-price-indication text-muted">

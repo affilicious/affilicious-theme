@@ -228,7 +228,6 @@
       align-items: flex-end;
 
       &-old {
-        color: $price-comparison-old-price-color;
         font-weight: $font-weight-headline-6;
         line-height: $font-size-headline-6;
         font-size: $font-size-headline-6;
@@ -236,7 +235,6 @@
       }
 
       &-current {
-        color: $price-comparison-current-price-color;
         font-weight: $font-weight-headline-5;
         line-height: $font-size-headline-5;
         font-size: $font-size-headline-5;

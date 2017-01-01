@@ -1055,7 +1055,7 @@ class Content_Customizer extends Abstract_Customizer
 					'.price'
 				),
 				'declarations' => array(
-					'color' => $color . ' !important',
+					'color' => $color,
 				)
 			);
 		});
@@ -1068,7 +1068,7 @@ class Content_Customizer extends Abstract_Customizer
 					'.old-price'
 				),
 				'declarations' => array(
-					'color' => $color . ' !important',
+					'color' => $color,
 				)
 			);
 		});
