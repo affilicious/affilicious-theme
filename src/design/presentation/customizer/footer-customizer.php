@@ -126,12 +126,11 @@ class Footer_Customizer extends Abstract_Customizer
             'section'   => $section,
             'type'      => 'select',
             'choices'   => array(
-                'no-repeat' => __('None', 'affilicious-theme'),
-                'repeat'    => __('Repeat', 'affilicious-theme'),
-                'repeat-x'  => __('Repeat X', 'affilicious-theme'),
-                'repeat-y'  => __('Repeat Y', 'affilicious-theme'),
+                'fixed'   => __('Fixed', 'affilicious-theme'),
+                'scroll'  => __('Scroll', 'affilicious-theme'),
+                'local'   => __('Local', 'affilicious-theme'),
             ),
-            'default'   => 'no-repeat',
+            'default'   => 'fixed',
             'transport' => 'postMessage',
         );
 

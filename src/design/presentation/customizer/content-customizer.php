@@ -870,12 +870,11 @@ class Content_Customizer extends Abstract_Customizer
             'section'   => $section,
             'type'      => 'select',
             'choices'   => array(
-                'initial' => __('None', 'affilicious-theme'),
-                'scroll'  => __('Scroll', 'affilicious-theme'),
                 'fixed'   => __('Fixed', 'affilicious-theme'),
+                'scroll'  => __('Scroll', 'affilicious-theme'),
                 'local'   => __('Local', 'affilicious-theme'),
             ),
-            'default'   => 'initial',
+            'default'   => 'fixed',
             'transport' => 'postMessage',
         );
 
@@ -994,12 +993,11 @@ class Content_Customizer extends Abstract_Customizer
             'section'   => $section,
             'type'      => 'select',
             'choices'   => array(
-                'initial' => __('None', 'affilicious-theme'),
-                'scroll'  => __('Scroll', 'affilicious-theme'),
                 'fixed'   => __('Fixed', 'affilicious-theme'),
+                'scroll'  => __('Scroll', 'affilicious-theme'),
                 'local'   => __('Local', 'affilicious-theme'),
             ),
-            'default'   => 'initial',
+            'default'   => 'fixed',
             'transport' => 'postMessage',
         );
 
