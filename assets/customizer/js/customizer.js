@@ -1682,6 +1682,12 @@
         });
     });
 
+    wp.customize('afft-header-banner-title-font-family', function (value) {
+        value.bind(function (color) {
+            $('#title').css('font-family', color);
+        });
+    });
+
     wp.customize('afft-header-banner-tagline-color', function (value) {
         value.bind(function (color) {
             $('#tagline').css('color', color);
@@ -1697,6 +1703,12 @@
             } else {
                 $('#tagline').css('text-shadow', '0 0 0 rgba(0, 0, 0, 0)');
             }
+        });
+    });
+
+    wp.customize('afft-header-banner-tagline-font-family', function (value) {
+        value.bind(function (value) {
+            $('#tagline').css('font-family', value);
         });
     });
 

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: "
 "affilicious-theme\n"
 "POT-Creation-Date: "
-"2017-01-01 10:28+0100\n"
+"2017-01-01 14:22+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Your "
 "Name <you@example.com>\n"
@@ -1063,8 +1063,8 @@ msgstr ""
 #: src/design/presentation/customizer/footer-customizer.php:98
 #: src/design/presentation/customizer/footer-customizer.php:312
 #: src/design/presentation/customizer/general-customizer.php:26
-#: src/design/presentation/customizer/header-customizer.php:35
-#: src/design/presentation/customizer/header-customizer.php:170
+#: src/design/presentation/customizer/header-customizer.php:43
+#: src/design/presentation/customizer/header-customizer.php:198
 msgid ""
 "Background Color (Top)"
 msgstr ""
@@ -1075,8 +1075,8 @@ msgstr ""
 #: src/design/presentation/customizer/footer-customizer.php:107
 #: src/design/presentation/customizer/footer-customizer.php:321
 #: src/design/presentation/customizer/general-customizer.php:35
-#: src/design/presentation/customizer/header-customizer.php:44
-#: src/design/presentation/customizer/header-customizer.php:179
+#: src/design/presentation/customizer/header-customizer.php:52
+#: src/design/presentation/customizer/header-customizer.php:207
 msgid ""
 "Background Color "
 "(Bottom)"
@@ -1086,7 +1086,7 @@ msgstr ""
 #: src/design/presentation/customizer/content-customizer.php:969
 #: src/design/presentation/customizer/footer-customizer.php:116
 #: src/design/presentation/customizer/general-customizer.php:57
-#: src/design/presentation/customizer/header-customizer.php:53
+#: src/design/presentation/customizer/header-customizer.php:61
 msgid "Background Image"
 msgstr ""
 
@@ -1094,7 +1094,7 @@ msgstr ""
 #: src/design/presentation/customizer/content-customizer.php:978
 #: src/design/presentation/customizer/footer-customizer.php:125
 #: src/design/presentation/customizer/general-customizer.php:66
-#: src/design/presentation/customizer/header-customizer.php:62
+#: src/design/presentation/customizer/header-customizer.php:70
 msgid "Background Repeat"
 msgstr ""
 
@@ -1110,9 +1110,9 @@ msgstr ""
 #: src/design/presentation/customizer/general-customizer.php:70
 #: src/design/presentation/customizer/general-customizer.php:85
 #: src/design/presentation/customizer/general-customizer.php:100
-#: src/design/presentation/customizer/header-customizer.php:66
-#: src/design/presentation/customizer/header-customizer.php:81
-#: src/design/presentation/customizer/header-customizer.php:96
+#: src/design/presentation/customizer/header-customizer.php:74
+#: src/design/presentation/customizer/header-customizer.php:89
+#: src/design/presentation/customizer/header-customizer.php:104
 msgid "None"
 msgstr ""
 
@@ -1120,7 +1120,7 @@ msgstr ""
 #: src/design/presentation/customizer/content-customizer.php:983
 #: src/design/presentation/customizer/footer-customizer.php:130
 #: src/design/presentation/customizer/general-customizer.php:71
-#: src/design/presentation/customizer/header-customizer.php:67
+#: src/design/presentation/customizer/header-customizer.php:75
 msgid "Repeat"
 msgstr ""
 
@@ -1128,7 +1128,7 @@ msgstr ""
 #: src/design/presentation/customizer/content-customizer.php:984
 #: src/design/presentation/customizer/footer-customizer.php:131
 #: src/design/presentation/customizer/general-customizer.php:72
-#: src/design/presentation/customizer/header-customizer.php:68
+#: src/design/presentation/customizer/header-customizer.php:76
 msgid "Repeat X"
 msgstr ""
 
@@ -1136,7 +1136,7 @@ msgstr ""
 #: src/design/presentation/customizer/content-customizer.php:985
 #: src/design/presentation/customizer/footer-customizer.php:132
 #: src/design/presentation/customizer/general-customizer.php:73
-#: src/design/presentation/customizer/header-customizer.php:69
+#: src/design/presentation/customizer/header-customizer.php:77
 msgid "Repeat Y"
 msgstr ""
 
@@ -1144,7 +1144,7 @@ msgstr ""
 #: src/design/presentation/customizer/content-customizer.php:993
 #: src/design/presentation/customizer/footer-customizer.php:140
 #: src/design/presentation/customizer/general-customizer.php:81
-#: src/design/presentation/customizer/header-customizer.php:77
+#: src/design/presentation/customizer/header-customizer.php:85
 msgid ""
 "Background Attachment"
 msgstr ""
@@ -1153,7 +1153,7 @@ msgstr ""
 #: src/design/presentation/customizer/content-customizer.php:998
 #: src/design/presentation/customizer/footer-customizer.php:145
 #: src/design/presentation/customizer/general-customizer.php:86
-#: src/design/presentation/customizer/header-customizer.php:82
+#: src/design/presentation/customizer/header-customizer.php:90
 msgid "Scroll"
 msgstr ""
 
@@ -1161,7 +1161,7 @@ msgstr ""
 #: src/design/presentation/customizer/content-customizer.php:999
 #: src/design/presentation/customizer/footer-customizer.php:146
 #: src/design/presentation/customizer/general-customizer.php:87
-#: src/design/presentation/customizer/header-customizer.php:83
+#: src/design/presentation/customizer/header-customizer.php:91
 msgid "Fixed"
 msgstr ""
 
@@ -1169,7 +1169,7 @@ msgstr ""
 #: src/design/presentation/customizer/content-customizer.php:1000
 #: src/design/presentation/customizer/footer-customizer.php:147
 #: src/design/presentation/customizer/general-customizer.php:88
-#: src/design/presentation/customizer/header-customizer.php:84
+#: src/design/presentation/customizer/header-customizer.php:92
 msgid "Local"
 msgstr ""
 
@@ -1177,7 +1177,7 @@ msgstr ""
 #: src/design/presentation/customizer/content-customizer.php:1008
 #: src/design/presentation/customizer/footer-customizer.php:155
 #: src/design/presentation/customizer/general-customizer.php:96
-#: src/design/presentation/customizer/header-customizer.php:92
+#: src/design/presentation/customizer/header-customizer.php:100
 msgid "Background Size"
 msgstr ""
 
@@ -1185,7 +1185,7 @@ msgstr ""
 #: src/design/presentation/customizer/content-customizer.php:1013
 #: src/design/presentation/customizer/footer-customizer.php:160
 #: src/design/presentation/customizer/general-customizer.php:101
-#: src/design/presentation/customizer/header-customizer.php:97
+#: src/design/presentation/customizer/header-customizer.php:105
 msgid "Custom"
 msgstr ""
 
@@ -1193,7 +1193,7 @@ msgstr ""
 #: src/design/presentation/customizer/content-customizer.php:1014
 #: src/design/presentation/customizer/footer-customizer.php:161
 #: src/design/presentation/customizer/general-customizer.php:102
-#: src/design/presentation/customizer/header-customizer.php:98
+#: src/design/presentation/customizer/header-customizer.php:106
 msgid "Contain"
 msgstr ""
 
@@ -1201,7 +1201,7 @@ msgstr ""
 #: src/design/presentation/customizer/content-customizer.php:1015
 #: src/design/presentation/customizer/footer-customizer.php:162
 #: src/design/presentation/customizer/general-customizer.php:103
-#: src/design/presentation/customizer/header-customizer.php:99
+#: src/design/presentation/customizer/header-customizer.php:107
 msgid "Cover"
 msgstr ""
 
@@ -1209,7 +1209,7 @@ msgstr ""
 #: src/design/presentation/customizer/content-customizer.php:1023
 #: src/design/presentation/customizer/footer-customizer.php:170
 #: src/design/presentation/customizer/general-customizer.php:111
-#: src/design/presentation/customizer/header-customizer.php:107
+#: src/design/presentation/customizer/header-customizer.php:115
 msgid "Background Width"
 msgstr ""
 
@@ -1217,7 +1217,7 @@ msgstr ""
 #: src/design/presentation/customizer/content-customizer.php:1031
 #: src/design/presentation/customizer/footer-customizer.php:178
 #: src/design/presentation/customizer/general-customizer.php:119
-#: src/design/presentation/customizer/header-customizer.php:115
+#: src/design/presentation/customizer/header-customizer.php:123
 msgid "Background Height"
 msgstr ""
 
@@ -1230,7 +1230,7 @@ msgid "Breadcrumbs"
 msgstr ""
 
 #: src/design/presentation/customizer/footer-customizer.php:53
-#: src/design/presentation/customizer/header-customizer.php:188
+#: src/design/presentation/customizer/header-customizer.php:216
 msgid "Border Color"
 msgstr ""
 
@@ -1238,7 +1238,7 @@ msgstr ""
 #: src/design/presentation/customizer/footer-customizer.php:204
 #: src/design/presentation/customizer/footer-customizer.php:249
 #: src/design/presentation/customizer/footer-customizer.php:618
-#: src/design/presentation/customizer/header-customizer.php:215
+#: src/design/presentation/customizer/header-customizer.php:243
 msgid "Link Color"
 msgstr ""
 
@@ -1246,7 +1246,7 @@ msgstr ""
 #: src/design/presentation/customizer/footer-customizer.php:213
 #: src/design/presentation/customizer/footer-customizer.php:258
 #: src/design/presentation/customizer/footer-customizer.php:627
-#: src/design/presentation/customizer/header-customizer.php:224
+#: src/design/presentation/customizer/header-customizer.php:252
 msgid "Link Color (Hover)"
 msgstr ""
 
@@ -1346,104 +1346,113 @@ msgstr ""
 msgid "Left"
 msgstr ""
 
-#: src/design/presentation/customizer/header-customizer.php:20
+#: src/design/presentation/customizer/header-customizer.php:28
 msgid "Header"
 msgstr ""
 
-#: src/design/presentation/customizer/header-customizer.php:28
+#: src/design/presentation/customizer/header-customizer.php:36
 msgid "Banner"
 msgstr ""
 
-#: src/design/presentation/customizer/header-customizer.php:123
+#: src/design/presentation/customizer/header-customizer.php:131
 msgid "Title Color"
 msgstr ""
 
-#: src/design/presentation/customizer/header-customizer.php:132
+#: src/design/presentation/customizer/header-customizer.php:140
 msgid "Title Shadow Color"
 msgstr ""
 
-#: src/design/presentation/customizer/header-customizer.php:134
-#: src/design/presentation/customizer/header-customizer.php:153
+#: src/design/presentation/customizer/header-customizer.php:142
+#: src/design/presentation/customizer/header-customizer.php:171
 msgid ""
 "Leave the color empty "
 "for transparency."
 msgstr ""
 
-#: src/design/presentation/customizer/header-customizer.php:142
+#: src/design/presentation/customizer/header-customizer.php:150
+msgid "Title Font Family"
+msgstr ""
+
+#: src/design/presentation/customizer/header-customizer.php:160
 msgid "Tagline Color"
 msgstr ""
 
-#: src/design/presentation/customizer/header-customizer.php:151
+#: src/design/presentation/customizer/header-customizer.php:169
 msgid ""
 "Tagline Shadow Color"
 msgstr ""
 
-#: src/design/presentation/customizer/header-customizer.php:163
+#: src/design/presentation/customizer/header-customizer.php:179
+msgid ""
+"Tagline Font Family"
+msgstr ""
+
+#: src/design/presentation/customizer/header-customizer.php:191
 #: src/design/presentation/menu/main-menu.php:31
 msgid "Main Menu"
 msgstr ""
 
-#: src/design/presentation/customizer/header-customizer.php:197
+#: src/design/presentation/customizer/header-customizer.php:225
 msgid ""
 "Item Background Color "
 "(Hover Top)"
 msgstr ""
 
-#: src/design/presentation/customizer/header-customizer.php:206
+#: src/design/presentation/customizer/header-customizer.php:234
 msgid ""
 "Item Background Color "
 "(Hover Bottom)"
 msgstr ""
 
-#: src/design/presentation/customizer/header-customizer.php:233
+#: src/design/presentation/customizer/header-customizer.php:261
 msgid ""
 "Dropdown Background "
 "Color"
 msgstr ""
 
-#: src/design/presentation/customizer/header-customizer.php:242
+#: src/design/presentation/customizer/header-customizer.php:270
 msgid ""
 "Dropdown Item "
 "Background Color (Hover)"
 msgstr ""
 
-#: src/design/presentation/customizer/header-customizer.php:251
+#: src/design/presentation/customizer/header-customizer.php:279
 msgid ""
 "Dropdown Link Color"
 msgstr ""
 
-#: src/design/presentation/customizer/header-customizer.php:260
+#: src/design/presentation/customizer/header-customizer.php:288
 msgid ""
 "Dropdown Link Color "
 "(Hover)"
 msgstr ""
 
-#: src/design/presentation/customizer/header-customizer.php:269
+#: src/design/presentation/customizer/header-customizer.php:297
 msgid ""
 "Toggle Background Color"
 msgstr ""
 
-#: src/design/presentation/customizer/header-customizer.php:270
-#: src/design/presentation/customizer/header-customizer.php:280
-#: src/design/presentation/customizer/header-customizer.php:290
-#: src/design/presentation/customizer/header-customizer.php:300
+#: src/design/presentation/customizer/header-customizer.php:298
+#: src/design/presentation/customizer/header-customizer.php:308
+#: src/design/presentation/customizer/header-customizer.php:318
+#: src/design/presentation/customizer/header-customizer.php:328
 msgid ""
 "Only visible on mobile "
 "devices"
 msgstr ""
 
-#: src/design/presentation/customizer/header-customizer.php:279
+#: src/design/presentation/customizer/header-customizer.php:307
 msgid ""
 "Toggle Background Color "
 "(Hover)"
 msgstr ""
 
-#: src/design/presentation/customizer/header-customizer.php:289
+#: src/design/presentation/customizer/header-customizer.php:317
 msgid ""
 "Toggle Border Color"
 msgstr ""
 
-#: src/design/presentation/customizer/header-customizer.php:299
+#: src/design/presentation/customizer/header-customizer.php:327
 msgid ""
 "Toggle Border Color "
 "(Hover)"

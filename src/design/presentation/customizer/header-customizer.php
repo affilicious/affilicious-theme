@@ -13,6 +13,14 @@ class Header_Customizer extends Abstract_Customizer
 	 */
 	public function init()
 	{
+        $font_choices = array(
+            'serif'          => 'Serif',
+            'sans-serif'     => 'Sans Serif',
+            'helvetica'      => 'Helvetica',
+            'helvetica neue' => 'Helvetica Neue',
+            'monospace'      => 'Monospaced',
+        );
+
 		$panel = 'afft-header';
 
 		$panels[] = array(
@@ -137,6 +145,16 @@ class Header_Customizer extends Abstract_Customizer
 			'transport'   => 'postMessage',
 		);
 
+        $options['afft-header-banner-title-font-family'] = array(
+            'id'        => 'afft-header-banner-title-font-family',
+            'label'     => __('Title Font Family', 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'select',
+            'choices'   => $font_choices,
+            'default'   => 'helvetica neue',
+            'transport' => 'postMessage'
+        );
+
 		$options['afft-header-banner-tagline-color'] = array(
 			'id'        => 'afft-header-banner-tagline-color',
 			'label'     => __('Tagline Color', 'affilicious-theme'),
@@ -155,6 +173,16 @@ class Header_Customizer extends Abstract_Customizer
 			'default'     => '',
 			'transport'   => 'postMessage',
 		);
+
+        $options['afft-header-banner-tagline-font-family'] = array(
+            'id'        => 'afft-header-banner-tagline-font-family',
+            'label'     => __('Tagline Font Family', 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'select',
+            'choices'   => $font_choices,
+            'default'   => 'helvetica neue',
+            'transport' => 'postMessage'
+        );
 
 		$section = 'afft-header-main-menu';
 
@@ -457,6 +485,19 @@ class Header_Customizer extends Abstract_Customizer
 			}
 		});
 
+        $this->render_selectors('afft-header-banner-title-font-family', function ($mod) {
+            $stack = customizer_library_get_font_stack($mod);
+
+            return array(
+                'selectors'    => array(
+                    '#title'
+                ),
+                'declarations' => array(
+                    'font-family' => $stack
+                )
+            );
+        });
+
 		$this->render_selectors('afft-header-banner-tagline-color', function ($mod) {
 			$color = sanitize_hex_color($mod);
 
@@ -485,6 +526,19 @@ class Header_Customizer extends Abstract_Customizer
 				);
 			}
 		});
+
+        $this->render_selectors('afft-header-banner-tagline-font-family', function ($mod) {
+            $stack = customizer_library_get_font_stack($mod);
+
+            return array(
+                'selectors'    => array(
+                    '#tagline'
+                ),
+                'declarations' => array(
+                    'font-family' => $stack
+                )
+            );
+        });
 
 		$this->render_selectors(
 			'afft-header-main-menu-background-color-top',
@@ -522,8 +576,7 @@ class Header_Customizer extends Abstract_Customizer
 					'border-color' => $color,
 				)
 			);
-		}
-		);
+		});
 
 		$this->render_selectors(
 			'afft-header-main-menu-item-background-color-hover-top',
