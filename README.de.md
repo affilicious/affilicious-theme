@@ -2,7 +2,7 @@
 Das Affilicious Theme ist ein auf Wordpress basierendes Affiliate Theme, mit dem du schnell und unkompliziert eigene Affiliate Projekte auf die Beine stellen kannst. Mit seinen vielen Anpassungsmöglichkeiten ist es sehr einfach eine passende Nischenseite für deine Zielgruppe erstellen zu können.
 Das Beste am Affilicious Theme ist, dass es für dich völlig kostenlos ist und bleiben wird.
 
-## Was enthält das Affilicious Theme? ##
+### Was enthält das Affilicious Theme? ###
 Im Affilicious Theme sind viele Elemente integriert, die ein angenehmes Nutzererlebnis verschaffen. Das Theme ist responsiv und kann problemlos auf allen Geräten bedient werden. Suchmaschinen legen einen immer größeren Wert auf mobil optimierte Webseiten, da die Relevanz als Rankingfaktor stetig zunimmt.
 
 Zusätzlich werden Beiträge und erstellte Produktseiten mit der Infinite Scrolling Technik geladen. Das bedeutet, dass man nicht mehr zwischen den Seiten wechseln muss, sondern man einfach scrollt und die Beiträge an das Ende der Seite angehängt werden. Falls Probleme beim Browser eintreten sollten, ist eine Fallback Lösung im Sinne einer klassischen Pagination sofort zur Stelle.
