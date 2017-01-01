@@ -131,9 +131,9 @@ class Header_Customizer extends Abstract_Customizer
 			'id'          => 'afft-header-banner-title-shadow-color',
 			'label'       => __('Title Shadow Color', 'affilicious-theme'),
 			'section'     => $section,
-			'description' => __('Set the default color #600099 for transparency.', 'affilicious-theme'),
+            'description' => __('Leave the color empty for transparency.', 'affilicious-theme'),
 			'type'        => 'color',
-			'default'     => '#600099',
+			'default'     => '',
 			'transport'   => 'postMessage',
 		);
 
@@ -150,9 +150,9 @@ class Header_Customizer extends Abstract_Customizer
 			'id'          => 'afft-header-banner-tagline-shadow-color',
 			'label'       => __('Tagline Shadow Color', 'affilicious-theme'),
 			'section'     => $section,
-			'description' => __('Set the default color #600099 for transparency.', 'affilicious-theme'),
+			'description' => __('Leave the color empty for transparency.', 'affilicious-theme'),
 			'type'        => 'color',
-			'default'     => '#600099',
+			'default'     => '',
 			'transport'   => 'postMessage',
 		);
 
@@ -445,7 +445,7 @@ class Header_Customizer extends Abstract_Customizer
 			$color = sanitize_hex_color($mod);
 
 			// There is no transparent color picker. The color #600099 stands for transparency
-			if ($color !== '#600099') {
+			if ($color !== '') {
 				return array(
 					'selectors'    => array(
 						'#title'
@@ -474,7 +474,7 @@ class Header_Customizer extends Abstract_Customizer
 			$color = sanitize_hex_color($mod);
 
 			// There is no transparent color picker. The color #600099 stands for transparency
-			if ($color !== '#600099') {
+			if ($color !== '') {
 				return array(
 					'selectors'    => array(
 						'#tagline'

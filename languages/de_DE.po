@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-12-31 19:47+0100\n"
-"PO-Revision-Date: 2016-12-31 21:37+0100\n"
+"POT-Creation-Date: 2017-01-01 10:28+0100\n"
+"PO-Revision-Date: 2017-01-01 10:29+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -1122,8 +1122,8 @@ msgstr "Titelschattenfarbe"
 
 #: src/design/presentation/customizer/header-customizer.php:134
 #: src/design/presentation/customizer/header-customizer.php:153
-msgid "Set the default color #600099 for transparency."
-msgstr "Setze die Standartfarbe #600099 für Transparenz."
+msgid "Leave the color empty for transparency."
+msgstr "Lasse die Farbe für Transparenz leer."
 
 #: src/design/presentation/customizer/header-customizer.php:142
 msgid "Tagline Color"
@@ -1313,6 +1313,9 @@ msgstr "Zeigt die Details auf jeder Produktseite"
 #: src/design/presentation/widget/details-widget.php:21
 msgid "Title"
 msgstr "Titel"
+
+#~ msgid "Set the default color #600099 for transparency."
+#~ msgstr "Setze die Standartfarbe #600099 für Transparenz."
 
 #~ msgid "To the review"
 #~ msgstr "Zum Testbericht"
