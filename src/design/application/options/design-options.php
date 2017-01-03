@@ -92,7 +92,6 @@ class Design_Options implements Settings_Interface
 			->set_page_parent('affilicious')
             ->add_tab(__('Social Media', 'affilicious-theme'), $social_media_tab)
             ->add_tab(__('Product', 'affilicious'), $product_tab)
-            ->add_tab(__('Button', 'affilicious-theme'), $footer_tab)
             ->add_tab(__('Footer', 'affilicious-theme'), $footer_tab)
             ->add_tab(__('Links', 'affilicious-theme'), $links_tab)
             ->add_tab(__('Customizer'), $customizer_tab);
