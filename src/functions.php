@@ -634,3 +634,29 @@ function afft_can_edit_post()
 
     return !empty(array_intersect($allowed_roles, $current_user->roles));
 }
+
+/**
+ * Check if the buy button is hidden.
+ *
+ * @since 0.6.2
+ * @return bool
+ */
+function afft_is_buy_button_hidden()
+{
+    $hidden = carbon_get_theme_option(Design_Options::OPTION_PRODUCT_HIDE_BUY_BUTTON);
+
+    return !empty($hidden) && $hidden === 'yes';
+}
+
+/**
+ * Check if the test review button is hidden.
+ *
+ * @since 0.6.2
+ * @return bool
+ */
+function afft_is_test_review_button_hidden()
+{
+    $hidden = carbon_get_theme_option(Design_Options::OPTION_PRODUCT_HIDE_TEST_REVIEW_BUTTON);
+
+    return !empty($hidden) && $hidden === 'yes';
+}

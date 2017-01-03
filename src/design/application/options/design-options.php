@@ -19,7 +19,9 @@ class Design_Options implements Settings_Interface
     const OPTION_SOCIAL_MEDIA_GOOGLE_PLUS_LINK = 'affilicious_theme_options_design_container_social_media_tab_google_plus_link_field';
     const OPTION_SOCIAL_MEDIA_PINTEREST_LINK = 'affilicious_theme_options_design_container_social_media_tab_pinterest_link_field';
     const OPTION_SOCIAL_MEDIA_REDDIT_LINK = 'affilicious_theme_options_design_container_social_media_tab_reddit_link_field';
-    const OPTION_FOOTER_HIDE_CONTENT_AREA  = 'affilicious_theme_options_design_container_footer_hide_content_area_field';
+    const OPTION_FOOTER_HIDE_CONTENT_AREA  = 'affilicious_theme_options_design_container_footer_tab_hide_content_area_field';
+    const OPTION_PRODUCT_HIDE_BUY_BUTTON  = 'affilicious_theme_options_design_container_product_tab_hide_buy_button_field';
+    const OPTION_PRODUCT_HIDE_TEST_REVIEW_BUTTON  = 'affilicious_theme_options_design_container_product_tab_hide_test_review_button_field';
 
     /**
      * @var Customizer_Mods_Backup_Service
@@ -56,6 +58,12 @@ class Design_Options implements Settings_Interface
                 ->set_default_value('#'),
         ));
 
+        $product_tab = apply_filters('affilicious_theme_options_design_container_product_tab', array(
+            Carbon_Field::make('checkbox', self::OPTION_PRODUCT_HIDE_BUY_BUTTON, __('Hide "Buy button"', 'affilicious-theme'))
+                ->set_help_text(__(" The price comparison won't be affected from this change.", 'affilicious-theme')),
+            Carbon_Field::make('checkbox', self::OPTION_PRODUCT_HIDE_TEST_REVIEW_BUTTON, __('Hide "test review button"', 'affilicious-theme')),
+        ));
+
         $footer_tab = apply_filters('affilicious_theme_options_design_container_footer_tab', array(
             Carbon_Field::make('checkbox', self::OPTION_FOOTER_HIDE_CONTENT_AREA, __('Hide Content Area', 'affilicious-theme'))
                 ->set_help_text(__('Hide the content area with the widgets and both menus.', 'affilicious-theme')),
@@ -83,6 +91,8 @@ class Design_Options implements Settings_Interface
 		$container = Carbon_Container::make('theme_options', __('Design', 'affilicious-theme'))
 			->set_page_parent('affilicious')
             ->add_tab(__('Social Media', 'affilicious-theme'), $social_media_tab)
+            ->add_tab(__('Product', 'affilicious'), $product_tab)
+            ->add_tab(__('Button', 'affilicious-theme'), $footer_tab)
             ->add_tab(__('Footer', 'affilicious-theme'), $footer_tab)
             ->add_tab(__('Links', 'affilicious-theme'), $links_tab)
             ->add_tab(__('Customizer'), $customizer_tab);
