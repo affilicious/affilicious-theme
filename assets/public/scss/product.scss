@@ -166,6 +166,17 @@
     tr[data-detail-name="price"] td:last-child {
       color: $price-comparison-current-price-color;
     }
+    @media screen and (max-width: 570px) and (orientation: landscape), (max-width: 480px) and (orientation: portrait)  {
+      table, th, td {
+        display: block;
+      }
+      td:last-child {
+        border-top: none;
+      }
+      td:first-child {
+        font-weight: bold;
+      }
+    }
   }
 
   &-thumbnail {
