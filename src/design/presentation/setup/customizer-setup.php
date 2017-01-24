@@ -1,7 +1,6 @@
 <?php
 namespace Affilicious_Theme\Design\Presentation\Setup;
 
-use Affilicious\Common\Application\Setup\Setup_Interface;
 use Affilicious_Theme\Design\Presentation\Customizer\Customizer_Interface;
 use Affilicious_Theme\Design\Presentation\Customizer\General_Customizer;
 use Affilicious_Theme\Design\Presentation\Customizer\Information_Customizer;
@@ -14,7 +13,7 @@ if (!defined('ABSPATH')) {
 	exit('Not allowed to access pages directly.');
 }
 
-class Customizer_Setup implements Setup_Interface
+class Customizer_Setup
 {
 	/**
 	 * @var Customizer_Interface[]

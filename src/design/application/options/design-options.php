@@ -1,7 +1,6 @@
 <?php
 namespace Affilicious_Theme\Design\Application\Options;
 
-use Affilicious\Settings\Application\Setting\Settings_Interface;
 use Affilicious_Theme\Design\Application\Service\Customizer_Mods_Backup_Service;
 use Carbon_Fields\Container as Carbon_Container;
 use Carbon_Fields\Field as Carbon_Field;
@@ -10,7 +9,7 @@ if(!defined('ABSPATH')) {
     exit('Not allowed to access pages directly.');
 }
 
-class Design_Options implements Settings_Interface
+class Design_Options
 {
 	const SETTING_PRODUCT_IMAGE_GALLERY_CLICK_ACTION = 'affilicious_theme_options_design_container_links_tab_product_image_gallery_click_action_field';
 	const SETTING_PRODUCT_PREVIEW_IMAGE_CLICK_ACTION =  'affilicious_theme_options_design_container_links_tab_product_preview_image_click_action_field';
