@@ -12541,6 +12541,14 @@ html, body {
 .product-details tr[data-detail-name="price"] td:last-child {
   color: #2fa32f; }
 
+@media screen and (max-width: 570px) and (orientation: landscape), (max-width: 480px) and (orientation: portrait) {
+  .product-details table, .product-details th, .product-details td {
+    display: block; }
+  .product-details td:last-child {
+    border-top: none; }
+  .product-details td:first-child {
+    font-weight: bold; } }
+
 .product-thumbnail {
   padding: 0;
   margin: 0 auto 10px auto;
