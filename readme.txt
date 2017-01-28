@@ -1,13 +1,18 @@
 === Affilicious Theme ===
 Requires at least: 4.5
 Tested up to: 4.6
-Stable tag: 0.5
+Stable tag: 0.6.3
 License: GPL-2.0
 License URI: https://opensource.org/licenses/GPL-2.0
 
 Official Affilicious Theme for Wordpress with product management, price comparisons, details and more.
 
 == Changelog ==
+= 0.6.3 =
+* Made the product details table more mobile friendly.
+* Fixed the broken sidebar setup on new installations.
+* Removed some old Affilicious Plugin dependencies.
+
 = 0.6.2 =
 * Added options to hide the "test review button" and "buy button".
 * Fixed some update issues.
