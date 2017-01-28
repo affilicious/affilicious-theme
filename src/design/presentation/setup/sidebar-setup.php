@@ -52,9 +52,22 @@ class Sidebar_Setup
     {
         global $wp_registered_widgets;
 
+        if(!isset($wp_registered_widgets[$params[0]['widget_id']]['callback'][0])) {
+            return $params;
+        }
+
         $settings_getter = $wp_registered_widgets[$params[0]['widget_id']]['callback'][0];
+        if(!method_exists($settings_getter, 'get_settings')) {
+            return $params;
+        }
+
         $settings = $settings_getter->get_settings();
         $id_base = $settings_getter->id_base;
+
+        if(!isset($settings[$params[1]['number']])) {
+            return $params;
+        }
+
         $settings = $settings[$params[1]['number']];
 
         if ($id_base == 'search' && isset($settings['title']) && empty($settings['title'])) {
