@@ -2,11 +2,11 @@
 
 <?php if(!empty($shop) &&! afft_is_buy_button_hidden()): ?>
     <?php if(aff_is_shop_available($shop)): ?>
-        <a href="<?php echo $shop['affiliate_link']; ?>" class="btn btn-buy btn-block" rel="nofollow" target="_blank">
+        <a href="<?php echo $shop['tracking']['affiliate_link']; ?>" class="btn btn-buy btn-block" rel="nofollow" target="_blank">
             <?php echo sprintf(__('Buy now at %s', 'affilicious-theme'), $shop['name']); ?>
         </a>
     <?php else: ?>
-        <a class="btn btn-not-available btn-block" href="<?php echo $shop['affiliate_link']; ?>" rel="nofollow" target="_blank">
+        <a class="btn btn-not-available btn-block" href="<?php echo $shop['tracking']['affiliate_link']; ?>" rel="nofollow" target="_blank">
             <?php _e('Unfortunately not available.', 'affilicious-theme'); ?>
         </a>
     <?php endif; ?>
