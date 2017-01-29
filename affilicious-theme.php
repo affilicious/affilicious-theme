@@ -30,9 +30,9 @@ if(!class_exists('Affilicious_Theme')) {
     final class Affilicious_Theme
     {
         const THEME_NAME = 'affilicious-theme';
-        const THEME_VERSION = '0.6.3';
+        const THEME_VERSION = '0.7';
         const THEME_MIN_PHP_VERSION = '5.6';
-        const THEME_MIN_AFFILICIOUS_PLUGIN_VERSION = '0.7.1';
+        const THEME_MIN_AFFILICIOUS_PLUGIN_VERSION = '0.8';
         const THEME_NAMESPACE = 'Affilicious_Theme\\';
         const THEME_TESTS_NAMESPACE = 'Affilicious_Theme\\Tests\\';
         const THEME_SOURCE_DIR = 'src/';
