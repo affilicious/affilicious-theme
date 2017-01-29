@@ -14,7 +14,7 @@
                 <?php foreach ($imageGallery as $image): ?>
                     <div class="slick-slide">
                         <figure class="center">
-                            <?php echo wp_get_attachment_image($image['id'], array(250, 250)); ?>
+                            <?php echo wp_get_attachment_image($image, array(250, 250)); ?>
                         </figure>
                     </div>
                 <?php endforeach; ?>
@@ -27,7 +27,7 @@
                 <?php foreach ($imageGallery as $image): ?>
                     <div class="slick-slide">
                         <figure class="center">
-                            <?php echo wp_get_attachment_image($image['id'], array(50, 50)); ?>
+                            <?php echo wp_get_attachment_image($image, array(50, 50)); ?>
                         </figure>
                     </div>
                 <?php endforeach; ?>

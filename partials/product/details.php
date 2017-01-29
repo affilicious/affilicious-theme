@@ -5,8 +5,8 @@
         <?php $details = aff_get_product_details(); ?>
         <?php if(!empty($details)): ?>
             <?php foreach ($details as $detail): ?>
-                <tr data-detail-name="<?php echo $detail['name']; ?>">
-                    <td><?php echo $detail['title']; ?></td>
+                <tr data-detail-name="<?php echo $detail['slug']; ?>">
+                    <td><?php echo $detail['name']; ?></td>
                     <?php if($detail['type'] === 'file'): ?>
                         <td><?php echo wp_get_attachment_link($detail['value'], 'medium', false, false, __('Download', 'affiliate-theme')); ?></td>
                     <?php else: ?>
