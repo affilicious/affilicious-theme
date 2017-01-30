@@ -3,7 +3,7 @@ use Affilicious_Theme\Design\Presentation\Helper\Menu_Helper;
 use Affilicious_Theme\Design\Presentation\Helper\Logo_Helper;
 use Affilicious_Theme\Design\Application\Options\Design_Options;
 use Affilicious_Theme\Design\Presentation\Walker\Bootstrap_Comment_Walker;
-use Affilicious\Product\Infrastructure\Repository\Carbon\Carbon_Product_Repository;
+use Affilicious\Product\Repository\Carbon\Carbon_Product_Repository;
 
 if(!defined('ABSPATH')) {
     exit('Not allowed to access pages directly.');
