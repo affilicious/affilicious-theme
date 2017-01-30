@@ -243,15 +243,19 @@ if(!class_exists('Affilicious_Theme')) {
             }
 
             // Apply the backup styles
-            $customizer_mods_backup_service = $this->container['affilicious_theme.design.application.service.customizer_mods_backup'];
-            if($customizer_mods_backup_service !== null) {
-                $customizer_mods_backup_service->activate();
+            if(isset($this->container['affilicious_theme.design.application.service.customizer_mods_backup'])) {
+                $customizer_mods_backup_service = $this->container['affilicious_theme.design.application.service.customizer_mods_backup'];
+                if($customizer_mods_backup_service !== null) {
+                    $customizer_mods_backup_service->activate();
+                }
             }
 
             // Activate the license for the updates
-            $license_manager = $this->container['affilicious.common.license.manager'];
-            if($license_manager !== null) {
-                $license_manager->activate(self::THEME_ITEM_NAME, self::THEME_LICENSE_KEY);
+            if(isset($this->container['affilicious.common.license.manager'])) {
+                $license_manager = $this->container['affilicious.common.license.manager'];
+                if($license_manager !== null) {
+                    $license_manager->activate(self::THEME_ITEM_NAME, self::THEME_LICENSE_KEY);
+                }
             }
         }
 
@@ -263,9 +267,11 @@ if(!class_exists('Affilicious_Theme')) {
         public function deactivate()
         {
             // Deactivate the license for the updates
-            $license_manager = $this->container['affilicious.common.license.manager'];
-            if($license_manager !== null) {
-                $license_manager->deactivate(self::THEME_ITEM_NAME, self::THEME_LICENSE_KEY);
+            if(isset($this->container['affilicious.common.license.manager'])) {
+                $license_manager = $this->container['affilicious.common.license.manager'];
+                if($license_manager !== null) {
+                    $license_manager->deactivate(self::THEME_ITEM_NAME, self::THEME_LICENSE_KEY);
+                }
             }
         }
 
