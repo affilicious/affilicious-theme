@@ -1,13 +1,17 @@
 === Affilicious Theme ===
 Requires at least: 4.5
 Tested up to: 4.7
-Stable tag: 0.7
+Stable tag: 0.7.2
 License: GPL-2.0
 License URI: https://opensource.org/licenses/GPL-2.0
 
 Official Affilicious Theme for Wordpress with product management, price comparisons, details and more.
 
 == Changelog ==
+= 0.7.2 =
+* Added page templates like full-width, page-builder, sidebar-left and sidebar-right.
+* Simplified the source directory structure.
+
 = 0.7.1 =
 * Fixed a bug related to a missing class
 
