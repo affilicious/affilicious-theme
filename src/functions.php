@@ -1,8 +1,8 @@
 <?php
-use Affilicious_Theme\Design\Presentation\Helper\Menu_Helper;
-use Affilicious_Theme\Design\Presentation\Helper\Logo_Helper;
-use Affilicious_Theme\Design\Application\Options\Design_Options;
-use Affilicious_Theme\Design\Presentation\Walker\Bootstrap_Comment_Walker;
+use Affilicious_Theme\Design\Helper\Menu_Helper;
+use Affilicious_Theme\Design\Helper\Logo_Helper;
+use Affilicious_Theme\Design\Options\Design_Options;
+use Affilicious_Theme\Design\Walker\Bootstrap_Comment_Walker;
 use Affilicious\Product\Repository\Carbon\Carbon_Product_Repository;
 
 if(!defined('ABSPATH')) {
