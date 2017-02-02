@@ -39,19 +39,6 @@ class General_Customizer extends Abstract_Customizer
 			'transport' => 'postMessage',
 		);
 
-        $options['afft-general-sidebar-position'] = array(
-            'id'        => 'afft-general-sidebar-position',
-            'label'     => __('Sidebar position', 'affilicious-theme'),
-            'section'   => $section,
-            'type'      => 'select',
-            'choices'   => array(
-                'right' => __('Right'),
-                'left'  => __('Left'),
-            ),
-            'default'   => 'no-repeat',
-            'transport' => 'postMessage',
-        );
-
 		$options['afft-general-background-image'] = array(
 			'id'        => 'afft-general-background-image',
 			'label'     => __('Background Image', 'affilicious-theme'),

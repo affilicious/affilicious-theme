@@ -309,6 +309,21 @@ class Content_Customizer extends Abstract_Customizer
             'panel'    => $panel
         );
 
+
+        $options['afft-content-main-sidebar-position'] = array(
+            'id'        => 'afft-content-main-sidebar-position',
+            'label'     => __('Position', 'affilicious-theme'),
+            'description' => __("The position won't change for pages where a template is used.", 'affilicious-theme'),
+            'section'   => $section,
+            'type'      => 'select',
+            'choices'   => array(
+                'right' => __('Right'),
+                'left'  => __('Left'),
+            ),
+            'default'   => 'no-repeat',
+            'transport' => 'postMessage',
+        );
+
         $options['afft-content-main-sidebar-heading-background-color-top'] = array(
             'id'        => 'afft-content-main-sidebar-heading-background-color-top',
             'label'     => __('Heading Background Color (Top)', 'affilicious-theme'),

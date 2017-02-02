@@ -585,7 +585,7 @@ function afft_get_best_rated_products_query($number = 3)
  */
 function afft_get_sidebar_position()
 {
-    $position = get_theme_mod('afft-general-sidebar-position');
+    $position = get_theme_mod('afft-content-main-sidebar-position');
     $position = !empty($position) ? $position : 'right';
 
     return $position;
