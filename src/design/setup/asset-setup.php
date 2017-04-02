@@ -118,7 +118,12 @@ class Asset_Setup
      */
     public function add_admin_scripts()
     {
-        wp_enqueue_script('affilicious-theme-admin', self::get_admin_script_url() . 'admin.min.js', array('jquery'), \Affilicious_Theme::THEME_VERSION, true);
+        wp_register_script('affilicious-theme-admin', self::get_admin_script_url() . 'admin.min.js', array('jquery'), \Affilicious_Theme::THEME_VERSION, true);
+        wp_localize_script('affilicious-theme-admin', 'affilicioustheme', array(
+            'ajax_url' => admin_url('admin-ajax.php')
+        ));
+
+        wp_enqueue_script('affilicious-theme-admin');
     }
 
 	/**

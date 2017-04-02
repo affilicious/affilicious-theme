@@ -316,6 +316,10 @@ if(!class_exists('Affilicious_Theme')) {
          */
         public function load_services()
         {
+            $this->container['affilicious_theme.admin.notice.deprecated'] = function() {
+                return new \Affilicious_Theme\Admin\Notice\Deprecated_Admin_Notice();
+            };
+
             $this->container['affilicious_theme.design.setup.asset'] = function () {
                 return new \Affilicious_Theme\Design\Setup\Asset_Setup();
             };
@@ -542,6 +546,11 @@ if(!class_exists('Affilicious_Theme')) {
             add_action('customize_save_after', array($customizer_mods_backup_service, 'store_backup'), 99);
             add_action('added_option', array($customizer_mods_backup_service, 'apply_backup'), 999, 1);
             add_action('updated_option', array($customizer_mods_backup_service, 'apply_backup'), 999, 1);
+
+            // Hook the admin notices
+            $deprecated_admin_notice = $this->container['affilicious_theme.admin.notice.deprecated'];
+            add_action('admin_notices', array($deprecated_admin_notice, 'render'));
+            add_action('wp_ajax_afft_admin_notice_dismiss_deprecated', array($deprecated_admin_notice, 'dismiss'));
 
             // Hook the admin and theme customizer styles and scripts
             $asset_setup = $this->container['affilicious_theme.design.setup.asset'];

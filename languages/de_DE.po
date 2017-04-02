@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-02-02 14:56+0100\n"
-"PO-Revision-Date: 2017-02-02 15:03+0100\n"
+"POT-Creation-Date: 2017-04-02 13:36+0200\n"
+"PO-Revision-Date: 2017-04-02 13:38+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -116,39 +116,39 @@ msgstr ""
 "Potenzial zu entfalten. Bitte ändere die PHP Version bei deinem "
 "Hostinganbieter."
 
-#: affilicious-theme.php:395
+#: affilicious-theme.php:399
 msgid "Install Required Plugins"
 msgstr "Benötigte Plugins installieren"
 
-#: affilicious-theme.php:396
+#: affilicious-theme.php:400
 msgid "Install Plugins"
 msgstr "Plugins installieren"
 
-#: affilicious-theme.php:397
+#: affilicious-theme.php:401
 #, php-format
 msgid "Installing Plugin: %s"
 msgstr "Installiere Plugin: %s"
 
-#: affilicious-theme.php:398
+#: affilicious-theme.php:402
 #, php-format
 msgid "Updating Plugin: %s"
 msgstr "Aktualisiere Plugin: %s"
 
-#: affilicious-theme.php:399
+#: affilicious-theme.php:403
 msgid "Something went wrong with the plugin API."
 msgstr "Irgendwas ist bezüglich der Plugin API schief gelaufen."
 
-#: affilicious-theme.php:401
+#: affilicious-theme.php:405
 #, php-format
 msgid "This theme requires the following plugin: %1$s."
 msgstr "Dieses Theme benötigt das folgende Plugin: %1$s."
 
-#: affilicious-theme.php:406
+#: affilicious-theme.php:410
 #, php-format
 msgid "This theme recommends the following plugin: %1$s."
 msgstr "Dieses Theme empfiehlt das folgende Plugin: %1$s."
 
-#: affilicious-theme.php:411
+#: affilicious-theme.php:415
 #, php-format
 msgid ""
 "The following plugin needs to be updated to its latest version to ensure "
@@ -157,51 +157,51 @@ msgstr ""
 "Das folgende Plugin muss auf die neuste Version aktualisiert werden, damit "
 "die maximale Kompatibilität mit diesem Theme gewährleistet wird: %1$s."
 
-#: affilicious-theme.php:416
+#: affilicious-theme.php:420
 #, php-format
 msgid "There is an update available for: %1$s."
 msgstr "Es gibt eine Aktualisierung für %1$s."
 
-#: affilicious-theme.php:421
+#: affilicious-theme.php:425
 #, php-format
 msgid "The following required plugin is currently inactive: %1$s."
 msgstr "Das folgende benötigte Plugin ist aktuell inaktiv: %1$s."
 
-#: affilicious-theme.php:426
+#: affilicious-theme.php:430
 #, php-format
 msgid "The following recommended plugin is currently inactive: %1$s."
 msgstr "Das folgende empfohlene Plugin ist aktuell inaktiv: %1$s."
 
-#: affilicious-theme.php:431
+#: affilicious-theme.php:435
 msgid "Begin installing plugin"
 msgstr "Beginne die Plugins zu installieren"
 
-#: affilicious-theme.php:436
+#: affilicious-theme.php:440
 msgid "Begin updating plugin"
 msgstr "Beginne die Plugins zu aktualisieren."
 
-#: affilicious-theme.php:441
+#: affilicious-theme.php:445
 msgid "Begin activating plugin"
 msgstr "Beginne die Plugins zu aktivieren."
 
-#: affilicious-theme.php:445
+#: affilicious-theme.php:449
 msgid "Return to Required Plugins Installer"
 msgstr "Zurück zum Plugin Installer"
 
-#: affilicious-theme.php:446
+#: affilicious-theme.php:450
 msgid "Plugin activated successfully."
 msgstr "Plugin wurde erfolgreich aktiviert."
 
-#: affilicious-theme.php:447
+#: affilicious-theme.php:451
 msgid "The following plugin was activated successfully:"
 msgstr "Das folgende Plugin wurde erfolgreich aktiviert."
 
-#: affilicious-theme.php:448
+#: affilicious-theme.php:452
 #, php-format
 msgid "No action taken. Plugin %1$s was already active."
 msgstr "Es wurde keine Aktion getätigt. Das Plugin %s1$s was schon aktiv."
 
-#: affilicious-theme.php:449
+#: affilicious-theme.php:453
 #, php-format
 msgid ""
 "Plugin not activated. A higher version of %s is needed for this theme. "
@@ -210,16 +210,16 @@ msgstr ""
 "Plugin wurde nicht aktiviert. Eine höhere Version von %s wird für das Theme "
 "benötigt. Bitte update das Plugin."
 
-#: affilicious-theme.php:450
+#: affilicious-theme.php:454
 #, php-format
 msgid "All plugins installed and activated successfully. %1$s"
 msgstr "Alle Plugins wurden erfolgreich installiert und aktiviert. %1$s"
 
-#: affilicious-theme.php:451
+#: affilicious-theme.php:455
 msgid "Dismiss this notice"
 msgstr "Benachrichtigung verstecken"
 
-#: affilicious-theme.php:452
+#: affilicious-theme.php:456
 msgid ""
 "There are one or more required or recommended plugins to install, update or "
 "activate."
@@ -227,7 +227,7 @@ msgstr ""
 "Es gibt ein oder mehrere benötigte oder empfohlene Plugins zu installieren, "
 "updaten oder aktivieren."
 
-#: affilicious-theme.php:453
+#: affilicious-theme.php:457
 msgid "Please contact the administrator of this site for help."
 msgstr "Bitte kontaktiere den Administrator dieser Seite für Hilfe."
 
@@ -329,7 +329,7 @@ msgstr "Kein Bild verfügbar"
 msgid "Add now"
 msgstr "Jetzt hinzufügen"
 
-#: partials/not-found.php:4 src/design/customizer/content-customizer.php:916
+#: partials/not-found.php:4 src/design/customizer/content-customizer.php:931
 msgid "Not Found"
 msgstr "Nicht gefunden"
 
@@ -396,6 +396,21 @@ msgstr[1] "anhand von <span itemprop=\"reviewCount\">%s</span> Bewertungen"
 #: searchform.php:3 searchform.php:4
 msgid "Search"
 msgstr "Suchen"
+
+#: src/admin/view/notice/deprecated.php:3
+#, php-format
+msgid ""
+"Affilicious Theme is <b>deprecated</b> and doesn't get <b>any future updates "
+"anymore</b>. Please switch to the free <a href=\"%s\" target=\"_blank"
+"\">Affilivice</a> Theme. Affilivice is the further development with new "
+"features. Your current data and settings <b></b>won't get lost</b> during "
+"the theme switch. However, you should make a backup."
+msgstr ""
+"Affilicious Theme ist <b>veralted</b> und wird in Zukunft <b>keine Updates "
+"mehr bekommen</b>. Bitte wechsle dein Theme zum kostenlosen <a href=„%s“ "
+"target=„_blank“>Affilivice</a> Theme. Affilivice ist die Weiterentwicklung "
+"mit neuen Features. Deine Daten und Einstellungen werden bei einem Update "
+"nicht verloren gehen. Allerdings solltest du trotzdem ein Backup machen."
 
 #: src/design/customizer/content-customizer.php:20
 #: src/design/customizer/footer-customizer.php:91
@@ -512,25 +527,25 @@ msgid "Category Color (Hover)"
 msgstr "Kategorie Farbe (Hover)"
 
 #: src/design/customizer/content-customizer.php:269
-#: src/design/customizer/content-customizer.php:341
+#: src/design/customizer/content-customizer.php:356
 #: src/design/customizer/footer-customizer.php:266
 msgid "Tag Link Color"
 msgstr "Schlagwort Linkfarbe"
 
 #: src/design/customizer/content-customizer.php:278
-#: src/design/customizer/content-customizer.php:350
+#: src/design/customizer/content-customizer.php:365
 #: src/design/customizer/footer-customizer.php:275
 msgid "Tag Link Color (Hover)"
 msgstr "Schlagwort Linkfarbe (Hover)"
 
 #: src/design/customizer/content-customizer.php:287
-#: src/design/customizer/content-customizer.php:359
+#: src/design/customizer/content-customizer.php:374
 #: src/design/customizer/footer-customizer.php:284
 msgid "Tag Background Color"
 msgstr "Schlagwort Hintergrundfarbe"
 
 #: src/design/customizer/content-customizer.php:296
-#: src/design/customizer/content-customizer.php:368
+#: src/design/customizer/content-customizer.php:383
 #: src/design/customizer/footer-customizer.php:293
 msgid "Tag Background Color (Hover)"
 msgstr "Schlagwort Hintergrundfarbe (Hover)"
@@ -540,226 +555,244 @@ msgstr "Schlagwort Hintergrundfarbe (Hover)"
 msgid "Main Sidebar"
 msgstr "Hauptseitenleiste"
 
-#: src/design/customizer/content-customizer.php:314
+#: src/design/customizer/content-customizer.php:315
+msgid "Position"
+msgstr ""
+
+#: src/design/customizer/content-customizer.php:316
+msgid "The position won't change for pages where a template is used."
+msgstr ""
+"Die Position ändert sich nicht bei Seiten, in denen ein Template benutzt "
+"wird."
+
+#: src/design/customizer/content-customizer.php:320
+msgid "Right"
+msgstr "Rechts"
+
+#: src/design/customizer/content-customizer.php:321
+msgid "Left"
+msgstr "Links"
+
+#: src/design/customizer/content-customizer.php:329
 msgid "Heading Background Color (Top)"
 msgstr "Kopfbereich Hintergrundfarbe (Oben)"
 
-#: src/design/customizer/content-customizer.php:323
+#: src/design/customizer/content-customizer.php:338
 msgid "Heading Background Color (Bottom)"
 msgstr "Kopfbereich Hintergrundfarbe (Unten)"
 
-#: src/design/customizer/content-customizer.php:332
+#: src/design/customizer/content-customizer.php:347
 msgid "Heading Title Color"
 msgstr "Kopfbereich Überschriftenfarbe"
 
-#: src/design/customizer/content-customizer.php:379
+#: src/design/customizer/content-customizer.php:394
 msgid "Alert"
 msgstr "Alert"
 
-#: src/design/customizer/content-customizer.php:386
+#: src/design/customizer/content-customizer.php:401
 msgid "Success Background Color"
 msgstr "„Success“ Hintergrundfarbe"
 
-#: src/design/customizer/content-customizer.php:395
+#: src/design/customizer/content-customizer.php:410
 msgid "Success Text Color"
 msgstr "„Success“ Textfarbe"
 
-#: src/design/customizer/content-customizer.php:404
+#: src/design/customizer/content-customizer.php:419
 msgid "Success Link Color"
 msgstr "„Success“ Linkfarbe"
 
-#: src/design/customizer/content-customizer.php:413
+#: src/design/customizer/content-customizer.php:428
 msgid "Success Link Color (Hover)"
 msgstr "„Success“ Linkfarbe (Hover)"
 
-#: src/design/customizer/content-customizer.php:422
+#: src/design/customizer/content-customizer.php:437
 msgid "Success Border Color"
 msgstr "„Success“ Rahmenfarbe"
 
-#: src/design/customizer/content-customizer.php:431
+#: src/design/customizer/content-customizer.php:446
 msgid "Info Background Color"
 msgstr "„Info“ Hintergrundfarbe"
 
-#: src/design/customizer/content-customizer.php:440
+#: src/design/customizer/content-customizer.php:455
 msgid "Info Text Color"
 msgstr "„Info“ Textfarbe"
 
-#: src/design/customizer/content-customizer.php:449
+#: src/design/customizer/content-customizer.php:464
 msgid "Info Link Color"
 msgstr "„Info“ Linkfarbe"
 
-#: src/design/customizer/content-customizer.php:458
+#: src/design/customizer/content-customizer.php:473
 msgid "Info Link Color (Hover)"
 msgstr "„Info“ Linkfarbe (Hover)"
 
-#: src/design/customizer/content-customizer.php:467
+#: src/design/customizer/content-customizer.php:482
 msgid "Info Border Color"
 msgstr "„Info“ Rahmenfarbe"
 
-#: src/design/customizer/content-customizer.php:476
+#: src/design/customizer/content-customizer.php:491
 msgid "Warning Background Color"
 msgstr "„Warning“ Hintergrundfarbe"
 
-#: src/design/customizer/content-customizer.php:485
+#: src/design/customizer/content-customizer.php:500
 msgid "Warning Text Color"
 msgstr "„Warning“ Textfarbe"
 
-#: src/design/customizer/content-customizer.php:494
+#: src/design/customizer/content-customizer.php:509
 msgid "Warning Link Color"
 msgstr "„Warning“ Linkfarbe"
 
-#: src/design/customizer/content-customizer.php:503
+#: src/design/customizer/content-customizer.php:518
 msgid "Warning Link Color (Hover)"
 msgstr "„Warning“ Linkfarbe (Hover)"
 
-#: src/design/customizer/content-customizer.php:512
+#: src/design/customizer/content-customizer.php:527
 msgid "Warning Border Color"
 msgstr "„Warning“ Rahmenfarbe"
 
-#: src/design/customizer/content-customizer.php:521
+#: src/design/customizer/content-customizer.php:536
 msgid "Danger Background Color"
 msgstr "„Danger“ Hintergrundfarbe"
 
-#: src/design/customizer/content-customizer.php:530
+#: src/design/customizer/content-customizer.php:545
 msgid "Danger Text Color"
 msgstr "„Danger“ Textfarbe"
 
-#: src/design/customizer/content-customizer.php:539
+#: src/design/customizer/content-customizer.php:554
 msgid "Danger Link Color"
 msgstr "„Danger“ Linkfarbe"
 
-#: src/design/customizer/content-customizer.php:548
+#: src/design/customizer/content-customizer.php:563
 msgid "Danger Link Color (Hover)"
 msgstr "„Danger“ Linkfarbe (Hover)"
 
-#: src/design/customizer/content-customizer.php:557
+#: src/design/customizer/content-customizer.php:572
 msgid "Danger Border Color"
 msgstr "„Danger“ Rahmenfarbe"
 
-#: src/design/customizer/content-customizer.php:568
+#: src/design/customizer/content-customizer.php:583
 msgid "Button"
 msgstr "Button"
 
-#: src/design/customizer/content-customizer.php:575
+#: src/design/customizer/content-customizer.php:590
 msgid "Search Background Color"
 msgstr "„Suchen“ Hintergrundfarbe"
 
-#: src/design/customizer/content-customizer.php:584
+#: src/design/customizer/content-customizer.php:599
 msgid "Search Background Color (Hover)"
 msgstr "„Suchen“ Hintergrundfarbe (Hover)"
 
-#: src/design/customizer/content-customizer.php:593
+#: src/design/customizer/content-customizer.php:608
 msgid "Search Border Color"
 msgstr "„Suchen“ Rahmenfarbe"
 
-#: src/design/customizer/content-customizer.php:602
+#: src/design/customizer/content-customizer.php:617
 msgid "Search Border Color (Hover)"
 msgstr "„Suchen“ Rahmenfarbe (Hover)"
 
-#: src/design/customizer/content-customizer.php:611
+#: src/design/customizer/content-customizer.php:626
 msgid "Search Icon Color"
 msgstr "„Suchen“ Symbolfarbe"
 
-#: src/design/customizer/content-customizer.php:620
+#: src/design/customizer/content-customizer.php:635
 msgid "Search Icon Color (Hover)"
 msgstr "„Suchen“ Symbolfarbe (Hover)"
 
-#: src/design/customizer/content-customizer.php:629
+#: src/design/customizer/content-customizer.php:644
 msgid "Buy Background Color"
 msgstr "„Kaufen“ Hintergrundfarbe"
 
-#: src/design/customizer/content-customizer.php:638
+#: src/design/customizer/content-customizer.php:653
 msgid "Buy Background Color (Hover)"
 msgstr "„Kaufen“ Hintergrundfarbe (Hover)"
 
-#: src/design/customizer/content-customizer.php:647
+#: src/design/customizer/content-customizer.php:662
 msgid "Buy Border Color"
 msgstr "„Kaufen“ Rahmenfarbe"
 
-#: src/design/customizer/content-customizer.php:656
+#: src/design/customizer/content-customizer.php:671
 msgid "Buy Border Color (Hover)"
 msgstr "„Kaufen“ Rahmenfarbe (Hover)"
 
-#: src/design/customizer/content-customizer.php:665
+#: src/design/customizer/content-customizer.php:680
 msgid "Buy Text Color"
 msgstr "„Kaufen“ Textfarbe"
 
-#: src/design/customizer/content-customizer.php:674
+#: src/design/customizer/content-customizer.php:689
 msgid "Buy Text Color (Hover)"
 msgstr "„Kaufen“ Textfarbe (Hover)"
 
-#: src/design/customizer/content-customizer.php:683
+#: src/design/customizer/content-customizer.php:698
 msgid "Not Available Background Color"
 msgstr "„Nicht verfügbar“ Hintergrundfarbe"
 
-#: src/design/customizer/content-customizer.php:692
+#: src/design/customizer/content-customizer.php:707
 msgid "Not Available Background Color (Hover)"
 msgstr "„Nicht verfügbar“ Hintergrundfarbe (Hover)"
 
-#: src/design/customizer/content-customizer.php:701
+#: src/design/customizer/content-customizer.php:716
 msgid "Not Available Border Color"
 msgstr "„Nicht verfügbar“ Rahmenfarbe"
 
-#: src/design/customizer/content-customizer.php:710
+#: src/design/customizer/content-customizer.php:725
 msgid "Not Available Border Color (Hover)"
 msgstr "„Nicht verfügbar“ Rahmenfarbe (Hover)"
 
-#: src/design/customizer/content-customizer.php:719
+#: src/design/customizer/content-customizer.php:734
 msgid "Not Available Text Color"
 msgstr "„Nicht verfügbar“ Textfarbe"
 
-#: src/design/customizer/content-customizer.php:728
+#: src/design/customizer/content-customizer.php:743
 msgid "Not Available Text Color (Hover)"
 msgstr "„Nicht verfügbar“ Textfarbe (Hover)"
 
-#: src/design/customizer/content-customizer.php:737
+#: src/design/customizer/content-customizer.php:752
 msgid "Review Background Color"
 msgstr "„Testbericht“ Hintergrundfarbe"
 
-#: src/design/customizer/content-customizer.php:746
+#: src/design/customizer/content-customizer.php:761
 msgid "Review Background Color (Hover)"
 msgstr "„Testbericht“ Hintergrundfarbe (Hover)"
 
-#: src/design/customizer/content-customizer.php:755
+#: src/design/customizer/content-customizer.php:770
 msgid "Review Border Color"
 msgstr "„Testbericht“ Rahmenfarbe"
 
-#: src/design/customizer/content-customizer.php:764
+#: src/design/customizer/content-customizer.php:779
 msgid "Review Border Color (Hover)"
 msgstr "„Testbericht“ Rahmenfarbe (Hover)"
 
-#: src/design/customizer/content-customizer.php:773
+#: src/design/customizer/content-customizer.php:788
 msgid "Review Text Color"
 msgstr "„Testbericht“ Textfarbe"
 
-#: src/design/customizer/content-customizer.php:782
+#: src/design/customizer/content-customizer.php:797
 msgid "Review Text Color (Hover)"
 msgstr "„Testbericht“ Textfarbe (Hover)"
 
-#: src/design/customizer/content-customizer.php:793
+#: src/design/customizer/content-customizer.php:808
 msgid "Empty Search"
 msgstr "Leere Suche"
 
-#: src/design/customizer/content-customizer.php:800
+#: src/design/customizer/content-customizer.php:815
 msgid "Icon Color"
 msgstr "Symbolfarbe"
 
-#: src/design/customizer/content-customizer.php:809
-#: src/design/customizer/content-customizer.php:932
+#: src/design/customizer/content-customizer.php:824
+#: src/design/customizer/content-customizer.php:947
 #: src/design/customizer/footer-customizer.php:194
 #: src/design/customizer/footer-customizer.php:230
 msgid "Headline Color"
 msgstr "Überschriftenfarbe"
 
-#: src/design/customizer/content-customizer.php:818
-#: src/design/customizer/content-customizer.php:941
+#: src/design/customizer/content-customizer.php:833
+#: src/design/customizer/content-customizer.php:956
 #: src/design/customizer/footer-customizer.php:62
 #: src/design/customizer/footer-customizer.php:239
 msgid "Text Color"
 msgstr "Textfarbe"
 
-#: src/design/customizer/content-customizer.php:827
-#: src/design/customizer/content-customizer.php:950
+#: src/design/customizer/content-customizer.php:842
+#: src/design/customizer/content-customizer.php:965
 #: src/design/customizer/footer-customizer.php:35
 #: src/design/customizer/footer-customizer.php:98
 #: src/design/customizer/footer-customizer.php:311
@@ -769,8 +802,8 @@ msgstr "Textfarbe"
 msgid "Background Color (Top)"
 msgstr "Hintergrundfarbe (Oben)"
 
-#: src/design/customizer/content-customizer.php:836
-#: src/design/customizer/content-customizer.php:959
+#: src/design/customizer/content-customizer.php:851
+#: src/design/customizer/content-customizer.php:974
 #: src/design/customizer/footer-customizer.php:44
 #: src/design/customizer/footer-customizer.php:107
 #: src/design/customizer/footer-customizer.php:320
@@ -780,140 +813,140 @@ msgstr "Hintergrundfarbe (Oben)"
 msgid "Background Color (Bottom)"
 msgstr "Hintergrundfarbe (Unten)"
 
-#: src/design/customizer/content-customizer.php:845
-#: src/design/customizer/content-customizer.php:968
+#: src/design/customizer/content-customizer.php:860
+#: src/design/customizer/content-customizer.php:983
 #: src/design/customizer/footer-customizer.php:116
-#: src/design/customizer/general-customizer.php:58
+#: src/design/customizer/general-customizer.php:44
 #: src/design/customizer/header-customizer.php:61
 msgid "Background Image"
 msgstr "Hintergrundbild"
 
-#: src/design/customizer/content-customizer.php:854
-#: src/design/customizer/content-customizer.php:977
+#: src/design/customizer/content-customizer.php:869
+#: src/design/customizer/content-customizer.php:992
 #: src/design/customizer/footer-customizer.php:125
-#: src/design/customizer/general-customizer.php:67
+#: src/design/customizer/general-customizer.php:53
 #: src/design/customizer/header-customizer.php:70
 msgid "Background Repeat"
 msgstr "Hintergrundwiederholung"
 
-#: src/design/customizer/content-customizer.php:858
-#: src/design/customizer/content-customizer.php:887
-#: src/design/customizer/content-customizer.php:981
-#: src/design/customizer/content-customizer.php:1010
+#: src/design/customizer/content-customizer.php:873
+#: src/design/customizer/content-customizer.php:902
+#: src/design/customizer/content-customizer.php:996
+#: src/design/customizer/content-customizer.php:1025
 #: src/design/customizer/footer-customizer.php:143
 #: src/design/customizer/footer-customizer.php:158
-#: src/design/customizer/general-customizer.php:71
-#: src/design/customizer/general-customizer.php:100
+#: src/design/customizer/general-customizer.php:57
+#: src/design/customizer/general-customizer.php:86
 #: src/design/customizer/header-customizer.php:74
 #: src/design/customizer/header-customizer.php:103
 msgid "None"
 msgstr "Keine"
 
-#: src/design/customizer/content-customizer.php:859
-#: src/design/customizer/content-customizer.php:982
-#: src/design/customizer/general-customizer.php:72
+#: src/design/customizer/content-customizer.php:874
+#: src/design/customizer/content-customizer.php:997
+#: src/design/customizer/general-customizer.php:58
 #: src/design/customizer/header-customizer.php:75
 msgid "Repeat"
 msgstr "Wiederholen"
 
-#: src/design/customizer/content-customizer.php:860
-#: src/design/customizer/content-customizer.php:983
-#: src/design/customizer/general-customizer.php:73
+#: src/design/customizer/content-customizer.php:875
+#: src/design/customizer/content-customizer.php:998
+#: src/design/customizer/general-customizer.php:59
 #: src/design/customizer/header-customizer.php:76
 msgid "Repeat X"
 msgstr "Wiederhole X"
 
-#: src/design/customizer/content-customizer.php:861
-#: src/design/customizer/content-customizer.php:984
-#: src/design/customizer/general-customizer.php:74
+#: src/design/customizer/content-customizer.php:876
+#: src/design/customizer/content-customizer.php:999
+#: src/design/customizer/general-customizer.php:60
 #: src/design/customizer/header-customizer.php:77
 msgid "Repeat Y"
 msgstr "Wiederhole Y"
 
-#: src/design/customizer/content-customizer.php:869
-#: src/design/customizer/content-customizer.php:992
+#: src/design/customizer/content-customizer.php:884
+#: src/design/customizer/content-customizer.php:1007
 #: src/design/customizer/footer-customizer.php:139
-#: src/design/customizer/general-customizer.php:82
+#: src/design/customizer/general-customizer.php:68
 #: src/design/customizer/header-customizer.php:85
 msgid "Background Attachment"
 msgstr "Hintergrundbefestigung"
 
-#: src/design/customizer/content-customizer.php:873
-#: src/design/customizer/content-customizer.php:996
+#: src/design/customizer/content-customizer.php:888
+#: src/design/customizer/content-customizer.php:1011
 #: src/design/customizer/footer-customizer.php:129
 #: src/design/customizer/footer-customizer.php:145
-#: src/design/customizer/general-customizer.php:86
+#: src/design/customizer/general-customizer.php:72
 #: src/design/customizer/header-customizer.php:89
 msgid "Fixed"
 msgstr "Fixiert"
 
-#: src/design/customizer/content-customizer.php:874
-#: src/design/customizer/content-customizer.php:997
+#: src/design/customizer/content-customizer.php:889
+#: src/design/customizer/content-customizer.php:1012
 #: src/design/customizer/footer-customizer.php:130
 #: src/design/customizer/footer-customizer.php:144
-#: src/design/customizer/general-customizer.php:87
+#: src/design/customizer/general-customizer.php:73
 #: src/design/customizer/header-customizer.php:90
 msgid "Scroll"
 msgstr "Scrollen"
 
-#: src/design/customizer/content-customizer.php:875
-#: src/design/customizer/content-customizer.php:998
+#: src/design/customizer/content-customizer.php:890
+#: src/design/customizer/content-customizer.php:1013
 #: src/design/customizer/footer-customizer.php:131
 #: src/design/customizer/footer-customizer.php:146
-#: src/design/customizer/general-customizer.php:88
+#: src/design/customizer/general-customizer.php:74
 #: src/design/customizer/header-customizer.php:91
 msgid "Local"
 msgstr "Lokal"
 
-#: src/design/customizer/content-customizer.php:883
-#: src/design/customizer/content-customizer.php:1006
+#: src/design/customizer/content-customizer.php:898
+#: src/design/customizer/content-customizer.php:1021
 #: src/design/customizer/footer-customizer.php:154
-#: src/design/customizer/general-customizer.php:96
+#: src/design/customizer/general-customizer.php:82
 #: src/design/customizer/header-customizer.php:99
 msgid "Background Size"
 msgstr "Hintergrundgröße"
 
-#: src/design/customizer/content-customizer.php:888
-#: src/design/customizer/content-customizer.php:1011
+#: src/design/customizer/content-customizer.php:903
+#: src/design/customizer/content-customizer.php:1026
 #: src/design/customizer/footer-customizer.php:159
-#: src/design/customizer/general-customizer.php:101
+#: src/design/customizer/general-customizer.php:87
 #: src/design/customizer/header-customizer.php:104
 msgid "Custom"
 msgstr "Eigene"
 
-#: src/design/customizer/content-customizer.php:889
-#: src/design/customizer/content-customizer.php:1012
+#: src/design/customizer/content-customizer.php:904
+#: src/design/customizer/content-customizer.php:1027
 #: src/design/customizer/footer-customizer.php:160
-#: src/design/customizer/general-customizer.php:102
+#: src/design/customizer/general-customizer.php:88
 #: src/design/customizer/header-customizer.php:105
 msgid "Contain"
 msgstr "Innerhalb"
 
-#: src/design/customizer/content-customizer.php:890
-#: src/design/customizer/content-customizer.php:1013
+#: src/design/customizer/content-customizer.php:905
+#: src/design/customizer/content-customizer.php:1028
 #: src/design/customizer/footer-customizer.php:161
-#: src/design/customizer/general-customizer.php:103
+#: src/design/customizer/general-customizer.php:89
 #: src/design/customizer/header-customizer.php:106
 msgid "Cover"
 msgstr "Füllend"
 
-#: src/design/customizer/content-customizer.php:898
-#: src/design/customizer/content-customizer.php:1021
+#: src/design/customizer/content-customizer.php:913
+#: src/design/customizer/content-customizer.php:1036
 #: src/design/customizer/footer-customizer.php:169
-#: src/design/customizer/general-customizer.php:111
+#: src/design/customizer/general-customizer.php:97
 #: src/design/customizer/header-customizer.php:114
 msgid "Background Width"
 msgstr "Hintergrundbreite"
 
-#: src/design/customizer/content-customizer.php:906
-#: src/design/customizer/content-customizer.php:1029
+#: src/design/customizer/content-customizer.php:921
+#: src/design/customizer/content-customizer.php:1044
 #: src/design/customizer/footer-customizer.php:177
-#: src/design/customizer/general-customizer.php:119
+#: src/design/customizer/general-customizer.php:105
 #: src/design/customizer/header-customizer.php:122
 msgid "Background Height"
 msgstr "Hintergrundhöhe"
 
-#: src/design/customizer/content-customizer.php:923
+#: src/design/customizer/content-customizer.php:938
 msgid "Error Code Color"
 msgstr "Fehlercodefarbe"
 
@@ -1025,24 +1058,6 @@ msgstr "Sockelmenü"
 #: src/design/customizer/general-customizer.php:20
 msgid "General"
 msgstr "Allgemein"
-
-#: src/design/customizer/general-customizer.php:44
-msgid "Sidebar position"
-msgstr "Seitenleistenposition"
-
-#: src/design/customizer/general-customizer.php:45
-msgid "The position won't change for pages where a template is used."
-msgstr ""
-"Die Position ändert sich nicht bei Seiten, in denen ein Template benutzt "
-"wird."
-
-#: src/design/customizer/general-customizer.php:49
-msgid "Right"
-msgstr "Rechts"
-
-#: src/design/customizer/general-customizer.php:50
-msgid "Left"
-msgstr "Links"
 
 #: src/design/customizer/header-customizer.php:28
 msgid "Header"
@@ -1350,6 +1365,9 @@ msgstr "Seitenleiste Links"
 #: templates/sidebar-right.php:10
 msgid "Sidebar Right"
 msgstr "Seitenleiste Rechts"
+
+#~ msgid "Sidebar position"
+#~ msgstr "Seitenleistenposition"
 
 #~ msgid "Hide \"To the test review button\""
 #~ msgstr "„Zum Testsieger Button“ verstecken"
